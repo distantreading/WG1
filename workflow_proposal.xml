@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Workflow Proposal</title>
+                <author>Cost Action CA16204 – WG1 </author>
+            </titleStmt>
+            <editionStmt>
+                <edition><date>2017-11-04</date></edition>
+            </editionStmt>
+            <publicationStmt>
+                <p>Unpublished discussion document prepared for COST Action 16201</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <listChange>
+                <change><date>2018-01-27</date> LB converted to XML</change>
+                <change><date>2018-01-27</date> BN final draft</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+          
+                <head>Workflow</head>
+                <p> The objective of this document is to set out the main steps to build the ELTeC
+                    core corpus of novels.</p>
+                <p> The corpus will include novels written during 1850 and 1920 in these languages
+                    <!-- note place="comment" resp="CO" n="0"><date when="2018-01-24T10:42:31Z"
+                            /><hi>How do we would like to organize the work?Building subgroups for a
+                            specific language or a specific step? How do we want to make decisions
+                            and discuss problems (with annotations, distinct steps or novels)For our
+                            meeting in Prague, I plan an organisational part with respect to WG
+                            communication and planning based on the meeting of WG4</hi></note -->:
+                    Dutch, English, French, German, Modern Greek, Italian, Polish, Portuguese,
+                    Russian and Spanish. Each novel will be in a machine readable format and encoded
+                    in XML (following standard TEI).</p>
+                <p> The main steps to achieve this objective are the next:</p>
+                <list type="ordered">
+                    <item>Selecting authors and novels.</item>
+                    <item>Finding the novels.</item>
+                    <item>Cleaning and normalizing texts.</item>
+                    <item>Annotation.</item>
+                    <item>Publication.</item>
+                    <item>Evaluation.</item>
+                </list>
+                <div>
+                    <head>Starting point</head>
+                    <p>The starting point are three documents:</p>
+                    <p> Doc1: <title>Sampling Criteria</title>, in which the main
+                        requirements for text selection are established.</p>
+                    <p> Doc2: <title>Encoding Guideline</title>, in which the encoding
+                        scheme is defined.</p>
+                    <p> Doc3: <title>Workflow</title>, this document.</p>
+                </div>
+                <div>
+                    <head>Step 1. Selecting authors and novels.</head>
+                    <p> The objective of this step is to find appropriate titles
+                        <!-- note place="comment"
+                            resp="LB" n="2"><date when="2018-01-24T11:00:04Z"/><hi>I agree with
+                                Carolin’s comment below: the selection process is a matter of
+                                listing candiadte texts to be chosen according to the selection
+                                criteria identified in doc1 : no claim for representativeness
+                                needed.</hi></note --><!-- note
+                            place="comment" resp="CO" n="1"><date when="2018-01-24T09:38:13Z"
+                                /><hi>CO: Representativeness refers to the extent to which a sample
+                                includes the full range of variability in a population. We don’t
+                                know every book of every language published/read/discussed in the
+                                period in question. It is further ‘impossible to identify a complete
+                                list of ‘categories’ that would exhaustively account for all texts
+                                produced in a given language’We should use this word more carefully.
+                            </hi></note -->
+                        for each language published during 1850-1920 according to the sampling
+                        criteria (Doc1). It will be done in two sub-steps. The first one is to
+                        extract, as far as possible, a list of novels published during that period
+                        and the amount of reprints. This
+                        information<!-- note place="comment"
+                            resp="LB" n="5"><date when="2018-01-24T11:01:34Z"/><hi>As far as I have
+                                looked the OCLC WorldCat contains most of what we need</hi></note -->
+                        could be extracted from different sources as OCLC WorldCat or specific
+                        National Libraries of each Country. See Appendix A for a list of catalogs.
+                        Each country will complete this list of catalogs with specific sources.</p>
+                    <p> The list of novels will be published in a web page, including information
+                        about author’s name, title, date and place of the first edition, number of
+                        reprints during the period, source from which this information has been
+                        extracted, size, topic, etc. See eltecSheet document. At this moment, the
+                        information that must be stored is not fixed. We expect suggestions from the
+                        whole group.</p>
+                    <p> The second sub-step is the selection of appropriate novels for the ELTeC
+                        corpus. From this list, each group will select
+                        <!-- note place="comment"
+                            resp="CO" n="6"><date when="2018-01-24T09:58:20Z"/><hi>Again, focusing
+                                on representativeness this might lead to another canon corpus. The
+                                MoU puts a focus on: “bases its research not on a small number of
+                                representative and/or outstanding texts but on wide spectrum of the
+                                literary production,”</hi></note -->
+                        appropriate novels according to the criteria of Doc1.</p>
+                    <p> For this step, both the creation of the candidate list and the selection of
+                        the final novels, we expect the advice of scholars and expert of each
+                        literary tradition.</p>
+                </div>
+                <div>
+                    <head>Step 2. Finding the novels.</head>
+                    <p> The objective of this step is to obtain the novels selected in the previous
+                        step in machine-readable format (as plain text). Applying selection criteria
+                        from Doc1 it is possible that not all novels will be in a machine-readable
+                        format or even digitized. In order to transform all texts to this format, we
+                        suggest to follow the next steps.</p>
+                    <p> First, to look for novels in digital repositories. See Appendix 2 for some
+                        of them. In this case, however, it is important that the text retrieved
+                        follows the sampling criteria of DOC1. The novel must be in
+                        machine-readable format (plain text, HTML, XML, DOC, ODT, RTF, Epub, or
+                        similar.), it must be <emph>licensed</emph> under open or free
+                        licenses as Creative Commons or similar (according to MoU, the final corpus
+                        will be freely available under Creative Commons License) and it must follow
+                        the first edition of the novel. See Doc1 for all the sampling criteria.</p>
+                    <p>If it is not possible to find a novel in a machine-readable format, the
+                        second option is to look for it in digital libraries, traying to find a
+                        digitized version (PDF format, JPG, or similar) that follows the sampling
+                        criteria of Doc1. Finally, if the novel has not been digitized ever, it must
+                        be done in this step (if we have resources to do it). We hope that this will
+                        be done only for very few
+                        novels.<!-- note place="comment" resp="LB" n="7"><date
+                                when="2018-01-24T11:02:55Z"/><hi>I wonder though if we have the
+                                resources to do this...</hi></note -->
+                        In both cases, the text must be transformed to a machine-readable format. See
+                        Appendix 3 for a list of tools for digitizing texts. This way we will obtain
+                        a machine-readable format (plain text) of each novel. The problem is that it
+                        is a complex and time-consuming tasks.</p>
+                    <p><label> Repository of raw texts.</label> In order to make
+                        a back-up of the corpus and the creation process, all novels will be stored
+                        in a “raw text repository”, a text repository with the texts just like they
+                        have been found or  digitized.
+                        <!-- note place="comment" resp="LB"
+                            n="8"><date when="2018-01-24T10:58:22Z"/><hi>I agree that we should
+                                archive the original format in which we received the texts. We
+                                should also archive the toolchain we use to convert it to TEI
+                                XML</hi></note --></p>
+                </div>
+                <div>
+                    <head>Step 3. Cleaning-up and normalizing
+                        texts.<!-- note place="comment" resp="LB"
+                            n="9"><date when="2018-01-24T10:59:15Z"/>
+                            <hi>See                              http://www.matthewjockers.net/2010/08/26/auto-converting-project-gutenberg-text-to-tei/</hi></note --></head>
+                    <p> Whether  novels have been obtained directly in a machine-readable format or
+                        if they have been digitized, it is necessary to check the text in order to
+                        fix typos and normalize it. Exactly what elements must be normalized will be
+                        decide later. </p>
+                    <p> As far as possible, this task will be done automatically. However, a manual
+                        review will be necessary.</p>
+                    <p>
+                       <label>Open
+                            question.</label><!-- note
+                            place="comment" resp="CO" n="10"><date when="2018-01-24T10:16:10Z"
+                                /><hi>Indeed, we may rely on automatic methods but I agree that some
+                                manual checking might be necessary. We may discuss this with all
+                                members as well? </hi></note -->
+                        Both fixing and normalizing texts are complex and
+                            time-consuming tasks. We have not funding to do them. However, the
+                            reliability of the “distant” analysis (WG2) will depend on the quality
+                            of these texts. We must decide how they will be
+                        done.<!-- note
+                            place="comment" resp="BN" n="11"><date when="2018-01-25T10:35:21Z"
+                                /><hi>I agree with Lou. We must offer novels always with their
+                                metadata, so novels must include TEI annotation. In the same way, we
+                                must offer a script to easily extract the plain text from the XML
+                                file.</hi></note --></p>
+                </div>
+                <div>
+                    <head>Step 4. Annotation and encoding.</head>
+                    <p> According to Doc2, three kinds of annotation must be developed: metadata
+                        annotation, document structure annotation and linguistic/literary
+                        annotation. The last one will not be done for the moment.</p>
+                    <div>
+                        <head>Metadata annotation.</head>
+                        <p> Metadata attributes have been specified in the Encoding Scheme (Doc2).
+                            In order to introduce in each text, two tasks must be done.</p>
+                        <p> First, a controlled language must be developed to control the values of
+                            each attribute and the coherence of the metadata.</p>
+                        <p> Second, the annotation process of the metadata of each novel: to create
+                            a well-formed XML document based on TEI and to introduce header elements and attributes
+                            with the appropriate value.</p>
+                        <p> We will try to follow a semi-automatic annotation process here. Metadata
+                            could be compiled and stored in a CSV file during previous steps (one
+                            file per novel). Then a well-formed XML file could be created
+                            automatically (Python script?) taking as an input the plain text of the
+                            novel and the corresponding CSV file. At the end, all metadata will be
+                            checked (see evaluation step).</p>
+                    </div>
+                    <div>
+                        <head>Annotation of the structure of the novel.</head>
+                        <p> Doc2 includes tags for representing the structure of the novel
+                            (chapters, paragraphs,
+                            etc.).<!-- note place="comment" resp="CO" n="12"
+                                    ><date when="2018-01-24T10:20:39Z"/><hi>Lou, Borja, Do you know
+                                    tools, annotating TEI automatically? Which tools can do which
+                                    kind of annotation (e.g. one that is specialized for something,
+                                    or some which rely on the picture of the pages?) This might be a
+                                    topic to discuss with WG2, too. </hi></note --><!-- note
+                                place="comment" resp="LB" n="13"><date when="2018-01-24T11:03:46Z"
+                                    /><hi>Reply to Unbekannter Autor (24/01/2018, 10:20):
+                                    "..."</hi><hi>Yes. See my link to Matt Jockers above, but there
+                                    are plenty of others. It’s not difficult starting from
+                                    reasonable HTML to produce a minimal TEI structure. Lots of
+                                    people do it with lots of common tools (perl, XSLT, python,
+                                    java…) </hi></note -->
+                            Similarly, we will follow a semi-automatic annotation approach, trying
+                            to annotate automatically as much as possible.</p>
+                        <p> However, in both cases, annotation must be manually checked with two
+                            objectives: first, to introduce any  information that has not been
+                            possible to annotate automatically (direct speech?, page breaks?,
+                            tables?), and second to correct possible mistakes during automatic
+                            annotation. At this moment, exactly what information will be annotated
+                            has not been defined yet. See Doc2. </p>
+                        <p>
+                            <anchor type="commentRangeStart" n="14"/><label>Open
+                                question.</label><!-- note
+                                place="comment" resp="CO" n="14"><date when="2018-01-24T10:16:10Z"
+                                    /><hi>Indeed, we may rely on automatic methods but I agree that
+                                    some manual checking might be necessary. We may discuss this
+                                    with all members as well? </hi></note -->
+                            Manual revision and annotation are also complex and
+                                time-consuming tasks. We must decide how they will be done.</p>
+                    </div>
+                </div>
+                <div>
+                    <head>Step 5. Publication.</head>
+                    <p> XML files must be publicly available in a specific repository. WG4 is
+                        working to define the appropriate repository for the corpus. </p>
+                    <p> Once a valid XML will be obtained, it will be published at the official
+                        repository. Therefore, the corpus will be available during review/annotation
+                        process.</p>
+                    <p> The repository should guarantee that the novels could be downloaded as XML
+                        files and as plain texts. We can also demonstrate the use of more sophisticated
+                        technologies such as TEI-Publisher
+                        (teipublisher.com/) or txm (textometrie.org). </p>
+                    <p> We can offer a
+                        DOI<!-- note place="comment" resp="CO" n="15"
+                                ><date when="2018-01-24T10:39:09Z"/><hi>Maybe both</hi></note -->
+                        for each novel and for the whole corpus through Zenodo: <ref
+                            target="https://zenodo.org/"><hi>https://zenodo.org/</hi></ref>.</p>
+                </div>
+                <div>
+                    <head>Step 6. Evaluation.</head>
+                    <p> Two aspects must be evaluated: text quality and annotation.</p>
+                    <p> Text quality could be evaluated by checking if text samples follows the
+                        criteria of Doc1. The idea here is to find recurrent mistakes. The
+                        annotation of the structure of each novel could be evaluated in the same way,
+                        but in relation to Doc2. Metadata of each novel must be manually checked in
+                        order to ensure the correctness of data.</p>
+                    <p> Each file must be a valid XML-TEI document according to the defined XML
+                        scheme. XML can be validated with standard tools as oXygen, Jing, XMLlint,
+                        the TEI-Validator (<ref
+                            target="http://teibyexample.org/xquery/TBEvalidator.xq"
+                            >http://teibyexample.org/xquery/TBEvalidator.xq</ref>) or any other
+                        tool.<!-- note place="comment" resp="LB" n="16"><date
+                                when="2018-01-24T11:07:29Z"/><hi>Nothing against this, but why
+                                choose this validator in particular? We are defining an XML schema:
+                                we can validate using normal XML tools (oXygen, jing,
+                                xmllint...)</hi></note --></p>
+                    <p> Ideally, manual annotation must be evaluated following a double annotation
+                        by two annotators and then calculating inter-annotators agreement. This
+                        standard approach will show us the quality of the annotation scheme and the
+                        annotation process. It is not clear at this moment which information will be
+                        manually annotated. Therefore, we suggest to leave this point for later
+                        (linguistic annotation).</p>
+                </div>
+                <div>
+                    <head>Bibliography</head>
+                    <listBibl><bibl>Leech, Geoffrey (2005) “Adding Linguistic Annotation” in Wynne, M
+                        (editor), <title>Developing Linguistic Corpora: a Guide to Good
+                            Practice</title>. Oxford: Oxbow Books. Available online from <ref
+                            target="http://ota.ox.ac.uk/documents/creating/dlc/"
+                            >http://ota.ox.ac.uk/documents/creating/dlc/</ref></bibl>
+                    <bibl>Stubbs, Amber and James Pustejovsky (2012) <title>Natural
+                            Language Annotation for Machine Learning</title>, O'Reilly.</bibl>
+            </listBibl>    </div>
+               
+        </body><back><div>
+            <head>APPENDIX 1. List of catalogues.</head>
+            <list type="unordered">
+                <item>OCLC WorldCat <ref target="https://www.oclc.org/"
+                    ><hi>https://www.oclc.org</hi></ref></item>
+                <item>Gutenberg catalog (in RDF) http://www.gutenberg.org/wiki/Gutenberg:Feeds
+                </item>
+            </list>
+        </div>
+            <div>
+                <head>APPENDIX 2. List of digital repositories</head>
+                <list type="unordered">
+                    <item>Gutenberg project [several languages]:
+                        http://www.gutenberg.org/</item>
+                    <item>Oxford Text Archive (OTA) [several languages]:
+                        http://ota.ox.ac.uk/</item>
+                    <item>Deutsches Textarchiv (DTA - German Text Archive) [German]:
+                        http://www.bbaw.de/en/research/dta</item>
+                    <item>TextGrid Repository [German]:
+                        https://textgrid.de/en/digitale-bibliothek</item>
+                    <item>OBVIL Bibliothèque [French]:
+                        http://obvil.paris-sorbonne.fr/bibliotheque</item>
+                    <item>ARTFL-FRANTEXT [French]:
+                        http://artfl-project.uchicago.edu/content/artfl-frantext</item>
+                    <item>Biblioteca Virtual Miguel de Cervantes [Spanish (Castilian, Catalan
+                        and Galician)]: http://www.cervantesvirtual.com/</item>
+                    <item>Liber Libri https://www.liberliber.it/online/ [Italian]</item>
+                    <item>Biblioteca Digital Camões
+                        http://www.cvc.instituto-camoes.pt/conhecer/biblioteca-digital-camoes/literatura-1.html
+                        [Portuguese]</item>
+                    <item> Digitale Bibliotheek voor de Nederlandse letteren http://www.dbnl.org/ [Dutch]</item><item>National Library of Poland http://www.bn.org.pl/en/digital-resources/polona/ [Polish]</item>
+                </list>
+            </div>
+            <div>
+                <head>Appendix 3. Tools and resources for digitizing texts.</head>
+                <list type="unordered">
+                    <item>https://www.digitisation.eu/</item>
+                    <item>http://www.impact-project.eu/index.php</item>
+                    <item>https://www.digitisation.eu/tools-resources/tools-for-text-digitisation/</item>
+                    <item>http://www.impact-project.eu/taa/tech/tools/</item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>
