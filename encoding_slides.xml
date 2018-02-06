@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>WG1: Encoding Proposals</title>
+            <author>Lou Burnard</author>
+         </titleStmt>
+         <publicationStmt>
+            <p>For presentation at WG1 meeting, Praha 2018-02-14</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="slide">
+            <head>Proposed Encoding Guidelines for the ELTeC</head>
+            <p> A discussion document setting out the full proposal is available <ref
+                  target="https://distantreading.github.io/encoding_proposal.html">here</ref>
+            </p>
+            <p> We summarize the proposals as follows: </p>
+            <list>
+               <item>Use TEI XML : a well-established, customizable, scholarly standard </item>
+               <item>Capture a <hi rend="sc">guaranteed minimum</hi> of features for each text: <list>
+                     <item>significant structural features (chapters, headings, paragraphs...) </item>
+                     <item>descriptive metadata (bibliographic and non bibliographic)</item>
+                  </list>
+               </item>
+               <item>The proposal raises a number of <label rend="sc">open questions</label> as to
+                     <emph>which</emph> features should be captured</item>
+               <item>The proposal defines an <label rend="sc">XML schema</label> and a set of rules
+                  which can be used to validate converted texts (more or less) automatically</item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>Why XML-TEI?</head>
+            <p>Why not just use plain text?</p>
+            <list>
+               <item>By using an XML based format, we ensure that<list>
+                     <item>ELTeC texts can be validated </item>
+                     <item>ELTeC texts can be converted to other formats using simple
+                        widely-available technologies </item>
+                     <item>ELTeC texts can be enriched with additional more sophisticated
+                        annotations</item>
+                  </list>
+               </item>
+               <item>By using TEI, we can take advantage of tools and techniques, widely used across
+                  the research community likely to be interested in the ELTeC </item>
+               <item>NB Using the TEI does <emph>not</emph> mean our encoding will represent every
+                  possible textual feature or metadatum ... on the contrary! </item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>Taming the TEI</head>
+            <figure rend="center">
+               <graphic url="media/occam.jpg" height="30%"/>
+            </figure>
+            <list>
+               <item><p>The TEI offers a choice of over 450 different elements ... we will use (and
+                     our schema will only permit) about a dozen.</p></item>
+               <item>
+                  <p>The TEI is very flexible in the structures and perspectives it supports. We
+                     will apply Occam's razor extensively. </p></item>
+            </list>
+         </div>
+      </body>
+   </text>
+</TEI>
