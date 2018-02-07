@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -78,22 +75,248 @@
                text</p>
          </div>
          <div type="slide">
-            <head>Encoding is (nearly always) reductive</head>
+            <head>What are the <q>essential</q> components of a novel?</head>
+            <p>It seems uncontroversial to distinguish in our markup chapters, headings, paragraphs
+               but how about :</p>
+            <list>
+               <item>title page ?</item>
+               <item>preface or introduction ?</item>
+               <item>table of contents ?</item>
+               <item>appendix or afterword ?</item>
+               <item>footnotes or comments ?</item>
+               <item>errata lists ?</item>
+            </list>
+            <p>It's not hard to find TEI tags for these: but is it helpful? can we be consistent in
+               their application ? </p>
+         </div>
+         <div type="slide">
+            <head>TEI encoding typically loses typographic subtleties </head>
             <figure>
-               <graphic url="media/forster-chap2.png" height="80%" />
+               <graphic url="media/forster-chap2.png" height="80%"/>
             </figure>
             <cb/>
-            <list>
-               <head rend="italic">Are we bothered?</head>
+            <list style="float:left">
+               <head style="italic">Are we bothered?</head>
                <item>the chapter title is centred</item>
                <item>there are linebreaks within the paragraphs (and sometimes words get hyphenated
                   as a result)</item>
-               <item>the first word is capitalised</item><item>paragraphs are indented (except for
-                  the first)</item>
+               <item>the first word is capitalised</item>
+               <item>paragraphs are indented (except for the first)</item>
                <item>dash and quote marks have narrative function</item>
                <item>hyphens may or may not be significant</item>
                <item>double quotes and single quotes have different functions</item>
-            </list> </div>
+            </list>
+         </div>
+         <div type="slide" rend="incremental">
+            <head>Which typographic features should we follow ?</head>
+            <figure style="text-align:center">
+               <graphic url="media/howards-chap1-1970.png" width="60%"/>
+               <head>(Penguin, 1970)</head>
+            </figure>
+            <figure style="float:right">
+               <graphic url="media/howards-chap1-1921.png"/>
+               <head>(Knopf, 1921)</head>
+            </figure>
+            <figure>
+               <graphic url="media/howards-chap1-1991.png"/>
+               <head>(Everyman, 1991)</head>
+            </figure>
+            <figure style="text-align:center">
+               <graphic url="media/howards-chap1-1910.png" width="80%"/>
+               <head>(First US ed, 1910)</head>
+            </figure>
+         </div>
+         <div type="slide">
+            <head>OQ 1: What about material other than running prose and dialogue ?</head>
+            <p>Novels do contain material other than running prose</p>
+            <p>We could: </p>
+            <list type="ordered">
+               <item>use the appropriate TEI elements for verse or drama (<gi>lg</gi>, <gi>l</gi>,
+                     <gi>sp</gi>, <gi>stage</gi>)</item>
+               <item>use the appropriate TEI elements for lists and tables (<gi>list</gi>,
+                     <gi>label</gi>, <gi>item</gi>, <gi>table</gi>, <gi>cell</gi>,
+                  <gi>row</gi>)</item>
+               <item>use the appropriate TEI elements for embedded graphics (<gi>figure</gi>,
+                     <gi>graphic</gi>, <gi>head</gi>)</item>
+               <item>suppress non-prose material, replacing it by <gi>gap</gi></item>
+               <item>lie </item>
+            </list>
+            <p rend="italic">Whichever we choose to do, we must be consistent!</p>
+         </div>
+         <div type="slide">
+            <head>An example</head>
+            <figure>
+               <graphic url="media/paulVirg-p127.png"/>
+            </figure>
+            <cb/>
+            <p>Should this be encoded as:
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <p><label>le vieillard.</label> « Oh mon ami ! ne m’avez-vous pas dit que vous
+                     n’aviez pas de naissance ?</p></egXML>
+                or (expensively)
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <sp><speaker>le vieillard.</speaker><p>« Oh mon ami ! ne m’avez-vous pas dit que
+                        vous n’aviez pas de naissance ?</p></sp></egXML>
+                or (deceitfully)
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <p>le vieillard.</p>
+                  <p>« Oh mon ami ! ne m’avez-vous pas dit que vous n’aviez pas de naissance
+                  ?</p></egXML>
+            </p>
+         </div>
+         <div type="slide">
+            <head>Another example</head>
+            <figure>
+               <graphic url="media/howards-page61.png"/>
+            </figure>
+            <p>Should this be encoded as:
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <p> Even in her photographic days she had relied upon her smile and her figure to
+                     attract, and now that she was <quote><l>"On the shelf,</l>
+                        <l>On the shelf,</l>
+                        <l>Boys, boys, I'm on the shelf,"</l>
+                     </quote> she was not likely to find her tongue.  Occasional bursts of song (of
+                     which the above is an example) still issued from her lips, but the spoken word
+                     was rare. </p></egXML>
+                or (deceitfully)
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <p>... and now that she was</p>
+                  <p>"On the shelf,
+                     <lb/>On the shelf,
+                     <lb/>Boys, boys, I'm on the shelf,"</p>
+                  <p>she was not likely to find her tongue.  Occasional ...</p>
+               </egXML>
+            </p>
+         </div>
+         <div type="slide">
+            <head>Some other open questions</head>
+            <list>
+               <item>should we capture page breaks in our source edition?</item>
+               <item>should we remove/resolve end of line hyphenation? </item>
+               <item>should we try to interpret typographic variation (italics, etc.) e.g. as
+                     <gi>title</gi>
+                  <gi>emph</gi>
+                  <gi>foreign</gi>
+                  <gi>abbr</gi>?</item>
+               <item>should we capture (using <gi>hi</gi>) typographic features ... or silently
+                  ignore them ?</item>
+            </list>
+            <p>Again, <hi rend="sc">consistency</hi> of practice is essential</p>
+         </div>
+         <div type="slide">
+            <head>Metadata : the TEI Header</head>
+            <figure>
+               <graphic url="media/teiHeader.png"/>
+            </figure>
+            <!-- <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <teiHeader type="novelHeader">
+                  <fileDesc>
+                     <titleStmt>
+                        <title><!-\- standard title of work -\->
+                        </title>
+                        <author>
+                           <!-\- information about the author -\->
+                        </author>
+                     </titleStmt>
+                     <extent>
+                        <!-\- size of the text, in pages and words -\->
+                     </extent>
+                     <publicationStmt>
+                        <!-\- boilerplate statement about status as part of ELTeC -\->
+                     </publicationStmt>
+                     <sourceDesc>
+                        <bibl>
+                           <!-\- bibliographic description of the printed source -\->
+                        </bibl>
+                     </sourceDesc>
+                  </fileDesc>
+                  <profileDesc>
+                     <!-\- additional descriptive information -\->
+                  </profileDesc>
+                  <revisionDesc>
+                     <!-\- revision information -\->
+                  </revisionDesc>
+               </teiHeader>
+            </egXML>       -->
+            <p>We propose using this for all metadata. It will provide for each text <list>
+                  <item>bibliographic information</item>
+                  <item>sampling and descriptive criteria applicable</item>
+                  <item>housekeeping information</item>
+               </list></p>
+            <p>The schema will check consistency of data supplied. </p>
+         </div>
+         <div type="slide">
+            <head>A possible title statement</head>
+            <p>We may need to modify the TEI definitions</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <titleStmt>
+                  <title>Howards End : ELTeC edition</title>
+                  <author key="">
+                     <persName>
+                        <forename>Edward</forename>
+                        <forename>Morgan</forename>
+                        <surname>Forster</surname>
+                     </persName>
+                     <persName>E.M. Forster</persName>
+                     <birth when="1879"/>
+                     <death when="1970"/>
+                     <sex value="M"/>
+                     <idno type="viaf">https://viaf.org/viaf/31996364</idno>
+                     <idno type="wiki">https://www.wikidata.org/wiki/Q189119</idno>
+                  </author>
+                  <respStmt>
+                     <resp>ELTeC encoding</resp>
+                     <name>Lou Burnard</name>
+                  </respStmt>
+               </titleStmt>
+            </egXML>
+         </div>
+         <div type="slide">
+            <head>An example source description</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <sourceDesc>
+                  <bibl>
+                     <author>E.M. Forster</author>
+                     <title>Howards End</title>
+                     <pubPlace>London</pubPlace>
+                     <publisher>Edward Arnold</publisher>
+                     <date>1910</date>
+                     <idno type="wiki">https://www.wikidata.org/wiki/Q1146642</idno>
+                  </bibl>
+                  <bibl>
+                     <title>The Project Gutenberg Etext of Howards End, by E. M. Forster</title>
+                     <ref target="http://www.gutenberg.org/files/2891/2891-h/2891-h.htm">HTML
+                        version downloaded on <date>2017-12-26</date></ref>
+                  </bibl>
+                  <note type="editions" source="worldcat"> Worldcat lists 484 print editions in
+                     English</note>
+               </sourceDesc>
+            </egXML>
+         </div>
+         <div type="slide">
+            <head>An example profile description</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <profileDesc>
+                  <langUsage>
+                     <language ident="en-BR" usage="99">British English</language>
+                     <language ident="de" usage="1">German</language>
+                  </langUsage>
+                  <textClass>
+                     <keywords source="http://wikidata.org">
+                        <term>social class</term>
+                        <term>social convention</term>
+                        <term>modernity</term>
+                        <term>family drama</term>
+                     </keywords>
+                     <catRef target="#author_m #reprint_3"/>
+                     <classCode scheme="UDC">8231.111</classCode>
+                  </textClass>
+               </profileDesc>
+            </egXML>
+            <p>The values supplied by <att>target</att> are defined in a project wide
+                  <gi>taxonomy</gi>; this and other project-wide metadata is held in a separate
+               corpus header.</p>
+         </div>
       </body>
    </text>
 </TEI>
