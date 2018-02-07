@@ -59,7 +59,7 @@
          <div type="slide">
             <head>Taming the TEI</head>
             <figure rend="center">
-               <graphic url="media/occam.jpg" height="30%"/>
+               <graphic url="media/occam.jpg" height="40%" style="float:center"/>
             </figure>
             <list>
                <item><p>The TEI offers a choice of over 450 different elements ... we will use (and
@@ -69,6 +69,31 @@
                      will apply Occam's razor extensively. </p></item>
             </list>
          </div>
+         <div type="slide">
+            <head>Basic structure of an ELTeC text</head>
+            <figure>
+               <graphic url="media/example-1.png" height="60%" style="float:center"/>
+            </figure>
+            <p rend="block">Goal : represent only what is essential to an understanding of the
+               text</p>
+         </div>
+         <div type="slide">
+            <head>Encoding is (nearly always) reductive</head>
+            <figure>
+               <graphic url="media/forster-chap2.png" height="80%" />
+            </figure>
+            <cb/>
+            <list>
+               <head rend="italic">Are we bothered?</head>
+               <item>the chapter title is centred</item>
+               <item>there are linebreaks within the paragraphs (and sometimes words get hyphenated
+                  as a result)</item>
+               <item>the first word is capitalised</item><item>paragraphs are indented (except for
+                  the first)</item>
+               <item>dash and quote marks have narrative function</item>
+               <item>hyphens may or may not be significant</item>
+               <item>double quotes and single quotes have different functions</item>
+            </list> </div>
       </body>
    </text>
 </TEI>
