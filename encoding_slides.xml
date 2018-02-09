@@ -84,7 +84,7 @@
             <figure>
                <graphic url="media/example-1.png" height="60%" style="float:center"/>
             </figure>
-            <p rend="block">Goal : represent only what is essential to an understanding of the
+            <p rend="box">Goal : represent only what is essential to an understanding of the
                text</p>
          </div>
          <div type="slide">
@@ -121,7 +121,7 @@
             </list>
          </div>
          <div type="slide" rend="incremental">
-            <head>Which typographic features should we follow ?</head>
+            <head>Which typographic features should we keep ?</head>
             <figure style="text-align:center">
                <graphic url="media/howards-chap1-1970.png" width="60%"/>
                <head>(Penguin, 1970)</head>
@@ -140,7 +140,7 @@
             </figure>
          </div>
          <div type="slide">
-            <head>OQ 1: What about material other than running prose and dialogue ?</head>
+            <head>What about material other than running prose and dialogue ?</head>
             <p>Novels often contain material other than running prose</p>
             <p>We could: </p>
             <list type="ordered">
@@ -150,10 +150,12 @@
                      <gi>label</gi>, <gi>item</gi>, <gi>table</gi>, <gi>cell</gi>,
                   <gi>row</gi>)</item>
                <item>use the appropriate TEI elements for graphics (<gi>figure</gi>,
-                     <gi>graphic</gi>, <gi>head</gi>)</item></list><p>Or we could <list>
-                        <item>suppress non-prose material, replacing it by <gi>gap</gi></item>
-               <item>lie </item>
-            </list></p>
+                     <gi>graphic</gi>, <gi>head</gi>)</item>
+            </list>
+            <p>Or we could <list>
+                  <item>suppress non-prose material, replacing it by <gi>gap</gi></item>
+                  <item>lie </item>
+               </list></p>
             <p rend="italic">Whichever we choose to do, we must be consistent!</p>
          </div>
          <div type="slide">
@@ -162,37 +164,33 @@
                <graphic url="media/paulVirg-p127.png"/>
             </figure>
             <cb/>
-            <p>Should this be encoded as:
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<p><label>le vieillard.</label> « Oh mon ami ! ne m’avez-vous pas dit que 
-vous n’aviez pas de naissance ?</p></egXML>
-                or (expensively)
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
- <sp><speaker>le vieillard.</speaker><p>« Oh mon ami ! ne m’avez-vous pas dit que
-vous n’aviez pas de naissance ?</p></sp></egXML>
-                or (deceitfully)
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <p>Should this be encoded as: <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<p><label>le vieillard.</label> 
+« Oh mon ami ! ne m’avez-vous pas dit que vous
+ n’aviez pas de naissance ?</p></egXML> or (expensively) <egXML
+                  xmlns="http://www.tei-c.org/ns/Examples">
+<sp><speaker>le vieillard.</speaker><p>« Oh mon ami ! ne m’avez-vous pas dit que
+vous n’aviez pas de naissance ?</p></sp></egXML> or (deceitfully) <egXML
+                  xmlns="http://www.tei-c.org/ns/Examples">
 <p>le vieillard.</p>
-<p>« Oh mon ami ! ne m’avez-vous pas dit que 
+<p>« Oh mon ami ! ne m’avez-vous pas dit que
 vous n’aviez pas de naissance ?</p></egXML>
             </p>
          </div>
          <div type="slide">
             <head>Another example</head>
             <figure>
-               <graphic url="media/howards-page61.png"/>
+               <graphic url="media/howards-page61.png" />
             </figure>
-            <p>Should this be encoded as:
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <p>Should this be encoded as: <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <p> Even in her photographic days she had relied upon her smile and her figure to
                      attract, and now that she was <quote><l>"On the shelf,</l>
                         <l>On the shelf,</l>
                         <l>Boys, boys, I'm on the shelf,"</l>
                      </quote> she was not likely to find her tongue.  Occasional bursts of song (of
                      which the above is an example) still issued from her lips, but the spoken word
-                     was rare. </p></egXML>
-                or (deceitfully)
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     was rare. </p></egXML> or (deceitfully) <egXML
+                  xmlns="http://www.tei-c.org/ns/Examples">
                   <p>... and now that she was</p>
                   <p>"On the shelf,
                      <lb/>On the shelf,
@@ -211,10 +209,12 @@ vous n’aviez pas de naissance ?</p></egXML>
                   <gi>emph</gi>
                   <gi>foreign</gi>
                   <gi>abbr</gi>?</item>
-               <item>should we capture (using <gi>hi</gi>) typographic features ... or silently
-                  ignore them ?</item>
+               <item>should we capture (using <gi>hi</gi>) typographic features (and if so should we
+                  use <att>rend</att> or <att>style</att>... </item>
+               <item>or should we just ignore them ?</item>
             </list>
-            <p>Again, <hi rend="sc">consistency</hi> of practice is essential</p>
+            <p rend="box">Again, consistency of practice is essential. Whether we decide to drop or
+               to preserve these features, we must do so for every text. </p>
          </div>
          <div type="slide">
             <head>Metadata : the TEI Header</head>
@@ -304,7 +304,7 @@ vous n’aviez pas de naissance ?</p></egXML>
             </egXML>
          </div>
          <div type="slide">
-            <head>An example profile description</head>
+            <head>And finally... profile and revision descriptions</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <profileDesc>
                   <langUsage>
@@ -326,6 +326,25 @@ vous n’aviez pas de naissance ?</p></egXML>
             <p>The values supplied by <att>target</att> are defined in a project-wide
                   <gi>taxonomy</gi>; this and other project-wide metadata is held in a separate
                corpus header.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <revisionDesc>
+                  <change when="2018-02-11" who="LB">Added to EN collection</change>
+               </revisionDesc>
+            </egXML>
+            <p>Just one small question... </p>
+         </div>
+         <div type="slide">
+            <head>How do we get there from here?</head>
+            <list>
+               <item>some, but by no means all, the titles we would like to include may already be
+                  available in digital form</item>
+               <item>we can automatically (more or less) convert from other TEI vocabs, HTML, ePub,
+                  text to our target encoding </item>
+               <item>(this may involve <emph>removing</emph> markup!) </item>
+               <item>syntactic validation of the result can be automated</item>
+               <item>... but determining whether or not we are correctly representing a specific text is another matter
+                  </item>
+            </list>
          </div>
       </body>
    </text>

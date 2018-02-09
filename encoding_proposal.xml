@@ -642,14 +642,14 @@ http://isni.oclc.org/-->
             <schemaSpec ident="ELTeC" start="TEI">
                <moduleRef key="tei"/>
                <moduleRef key="core"
-                  include="author bibl date head item l lg list measure
-                  name p pb publisher pubPlace ref resp respStmt sp stage hi term title"/>
-               <moduleRef key="textstructure" include="TEI text div body"/>
+                  include="author bibl date head item l label lg list measure
+                  name p pb publisher pubPlace quote ref resp respStmt sp stage hi term title"/>
+               <moduleRef key="textstructure" include="TEI text div body front back"/>
                <moduleRef key="header"
                   include="catDesc category catRef change classCode  encodingDesc extent fileDesc idno  keywords langUsage language  
                   profileDesc publicationStmt revisionDesc sourceDesc taxonomy teiHeader textClass titleStmt"/>
                <moduleRef key="namesdates"
-                  include="affiliation birth death forename  persName sex  surname"/>
+                  include="affiliation forename  persName  surname"/>
                <!-- Class modifications to reduce attribute clutter -->
                <!-- first remove classes which provide attributes we dont want -->
                <classSpec ident="att.declaring" type="atts" mode="delete"/>
@@ -694,6 +694,39 @@ http://isni.oclc.org/-->
                      <attDef ident="evaluate" mode="delete"/>
                   </attList>
                </classSpec>
+               
+               <!-- now tweaks for individual elements -->
+               
+               <!-- make xml:id and xml:lang obligatory for text -->
+               <elementSpec ident="text" mode="change">
+                  <attList>
+                     <attDef ident="xml:id" mode="change" usage="req"/>
+                     <attDef ident="xml:lang" mode="change" usage="req"/>
+                  </attList>
+               </elementSpec>
+               
+             <!-- define two new attributes for author -->
+            <elementSpec ident="author" mode="change">
+               <attList>
+                  <attDef ident="dates" mode="add">
+                     <desc xml:lang="en">supplies the years of birth and death of an author</desc>
+                     <datatype minOccurs="2" maxOccurs="2">
+                        <dataRef name="gYear"/>
+                     </datatype>
+                     <!-- any pair of 4 digit values will do here; we could
+                        add schematron to check that it is in the
+                        right range and that the second is after the first -->
+                     
+                  </attDef><attDef ident="sex" mode="add">
+                     <desc xml:lang="en">Specifies the sexual identification usually associated with the author</desc>
+                     <valList type="closed">
+                        <valItem ident="m"><desc>male</desc></valItem>
+                        <valItem ident="f"><desc>female</desc></valItem>
+                        <valItem ident="u"><desc>unknown or inapplicable</desc></valItem>                        
+                     </valList>
+                  </attDef> 
+               </attList>
+            </elementSpec>
             </schemaSpec>
          </div>
       </body>
