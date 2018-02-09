@@ -36,6 +36,19 @@
             </list>
          </div>
          <div type="slide">
+            <head>What sort of <soCalled>guaranteed minimum</soCalled>?</head>
+            <p rend="box">The focus is <emph>not</emph> to represent texts in all their original
+               complexity of structure or appearance, but rather to facilitate a richer and
+               better-informed distant reading than a transcription of its lexical content alone
+               would permit. </p>
+            <p>For example, <list>
+                  <item>to distinguish headings and annotations from the rest of the text</item>
+                  <item>to be able to locate stretches of text within gross structural features such
+                     as chapters and paragraphs</item>
+                  <item>to distinguish narrative voices (?)</item>
+               </list></p>
+         </div>
+         <div type="slide">
             <head>Why XML-TEI?</head>
             <p>Why not just use plain text?</p>
             <list>
@@ -128,7 +141,7 @@
          </div>
          <div type="slide">
             <head>OQ 1: What about material other than running prose and dialogue ?</head>
-            <p>Novels do contain material other than running prose</p>
+            <p>Novels often contain material other than running prose</p>
             <p>We could: </p>
             <list type="ordered">
                <item>use the appropriate TEI elements for verse or drama (<gi>lg</gi>, <gi>l</gi>,
@@ -136,11 +149,11 @@
                <item>use the appropriate TEI elements for lists and tables (<gi>list</gi>,
                      <gi>label</gi>, <gi>item</gi>, <gi>table</gi>, <gi>cell</gi>,
                   <gi>row</gi>)</item>
-               <item>use the appropriate TEI elements for embedded graphics (<gi>figure</gi>,
-                     <gi>graphic</gi>, <gi>head</gi>)</item>
-               <item>suppress non-prose material, replacing it by <gi>gap</gi></item>
+               <item>use the appropriate TEI elements for graphics (<gi>figure</gi>,
+                     <gi>graphic</gi>, <gi>head</gi>)</item></list><p>Or we could <list>
+                        <item>suppress non-prose material, replacing it by <gi>gap</gi></item>
                <item>lie </item>
-            </list>
+            </list></p>
             <p rend="italic">Whichever we choose to do, we must be consistent!</p>
          </div>
          <div type="slide">
@@ -151,17 +164,17 @@
             <cb/>
             <p>Should this be encoded as:
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <p><label>le vieillard.</label> « Oh mon ami ! ne m’avez-vous pas dit que vous
-                     n’aviez pas de naissance ?</p></egXML>
+<p><label>le vieillard.</label> « Oh mon ami ! ne m’avez-vous pas dit que 
+vous n’aviez pas de naissance ?</p></egXML>
                 or (expensively)
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <sp><speaker>le vieillard.</speaker><p>« Oh mon ami ! ne m’avez-vous pas dit que
-                        vous n’aviez pas de naissance ?</p></sp></egXML>
+ <sp><speaker>le vieillard.</speaker><p>« Oh mon ami ! ne m’avez-vous pas dit que
+vous n’aviez pas de naissance ?</p></sp></egXML>
                 or (deceitfully)
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <p>le vieillard.</p>
-                  <p>« Oh mon ami ! ne m’avez-vous pas dit que vous n’aviez pas de naissance
-                  ?</p></egXML>
+<p>le vieillard.</p>
+<p>« Oh mon ami ! ne m’avez-vous pas dit que 
+vous n’aviez pas de naissance ?</p></egXML>
             </p>
          </div>
          <div type="slide">
@@ -251,16 +264,13 @@
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <titleStmt>
                   <title>Howards End : ELTeC edition</title>
-                  <author key="">
+                  <author dates="1879 1970" sex="M">
                      <persName>
                         <forename>Edward</forename>
                         <forename>Morgan</forename>
                         <surname>Forster</surname>
                      </persName>
                      <persName>E.M. Forster</persName>
-                     <birth when="1879"/>
-                     <death when="1970"/>
-                     <sex value="M"/>
                      <idno type="viaf">https://viaf.org/viaf/31996364</idno>
                      <idno type="wiki">https://www.wikidata.org/wiki/Q189119</idno>
                   </author>
@@ -313,7 +323,7 @@
                   </textClass>
                </profileDesc>
             </egXML>
-            <p>The values supplied by <att>target</att> are defined in a project wide
+            <p>The values supplied by <att>target</att> are defined in a project-wide
                   <gi>taxonomy</gi>; this and other project-wide metadata is held in a separate
                corpus header.</p>
          </div>
