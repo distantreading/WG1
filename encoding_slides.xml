@@ -17,6 +17,20 @@
    <text>
       <body>
          <div type="slide">
+            <head>Who am I?</head>
+            <p rend="box">I am Lou Burnard, now on my third or fourth life.</p>
+            <list type="ordered">
+<item>I was born on the same day as the poet John Milton, but approx 300 years later. I studied at Oxford University, with
+a masters in English Studies, specialising in 19th century literature in 1971</item>
+               <item>After which I taught World Literature in the University of Malawi for a couple of years</item>
+               <item>For about 25 years I worked at Oxford University Computing Services, initially as a data centre operator, eventually as
+               Assistant Director</item><item>I started the Oxford Text Archive in 1976; the Text Encoding Initiative in 1987; 
+                  the British National Corpus in 1994; </item><item>In 2010 I took early retirement from OUCS and started work as a freelance</item>
+               <item>Between 2009 and 2012 I worked closely with the TGE Adonis which eventually became HumaNum, the French digital humanities
+                  infrastructure </item>
+            </list>
+            <p>Look me up on Google if you get bored during the rest of this talk... </p>
+         </div><div type="slide">
             <head>Proposed Encoding Guidelines for the ELTeC</head>
             <p> A discussion document setting out the full proposal is available <ref
                   target="https://distantreading.github.io/encoding_proposal.html">here</ref>
@@ -73,7 +87,7 @@
             </figure>
             <list>
                <item><p>The TEI offers a choice of over 450 different elements ... we will use (and
-                     our schema will only permit) about a dozen.</p></item>
+                     our schema will only permit) about thirty. </p></item>
                <item>
                   <p>The TEI is very flexible in the structures and perspectives it supports. We
                      will apply Occam's razor extensively. </p></item>
