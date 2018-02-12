@@ -355,6 +355,7 @@ vous n’aviez pas de naissance ?</p></egXML>
                <item>we can automatically (more or less) convert from other TEI vocabs, HTML, ePub,
                   text to our target encoding </item>
                <item>(this may involve <emph>removing</emph> markup!) </item>
+               <item>we need to investigate effectiveness of OCR for other materials</item>
                <item>syntactic validation of the result can be automated</item>
                <item>... but determining whether or not we are correctly representing a specific text is another matter
                   </item>
