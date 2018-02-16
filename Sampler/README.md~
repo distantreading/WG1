@@ -1,0 +1,10 @@
+## The WG1 Sampler 
+
+This directory contains preliminary versions of ELTeC candidate documents, created from a variety of different input formats, supplied by WG1 members following the Prague meeting.
+
+It contains several subdirectories, each named for a different language. Within each subdirectory the organization and file naming conventions should be identical.
+- there is a subdirectory `Orig` containing one or more files in the form in which they were originally submitted, or downloaded
+- there is a README.md file explaining briefly how the file was processed and commenting on any residual problems
+- the ELTeC version is in a file named XXdddd.eltec (corresponding with the xml:id value for the `<text>`element)
+- there may be other intermediate files (named with an extension `.tei`)
+- there will usually be one or more scr[pt files (e.g. in XSLT, or perl) used to effect the conversion, as described by the README

@@ -1,0 +1,22 @@
+cp LV0001-hdr.txt LV0001.eltec
+iconv Orig/ZeibJ0201.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0202.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0203.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0204.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0205.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0206.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0207.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0208.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0209.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0210.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0211.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0212.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0213.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0214.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0215.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0216.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0217.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0218.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0219.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+iconv Orig/ZeibJ0220.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+cat tail.txt >> LV0001.eltec

@@ -1,0 +1,5 @@
+metadata needs to be better constrained
+- use only persName or only name
+- fix vacuous header data
+get rid of redundant xmlns declarations
+

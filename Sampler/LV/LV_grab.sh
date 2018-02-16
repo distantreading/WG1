@@ -1,0 +1,20 @@
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0201.htm >ZeibJ0201.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0202.htm>ZeibJ0202.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0203.htm>ZeibJ0203.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0204.htm>ZeibJ0204.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0205.htm>ZeibJ0205.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0206.htm>ZeibJ0206.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0207.htm>ZeibJ0207.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0208.htm>ZeibJ0208.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0209.htm>ZeibJ0209.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0210.htm>ZeibJ0210.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0211.htm>ZeibJ0211.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0212.htm>ZeibJ0212.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0213.htm>ZeibJ0213.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0214.htm>ZeibJ0214.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0215.htm>ZeibJ0215.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0216.htm>ZeibJ0216.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0217.htm>ZeibJ0217.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0218.htm>ZeibJ0218.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0219.htm>ZeibJ0219.htm
+curl http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ0220.htm>ZeibJ0220.htm

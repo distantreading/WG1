@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/lou/Public/WG1/out/encoding_proposal.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Caurie Ziedi</title>
+                <author dates="1867 1924" sex="m">Zeibolts, Jēkabs</author>
+            </titleStmt>
+            <publicationStmt><p>Demonstration file prepared for the ELTeC Sampler</p></publicationStmt>
+            <sourceDesc><p>Downloaded via <ref target="http://www.korpuss.lv/klasika/Senie/ZeibJ/ZeibJ02.htm"/></p>
+</sourceDesc>
+        </fileDesc>
+        <revisionDesc><change when="2018-02-15" who="LB">Initial header creation</change></revisionDesc>
+    </teiHeader>
+    <text xml:id="LV0001" xml:lang="LV">
+        <body>
