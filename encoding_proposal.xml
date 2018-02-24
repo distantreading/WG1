@@ -642,8 +642,8 @@ http://isni.oclc.org/-->
             <schemaSpec ident="ELTeC" start="TEI">
                <moduleRef key="tei"/>
                <moduleRef key="core"
-                  include="author bibl date head item l label lg list measure
-                  name p pb publisher pubPlace quote ref resp respStmt sp stage hi term title"/>
+                  include="author bibl choice corr orig date head item l label lg list measure
+                  name note p pb publisher pubPlace quote ref resp respStmt sp stage hi term title"/>
                <moduleRef key="textstructure" include="TEI text div body front back"/>
                <moduleRef key="header"
                   include="catDesc category catRef change classCode  encodingDesc extent fileDesc idno  keywords langUsage language  
