@@ -7,7 +7,7 @@ It contains several subdirectories, each named for a different language. Within 
 - there is a README.md file explaining briefly how the file was processed and commenting on any residual problems
 - the ELTeC version is in a file named XXdddd.eltec (corresponding with the xml:id value for the `<text>`element)
 - there may be other intermediate files (named with an extension `.tei`)
-- there will usually be one or more scr[pt files (e.g. in XSLT, or perl) used to effect the conversion, as described by the README
+- there will usually be one or more script files (e.g. in XSLT, or perl) used to effect the conversion, as described by the README
 
 The ELTeC file is validated against the schema file indicated  by an `xml-model` PI at the start of each file. At present, only the initial `encoding_proposal.rnc` schema has been used for this purpose.
 
