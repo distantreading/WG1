@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/lou/Public/WG1/out/encoding_proposal.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Vdavky Nanynky Kulichovy : ELTeC edition</title>
+                <author dates="1854 1935" sex="m">Ignát Herrmann</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>Demonstration file prepared for the ELTeC Sampler</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Retagged from
+                    HERRMANN, Ignát. Vdavky Nanynky Kulichovy I [online]. V MKP 1. vyd. Praha:
+                    Městská knihovna v Praze, 2017 [aktuální datum citace e-knihy – př. cit.
+                    rrrr-mm-dd]. ISBN 978-80-7532-594-5 (epub). Dostupné z:
+                    <ref>http://web2.mlp.cz/koweb/00/04/32/54/51/vdavky_nanynky_kulichovy_I.epub.</ref></p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:id="CS0001" xml:lang="cs">
+        <body>
+           
