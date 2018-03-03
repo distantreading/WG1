@@ -708,7 +708,7 @@ http://isni.oclc.org/-->
              <!-- define two new attributes for author -->
             <elementSpec ident="author" mode="change">
                <attList>
-                  <attDef ident="dates" mode="add">
+                  <attDef ident="dates" mode="add" usage="req">
                      <desc xml:lang="en">supplies the years of birth and death of an author</desc>
                      <datatype minOccurs="2" maxOccurs="2">
                         <dataRef name="gYear"/>
@@ -717,7 +717,7 @@ http://isni.oclc.org/-->
                         add schematron to check that it is in the
                         right range and that the second is after the first -->
                      
-                  </attDef><attDef ident="sex" mode="add">
+                  </attDef><attDef ident="sex" mode="add" usage="req">
                      <desc xml:lang="en">Specifies the sexual identification usually associated with the author</desc>
                      <valList type="closed">
                         <valItem ident="m"><desc>male</desc></valItem>

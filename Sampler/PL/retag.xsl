@@ -33,9 +33,9 @@
     </xsl:template>
     <xsl:template match="h:span[@class = 'n0kh']">
         <choice>
-            <orig>
+            <sic>
                 <xsl:value-of select="."/>
-            </orig>
+            </sic>
             <corr>
                 <xsl:value-of select="following-sibling::h:span[@class = 'n0k'][1]"/>
             </corr>

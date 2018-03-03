@@ -40,6 +40,17 @@
    
    <xsl:template match="h:h2/h:br"/>
     
+    <xsl:template match="h:p[@class='e-bookvenovani']">
+        <lg>
+            <l><xsl:apply-templates/></l>
+        </lg>
+    </xsl:template>
+    
+    <xsl:template match="h:p[@class='e-bookversebezpredsazeni6bza']">
+        <lg>
+            <l><xsl:apply-templates/></l>
+        </lg>
+    </xsl:template>
     <xsl:template match="h:br">
        <lb/>
    </xsl:template>
@@ -64,7 +75,7 @@
       <hi><xsl:apply-templates/></hi>
   </xsl:template>
     
-    <xsl:template match="h:span">
+    <xsl:template match="h:span|h:b">
         <xsl:apply-templates/>
     </xsl:template>
     

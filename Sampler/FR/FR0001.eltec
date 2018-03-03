@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../out/encoding_proposal.rnc" type="application/relax-ng-compact-syntax"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <teiHeader>
+<?xml-model href="file:/home/lou/Public/WG1/out/encoding_proposal.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
         <fileDesc>
             <titleStmt>
                 <title type="main">Jean Diable</title>
@@ -9,7 +9,7 @@
                 <title type="idno">
                     <idno type="viaf">309343186</idno>
                 </title>
-                <author>
+                <author dates="1816 1887" sex="m">
                     <idno type="viaf">17222447</idno>
                     <name type="short">FevalPP</name>
                     <name type="full">Féval, Paul H.C. (père)</name>
