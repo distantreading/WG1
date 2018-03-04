@@ -1,0 +1,6 @@
+cp CS0001-header.eltec CS0001.eltec
+for f in Orig/OEBPS/Text/*html; do \
+echo $f; \
+perl -i -pe"s/nbsp/#160/g" $f; \
+xmllint --dropdtd $f | saxon -s:- retag.xsl >> CS0001.eltec; done
+cat "</body></text></TEI>\n" >> CS0001.eltec
