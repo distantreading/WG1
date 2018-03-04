@@ -1,0 +1,22 @@
+$tag="p";
+print "<body xml:id="PT0001" xml:lang="pt">\n";
+while (<>) {
+chop;
+next unless (/[a-zA-Z]/);
+if(/^([IVX]+)$/) {
+print "</div><div><head>$1</head>\n";
+next;}
+elsif (/<poesia>/) {
+print "<lg>\n";
+$tag="l";
+next;}
+elsif (/<\/poesia>/){
+print "<\/lg>\n";
+$tag="p";
+next;}
+
+
+print "<",$tag,">",$_,"</",$tag,">\n";
+}
+
+print "<\/body>/n";
