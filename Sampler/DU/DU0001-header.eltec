@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/lou/Public/WG1/out/encoding_proposal.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Barthold Meryan : ELTeC edition</title>
+                <author dates="1848 1902" sex="m">Cornélie Huygens</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>Demonstration file prepared for the ELTeC Sampler</p>
+            </publicationStmt>
+            <sourceDesc>
+<p>gebaseerd op een bestand van de Digitale Bibliotheek voor de
+Nederlandse Letteren (www.dbnl.org).  
+ © 2009 Digitale Bibliotheek voor de Nederlandse Letteren, Leiden 
+<bibl>
+ Cornélie Huygens, Barthold Meryan. P.N. van
+Kampen &amp; Zoon, Amsterdam z.j. [1897] </bibl>
+<ref>http://www.dbnl.org/tekst/huyg004bart01_01/ebook/huyg004bart01_01.epub
+</ref>
+<note>Voor de verantwoording en oorspronkelijke paginanummering zie het <ref href="http://www.dbnl.org/tekst/huyg004bart01_01">bronbestand</ref>. </note>
+</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:id="DU0001" xml:lang="du">
+        <body>
+           
