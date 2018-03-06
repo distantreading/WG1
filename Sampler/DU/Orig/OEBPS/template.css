@@ -1,0 +1,113 @@
+﻿@font-face {font-family: "schreef"; src:url(fonts/CharisSILR.ttf);}
+@font-face {font-family: "schreefI"; src:url(fonts/CharisSILI.ttf);}
+@font-face {font-family: "schreefB"; src:url(fonts/CharisSILB.ttf);}
+@font-face {font-family: "schreefBI"; src:url(fonts/CharisSILBI.ttf);}
+@font-face {font-family: "SC"; src:url(fonts/CharisSILR_sc.ttf);}
+@page {margin: 20pt 6pt 6pt 12pt;}
+div, p, h1, h2, h3, h4, ol, ul, li { line-height: 1.25em; font-size: 1em; margin: 0 0 0 0; text-align: left; font-weight: normal; font-style: normal; color: black;}
+div, p, h1, h2, h4, ol, ul, li {font-family: "schreef", serif; }
+h3 { font-family:"schreefI", serif;}
+div.newpage {page-break-before:always;}
+div.cover {text-align: center;}
+div.cover img { width: auto; height: 100%;}
+span.logo {display:block; margin-top:15%;}
+span.fotomid {display:block; text-align:center;}
+img.fotomid, img.fotolinks, img.fotoinspring, img.inline, img.logo {max-width:100%; height:auto;}
+img.fotoinspring {margin-left:30px;}
+span.inline {display:block; float:left; padding-right:.6em;}
+div.footnotes {page-break-before:always;}
+div.footnotes a { text-decoration:none; }
+.deel {page-break-before:always; font-size: 1.8em; margin-bottom: 10%; margin-left:30px;}
+.bovenkop {page-break-before: always; font-size: 1.1em; margin-left:30px;}
+.kop, .kopx {page-break-before: always; font-size: 1.80em; margin-bottom: 10%;}
+.bovenkop + .deel, .bovenkop + .kop, .bovenkop + .kopx {page-break-before:avoid;}
+.onderkop {font-family: "schreefI"; font-size: 1.1em; margin-top: 10%; margin-bottom: 10%}
+.kop + .onderkop, .kopx + .onderkop {margin-top: -10%;}
+.kopklein {font-size: 1.3em; margin-left:30px; margin-top: 0.95em;}
+.kopmedium {font-size: 1.5em; margin-left:30px; margin-top: 1.09em;}
+.tussenkop {font-family: "schreefB"; font-size: 1.1em; margin-left:30px; margin-top: 1.12em;}
+
+/* nieuw */
+.list , .list {font-size: 0.85em; margin-left:30px; margin-right:24px;}
+.deel + .plat, .bovenkop + .plat, .onderkop + .plat {margin-top: 1.09em;}
+/* end */
+.plat + .plat {text-indent:30px;}
+.plat + .plat table {text-indent:0px;}
+.platcursief {font-family: "schreefI";}
+.platcursief + .platcursief {text-indent:30px;}
+.intro {font-family: "schreefB";}
+.intro + .intro {text-indent:30px;}
+.dichtregel {margin-left:60px; margin-right:24px; text-indent:-30px;}
+.dichtregel-poetry {margin-left:60px; margin-right:24px; text-indent:-30px;}
+
+/* TABS */
+.tabs-1 { margin-left: 70px;}
+.tabs-2 { margin-left: 80px;}
+.tabs-3 { margin-left: 90px;}
+.tabs-4 { margin-left: 100px;}
+.tabs-5 { margin-left: 110px;}
+.tabs-6 { margin-left: 120px;}
+.tabs-7 { margin-left: 130px;}
+
+.blok {margin-left:30px; margin-right:24px;}
+.blokinspring {margin-left:30px; margin-right:24px;}
+.blokinspring + .blokinspring {text-indent:30px;}
+.bijschrift {font-family:"schreefB"; font-size: 0.85em; margin-left:30px; margin-top:0.5em; margin-bottom:1.5em;}
+.klein {font-size: 0.85em; line-height:1.4em;}
+.klein + .klein {text-indent:30px;}
+.hangend {margin-left:30px; text-indent:-30px;}
+.voetnoten {margin-left:30px; text-indent:-30px;}
+.voetnoten table {text-indent:0px;}
+.sierregel {margin-left:30px; margin-top: 1.25em; margin-bottom: 1.25em;}
+.witregel {color:white;}
+.restekst {margin-left:60px;}
+.reskop {font-size: 1.4em; font-family: sans-serif; margin-left:30px; margin-top: 1.35em; margin-bottom: .45em;}
+.res1 {text-align:right; margin-right:.8em;}
+.res2 {font-family: sans-serif; font-size: 0.85em; line-height:1.4em;}
+.z {font-size: 1em;}
+.vw-auteur {font-size:1.4em; margin-left:30px; line-height:1.1em; margin-bottom:.25em;}
+.vw-titel {font-family: "schreefB"; font-size:2em; color:black; margin-left:30px; line-height:1.1em; margin-bottom:.1em; }
+.vw-ondertitel {font-size:1.4em; margin-left:30px; line-height:1.1em; margin-bottom:.25em;}
+.vw-genre {margin-left:30px; font-family: "SC"; line-height:1.1em; margin-bottom:.25em;}
+.vw-vertaler {margin-left:30px; line-height:1.1em; margin-bottom:.25em;}
+.vw-uitgever {margin-top:.2em; margin-left:30px;}
+.vw-jaartal {margin-left:30px;}
+.vw-vermelding {margin-bottom:10%; margin-left:30px; margin-right:24px;}
+.vw-colofon {font-size: 0.85em; margin-left:30px; margin-right:24px;}
+.vw-isbn {font-family: "SC"; font-size: 0.85em; margin-left:30px; margin-right:24px;}
+.vw-opdracht {margin-left:30px; margin-right:24px;}
+.vw-motto {font-family: "schreefI"; margin-left:30px; margin-right:24px;}
+.vw-ondergetekend {font-size: 0.85em; line-height:1.5em; margin-left:60px; margin-right:24px; margin-bottom:10%;}
+.vw-inhoudsopgave {margin-left:60px; text-indent:-30px;}
+.vw-z {margin-left:30px;}
+ol {margin: 0 0 0 30px;}
+ul {margin: 0 0 0 30px;}
+.lijstnum {}
+.lijstbullet {}
+span.cursief {font-family: "schreefI";}
+span.vet {font-family: "schreefB";}
+span.vetcursief {font-family: "schreefBI";}
+span.romein {font-family: "schreef";}
+span.kleinkap {font-family: "SC"; }
+span.cijfers {font-family: "SC";}
+a.footnote-link {font-size:80%; color:blue;}
+a.footnote-anchor {font-size:80%; color:blue;}
+span.superscript, span.sup {vertical-align:text-top; font-size:65%;}
+span.subscript, span.sub {vertical-align:text-bottom; font-size:65%;}
+span.groter {font-size:140%;}
+span.kleiner {font-size:80%;}
+span.res1 {text-decoration:line-through;}
+span.res2 {font-family: sans-serif; font-size: 0.85em;}
+span.wit {color:white;}
+span.grijs {color:gray;}
+.stage {font-family: "schreefI"; margin-top:15px; margin-left:30px; margin-right:24px; margin-bottom:15px; }
+.poem, .vw-speaker {font-family: "schreefB"; margin-top:15px; margin-left:30px; margin-right:24px; margin-bottom:15px; }
+
+l { display:block; }
+.speaker + .stage {font-family: "schreefB"; margin-top:15px; margin-left:30px; margin-right:24px; margin-bottom:15px; }
+i {font-family: "schreefI";}
+b {font-family: "schreefB";}
+span.boldital {font-family: "schreefBI";}
+span.sc, span.sc {font-family: "SC"; }
+div.logo {font-size: 0.85em; margin-left:30px; margin-right:24px; margin-bottom:3em; }
+div.logos { margin-left:130px;  }

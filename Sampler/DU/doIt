@@ -1,0 +1,6 @@
+cp DU0001-header.eltec DU0001.eltec
+for f in Orig/OEBPS/*html; do \
+echo $f; \
+perl -i -pe"s/nbsp/#160/g" $f; \
+xmllint --dropdtd $f | saxon -s:- retag.xsl >> DU0001.eltec; done
+echo "</body></text></TEI>\n" >> DU0001.eltec

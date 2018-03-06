@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="2.0">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<dc:title>Barthold Meryan</dc:title>
+<dc:date>2012-11-01</dc:date>
+<dc:creator>Cornélie Huygens</dc:creator>
+<dc:language>nl</dc:language>
+<dc:rights></dc:rights>
+<dc:publisher></dc:publisher>
+<dc:identifier id="bookid">huyg004bart01</dc:identifier>
+</metadata>
+<manifest>
+<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+<item id="epubcss" href="template.css" media-type="text/css"/>
+<item id="CharisSILB" href="fonts/CharisSILB.ttf" media-type="font/ttf"/>
+<item id="CharisSILBI" href="fonts/CharisSILBI.ttf" media-type="font/ttf"/>
+<item id="CharisSILI" href="fonts/CharisSILI.ttf" media-type="font/ttf"/>
+<item id="CharisSILR" href="fonts/CharisSILR.ttf" media-type="font/ttf"/>
+<item id="CharisSILR_sc" href="fonts/CharisSILR_sc.ttf" media-type="font/ttf"/>
+<item id="huyg004bart01_01-0001" href="huyg004bart01_01-0001.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0002" href="huyg004bart01_01-0002.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0003" href="huyg004bart01_01-0003.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0004" href="huyg004bart01_01-0004.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0005" href="huyg004bart01_01-0005.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0006" href="huyg004bart01_01-0006.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0007" href="huyg004bart01_01-0007.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0008" href="huyg004bart01_01-0008.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0009" href="huyg004bart01_01-0009.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0010" href="huyg004bart01_01-0010.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0011" href="huyg004bart01_01-0011.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0012" href="huyg004bart01_01-0012.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0013" href="huyg004bart01_01-0013.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0014" href="huyg004bart01_01-0014.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0015" href="huyg004bart01_01-0015.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0016" href="huyg004bart01_01-0016.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0017" href="huyg004bart01_01-0017.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0018" href="huyg004bart01_01-0018.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0019" href="huyg004bart01_01-0019.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0020" href="huyg004bart01_01-0020.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0021" href="huyg004bart01_01-0021.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0022" href="huyg004bart01_01-0022.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0023" href="huyg004bart01_01-0023.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0024" href="huyg004bart01_01-0024.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0025" href="huyg004bart01_01-0025.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0026" href="huyg004bart01_01-0026.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0027" href="huyg004bart01_01-0027.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0028" href="huyg004bart01_01-0028.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0029" href="huyg004bart01_01-0029.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0030" href="huyg004bart01_01-0030.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0031" href="huyg004bart01_01-0031.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0032" href="huyg004bart01_01-0032.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0033" href="huyg004bart01_01-0033.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0034" href="huyg004bart01_01-0034.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0035" href="huyg004bart01_01-0035.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0036" href="huyg004bart01_01-0036.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0037" href="huyg004bart01_01-0037.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0038" href="huyg004bart01_01-0038.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0039" href="huyg004bart01_01-0039.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0040" href="huyg004bart01_01-0040.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0041" href="huyg004bart01_01-0041.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0042" href="huyg004bart01_01-0042.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0043" href="huyg004bart01_01-0043.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0044" href="huyg004bart01_01-0044.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0045" href="huyg004bart01_01-0045.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0046" href="huyg004bart01_01-0046.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0047" href="huyg004bart01_01-0047.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0048" href="huyg004bart01_01-0048.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0049" href="huyg004bart01_01-0049.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0050" href="huyg004bart01_01-0050.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0051" href="huyg004bart01_01-0051.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0052" href="huyg004bart01_01-0052.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0053" href="huyg004bart01_01-0053.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0054" href="huyg004bart01_01-0054.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0055" href="huyg004bart01_01-0055.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0056" href="huyg004bart01_01-0056.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0057" href="huyg004bart01_01-0057.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0058" href="huyg004bart01_01-0058.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0059" href="huyg004bart01_01-0059.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0060" href="huyg004bart01_01-0060.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0061" href="huyg004bart01_01-0061.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0062" href="huyg004bart01_01-0062.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0063" href="huyg004bart01_01-0063.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0064" href="huyg004bart01_01-0064.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01-0065" href="huyg004bart01_01-0065.xhtml" media-type="application/xhtml+xml"/>
+<item id="huyg004bart01_01_tpg" href="images/huyg004bart01_01_tpg.gif" media-type="image/gif"/>
+<item id="logo" href="logos/logo.gif" media-type="image/gif"/>
+<item id="logos" href="logos/logos.jpg" media-type="image/jpeg"/>
+</manifest>
+<spine toc="ncx">
+<itemref idref="huyg004bart01_01-0001"/>
+<itemref idref="huyg004bart01_01-0002"/>
+<itemref idref="huyg004bart01_01-0003"/>
+<itemref idref="huyg004bart01_01-0004"/>
+<itemref idref="huyg004bart01_01-0005"/>
+<itemref idref="huyg004bart01_01-0006"/>
+<itemref idref="huyg004bart01_01-0007"/>
+<itemref idref="huyg004bart01_01-0008"/>
+<itemref idref="huyg004bart01_01-0009"/>
+<itemref idref="huyg004bart01_01-0010"/>
+<itemref idref="huyg004bart01_01-0011"/>
+<itemref idref="huyg004bart01_01-0012"/>
+<itemref idref="huyg004bart01_01-0013"/>
+<itemref idref="huyg004bart01_01-0014"/>
+<itemref idref="huyg004bart01_01-0015"/>
+<itemref idref="huyg004bart01_01-0016"/>
+<itemref idref="huyg004bart01_01-0017"/>
+<itemref idref="huyg004bart01_01-0018"/>
+<itemref idref="huyg004bart01_01-0019"/>
+<itemref idref="huyg004bart01_01-0020"/>
+<itemref idref="huyg004bart01_01-0021"/>
+<itemref idref="huyg004bart01_01-0022"/>
+<itemref idref="huyg004bart01_01-0023"/>
+<itemref idref="huyg004bart01_01-0024"/>
+<itemref idref="huyg004bart01_01-0025"/>
+<itemref idref="huyg004bart01_01-0026"/>
+<itemref idref="huyg004bart01_01-0027"/>
+<itemref idref="huyg004bart01_01-0028"/>
+<itemref idref="huyg004bart01_01-0029"/>
+<itemref idref="huyg004bart01_01-0030"/>
+<itemref idref="huyg004bart01_01-0031"/>
+<itemref idref="huyg004bart01_01-0032"/>
+<itemref idref="huyg004bart01_01-0033"/>
+<itemref idref="huyg004bart01_01-0034"/>
+<itemref idref="huyg004bart01_01-0035"/>
+<itemref idref="huyg004bart01_01-0036"/>
+<itemref idref="huyg004bart01_01-0037"/>
+<itemref idref="huyg004bart01_01-0038"/>
+<itemref idref="huyg004bart01_01-0039"/>
+<itemref idref="huyg004bart01_01-0040"/>
+<itemref idref="huyg004bart01_01-0041"/>
+<itemref idref="huyg004bart01_01-0042"/>
+<itemref idref="huyg004bart01_01-0043"/>
+<itemref idref="huyg004bart01_01-0044"/>
+<itemref idref="huyg004bart01_01-0045"/>
+<itemref idref="huyg004bart01_01-0046"/>
+<itemref idref="huyg004bart01_01-0047"/>
+<itemref idref="huyg004bart01_01-0048"/>
+<itemref idref="huyg004bart01_01-0049"/>
+<itemref idref="huyg004bart01_01-0050"/>
+<itemref idref="huyg004bart01_01-0051"/>
+<itemref idref="huyg004bart01_01-0052"/>
+<itemref idref="huyg004bart01_01-0053"/>
+<itemref idref="huyg004bart01_01-0054"/>
+<itemref idref="huyg004bart01_01-0055"/>
+<itemref idref="huyg004bart01_01-0056"/>
+<itemref idref="huyg004bart01_01-0057"/>
+<itemref idref="huyg004bart01_01-0058"/>
+<itemref idref="huyg004bart01_01-0059"/>
+<itemref idref="huyg004bart01_01-0060"/>
+<itemref idref="huyg004bart01_01-0061"/>
+<itemref idref="huyg004bart01_01-0062"/>
+<itemref idref="huyg004bart01_01-0063"/>
+<itemref idref="huyg004bart01_01-0064"/>
+<itemref idref="huyg004bart01_01-0065"/>
+</spine>
+<guide>
+<reference type="text" title="Chapter 1" href="huyg004bart01_01-0001.xhtml"/>
+<reference type="text" title="Chapter 2" href="huyg004bart01_01-0002.xhtml"/>
+<reference type="text" title="Chapter 3" href="huyg004bart01_01-0003.xhtml"/>
+<reference type="text" title="Chapter 4" href="huyg004bart01_01-0004.xhtml"/>
+<reference type="text" title="Chapter 5" href="huyg004bart01_01-0005.xhtml"/>
+<reference type="text" title="Chapter 6" href="huyg004bart01_01-0006.xhtml"/>
+<reference type="text" title="Chapter 7" href="huyg004bart01_01-0007.xhtml"/>
+<reference type="text" title="Chapter 8" href="huyg004bart01_01-0008.xhtml"/>
+<reference type="text" title="Chapter 9" href="huyg004bart01_01-0009.xhtml"/>
+<reference type="text" title="Chapter 10" href="huyg004bart01_01-0010.xhtml"/>
+<reference type="text" title="Chapter 11" href="huyg004bart01_01-0011.xhtml"/>
+<reference type="text" title="Chapter 12" href="huyg004bart01_01-0012.xhtml"/>
+<reference type="text" title="Chapter 13" href="huyg004bart01_01-0013.xhtml"/>
+<reference type="text" title="Chapter 14" href="huyg004bart01_01-0014.xhtml"/>
+<reference type="text" title="Chapter 15" href="huyg004bart01_01-0015.xhtml"/>
+<reference type="text" title="Chapter 16" href="huyg004bart01_01-0016.xhtml"/>
+<reference type="text" title="Chapter 17" href="huyg004bart01_01-0017.xhtml"/>
+<reference type="text" title="Chapter 18" href="huyg004bart01_01-0018.xhtml"/>
+<reference type="text" title="Chapter 19" href="huyg004bart01_01-0019.xhtml"/>
+<reference type="text" title="Chapter 20" href="huyg004bart01_01-0020.xhtml"/>
+<reference type="text" title="Chapter 21" href="huyg004bart01_01-0021.xhtml"/>
+<reference type="text" title="Chapter 22" href="huyg004bart01_01-0022.xhtml"/>
+<reference type="text" title="Chapter 23" href="huyg004bart01_01-0023.xhtml"/>
+<reference type="text" title="Chapter 24" href="huyg004bart01_01-0024.xhtml"/>
+<reference type="text" title="Chapter 25" href="huyg004bart01_01-0025.xhtml"/>
+<reference type="text" title="Chapter 26" href="huyg004bart01_01-0026.xhtml"/>
+<reference type="text" title="Chapter 27" href="huyg004bart01_01-0027.xhtml"/>
+<reference type="text" title="Chapter 28" href="huyg004bart01_01-0028.xhtml"/>
+<reference type="text" title="Chapter 29" href="huyg004bart01_01-0029.xhtml"/>
+<reference type="text" title="Chapter 30" href="huyg004bart01_01-0030.xhtml"/>
+<reference type="text" title="Chapter 31" href="huyg004bart01_01-0031.xhtml"/>
+<reference type="text" title="Chapter 32" href="huyg004bart01_01-0032.xhtml"/>
+<reference type="text" title="Chapter 33" href="huyg004bart01_01-0033.xhtml"/>
+<reference type="text" title="Chapter 34" href="huyg004bart01_01-0034.xhtml"/>
+<reference type="text" title="Chapter 35" href="huyg004bart01_01-0035.xhtml"/>
+<reference type="text" title="Chapter 36" href="huyg004bart01_01-0036.xhtml"/>
+<reference type="text" title="Chapter 37" href="huyg004bart01_01-0037.xhtml"/>
+<reference type="text" title="Chapter 38" href="huyg004bart01_01-0038.xhtml"/>
+<reference type="text" title="Chapter 39" href="huyg004bart01_01-0039.xhtml"/>
+<reference type="text" title="Chapter 40" href="huyg004bart01_01-0040.xhtml"/>
+<reference type="text" title="Chapter 41" href="huyg004bart01_01-0041.xhtml"/>
+<reference type="text" title="Chapter 42" href="huyg004bart01_01-0042.xhtml"/>
+<reference type="text" title="Chapter 43" href="huyg004bart01_01-0043.xhtml"/>
+<reference type="text" title="Chapter 44" href="huyg004bart01_01-0044.xhtml"/>
+<reference type="text" title="Chapter 45" href="huyg004bart01_01-0045.xhtml"/>
+<reference type="text" title="Chapter 46" href="huyg004bart01_01-0046.xhtml"/>
+<reference type="text" title="Chapter 47" href="huyg004bart01_01-0047.xhtml"/>
+<reference type="text" title="Chapter 48" href="huyg004bart01_01-0048.xhtml"/>
+<reference type="text" title="Chapter 49" href="huyg004bart01_01-0049.xhtml"/>
+<reference type="text" title="Chapter 50" href="huyg004bart01_01-0050.xhtml"/>
+<reference type="text" title="Chapter 51" href="huyg004bart01_01-0051.xhtml"/>
+<reference type="text" title="Chapter 52" href="huyg004bart01_01-0052.xhtml"/>
+<reference type="text" title="Chapter 53" href="huyg004bart01_01-0053.xhtml"/>
+<reference type="text" title="Chapter 54" href="huyg004bart01_01-0054.xhtml"/>
+<reference type="text" title="Chapter 55" href="huyg004bart01_01-0055.xhtml"/>
+<reference type="text" title="Chapter 56" href="huyg004bart01_01-0056.xhtml"/>
+<reference type="text" title="Chapter 57" href="huyg004bart01_01-0057.xhtml"/>
+<reference type="text" title="Chapter 58" href="huyg004bart01_01-0058.xhtml"/>
+<reference type="text" title="Chapter 59" href="huyg004bart01_01-0059.xhtml"/>
+<reference type="text" title="Chapter 60" href="huyg004bart01_01-0060.xhtml"/>
+<reference type="text" title="Chapter 61" href="huyg004bart01_01-0061.xhtml"/>
+<reference type="text" title="Chapter 62" href="huyg004bart01_01-0062.xhtml"/>
+<reference type="text" title="Chapter 63" href="huyg004bart01_01-0063.xhtml"/>
+<reference type="text" title="Chapter 64" href="huyg004bart01_01-0064.xhtml"/>
+<reference type="text" title="Chapter 65" href="huyg004bart01_01-0065.xhtml"/>
+<reference type="cover" title="cover" href="huyg004bart01_01-0001.xhtml"/>
+</guide>
+</package>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd" >
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+<head>
+<meta content="0" name="dtb:totalPageCount"/>
+</head>
+<docTitle><text>Barthold Meryan</text></docTitle>
+<docAuthor><text>Cornélie Huygens</text></docAuthor>
+<navMap>
+<navPoint id="navpoint-1" playOrder="1">
+<navLabel><text>Barthold Meryan</text></navLabel>
+<content src="huyg004bart01_01-0001.xhtml#toc-anchor"/>
+</navPoint>
+<navPoint id="navpoint-2" playOrder="2">
+<navLabel><text>I</text></navLabel>
+<content src="huyg004bart01_01-0002.xhtml#toc-anchor1"/>
+</navPoint>
+<navPoint id="navpoint-3" playOrder="3">
+<navLabel><text>II</text></navLabel>
+<content src="huyg004bart01_01-0003.xhtml#toc-anchor2"/>
+</navPoint>
+<navPoint id="navpoint-4" playOrder="4">
+<navLabel><text>III</text></navLabel>
+<content src="huyg004bart01_01-0004.xhtml#toc-anchor3"/>
+</navPoint>
+<navPoint id="navpoint-5" playOrder="5">
+<navLabel><text>IV</text></navLabel>
+<content src="huyg004bart01_01-0005.xhtml#toc-anchor4"/>
+</navPoint>
+<navPoint id="navpoint-6" playOrder="6">
+<navLabel><text>V</text></navLabel>
+<content src="huyg004bart01_01-0006.xhtml#toc-anchor5"/>
+</navPoint>
+<navPoint id="navpoint-7" playOrder="7">
+<navLabel><text>VI</text></navLabel>
+<content src="huyg004bart01_01-0007.xhtml#toc-anchor6"/>
+</navPoint>
+<navPoint id="navpoint-8" playOrder="8">
+<navLabel><text>VII</text></navLabel>
+<content src="huyg004bart01_01-0008.xhtml#toc-anchor7"/>
+</navPoint>
+<navPoint id="navpoint-9" playOrder="9">
+<navLabel><text>VIII</text></navLabel>
+<content src="huyg004bart01_01-0009.xhtml#toc-anchor8"/>
+</navPoint>
+<navPoint id="navpoint-10" playOrder="10">
+<navLabel><text>IX</text></navLabel>
+<content src="huyg004bart01_01-0010.xhtml#toc-anchor9"/>
+</navPoint>
+<navPoint id="navpoint-11" playOrder="11">
+<navLabel><text>X</text></navLabel>
+<content src="huyg004bart01_01-0011.xhtml#toc-anchor10"/>
+</navPoint>
+<navPoint id="navpoint-12" playOrder="12">
+<navLabel><text>XI</text></navLabel>
+<content src="huyg004bart01_01-0012.xhtml#toc-anchor11"/>
+</navPoint>
+<navPoint id="navpoint-13" playOrder="13">
+<navLabel><text>XII</text></navLabel>
+<content src="huyg004bart01_01-0013.xhtml#toc-anchor12"/>
+</navPoint>
+<navPoint id="navpoint-14" playOrder="14">
+<navLabel><text>XIII</text></navLabel>
+<content src="huyg004bart01_01-0014.xhtml#toc-anchor13"/>
+</navPoint>
+<navPoint id="navpoint-15" playOrder="15">
+<navLabel><text>XIV</text></navLabel>
+<content src="huyg004bart01_01-0015.xhtml#toc-anchor14"/>
+</navPoint>
+<navPoint id="navpoint-16" playOrder="16">
+<navLabel><text>XV</text></navLabel>
+<content src="huyg004bart01_01-0016.xhtml#toc-anchor15"/>
+</navPoint>
+<navPoint id="navpoint-17" playOrder="17">
+<navLabel><text>XVI</text></navLabel>
+<content src="huyg004bart01_01-0017.xhtml#toc-anchor16"/>
+</navPoint>
+<navPoint id="navpoint-18" playOrder="18">
+<navLabel><text>XVII</text></navLabel>
+<content src="huyg004bart01_01-0018.xhtml#toc-anchor17"/>
+</navPoint>
+<navPoint id="navpoint-19" playOrder="19">
+<navLabel><text>XVIII</text></navLabel>
+<content src="huyg004bart01_01-0019.xhtml#toc-anchor18"/>
+</navPoint>
+<navPoint id="navpoint-20" playOrder="20">
+<navLabel><text>XIX</text></navLabel>
+<content src="huyg004bart01_01-0020.xhtml#toc-anchor19"/>
+</navPoint>
+<navPoint id="navpoint-21" playOrder="21">
+<navLabel><text>XX</text></navLabel>
+<content src="huyg004bart01_01-0021.xhtml#toc-anchor20"/>
+</navPoint>
+<navPoint id="navpoint-22" playOrder="22">
+<navLabel><text>XXI</text></navLabel>
+<content src="huyg004bart01_01-0022.xhtml#toc-anchor21"/>
+</navPoint>
+<navPoint id="navpoint-23" playOrder="23">
+<navLabel><text>XXII</text></navLabel>
+<content src="huyg004bart01_01-0023.xhtml#toc-anchor22"/>
+</navPoint>
+<navPoint id="navpoint-24" playOrder="24">
+<navLabel><text>XXIII</text></navLabel>
+<content src="huyg004bart01_01-0024.xhtml#toc-anchor23"/>
+</navPoint>
+<navPoint id="navpoint-25" playOrder="25">
+<navLabel><text>XXIV</text></navLabel>
+<content src="huyg004bart01_01-0025.xhtml#toc-anchor24"/>
+</navPoint>
+<navPoint id="navpoint-26" playOrder="26">
+<navLabel><text>XXV</text></navLabel>
+<content src="huyg004bart01_01-0026.xhtml#toc-anchor25"/>
+</navPoint>
+<navPoint id="navpoint-27" playOrder="27">
+<navLabel><text>XXVI</text></navLabel>
+<content src="huyg004bart01_01-0027.xhtml#toc-anchor26"/>
+</navPoint>
+<navPoint id="navpoint-28" playOrder="28">
+<navLabel><text>XXVII</text></navLabel>
+<content src="huyg004bart01_01-0028.xhtml#toc-anchor27"/>
+</navPoint>
+<navPoint id="navpoint-29" playOrder="29">
+<navLabel><text>XXVIII</text></navLabel>
+<content src="huyg004bart01_01-0029.xhtml#toc-anchor28"/>
+</navPoint>
+<navPoint id="navpoint-30" playOrder="30">
+<navLabel><text>XXIX</text></navLabel>
+<content src="huyg004bart01_01-0030.xhtml#toc-anchor29"/>
+</navPoint>
+<navPoint id="navpoint-31" playOrder="31">
+<navLabel><text>XXX</text></navLabel>
+<content src="huyg004bart01_01-0031.xhtml#toc-anchor30"/>
+</navPoint>
+<navPoint id="navpoint-32" playOrder="32">
+<navLabel><text>XXXI</text></navLabel>
+<content src="huyg004bart01_01-0032.xhtml#toc-anchor31"/>
+</navPoint>
+<navPoint id="navpoint-33" playOrder="33">
+<navLabel><text>XXXII</text></navLabel>
+<content src="huyg004bart01_01-0033.xhtml#toc-anchor32"/>
+</navPoint>
+<navPoint id="navpoint-34" playOrder="34">
+<navLabel><text>XXXIII</text></navLabel>
+<content src="huyg004bart01_01-0034.xhtml#toc-anchor33"/>
+</navPoint>
+<navPoint id="navpoint-35" playOrder="35">
+<navLabel><text>XXXIV</text></navLabel>
+<content src="huyg004bart01_01-0035.xhtml#toc-anchor34"/>
+</navPoint>
+<navPoint id="navpoint-36" playOrder="36">
+<navLabel><text>XXXV</text></navLabel>
+<content src="huyg004bart01_01-0036.xhtml#toc-anchor35"/>
+</navPoint>
+<navPoint id="navpoint-37" playOrder="37">
+<navLabel><text>XXXVI</text></navLabel>
+<content src="huyg004bart01_01-0037.xhtml#toc-anchor36"/>
+</navPoint>
+<navPoint id="navpoint-38" playOrder="38">
+<navLabel><text>XXXVII</text></navLabel>
+<content src="huyg004bart01_01-0038.xhtml#toc-anchor37"/>
+</navPoint>
+<navPoint id="navpoint-39" playOrder="39">
+<navLabel><text>XXXVIII</text></navLabel>
+<content src="huyg004bart01_01-0039.xhtml#toc-anchor38"/>
+</navPoint>
+<navPoint id="navpoint-40" playOrder="40">
+<navLabel><text>XXXIX</text></navLabel>
+<content src="huyg004bart01_01-0040.xhtml#toc-anchor39"/>
+</navPoint>
+<navPoint id="navpoint-41" playOrder="41">
+<navLabel><text>XL</text></navLabel>
+<content src="huyg004bart01_01-0041.xhtml#toc-anchor40"/>
+</navPoint>
+<navPoint id="navpoint-42" playOrder="42">
+<navLabel><text>XLI</text></navLabel>
+<content src="huyg004bart01_01-0042.xhtml#toc-anchor41"/>
+</navPoint>
+<navPoint id="navpoint-43" playOrder="43">
+<navLabel><text>XLII</text></navLabel>
+<content src="huyg004bart01_01-0043.xhtml#toc-anchor42"/>
+</navPoint>
+<navPoint id="navpoint-44" playOrder="44">
+<navLabel><text>XLIII</text></navLabel>
+<content src="huyg004bart01_01-0044.xhtml#toc-anchor43"/>
+</navPoint>
+<navPoint id="navpoint-45" playOrder="45">
+<navLabel><text>XLIV</text></navLabel>
+<content src="huyg004bart01_01-0045.xhtml#toc-anchor44"/>
+</navPoint>
+<navPoint id="navpoint-46" playOrder="46">
+<navLabel><text>XLV</text></navLabel>
+<content src="huyg004bart01_01-0046.xhtml#toc-anchor45"/>
+</navPoint>
+<navPoint id="navpoint-47" playOrder="47">
+<navLabel><text>XLVI</text></navLabel>
+<content src="huyg004bart01_01-0047.xhtml#toc-anchor46"/>
+</navPoint>
+<navPoint id="navpoint-48" playOrder="48">
+<navLabel><text>XLVII</text></navLabel>
+<content src="huyg004bart01_01-0048.xhtml#toc-anchor47"/>
+</navPoint>
+<navPoint id="navpoint-49" playOrder="49">
+<navLabel><text>XLVIII</text></navLabel>
+<content src="huyg004bart01_01-0049.xhtml#toc-anchor48"/>
+</navPoint>
+<navPoint id="navpoint-50" playOrder="50">
+<navLabel><text>XLIX</text></navLabel>
+<content src="huyg004bart01_01-0050.xhtml#toc-anchor49"/>
+</navPoint>
+<navPoint id="navpoint-51" playOrder="51">
+<navLabel><text>L</text></navLabel>
+<content src="huyg004bart01_01-0051.xhtml#toc-anchor50"/>
+</navPoint>
+<navPoint id="navpoint-52" playOrder="52">
+<navLabel><text>LI</text></navLabel>
+<content src="huyg004bart01_01-0052.xhtml#toc-anchor51"/>
+</navPoint>
+<navPoint id="navpoint-53" playOrder="53">
+<navLabel><text>LII</text></navLabel>
+<content src="huyg004bart01_01-0053.xhtml#toc-anchor52"/>
+</navPoint>
+<navPoint id="navpoint-54" playOrder="54">
+<navLabel><text>LIII</text></navLabel>
+<content src="huyg004bart01_01-0054.xhtml#toc-anchor53"/>
+</navPoint>
+<navPoint id="navpoint-55" playOrder="55">
+<navLabel><text>LIV</text></navLabel>
+<content src="huyg004bart01_01-0055.xhtml#toc-anchor54"/>
+</navPoint>
+<navPoint id="navpoint-56" playOrder="56">
+<navLabel><text>LV</text></navLabel>
+<content src="huyg004bart01_01-0056.xhtml#toc-anchor55"/>
+</navPoint>
+<navPoint id="navpoint-57" playOrder="57">
+<navLabel><text>LVI</text></navLabel>
+<content src="huyg004bart01_01-0057.xhtml#toc-anchor56"/>
+</navPoint>
+<navPoint id="navpoint-58" playOrder="58">
+<navLabel><text>LVII</text></navLabel>
+<content src="huyg004bart01_01-0058.xhtml#toc-anchor57"/>
+</navPoint>
+<navPoint id="navpoint-59" playOrder="59">
+<navLabel><text>LVIII</text></navLabel>
+<content src="huyg004bart01_01-0059.xhtml#toc-anchor58"/>
+</navPoint>
+<navPoint id="navpoint-60" playOrder="60">
+<navLabel><text>LIX</text></navLabel>
+<content src="huyg004bart01_01-0060.xhtml#toc-anchor59"/>
+</navPoint>
+<navPoint id="navpoint-61" playOrder="61">
+<navLabel><text>LX</text></navLabel>
+<content src="huyg004bart01_01-0061.xhtml#toc-anchor60"/>
+</navPoint>
+<navPoint id="navpoint-62" playOrder="62">
+<navLabel><text>LXI</text></navLabel>
+<content src="huyg004bart01_01-0062.xhtml#toc-anchor61"/>
+</navPoint>
+<navPoint id="navpoint-63" playOrder="63">
+<navLabel><text>LXII</text></navLabel>
+<content src="huyg004bart01_01-0063.xhtml#toc-anchor62"/>
+</navPoint>
+<navPoint id="navpoint-64" playOrder="64">
+<navLabel><text>LXIII</text></navLabel>
+<content src="huyg004bart01_01-0064.xhtml#toc-anchor63"/>
+</navPoint>
+<navPoint id="navpoint-65" playOrder="65">
+<navLabel><text>LXIV</text></navLabel>
+<content src="huyg004bart01_01-0065.xhtml#toc-anchor64"/>
+</navPoint>
+</navMap>
+</ncx>
