@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookID" version="2.0">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:identifier id="BookID" opf:scheme="UUID">urn:uuid:d2a55177-a5e4-412d-b6e5-9ddd46abe48a</dc:identifier>
+    <dc:title>Zlatarovo Zlato</dc:title>
+    <dc:identifier opf:scheme="ISBN">978-953-328-046-2</dc:identifier>
+    <dc:subject>roman</dc:subject>
+    <dc:creator opf:role="aut">August Šenoa</dc:creator>
+    <dc:description>roman povijesni</dc:description>
+    <dc:date opf:event="publication">2011-03-21</dc:date>
+    <dc:publisher>Bulaja naklada</dc:publisher>
+    <dc:language>hr</dc:language>
+    <dc:date opf:event="modification">2013-06-24</dc:date>
+    <meta name="cover" content="coverPic" />
+    <meta content="0.7.1" name="Sigil version" />
+  </metadata>
+  <manifest>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
+    <item href="Images/senoa_zlatarovozlato.jpg" id="coverPic" media-type="image/jpeg" />
+    <item href="Styles/style.css" id="style.css" media-type="text/css" />
+    <item href="Text/coverpage.htm" id="coverpage.htm" media-type="application/xhtml+xml" />
+    <item href="Text/senoa_zlatarovozlato_1.htm" id="senoa_zlatarovozlato_1.htm" media-type="application/xhtml+xml" />
+    <item href="Text/senoa_zlatarovozlato_2.htm" id="senoa_zlatarovozlato_2.htm" media-type="application/xhtml+xml" />
+    <item href="Text/Section0003.xhtml" id="Section0003.xhtml" media-type="application/xhtml+xml" />
+    <item href="Text/senoa_zlatarovozlato_6.htm" id="senoa_zlatarovozlato_6.htm" media-type="application/xhtml+xml" />
+    <item href="Text/senoa_zlatarovozlato_7.htm" id="senoa_zlatarovozlato_7.htm" media-type="application/xhtml+xml" />
+    <item href="Text/senoa_zlatarovozlato_8.htm" id="senoa_zlatarovozlato_8.htm" media-type="application/xhtml+xml" />
+    <item href="Text/senoa_zlatarovozlato_9.htm" id="senoa_zlatarovozlato_9.htm" media-type="application/xhtml+xml" />
+    <item href="Text/Section0002.xhtml" id="Section0002.xhtml" media-type="application/xhtml+xml" />
+    <item href="Text/senoa_zlatarovozlato_4.htm" id="senoa_zlatarovozlato_4.htm" media-type="application/xhtml+xml" />
+    <item href="Text/Section0001.xhtml" id="Section0001.xhtml" media-type="application/xhtml+xml" />
+    <item href="Fonts/ANTQUAB.TTF" id="ANTQUAB.TTF" media-type="application/x-font-ttf" />
+    <item href="Fonts/ANTQUABI.TTF" id="ANTQUABI.TTF" media-type="application/x-font-ttf" />
+    <item href="Fonts/ANTQUAI.TTF" id="ANTQUAI.TTF" media-type="application/x-font-ttf" />
+    <item href="Fonts/BKANT.TTF" id="BKANT.TTF" media-type="application/x-font-ttf" />
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="coverpage.htm" />
+    <itemref idref="senoa_zlatarovozlato_1.htm" />
+    <itemref idref="senoa_zlatarovozlato_2.htm" />
+    <itemref idref="senoa_zlatarovozlato_4.htm" />
+    <itemref idref="Section0002.xhtml" />
+    <itemref idref="Section0001.xhtml" />
+    <itemref idref="Section0003.xhtml" />
+    <itemref idref="senoa_zlatarovozlato_6.htm" />
+    <itemref idref="senoa_zlatarovozlato_7.htm" />
+    <itemref idref="senoa_zlatarovozlato_8.htm" />
+    <itemref idref="senoa_zlatarovozlato_9.htm" />
+  </spine>
+  <guide>
+    <reference href="Text/coverpage.htm" title="Cover" type="cover" />
+  </guide>
+</package>

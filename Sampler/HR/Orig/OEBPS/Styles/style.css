@@ -1,0 +1,223 @@
+
+<!--
+ /* Font Definitions */
+@font-face {
+font-family: BookAntiqua;
+font-style: normal;
+font-weight: bold;
+src:url("../Fonts/ANTQUAB.TTF");
+}
+@font-face {
+font-family: BookAntiqua;
+font-style: italic;
+font-weight: bold;
+src:url("../Fonts/ANTQUABI.TTF");
+}
+@font-face {
+font-family: BookAntiqua;
+font-style: italic;
+font-weight: normal;
+src:url("../Fonts/ANTQUAI.TTF");
+}
+@font-face {
+font-family: BookAntiqua;
+font-style: normal;
+font-weight: normal;
+src:url("../Fonts/BKANT.TTF");
+}
+
+
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6px;
+	margin-left:0cm;
+	line-height: 1.30em;
+	text-align:justify;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;}
+p, li, div
+	{margin:0cm 0cm 6px 0cm;
+	text-align:justify;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;}
+h1
+	{margin:2em 0cm 1em 0cm;
+	text-align:center;
+	line-height: 1.30em;
+	font-size:2.4em;
+	font-family:"BookAntiqua",serif;
+	font-weight:bold;}
+h2
+	{margin:64px 0cm 6px 0cm;
+	text-align:center;
+	line-height: 1.30em;
+	font-size:1.5em;
+	font-family:"BookAntiqua",serif;
+	font-weight:bold;}
+h3
+	{
+	margin:16px 0cm 6px 0cm;
+	text-align:center;
+	line-height: 1.30em;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;
+	font-weight:normal;}
+h4
+	{
+	margin:16px 0cm 6px 0cm;
+	text-align:justify;
+	font-size:1.2em;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h5
+	{
+	margin:16px 0cm 6px 0cm;
+	text-align:justify;
+	font-size:1.1em;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;
+	font-style:italic;}
+h6
+	{
+	margin:16px 0cm 4px 0cm;
+	text-align:justify;
+	font-size:1em;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+
+p.Autornaslov, li.Autornaslov, div.Autornaslov
+	{margin:1em 0cm 1em 0cm;
+	text-align:center;
+	line-height: 1.30em;
+	font-size:2.0em;
+	font-family:"BookAntiqua",serif;
+	font-weight:bold;}
+
+p.Indent, li.Indent, div.Indent
+	{margin:0cm 0cm 4px 47px;
+	line-height: 1.30em;
+	text-align:justify;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;}
+
+p.Normalcenter, li.Normalcenter, div.Normalcenter
+	{
+	text-align:center;
+	line-height: 1.30em;
+	font-size:1em;
+	page-break-after: avoid;
+	font-family:"BookAntiqua",serif;}
+p.Poezija, li.Poezija, div.Poezija
+	{
+	margin:0cm 0cm 6px 10%;
+	line-height: 1.30em;
+	text-align:left;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;
+	font-style:italic;}
+p.Poezijaind, li.Poezijaind, div.Poezijaind
+	{
+	margin:0cm 0cm 6px 20%;
+	line-height: 1.30em;
+	text-align:left;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;
+	font-style:italic;}
+p.Normalstih, li.Normalstih, div.Normalstih
+	{
+	margin:0cm 0cm 6px 20%;
+	line-height: 1.30em;
+	text-align:left;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;
+	font-style:italic;}
+
+p.Normalright, li.Normalright, div.Normalright
+	{
+	margin:0cm 0cm 6px 0cm;
+	line-height: 1.30em;
+	text-align:right;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;}
+p.Normalrjecnik, li.Normalrjecnik, div.Normalrjecnik
+	{
+	margin:0cm 0cm 16px 0cm;
+	line-height: 1.30em;
+	text-align:left;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;}
+
+p.Normaljustified, li.Normaljustified, div.Normaljustified
+	{
+	margin:0cm 0cm 6px 0cm;
+	line-height: 1.30em;
+	text-align:justify;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;}
+span.MsoFootnoteReference
+{font-size:0.6em;
+font-family:"BookAntiqua",serif;
+vertical-align: super;} /* footnote reference */
+
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height: 1.10em;
+	text-align:justify;
+	font-size:0.9em;
+	font-family:"BookAntiqua",serif;}
+
+
+/* ostaje */
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:10%;
+	line-height: 1.30em;
+	text-align:justify;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-bottom:3.0pt;
+	margin-left:20%;
+	line-height: 1.30em;
+	text-align:justify;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;}
+
+
+a:link{color:#555}
+
+
+p.Normaltockice, li.Normaltockice, div.Normaltockice
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6px;
+	margin-left:0cm;
+	line-height: 1.30em;
+	text-align:justify;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;}
+
+
+p.Poezijatokice, li.Poezijatokice, div.Poezijatokice
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6px;
+	margin-left:20%;
+	text-align:left;
+	line-height: 1.30em;
+	font-size:1em;
+	font-family:"BookAntiqua",serif;
+	font-style:italic;}
