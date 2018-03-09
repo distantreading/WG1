@@ -11,7 +11,9 @@
                 </div>
     </xsl:template>
     
-    
+    <xsl:template match="h:div[@class='WordSection4']">      
+        <xsl:apply-templates/>
+    </xsl:template>
     <xsl:template match="h:p[@class]">
         <xsl:choose>
             <xsl:when test="@class='MsoNormal'">
@@ -41,7 +43,7 @@
         </hi>
     </xsl:template>
     
-    <xsl:template match="h:div[@class]">
+  <!--  <xsl:template match="h:div[@class]">
         <xsl:choose>
             <xsl:when test="@class = 'kop'">
                 <head>
@@ -79,7 +81,7 @@
                 </div>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template>-->
   <!--  <xsl:template match="h:span[@class = 'cursief']">
         <hi rend="it">
             <xsl:apply-templates/>

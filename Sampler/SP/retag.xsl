@@ -3,7 +3,6 @@
     exclude-result-prefixes="xs h"
     xmlns:h="http://www.w3.org/1999/xhtml" 
     xmlns:t="http://www.tei-c.org/ns/1.0" 
-    
     xmlns="http://www.tei-c.org/ns/1.0" 
     version="2.0">
     
