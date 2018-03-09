@@ -17,13 +17,12 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-            <listChange>
                 <change><date>2018-01-30</date> LB revised table; added some discussion to criteria;
                     tarted up bibliog </change>
                 <change><date>2018-01-27</date> LB converted to XML</change>
                 <change><date>2018-01-27</date> CO Final draft</change>
-
-            </listChange>
+                <change><date>2018-03-8</date> CO Add first use cases, add findings of the WG1
+                    meeting in Prague: refine selection criteria and balancing criteria</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -38,6 +37,7 @@
                     <item>Requirements of sampling criteria</item>
                     <item>Sampling criteria</item>
                     <item>Metadata for texts in ELTeC</item>
+                    <item>First use cases (WG 1 meeting Prague)</item>
                     <item>Literature</item>
                 </list>
             </div>
@@ -60,6 +60,8 @@
                     sub-collections from the ELTeC for specific tasks and research questions. In a
                     first step, we focus on the development of clear, operationalized, transparent
                     and motivated selection criteria for the corpus.</p>
+                <p>It is important to stress that we do not indent to define what a novel is by
+                    defining what kind of selection criteria we will use for ELTeC.</p>
             </div>
             <div>
                 <head>Method</head>
@@ -79,8 +81,8 @@
                     are different from what a text in a corpus might be (cf. van Zundert and Andrews
                     2017). This means, that digitization is a kind of annotation, hence
                     interpretation (Odebrecht et al 2017). A representation of a text in a corpus
-                    (e.g. transcription, OCR) is the result of interpretation. A corpus design
-                    needs to consider this for sampling and digitization issues. </p>
+                    (e.g. transcription, OCR) is the result of interpretation. A corpus design needs
+                    to consider this for sampling and digitization issues. </p>
                 <p>At the end of the Action, ELTeC should contain literary texts (novels) from a
                     distinct period and in several languages. For each language (and thus for each
                     cultural context) there exists a diversity of canons which reflect different
@@ -93,28 +95,28 @@
                     reader group) (cf. Hermann 2011 or Winko 1996). All these ratings can change
                     over time and may also interplay which each other. A canon can therefore reflect
                     different interpretation of ‘famous’, ‘important’ or ‘influential’ texts. These
-                    criteria are not overall comparable. For example, texts from a smaller language community
-                    such as Czech are less likely to be frequently reprinted than English texts of
-                    the same period and genre. Additionally, the awareness level of texts
+                    criteria are not overall comparable. For example, texts from a smaller language
+                    community such as Czech are less likely to be frequently reprinted than English
+                    texts of the same period and genre. Additionally, the awareness level of texts
                     depends on the influence of the country and their publishing houses.</p>
                 <p>The criteria derived from a canon are not completely comparable and categorical.
-                    Which prestigious group’s canon should be considered, which should be excluded, and
-                    why? Are there comparable canons for novels in all countries of the language in
-                    question? Algee-Hewitt and McGurl (2015) show an approach to corpus design
+                    Which prestigious group’s canon should be considered, which should be excluded,
+                    and why? Are there comparable canons for novels in all countries of the language
+                    in question? Algee-Hewitt and McGurl (2015) show an approach to corpus design
                     based on several canons and which kind of problems occur. Each analysis of the
                     corpus than only shows the different effects of the decisions made by the
                     normative group. Considering national canons is also very difficult and somewhat
                     problematic. An example is the German National Canon of literature which was
-                    developed in the 18th century and was promoted by
-                    the national educational system until the 1990. Since German reunification,
-                    the educational system has not promoted a strict canon and does not recommend a
-                    list of books to be read in school or at university (cf. Winko 1996). Thus,
-                    taking such types of canons as part of a sampling base of ELTeC would mean 
-                    reflecting a political and social past of German education and politics. Choosing
-                    between canons can then mean choosing between tastes of (current) literature (in
-                    past and present) and tastes of past literature when the canon builder rates
-                    historical texts. Finally, these canons are not built to be the sampling
-                    guidelines for a corpus which we would like to build in the Action.</p>
+                    developed in the 18th century and was promoted by the national educational
+                    system until the 1990. Since German reunification, the educational system has
+                    not promoted a strict canon and does not recommend a list of books to be read in
+                    school or at university (cf. Winko 1996). Thus, taking such types of canons as
+                    part of a sampling base of ELTeC would mean reflecting a political and social
+                    past of German education and politics. Choosing between canons can then mean
+                    choosing between tastes of (current) literature (in past and present) and tastes
+                    of past literature when the canon builder rates historical texts. Finally, these
+                    canons are not built to be the sampling guidelines for a corpus which we would
+                    like to build in the Action.</p>
                 <p>The MoU of CA16204 formulates the goal as follows: “The main aim and objective of
                     the Action is to This Action will develop the resources and methods necessary to
                     change the way European literary history is written.” This goal requires a new
@@ -145,10 +147,10 @@
                 <p>Additional to the aspect of ‘prestige’ (canon), the aspect of representativeness
                     is problematic for corpus design. Developing criteria for corpus design means to
                     decide which kind of sample of the world shall be included in the data base.
-                    Obviously, including the whole population of 9th century literature in
-                    several languages is impossible. So we
-                    need to make a compromise between what we would like to have in the corpus (all
-                    literature) and what we can put in the corpus (sample). </p>
+                    Obviously, including the whole population of 9th century literature in several
+                    languages is impossible. So we need to make a compromise between what we would
+                    like to have in the corpus (all literature) and what we can put in the corpus
+                    (sample). </p>
                 <p>It is a truism that there is no such thing as a ‘good’ or a ‘bad’ corpus, because
                     how a corpus is designed depends on what kind of corpus it is and how it is
                     going to be used. (Hunston 2008, 155)</p>
@@ -187,6 +189,8 @@
                         1920</item>
                     <item>third iteration: 6 subcollections in additional languages and
                         subcollections for all 16 languages 1780-1850, </item>
+                    <item>We will also try to include additional languages such as Hungarian,
+                        Serbian, Swiss , Romanian, Czech, Latvian, Norwegian.</item>
                 </list>
                 <p>In this way, ELTeC is balanced with respect to language. With respect to genre,
                     the corpus is not balanced but homogenous; all texts in the corpus shall be full
@@ -225,9 +229,9 @@
                     female authors in one decade than in other decades. If we would like to have an
                     equal number of male and female authors in every decade, we need to link the
                     criterion of the author’s gender with the criterion of time. Doing this, might
-                    complicate the selection process (cf. finding novels for this proportion in every
-                    decade of the period in question). So we have to decide which categories shall
-                    be present in a balanced way in the corpus. </p>
+                    complicate the selection process (cf. finding novels for this proportion in
+                    every decade of the period in question). So we have to decide which categories
+                    shall be present in a balanced way in the corpus. </p>
             </div>
             <div>
                 <head>Requirements of sampling criteria</head>
@@ -235,15 +239,22 @@
                     language and publication date of the texts. This means that the corpus should
                     not be based solely on chronological criteria, meaning that we need a text from
                     each year of the period in question. The main sampling criterion ‘language’ will
-                    require not to including translations at all. We will then take the first
-                    edition of a novel. By a novel, we mean the first edition of the book, hence
-                    excluding novels (or versions of them) printed only in journals. Considering
-                    only the first editions has two advantages: the first edition should be free in
-                    most cases, meaning they carry no copyright. Later editions and reprints may
-                    have such restrictions. The first edition is more interesting from a
-                    philological point of view. It represents the authentic texts of the authors.
-                    Dealing with historical texts requires some cleaning up and normalizations (we
-                    need to discuss these steps later on). </p>
+                    require not to include translations at all. We will take the first edition of a
+                    novel or editions of these novels. By a novel, we mean the edition of the book,
+                    hence excluding novels only printed in journals. If we consider editions of a
+                    novel, these editions should be freely available (free licences for reusing
+                    them. The first edition is more interesting from a philological point of view.
+                    It represents the authentic texts of the authors. Dealing with historical texts
+                    might require some cleaning up or normalizations. We will merge all word forms
+                    which are seperated by line breaks. At the moment, we must assume that there are
+                    no (sufficiently good) normalization tools for every language. Later editions of
+                    a novel may be already normalized in some way. This might lead to different text
+                    representations in ELTeC which should be indicated in the metadata. </p>
+                <p>Considering also later freely available editions of a novel has two advantages:
+                    First, members of the Action already can provide machine-readable text documents
+                    (html, TEI etc.) of later editions and second, in some languages it might be
+                    easier to find later editions which already exist in a machine-readable format
+                    (in this way we do not have to put effort in digitizing them).</p>
                 <p> Electronically availability should not be a leading sampling criterion althoug
                     availability is a limiting factor. A text should not be excluded from ELTeC
                     because it is not digitized, but it should be excluded if the text cannot be
@@ -265,33 +276,80 @@
                 <head> Sampling criteria </head>
                 <p>Principles:</p>
                 <list type="unordered">
-                    <item>Represent the variation of production </item>
-                    <item>First publication of the novel as a book</item>
-                    <item>No translations</item>
+                    <item>We will represent the variation of production and aim to maximize the
+                        variety within each time period.</item>
+                    <item>We will consider novels published as a book in first as well as later
+                        editions.</item>
+                    <item>We will not include translations.</item>
+                    <item>We will consider only freely available texts and trying to reuse already
+                        digitized texts.</item>
+                    <item>We will use non-normative sampling criteria which allow for selecting
+                        canonical novels and non-canonical novels.</item>
+                    <item>Metadata should indicate the type of text representation (normalized or
+                        non-normalized, first or later editions etc.). </item>
+                    <item>Open Question: do we allow for normalization, if available? (WG2)</item>
                 </list>
-                <p>Criteria:</p>
+                <p>Organization</p>
+                <list>
+                    <item>Please note: Contact the sampling support Team: Carolin, Pieter and Diana!
+                        Task: To control the corpus sampling according to the selection criteria. </item>
+                    <item> List of documents in ELTeC core:
+                        https://docs.google.com/spreadsheets/d/1LHRWEJdi8lPPvVKjjNdS3Tv1_vd0sP0_3GvoGw2c23w/edit?ts=5a6a36f2#gid=698963499</item>
+                </list>
+                <p>Criteria: Level 1 Eligibility. </p>
+                <p> In order to be included, a text must... </p>
+                <list>
+                    <item>have been first published as a book between 1850 and 1920, sub-grouped and
+                        equally split by decades. </item>
+                    <item>have first been published in a European country. [maybe not "first":
+                        within that decade]</item>
+                    <item>be a novel, i.e. a fictional prose narrative of a minimum length of 10,000
+                        words.</item>
+                    <item>have originally been written in the language of the given
+                        subcollection</item>
+                </list>
+                <p>Criteria: Level 2 composition. </p>
+                <p>Among the novels in each language the subcollection must contain... </p>
+                <list>
+                    <item>at least 10%-50% have been written by female authors for the language
+                        subcollection.</item>
+                    <item>at least 10 authors are represented with three novels.</item>
+                    <item>at least 30% are highly canonized novels, at least 30% should be
+                        non-canonized novels, based on reprints two groups: 1 Group: canon.
+                        reprinted more than once 2. Group: non-canon. not or once reprinted, period:
+                        1980-2000</item>
+                    <item>at least 20% are short novels (10-50k word tokens), at least 20% are long
+                        novels (>200k word tokens).</item>
+                </list>
                 <list type="gloss">
 
                     <label> Date : 1850 to 1920 (first iteration)</label>
                     <item>
-                        <p>Rather than dividing by decade we propose longer time slots, dividing the
-                            period into five subgroups </p>
+                        <p>We will divide by decade</p>
                         <list type="unordered">
-                            <item>group A (1850-1863)</item>
-                            <item>group B (1864-1877)</item>
-                            <item>group C (1878-1891)</item>
-                            <item>group D (1892-1905) </item>
-                            <item>group E (1906-1920)</item>
+                            <item>group A(1850-1860)</item>
+                            <item>group B (1861-1870)</item>
+                            <item>group C (1871-1880)</item>
+                            <item>group D (1881-1890) </item>
+                            <item>group E (1891-1900)</item>
+                            <item>group F (1901-1910)</item>
+                            <item>group G (1911-1920)</item>
+                            <item>Open Question: Should we extend the period to 1840?</item>
                         </list>
                     </item>
+
                     <label>Language of the text</label>
                     <item><p>The MoA defines the languages to be sampled. It does not propose
                             distinguishing regional variation (e.g. in German), nor geographical
                             variation (e.g. the French of Belgium or France or Switzerland). It
                             assumes only European varieties, so English excludes US English; French
                             excludes Quebecois. </p><list>
-                            <item>Dutch, English, French, German, Greek, Italian, Polish,
-                                Portuguese, Russian, Spanish</item>
+                            <item>Open Question: Maybe some Exceptions: - Publication place is a
+                                sometimes a problem: e.g. for Portuguese Novels published in as
+                                Brazilian publications or Croatian authors published in Germany. </item>
+                            <item>Possible Languages for the first iteration: Dutch, English,
+                                French, German, Greek, Italian, Polish, Portuguese, Russian,
+                                Spanish, Hungarian</item>
                         </list></item>
                     <label>Reprint count</label>
                     <item><p>We propose to use the number of times a work is reprinted as an
@@ -355,6 +413,7 @@
                 <p>We list here the metadata items to be collected for each text. These will be
                     provided by specific components of the TEI Header structure, as definding in WG
                     paper on Encoding.</p>
+                <p>See Encoding Proposal for more details.</p>
                 <list type="unordered">
                     <item>title</item>
                     <item>subtitle</item>
@@ -400,6 +459,43 @@
                     <item>Source reference (if available)<list type="unordered">
                             <item>e.g. DTA, textgrid etc.</item>
                         </list></item>
+                </list>
+            </div>
+            <div>
+                <head>6. First use cases (WG 1)</head>
+                <list>
+                    <item>DS: intertextuality : how literary works are mentioned </item>
+                    <item>FJ: character constellations : network measures </item>
+                    <item>CS: MoU says "authorship attribution, topic modelling, character network
+                        analysis, stylistic analysis" </item>
+                    <item>DS: What kinds of places/names of places are described in different
+                        novels</item>
+                    <item>LB: structural properties, formal organization</item>
+                    <item>DS: description of characters; types of characters; readers as
+                        characters</item>
+                    <item>JR: do stylometric authorship attribution methods work in all languages in
+                        same way</item>
+                    <item>?: what do people eat</item>
+                    <item>B: location, places where stories take part. morpho-syntax, readability;
+                        e.g. words/sentence</item>
+                    <item>BN: how about metaphors</item>
+                    <item>FJ: narratalogical features direct speech</item>
+                    <item>DS: presentation of other European cultures</item>
+                    <item>BN: sentiment analysis</item>
+                    <item>LB: bibliometric aspects: book history</item>
+                    <item>CO: diachronic development; publication place; gender</item>
+                    <item>DS: addressing forms</item>
+                    <item>G: Evolution and validation of literary movements; empirical
+                        definition</item>
+                    <item>BN: temporal expressions</item>
+                    <item>FJ: all of the above in a comparative perspective varying by e.g.
+                        male/female, date, place</item>
+                    <item>CS: subgenres?</item>
+                    <item>P: Rate and measurability of change; how innovation spreads; both in topic
+                        and mode of expression </item>
+                    <item>JS: Character idiolects ; places</item>
+                    <item>evolution of wordsenses over time</item>
+                    <item>local coherence; cohesiveness; evolution of realism into modernism</item>
                 </list>
             </div>
             <div>
