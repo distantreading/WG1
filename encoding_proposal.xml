@@ -118,6 +118,18 @@
                   <item>Sort of : do not transcribe them, but indicate that they have been
                      suppressed by using the <gi>gap</gi> element. </item>
                </list></p>
+            <p rend="red"><!-- Prague decisions:
+                        * no titlepage, 
+                       * include preface and  introduction  (contemporary with the text) with annotating it and specifying the author,
+                       * no table of contents
+                       * include afterword and  appendix  (contemporary with the text) with annotating it and specifying the author,
+                       * include footnotes or comments 
+                       * no errata list--> 
+            The Prague decision list says that we decided to exclude titlepages, tables of contents, errata list etc, but
+            to include prefaces, introductions, afterwords, and appendixes, provided these are
+            contemporary with the text. It also says to include footnotes and commentary, but does
+            not specify whether these should also be contemporary, nor how the encoder can easily
+            determine whether or not something is "contemporary".</p>
             <p>Within the body of a text, major structural divisions (parts, sections, chapters
                etc.) will be captured using the generic <gi>div</gi> element, with attributes
                   <att>type</att>, <att>xml:lang</att>, <att>xml:id</att> and <att>n</att> used as
@@ -146,6 +158,8 @@
                      indication of the hierarchic level for the benefit of non-XML-aware processors
                      (e.g. <code>level1</code>, <code>level2</code> etc.)</item>
                </list></p>
+            <p rend="red">This issue was not discussed in Prague. Proposal is to use (and enforce) a predefined list of
+               specific values. </p>
             <p>The (human) language in which a text is expressed is indicated explicitly by the
                   <att>xml:lang</att> attribute which supplies the ISO 2 letter code for the
                language concerned. This attribute will always be supplied on the <gi>text</gi>
@@ -175,6 +189,8 @@ dialectal variations during linguistic annotation.-->
                   <!-- LB: Many TEI elements have multiple uses, so this is not an argument against using
                   <distinct> in my view-->
                </list></p>
+            <p rend="red">In Prague there was some support for using either <gi>foreign</gi> or <gi>distinct</gi>, but no decision to do
+               so. Proposal is not to do so.</p>
             <p>A single reference scheme will be defined for the whole corpus, with the following
                components: <list>
                   <item>text identifier : every text will have an identifier consisting of its two
@@ -197,7 +213,8 @@ dialectal variations during linguistic annotation.-->
                in a particular source text. In a work where the first twelve chapters are considered
                to form part one, and the next twelve constitute part two, the first chapter of the
                second part will have an identifier ending <code>013</code>, even though it may be
-               numbered <code>1</code> in a source text. </p>
+               numbered <code>1</code> in a source text.</p><p rend="red">No dissent from this proposal in
+                  Prague</p>
             <!-- CO: good idea. -->
             <p><label>Open question</label> is it important to preserve the original numbering,
                particularly for deeply structured texts? <list>
@@ -211,6 +228,8 @@ this information is necessary. -->
                      intended applications, introduce unnecessary complexity, and may be a source of
                      confusion. </item>
                </list></p>
+            <p rend="red">Not explicitly addressed in Prague. Proposal is not to retain original
+               numbering.</p>
             <p>The chapters of a novel mostly consist of prose, arranged in paragraphs, for which we
                will use the TEI <gi>p</gi> element. It is not unusual to find other structures
                however, specifically verse, or passages of dialogue presented as if in a play, with
@@ -236,6 +255,31 @@ this information is necessary. -->
                      collocates -->
                   <item>Suppress all non-prose material, replacing it by <gi>gap</gi></item>
                </list></p>
+             
+            <!-- Prague decisions 
+                       * annotation of footnotes (we will test whether finding footnotes will be a problem; if so they go to 2nd level ), 
+                       * afterwords, appendix, preface, introduction
+                       * include <p>
+                       * no <lb>
+                       * no annotation of a lists, the textual material will be in the corpus with the <p> annotation
+                       * suppress the tables, annotate with gap
+                       * suppress figures/pictures with a gap
+                       * suppress the heading of a picture / figure 
+                       * typographic information is ignored
+                       * no <pb>
+                       * hyphenation is merged
+                       * include <head> (for chapters etc.)
+                       * include <div>
+                       * no annotation of quotes (cf. mottos), instead using <p>
+                       * retain information from level0 if possible; but mark with <gap> and put
+                       into comments-->
+            <p rend="red">In Prague, we decided to suppress annotation of linebreaks, lists,
+               tables, figures, captions of figures,  typographic information, pagebreaks,
+               and quotation (i.e. direct/indirect speech). We explicitly agreed to annotate
+               only paragraphs, divisions, and headings. Other features would be represented either
+               by a <gi>gap</gi>, if they have been entirely suppressed, or by a <gi>p</gi> if they
+               have textual content.We also agreed that hyphenation, like other typographic
+               features, would not be preserved.  Verse and drama were not explicitly addressed. </p>
             <p>Novels are also full of direct speech, represented using various different
                conventions, but almost always distinguished from the narrative voice. The first
                person narrative is also common, but may be regarded as a special case.
@@ -266,6 +310,8 @@ this information is necessary. -->
                      problematic-->
                </list>
             </p>
+            <p rend="red">In Prague the majority view was not to attempt to do more than preserve
+               existing punctuation. </p>
             <p>Printed texts typically deploy a number of conventions which can cause problems for
                linguistic analyses of even the most basic kind. Changes of font or style
                (italicization or use of superscript, for example) can have particular lexical
@@ -289,6 +335,7 @@ before, it is related to the book as physical object, not to the novel itself.--
                   <item>No : the proposed uses don't justify the cost of providing the information
                      if it is missing. And pagination is inherently copy-specific.</item>
                </list></p>
+            <p rend="red">Prague decision (as noted above) : suppress page numbering. </p>
             <p>Font and style variations in the source text usually signal something. Italics may
                signal emphasis, quotation, foreign language terms etc. Superscripts almost always
                signal abbreviation. The visual salience of these variations is of considerably less
@@ -313,6 +360,8 @@ before, it is related to the book as physical object, not to the novel itself.--
                         <gi>abbr</gi> should be used to indicate the presence of an abbreviated
                      word: <code>&lt;abbr>14e&lt;/abbr></code></item>
                </list></p>
+            <p rend="red">Prague decision (as noted above) : suppress all encoding of renditional features. </p>
+            
             <p><label>Open Question</label>: Is it feasible or useful to recode highlighted spans of
                text in this way? <!-- BN: I don't know. I'm not sure if it is worth annotating this information. It
 seems that it is not really useful for a distant reading.-->
@@ -328,6 +377,7 @@ seems that it is not really useful for a distant reading.-->
             <p>Whichever solution is adopted, it should be applied uniformly across the ELTeC. A
                collection in which some texts make distinctions ignored by others is
                unsatisfactory.</p>
+            
          </div>
          <div>
             <head>TEI Elements used</head>
