@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" unique-identifier="uuid_id" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title>Vdavky Nanynky Kulichovy I</dc:title>
+    <dc:creator opf:file-as="Herrmann, Ignát" opf:role="aut">Ignát Herrmann</dc:creator>
+    <dc:publisher>Městská knihovna v Praze</dc:publisher>
+    <dc:language>cs</dc:language>
+    <dc:identifier opf:scheme="ISBN">978-80-7532-594-5</dc:identifier>
+    <dc:date opf:event="publication">2017-03-17</dc:date>
+    <meta name="Sigil version" content="0.9.6" />
+    <dc:date xmlns:opf="http://www.idpf.org/2007/opf" opf:event="modification">2017-03-21</dc:date>
+    <dc:identifier id="uuid_id" opf:scheme="uuid">3ca2a0ba-1839-4122-9ffb-e5a8175b5cf2</dc:identifier>
+  </metadata>
+  <manifest>
+    <item id="added" href="Images/image001.jpg" media-type="image/jpeg"/>
+    <item id="added1" href="Images/image002.jpg" media-type="image/jpeg"/>
+    <item id="page_css" href="Styles/page_styles.css" media-type="text/css"/>
+    <item id="css" href="Styles/stylesheet.css" media-type="text/css"/>
+    <item id="vdavky_nanynky_kulichovy_I_003.html" href="Text/vdavky_nanynky_kulichovy_I_003.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_004.html" href="Text/vdavky_nanynky_kulichovy_I_004.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_005.html" href="Text/vdavky_nanynky_kulichovy_I_005.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_006.html" href="Text/vdavky_nanynky_kulichovy_I_006.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_007.html" href="Text/vdavky_nanynky_kulichovy_I_007.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_008.html" href="Text/vdavky_nanynky_kulichovy_I_008.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_009.html" href="Text/vdavky_nanynky_kulichovy_I_009.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_010.html" href="Text/vdavky_nanynky_kulichovy_I_010.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_011.html" href="Text/vdavky_nanynky_kulichovy_I_011.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_012.html" href="Text/vdavky_nanynky_kulichovy_I_012.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_013.html" href="Text/vdavky_nanynky_kulichovy_I_013.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_014.html" href="Text/vdavky_nanynky_kulichovy_I_014.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_015.html" href="Text/vdavky_nanynky_kulichovy_I_015.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_016.html" href="Text/vdavky_nanynky_kulichovy_I_016.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_017.html" href="Text/vdavky_nanynky_kulichovy_I_017.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_018.html" href="Text/vdavky_nanynky_kulichovy_I_018.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_019.html" href="Text/vdavky_nanynky_kulichovy_I_019.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_020.html" href="Text/vdavky_nanynky_kulichovy_I_020.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_021.html" href="Text/vdavky_nanynky_kulichovy_I_021.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_022.html" href="Text/vdavky_nanynky_kulichovy_I_022.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_023.html" href="Text/vdavky_nanynky_kulichovy_I_023.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_024.html" href="Text/vdavky_nanynky_kulichovy_I_024.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_025.html" href="Text/vdavky_nanynky_kulichovy_I_025.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_026.html" href="Text/vdavky_nanynky_kulichovy_I_026.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_027.html" href="Text/vdavky_nanynky_kulichovy_I_027.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_028.html" href="Text/vdavky_nanynky_kulichovy_I_028.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_029.html" href="Text/vdavky_nanynky_kulichovy_I_029.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_030.html" href="Text/vdavky_nanynky_kulichovy_I_030.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_031.html" href="Text/vdavky_nanynky_kulichovy_I_031.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_032.html" href="Text/vdavky_nanynky_kulichovy_I_032.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_033.html" href="Text/vdavky_nanynky_kulichovy_I_033.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_034.html" href="Text/vdavky_nanynky_kulichovy_I_034.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_035.html" href="Text/vdavky_nanynky_kulichovy_I_035.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_036.html" href="Text/vdavky_nanynky_kulichovy_I_036.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_037.html" href="Text/vdavky_nanynky_kulichovy_I_037.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_038.html" href="Text/vdavky_nanynky_kulichovy_I_038.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_039.html" href="Text/vdavky_nanynky_kulichovy_I_039.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_040.html" href="Text/vdavky_nanynky_kulichovy_I_040.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_041.html" href="Text/vdavky_nanynky_kulichovy_I_041.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_042.html" href="Text/vdavky_nanynky_kulichovy_I_042.html" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_001.html" href="Text/vdavky_nanynky_kulichovy_I_001.html" media-type="application/xhtml+xml"/>
+    <item id="vdavky_nanynky_kulichovy_I_002.html" href="Text/vdavky_nanynky_kulichovy_I_002.html" media-type="application/xhtml+xml"/>
+    <item id="upoutavka_eknihy.jpg" href="Images/upoutavka_eknihy.jpg" media-type="image/jpeg"/>
+    <item id="obalka.jpg" href="Images/obalka.jpg" media-type="image/jpeg"/>
+    <item id="vdavky_nanynky_kulichovy_I_043.html" href="Text/vdavky_nanynky_kulichovy_I_043.html" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="vdavky_nanynky_kulichovy_I_001.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_002.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_003.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_004.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_005.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_006.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_007.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_008.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_009.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_010.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_011.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_012.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_013.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_014.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_015.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_016.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_017.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_018.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_019.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_020.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_021.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_022.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_023.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_024.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_025.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_026.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_027.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_028.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_029.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_030.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_031.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_032.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_033.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_034.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_035.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_036.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_037.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_038.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_039.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_040.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_041.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_042.html"/>
+    <itemref idref="vdavky_nanynky_kulichovy_I_043.html"/>
+  </spine>
+  <guide>
+  </guide>
+</package>

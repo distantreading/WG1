@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <author dates="1851 1891" sex="m">Лаза К. Лазареви</author>
+                <title>ШВАБИЦА</title>
+            </titleStmt>
+            <publicationStmt><p>Demonstration file prepared for the ELTeC Sampler</p></publicationStmt>
+            <sourceDesc>
+                <p xml:lang="en">Converted from a Word file of unknown provenance.</p>
+                <p>Švabica je pripovjetka srpskog književnika Laze Lazarevića prvi put objavljena
+                    1888. godine. Djelomično je autobiografskog karaktera, odnosno inspirirana
+                    autorovim životom za vrijeme studija u Berlinu početkom 1870-ih. Napravljena je
+                    u epistolarnom obliku, odnosno sastoji se od pisama koje Miša, srpski student u
+                    Berlinu šalje svom prijatelju i u kome opisuje svoju ljubav prema gazadaričinoj
+                    kćeri Ani, ali i spoznaju da se sa njome ne može vjenčati i dovesti natrag u
+                    Srbiju, jer je tamo ne bi prihvatili.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+
