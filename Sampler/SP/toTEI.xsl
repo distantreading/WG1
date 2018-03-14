@@ -5,7 +5,7 @@
 
     <xsl:template match="*:TEI.2">
         <TEI xmlns="http://www.tei-c.org/ns/1.0">
-            <xsl:apply-templates/><xsl:value-of select="@year"/>
+            <xsl:apply-templates/>
         </TEI>
     </xsl:template>
 
