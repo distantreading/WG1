@@ -17,6 +17,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2018-03-16">Revised post-Prague</change>
          <change when="2018-01-17">Expanded metadata section a bit; added comments from CO and
             BN</change>
          <change when="2017-12-17">First (partial) discussion draft</change>
@@ -24,13 +25,12 @@
    </teiHeader>
    <text>
       <body>
-         <p>This is the first draft of a reference document defining the encoding scheme to be used
+         <p>This reference document defines the encoding scheme to be used
             for the European Literary Text Collection (ELTeC) which will be a major deliverable of
-            COST Action 16204, <title>Distant Reading</title>. As a first draft it necessarily
-            contains much uncertainty, either because policies have to be determined, or because
-            issues are currently under-specified. Particular topics on which policy remains to be
-            defined are signalled below with the label <q>Open Question</q>. Input from other
-            participants in the Action about these topics would be particularly useful. </p>
+            COST Action 16204, <title>Distant Reading</title>. This draft reflects decisions taken
+            at the WG1 meeting in Prague in February 2018, but has not yet been formally reviewed by
+            the Work Group. Particular topics on which policy remains to be
+            defined are signalled below with the label <q>Open Question</q>. </p>
          <div>
             <head>Principles</head>
             <p>The MoU for the project points out that <q>Distant Reading methods cover a wide range
@@ -41,90 +41,112 @@
                facilitate a richer and better-informed distant reading than a transcription of its
                lexical content alone would permit. For example, it seems useful to distinguish
                headings and annotations from the rest of the text, and to be able to locate
-               stretches of text within gross structural features such as chapters and paragraphs.
-               It is probably also useful to distinguish passages belonging to different narrative
-               levels (for example, direct speech versus narrative or quotation versus narrative)
-               and to identify reference points such as page breaks. It is less useful to record
+               stretches of text within gross structural features such as pages, chapters, or paragraphs.
+              Although it may be useful to distinguish passages belonging to different narrative
+               levels (for example, direct speech versus narrative or quotation versus narrative),
+               it is difficult to do so automatically with any degree of consistency.  
+               It is certainly less useful to record
                exact nuances of rendition or spelling in a particular version of a text. Our goal is
-               not to duplicate the work of scholarly editors or to produce (yet another) digital
-               edition of a specific source document. </p>
-            <!-- CO: OK. With respect to the selection criteria, we need to consider that we will encode the first edition of each texts. 
-               The first edition will reveal spelling variances and variances concerning different text levels, e.g, direct speech
-               (like any other modern edition will do in some way or the other)-->
-            <!-- LB : the idea of encoding specifically the first edition wasn't what I thought the
-               brief was when I started work on this document! Licensing issues-->
-            <p>In selecting features for inclusion in the markup scheme, we have been guided, but
-               not limited, by existing practice as far as possible. Particular collections we have
-               examined are listed in section <ptr target="#sources"/> but the main goal has been to
-               identify a small core set of essential textual features which can be readily
-               (preferably automatically) identified in existing digital transcriptions, or easily
-               and consistently provided by new transcriptions. </p>
-            <!-- BN : I definitely agree:-->
-            <p>This document lists all the textual features which are to be distinguished in an
-               ELTeC conformant transcription. Whenever a given feature exists in a text, it will be
-               marked up as indicated here. No other features will be captured by the markup: if
-               some textual feature not provided for here is identified by a marked up source text,
-               that markup will be removed. The goal is to ensure that the ELTeC texts can be
+               thus not to duplicate the work of scholarly editors or to produce (yet another) digital
+               edition of a specific source document. Rather it is to ensure that the ELTeC texts can be
                processed by very simple minded (but XML-aware) systems primarily concerned with
                lexis and to make life easier for the developers of such systems. </p>
-            <!-- CO: In addition, our scheme should make sure that we have no variance in the actual encoding.
-               Especially a fixed sequence of attributes and a fixed hierarchical structure of elements is needed for parsing issues. 
-               For example, allowing diverging xpath may reveal problems for automatically processing ELTeC.  -->
-            <!-- LB : I am assuming we will produce a tightly constrained XML schema to ensure that
-               the hierarchy of XML elements is simple and predictable. We can't however do anything
-               to enforce the order in which attributes appear on an XML tag, nor should we. And I
-               don't know what you mean by "allowing diverging xpath": we can't control the
-               structure of the documents we are encoding, just represent them! My
-               assumption is that ELTeC documents will be well formed and valid XML documents: no
-               more, but no less. What parsing issues are you imagining? -->
-            <!-- CO: For this period, it may not be a frequent problem, but we also need to think of special character encoding:
-               a full and extensive transcription guideline is needed. 
-               We should further rely on UTF8 encoding. -->
-            <!-- LB: Not sure what you mean here. Can you give an example? I am assuming we will use
-              Unicode and UTF8. If we need anything beyond that we could use TEI <g> I suppose -->
+           
+            <p>In selecting features for inclusion in the markup scheme, we have been guided, but
+               not limited, by existing practice as far as possible. Our main goal has been to
+               identify a small core set of textual features which can be readily
+               (preferably automatically) identified in existing digital transcriptions, or easily
+               and consistently provided by new transcriptions. </p>
+      
+            <p>We distinguish three <soCalled>levels</soCalled> of encoding, referred to below as
+               level zero, level one and level two. All ELTeC  texts are made available at level zero,
+               the basic encoding format. Some texts may additionally be made available at levels
+               one or two, which provide a richer set of encoded features. For example: a level one
+               text will include information about rendition features missing from a level zero
+               text; a level two text will include tokenization information missing from a level one
+               text. As far as possible conversion between levels will be automatically scripted,
+               but this is not possible in the general case.
+              <!-- from level one to level zero is a simple lossy transformation;
+               conversion from level one or level zero to level two loses some information but adds 
+               Conversion scripts from  where  may be prepared in either level zero or level
+               one-->
+         <!--0. The eltec schema has a minimal level (level zero) in which (more or
+         less) only the features enumerated in Prague are permitted/guaranteed.
+         Other features (e.g. linebreaks, pagebreaks, highlighting)  are not
+         annotated/encoded/represented, even if they were available in a
+         pre-existing digital version from which the eltec version derives. The
+         details are to be determined.
+         
+         1. At level 1, a slightly richer set of features -\- basically the
+         intersection of what is available and useful in most pre-existing
+         digital versions -\- are provided and required.  This feature set is
+         also to be defined: I think it should include e.g. pagebreaks and
+         highlighting, but not linebreaks or editorial interventions such as
+         correction or normalization.
+         
+         2. At level 2,  a different set of largely linguistically-motivated
+         annotations are provided, typically involving tokenisation and
+         morpho-syntax. Note that level 2 annotation can be added to a level 0
+         text, so the term  "level" is perhaps a misnomer. This set is still to
+         be defined; the current encoding document explicitly defers it to
+         another workgroup cycle.-->
+         </p>
+            <p>This document lists all the textual features which are to be distinguished in an
+               ELTeC conformant transcription at one of these three levels. 
+               Whenever a given feature exists in a text, it will be
+               marked up as indicated here. No other features will be captured by the markup: if
+               some textual feature not provided for here is identified by a marked up source text,
+               that markup will be removed (though it may be retained in a version of the text
+               encoded at a different level). </p>
+           
+         <p>All ELTeC documents are TEI conformant, and therefore include a TEI Header, as discussed
+         in section <ptr target="#hdr"/> below.</p>  
+          <!--
             <p>We make no attempt to propose markup for linguistic annotations here. The assumption
                is that this will be produced by different annotation systems in different ways,
                though with an association between such annotations and the basic lexical structures
-               represented by the core ELTeC markup. </p>
-            <!-- CO: These linguistic or any other annotations may be assigned in different formats. 
-               Thus, the tei representation serves as a starting point for some other automatic annotations and analysis. I think, -->
+               represented by the core ELTeC markup. </p>-->
+          
          </div>
          <div>
-            <head>Basic Transcription Guidelines</head>
-            <!-- CO: General thoughts: I think, we should have in mind when the encoding can be done automatically 
-               and when we need man power for encoding. -->
-            <!-- LB : in what way ? this sounds like a workflow issue -->
+            <head>Basic Transcription Guidelines (all levels) </head>
+           
             <p>The basic unit of the ELTeC corpus is the text of a single novel, represented by a
                TEI <gi>text</gi> element. We propose no mechanism (other than metadata) to encode
                units larger than a single novel, such as multipart novel series like Proust's
                   <title>A la recherche du temps perdu</title> or Balzac's <title>Les
                   Rougon-Macquart</title>. </p>
-            <p><label>Open Question</label> Should we include liminal matter (titlepages, prefaces,
+           <!-- <p><label>Open Question</label> Should we include liminal matter (titlepages, prefaces,
                appendixes...) in our transcriptions? The following policies seem possible: <list>
                   <item>No : these typically belong to a particular edition or version of the text,
                      and should therefore systematically be excluded</item>
                   <item>Yes : these often form a significant part of the reader's experience (cf.
                      the foreword to most editions of <title>David Copperfield</title>). Mark them
                      up using <gi>front</gi> and <gi>back</gi> as appropriate.</item>
-                  <!-- CO: As we would like to propose the use of first editions, we represent the
-                     original version. Additionally, I know studies where these non-continuous texts 
-                     are analyzed to investigate and question traditional classifications of text genres.  
-                  -->
-                  <!-- LB : what do you mean by "non-continuous"? -->
-                  <!-- BN: From my point of view, liminal matter should not be included in the
-               transcription. I think this information is related to the book as physical object,
-               but the project is focused on the novel, on the content of the book. At least at the
-               moment I think this information is not useful for a distant reading. -->
+               
                   <item>Sort of : do not transcribe them, but indicate that they have been
                      suppressed by using the <gi>gap</gi> element. </item>
-               </list></p>
-            <p rend="red"><!-- Prague decisions:
-                        * no titlepage, 
-                       * include preface and  introduction  (contemporary with the text) with annotating it and specifying the author,
-                       * no table of contents
-                       * include afterword and  appendix  (contemporary with the text) with annotating it and specifying the author,
-                       * include footnotes or comments 
-                       * no errata list--> 
+               </list></p>-->
+            <p>To facilitate checking of a transcription against its  source during
+               production, the <gi>pb</gi> element must be provided to mark the point in a
+               transcript where a new page begins. If a page begins with the second part of a
+               hyphenated word, the <gi>pb</gi> tag may appear after that, but otherwise its
+               position should be the same in transcription and source. The <gi>pb</gi> element has
+              an attribute <att>n</att> which should be used to number the pages. A level 1 text may
+            also provide a <att>facs</att> attribute to point to a page image of the corresponding
+               source page. </p>
+            <p>As well as a titlepage or a table of contents, a published novel often includes material such as forewords or appendixes in addition
+            to the text of the novel itself. This <term>liminal</term> matter is included in an
+               ELTeC text only if it is believed to be authorial. Material before the body of the
+               text begins is collected within a <gi>front</gi> element, and material following the
+               body in a
+               <gi>back</gi> element. In either case, distinct sections of the material, if
+               encoded,  are represented by a
+               <gi>div</gi> with its <att>type</att> attribute set to <code>liminal</code>.</p><p>At
+               level zero, titlepages and tables of contents are omitted. At level one, they are
+               replaced by a <gi>gap</gi> element. Non-authorial liminal material is silently
+                  omitted at all levels. </p>
+            <p rend="red">
             The Prague decision list says that we decided to exclude titlepages, tables of contents, errata list etc, but
             to include prefaces, introductions, afterwords, and appendixes, provided these are
             contemporary with the text. It also says to include footnotes and commentary, but does
@@ -163,8 +185,8 @@
             <p>The (human) language in which a text is expressed is indicated explicitly by the
                   <att>xml:lang</att> attribute which supplies the ISO 2 letter code for the
                language concerned. This attribute will always be supplied on the <gi>text</gi>
-               element to specify a default, and may also appear on other elements, for example
-                  <gi>foreign</gi>, to indicate passages where the language changes. The various
+               element to specify a default, and may also appear on other elements to indicate passages where the language changes. 
+               The various
                different languages used in a given text will be itemized in its metadata (see
                   <gi>langUsage</gi> element in the header). </p>
             <p><label>Open question</label> Should passages exhibiting regional or dialectal
@@ -201,10 +223,7 @@ dialectal variations during linguistic annotation.-->
                         <code>FR042012</code> is the twelfth chapter of the 42nd French novel. </item>
                   <item>If sub-chapter segmentation (see below) is implemented, then the segments
                      will append a further four digit serial number.</item>
-                  <!--  CO: In addition, each other part of the book may also get an identifier too (table of contents etc.).  
-               -->
-                  <!-- LB: assuming that they are included, yes, they will. Do we really want to
-                     include tables of contents? -->
+                
                </list>The identifier will be supplied as the value of an <att>xml:id</att> attribute
                on each <gi>text</gi>, <gi>div</gi> or <gi>s</gi> element as appropriate. Adding this
                identifier is an easily automated task which can be built into the workflow for
@@ -215,8 +234,7 @@ dialectal variations during linguistic annotation.-->
                second part will have an identifier ending <code>013</code>, even though it may be
                numbered <code>1</code> in a source text.</p><p rend="red">No dissent from this proposal in
                   Prague</p>
-            <!-- CO: good idea. -->
-            <p><label>Open question</label> is it important to preserve the original numbering,
+             <p><label>Open question</label> is it important to preserve the original numbering,
                particularly for deeply structured texts? <list>
                   <item>Yes : the original numbering is widely used to reference the text: it should
                      be supplied as using the <att>n</att> attribute on the <gi>div</gi>.</item>
@@ -240,20 +258,12 @@ this information is necessary. -->
                dialogue be encoded? <list type="ordered">
                   <item>Use the appropriate TEI elements for verse or drama (<gi>lg</gi>,
                      <gi>l</gi>, <gi>sp</gi>, <gi>stage</gi>)</item>
-                  <!-- CO: These elements are far more specific concerning text encoding. For example: Why do we need information about lines in the corpus (in the prose text, we haven't)?  -->
-                  <!-- LB: because lines of poetry are structural units, but lines of prose are
-                     typographic artefacts -->
-                  <item>Use the appropriate TEI elements for lists and tables (<gi>list</gi>,
+                         <item>Use the appropriate TEI elements for lists and tables (<gi>list</gi>,
                         <gi>label</gi>, <gi>item</gi>, <gi>table</gi>, <gi>cell</gi>,
                      <gi>row</gi>)</item>
-                  <!-- CO: I think this might help to distinguish between different types of text material -->
-                  <!-- LB : yes, but which ones? all these? -->
-                  <item>Use the appropriate TEI elements for embedded graphics (<gi>figure</gi>,
+                    <item>Use the appropriate TEI elements for embedded graphics (<gi>figure</gi>,
                         <gi>graphic</gi>, <gi>head</gi>)</item>
-                  <!-- CO: This might be applied, if we good texts which are figure heads. I wonder whether we need the information that there 'was' figure when there is no trace of it and no head-->
-                  <!-- LB:  gap prevents you from making stupid mistakes e.g. when looking for
-                     collocates -->
-                  <item>Suppress all non-prose material, replacing it by <gi>gap</gi></item>
+                     <item>Suppress all non-prose material, replacing it by <gi>gap</gi></item>
                </list></p>
              
             <!-- Prague decisions 
@@ -363,10 +373,7 @@ before, it is related to the book as physical object, not to the novel itself.--
             <p rend="red">Prague decision (as noted above) : suppress all encoding of renditional features. </p>
             
             <p><label>Open Question</label>: Is it feasible or useful to recode highlighted spans of
-               text in this way? <!-- BN: I don't know. I'm not sure if it is worth annotating this information. It
-seems that it is not really useful for a distant reading.-->
-               <!-- LB : I think I am coming down on Borja's side here: it's a LOT of work to do it
-                  properly, and most distant readers won't want to use it -->
+               text in this way? 
                <list>
                   <item>Yes : in many cases this can be an automatic process and the results justify
                      investing the effort </item>
@@ -384,7 +391,7 @@ seems that it is not really useful for a distant reading.-->
             <p>This section will provide a checklist of TEI elements used in the body of each ELTeC
                text, with descriptions and examples of their intended applications. </p>
          </div>
-         <div>
+         <div xml:id="hdr">
             <head>Metadata in the TEI Header</head>
             <!-- BN: About the metadata:
 Licences (creative common) will be included in metadata, isn't it?
@@ -412,8 +419,7 @@ http://isni.oclc.org/-->
                be provided for each text, possibly in the form of a template. As in the body of the
                text, the intention is to provide a guaranteed minimal level of information,
                consistent across all parts of the ELTeC. </p>
-            <!-- CO: maybe you can include the metadata in the discussion paper of the selection criteria? -->
-            <p>Note that metadata may be supplied at (at least) two levels: the level of the ELTeC
+              <p>Note that metadata may be supplied at (at least) two levels: the level of the ELTeC
                as a whole, and that of individual texts within it. Information which applies
                uniformly to all parts of the collection should be supplied in the ELTeC header;
                information specific to a particular document in the text header. </p>
@@ -676,19 +682,20 @@ http://isni.oclc.org/-->
             </div>
          </div>
          <div>
-            <head>Linguistic and semantic annotation</head>
-            <p> Later stages of the project will need to use additional markup facilities to
+            <head>Linguistic and semantic annotation (level 2)</head>
+            <p>Additional markup facilities will be needed to
                represent more sophisticated annotations, which may be motivated linguistically (for
                example, to provide a normalised form, part of speech, etc.) or semantically (for
-               example to distinguish proper names, names of people, places, events, etc.). These
-               will form an additional layer, not discussed here: the principle should however be
-               that the base text we provide is always available in a uniform encoding.</p>
+               example to distinguish proper names, names of people, places, events, etc.). </p>
          </div>
          <div>
-            <head>Formal specification</head>
+            <head>Formal specifications</head>
             <p>The ELTeC encoding scheme defined by this document is a TEI-conformant customization,
                from which user documentation, and formal RELAXNG or DTD specifications can be
-               generated automatically. This section contains the schema specification itself.</p>
+               generated automatically. 
+            </p>
+          <div> <head>Full specification</head>   <p> This section contains the full schema specification from
+               which the level-specific versions are subsequently derived.</p>
             <schemaSpec ident="ELTeC" start="TEI">
                <moduleRef key="tei"/>
                <moduleRef key="core"
@@ -777,7 +784,11 @@ http://isni.oclc.org/-->
                   </attDef> 
                </attList>
             </elementSpec>
-            </schemaSpec>
+            </schemaSpec></div><!--<div><head>Level Zero specification</head>
+            <schemaSpec ident="eltec-0" source="eltec-compiled.xml">
+               
+            </schemaSpec></div>--><!-- boot strapping problem: cannot define levels 0 to 2 until the
+               full one has been defined! -->
          </div>
       </body>
       <back xml:id="sources">
@@ -785,7 +796,7 @@ http://isni.oclc.org/-->
          <listBibl>
             <bibl>An introduction to TEI Simple Print <idno type="URI"
                   >http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_simplePrint.doc.html</idno></bibl>
-            <bibl>Burnard (Lou) <date>2005</date>
+            <bibl>Burnard, Lou <date>2005</date>
                <title level="a">Metadata for corpus work</title> in <title>Developing Linguistic
                   Corpora: A guide to good practice</title> ed. Martin Wynne. Oxford: Oxbow Books,
                pp 30-46. <!--<ref target="2005-metadata.xml">XML source</ref>--></bibl>
