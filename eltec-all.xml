@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Encoding Guidelines for the ELTeC (all levels)</title>
+            <author>Cost Action CA16204 – WG1</author>
+         </titleStmt>
+         <publicationStmt>
+            <p>Unpublished draft for discussion</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>A born digital document drafted in TEI format by LB</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2018-03-16">Revised post-Prague</change>
+         <change when="2018-01-17">Expanded metadata section a bit; added comments from CO and
+            BN</change>
+         <change when="2017-12-17">First (partial) discussion draft</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <xi:include href="eltec-body.xml"/>
+      
+      <back>
+         <div>
+            <head>Full formal specifications</head>
+            <p>The ELTeC encoding scheme defined by this document is a TEI-conformant customization,
+               from which user documentation, and formal RELAXNG or DTD specifications can be
+               generated automatically. 
+            </p>
+                     
+    <p> This section contains the full schema specification from
+    which other level-specific versions are subsequently derived.
+    It should be compiled using teitoodd to produce the compiled ODD
+    eltec-compiled.xml which is used as a basis for the others. </p>
+            
+    <schemaSpec ident="ELTeC" start="TEI">
+        <moduleRef key="tei"/>
+        <moduleRef key="core"
+            include="author bibl choice corr orig date emph foreign gap head item l label lg list measure
+            name note p pb publisher pubPlace quote ref resp respStmt sp stage hi term title"/>
+        <moduleRef key="textstructure" include="TEI text div body front back"/>
+        <moduleRef key="header"
+            include="catDesc category catRef change classCode  encodingDesc extent fileDesc idno  keywords langUsage language  
+            profileDesc publicationStmt revisionDesc sourceDesc taxonomy teiHeader textClass titleStmt"/>
+        <moduleRef key="namesdates"
+            include="affiliation forename  persName  surname"/>
+        <!--Class modifications to reduce attribute clutter -->
+        <!-- first remove classes which provide attributes we dont want -->
+        <classSpec ident="att.declaring" type="atts" mode="delete"/>
+        <classSpec ident="att.declarable" type="atts" mode="delete"/>
+        <classSpec ident="att.personal" type="atts" mode="delete"/>
+        <classSpec ident="att.ranging" type="atts" mode="delete"/>
+        <classSpec ident="att.written" type="atts" mode="delete"/>
+        <classSpec ident="att.breaking" type="atts" mode="delete"/>
+        <classSpec ident="att.datable.iso" type="atts" mode="delete"/>
+        <classSpec ident="att.datable.custom" type="atts" mode="delete"/>
+        <classSpec ident="att.divLike" type="atts" mode="delete"/>
+        <classSpec ident="att.editLike" type="atts" mode="delete"/>
+        <classSpec type="atts" ident="att.global.responsibility" mode="delete"/>
+        <classSpec ident="att.naming" type="atts" mode="delete"/>
+        <!-- next modify classes which provide some attributes we want and some we don't -->
+        <classSpec type="atts" ident="att.global.rendition" mode="change">
+            <attList>
+                <attDef ident="rendition" mode="delete"/>
+                <attDef ident="style" mode="delete"/>
+            </attList>
+        </classSpec>
+        <classSpec type="atts" ident="att.typed" mode="change">
+            <attList>
+                <attDef ident="subtype" mode="delete"/>
+            </attList>
+        </classSpec>
+        <classSpec type="atts" ident="att.dimensions" mode="change">
+            <attList>
+                <attDef ident="precision" mode="delete"/>
+                <attDef ident="scope" mode="delete"/>
+            </attList>
+        </classSpec>
+        <classSpec type="atts" ident="att.datable" mode="change">
+            <attList>
+                <attDef ident="calendar" mode="delete"/>
+                <attDef ident="period" mode="delete"/>
+            </attList>
+        </classSpec>
+        <classSpec type="atts" ident="att.pointing" mode="change">
+            <attList>
+                <attDef ident="targetLang" mode="delete"/>
+                <attDef ident="evaluate" mode="delete"/>
+            </attList>
+        </classSpec>
+        
+        <!-- now tweaks for individual elements -->
+        
+        <!-- make xml:id and xml:lang obligatory for text -->
+        <elementSpec ident="text" mode="change">
+            <attList>
+                <attDef ident="xml:id" mode="change" usage="req"/>
+                <attDef ident="xml:lang" mode="change" usage="req"/>
+            </attList>
+        </elementSpec>
+        
+        <!-- define two new attributes for author -->
+        <elementSpec ident="author" mode="change">
+            <attList>
+                <attDef ident="dates" mode="add" usage="req">
+                    <desc xml:lang="en">supplies the years of birth and death of an author</desc>
+                    <datatype minOccurs="2" maxOccurs="2">
+                        <dataRef name="gYear"/>
+                    </datatype>
+                    <!-- any pair of 4 digit values will do here; we could
+                    add schematron to check that it is in the
+                    right range and that the second is after the first -->
+                    
+                </attDef><attDef ident="sex" mode="add" usage="req">
+                    <desc xml:lang="en">Specifies the sexual identification usually associated with the author</desc>
+                    <valList type="closed">
+                        <valItem ident="m"><desc>male</desc></valItem>
+                        <valItem ident="f"><desc>female</desc></valItem>
+                        <valItem ident="u"><desc>unknown or inapplicable</desc></valItem>                        
+                    </valList>
+                </attDef> 
+            </attList>
+        </elementSpec>
+        
+        <!-- remove bibl title and idno from classes which allow them outside header -->
+        <elementSpec ident="bibl" mode="change">
+            <classes mode="replace">
+                <memberOf key="model.sourceDescPart"/> 
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="title" mode="change">
+            <classes mode="replace"/>
+        </elementSpec>
+        
+        <elementSpec ident="idno" mode="change">
+            <classes mode="replace">
+                <memberOf key="model.publicationStmtPart.detail"/>
+            </classes>
+        </elementSpec>
+        
+    </schemaSpec></div>
+
+       </back>
+     
+   </text>
+</TEI>

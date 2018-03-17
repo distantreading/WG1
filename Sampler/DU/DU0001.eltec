@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="file:/home/lou/Public/WG1/out/encoding_proposal.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="file:/home/lou/Public/WG1/out/eltec-doc.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -11,16 +11,17 @@
                 <p>Demonstration file prepared for the ELTeC Sampler</p>
             </publicationStmt>
             <sourceDesc>
-<p>gebaseerd op een bestand van de Digitale Bibliotheek voor de
-Nederlandse Letteren (www.dbnl.org).  
- © 2009 Digitale Bibliotheek voor de Nederlandse Letteren, Leiden 
+
 <bibl>
+<note>gebaseerd op een bestand van de Digitale Bibliotheek voor de
+Nederlandse Letteren (www.dbnl.org).  
+© 2009 Digitale Bibliotheek voor de Nederlandse Letteren, Leiden </note>
  Cornélie Huygens, Barthold Meryan. P.N. van
-Kampen &amp; Zoon, Amsterdam z.j. [1897] </bibl>
+Kampen &amp; Zoon, Amsterdam z.j. [1897] 
 <ref>http://www.dbnl.org/tekst/huyg004bart01_01/ebook/huyg004bart01_01.epub
 </ref>
-<note>Voor de verantwoording en oorspronkelijke paginanummering zie het <ref href="http://www.dbnl.org/tekst/huyg004bart01_01">bronbestand</ref>. </note>
-</p>
+<note>Voor de verantwoording en oorspronkelijke paginanummering zie het <ref target="http://www.dbnl.org/tekst/huyg004bart01_01">bronbestand</ref>. </note>
+</bibl>
             </sourceDesc>
         </fileDesc>
     </teiHeader>

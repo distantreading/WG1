@@ -79,7 +79,7 @@
     <xsl:template match="h:br">
         <lb/>
     </xsl:template>
-    <!--<xsl:template match="h:h2/h:br"/>
+       <!--<xsl:template match="h:h2/h:br"/>
     
     <xsl:template match="h:p[@class='e-bookvenovani']">
         <lg>
