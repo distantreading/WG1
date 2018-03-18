@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:base="file:/home/lou/Public/WG1/encoding_proposal.xml"><?TEIVERSION Version 3.3.0. Last updated on
-	31st January 2018, revision f4d8439?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Encoding Guidelines for the ELTeC</title>
+            <title>Encoding Guidelines for the ELTeC: documentaton only </title>
             <author>Cost Action CA16204 – WG1</author>
          </titleStmt>
          <publicationStmt>
@@ -21,7 +24,7 @@
       </revisionDesc>
    </teiHeader>
    <text>
-      <body>
+      <body xmlns="http://www.tei-c.org/ns/1.0">
          <p>This reference document defines the encoding scheme to be used
             for the European Literary Text Collection (ELTeC) which will be a major deliverable of
             COST Action 16204, <title>Distant Reading</title>. This draft reflects decisions taken
@@ -297,9 +300,7 @@ this information is necessary. -->
                purporting to be direct speech from material purporting to be narrative in our basic
                encoding, though to do so consistently and accurately may occasionally be
                problematic.</p>
-            <!-- CO: Do you know how direct speech was indentified in this analysis? -->
-            <!-- LB: probably by hand, but that's not the issue -->
-            <p><label>Open Question</label> Should passages presented as direct speech in a novel be
+                 <p><label>Open Question</label> Should passages presented as direct speech in a novel be
                distinguished from passages presented as narrative? <list>
                   <item>Yes : use <gi>q</gi> and avoid nesting problems by always nesting it within
                         <gi>p</gi></item>
@@ -342,7 +343,11 @@ before, it is related to the book as physical object, not to the novel itself.--
                   <item>No : the proposed uses don't justify the cost of providing the information
                      if it is missing. And pagination is inherently copy-specific.</item>
                </list></p>
-            <p rend="red">Prague decision (as noted above) : suppress page numbering. </p>
+            <p rend="red">Prague decision (as noted above) was to suppress page numbering; however
+               the proposal is to retain it, since it will always be available for OCR texts, where
+            it is essential information during text validation, and is usually available in  other
+            digital versions. The discussion in Prague concerned only its lack of utility during the
+            analysis stage, but it is very useful during the transcription and validation stage. </p>
             <p>Font and style variations in the source text usually signal something. Italics may
                signal emphasis, quotation, foreign language terms etc. Superscripts almost always
                signal abbreviation. The visual salience of these variations is of considerably less
@@ -367,7 +372,7 @@ before, it is related to the book as physical object, not to the novel itself.--
                         <gi>abbr</gi> should be used to indicate the presence of an abbreviated
                      word: <code>&lt;abbr&gt;14e&lt;/abbr&gt;</code></item>
                </list></p>
-            <p rend="red">Prague decision (as noted above) : suppress all encoding of renditional features. </p>
+            <p rend="red">Prague decision (as noted above) : was to suppress all encoding of renditional features. </p>
             
             <p><label>Open Question</label>: Is it feasible or useful to recode highlighted spans of
                text in this way? 
@@ -685,22 +690,26 @@ http://isni.oclc.org/-->
                example, to provide a normalised form, part of speech, etc.) or semantically (for
                example to distinguish proper names, names of people, places, events, etc.). </p>
          </div>
-         </body>
-      <back xml:id="sources">
-         <p>Sources consulted</p>
-         <listBibl>
-            <bibl>An introduction to TEI Simple Print <idno type="URI">http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_simplePrint.doc.html</idno></bibl>
-            <bibl>Burnard, Lou <date>2005</date>
-               <title level="a">Metadata for corpus work</title> in <title>Developing Linguistic
-                  Corpora: A guide to good practice</title> ed. Martin Wynne. Oxford: Oxbow Books,
-               pp 30-46. <!--<ref target="2005-metadata.xml">XML source</ref>--></bibl>
-            <bibl> Odebrecht, Carolin. (2017). Metadata for Historical Corpora. Realization of the
-               Metamodel for Corpus Metadata with the help of TEI Customization [Data set]. Zenodo.
-               http://doi.org/10.5281/zenodo.267999</bibl>
-            <bibl>
-               <idno type="URI">github.com/cligs/textbox</idno>
-            </bibl>
-         </listBibl>
-      </back>
+      
+         <div xml:id="sources">
+            <p>Sources consulted</p>
+            <listBibl>
+               <bibl>An introduction to TEI Simple Print <idno type="URI">http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_simplePrint.doc.html</idno></bibl>
+               <bibl>Burnard, Lou <date>2005</date>
+                  <title level="a">Metadata for corpus work</title> in <title>Developing Linguistic
+                     Corpora: A guide to good practice</title> ed. Martin Wynne. Oxford: Oxbow Books,
+                  pp 30-46. <!--<ref target="2005-metadata.xml">XML source</ref>--></bibl>
+               <bibl> Odebrecht, Carolin. (2017). Metadata for Historical Corpora. Realization of the
+                  Metamodel for Corpus Metadata with the help of TEI Customization [Data set]. Zenodo.
+                  http://doi.org/10.5281/zenodo.267999</bibl>
+               <bibl>
+                  <idno type="URI">github.com/cligs/textbox</idno>
+               </bibl>
+            </listBibl>
+         </div>
+      
+      </body>     
+  
+     
    </text>
 </TEI>
