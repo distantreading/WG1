@@ -49,6 +49,13 @@
         <elementRef key="p"/>
         <elementRef key="head"/>
         <elementRef key="div"/>
+       <!-- the following are needed in header-->
+       <elementRef key="author"/>
+       <elementRef key="bibl"/>
+       <elementRef key="respStmt"/>
+       <elementRef key="resp"/>
+       <elementRef key="name"/>
+       <elementRef key="measure"/>
     </schemaSpec>
 
 </div>       

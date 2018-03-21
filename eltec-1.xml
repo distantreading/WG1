@@ -64,6 +64,7 @@
         <elementRef key="respStmt"/>
         <elementRef key="resp"/>
         <elementRef key="name"/>
+       <elementRef key="measure"/>
      </schemaSpec>
 </div>
      </back>

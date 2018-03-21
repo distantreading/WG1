@@ -129,7 +129,7 @@
             </attList>
         </elementSpec>
         
-        <!-- remove bibl title and idno from classes which allow them outside header -->
+        <!-- remove bibl title measure and idno from classes which allow them outside header -->
         <elementSpec ident="bibl" mode="change">
             <classes mode="replace">
                 <memberOf key="model.sourceDescPart"/> 
@@ -145,6 +145,19 @@
                 <memberOf key="model.publicationStmtPart.detail"/>
             </classes>
         </elementSpec>
+        
+        <elementSpec ident="measure" mode="change">
+          <classes mode="replace">  <memberOf key="att.measurement"/></classes>
+        </elementSpec>
+       
+        <!-- constrain extent -->
+        <elementSpec ident="extent" mode="change">
+              <content>
+               <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>             
+            </content>
+        </elementSpec>
+        
+        
         
     </schemaSpec></div>
 
