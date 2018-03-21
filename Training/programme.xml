@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Building the ELTeC: creating marked up texts</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="slide">
+            <head>Objectives and prerequisites</head>
+            <p>In this one day workshop you'll learn: <list>
+                  <item>what TEI XML markup is and why we use it for the ELTeC</item>
+                  <item>how ELTeC texts should be marked up, at levels 0 and 1</item>
+                  <item>some practical ways of creating ELTeC texts starting from other formats, in
+                     particular : <list>
+                        <item>plain text output by an OCR system</item>
+                        <item>digital documents created with Word or Open Office</item>
+                        <item>ePub or HTML documents found on the internet</item>
+                     </list></item>
+               </list></p>
+            <p>You should have some previous experience of working with digital documents for
+               example, creating web pages, or editing documents with Word. </p>
+            <p>Almost all the work will be done using oXygen XML Editor. If you don't already have
+               it installed, we recommend you to download an evaluation copy of this software before
+               the workshop!</p>
+         </div>
+         <div type="slide">
+            <head>Programme </head>
+            <list>
+               <item>Practical session 1: what is oXygen? What can we do with it? (45 mins)</item>
+               <item>What is the TEI and why are we using it? (30 mins) </item>
+               <item>Practical session 2: creating a level 0 text from OCR output (60 mins) </item>
+               <item>Understanding ELTeC: explaining level 0 and level 1 schemas (30 mins)</item>
+               <item>lunch break</item>
+               <item>Practical session 3: converting from Word (45 mins) </item>
+               <item>Understanding and creating the ELTeC header (30 mins)</item>
+               <item>Practical session 4: working on your own document (60 mins)</item>
+               <item>Converting from ePub and HTML : some examples (30 mins)</item>
+               <item>Closing discussion and next steps</item>
+            </list>
+         </div>
+      </body>
+   </text>
+</TEI>
