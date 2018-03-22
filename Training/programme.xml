@@ -6,12 +6,15 @@
             <title>Building the ELTeC: creating marked up texts</title>
          </titleStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <p>Unpublished source: prepared for Wurzburg Workshop, April 2018</p>
          </publicationStmt>
          <sourceDesc>
-            <p>Information about the source</p>
+            <p>No source: this is a born digital document</p>
          </sourceDesc>
       </fileDesc>
+      <revisionDesc>
+         <change when="2018-03-22">LB add header; confirm timetable</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body>
@@ -20,32 +23,33 @@
             <p>In this one day workshop you'll learn: <list>
                   <item>what TEI XML markup is and why we use it for the ELTeC</item>
                   <item>how ELTeC texts should be marked up, at levels 0 and 1</item>
-                  <item>some practical ways of creating ELTeC texts starting from other formats, in
-                     particular : <list>
+                  <item>some practical ways of creating ELTeC texts starting from other formats,for
+                     example : <list>
                         <item>plain text output by an OCR system</item>
                         <item>digital documents created with Word or Open Office</item>
                         <item>ePub or HTML documents found on the internet</item>
                      </list></item>
                </list></p>
-            <p>You should have some previous experience of working with digital documents for
-               example, creating web pages, or editing documents with Word. </p>
-            <p>Almost all the work will be done using oXygen XML Editor. If you don't already have
-               it installed, we recommend you to download an evaluation copy of this software before
-               the workshop!</p>
+            <p>You should have some previous experience of working with digital documents, for
+               example  creating web pages, or editing documents with Word, but you are not expected
+               to know anything about TEI or XML! </p>
+            <p>Almost all the practical work will be done using <ref target="https://www.oxygenxml.com/xml_editor/download_oxygenxml_editor.html">oXygen XML Editor</ref>. If you don't already have
+               it installed, you may like to download an evaluation copy of this software before
+               the workshop. </p>
          </div>
          <div type="slide">
             <head>Programme </head>
             <list>
-               <item>Practical session 1: what is oXygen? What can we do with it? (45 mins)</item>
-               <item>What is the TEI and why are we using it? (30 mins) </item>
-               <item>Practical session 2: creating a level 0 text from OCR output (60 mins) </item>
-               <item>Understanding ELTeC: explaining level 0 and level 1 schemas (30 mins)</item>
-               <item>lunch break</item>
-               <item>Practical session 3: converting from Word (45 mins) </item>
-               <item>Understanding and creating the ELTeC header (30 mins)</item>
-               <item>Practical session 4: working on your own document (60 mins)</item>
-               <item>Converting from ePub and HTML : some examples (30 mins)</item>
-               <item>Closing discussion and next steps</item>
+               <item>09h30 : Practical session 1: Using an XML Editor (oXygen) -- what can we do with it? (30 mins)</item>
+               <item>10h00 : What is the TEI and why are we using it? (30 mins) </item>
+               <item>10h30 : Practical session 2: creating a level 0 text from OCR output (60 mins) </item>
+               <item>11h30 : Understanding ELTeC: explaining level 0 and level 1 schemas (30 mins)</item>
+               <item>12h00 : <hi>lunch break</hi></item>
+               <item>13h00 : Practical session 3: converting from Word (30 mins) </item>
+               <item>13h30 : Understanding and creating the ELTeC header (30 mins)</item>
+               <item>14h00 : Practical session 4: working on your own document (60 mins)</item>
+               <item>15h00 : Converting from ePub and HTML : some examples (30 mins)</item>
+               <item>15h30 : Closing discussion and next steps</item>
             </list>
          </div>
       </body>
