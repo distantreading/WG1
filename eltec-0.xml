@@ -51,7 +51,10 @@
         <elementRef key="div"/>
        <!-- the following are needed in header-->
        <elementRef key="author"/>
+       <elementRef key="title"/>
        <elementRef key="bibl"/>
+       <elementRef key="ref"/>
+       
        <elementRef key="respStmt"/>
        <elementRef key="resp"/>
        <elementRef key="name"/>
