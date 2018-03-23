@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/lou/Public/TEIslides/teislides.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>How to make a sparrow-hawk out of a turkey: some tricks and techniques for
+                    text conversion</title>
+                <author>Lou Burnard Consulting</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>For Wurzburg</p>
+            </publicationStmt>
+            <sourceDesc>
+                <ab>Original XML available from <ptr
+                        target="http://github.com/distantreading/WG1/Training"/></ab>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2018-03-22">Create header</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="slide">
+                <head>What's in my toolbox?</head>
+                <list>
+                    <item><label>curl</label>: command line utility to download files from a given
+                        URL</item>
+                    <item><label>iconv</label> : command line utility to convert non-Unicode
+                        characters into Unicode</item>
+                    <item><label>tidy</label> : swiss army knife utility from W3C to sanitize
+                        HTML</item>
+                    <item/>
+                    <item><label>perl</label> for quick and dirty character mungeing</item>
+                    <item><label>XSLT</label> standard stylesheet language for XML
+                        conversions</item>
+                    <item>and <label>oXygen</label> and <label>emacs</label> (of course)</item>
+                </list>
+            </div>
+            <div type="slide">
+                <head>Case study 1: a Latvian novel in minimal HTML</head>
+                <list>
+                    <item>edit a page of links to create a script which downloads each chapter
+                    to a separate file </item><item>convert each file's encoding from windows-1257
+                        to UTF8</item><item>run a perl script on each chapter file to convert the HTML
+                            tags</item><item>create a minimal header and append each chapter file to
+                            it</item>
+                </list></div><div type="slide"><head>Minimal HTML input file</head>
+                <figure><graphic url="../media/latvian-0.png"/></figure></div>
+            <div type="slide"><head>perl script</head>
+                <figure><graphic url="../media/latvian-1.png"/></figure></div>
+            <div type="slide"><head>TEI output produced</head>
+                <figure><graphic url="../media/latvian-2.png"/></figure></div>
+            
+                <!-- # Latvian novel from Eva
+1. The link given provided a page of links, one to each chapter of the novel. I downloaded that page
+, and hand edited with emacs to produce a shell script (LV_grab) to download each chapter to a separ
+ate file (files are in Orig)
+2. On inspection I identified the following necessary changes:
+   - convert char encoding from windows-1257 to UTF-8
+   - strip out initial and final HTML tagging
+   - wrap the text of each chapter in a `<div>`
+   - convert chapter titles (marked with `<big>` in HTML) to `<head>`
+   - convert `<br>` tags to `</p><p>`
+   - convert `&nbsp;` to `&#160;` 
+3. I decided to do these at the command line, using the unix iconv utility to manage the character c
+onversion, and a tiny perl script (retag.prl) to do the rest
+4. I wrote a minimal TEI Header for the file, and ran a shell script (LV_conv) to convert and then a
+ppend each chapter file to it.
+ 
+-->
+            
+        </body>
+    </text>
+</TEI>
