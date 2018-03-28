@@ -52,6 +52,8 @@
        <!-- the following are needed in header-->
        <elementRef key="author"/>
        <elementRef key="title"/>
+       <elementRef key="publisher"/>
+       <elementRef key="date"/>
        <elementRef key="bibl"/>
        <elementRef key="ref"/>
        

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/lou/Public/TEIslides/teislides.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>TEI4ELTEC : what and why </title>
+                <author>Lou Burnard Consulting</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>For Wurzburg</p>
+            </publicationStmt>
+            <sourceDesc>
+                <ab>Original XML available from <ptr
+                        target="http://github.com/distantreading/WG1/Training"/></ab>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2018-03-22">Create header</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="slide">
+                <head>What is the TEI?</head>
+                <p>
+                    <graphic url="../media/whatistei.png" height="75%"/></p>
+                <cb/>
+                <p>According to Wikipedia, the Text Encoding Initiative (TEI) is <hi>a text-centric
+                    community of practice in the academic field of digital humanities, operating
+                    continuously since the 1980s</hi>. </p>
+                <list rend="left">
+                        <item>An organisation, or an institution ?</item>
+                        <item>A <soCalled>club</soCalled>, a fashion, a religion ?</item>
+                        <item>A detailed technical specification ?</item>
+                        <item>... or a means of constructing such specifications ?</item>
+                    </list>
+                <p rend="box">See http://books.openedition.org/oep/426/; 
+                    http://books.openedition.org/oep/1237 (en francais)</p>
+            </div>
+            <div type="slide">
+                <head>More concretely, the Text Encoding Initiative is ... </head>
+                <list>
+                    <item>a set of <soCalled>Guidelines</soCalled> for the encoding of digital
+                        resources, currently using XML</item>
+                    <item>an international infrastructure responsible for the maintenance,
+                        development, and distribution of those Guidelines</item>
+                    <item>an international research community of users of those Guidelines </item>
+                </list>
+                <p rend="box">The TEI provides a standard framework within which different views of
+                    a text can be articulated rather than a single perspective. </p>
+            </div>
+            <div type="slide">
+                <head>"TEI" is also short for "Text Encoding for Interchange"</head>
+                <p>The TEI was created (before the Web!) to make possible <list>
+                        <item>The <hi>creation</hi>, <hi>exchange</hi>, and <hi>integration</hi> of
+                            digital textual data <list>
+                                <item>any kind of text </item>
+                                <item>in any language</item>
+                                <item>from any culture or epoch</item>
+                            </list></item>
+                        <item>The TEI was developed by and for researchers and technicians working
+                            in the academic community. It was intended to be useful <list>
+                                <item>for beginners, needing to learn well-established and agreed
+                                    solutions </item>
+                                <item>for experts, hoping to create new solutions</item>
+                            </list></item>
+                    </list></p>
+                <p rend="box">Consequently, the TEI provides both general and specific solutions,
+                    and its architecture is intended to permit customisation</p>
+            </div>
+
+            <div type="slide">
+                <head>Where did the TEI come from (and why is it still here)? </head>
+                <list type="unordered">
+                    <item>The TEI foundation myth goes back to 1987, when the US National Endowment
+                        for the Humanities financed an international workshop on the possibility of
+                        defining "text encoding guidelines"</item>
+                    <item>It was an early example of what is now commonplace: informal voluntary
+                        co-operation between researchers at many different institutions mediated by
+                        the internet and by three learned societies (ALLC, ACL, ACH) </item>
+                    <item>Major influences (in both directions) <list type="unordered">
+                            <item>libraries and digital archives</item>
+                            <item>language engineering</item>
+                            <item>editors of literary and historical sources</item>
+                        </list></item>
+                </list>
+                <figure>
+                    <graphic height="55%" url="../media/1987-11-vassar.png"/>
+                    <head>Vassar College, Poughkeepsie</head>
+                </figure>
+            </div>
+            <div type="slide">
+                <head>What does it offer ELTeC?</head>
+            </div>
+
+
+            <div>
+                <head>And, in practice... </head>
+            </div>
+
+
+        </body>
+    </text>
+</TEI>

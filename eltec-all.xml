@@ -137,7 +137,9 @@
         </elementSpec>
         
         <elementSpec ident="title" mode="change">
-            <classes mode="replace"/>
+            <classes mode="replace">
+                <memberOf key="model.biblPart"/>
+            </classes>
         </elementSpec>
         
         <elementSpec ident="idno" mode="change">
@@ -157,7 +159,17 @@
             </content>
         </elementSpec>
         
-        
+        <elementSpec ident="div" mode="change">
+            <attList>
+                <attDef ident="type" mode="change">
+                    <valList type="semi">
+                        <valItem ident="liminal"><desc>authorial preface, foreword, back matter etc.</desc></valItem>
+                        <valItem ident="chapter"><desc>chapter not further divided</desc></valItem>
+                        <valItem ident="group"><desc>any grouping of chapters or groups, e.g. part, volume, etc.</desc></valItem>
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
         
     </schemaSpec></div>
 
