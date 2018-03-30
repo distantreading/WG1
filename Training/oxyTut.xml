@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_bare.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
@@ -30,7 +29,7 @@
                <item>You are now in the typical oXygen workspace. There is a large white window in
                   the middle where you are going to work on your document, with some smaller
                   satellite windows we will look at later <figure>
-                     <graphic url="tuto-1.png" height="10cm"/>
+                     <graphic url="media/tuto-1.png" height="10cm"/>
                   </figure>
                </item>
                <item>Your workspace currently contains just one line: an XML Declaration like this:
@@ -54,20 +53,20 @@
                   start and end tags. </item>
                <item>
                   <figure>
-                     <graphic url="tuto-2.png" width="16cm"/>
+                     <graphic url="media/tuto-2.png" width="16cm"/>
                   </figure>
                </item>
                <item> Oxygen provides several ways of tagging documents. Let's try a second one.
                   Select the word <code>XML</code> with the mouse and then type CTRL-E. Now you can
                   enter a name for the tag you're adding: we suggest <ident>name</ident>
                   <figure>
-                     <graphic url="tuto-3.png"/>
+                     <graphic url="media/tuto-3.png"/>
                   </figure> Click <code>OK</code> to continue </item>
                <item> XML elements can nest within each other: we have a <gi>root</gi> element which
                   contains a bit of text, followed by a <gi>name</gi> element, followed by another
                   bit of text. Select all three of these (i.e. everything inside the <gi>root</gi>)
                   and tag it <gi>s</gi> (for sentence), again using CTRL-E. <figure>
-                     <graphic url="tuto-4.png"/>
+                     <graphic url="media/tuto-4.png"/>
                   </figure>
                </item>
                <item> The third way of tagging a document is to divide up its elements
@@ -75,7 +74,7 @@
                   created (between <code>document.</code> and <tag>/s</tag>). Type
                      <code>ALT-SHIFT-d</code> to close this <gi>s</gi> and start a new one. You can
                   now add a second sentence to your document: <figure>
-                     <graphic url="tuto-5.png" width="16cm"/>
+                     <graphic url="media/tuto-5.png" width="16cm"/>
                   </figure>
                </item>
                <item> oXygen also helps you when it comes to adding attributes. Put the cursor
@@ -83,7 +82,7 @@
                      <code>></code> and type a space, followed by <code>n="</code> . Oxygen adds a
                      <code>"</code> and the cursor stays there, waiting for your input. Type the
                   figure 1. <figure>
-                     <graphic url="tuto-6.png"/>
+                     <graphic url="media/tuto-6.png"/>
                   </figure>
                </item>
                <item> Number the second sentence "2" in the same way. </item>
@@ -95,7 +94,7 @@
                   to the document at any point. </item>
                <item> Finally, just to make the document look a bit nicer, type CTRL-SHIFT-p or
                   click the Format and Indent button. <figure>
-                     <graphic url="tuto-7.png"/>
+                     <graphic url="media/tuto-7.png"/>
                   </figure>
                </item>
             </list>
@@ -137,7 +136,7 @@
                      <gi>text</gi> element, containing the text itself. </item>
             </list>
             <p>
-               <graphic height="8cm" url="tuto-8.png"/>
+               <graphic height="8cm" url="media/tuto-8.png"/>
             </p>
 
             <div>
@@ -202,7 +201,7 @@
                </list>
                <p>Your document should now look something like this :</p>
                <p>
-                  <graphic height="4cm" url="../../Graphics/body-shot.png"/>
+                  <graphic height="4cm" url="media/tuto-9.png"/>
                </p>
                <p>Over to you to complete this chapter, preferably with some text a little more
                   interesting than <q>some text here</q> ! Describe your first reactions to using
@@ -327,15 +326,10 @@
                   <item>First enter the title of the digital text we are creating. For ELTeC, this
                      should be the original main title (Passages in the life of a fast young lady),
                      followed by the phrase <code>: ELTeC edition</code>. </item>
-                  <item>Next complete the following information about the original author provided
-                     by the <gi>author</gi> element: <list type="gloss">
-                        <label>Name</label>
-                        <item>Catherine Maria Grey</item>
-                        <label>Dates</label>
-                        <item>1798 1870</item>
-                        <label>Sex</label>
-                        <item>f</item>
-                     </list></item>
+                  <item>The <gi>author</gi> element should contain the author's name
+                     in a standardised format, with the surname first, and the author's
+                     dates in parentheses at the end: like this <code>Grey, Catherine Maria (1798-1870)</code>
+                    </item>
                   <item>You should also take credit for your encoding by adding a <gi>respStmt</gi>
                      element after the <gi>author</gi>. This element should contain a <gi>resp</gi>
                      with the content <code>ELTeC encoding</code> and a <gi>name</gi> containing
@@ -349,7 +343,7 @@
             <p>All being well, your header should look like something like this when you've
                finished: </p>
             <p>
-               <graphic url="media/minHeader.png" width="75%"/>
+               <graphic url="media/tuto-10.png" width="75%"/>
             </p>
             <p>Now we'll proceed to transcribe and tag the text itself. </p>
             <p>First, open the page image for the beginning of the chapter in file
@@ -383,8 +377,9 @@
             </list>
             <p>When you've finished your first page, it should look something like this: </p>
             <p>
-               <graphic url="media/firstPage.png" width="70%"/>
+               <graphic url="media/tuto-11.png" width="70%"/>
             </p>
+            </div><div><head>Working with previously saved text</head>
             <p>Are you ready for the next page? Open the appropriate graphic file in
                   <ident>Work/Pages/0008.png</ident> and take a look. Note the following: <list>
                   <item>there is a running page header which repeats the title, as well as giving
@@ -447,7 +442,7 @@
                more accurate technique, relying on one of oXygen's built in XML manipulation
                facilities. As you can see if you look at the Outline view, or switch the display to
                Author mode, oXygen currently thinks that the whole of the text you just inserted is
-               one big paragraph. It's simple to split that up.</p>
+               one big paragraph. Do you remember how to split that up?</p>
             <list>
                <item>In Text Mode, scroll the text to the end of that interminable paragraph on page
                   2, i.e. between the words <q>occupants of the cab.</q> and before <q>Along dirty
