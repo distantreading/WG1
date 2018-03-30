@@ -56,6 +56,8 @@
        <elementRef key="date"/>
        <elementRef key="bibl"/>
        <elementRef key="ref"/>
+       <elementRef key="idno"/>
+       <elementRef key="persName"/>
        
        <elementRef key="respStmt"/>
        <elementRef key="resp"/>

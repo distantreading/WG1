@@ -37,7 +37,7 @@
                      
     <p> This section contains the full schema specification from
     which other level-specific versions are subsequently derived.
-    It should be compiled using teitoodd to produce the compiled ODD
+    It must be converted using teitoodd to produce the compiled ODD
     eltec-compiled.xml which is used as a basis for the others. </p>
             
     <schemaSpec ident="ELTeC" start="TEI">
@@ -106,27 +106,17 @@
             </attList>
         </elementSpec>
         
-        <!-- define two new attributes for author -->
+        <!-- restrict content for author -->
         <elementSpec ident="author" mode="change">
-            <attList>
-                <attDef ident="dates" mode="add" usage="req">
-                    <desc xml:lang="en">supplies the years of birth and death of an author</desc>
-                    <datatype minOccurs="2" maxOccurs="2">
-                        <dataRef name="gYear"/>
-                    </datatype>
-                    <!-- any pair of 4 digit values will do here; we could
-                    add schematron to check that it is in the
-                    right range and that the second is after the first -->
-                    
-                </attDef><attDef ident="sex" mode="add" usage="req">
-                    <desc xml:lang="en">Specifies the sexual identification usually associated with the author</desc>
-                    <valList type="closed">
-                        <valItem ident="m"><desc>male</desc></valItem>
-                        <valItem ident="f"><desc>female</desc></valItem>
-                        <valItem ident="u"><desc>unknown or inapplicable</desc></valItem>                        
-                    </valList>
-                </attDef> 
-            </attList>
+          <content>
+              <alternate maxOccurs="unbounded" minOccurs="0">
+                  <textNode/>
+                  <elementRef key="persName"/>
+                  <elementRef key="orgName"/>                  
+                  <elementRef key="date"/>
+                  <elementRef key="idno"/>
+              </alternate>
+          </content>
         </elementSpec>
         
         <!-- remove bibl title measure and idno from classes which allow them outside header -->
