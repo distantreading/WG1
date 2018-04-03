@@ -350,7 +350,7 @@
             <div type="slide">
                 <head>Is the TEI a standard ?</head>
                 <figure>
-                    <graphic url="../media/1991-TEI-commandments.png" height="70%"/>
+                    <graphic url="../media/1991-TEI-commandments.png" height="80%"/>
                 </figure>
                 <cb/>
                 <list>
@@ -365,7 +365,7 @@
 
             <div type="slide">
                 <head>The TEI was designed to support many approaches</head>
-                <p><graphic url="../media/oddFlavours.png" width="70%"/></p>
+                <p><graphic url="../media/oddFlavours.png" width="80%"/></p>
                 <cb/>
                 <p>Each box here represents .. <list>
                         <item>a set of elements, their attributes, and constraints about their
@@ -448,10 +448,49 @@
                     in a document, it will always be marked up and in the same way. No optional
                     markup!</p>
             </div>
-
             <!-- do exercise here -->
 
             <div type="slide">
+                <head>Understanding ELTeC: a closer look at the schema</head>
+                <p rend="red">Subject to discussion in WG1 and WG2 !</p>
+                <list>
+                    <item>The different <soCalled>levels</soCalled> of the ELTeC schema are not
+                        really levels in the sense that a text will progress majestically from 0 to
+                        2. </item>
+                    <item>It is easy to go from 1 or 2 to 0: a stylesheet simply has to remove some
+                        tagging automatically</item>
+                    <item>It is also easy (assuming the right software environment) to go from from
+                        0 or 1 to 2: linguistic annotations can be added automatically</item>
+                    <item>It is <emph>not</emph> easy to go from 0 or 2 to 1: human judgment may be
+                        required</item>
+                </list>
+            </div>
+
+            <div type="slide">
+                <head>Why the three levels?</head>
+                <list>
+                    <item>texts may come from many sources, some of which already have extensive
+                        tagging </item>
+                    <item>some (though by no means all) of that tagging is useful for distant
+                        reading purposes and we would like to be able to retain it rather than have
+                        the expense of adding it. For example: <list>
+                            <item>distinguishing verse and prose </item>
+                            <item>distinguishing highlighted phrases and their functions (e.g.
+                                emphasis, foreign, titles) </item>
+                            <item>distinguishing embedded quotations</item>
+                            <item> (maybe) distinguishing direct speech from narrative</item>
+                        </list>
+                    </item>
+                    <item>texts which don't make such distinctions are still useful (of course!);
+                        the core functions of distant reading (as so far defined) don't require
+                        these distinctions. </item>
+                    <item>identifying a text as level 1 or as level 0 makes explicit and guarantees
+                        a specific level of encoding</item>
+                </list>
+
+            </div>
+            <div type="slide">
+                <head>Current state of proposals</head>
                 <table>
                     <row role="label">
                         <cell>Textual Feature</cell>
@@ -504,13 +543,13 @@
                     </row>
                     <row>
                         <cell>Section/part/chapter</cell>
-                        <cell><gi>div</gi>> nested as necessary within <gi>body</gi>>[3]</cell>
-                        <cell><gi>div</gi>> nested as necessary within body></cell>
-                        <cell><gi>div</gi>> nested as necessary within <gi>body</gi></cell>
+                        <cell><gi>div</gi> nested as necessary within <gi>body</gi>[3]</cell>
+                        <cell><gi>div</gi> nested as necessary within body></cell>
+                        <cell><gi>div</gi> nested as necessary within <gi>body</gi></cell>
                     </row>
                     <row>
                         <cell>Heading</cell>
-                        <cell><gi>head</gi>></cell>
+                        <cell><gi>head</gi></cell>
                         <cell>head></cell>
                         <cell>head></cell>
                     </row>
@@ -567,31 +606,197 @@
                     <row>
                         <cell>Codeswitching or other distinct phrase</cell>
                         <cell>unmarked</cell>
-                        <cell><gi>foreign</gi>>, <gi>title</gi>>, <gi>emph</gi>></cell>
+                        <cell><gi>foreign</gi>, <gi>title</gi>, <gi>emph</gi></cell>
                         <cell>?</cell>
                     </row>
                     <row>
                         <cell>Tokenization</cell>
                         <cell>none</cell>
                         <cell>none</cell>
-                        <cell><gi>w</gi>>[5]</cell>
+                        <cell><gi>w</gi>[5]</cell>
                     </row>
                     <row>
                         <cell>Segmentation</cell>
                         <cell>none</cell>
                         <cell>none</cell>
-                        <cell><gi>s</gi>>[5]</cell>
+                        <cell><gi>s</gi>[5]</cell>
                     </row>
                     <row>
                         <cell>Structural break</cell>
                         <cell>ignored</cell>
-                        <cell><tag>milestone/</tag>></cell>
+                        <cell><tag>milestone/</tag></cell>
                         <cell>ignored </cell>
                     </row>
                 </table>
 
             </div>
-            <div>
+            <div type="slide">
+                <head>Metadata matters</head>
+                <p rend="red">Subject to further debate in WG1 and WG2!</p>
+                <list>
+                    <item>The same header elements are available at each level</item>
+                    <item>However some header elements may be optional at some levels </item>
+                </list>
+                <p rend="box">Work in progress... </p>
+            </div>
+
+            <div type="slide">
+                <head>The ELTeC Header</head>
+                <p>Like every TEI header, this has some mandatory components: <list>
+                        <item>file description, containing a title statement, a publication
+                            statement, and a source description</item>
+                        <item>Additionally, some elements which optional in TEI are mandatory in
+                            ELTeC </item>
+                        <item>And some elements have content models which are more constrained than
+                            TEI requires </item>
+                    </list></p>
+                <p>In general we try to follow the Recommendations for Best Practice in Digital
+                    Libraries, but our main goal is to provide easy access to metadata which will be
+                    useful for distant reading purposes. </p>
+            </div>
+            <div type="slide">
+                <head>Creating an ELTeC header</head>
+                <p>Data could be captured in several ways: <list type="numbered">
+                        <item>editing a template file in oXygen</item>
+                        <item>using a predefined form to capture the data</item>
+                        <item>down-translating from an existing header</item>
+                    </list>
+                </p>
+                <p>Data could be managed/edited/updated : <list>
+                        <item>using an external database to hold the data and extracting headers as
+                            required</item>
+                        <item>along with each text file</item>
+                    </list></p>
+                <p rend="box">Version control is necessary !</p>
+            </div>
+            <div type="slide">
+                <head>Basic template for header</head>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <teiHeader type="novelHeader">
+                        <fileDesc>
+                            <titleStmt>
+                                <title><!-- title of work --></title>
+                                <author><!-- information about the author --></author>
+                            </titleStmt>
+                            <extent>
+                                <!-- size of the text, in pages and words -->
+                            </extent>
+                            <publicationStmt>
+                                <!-- boilerplate statement about status as part of ELTeC -->
+                            </publicationStmt>
+                            <sourceDesc>
+                                <bibl>
+                                    <!-- bibliographic description of the printed source -->
+                                </bibl>
+                            </sourceDesc>
+                        </fileDesc>
+                        <profileDesc>
+                            <!-- additional descriptive information -->
+                        </profileDesc>
+                        <revisionDesc>
+                            <!-- revision information -->
+                        </revisionDesc>
+                    </teiHeader>
+                </egXML>
+            </div>
+            <div type="slide">
+                <head>Example file description</head>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <fileDesc>
+                        <titleStmt>
+                            <title>Howards End : ELTeC edition</title>
+                            <author>Forster, Edward Morgan (1879-1970)</author>
+                            <respStmt>
+                                <resp>ELTeC encoding</resp>
+                                <name>Lou Burnard</name>
+                            </respStmt>
+                        </titleStmt>
+                        <extent>
+                            <measure unit="words" quantity="20010"/>
+                            <measure unit="pages" quantity="245"/>
+                        </extent>
+                        <publicationStmt>
+                            <p>Incorporated into the ELTeC <date>2018-02-12</date></p>
+                        </publicationStmt>
+                        <sourceDesc>
+                            <bibl>
+                                <author>E.M. Forster</author>
+                                <title>Howards End</title>
+                                <pubPlace>London</pubPlace>
+                                <publisher>Edward Arnold</publisher>
+                                <date>1910</date>
+                                <idno type="wiki">https://www.wikidata.org/wiki/Q1146642</idno>
+                            </bibl>
+                            <bibl>
+                                <title>The Project Gutenberg Etext of Howards End, by E. M.
+                                    Forster</title>
+                                <ref target="http://www.gutenberg.org/files/2891/2891-h/2891-h.htm"
+                                    >HTML version downloaded on <date>2017-12-26</date></ref>
+                            </bibl>
+                        </sourceDesc>
+                    </fileDesc></egXML>
+            </div>
+            <div type="slide">
+                <head>Example encoding description</head>
+            </div>
+
+            <div type="slide">
+                <head>Example profile description</head>
+            </div>
+
+            <div type="slide">
+                <head>Components of the profile description</head>
+                <p>The <gi>profileDesc</gi> of an ELTeC text has two mandatory components: <list>
+                        <item>a <gi>langUsage</gi> which lists the different languages used in a
+                            text</item>
+                        <item><gi>textClass</gi> which supplies classification information about the
+                            text</item>
+                    </list>
+                </p>
+                <list>
+                    <item>Languages are identified by ISO 646 code, with optional modifiers for
+                        region, dialect etc. for example EN-us for American English, EN-gb for
+                        British English</item>
+                    <item>Text classification is indicated by the <gi>catRef</gi> element, which
+                        indicates the selection criteria for the novel</item>
+                    <item>Its <att>target</att> supplies pointers to each each category
+                        applicable</item>
+                </list>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <profileDesc>
+                        <langUsage>
+                            <language ident="en"/>
+                            <catRef target="#author_m #reprint_3"/>
+                        </langUsage>
+                    </profileDesc>
+                </egXML>
+                <p rend="box">selection and descriptive criteria are defined in the corpus header
+                    using the <gi>taxonomy</gi>, <gi>category</gi>, and <gi>catDesc</gi>
+                    elements.</p>
+                <!-- following elements: <specList>
+                        <specDesc key="taxonomy"/>
+                        <specDesc key="category"/>
+                        <specDesc key="catDesc"/>
+                    </specList></p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <taxonomy>
+                        <category xml:id="author_m"><catDesc>male authorship</catDesc></category>
+                        <category xml:id="author_f"><catDesc>female authorship</catDesc></category>
+                        <category xml:id="author_u"><catDesc>author gender unknown</catDesc></category>
+                        <category xml:id="reprint_0"><catDesc>no reprints found</catDesc></category>
+                        <category xml:id="reprint_1"><catDesc>1 to 50 editions</catDesc></category>
+                        <category xml:id="reprint_2"><catDesc>50 to 100 editions</catDesc></category>
+                        <category xml:id="reprint_3"><catDesc>Over 100 reprints</catDesc></category>
+                    </taxonomy>
+                </egXML>
+                <!-\- LB: some examples are needed here. Check recommendations of TEI in Libraries -\->
+  -->
+            </div>
+
+            <div type="slide">
+                <head>Example revision description</head>
+            </div>
+            <div type="slide">
                 <head>For more information</head>
                 <p> About TEI: <list>
                         <item><ptr target="http://www.tei-c.org"/></item>
