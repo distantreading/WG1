@@ -41,18 +41,21 @@
             <head>Provisional Programme (subject to revision) </head>
             <list>
                <item>09h30 : Practical session 1: Using an XML Editor (oXygen) -- what 
-                  can we do with it? (30 mins)</item>
-               <item>10h00 : What is the TEI and why are we using it? (30 mins) </item>
-               <item>10h30 : Practical session 2: creating a level 0 text from OCR output (60 mins) </item>
-               <item>11h30 : Understanding ELTeC: explaining level 0 and level 1 schemas (30 mins)</item>
-               <item>12h00 : <hi>lunch break</hi></item>
-               <item>13h00 : Practical session 3: working with Abbyy outputs (60 mins)</item>
-               <item>14h00 : Understanding and creating the ELTeC header (30 mins)</item>              
-               <item>14h30 : Practical session 4: working on your own document (60 mins)</item>
-               <item>15h30 : Converting from ePub and HTML : some examples (30 mins)</item>
-               <item>16h00 : Open discussion and next steps (30 mins) </item>
+                  can we do with it? (45 mins)</item>
+               <item>10h15 : <ref target="tei4eltec.html">What is the TEI and why are we using it</ref>? (30 mins) </item>
+               <item>10h45 : <hi>coffee break</hi></item>
+               <item>11h00 : Practical session 2: creating a level 0 text from OCR output (60 mins) </item>
+                <item>12h00 : <hi>lunch break</hi></item>
+               <item>13h00 : <ref target="eltecSchema.html">Understanding ELTeC</ref>: explaining level 0 and level 1 schemas (30 mins)</item>
+               <item>13h30 : Practical session 3: working with Abbyy outputs (60 mins)</item>
+               <item>14h30 : <ref target="eltecHdr.html">Understanding and creating the ELTeC header</ref> (30 mins)</item>              
+               <item>15h00 : <hi>coffee break</hi></item>
+               <item>15h15 : Practical session 4: working on your own document (60 mins)</item>
+               <item>16h15 : <ref target="conversions.html">Converting from ePub and HTML</ref> : some examples (45 mins)</item>
+               <item>17h00 : Open discussion and next steps (30 mins) </item>
             </list>
-         </div>
+            <p>Location : 
+               Philosophische Fakultät, Room 3.E.3, <ref target="https://goo.gl/maps/Lx7B3dRRpMs">Googlemaps</ref></p></div>
       </body>
    </text>
 </TEI>
