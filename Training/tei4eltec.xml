@@ -640,6 +640,7 @@
                 <p rend="box">Work in progress... </p>
             </div>
 
+
             <div type="slide">
                 <head>The ELTeC Header</head>
                 <p>Like every TEI header, this has some mandatory components: <list>
@@ -806,7 +807,7 @@
                             /></item>
                     </list></p>
                 <p> About ELTeC <list>
-                        <item><ptr target="http://distantreading.github.io"/></item>
+                        <item><ptr target="https://distantreading.github.io"/></item>
 
                     </list></p>
             </div>

@@ -38,18 +38,19 @@
                the workshop. </p>
          </div>
          <div type="slide">
-            <head>Programme </head>
+            <head>Provisional Programme (subject to revision) </head>
             <list>
-               <item>09h30 : Practical session 1: Using an XML Editor (oXygen) -- what can we do with it? (30 mins)</item>
+               <item>09h30 : Practical session 1: Using an XML Editor (oXygen) -- what 
+                  can we do with it? (30 mins)</item>
                <item>10h00 : What is the TEI and why are we using it? (30 mins) </item>
                <item>10h30 : Practical session 2: creating a level 0 text from OCR output (60 mins) </item>
                <item>11h30 : Understanding ELTeC: explaining level 0 and level 1 schemas (30 mins)</item>
                <item>12h00 : <hi>lunch break</hi></item>
-               <item>13h00 : Practical session 3: converting from Word (30 mins) </item>
-               <item>13h30 : Understanding and creating the ELTeC header (30 mins)</item>
-               <item>14h00 : Practical session 4: working on your own document (60 mins)</item>
-               <item>15h00 : Converting from ePub and HTML : some examples (30 mins)</item>
-               <item>15h30 : Closing discussion and next steps</item>
+               <item>13h00 : Practical session 3: working with Abbyy outputs (60 mins)</item>
+               <item>14h00 : Understanding and creating the ELTeC header (30 mins)</item>              
+               <item>14h30 : Practical session 4: working on your own document (60 mins)</item>
+               <item>15h30 : Converting from ePub and HTML : some examples (30 mins)</item>
+               <item>16h00 : Open discussion and next steps (30 mins) </item>
             </list>
          </div>
       </body>
