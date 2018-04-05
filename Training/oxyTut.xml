@@ -122,8 +122,8 @@
                   Document: oXygen can work with all kinds of files, not only XML. Further down,
                   there is an option to choose from a long menu of pre-defined XML vocabularies.
                   oXygen comes ready to work with many of these, including several varieties of TEI.
-                  As yet there is no ELTeC schema here (as yet); instead we will use a minimalist
-                  TEI schema called TEI Bare.</item>
+                  As yet there is no ELTeC schema here ; instead we will use a minimalist TEI schema
+                  called TEI Bare.</item>
 
                <item>In the New dialog, scroll down to the section <ident>Framework
                      templates</ident>, within that select <ident>TEI P5</ident>, and within that
@@ -326,10 +326,11 @@
                   <item>First enter the title of the digital text we are creating. For ELTeC, this
                      should be the original main title (Passages in the life of a fast young lady),
                      followed by the phrase <code>: ELTeC edition</code>. </item>
-                  <item>The <gi>author</gi> element should contain the author's name
-                     in a standardised format, with the surname first, and the author's
-                     dates in parentheses at the end: like this <code>Grey, Catherine Maria (1798-1870)</code>
-                    </item>
+                  <item>The <gi>author</gi> element should contain the author's name in a
+                     standardised format, with the surname first, and the author's dates in
+                     parentheses at the end: like this <code>Grey, Catherine Maria
+                        (1798-1870)</code>
+                  </item>
                   <item>You should also take credit for your encoding by adding a <gi>respStmt</gi>
                      element after the <gi>author</gi>. This element should contain a <gi>resp</gi>
                      with the content <code>ELTeC encoding</code> and a <gi>name</gi> containing
@@ -379,7 +380,9 @@
             <p>
                <graphic url="media/tuto-11.png" width="70%"/>
             </p>
-            </div><div><head>Working with previously saved text</head>
+         </div>
+         <div>
+            <head>Working with previously saved text</head>
             <p>Are you ready for the next page? Open the appropriate graphic file in
                   <ident>Work/Pages/0008.png</ident> and take a look. Note the following: <list>
                   <item>there is a running page header which repeats the title, as well as giving
@@ -452,8 +455,64 @@
                <item>oXygen closes the current paragraph and opens a new one. Scroll down to the end
                   of this new paragraph (after <q>and that quickly."</q> at the top of page 4), and
                   repeat the manipulation.</item>
-               <item>Proceed in this way to the end of the file. </item>
+               <item>Proceed in this way to the end of the file. Do you still have a jolly green
+                  square? You now have a valid ELTeC document, containing the first chapter of the
+                  novel. Well done!</item>
             </list>
+<p>What can we do with an ELTeC document? </p>
+         </div>
+         <div>
+            <head>Completing the volume</head>
+            <p>The text file you used in the preceding exercise was extracted from the file called
+                  <ident>Abbyy-output.txt</ident> in your <ident>Work directory</ident>. As the name
+               suggests, this file was created by Abbyy Finereader in text format. As you saw
+               yesterday, this OCR software can produce output in several other formats as well,
+               including <code>docx</code>, the format used by Microsoft Word. Maybe you'd prefer to
+               work on correcting OCR errors in this format, but will oXygen be able to add TEI tags
+               to a Word file when you've finished? Of course it can!</p>
+            <list>
+               <item>Open the file <ident>Abbyy-output.docx</ident> with oXygen</item>
+               <item>A docx file is actually an archive containing several files, so oXygen opens
+                  the <term>archive browser</term> window for you to select which one you want to
+                  edit</item>
+            </list>
+            <p>
+               <figure>
+                  <graphic url="archiveBrowser.png"/>
+               </figure>
+            </p>
+            <list>
+               <item>In the archive browser, click the blue circle to the left of the folder
+                  labelled <ident>word</ident> to open it up: it contains a file called
+                     <ident>document.xml</ident> which contains the text we want. Double-click to
+                  open it.</item>
+               <item>This is an XML file we can edit it in oXygen, even though its schema is a 
+                  bit far removed from TEI. Scroll down to reassure yourself that there is actually some
+                  useful content here. </item>
+               <item> oXygen
+                  comes with some built in transformation tools, including one for
+                  converting this flavour of XML to TEI. With the <ident>document.xml</ident> file open in your main editing window,
+                     select <ident>Document -> Transformation -> Configure Transformation Scenario(s)</ident> from
+                     the <ident>Document</ident> menu. Or type <code>CTRL-SHIFT-C</code>. Or click the
+                     little spanner icon</item>
+                  <item>The Configure Transformation Scenario appears, suggesting
+                     some relevant transformations for this file. Check the little box next to DOCX TEI
+                     P5 and press the <ident>Apply Associated</ident> button 
+                  </item><item>The Word document in the main window is replaced by a valid TEI document. 
+        You may want to use the Format and Indent button (CTRL+SHIFT+P) button to make it a bit
+        easier to see what's going on. Scroll through it to get a quick impression of the tags that
+        have been introduced.
+                  </item><item>The text has been split up into paragraphs, each tagged <gi>p</gi>, and each carrying
+                     an attribute
+                  <att>rend</att> with a coded value indicating something about the format of that paragraph in the original
+                  Word document, for example <code>Style 44</code>, <code>Style 50</code> etc. </item>
+               </list>
+            <p>We can use this information to improve the tagging, if it is reliably consistent. 
+            Let's find out whether the paragraphs tagged as <code>Style 44</code> have anything in common. </p>
+            <p><list><item>At top left of the oXygen main screen, under the button bar, there is a
+            special box labelled <ident>XPath 2.0</ident> which you can use to navigate the XML structure
+            of your document</item><item>Type the following code into the box <code>//p[@rend="Style 44"]</code>
+            and press RETURN</item></list></p>
          </div>
       </body>
    </text>

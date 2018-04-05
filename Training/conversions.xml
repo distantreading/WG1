@@ -39,16 +39,16 @@
             </div>
             <div type="slide">
                 <head>Case study 1: a Latvian novel in minimal HTML</head>
-               <p>The recipe: </p> 
+                <p>The recipe: </p>
                 <list>
-                    <item>take one page of HTML links and edit it into a script which downloads each chapter to a
-                        separate file </item>
+                    <item>take one page of HTML links and edit it into a script which downloads each
+                        chapter to a separate file </item>
                     <item>convert each file's encoding from windows-1257 to UTF8</item>
                     <item>run a perl script on each chapter file to convert the HTML tags</item>
                     <item>create a minimal header and append each chapter file to it</item>
                 </list>
             </div>
-            
+
             <div type="slide">
                 <head>Identify and grab the source files</head>
                 <figure>
@@ -60,72 +60,100 @@
                 <figure>
                     <graphic url="../media/latvian-1.png" width="80%"/>
                 </figure>
-            </div><div type="slide"><head>Another nifty shell script</head>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                cp LV0001-hdr.txt LV0001.eltec
-                iconv Orig/ZeibJ0201.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0202.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0203.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0204.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0205.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0206.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0207.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0208.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0209.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0210.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0211.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0212.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0213.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0214.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0215.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0216.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0217.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0218.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0219.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                iconv Orig/ZeibJ0220.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                cat tail.txt >> LV0001.eltec
-            </egXML>
-            <p rend="box">The file <ident>LV001-hdr.txt</ident> contains the top part of a TEI file, 
-                including a skeleton header; <ident>tail.txt</ident> contains the closing <tag>/body>&lt;/TEI</tag>.
-            </p></div>
+            </div>
+            <div type="slide">
+                <head>Another nifty shell script</head>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples"> cp LV0001-hdr.txt LV0001.eltec
+                    iconv Orig/ZeibJ0201.htm -f windows-1257 -t utf-8 | perl retag.prl >>
+                    LV0001.eltec iconv Orig/ZeibJ0202.htm -f windows-1257 -t utf-8 | perl retag.prl
+                    >> LV0001.eltec iconv Orig/ZeibJ0203.htm -f windows-1257 -t utf-8 | perl
+                    retag.prl >> LV0001.eltec iconv Orig/ZeibJ0204.htm -f windows-1257 -t utf-8 |
+                    perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0205.htm -f windows-1257 -t utf-8
+                    | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0206.htm -f windows-1257 -t
+                    utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0207.htm -f windows-1257
+                    -t utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0208.htm -f
+                    windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0209.htm
+                    -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec iconv
+                    Orig/ZeibJ0210.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
+                    iconv Orig/ZeibJ0211.htm -f windows-1257 -t utf-8 | perl retag.prl >>
+                    LV0001.eltec iconv Orig/ZeibJ0212.htm -f windows-1257 -t utf-8 | perl retag.prl
+                    >> LV0001.eltec iconv Orig/ZeibJ0213.htm -f windows-1257 -t utf-8 | perl
+                    retag.prl >> LV0001.eltec iconv Orig/ZeibJ0214.htm -f windows-1257 -t utf-8 |
+                    perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0215.htm -f windows-1257 -t utf-8
+                    | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0216.htm -f windows-1257 -t
+                    utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0217.htm -f windows-1257
+                    -t utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0218.htm -f
+                    windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0219.htm
+                    -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec iconv
+                    Orig/ZeibJ0220.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec cat
+                    tail.txt >> LV0001.eltec </egXML>
+                <p rend="box">The file <ident>LV001-hdr.txt</ident> contains the top part of a TEI
+                    file, including a skeleton header; <ident>tail.txt</ident> contains the closing
+                        <tag>/body>&lt;/TEI</tag>. </p>
+            </div>
             <div type="slide">
                 <head>The perl script that does the work</head>
-                  <list>
+                <list>
                     <item>read next line</item>
-                      <item>if there's a <gi>big</gi> and some roman numbers, start a new chapter</item>
-                      <item>otherwise break paragraphs on <gi>br</gi> tags</item>
-                      <item>turn &amp;nbsp; into &amp;#160</item><item>remove uninteresting HTML tags</item>
+                    <item>if there's a <gi>big</gi> and some roman numbers, start a new
+                        chapter</item>
+                    <item>otherwise break paragraphs on <gi>br</gi> tags</item>
+                    <item>turn &amp;nbsp; into &amp;#160</item>
+                    <item>remove uninteresting HTML tags</item>
                 </list>
                 <cb/>
                 <figure>
                     <graphic url="../media/latvian-3.png"/>
                 </figure>
-               
+
             </div>
             <div type="slide">
                 <head>The TEI output produced</head>
                 <figure>
                     <graphic url="../media/latvian-5.png" width="75%"/>
                 </figure>
+                <p rend="box">See further <ptr
+                        target="http://github.com/distantreading/WG1/Sampler/LV"/></p>
+            </div>
+            <div type="slide">
+                <head>Case Study 2: a German novel in rich TEI</head>
+                <p>The recipe: <list>
+                        <item>Take a richly marked-up text (from DTA) and apply an XSLT stylesheet
+                            to remove non ELTeC tagging </item>
+                        <item>Where content as well as tags are to be removed, insert comment
+                            tags</item>
+                        <item>Otherwise, just remove tags</item>
+                        <item>Special TEI elements (e.g. <gi>choice</gi>) need special
+                            attention</item>
+                        <item>The header may need hand editing </item><item>What to do when TEI usage is unexpected (e.g. <att>n</att> on <gi>div</gi> ? </item>
+                    </list></p>
+            </div>
+            <div type="slide">
+                <head>The input</head>
+            </div>
+            <div type="slide">
+                <head>The stylesheet</head>
+            </div>
+            <div type="slide"><head>The output</head>
+                <p rend="box">See further <ptr
+                    target="http://github.com/distantreading/WG1/Sampler/DE"/></p>
+                
+            </div>
+            
+            <div type="slide"><head>Case study 3: a Polish novel in EPub</head>
+            <p>The recipe: 
+            <list><item></item></list></p></div>
+            <div type="slide">
+                <head>The input</head>
+            </div>
+            <div type="slide">
+                <head>The stylesheet</head>
+            </div>
+            <div type="slide"><head>The output</head>
+                <p rend="box">See further <ptr
+                    target="http://github.com/distantreading/WG1/Sampler/PL"/></p>
             </div>
 
-            <!-- # Latvian novel from Eva
-1. The link given provided a page of links, one to each chapter of the novel. I downloaded that page
-, and hand edited with emacs to produce a shell script (LV_grab) to download each chapter to a separ
-ate file (files are in Orig)
-2. On inspection I identified the following necessary changes:
-   - convert char encoding from windows-1257 to UTF-8
-   - strip out initial and final HTML tagging
-   - wrap the text of each chapter in a `<div>`
-   - convert chapter titles (marked with `<big>` in HTML) to `<head>`
-   - convert `<br>` tags to `</p><p>`
-   - convert `&nbsp;` to `&#160;` 
-3. I decided to do these at the command line, using the unix iconv utility to manage the character c
-onversion, and a tiny perl script (retag.prl) to do the rest
-4. I wrote a minimal TEI Header for the file, and ran a shell script (LV_conv) to convert and then a
-ppend each chapter file to it.
- 
--->
 
         </body>
     </text>
