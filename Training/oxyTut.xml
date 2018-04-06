@@ -253,14 +253,17 @@
 
          <div>
             <head>Creating an ELTeC level zero document from scratch</head>
+            <p>This rather verbose tutorial walks you through the process of creating an ELTeC document.
+               In the first part, you will create the first page by transcribing it from a page image, and then add the
+               rest of the first chapter from some plain text OCR output. In the second part you 
+               will work on a version of the same text which Abbyy has been saved in Word DOCX format.
+               In the third part, you will combine the two.</p>
+            
+               <div><head>Creating a document</head>
             <list>
                <item>Open oXygen and click on the New icon (first left on the toolbar); or select
                   File->New from the menu; or type CTRL-N</item>
-               <item>The New File dialogue appears. Scroll down to see some of the options under New
-                  Document: oXygen can be used to work with all kinds of files, not only XML.
-                  Further down, there is an option to choose from a long menu of pre-defined XML
-                  vocabularies. oXygen comes ready to work with many of these, including several
-                  varieties of TEI. However, as yet ELTeC is not amongst them. Select XML Document
+               <item>The New File dialogue appears. Select XML Document
                   from the New Document menu, and enter an output filename at the bottom (I suggest
                   your name). Now click the Customize button at the bottom of the dialog in order to
                   specify the kind of XML document you want to create.</item>
@@ -298,7 +301,7 @@
                      <item>The first red error flag disappears, and the error message at the bottom
                         of the screen changes to <code>value of attribute xml:id is invalid</code>.
                         This is because our schema requires an identifier for every text and we have
-                        not supplied one. Put the cursor between the quote marks and type in the
+                        not yet supplied one. Put the cursor between the quote marks and type in the
                         identifier for our sample novel which is (shall we say) <code>EN042</code>.
                         The second error message disappears! To celebrate, add a value
                            (<code>en</code>) for the attribute <att>xml:lang</att>: this specifies
@@ -344,8 +347,8 @@
             <p>All being well, your header should look like something like this when you've
                finished: </p>
             <p>
-               <graphic url="media/tuto-10.png" width="75%"/>
-            </p>
+         <figure>      <graphic url="media/tuto-10.png" width="75%"/>
+        </figure>    </p>
             <p>Now we'll proceed to transcribe and tag the text itself. </p>
             <p>First, open the page image for the beginning of the chapter in file
                   <ident>Work/Pages/0008.png</ident>. You can do this directly within oXygen, or by
@@ -457,7 +460,8 @@
                   repeat the manipulation.</item>
                <item>Proceed in this way to the end of the file. Do you still have a jolly green
                   square? You now have a valid ELTeC document, containing the first chapter of the
-                  novel. Well done!</item>
+                  novel. Well done! Save it in a safe place on your Desktop, and we will try to
+                  complete it in the next part of the exercise. </item>
             </list>
          </div>
          <div>
@@ -477,7 +481,7 @@
             </list>
             <p>
                <figure>
-                  <graphic url="archiveBrowser.png"/>
+                  <graphic url="media/archiveBrowser.png" width="60%"/>
                </figure>
             </p>
             <list>
@@ -501,37 +505,45 @@
                   bit easier to see what's going on. You can also close the <ident>Archive
                      Browser</ident> window now. Scroll through your new file to get a quick
                   impression of the tags that have been introduced. </item>
-               <item>The text has been split up into paragraphs, each tagged <gi>p</gi>, and each
-                  carrying an attribute <att>rend</att> with a coded value indicating something
-                  about the format of that paragraph in the original Word document, for example
-                     <code>Style 44</code>, <code>Style 50</code> etc. </item>
             </list>
-            <p>We can use this information to improve the tagging, if it is reliably consistent.
-               Let's find out whether the paragraphs tagged as <code>Style 44</code> have anything
-               in common. </p>
+
+
+            <p><figure><graphic url="media/chap7start.png" width="70%"/></figure> The text has been split up
+               into paragraphs, each tagged <gi>p</gi>, and each carrying an attribute
+                  <att>rend</att> with a coded value indicating something about the format of that
+               paragraph in the original Word document, for example <code>Style 44</code>,
+                  <code>Style 50</code> etc. It looks as if <code>Style 50</code> paragraphs are
+               text, <code>Style 44</code> paragraphs are chapter headings, and <code>Style
+                  25</code> paragraphs are page footers, but there may be exceptions or
+               inconsistencies.</p>
+
+            <p>We could use this information to improve the tagging, if it is reasonably consistent.
+               Let's start by investigating the paragraphs tagged as <code>Style 44</code>: are they
+               in fact all chapter headings? And are all chapter headings tagged with this code? </p>
             <p>
                <list>
-                  <item>At top left of the oXygen main screen, under the button bar, there is a
-                     box labelled <ident>XPath 2.0</ident> which you can use to navigate the
-                     XML structure of your document. XPath is a standard language
-                  for describing and locating subtrees within an XML document</item>
+                  <item>At top left of the oXygen main screen, under the button bar, there is a box
+                     labelled <ident>XPath 2.0</ident> which you can use to navigate the XML
+                     structure of your document. XPath is a standard language for describing and
+                     locating subtrees within an XML document</item>
                   <item>Type the following code into the box <code>//p[@rend="Style 44"]</code> and
-                     press RETURN. (The effect of this code is to locate any <gi>p</gi> element which has
-                  a <att>rend</att> attribute with the value <code>Style 44</code>)</item>
+                     press RETURN. (The effect of this code is to locate any <gi>p</gi> element
+                     which has a <att>rend</att> attribute with the value <code>Style
+                     44</code>)</item>
                   <item>A window opens at the foot of the screen, with the heading <code>Description
                         - 21 items</code>. In the window there are 21 rows, each indicating where a
-                       matching <gi>p</gi> element is to be found in the document
-                     (the XpPath location) and also displaying its content (e.g. <code>CHAPTER I.</code>) </item>
+                     matching <gi>p</gi> element is to be found in the document (the XpPath
+                     location) and also displaying its content (e.g. <code>CHAPTER I.</code>) </item>
                   <item>Look closely at the list, and you will see that there are a couple of
                      chapters (III and IX) missing; nevertheless this is a useful way of finding
                      quickly where we should divide the text up into into chapters.</item>
                </list>
             </p>
-            <p>To divide the text up into chapters, we suggest you use the same method as before. (You will
-               find it easier to see what you are doing if you open the <ident>Outline</ident> view first).
-                     <list><item>First surround the whole text with one <gi>div</gi> as follows. Scroll up to
-                     the top of the document, and insert a <tag>div
-                        type="chapter"</tag> tag after the <gi>body</gi> start-tag.</item>
+            <p>To divide the text up into chapters, we suggest you use the same method as before.
+               (You will find it easier to see what you are doing if you open the
+                  <ident>Outline</ident> view first). <list><item>First surround the whole text with
+                     one <gi>div</gi> as follows. Scroll up to the top of the document, and insert a
+                        <tag>div type="chapter"</tag> tag after the <gi>body</gi> start-tag.</item>
                   <item>As usual, oXygen will helpfully inserts a <tag>/div</tag> close tag: delete
                      it.</item>
                   <item>Scroll down to the end of the document, put the cursor in front of the
@@ -539,7 +551,7 @@
                         <gi>div</gi>.</item>
                </list></p>
             <p>In the Outline box, you should now see something like this: <figure><graphic
-                     url="summary-1.png"/></figure></p>
+                     url="media/structure-1.png" width="70%"/></figure></p>
             <p>We now have a single <gi>div</gi> containing the whole text. We just need to locate
                the start of each chapter, and press ALT-SHIFT-D to divide it up. </p>
             <list>
@@ -549,10 +561,81 @@
                   check to see what happens in the Outline window. </item>
                <item>Repeat with the next line in the lower window (you can move to it by just
                   pressing the down-arrow key). </item>
-               <item>Repeat to the end of the list of chapter headings. The Outline view should 
-                  show that you have now divided the body of the text into 21 chapters.</item>
+               <item>Repeat to the end of the list of chapter headings. The Outline view should show
+                  that you have now divided the body of the text into 21 chapters.</item>
             </list>
+            <p>Now that we have chapters, we need to transform the <code>style 44</code> paragraphs
+               into headings. You can probably think of some ways of doing this for youself; here's
+               a suggestion, which also introduces you to a new feature of oXygen: the ability to
+                  <emph>remove</emph> tagging you don't want</p>
+            <list>
+               <item>Scroll to the top of the document, and repeat the XPath search for
+                     <code>//p[@rend='Style 44']</code></item>
+               <item>Click on the line starting <code>CHAPTER I.</code> in the bottom window, as
+                  before</item>
+               <item>The paragraph containing this text is highlighted. Carefully type ALT-SHIFT-X
+                  once to remove the tags around it. Type ALT-SHIFT-X again to remove the
+                     <gi>anchor</gi> element.</item>
+               <item>Type CTRL-E and select or enter <gi>head</gi> to add that tag around the phrase
+                     <code>CHAPTER I.</code></item>
+               <item>Repeat for the remaining chapters! If something goes wrong, press CTRL-Z to
+                  rewind and try again.</item>
+            </list>
+            <p>As we already noted, most paragraphs are coded <code>Style 50</code>. This is
+               redundant information, especially since we are not interested in the formatting of
+               the text. Use Find and Replace (CTRL-F) to remove the string <code> rend="Style
+                  50"</code> (note the leading space). Then do another XPath search, this time for
+                  <code>//p[@rend]</code>. This will show all remaining styled paragraphs, the
+               majority of which contain things you don't want such as page footers or signatures.
+               Scroll the list to check, and see how many you can remove, or replace with a
+                  <gi>pb</gi> element. (Unfortunately, Word has not retained the pagination in a way
+               that we can reuse it) </p>
          </div>
+         <div>
+            <head>The real work starts here</head>
+            <p>You've now seen a few of the techniques oXygen offers to make the task of editing
+               your XML document easier: <list>
+                  <item>You can use Validate (CTRL-SHIFT-V) to check that your document conforms to
+                     a schema, and detect any unexpected tags.</item>
+                  <item>You can use Find and Replace to search for strings or patterns in the text
+                     and replace them with other strings</item>
+                  <item>You can type XPath expressions to locate parts of the XML structure of the
+                     document</item>
+                  <item>You can use shortcuts like ALT-SHIFT-X to remove the tags of the adjacent
+                     element, CTRL-E to add tags to a selected string, or ALT-SHIFT-D to divide an
+                     XML element in two</item>
+                  <item>You can use the Outline view to get an overview of the structure of your
+                     document and the Format and Indent button to reformat the editing window. You
+                     can also see your document in a styled format by clicking the Author tag.
+                  </item>
+               </list></p>
+            <p>In addition, of course, oXygen offers the usual range of facilities you'd expect in
+               editor such as cut and paste. It even has a spellchecker, which is very useful for
+               detecting OCR errors. Try it out by selecting Edit->Check Spelling on the menu, or
+               press F7. And oXygen allows you to operate on several files at the same time, which
+               is particularly useful, as we shall see in the last part of this tutorial.</p>
+            <list>
+               <item>Select File->Open, or CTRL-O and navigate to the Desktop or wherever you saved
+                  your ELTeC version of chapter 1. Click Open.</item>
+               <item>A new editing window opens, containing the document you prepared earlier.
+                  Scroll down to the end of the file and put the cursor after the <tag>/div</tag>
+                  tag at the end of the chapter.</item>
+               <item>Click the tab above the edit window containing the name of the file you
+                  produced from word (it should be called <ident>Abbyy-output-TEI-P5.xml</ident>) to
+                  return to that file.</item>
+               <item>Go to the Outline window and click on the div tag containing chapter 2 </item>
+               <item>The corresponding text is highlighted in the edit window; type CTRL-C to copy
+                  it to the clipboard.</item>
+               <item>Click on the tab corresponding with the edit window containing your ELTeC
+                  version of chapter 1.</item>
+               <item>Click CTRL-V to paste the second chapter into your file.</item>
+               <item>Click the Validate button (or type CTRL-SHIFT-V) to check that you have not
+                  introduced any validation errors : correct them, if you have!</item>
+               <item>Continue in this way, pasting in chapters one at a time. When you get bored,
+                  try running the spell checker or reading the text for other errors...</item>
+            </list>
+
+         </div></div>
       </body>
    </text>
 </TEI>
