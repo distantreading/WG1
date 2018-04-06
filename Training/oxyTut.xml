@@ -532,10 +532,10 @@
                      44</code>)</item>
                   <item>A window opens at the foot of the screen, with the heading <code>Description
                         - 21 items</code>. In the window there are 21 rows, each indicating where a
-                     matching <gi>p</gi> element is to be found in the document (the XpPath
-                     location) and also displaying its content (e.g. <code>CHAPTER I.</code>) </item>
-                  <item>Look closely at the list, and you will see that there are a couple of
-                     chapters (III and IX) missing; nevertheless this is a useful way of finding
+                     matching <gi>p</gi> element is to be found in the document (the XPath
+                     location) and also displaying its content (e.g. <code>CHAPTER I.</code>). </item>
+                  <item>Look closely at the list and you will see that there are some
+                     chapters missing; nevertheless this is still a useful way of finding
                      quickly where we should divide the text up into into chapters.</item>
                </list>
             </p>
@@ -544,11 +544,11 @@
                   <ident>Outline</ident> view first). <list><item>First surround the whole text with
                      one <gi>div</gi> as follows. Scroll up to the top of the document, and insert a
                         <tag>div type="chapter"</tag> tag after the <gi>body</gi> start-tag.</item>
-                  <item>As usual, oXygen will helpfully inserts a <tag>/div</tag> close tag: delete
+                  <item>As usual, oXygen will helpfully insert a <tag>/div</tag> close tag: delete
                      it.</item>
                   <item>Scroll down to the end of the document, put the cursor in front of the
                      end-tag for the <gi>body</gi>, and type <code>&lt;/</code> to close the
-                        <gi>div</gi>.</item>
+                        <gi>div</gi> you just opened.</item>
                </list></p>
             <p>In the Outline box, you should now see something like this: <figure><graphic
                      url="media/structure-1.png" width="70%"/></figure></p>
@@ -559,15 +559,15 @@
                      <code>CHAPTER I</code></item>
                <item>The cursor jumps to the paragraph containing this text. Press ALT-SHIFT-D and
                   check to see what happens in the Outline window. </item>
-               <item>Repeat with the next line in the lower window (you can move to it by just
-                  pressing the down-arrow key). </item>
+               <item>Repeat with the next line in the lower window. You can move to it by just
+                  pressing the down-arrow key if your cursor is still in that window. </item>
                <item>Repeat to the end of the list of chapter headings. The Outline view should show
                   that you have now divided the body of the text into 21 chapters.</item>
             </list>
             <p>Now that we have chapters, we need to transform the <code>style 44</code> paragraphs
                into headings. You can probably think of some ways of doing this for youself; here's
-               a suggestion, which also introduces you to a new feature of oXygen: the ability to
-                  <emph>remove</emph> tagging you don't want</p>
+               a suggestion, which also introduces you to another feature of oXygen: the ability to
+                  <emph>remove</emph> tagging you don't want. </p>
             <list>
                <item>Scroll to the top of the document, and repeat the XPath search for
                      <code>//p[@rend='Style 44']</code></item>
@@ -611,8 +611,8 @@
                </list></p>
             <p>In addition, of course, oXygen offers the usual range of facilities you'd expect in
                editor such as cut and paste. It even has a spellchecker, which is very useful for
-               detecting OCR errors. Try it out by selecting Edit->Check Spelling on the menu, or
-               press F7. And oXygen allows you to operate on several files at the same time, which
+               detecting OCR errors. (Try it out by selecting Edit->Check Spelling on the menu, or
+               press F7). And oXygen allows you to operate on several files at the same time, which
                is particularly useful, as we shall see in the last part of this tutorial.</p>
             <list>
                <item>Select File->Open, or CTRL-O and navigate to the Desktop or wherever you saved
