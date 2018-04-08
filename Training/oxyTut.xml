@@ -193,7 +193,7 @@
                   <item>Repeat this manoeuvre to add a <att>type</att> attribute with the value
                         <code>chapter</code>. If you'd prefer to work in some language other than
                      English, you could also add an <att>xml:lang</att> attribute to indicate the
-                     language of this chapter. (Languages are indicated using ISO 639-2 language
+                     language of your chapter. (Languages are indicated using ISO 639-2 language
                      codes e.g. <code>fr</code> for French, <code>sb</code> for Serbian etc.)</item>
                   <item>The first chapter should have a title such as <q>Chapter One</q> or <q>In
                         the beginning</q>, or whatever you fancy. Add this title as the content of a
@@ -205,8 +205,8 @@
                </p>
                <p>Over to you to complete this chapter, preferably with some text a little more
                   interesting than <q>some text here</q> ! Describe your first reactions to using
-                  oCXygen, or your humble origins and early career as a researcher; share your ideas
-                  on the current political situation; write whatever you like...</p>
+                  oXygen, or your humble origins and early career as a researcher; share your ideas
+                  on the current political situation; write a romantic novel; whatever you like...</p>
                <p>Of course, you'll need more than one paragraph to do your ideas justice. Do you
                   remember from the first exercise how to split this paragraph and begin a new one?
                   Assuming you now have several hundred words in your first paragraph and you need
@@ -230,12 +230,11 @@
                   Indent button, select Document-> Source->Format and Indent, or
                      <code>CTRL-SHIFT-P</code>). But maybe you'd rather see fewer tags? </p>
                <list>
-                  <item>At the bottom of the screen there are three buttons marked Texte , Grid, and
+                  <item>At the bottom of the screen there are three buttons marked Text, Grid, and
                      Author. Select the last one. The way your document is displayed changes and a
                      new <ident>TEI P5</ident> menu appears above the toolbar. Choose <ident>Tags
                         display mode</ident> from this menu and experiment with some of the
-                     possibilities it offers as regards display of the tags in your document. des
-                     balises et regardez les possibilités offertes par ces options. </item>
+                     possibilities it offers as regards display of the tags in your document. </item>
                   <item>In any case, you can see that your document is now formatted : headings are
                      displayed in a different size, line breaks are treated as white space,
                      paragraphs are tidily aligned and so on.</item>
@@ -243,9 +242,7 @@
                      different. If you make a change in Author mode (delete or add a word, for
                      example) and then switch back to Text mode, the change will appear there as
                      well.</item>
-                  <!-- <item>Dans le mode auteur, on peut diviser un élément simplement en tapant ENTRÉE
-                     deux fois. Essayez cela.</item>-->
-               </list>
+                </list>
                <!-- <p>Plus tard, nous verrons comment vous pourrez contrôler l'affichage de votre document avec
           une <term>feuille de style</term>.</p>-->
             </div>
