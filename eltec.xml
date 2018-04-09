@@ -44,7 +44,7 @@
         <moduleRef key="tei"/>
         <moduleRef key="core"
             include="author bibl choice corr orig date emph foreign gap head item l label lg list measure
-            name note p pb publisher pubPlace quote ref resp respStmt sp stage hi term title"/>
+            name note p pb publisher pubPlace quote ref relatedItem resp respStmt sp stage hi term title"/>
         <moduleRef key="textstructure" include="TEI text div body front back"/>
         <moduleRef key="header"
             include="catDesc category catRef change classCode  encodingDesc extent fileDesc idno  keywords langUsage language  
@@ -63,7 +63,8 @@
         <classSpec ident="att.datable.custom" type="atts" mode="delete"/>
         <classSpec ident="att.divLike" type="atts" mode="delete"/>
         <classSpec ident="att.editLike" type="atts" mode="delete"/>
-        <classSpec type="atts" ident="att.global.responsibility" mode="delete"/>
+        <classSpec ident="att.global.responsibility" type="atts"  mode="delete"/>
+        <classSpec ident="att.measurement" type="atts" mode="delete"/>
         <classSpec ident="att.naming" type="atts" mode="delete"/>
         <!-- next modify classes which provide some attributes we want and some we don't -->
         <classSpec type="atts" ident="att.global.rendition" mode="change">
@@ -118,13 +119,9 @@
               </alternate>
           </content>
         </elementSpec>
-        
-        <!-- remove bibl title measure and idno from classes which allow them outside header -->
-        <elementSpec ident="bibl" mode="change">
-            <classes mode="replace">
-                <memberOf key="model.sourceDescPart"/> 
-            </classes>
-        </elementSpec>
+     
+     
+          <!-- remove bibl title measure and idno from classes which allow them outside header -->
         
         <elementSpec ident="title" mode="change">
             <classes mode="replace">
@@ -134,6 +131,8 @@
         
         <elementSpec ident="idno" mode="change">
             <classes mode="replace">
+       <memberOf key="att.typed"/>
+                <memberOf key="model.biblPart"/>
                 <memberOf key="model.publicationStmtPart.detail"/>
             </classes>
         </elementSpec>
@@ -161,7 +160,36 @@
             </attList>
         </elementSpec>
         
-    </schemaSpec></div>
+        <elementSpec ident="change">
+            <attList>
+                <attDef ident="when" mode="change" usage="req"/>
+            </attList>
+        </elementSpec>
+        
+        <elementSpec ident="measure" mode="change">
+            <attList>
+                <attDef ident="unit" usage="req">
+                    <datatype><dataRef key="teidata.enumerated"></dataRef></datatype><valList type="closed">
+                        <valItem ident="pages"><desc>pages in the source text</desc></valItem>
+                        <valItem ident="words"><desc>approximate number of space delimited tokens in source
+                            </desc></valItem>
+                        <valItem ident="vols"><desc>number of volumes for original source text
+                           </desc></valItem>
+                        
+                    </valList>
+                    
+                </attDef>
+            </attList>
+        </elementSpec>
+        
+        <elementSpec ident="textClass" mode="change">
+            <content>
+                <sequence>
+                    <elementRef key="catRef" minOccurs="1" maxOccurs="unbounded"/>
+                    <elementRef key="keywords" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </content>
+        </elementSpec>    </schemaSpec></div>
 
        </back>
      
