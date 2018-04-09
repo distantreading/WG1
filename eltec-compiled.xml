@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:base="file:/home/lou/Public/WG1/eltec.xml"><?TEIVERSION Version 3.3.0a. Last updated on
 	11th July 2017, revision 9b793ec?>
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>Encoding Guidelines for the ELTeC (all levels)</title>
-            <author>Cost Action CA16204 – WG1</author>
-         </titleStmt>
-         <publicationStmt>
-            <p>Unpublished draft for discussion</p>
-         </publicationStmt>
-         <sourceDesc>
-            <p>A born digital document drafted in TEI format by LB</p>
-         </sourceDesc>
-      </fileDesc>
-      <revisionDesc>
-         <change when="2018-03-16">Revised post-Prague</change>
-         <change when="2018-01-17">Expanded metadata section a bit; added comments from CO and
-            BN</change>
-         <change when="2017-12-17">First (partial) discussion draft</change>
-      </revisionDesc>
-   </teiHeader>
-   <text>
-      <body xml:base="eltec-body.xml">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Encoding Guidelines for the ELTeC (all levels)</title>
+                <author>Cost Action CA16204 – WG1</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>Unpublished draft for discussion</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>A born digital document drafted in TEI format by LB</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2018-03-16">Revised post-Prague</change>
+            <change when="2018-01-17">Expanded metadata section a bit; added comments from CO and
+                BN</change>
+            <change when="2017-12-17">First (partial) discussion draft</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body xml:base="eltec-body.xml">
          <p>This reference document defines the encoding scheme to be used
             for the European Literary Text Collection (ELTeC) which will be a major deliverable of
             COST Action 16204, <title>Distant Reading</title>. This draft reflects decisions taken
@@ -706,21 +706,20 @@ http://isni.oclc.org/-->
          </div>
       
       </body>
-      
-      <back>
-         <div>
-            <head>Full formal specifications</head>
-            <p>The ELTeC encoding scheme defined by this document is a TEI-conformant customization,
-               from which user documentation, and formal RELAXNG or DTD specifications can be
-               generated automatically. 
-            </p>
-                     
-    <p> This section contains the full schema specification from
-    which other level-specific versions are subsequently derived.
-    It must be converted using teitoodd to produce the compiled ODD
-    eltec-compiled.xml which is used as a basis for the others. </p>
-            
-    <schemaSpec xmlns:teix="http://www.tei-c.org/ns/Examples" ident="ELTeC" start="TEI" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML" source="/home/lou/Public/TEI/P5/p5subset.xml"><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.ascribed">
+
+        <back>
+            <div>
+                <head>Full formal specifications</head>
+                <p>The ELTeC encoding scheme defined by this document is a TEI-conformant
+                    customization, from which user documentation, and formal RELAXNG or DTD
+                    specifications can be generated automatically. </p>
+
+                <p> This section contains the full schema specification from which other
+                    level-specific versions are subsequently derived. It must be converted using
+                    teitoodd to produce the compiled ODD eltec-compiled.xml which is used as a basis
+                    for the others. </p>
+
+                <schemaSpec xmlns:teix="http://www.tei-c.org/ns/Examples" ident="ELTeC" start="TEI" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML" source="/home/lou/Public/TEI/P5/p5subset.xml"><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.ascribed">
   <desc versionDate="2006-01-05" xml:lang="en">provides attributes for elements representing speech or action that can be ascribed to a
     specific individual.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">특정 개인의 대화 또는 행위를 표시하는 요소에 대한 속성을 제공한다.</desc>
@@ -5627,17 +5626,25 @@ Normalization</ref>
         d'un produit.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una palabra o sintagma referido a alguna
         cantidad de un objeto o producto, normalmente incluye un número, una unidad y un nombre de
         producto.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene una parola o sintagma che fa riferimento alla
-        quantità di un oggetto o bene, contenente di solito il numero, l'unità e il nome del bene.</desc><classes/><content><macroRef key="macro.phraseSeq"/></content><attList><attDef ident="unit" usage="req">
-                    <datatype><dataRef key="teidata.enumerated"/></datatype><valList type="closed">
-                        <valItem ident="pages"><desc>pages in the source text</desc></valItem>
-                        <valItem ident="words"><desc>approximate number of space delimited tokens in source
-                            </desc></valItem>
-                        <valItem ident="vols"><desc>number of volumes for original source text
-                           </desc></valItem>
-                        
-                    </valList>
-                    
-                </attDef><attDef ident="type" usage="opt">
+        quantità di un oggetto o bene, contenente di solito il numero, l'unità e il nome del bene.</desc><classes><memberOf key="att.global"/><memberOf key="model.measureLike"/></classes><content><macroRef key="macro.phraseSeq"/></content><attList><attDef ident="unit" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="pages">
+                                        <desc>pages in the source text</desc>
+                                    </valItem>
+                                    <valItem ident="words">
+                                        <desc>approximate number of space delimited tokens in source
+                                        </desc>
+                                    </valItem>
+                                    <valItem ident="vols">
+                                        <desc>number of volumes for original source text </desc>
+                                    </valItem>
+
+                                </valList>
+
+                            </attDef><attDef ident="type" usage="opt">
       <desc versionDate="2005-11-18" xml:lang="en">specifies the type of measurement in any convenient typology.</desc>
       <desc versionDate="2007-12-20" xml:lang="ko">편리한 방식으로 측정 유형을 명시한다.</desc>
       <desc versionDate="2007-05-02" xml:lang="zh-TW">用任何適合的分類方法來說明度量的種類。</desc>
@@ -9369,12 +9376,19 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
       </report>
     </constraint>
   </constraintSpec><attList><attDef ident="type" mode="change">
-                    <valList type="semi">
-                        <valItem ident="liminal"><desc>authorial preface, foreword, back matter etc.</desc></valItem>
-                        <valItem ident="chapter"><desc>chapter not further divided</desc></valItem>
-                        <valItem ident="group"><desc>any grouping of chapters or groups, e.g. part, volume, etc.</desc></valItem>
-                    </valList>
-                </attDef></attList><exemplum xml:lang="en">
+                                <valList type="semi">
+                                    <valItem ident="liminal">
+                                        <desc>authorial preface, foreword, back matter etc.</desc>
+                                    </valItem>
+                                    <valItem ident="chapter">
+                                        <desc>chapter not further divided</desc>
+                                    </valItem>
+                                    <valItem ident="group">
+                                        <desc>any grouping of chapters or groups, e.g. part, volume,
+                                            etc.</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef></attList><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#bentham">
       <body>
         <div type="part">
@@ -12307,9 +12321,10 @@ supplied to printer.</change>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHPA">15.2.2. The Participant Description</ref>
   </listRef>
-</elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="change"><attList><attDef ident="when" mode="change" usage="req"/></attList></elementSpec><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ST" xml:id="DSTTEI2" ident="tei" type="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="CO" xml:id="DCO" ident="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="DS" xml:id="DDS" ident="textstructure"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="HD" xml:id="DHD" ident="header"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ND" xml:id="DND" ident="namesdates"/></schemaSpec></div>
+</elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="change"><attList><attDef ident="when" mode="change" usage="req"/></attList></elementSpec><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ST" xml:id="DSTTEI2" ident="tei" type="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="CO" xml:id="DCO" ident="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="DS" xml:id="DDS" ident="textstructure"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="HD" xml:id="DHD" ident="header"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ND" xml:id="DND" ident="namesdates"/></schemaSpec>
+            </div>
 
-       </back>
-     
-   </text>
+        </back>
+
+    </text>
 </TEI>

@@ -59,8 +59,6 @@
        <elementRef key="ref"/>
        <elementRef key="relatedItem"/>
        <elementRef key="idno"/>
-       <elementRef key="persName"/>
-       
        <elementRef key="respStmt"/>
        <elementRef key="resp"/>
        <elementRef key="name"/>
