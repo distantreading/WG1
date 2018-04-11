@@ -6,7 +6,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2018-04-09T20:45:54Z. .
+# Schema generated from ODD source 2018-04-11T16:57:54Z. .
 # TEI Edition: 
 # TEI Edition Location: http://www.tei-c.org/Vault/P5//
 #
@@ -560,7 +560,7 @@ model.divTopPart = model.headLike
 model.divTop = model.divWrapper | model.divTopPart
 model.frontPart.drama = notAllowed
 model.pLike.front = head
-model.divBottomPart = notAllowed
+model.divBottomPart = trailer
 model.divBottom = model.divWrapper | model.divBottomPart
 model.imprintPart = pubPlace | publisher
 model.catDescPart = notAllowed
@@ -1013,6 +1013,20 @@ head =
     att.global.attributes,
     att.typed.attributes,
     att.placement.attributes,
+    empty
+  }
+trailer =
+  
+  ## contains a closing title or footer appearing at the end of a division of a text. [4.2.4. Content of Textual Divisions 4.2. Elements Common to All Divisions]
+  element trailer {
+    (text
+     | model.gLike
+     | model.phrase
+     | model.inter
+     | model.lLike
+     | model.global)*,
+    att.global.attributes,
+    att.typed.attributes,
     empty
   }
 \div =
