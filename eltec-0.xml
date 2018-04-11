@@ -50,6 +50,8 @@
        <elementRef key="l"/>
        
         <elementRef key="head"/>
+       <elementRef key="trailer"/>
+       
         <elementRef key="div"/>
        <!-- the following are needed in header-->
        <elementRef key="author"/>
