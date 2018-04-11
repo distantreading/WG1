@@ -91,8 +91,8 @@
                     <item>texts which don't make such distinctions are still useful (of course!);
                         the core functions of distant reading (as so far defined) don't require
                         these distinctions, though they may benefit from them. </item>
-                    <item>identifying a text as level 1 or as level 0  guarantees
-                        a specific level of encoding</item>
+                    <item>identifying a text as level 1 or as level 0 guarantees a specific level of
+                        encoding</item>
                 </list>
 
             </div>
@@ -147,6 +147,39 @@
 
                 </table>
             </div>
+            <div type="slide">
+                <head>Example: level 0</head>
+                <figure>
+                    <graphic url="../media/p301-2.png"/>
+                    <head>pp 301-302</head>
+                </figure>
+                <cb/>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <div type="chapter" n="23">
+                        <head>Chapter XXIII.</head>
+                        <!-- ... -->
+                    <p> Never did she appear to more advantage, 
+                        for although her dress was only
+                        white muslin, enlivened by a gold 
+                        band round her waist, it fitted
+                        exquisitely, displaying her beautiful 
+                        figure to the fullest perfection, and
+                        her simple <hi>coiffure</hi>, glossy 
+                        luxuriant hair, unencumbered by
+                        flowers, or any of the superfluous ornaments 
+                        with which young ladies <hi>will</hi> 
+                        disfigure themselves, <pb n="202"/> 
+                        allowed the beholder to feast his eyes upon 
+                        the statue-like shape and proportion of the small
+                        undecorated head. </p>
+                    <p> And Car was at that moment thoroughly pleased, 
+                        and that alone gave an additional charm to her face.</p>
+                <!-- ... -->
+                    </div></egXML>
+            </div>
+
+
+
             <div type="slide">
                 <head>Level 0 vs Level 1</head>
                 <table>
@@ -212,6 +245,39 @@
                     </row>
                 </table>
             </div>
+
+            <div type="slide">
+                <head>Example: level 1</head>
+                <figure>
+                    <graphic url="../media/p301-2.png"/>
+                    <head>pp 301-302</head>
+                </figure>
+                <cb/>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <div type="chapter" n="23">
+                        <head>Chapter XXIII.</head>
+                        <!-- ... -->
+                        <p> Never did she appear to more advantage, 
+                            for although her dress was only
+                            white muslin, enlivened by a gold 
+                            band round her waist, it fitted
+                            exquisitely, displaying her beautiful 
+                            figure to the fullest perfection, and
+                            her simple <foreign>coiffure</foreign>, glossy 
+                            luxuriant hair, unencumbered by
+                            flowers, or any of the superfluous ornaments 
+                            with which young ladies <emph>will</emph> 
+                            disfigure themselves, <pb n="202"/> 
+                            allowed the beholder to feast his eyes upon 
+                            the statue-like shape and proportion of the small
+                            undecorated head. </p>
+                        <p> And Car was at that moment thoroughly pleased, 
+                            and that alone gave an additional charm to her face.</p>
+                        <!-- ... -->
+                    </div></egXML>
+            </div>
+            
+
             <div type="slide">
                 <head>Added at level 2</head>
                 <table>
@@ -238,7 +304,24 @@
                         <cell>Values to be defined</cell>
                     </row>
                 </table>
+<!--<egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <!-\- http://textanalysisonline.com/nltk-pos-tagging-\->
+    And|CC Car|NNP was|VBD at|IN that|DT moment|NN thoroughly|RB pleased|JJ ,|, and|CC that|IN alone|RB gave|VBD an|DT additional|JJ .|. charm|NN to|TO her|PRP$ face|NN .|.
 
+</egXML><egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <!-\-http://textanalysisonline.com/spacy-pos-tagging -\->           |X And|CONJ Car|NOUN was|VERB at|ADP that|DET moment|NOUN thoroughly|ADV |ADV pleased|ADJ ,|PUNCT and|CONJ that|ADP alone|ADV gave|VERB an|DET additional|ADJ .|PUNCT |X charm|NOUN to|ADP her|ADJ face|NOUN .|PUNCT
+</egXML>--><egXML xmlns="http://www.tei-c.org/ns/Examples"><p><s><w pos="CJC">And</w> <w pos="NN1">Car</w> 
+    <w pos="VBD">was</w> <w pos="PRP">at</w> 
+    <w pos="DT0">that</w> <w pos="NN1">moment</w> 
+    <w pos="AV0">thoroughly</w> <w pos="AJ0">pleased</w> 
+    <w pos="PUN">,</w> <w pos="CJC">and</w> 
+    <w pos="CJT">that</w> <w pos="AV0">alone</w> 
+    <w pos="VVD">gave</w> <w pos="AT0">an</w> 
+    <w pos="AJ0">additional</w> 
+    <w pos="VVB">charm</w> <w pos="PRP">to</w> 
+    <w pos="DPS">her</w> <w pos="NN1">face</w> 
+    <w pos="SENT">.</w> </s></p></egXML>   
+            <!-- CLAWS online tagger-->
             </div>
 
         </body>
