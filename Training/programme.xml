@@ -35,7 +35,10 @@
                to know anything about TEI or XML! </p>
             <p>Almost all the practical work will be done using <ref target="https://www.oxygenxml.com/xml_editor/download_oxygenxml_editor.html">oXygen XML Editor</ref>. If you don't already have
                it installed, you may like to download an evaluation copy of this software before
-               the workshop. </p>
+               the workshop. </p><p>You will also need your own copy of the 
+                 sample files we will be working with. Download them
+                 by clicking  <ref target="work.zip">this link</ref><!--, 
+                  or by checking out <ref target="">this github repository</ref>-->. </p>
          </div>
          <div type="slide">
             <head>Provisional Programme (subject to revision) </head>
