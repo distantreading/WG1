@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../out/encoding_proposal.rnc" type="application/relax-ng-compact-syntax"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../out/eltec-0.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
@@ -2550,14 +2550,14 @@
 <p>E la lingua della moglie cominciò a lavorare. Un Biancavilla pretendere alla principessina di Francalanza? Forse perché una Uzeda aveva sposato un Giulente? Poveretto, credeva d'avere a fare con un'altra Lucrezia, quell'assessore!... Nobili, sissignori: i Biancavilla erano nobili, ricchi anche; ma la loro ricchezza e la loro nobiltà non li faceva eguali ai Viceré. «Guardate frattanto che ardimento e che petulanza! Far ciarlare la gente intorno alla mia figliuola!...» E con tutti i suoi discorsi, non s'accorgeva di diffondere più rapidamente la nuova.</p>
 <p>In breve non si parlò d'altro in città. «Gliela daranno?... Non gliela daranno?...» Ma tutti riconoscevano che Biancavilla aveva posto gli occhi troppo in alto. Baldassarre, specialmente, non sapeva darsi pace. Egli voleva naturalmente che la principessina sposasse uno fatto per lei, un barone, a dir poco, ricco da mantenerla come una Regina; e, pure aspettando che il principe facesse la sua scelta, in cuor suo aveva destinato alla padroncina il cugino don Giovannino. Questo frattanto era per lui certo: che la signorina non si sarebbe neppure accorta dell'esistenza di Biancavilla.</p>
 <p>Invece, alla lunga, gli sguardi del giovane avevano attirato quelli di lei quasi per virtù magnetica, e le facevano adesso affrettare e mancare tutt'in una volta il respiro. Anch'ella lo guardava, di tanto in tanto, senza vederlo bene, dal turbamento; ma tornava a casa felice e ridente quando lo aveva scorto anche da lontano, e si metteva a improvvisare al pianoforte, tremando da capo a piedi, come se egli potesse udire tutti i segreti pensieri d'amore confidati allo strumento, le divine speranze d'eterna felicità... In collegio, ella aveva composto talvolta qualche verso, per le feste delle maestre, per gli onomastici delle amiche: voleva adesso scriverne per lui, metterli in musica unicamente per lui...</p>
-<lg>
+<quote>
 <l>       Se fossi il pallido</l>
 <l>       raggio di luna </l>
 <l>       che a notte bruna</l>
 <l>       ti posa in fronte;</l>
 <l>       se fossi il zeffiro,</l>
 <l>       la lieve brezza</l>
-<l>       che t'accarezza...</l></lg>
+<l>       che t'accarezza...</l></quote>
 
 <p>Non riuscì ad andare più innanzi, ma si pose a comporre una romanza su quel tema, intitolato Se!&#x85; piangendo di dolcezza quando non la vedevano, mentre le note appassionate s'involavano dal pianoforte.</p>
 <p>In inverno, il barone Cùrcuma diede alcuni balli. Donna Graziella non aveva ancora condotto Teresa in società; prima di tutto perché non intendeva che i giovanotti avvicinassero sua «figlia», e poi anche perché non aveva giudicato nessuna casa degna d'esser frequentata dalla principessina. Quella dei Cùrcuma, veramente, poteva passare; e poi il principe volle che tutta la famiglia vi andasse. Ma il cuore le parlava, a donna Graziella: giusto la prima sera, chi ci trovò? Giuliano Biancavilla!... Se quel petulante avesse conosciuto un poco il mondo, sarebbe rimasto quieto al suo posto; invece pensò di farsi presentare e di ballare con la sua Teresa!... Costei tremava, nelle sue braccia; egli non le disse altro che qualche parola: «È stanca?... Grazie!...» ma pareva a lei d'essere in cielo, mentre la principessa stava sulle spine e faceva segni al marito per dargli segno del pericolo. Ma il principe era in istretto colloquio col padrone di casa; e a un tratto quel petulante si ripresentò per chiedere alla signorina una mazurca. Allora donna Graziella intervenne:</p>
@@ -3262,11 +3262,11 @@
 <p>Al palazzo, verso il tramonto, arrivarono i primi telegrammi delle sezioni di provincia; ma quei risultati non erano tutti egualmente favorevoli: i candidati locali avevano forti maggioranze; il posto del principe, nelle prime somme, oscillava fra il secondo ed il terzo. Consalvo, pallidissimo, aveva la febbre. Ma, come venivano i risultati delle sezioni urbane, la sua posizione si consolidava; del terzo posto non si parlava più; egli stava con Vazza tra il primo e il secondo. Quando arrivarono gli ultimi telegrammi e gli ultimi messi con le cifre definitive, non vi fu più dubbio: egli era il primo con 6043 voti; veniva dopo Vazza con 5989; poi Giardona con 4914; il radicale Marcenò restava fuori con 3309; Lisi precipitava con meno di 3000 voti; gli altri erano tutti a distanza di migliaia di voti, con 2000, con 1000 appena. Giulente non ne aveva più di 700!</p>
 <p>Era notte alta, ma il palazzo Francalanza, illuminato a giorno, risplendeva da tutte le finestre. Una folla sterminata traeva a congratularsi «col primo eletto del popolo»; per le scale era un brusìo incessante; nelle sale non si respirava. Consalvo, raggiante, circolava a stento in mezzo alla folla compatta, afferrava tutte le mani, si stringeva addosso a tutte le persone, guarito interamente, come per incanto, dalla manìa dell'isolamento e dei contagi, nella pazza gioia del magnifico trionfo. E quando una grande fiaccolata, un'immensa dimostrazione con musiche e bandiere, venne ad acclamarlo freneticamente, egli si fece al balcone, arringò la folla, si diede nuovamente in pascolo alla sua curiosità, come un tribuno.</p>
 <p>Per tre giorni la città fu in un continuo fermento: ogni sera la dimostrazione si rinnovava, l'entusiasmo invece di raffreddarsi cresceva. Fra il basso popolo una canzonetta, sull'aria del Mastro Raffaele, furoreggiava:</p>
-<lg>
-<l>       Evviva il principino</l>
+
+	<l>       Evviva il principino</l>
 <l>       Che paga a tutti il vino;</l>
 <l>       Evviva Francalanza</l>
-<l>       Che a tutti empie la panza.</l></lg>
+<l>       Che a tutti empie la panza.</l>
 
 <p>Gruppi di ubriachi gridavano: «Viva Vittorio Emanuele! Viva la rivoluzione! Viva Sua Santità!...» cose ancora più pazze. Per tre giorni il palazzo restò ancora invaso dalla gente che veniva a congratularsi: una processione incessante dalle dieci del mattino a mezzanotte, con appena due ore di sosta per la colazione ed il pranzo. Modestamente, egli tentava parlare dei risultati generali, dell'«ottimo esperimento» che aveva fatto la nuova legge, del senno di cui avevano dato prova gl'italiani; ma non lo lasciavano dire, gli parlavano soltanto di lui, della sua clamorosa, meritata vittoria.</p>
 <p>Il quarto giorno uscì nelle vie. Si spezzò il braccio, dalle tante scappellate, dalle tante strette di mano. La gioia gli si leggeva in viso, traspariva da tutti i suoi atti e da tutte le sue parole, nonostante lo studio per contenerla. Stanco di veder gente, per assaporare altrimenti il proprio trionfo pensò di far visita ai parenti. Cominciò dal duca, che veramente stava male, con gli ottanta anni di maneggi e d'intrighi sulle spalle.</p>

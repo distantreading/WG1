@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Understanding ELTeC : a multi-level schema </title>
+                <author>Lou Burnard Consulting</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>For Wurzburg</p>
+            </publicationStmt>
+            <sourceDesc>
+                <ab>Original XML available from <ptr
+                        target="http://github.com/distantreading/WG1/Training"/></ab>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2018-04-09">Create header</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="slide">
+                <head>ELTeC requirements for its schema</head>
+                <list>
+                    <item>There should be a guaranteed minimum level of encoding for all texts in
+                        the ELTeC.</item>
+                    <item>The encoding should reflect the analytic needs of <soCalled>distant
+                            reading</soCalled>, rather than those of the digital editor.</item>
+                    <item>At the same time, the encoding should not misrepresent the text as
+                        originally created and received.</item>
+                    <item>The encoding must be easy to apply in a consistent way, starting from both
+                        basic OCR and pre-existing digital versions.</item>
+                </list>
+                <p rend="box">How do we square this circle?</p>
+            </div>
+            <div type="slide">
+                <head>A <soCalled>multi-level</soCalled> schema</head>
+                <p>TEI permits what is called <term>ODD chaining</term>, in which one schema is
+                    derived from another. We use this technique to define three
+                        <soCalled>levels</soCalled> of ELTeC schema, <list>
+                        <item>level zero : the basic minimum guaranteed to be available for every
+                            ELTeC text, requiring minimal human intervention for its
+                            creation;</item>
+                        <item>level one : some additional distinctions are made (for example amongst
+                            passages which are typographically salient) for which human judgment may
+                            be needed; </item>
+                        <item>level two : linguistic and semantic annotation is added,at the level
+                            of individual tokens and segments, typically by means of an automatic
+                            process. </item>
+                    </list></p>
+                <p rend="red">Still subject to discussion in WG1 and WG2 !</p>
+
+            </div>
+            <div type="slide">
+                <head>ODD chaining</head>
+                <figure>
+                    <graphic url="../media/eltec-chains.png" height="75%"/>
+                </figure>
+            </div>
+            <div type="slide">
+                <head>Changing levels</head>
+                <list>
+                    <item>The different <soCalled>levels</soCalled> of the ELTeC schema are not
+                        really levels in the sense that a text will progress majestically from 0 to
+                        2. </item>
+                    <item>It is easy to go from 1 or 2 to 0: a stylesheet simply has to remove some
+                        tagging automatically</item>
+                    <item>It is also easy (assuming the right software environment) to go from from
+                        0 or 1 to 2: linguistic annotations can be added automatically</item>
+                    <item>It is <emph>not</emph> easy to go from 0 or 2 to 1: human judgment may be
+                        required</item>
+                </list>
+            </div>
+
+            <div type="slide">
+                <head>Why the three levels?</head>
+                <list>
+                    <item>texts may come from many sources, some of which already have extensive
+                        tagging </item>
+                    <item>some (though by no means all) of that tagging is useful for distant
+                        reading purposes and we would like to be able to retain it rather than have
+                        the expense of adding it. For example : <list>
+                            <item>distinguishing verse and prose </item>
+                            <item>distinguishing highlighted phrases and their functions (e.g.
+                                emphasis, foreign, titles) </item>
+                            <item>identifying footnotes</item>
+                            <item>(maybe) distinguishing direct speech from narrative</item>
+                        </list>
+                    </item>
+                    <item>texts which don't make such distinctions are still useful (of course!);
+                        the core functions of distant reading (as so far defined) don't require
+                        these distinctions, though they may benefit from them. </item>
+                    <item>identifying a text as level 1 or as level 0  guarantees
+                        a specific level of encoding</item>
+                </list>
+
+            </div>
+
+            <div type="slide">
+                <head>Common to all levels</head>
+                <table>
+                    <row role="label">
+                        <cell>Textual Feature</cell>
+                        <cell>Encoding</cell>
+                        <cell>Note</cell>
+                    </row>
+                    <row>
+                        <cell>Page break</cell>
+                        <cell><tag>pb/</tag></cell>
+                        <cell><att>n</att> attribute may be used to give attested number of
+                            page</cell>
+                    </row>
+                    <row>
+                        <cell>Authorial preface, foreword, appendix, etc</cell>
+                        <cell><tag>div type="liminal"</tag> within <gi>front</gi> or <gi>back</gi>
+                            as appropriate</cell>
+                        <cell>Non authorial matter is silently omitted</cell>
+                    </row>
+                    <row>
+                        <cell>volume, chapter etc.</cell>
+                        <cell><gi>div</gi> nested as necessary within <gi>body</gi></cell>
+                        <cell><att>type</att>may be chapter, vol, or group (for anything else);
+                                <att>n</att> may indicate original numbering</cell>
+                    </row>
+                    <row>
+                        <cell>Heading or title</cell>
+                        <cell><gi>head</gi> at start of <gi>div</gi>; <gi>trailer</gi> at end</cell>
+                        <cell/>
+                    </row>
+                    <row>
+                        <cell>Running title/page footer </cell>
+                        <cell>omitted</cell>
+                        <cell>Page number only may be included in <gi>pb</gi></cell>
+                    </row>
+                    <row>
+                        <cell>Prose paragraph or list item</cell>
+                        <cell><gi>p</gi></cell>
+                        <cell>Discard any formatting information</cell>
+                    </row>
+                    <row>
+                        <cell>Verse line</cell>
+                        <cell><gi>l</gi>?</cell>
+                        <cell>Use only for verse lines in display blocks</cell>
+                    </row>
+
+
+                </table>
+            </div>
+            <div type="slide">
+                <head>Level 0 vs Level 1</head>
+                <table>
+                    <row role="label">
+                        <cell>Textual Feature</cell>
+                        <cell>Level 0 Encoding</cell>
+                        <cell>Level 1 Encoding</cell>
+                        <cell>Note</cell>
+                    </row>
+                    <row>
+                        <cell>Title page</cell>
+                        <cell>omitted</cell>
+                        <cell><tag>div type="titlePage"</tag> within <gi>front</gi></cell>
+                        <cell>omitted</cell>
+                    </row>
+                    <row>
+                        <cell>Table of contents, errata list, other liminal matter</cell>
+                        <cell>omitted</cell>
+                        <cell><gi>gap</gi></cell>
+                        <cell>use <att>type</att> to specify what has been omitted</cell>
+                    </row>
+                    <row>
+                        <cell>Structural marker</cell>
+                        <cell>ignored</cell>
+                        <cell><tag>milestone/</tag></cell>
+                        <cell>May use <att>rend</att> to describe format</cell>
+                    </row>
+
+                    <row>
+                        <cell>Authorial footnote</cell>
+                        <cell>omitted</cell>
+                        <cell>transcribe note text within a <gi>note</gi> within <tag>div
+                                type="notes"</tag> inside <gi>back</gi>; mark point of attachment
+                            with a <gi>ref</gi></cell>
+                        <cell>use <att>target</att> on <gi>ref</gi> to point to <gi>note</gi></cell>
+                    </row>
+                    <row>
+                        <cell>Font change</cell>
+                        <cell>Mark with <gi>hi</gi> (no attributes)</cell>
+                        <cell>Replace with <gi>foreign</gi>, <gi>title</gi>, <gi>emph</gi> where
+                            appropriate</cell>
+
+                        <cell>May use <att>rend</att> attribute with values ul ro sc it ? </cell>
+                    </row>
+
+                    <row>
+                        <cell>Graphic</cell>
+                        <cell>omitted</cell>
+                        <cell><tag>gap type="graphic"</tag></cell>
+                        <cell>May use <att>desc</att> to describe the content of the graphic</cell>
+                    </row>
+                    <row>
+                        <cell>Quotation or display block</cell>
+                        <cell><gi>p</gi> (or series of <gi>l</gi>)</cell>
+                        <cell><gi>quote</gi> containing one or more <gi>p</gi> or <gi>l</gi></cell>
+                        <cell>?</cell>
+                    </row>
+                    <row>
+                        <cell>Editorial correction</cell>
+                        <cell>unmarked</cell>
+                        <cell><gi>corr</gi></cell>
+                        <cell>Used wherever encoded text differs from printed original</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="slide">
+                <head>Added at level 2</head>
+                <table>
+                    <row role="label">
+                        <cell>Textual Feature</cell>
+                        <cell>Encoding</cell>
+                        <cell>Note</cell>
+                    </row>
+                    <row>
+                        <cell>Tokenization</cell>
+                        <cell><gi>w</gi></cell>
+                        <cell>Tokenization rules to be defined</cell>
+                    </row>
+
+                    <row>
+                        <cell>Segmentation</cell>
+                        <cell><gi>s</gi></cell>
+                        <cell>End to end segmentation comprising more than one token</cell>
+                    </row>
+
+                    <row>
+                        <cell>Token annotation</cell>
+                        <cell>Uses attributes <att>pos</att>, <att>lemma</att></cell>
+                        <cell>Values to be defined</cell>
+                    </row>
+                </table>
+
+            </div>
+
+        </body>
+    </text>
+</TEI>
