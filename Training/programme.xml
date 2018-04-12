@@ -43,17 +43,17 @@
          <div type="slide">
             <head>Provisional Programme (subject to revision) </head>
             <list>
-               <item>09h30 : Practical session 1: Using an XML Editor (oXygen) -- what 
+               <item>09h30 :<ref target="oxyTut.html#myFirst"> Practical session 1</ref>: Using an XML Editor (oXygen) -- what 
                   can we do with it? (45 mins)</item>
                <item>10h15 : <ref target="tei4eltec.html">What is the TEI and why are we using it</ref>? (30 mins) </item>
                <item>10h45 : <hi>coffee break</hi></item>
-               <item>11h00 : Practical session 2: creating a level 0 text from OCR output (60 mins) </item>
+               <item>11h00 : <ref target="oxyTut.html#anEltec0">Practical session 2</ref>: creating an ELTeC level 0 text from OCR output (60 mins) </item>
                 <item>12h00 : <hi>lunch break</hi></item>
                <item>13h00 : <ref target="eltecSchema.html">Understanding ELTeC</ref>: explaining level 0 and level 1 schemas (30 mins)</item>
-               <item>13h30 : Practical session 3: working with Abbyy outputs (60 mins)</item>
-               <item>14h30 : <ref target="eltecHdr.html">Understanding and creating the ELTeC header</ref> (30 mins)</item>              
+               <item>13h30 :<ref target="oxyTut.html#workingA"> Practical session 2 contd</ref>: working with Abbyy outputs (60 mins)</item>
+               <item>14h30 : <ref target="eltecHdr.html">Understanding the TEI header</ref> (30 mins)</item>              
                <item>15h00 : <hi>coffee break</hi></item>
-               <item>15h15 : Practical session 4: working on your own document (60 mins)</item>
+               <item>15h15 : <ref target="oxyTut.html#unguided">Practical session 3</ref>: working on your own (60 mins)</item>
                <item>16h15 : <ref target="conversions.html">Converting from ePub and HTML</ref> : some examples (45 mins)</item>
                <item>17h00 : Open discussion and next steps (30 mins) </item>
             </list>

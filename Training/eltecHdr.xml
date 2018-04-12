@@ -96,9 +96,10 @@
                             <!-- ... -->
                         </text>
                     </TEI> &lt;/teiCorpus> </egXML>
-            </div>
+            <p rend="box"><soCalled>metadata</soCalled> is a generic term,  concerning both identification (such as title or
+            publisher) and classification (topic, text-type) of a resource</p></div>
             <div type="slide">
-                <head>Types of content in the TEI header</head>
+                <head>Types of data found in the TEI header</head>
                 <p>
                     <list>
                         <item>free prose <list>
@@ -118,6 +119,8 @@
                             contain a prose description, possibly, but not necessarily, organised
                             under some specific headings by suggested sub-elements.</item>
                     </list>
+                </p>
+                <p rend="box">Some information may be given in structured or coded form (e.g. as attribute values)
                 </p>
             </div>
             <div type="slide">
@@ -141,7 +144,7 @@
                             in the other header elements) </item>
                     </list>
                 </p>
-                <p>Only <gi>fileDesc</gi> is required; the others are optional.</p>
+                <p rend="box">Only <gi>fileDesc</gi> is required; the others are optional.</p>
             </div>
 
 
