@@ -95,6 +95,13 @@
                     </classSpec>
 
                     <!-- now tweaks for individual elements -->
+                    <!-- simplify publicationStmt -->
+                    <elementSpec ident="publicationStmt" mode="change">
+                        <content>
+                            <elementRef key="p"/>
+                        </content>
+                    </elementSpec>
+
 
                     <!-- make xml:id and xml:lang obligatory for text -->
                     <elementSpec ident="text" mode="change">

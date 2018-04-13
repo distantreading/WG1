@@ -55,8 +55,15 @@
             <div type="slide">
                 <head>ODD chaining</head>
                 <figure>
-                    <graphic url="../media/eltec-chains.png" height="75%"/>
+                    <graphic url="../media/eltec-chains.png" height="90%"/>
                 </figure>
+                <cb/>
+                <list>
+                    <item><hi>selection</hi> of available elements and attributes </item>
+                    <item><hi>modification</hi> of possible values; context-specific rules</item>
+                    <item>eltec.odd is the union of eltec-0, eltec-1, and eltec-2</item>
+                    <item rend="red">a work in progress!</item>
+                </list>
             </div>
             <div type="slide">
                 <head>Changing levels</head>
@@ -110,12 +117,12 @@
                         <cell><tag>pb/</tag></cell>
                         <cell><att>n</att> attribute may be used to give attested number of
                             page</cell>
-                    </row>
+                    </row><row><cell>Title page</cell><cell>silently omitted</cell><cell></cell></row>
                     <row>
                         <cell>Authorial preface, foreword, appendix, etc</cell>
                         <cell><tag>div type="liminal"</tag> within <gi>front</gi> or <gi>back</gi>
                             as appropriate</cell>
-                        <cell>Non authorial matter is silently omitted</cell>
+                        <cell>Non-authorial matter is silently omitted</cell>
                     </row>
                     <row>
                         <cell>volume, chapter etc.</cell>
@@ -158,23 +165,17 @@
                     <div type="chapter" n="23">
                         <head>Chapter XXIII.</head>
                         <!-- ... -->
-                    <p> Never did she appear to more advantage, 
-                        for although her dress was only
-                        white muslin, enlivened by a gold 
-                        band round her waist, it fitted
-                        exquisitely, displaying her beautiful 
-                        figure to the fullest perfection, and
-                        her simple <hi>coiffure</hi>, glossy 
-                        luxuriant hair, unencumbered by
-                        flowers, or any of the superfluous ornaments 
-                        with which young ladies <hi>will</hi> 
-                        disfigure themselves, <pb n="202"/> 
-                        allowed the beholder to feast his eyes upon 
-                        the statue-like shape and proportion of the small
-                        undecorated head. </p>
-                    <p> And Car was at that moment thoroughly pleased, 
-                        and that alone gave an additional charm to her face.</p>
-                <!-- ... -->
+                        <p> Never did she appear to more advantage, for although her dress was only
+                            white muslin, enlivened by a gold band round her waist, it fitted
+                            exquisitely, displaying her beautiful figure to the fullest perfection,
+                            and her simple <hi>coiffure</hi>, glossy luxuriant hair, unencumbered by
+                            flowers, or any of the superfluous ornaments with which young ladies
+                                <hi>will</hi> disfigure themselves, <pb n="302"/> allowed the
+                            beholder to feast his eyes upon the statue-like shape and proportion of
+                            the small undecorated head. </p>
+                        <p> And Car was at that moment thoroughly pleased, and that alone gave an
+                            additional charm to her face.</p>
+                        <!-- ... -->
                     </div></egXML>
             </div>
 
@@ -189,20 +190,20 @@
                         <cell>Level 1 Encoding</cell>
                         <cell>Note</cell>
                     </row>
-                    <row>
+                <!--    <row>
                         <cell>Title page</cell>
                         <cell>omitted</cell>
                         <cell><tag>div type="titlePage"</tag> within <gi>front</gi></cell>
                         <cell>omitted</cell>
                     </row>
-                    <row>
+           -->         <row>
                         <cell>Table of contents, errata list, other liminal matter</cell>
                         <cell>omitted</cell>
                         <cell><gi>gap</gi></cell>
                         <cell>use <att>type</att> to specify what has been omitted</cell>
                     </row>
                     <row>
-                        <cell>Structural marker</cell>
+                        <cell>Mid-chapter structural marker</cell>
                         <cell>ignored</cell>
                         <cell><tag>milestone/</tag></cell>
                         <cell>May use <att>rend</att> to describe format</cell>
@@ -222,7 +223,8 @@
                         <cell>Replace with <gi>foreign</gi>, <gi>title</gi>, <gi>emph</gi> where
                             appropriate</cell>
 
-                        <cell>May use <att>rend</att> attribute with values ul ro sc it ? </cell>
+                        <cell>Level 1 may use 
+                            <att>rend</att> attribute with values ul ro sc it ? </cell>
                     </row>
 
                     <row>
@@ -257,27 +259,72 @@
                     <div type="chapter" n="23">
                         <head>Chapter XXIII.</head>
                         <!-- ... -->
-                        <p> Never did she appear to more advantage, 
-                            for although her dress was only
-                            white muslin, enlivened by a gold 
-                            band round her waist, it fitted
-                            exquisitely, displaying her beautiful 
-                            figure to the fullest perfection, and
-                            her simple <foreign>coiffure</foreign>, glossy 
-                            luxuriant hair, unencumbered by
-                            flowers, or any of the superfluous ornaments 
-                            with which young ladies <emph>will</emph> 
-                            disfigure themselves, <pb n="202"/> 
-                            allowed the beholder to feast his eyes upon 
-                            the statue-like shape and proportion of the small
-                            undecorated head. </p>
-                        <p> And Car was at that moment thoroughly pleased, 
-                            and that alone gave an additional charm to her face.</p>
+                        <p> Never did she appear to more advantage, for although her dress was only
+                            white muslin, enlivened by a gold band round her waist, it fitted
+                            exquisitely, displaying her beautiful figure to the fullest perfection,
+                            and her simple <foreign>coiffure</foreign>, glossy luxuriant hair,
+                            unencumbered by flowers, or any of the superfluous ornaments with which
+                            young ladies <emph>will</emph> disfigure themselves, <pb n="302"/>
+                            allowed the beholder to feast his eyes upon the statue-like shape and
+                            proportion of the small undecorated head. </p>
+                        <p> And Car was at that moment thoroughly pleased, and that alone gave an
+                            additional charm to her face.</p>
                         <!-- ... -->
                     </div></egXML>
-            </div>
-            
+           </div>
+            <div type="slide"><head>Level 1 examples, contd.</head> 
+         <figure><head>Verse between paragraphs</head>  <graphic url="../media/p146-7.png"/>
+         </figure>  <cb/>
+           <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <p>... Italian arietta she had before commenced), she at once 
+                   broke forth into that plaintive air “the Exile’s Home”:—</p>
+                  <pb n="147"/>
+                   <l>Where, tell us where, for hearts in sorrow pining, </l>
+               <l>Where dwells the calm that shall our toil allay ? </l>
+               <l>Tell us, ye stars, above in glory shining,</l>
+               <l>Where lies the shore that yet shall all repay ?</l>
+               <l>Oh there, only there!</l>
+               <l> Shades of the past, whose pilgrim cares are over, </l>
+               <l>Say ye in dreams who round us kindly come;
+                   Ye from the skies, that here in pity hover,</l><l>
+                   Where is the wanderer’s home—the exile’s </l>
+               <!-- ... -->
+               
+           </egXML></div>
 
+            <div type="slide"><head>Level 1 examples, contd.</head> 
+                <figure><head>Verse within a paragraph</head>  <graphic url="../media/p173.png"/>
+                </figure>  <cb/>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                   <p>... Yes, she was, to use rather a broad term, voluptuously lovely, 
+                       this girl, as she stood thus conspicuously on that balcony, 
+                       surrounded by plants and flowers, waving her handkerchief 
+                       as the soldiers passed by, greeting several acquaintances 
+                       amongst the gallant band with —
+                    <quote><l>“ Nods, and becks, and wreathed smiles,</l>
+                        <l> Such as hung on Hebe’s cheek,”</l></quote>
+                    forming a most alluring picture to all the present passers by, 
+                    excepting one individual, who at that moment crossed over 
+                    the street — her father. ... </p>   
+                </egXML></div>
+           
+            <div type="slide"><head>Level 1 examples, contd.</head> 
+                <figure><head>Structure break within chapter</head>  <figure><graphic url="../media/p160.png"/>
+                </figure>  </figure>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                   <p> And the lady arose, — again the stately, stern-looking woman.
+                  </p> <milestone rend="stars"/>
+                    <p>Months had passed by, spring was now bursting forth in all its verdant beauty,
+                        <pb n="161"/>.... </p>
+                </egXML></div>
+           <!-- <div type="slide"><head>Level 1 examples, contd.</head> 
+                <figure><head></head>  <graphic url=""/>
+                </figure>  <cb/>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    
+                </egXML></div>
+            
+       -->     
             <div type="slide">
                 <head>Added at level 2</head>
                 <table>
@@ -304,24 +351,35 @@
                         <cell>Values to be defined</cell>
                     </row>
                 </table>
-<!--<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <!--<egXML xmlns="http://www.tei-c.org/ns/Examples">
     <!-\- http://textanalysisonline.com/nltk-pos-tagging-\->
     And|CC Car|NNP was|VBD at|IN that|DT moment|NN thoroughly|RB pleased|JJ ,|, and|CC that|IN alone|RB gave|VBD an|DT additional|JJ .|. charm|NN to|TO her|PRP$ face|NN .|.
 
 </egXML><egXML xmlns="http://www.tei-c.org/ns/Examples">
     <!-\-http://textanalysisonline.com/spacy-pos-tagging -\->           |X And|CONJ Car|NOUN was|VERB at|ADP that|DET moment|NOUN thoroughly|ADV |ADV pleased|ADJ ,|PUNCT and|CONJ that|ADP alone|ADV gave|VERB an|DET additional|ADJ .|PUNCT |X charm|NOUN to|ADP her|ADJ face|NOUN .|PUNCT
-</egXML>--><egXML xmlns="http://www.tei-c.org/ns/Examples"><p><s><w pos="CJC">And</w> <w pos="NN1">Car</w> 
-    <w pos="VBD">was</w> <w pos="PRP">at</w> 
-    <w pos="DT0">that</w> <w pos="NN1">moment</w> 
-    <w pos="AV0">thoroughly</w> <w pos="AJ0">pleased</w> 
-    <w pos="PUN">,</w> <w pos="CJC">and</w> 
-    <w pos="CJT">that</w> <w pos="AV0">alone</w> 
-    <w pos="VVD">gave</w> <w pos="AT0">an</w> 
-    <w pos="AJ0">additional</w> 
-    <w pos="VVB">charm</w> <w pos="PRP">to</w> 
-    <w pos="DPS">her</w> <w pos="NN1">face</w> 
-    <w pos="SENT">.</w> </s></p></egXML>   
-            <!-- CLAWS online tagger-->
+</egXML>-->
+                <egXML xmlns="http://www.tei-c.org/ns/Examples"><p><s><w pos="CJC">And</w>
+                            <w pos="NN1">Car</w>
+                            <w pos="VBD">was</w>
+                            <w pos="PRP">at</w>
+                            <w pos="DT0">that</w>
+                            <w pos="NN1">moment</w>
+                            <w pos="AV0">thoroughly</w>
+                            <w pos="AJ0">pleased</w>
+                            <w pos="PUN">,</w>
+                            <w pos="CJC">and</w>
+                            <w pos="CJT">that</w>
+                            <w pos="AV0">alone</w>
+                            <w pos="VVD">gave</w>
+                            <w pos="AT0">an</w>
+                            <w pos="AJ0">additional</w>
+                            <w pos="VVB">charm</w>
+                            <w pos="PRP">to</w>
+                            <w pos="DPS">her</w>
+                            <w pos="NN1">face</w>
+                            <w pos="SENT">.</w>
+                        </s></p></egXML>
+                <!-- CLAWS online tagger-->
             </div>
 
         </body>

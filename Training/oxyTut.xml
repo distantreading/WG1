@@ -26,17 +26,16 @@
                   <item>Start up oXygen.</item>
                   <item>Click on the New icon (first left on the toolbar); or select File->New from
                      the menu; or type CTRL-N</item>
-                  <item>In the New dialogue, select <ident>Nouveau Document - Document XML</ident>
-                     et click the <ident>Create</ident> button. </item>
+                  <item>In the New dialogue, select <ident>New Document - Document XML</ident>
+                     and click the <ident>Create</ident> button. </item>
                   <item>You are now in the typical oXygen workspace. There is a large white window
                      in the middle where you are going to work on your document, with some smaller
-                     satellite windows we will look at later <figure>
+                     satellite windows we will look at later. <figure>
                         <graphic url="media/tuto-1.png" height="10cm"/>
                      </figure>
                   </item>
                   <item>Your workspace currently contains just one line: an XML Declaration like
-                     this: <egXML xmlns="http://www.tei-c.org/ns/Examples"> &lt;?xml version="1.0"
-                        encoding="UTF-8"?> </egXML> Every XML document has to begin with a line like
+                     this:  <egXML xmlns="http://www.tei-c.org/ns/Examples"> &lt;?xml version="1.0" encoding="UTF-8"?> </egXML> Every XML document has to begin with a line like
                      this. It shows a processor that this is an XML file, which version of XML this
                      file is using, and what character encoding has been used for its textual
                      content. XML version 1.0 is a W3C recommendation from 2008. UTF-8 (Universal
@@ -48,43 +47,48 @@
                      error message at the bottom of the screen: <q>A well-formed document requires a
                         root element</q>. Ah yes, an XML document must have at least one tag in it.
                      Type the start-tag <gi>root</gi> oXygen obligingly completes this with a
-                     closing tag <tag>/racine</tag> as soon as you hit the <code>></code> character.
+                     closing tag <tag>/root</tag> as soon as you hit the <code>></code> character.
                      You now have a well-formed XML document and the little red square becomes
                      green. Well done! Let's make the document a bit more interesting by adding some
                      content to the element, for example, type <q>This is a well formed XML
                         document.</q> between the start and end tags. </item>
                   <item>
                      <figure>
-                        <graphic url="media/tuto-2.png" width="16cm"/>
+                        <graphic url="media/tuto-2.png" width="75%"/>
                      </figure>
                   </item>
                   <item> Oxygen provides several ways of tagging documents. Let's try a second one.
                      Select the word <code>XML</code> with the mouse and then type CTRL-E. Now you
                      can enter a name for the tag you're adding: we suggest <ident>name</ident>
                      <figure>
-                        <graphic url="media/tuto-3.png"/>
+                        <graphic url="media/tuto-3.png" width="75%"/>
                      </figure> Click <code>OK</code> to continue </item>
                   <item> XML elements can nest within each other: we have a <gi>root</gi> element
                      which contains a bit of text, followed by a <gi>name</gi> element, followed by
                      another bit of text. Select all three of these (i.e. everything inside the
-                        <gi>root</gi>) and tag it <gi>s</gi> (for sentence), again using CTRL-E. <figure>
-                        <graphic url="media/tuto-4.png"/>
+                        <gi>root</gi>) and tag it <gi>sentence</gi> again using CTRL-E. <figure>
+                        <graphic url="media/tuto-4.png" width="95%"/>
                      </figure>
                   </item>
                   <item> The third way of tagging a document is to divide up its elements
-                     automatically. Put the cursor at the end of the <gi>s</gi> element you just
-                     created (between <code>document.</code> and <tag>/s</tag>). Type
-                        <code>ALT-SHIFT-d</code> to close this <gi>s</gi> and start a new one. You
-                     can now add a second sentence to your document: <figure>
-                        <graphic url="media/tuto-5.png" width="16cm"/>
+                     automatically. Put the cursor at the end of the <gi>sentence</gi> element you just
+                     created (between <code>document.</code> and <tag>/sentence</tag>). Type
+                        <code>ALT-SHIFT-d</code> to close this <gi>sentence</gi> and start a new one. You
+                     can now add a second sentence to your document. The screen will scroll to the right as you type: <figure>
+                        <graphic url="media/tuto-5.png" width="90%"/>
+                     </figure>
+                  </item>
+                  <item>To make the document look a bit nicer, type CTRL-SHIFT-p or
+                     click the Format and Indent button. <figure>
+                        <graphic url="media/tuto-6.png" width="75%"/>
                      </figure>
                   </item>
                   <item> oXygen also helps you when it comes to adding attributes. Put the cursor
-                        <emph>inside</emph> the first <gi>s</gi> tag, just in front of the
+                        <emph>inside</emph> the first <gi>sentence</gi> tag, just in front of the
                         <code>></code> and type a space, followed by <code>n="</code> . Oxygen adds
                      a <code>"</code> and the cursor stays there, waiting for your input. Type the
                      figure 1. <figure>
-                        <graphic url="media/tuto-6.png"/>
+                        <graphic url="media/tuto-7.png" width="75%"/>
                      </figure>
                   </item>
                   <item> Number the second sentence "2" in the same way. </item>
@@ -94,11 +98,7 @@
                      name inside a start-tag, the end-tag will change to match it. However, if you
                      change the name inside an end-tag, oXygen signals an error. Type CTRL-z to undo
                      your last change to the document at any point. </item>
-                  <item> Finally, just to make the document look a bit nicer, type CTRL-SHIFT-p or
-                     click the Format and Indent button. <figure>
-                        <graphic url="media/tuto-7.png"/>
-                     </figure>
-                  </item>
+                
                </list>
                <p> What have we learned? There are three ways of adding tags to a document :<list>
                      <item>if you type a start-tag in the right place, oXygen will add the
@@ -126,22 +126,25 @@
                      down, there is an option to choose from a long menu of pre-defined XML
                      vocabularies. oXygen comes ready to work with many of these, including several
                      varieties of TEI. As yet there is no ELTeC schema here ; instead we will use a
-                     minimalist TEI schema called TEI Bare.</item>
+                     minimal TEI schema called TEI Bare.</item>
 
                   <item>In the New dialog, scroll down to the section <ident>Framework
                         templates</ident>, within that select <ident>TEI P5</ident>, and within that
-                     select <ident> Bare</ident>
+                     select <ident>Bare</ident>. 
+                     <figure> <graphic width="75%" url="media/tuto-8a.png"/>
+                     </figure>
                   </item>
-                  <item>oXygen displays the basic structure of a TEI document, ready for you to
+               </list>
+               <p>
+                   
+                  When you press Create this time, oXygen displays the basic structure of a TEI document, ready for you to
                      complete. In the side window labelled Outline (select Window->Show View-Summary
                      if this is not visible) you can see that a document TEI has two major parts: a
                         <gi>teiHeader</gi> element containing metadata, which is followed by a
-                        <gi>text</gi> element, containing the text itself. </item>
-               </list>
-               <p>
+                        <gi>text</gi> element, containing the text itself. 
+               
                   <graphic height="8cm" url="media/tuto-8.png"/>
                </p>
-
                <div>
                   <head>Add the metadata</head>
                   <p>Every TEI document requires at least three pieces of metadata: a title,
@@ -493,7 +496,7 @@
                </list>
                <p>
                   <figure>
-                     <graphic url="media/archiveBrowser.png" width="60%"/>
+                     <graphic url="media/tuto-12.png" width="60%"/>
                   </figure>
                </p>
                <list>
@@ -521,7 +524,7 @@
                </list>
 
 
-               <p><figure><graphic url="media/chap7start.png" width="70%"/></figure> The text has
+               <p><figure><graphic url="media/tuto-13.png" width="70%"/></figure> The text has
                   been split up into paragraphs, each tagged <gi>p</gi>, and each carrying an
                   attribute <att>rend</att> with a coded value indicating something about the format
                   of that paragraph in the original Word document, for example <code>Style
@@ -567,7 +570,7 @@
                            <gi>div</gi> you just opened.</item>
                   </list></p>
                <p>In the Outline box, you should now see something like this: <figure><graphic
-                        url="media/structure-1.png" width="70%"/></figure></p>
+                        url="media/tuto-14.png" width="70%"/></figure></p>
                <p>We now have a single <gi>div</gi> containing the whole text. We just need to
                   locate the start of each chapter, and press ALT-SHIFT-D to divide it up. </p>
                <list>
