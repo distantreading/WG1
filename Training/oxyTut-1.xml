@@ -58,8 +58,7 @@
                      You now have a well-formed XML document and the little red square becomes
                      green. Well done! Let's make the document a bit more interesting by adding some
                      content to the element, for example, type <q>This is a well formed XML
-                        document.</q> between the start and end tags. </item>
-                  <item>
+                        document.</q> between the start and end tags. 
                      <figure>
                         <graphic url="media/tuto-2.png" width="75%"/>
                      </figure>

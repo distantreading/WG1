@@ -55,7 +55,6 @@
         <elementRef key="p"/>
         <elementRef key="pb"/>
         <elementRef key="quote"/> <!--*-->
-        <elementRef key="ref"/> <!--*-->
         <elementRef key="text"/>            
         <elementRef key="trailer"/>
         
