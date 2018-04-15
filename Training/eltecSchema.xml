@@ -79,7 +79,6 @@
                         required</item>
                 </list>
             </div>
-
             <div type="slide">
                 <head>Why the three levels?</head>
                 <list>
@@ -103,7 +102,6 @@
                 </list>
 
             </div>
-
             <div type="slide">
                 <head>Common to all levels</head>
                 <table>
@@ -117,7 +115,12 @@
                         <cell><tag>pb/</tag></cell>
                         <cell><att>n</att> attribute may be used to give attested number of
                             page</cell>
-                    </row><row><cell>Title page</cell><cell>silently omitted</cell><cell></cell></row>
+                    </row>
+                    <row>
+                        <cell>Title page</cell>
+                        <cell>silently omitted</cell>
+                        <cell/>
+                    </row>
                     <row>
                         <cell>Authorial preface, foreword, appendix, etc</cell>
                         <cell><tag>div type="liminal"</tag> within <gi>front</gi> or <gi>back</gi>
@@ -127,7 +130,7 @@
                     <row>
                         <cell>volume, chapter etc.</cell>
                         <cell><gi>div</gi> nested as necessary within <gi>body</gi></cell>
-                        <cell><att>type</att>may be chapter, vol, or group (for anything else);
+                        <cell><att>type</att> may be chapter, vol, or group (for anything else);
                                 <att>n</att> may indicate original numbering</cell>
                     </row>
                     <row>
@@ -158,7 +161,6 @@
                 <head>Example: level 0</head>
                 <figure>
                     <graphic url="../media/p301-2.png"/>
-                    <head>pp 301-302</head>
                 </figure>
                 <cb/>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -178,9 +180,6 @@
                         <!-- ... -->
                     </div></egXML>
             </div>
-
-
-
             <div type="slide">
                 <head>Level 0 vs Level 1</head>
                 <table>
@@ -190,13 +189,14 @@
                         <cell>Level 1 Encoding</cell>
                         <cell>Note</cell>
                     </row>
-                <!--    <row>
+                    <!--    <row>
                         <cell>Title page</cell>
                         <cell>omitted</cell>
                         <cell><tag>div type="titlePage"</tag> within <gi>front</gi></cell>
                         <cell>omitted</cell>
                     </row>
-           -->         <row>
+           -->
+                    <row>
                         <cell>Table of contents, errata list, other liminal matter</cell>
                         <cell>omitted</cell>
                         <cell><gi>gap</gi></cell>
@@ -206,7 +206,7 @@
                         <cell>Mid-chapter structural marker</cell>
                         <cell>ignored</cell>
                         <cell><tag>milestone/</tag></cell>
-                        <cell>May use <att>rend</att> to describe format</cell>
+                        <cell>May use <att>unit</att> and <att>rend</att> to describe format</cell>
                     </row>
 
                     <row>
@@ -223,8 +223,8 @@
                         <cell>Replace with <gi>foreign</gi>, <gi>title</gi>, <gi>emph</gi> where
                             appropriate</cell>
 
-                        <cell>Level 1 may use 
-                            <att>rend</att> attribute with values ul ro sc it ? </cell>
+                        <cell>Level 1 may use <att>rend</att> attribute with values ul ro sc it ?
+                        </cell>
                     </row>
 
                     <row>
@@ -247,12 +247,10 @@
                     </row>
                 </table>
             </div>
-
             <div type="slide">
                 <head>Example: level 1</head>
                 <figure>
                     <graphic url="../media/p301-2.png"/>
-                    <head>pp 301-302</head>
                 </figure>
                 <cb/>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -271,60 +269,106 @@
                             additional charm to her face.</p>
                         <!-- ... -->
                     </div></egXML>
-           </div>
-            <div type="slide"><head>Level 1 examples, contd.</head> 
-         <figure><head>Verse between paragraphs</head>  <graphic url="../media/p146-7.png"/>
-         </figure>  <cb/>
-           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <p>... Italian arietta she had before commenced), she at once 
-                   broke forth into that plaintive air “the Exile’s Home”:—</p>
-                  <pb n="147"/>
-                   <l>Where, tell us where, for hearts in sorrow pining, </l>
-               <l>Where dwells the calm that shall our toil allay ? </l>
-               <l>Tell us, ye stars, above in glory shining,</l>
-               <l>Where lies the shore that yet shall all repay ?</l>
-               <l>Oh there, only there!</l>
-               <l> Shades of the past, whose pilgrim cares are over, </l>
-               <l>Say ye in dreams who round us kindly come;
-                   Ye from the skies, that here in pity hover,</l><l>
-                   Where is the wanderer’s home—the exile’s </l>
-               <!-- ... -->
-               
-           </egXML></div>
+            </div>
+            <div type="slide">
+                <head>Structure break within chapter</head>
+                <figure>
+                    <figure>
+                        <graphic url="../media/p160.png"/>
+                    </figure>
+                </figure>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <p> And the lady arose, — again the stately, stern-looking woman. </p>
+                    <milestone unit="section" rend="stars"/>
+                    <p>Months had passed by, spring was now bursting forth in all its verdant
+                        beauty, <pb n="161"/>.... </p>
+                </egXML>
+            </div>
+            <div type="slide">
+                <head>Verse between paragraphs</head>
+                <figure>
+                    <graphic url="../media/p146-7.png"/>
+                </figure>
+                <cb/>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <p>... Italian arietta she had before commenced), she at once broke forth into
+                        that plaintive air “the Exile’s Home”:—</p>
+                    <pb n="147"/>
+                    <l>Where, tell us where, for hearts in sorrow pining, </l>
+                    <l>Where dwells the calm that shall our toil allay ? </l>
+                    <l>Tell us, ye stars, above in glory shining,</l>
+                    <l>Where lies the shore that yet shall all repay ?</l>
+                    <l>Oh there, only there!</l>
+                    <l> Shades of the past, whose pilgrim cares are over, </l>
+                    <l>Say ye in dreams who round us kindly come; Ye from the skies, that here in
+                        pity hover,</l><l> Where is the wanderer’s home—the exile’s </l>
+                    <!-- ... -->
+                </egXML>
+            </div>
+            <div type="slide">
+                <head>Verse within a paragraph</head>
+                <figure>
+                    <graphic url="../media/p173.png"/>
+                </figure>
+                <cb/>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <p>... Yes, she was, to use rather a broad term, voluptuously lovely, this girl,
+                        as she stood thus conspicuously on that balcony, surrounded by plants and
+                        flowers, waving her handkerchief as the soldiers passed by, greeting several
+                        acquaintances amongst the gallant band with — <quote><l>“ Nods, and becks,
+                                and wreathed smiles,</l>
+                            <l> Such as hung on Hebe’s cheek,”</l></quote> forming a most alluring
+                        picture to all the present passers by, excepting one individual, who at that
+                        moment crossed over the street — her father. ... </p>
+                </egXML>
+            </div>
+            <div type="slide">
+                <head>Authorial notes</head>
+                <figure>
+                    <graphic url="../media/gryll-chap2.png"/>
+                </figure>
+                <cb/>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <pb n="10"/>
+                    <div type="chapter">
+                        <head>CHAPTER II</head>
+                        <quote xml:lang="la">
+                            <l> FORTUNA SPONDET MULTA MULTIS PRAESTAT NEMINI VIVE IN DIES ET HORAS
+                                NAM PROPRIUM EST NIHIL.</l>
+                            <p> Marmor vetus apud Feam, ad Hor. Epist. I. ii, 23.</p>
+                        </quote>
+                        <l>Fortune makes many promises to many, </l>
+                        <l>Keeps them to none. Live to the days and hours, </l>
+                        <l>For nothing is your own. </l>
 
-            <div type="slide"><head>Level 1 examples, contd.</head> 
-                <figure><head>Verse within a paragraph</head>  <graphic url="../media/p173.png"/>
-                </figure>  <cb/>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                   <p>... Yes, she was, to use rather a broad term, voluptuously lovely, 
-                       this girl, as she stood thus conspicuously on that balcony, 
-                       surrounded by plants and flowers, waving her handkerchief 
-                       as the soldiers passed by, greeting several acquaintances 
-                       amongst the gallant band with —
-                    <quote><l>“ Nods, and becks, and wreathed smiles,</l>
-                        <l> Such as hung on Hebe’s cheek,”</l></quote>
-                    forming a most alluring picture to all the present passers by, 
-                    excepting one individual, who at that moment crossed over 
-                    the street — her father. ... </p>   
-                </egXML></div>
-           
-            <div type="slide"><head>Level 1 examples, contd.</head> 
-                <figure><head>Structure break within chapter</head>  <figure><graphic url="../media/p160.png"/>
-                </figure>  </figure>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                   <p> And the lady arose, — again the stately, stern-looking woman.
-                  </p> <milestone rend="stars"/>
-                    <p>Months had passed by, spring was now bursting forth in all its verdant beauty,
-                        <pb n="161"/>.... </p>
-                </egXML></div>
-           <!-- <div type="slide"><head>Level 1 examples, contd.</head> 
-                <figure><head></head>  <graphic url=""/>
-                </figure>  <cb/>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    
-                </egXML></div>
-            
-       -->     
+                        <p>GREGORY GRYLL, Esq., of Gryll Grange in Hampshire, on the borders of the
+                            New Forest, in the midst of a park which was a little forest in itself,
+                            reaching nearly to the sea, and well stocked with deer, having a large
+                            outer tract, where a numerous light-rented and well-conditioned tenantry
+                            fattened innumerable pigs, considered himself well located for what he
+                            professed to be, <foreign xml:lang="la">Epicuri de grege porcus</foreign>,<ref target="#ch2nt2">*</ref>
+                            and held, though he <pb n="11"/> ....</p>
+                        <!-- ... -->
+                    </div>
+                    <div type="notes">
+                        <note xml:id="ch2nt1">
+                            <p>This inscription appears to consist of comic senarii slightly
+                                dislocated for the inscriptional purpose.</p>
+                            <quote xml:lang="lat">
+                                <l>Spondet <gap desc="two spondees"/></l>
+                                <l>Fortuna multa multis, praestat nemini.</l>
+                                <l>Vive in dies et horas: nam proprium est nihil.</l>
+                            </quote>
+                          </note>
+
+                        <note xml:id="ch2nt2">
+                            <p><hi>A pig from the herd of Epicurus.</hi> The old philosophers accepted
+                                good-humouredly the disparaging terms attached to them by their
+                                enemies or rivals. The Epicureans acquiesced in the pig ... </p>
+                        </note>
+                    </div>
+                </egXML>
+            </div> 
             <div type="slide">
                 <head>Added at level 2</head>
                 <table>
@@ -381,7 +425,6 @@
                         </s></p></egXML>
                 <!-- CLAWS online tagger-->
             </div>
-
         </body>
     </text>
 </TEI>

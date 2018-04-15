@@ -57,7 +57,7 @@
     </xsl:template>
 
     <!-- completely suppress some unwanted elements  -->
-    <xsl:template match="t:milestone | t:lb | t:fw"/>
+    <xsl:template match="t:lb | t:fw"/>
 
     <!-- suppress some unwanted attributes --> 
     <xsl:template match="t:pb/@facs | t:p/@part | t:title/@type | t:title/@n | t:bibl/@type | t:bibl/@status"/>
@@ -73,6 +73,13 @@
         <xsl:value-of select="t:corr"/>
     </xsl:template>
     <xsl:template match="t:space"> &#160; </xsl:template>
+    
+ <!-- measure type not supported -->
+    <xsl:template match="t:measure/@type">
+        <xsl:attribute name="unit">
+            <xsl:value-of select="."/>
+        </xsl:attribute>
+    </xsl:template>
 
     <xsl:template match="t:text">
         <text>

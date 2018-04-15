@@ -39,40 +39,41 @@
             include="catDesc category catRef change classCode  encodingDesc extent fileDesc idno  keywords langUsage language  
             profileDesc publicationStmt revisionDesc sourceDesc taxonomy teiHeader textClass titleStmt"/>
         <elementRef key="TEI"/>
-        <elementRef key="text"/>
-        <elementRef key="pb"/>
-        <elementRef key="front"/>
-        <elementRef key="body"/>
         <elementRef key="back"/>
-        <elementRef key="p"/>
-        <elementRef key="head"/>
-        <elementRef key="trailer"/>
+        <elementRef key="body"/>
+        <elementRef key="corr"/> <!--*-->
         <elementRef key="div"/>
-        <elementRef key="gap"/>
-        <elementRef key="note"/>
-        <elementRef key="ref"/>
+        <elementRef key="emph"/> <!--*-->
+        <elementRef key="foreign"/> <!--*-->
+        <elementRef key="front"/>
+        <elementRef key="gap"/> <!--*-->
+        <elementRef key="head"/>
+        <elementRef key="hi"/> <!--*--> 
         <elementRef key="l"/>
-        <elementRef key="quote"/>
-        <elementRef key="hi"/>
-        <elementRef key="corr"/>
-        <elementRef key="foreign"/>
-        <elementRef key="title"/>
-        <elementRef key="emph"/>
+        <elementRef key="milestone"/> <!--*-->
+        <elementRef key="note"/> <!--*-->
+        <elementRef key="p"/>
+        <elementRef key="pb"/>
+        <elementRef key="quote"/> <!--*-->
+        <elementRef key="ref"/> <!--*-->
+        <elementRef key="text"/>            
+        <elementRef key="trailer"/>
         
        <!-- the following are needed in header-->
        <elementRef key="author"/>
-       <elementRef key="title"/>
+       <elementRef key="bibl"/>
+       <elementRef key="date"/>
+       <elementRef key="idno"/>
+       <elementRef key="measure"/>
+       <elementRef key="name"/>
        <elementRef key="pubPlace"/>
        <elementRef key="publisher"/>
-       <elementRef key="date"/>
-       <elementRef key="bibl"/>
        <elementRef key="ref"/>
        <elementRef key="relatedItem"/>
-       <elementRef key="idno"/>
-       <elementRef key="respStmt"/>
        <elementRef key="resp"/>
-       <elementRef key="name"/>
-       <elementRef key="measure"/>
+       <elementRef key="respStmt"/>
+       <elementRef key="title"/>
+
      </schemaSpec>
 </div>
      </back>

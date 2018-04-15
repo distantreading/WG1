@@ -134,8 +134,8 @@
                     <item>XML conversion of P3 as TEI P4; Council oversees production of complete
                         revision as TEI P5</item>
                     <label>2003 - </label>
-                    <item>Regularly updated releases of TEI P5; 36 releases since 2005; latest
-                        version 3.0.0 April 2016 </item>
+                    <item>Regularly updated releases of TEI P5 at least twice a year since 2005;
+                        latest version 3.3.0 January 2018 </item>
                 </list>
             </div>
 
@@ -183,11 +183,211 @@
                         <item>software</item>
                     </list></p>
                 <p rend="box">its original focus (metadata, text, textual and linguistic analysis)
-                    has now expanded to include all of the above</p>
+                    has now expanded to include all of the above, and more besides. </p>
+            </div>
+            
+            <div type="slide">
+                <head>The TEI Architecture</head>
+                <list type="unordered">
+                    <item> TEI is a <emph>modular</emph> system. You use it to create an encoding
+                        system that reflects your own needs, by choosing from the TEI's pre-defined
+                        <term>modules</term>
+                    </item>
+                    <item>Each module defines a set of elements and their attributes</item>
+                    <item>you can choose just the elements you want, and also (within limits) change
+                        their properties </item>
+                    <item>you can add in non-TEI elements, either from other standards or completely
+                        new </item>
+                </list>
+              
+                <p rend="box">An online tool at http://www.tei-c.org/Roma/ helps with this task, but
+                is not essential. </p>
+            </div>
+            
+            
+            <div type="slide">
+                <head> TEI modules (1)</head>
+                <p>Your project will almost certainly need some elements from the following modules
+                    : </p>
+                <table rend="rules">
+                    <row role="label">
+                        <cell>module</cell>
+                        <cell>contents</cell>
+                        <cell>P5</cell>
+                        <cell>P3</cell>
+                    </row>
+                    <row>
+                        <cell>core </cell>
+                        <cell>textual features common to almost every kind of document</cell>
+                        <cell>82</cell>
+                        <cell>71</cell>
+                    </row>
+                    <row>
+                        <cell>figures</cell>
+                        <cell>tables, formulas, figures</cell>
+                        <cell>7</cell>
+                        <cell>6</cell>
+                    </row>
+                    <row>
+                        <cell>header </cell>
+                        <cell>bibliographic and other metadata </cell>
+                        <cell>69</cell>
+                        <cell>57</cell>
+                    </row>
+                    <row>
+                        <cell> tei </cell>
+                        <cell>infrastructural module defining datatypes, classes, and macros used by
+                            every TEI module</cell>
+
+                        <cell>0</cell>
+                        <cell>0</cell>
+                    </row>
+                    <row>
+                        <cell>textstructure </cell>
+                        <cell>basic structural elements</cell>
+                        <cell>33</cell>
+                        <cell>31</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="slide">
+                <head>TEI Modules (2)</head>
+                <p>If you work with manuscripts you will probably need some of the following
+                    modules: </p>
+                <table rend="rules">
+                    <row role="label">
+                        <cell>module</cell>
+                        <cell>contents</cell>
+                        <cell>P5</cell>
+                        <cell>P3</cell>
+                    </row>
+                    <row>
+                        <cell>gaiji</cell>
+                        <cell>non-Unicode characters and glyphs </cell>
+                        <cell>11</cell>
+                        <cell>15</cell>
+                    </row>
+                    <row>
+                        <cell>msdescription</cell>
+                        <cell>cataloguing and description of manuscripts, incunabula, and other 
+                            <soCalled>text-bearing objects</soCalled> </cell>
+                        <cell>69</cell>
+                        <cell>0</cell>
+                    </row>
+                    <row>
+                        <cell>textcrit</cell>
+                        <cell>traditional critical apparatus</cell>
+                        <cell>14</cell>
+                        <cell>12</cell>
+                    </row>
+                    <row>
+                        <cell>transcr</cell>
+                        <cell>diplomatic or genetic transcription of primary sources</cell>
+                        <cell>29</cell>
+                        <cell>10</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="slide">
+                <head>TEI Modules (3)</head>
+                <p>Other types of document are also supported ... </p>
+                <table rend="rules">
+                    <row role="label">
+                        <cell>module</cell>
+                        <cell>contents</cell>
+                        <cell>P5</cell>
+                        <cell>P3</cell>
+                    </row>
+                    <row>
+                        <cell>dictionaries</cell>
+                        <cell>print dictionaries</cell>
+                        <cell>35</cell>
+                        <cell>37</cell>
+                    </row>
+                    <row>
+                        <cell>drama</cell>
+                        <cell>performance texts (play scripts, cinema scripts)</cell>
+                        <cell>17</cell>
+                        <cell>16</cell>
+                    </row>
+                    <row>
+                        <cell>spoken</cell>
+                        <cell>transcribed speech</cell>
+                        <cell>14</cell>
+                        <cell>7</cell>
+                    </row>
+                    <row>
+                        <cell>tagdocs</cell>
+                        <cell>markup documentation (ODD)</cell>
+                        <cell>54</cell>
+                        <cell>31</cell>
+                    </row>
+                    <row>
+                        <cell>verse</cell>
+                        <cell>poetic texts</cell>
+                        <cell>4</cell>
+                        <cell>6</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="slide">
+                <head>TEI Modules (4)</head>
+                <p>If you intend to add analytic encodings of some kind, you may need some of the
+                    following : </p>
+                <table rend="rules">
+                    <row role="label">
+                        <cell>module</cell>
+                        <cell>contents</cell>
+                        <cell>P5</cell>
+                        <cell>P3</cell>
+                    </row>
+                    <row>
+                        <cell>analysis</cell>
+                        <cell>basic mechanisms for analysis and interpretation</cell>
+                        <cell>11</cell>
+                        <cell>10</cell>
+                    </row>
+                    <row>
+                        <cell>certainty</cell>
+                        <cell>indications of uncertainty and probability</cell>
+                        <cell>3</cell>
+                        <cell>2</cell>
+                    </row>
+                    <row>
+                        <cell>corpus</cell>
+                        <cell>language corpus metadata</cell>
+                        <cell>14</cell>
+                        <cell>26</cell>
+                    </row>
+                    <row>
+                        <cell>iso-fs</cell>
+                        <cell>feature structure based analysis</cell>
+                        <cell>28</cell>
+                        <cell>32</cell>
+                    </row>
+                    <row>
+                        <cell>linking</cell>
+                        <cell>linking, segmentation, and alignment </cell>
+                        <cell>11</cell>
+                        <cell>12</cell>
+                    </row>
+                    <row>
+                        <cell>namesdates</cell>
+                        <cell>names, dates, and named entities</cell>
+                        <cell>52</cell>
+                        <cell>30</cell>
+                    </row>
+                    <row>
+                        <cell>nets</cell>
+                        <cell>graphs, networks, and trees</cell>
+                        <cell>12</cell>
+                        <cell>12</cell>
+                    </row>
+                </table>
             </div>
 
 
-            <div type="slide">
+            <!--<div type="slide">
                 <head>The current TEI landscape </head>
                 <list>
                     <item>Basic organization of continuous texts</item>
@@ -200,153 +400,37 @@
                     <item>Et cetera: see <ptr target="http://www.tei-c.org/P5/Guidelines/"/></item>
                 </list>
                 <p>... in short, a new kind of Encyclopaedia!</p>
-            </div>
+            </div>-->
 
 
 
-            <div type="slide">
-                <head>The TEI Architecture</head>
-                <list type="unordered">
-                    <item> TEI is a <emph>modular</emph> system. You use it to create an encoding
-                        system that reflects your own needs, by choosing from the TEI's pre-defined
-                            <term>modules</term>
-                    </item>
-                    <item>Each module defines a set of elements and their attributes</item>
-                    <item>you can choose just the elements you want, and also (within limits) change
-                        their properties </item>
-                    <item>you can add in non-TEI elements, either from other standards or completely
-                        new </item>
-                </list>
-                <p rend="box">Define your goals clearly <emph>before</emph> trying to use the TEI
-                    !</p>
-            </div>
-
-            <div type="slide">
-                <head>TEI modules</head>
-                <table xml:id="tab-mods">
-                    <row>
-                        <cell>
-                            <hi>Name</hi>
-                        </cell>
-                        <cell>
-                            <hi>P5 chapter</hi>
-                        </cell>
-                    </row>
-                    <row>
-                        <cell>analysis</cell>
-                        <cell>Simple Analytic Mechanisms</cell>
-                    </row>
-                    <row>
-                        <cell>certainty</cell>
-                        <cell>Certainty and Responsibility</cell>
-                    </row>
-                    <row>
-                        <cell>core</cell>
-                        <cell>Elements Available in All TEI Documents</cell>
-                    </row>
-                    <row>
-                        <cell>corpus</cell>
-                        <cell>Language Corpora</cell>
-                    </row>
-                    <row>
-                        <cell>dictionaries</cell>
-                        <cell>Dictionaries</cell>
-                    </row>
-                    <row>
-                        <cell>drama</cell>
-                        <cell>Performance Texts</cell>
-                    </row>
-                    <row>
-                        <cell>figures</cell>
-                        <cell>Tables, Formulae, and Graphics</cell>
-                    </row>
-                    <row>
-                        <cell>gaiji</cell>
-                        <cell>Representation of Non-standard Characters and Glyphs</cell>
-                    </row>
-                    <row>
-                        <cell>header</cell>
-                        <cell>The TEI Header</cell>
-                    </row>
-                    <row>
-                        <cell>iso-fs</cell>
-                        <cell>Feature Structures</cell>
-                    </row>
-                    <row>
-                        <cell>linking</cell>
-                        <cell>Linking, Segmentation, and Alignment</cell>
-                    </row>
-                    <row>
-                        <cell>msdescription</cell>
-                        <cell>Manuscript Description</cell>
-                    </row>
-                    <row>
-                        <cell>namesdates</cell>
-                        <cell>Names, Dates, People, and Places</cell>
-                    </row>
-                    <row>
-                        <cell>nets</cell>
-                        <cell>Graphs, Networks, and Trees</cell>
-                    </row>
-                    <row>
-                        <cell>spoken</cell>
-                        <cell>Transcriptions of Speech</cell>
-                    </row>
-                    <row>
-                        <cell>tagdocs</cell>
-                        <cell>Documentation Éléments</cell>
-                    </row>
-                    <row>
-                        <cell>tei</cell>
-                        <cell>The TEI Infrastructure</cell>
-                    </row>
-                    <row>
-                        <cell>textcrit</cell>
-                        <cell>Critical Apparatus</cell>
-                    </row>
-                    <row>
-                        <cell>textstructure</cell>
-                        <cell>Default Text Structure</cell>
-                    </row>
-                    <row>
-                        <cell>transcr</cell>
-                        <cell>Representation of Primary Sources</cell>
-                    </row>
-                    <row>
-                        <cell>verse</cell>
-                        <cell>Verse</cell>
-                    </row>
-                </table>
-            </div>
+            
             <div type="slide">
                 <head>How do you choose?</head>
                 <list>
                     <item>Take the lot ! (not a very smart choice)</item>
-                    <item>Use a predefined selection (TEI Lite, TEI Bare...) </item>
+                    <item>Use a predefined selection (TEI Lite,  simplePrint, EpiDoc ...) </item>
                     <item>Roll your own -- according to your specific project needs</item>
                 </list>
-                <p>Yes, this means that you have to know about all the possibilities ...</p>
+                <p>Yes, this means that you have to know about all the possibilities ... but fortunately
+                    the TEI community is full of people just like you!                </p>
 
-                <list type="gloss">
-                    <label>Roma</label>
-                    <item>an online tool for helping in this task</item>
-                </list>
-                <p rend="box">http://www.tei-c.org/Roma/</p>
             </div>
-
+<!--
             <div type="slide">
                 <head>... leading to the many flavours of TEI</head>
                 <p>Suppose you want to encode a bibliographic description. The TEI makes you choose
                     between :<list>
                         <item><gi>bibl</gi> (contains any combination of bibliographic elements and
                             text, or just text)</item>
-                        <item><gi>biblStruct</gi> or <gi>biblFull</gi> (both containing a specific
-                            set of bibliographic elements in a specific order and no text)</item>
-                        <item>(and other things...) </item>
+                        <item><gi>biblStruct</gi> (contains a specific set of bibliographic elements
+                            in a specific order and no text)</item>
+                        <item><gi>biblFull</gi> (contains a specific set of bibliographic elements
+                            in a different specific order and no text)</item>
                     </list>
                 </p>
             </div>
-
+-->
             <div type="slide">
                 <head>Is the TEI a standard ?</head>
                 <figure>
@@ -354,7 +438,7 @@
                 </figure>
                 <cb/>
                 <list>
-                    <item>The TEI is not TEI All, or TEI Lite, or TEI Simple, or Epidoc, or CES,
+                    <item>The TEI is not TEI All, or TEI Lite, or TEI simplePrint, or Epidoc, or CES,
                         or... </item>
                     <item>So what is it?</item>
                 </list>
@@ -369,16 +453,16 @@
                 <cb/>
                 <p>Each box here represents .. <list>
                         <item>a set of elements, their attributes, and constraints about their
-                            usage</item>
-                        <item>the set of documents which match those constraints</item>
+                            usage;</item>
+                        <item>the set of documents which match those constraints.</item>
                     </list></p>
                 <p>
                     <list>
                         <item><hi rend="it">TEI All</hi> is the set of all TEI
-                            definitions/documents</item>
-                        <item>A <term>TEI subset</term> is a selection from TEI All</item>
+                            definitions/documents;</item>
+                        <item>A <term>TEI subset</term> is a selection from TEI All;</item>
                         <item>A <term>TEI extension</term> permits definitions/documents beyond TEI
-                            All </item>
+                            All.</item>
                     </list></p>
             </div>
             <div type="slide">
@@ -397,12 +481,12 @@
                 <head>What does it mean to be <soCalled>TEI Conformant</soCalled>?</head>
                 <list>
                     <item><label>be honest</label>: every XML element claiming to belong to the TEI
-                        namespace should respect the semantics of its TEI definition
+                        namespace should respect the semantics of its TEI definition.
                         <!-- eg l vs line --></item>
                     <item><label>be explicit</label>: the formal documentation provided by a TEI ODD
-                        makes make explicit how you have chosen to use the TEI</item>
+                        makes explicit how you have chosen to use the TEI.</item>
                     <item>The TEI elements in a conformant TEI document must be valid with respect
-                        to the TEI All schema</item>
+                        to the TEI All schema.</item>
                 </list>
                 <p rend="box">The purpose of these rules is to make <soCalled>blind
                         interchange</soCalled> easier... though they cannot guarantee it</p>
@@ -413,12 +497,12 @@
                 <list>
                     <item>you could markup your text in HTML 5 or design your own tagging
                         system</item>
-                    <item>(but what a waste of time that would be)</item>
+                    <item>(but what a waste of time that would be); </item>
                     <item>you could use a database system</item>
-                    <item>(but you would need some nontrivial technical support)</item>
+                    <item>(but you would need some nontrivial technical support). </item>
                 </list>
                 <p rend="box">Understanding the TEI requires you to master a <soCalled>sweet
-                        spot</soCalled>, midway between technology and the humanities</p>
+                        spot</soCalled>, midway between technology and the humanities.</p>
             </div>
 
 
@@ -448,7 +532,7 @@
                     in a document, it will always be marked up and in the same way. No optional
                     markup!</p>
             </div>
-           
+
             <div type="slide">
                 <head>For more information</head>
                 <p> About TEI: <list>

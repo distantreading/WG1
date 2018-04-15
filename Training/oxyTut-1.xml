@@ -82,7 +82,7 @@
                      created (between <code>document.</code> and <tag>/sentence</tag>). Type
                         <code>ALT-SHIFT-d</code> to close this <gi>sentence</gi> and start a new one. You
                      can now add a second sentence to your document. The screen will scroll to the right as you type: <figure>
-                        <graphic url="media/tuto-5.png" width="90%"/>
+                        <graphic url="media/tuto-5.png" width="90%" />
                      </figure>
                   </item>
                   <item>To make the document look a bit nicer, type CTRL-SHIFT-p or
@@ -97,7 +97,7 @@
                      figure 1. 
                   </item>
                   <item> Number the second sentence "2" in the same way. <figure>
-                     <graphic url="media/tuto-7.png" width="60%"/>
+                     <graphic url="media/tuto-7.png" width="50%"/>
                   </figure> </item>
                   <item> Oxygen does its best to keep your document well-formed. Type a start-tag
                      for a new element somewhere (<gi>wibble</gi> for example) and oXygen will
@@ -138,7 +138,7 @@
                   <item>In the New dialog, scroll down to the section <ident>Framework
                         templates</ident>, within that select <ident>TEI P5</ident>, and within that
                      select <ident>Bare</ident>. 
-                     <figure> <graphic width="60%" url="media/tuto-8a.png"/>
+                     <figure> <graphic width="50%" url="media/tuto-8a.png"/>
                      </figure>
                   </item>
                </list>
@@ -148,7 +148,8 @@
                         <gi>teiHeader</gi> element containing metadata, which is followed by a
                         <gi>text</gi> element, containing the text itself. 
                
-                  <graphic height="8cm" url="media/tuto-8.png"/>
+                </p>
+               <p>       <graphic width="75%" url="media/tuto-8.png"/>
                </p>
                <div>
                   <head>Add the metadata</head>
