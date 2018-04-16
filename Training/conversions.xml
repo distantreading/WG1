@@ -65,28 +65,9 @@
                 <head>Another nifty shell script</head>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples"> cp LV0001-hdr.txt LV0001.eltec
                     iconv Orig/ZeibJ0201.htm -f windows-1257 -t utf-8 | perl retag.prl >>
-                    LV0001.eltec iconv Orig/ZeibJ0202.htm -f windows-1257 -t utf-8 | perl retag.prl
-                    >> LV0001.eltec iconv Orig/ZeibJ0203.htm -f windows-1257 -t utf-8 | perl
-                    retag.prl >> LV0001.eltec iconv Orig/ZeibJ0204.htm -f windows-1257 -t utf-8 |
-                    perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0205.htm -f windows-1257 -t utf-8
-                    | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0206.htm -f windows-1257 -t
-                    utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0207.htm -f windows-1257
-                    -t utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0208.htm -f
-                    windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0209.htm
-                    -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec iconv
-                    Orig/ZeibJ0210.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec
-                    iconv Orig/ZeibJ0211.htm -f windows-1257 -t utf-8 | perl retag.prl >>
-                    LV0001.eltec iconv Orig/ZeibJ0212.htm -f windows-1257 -t utf-8 | perl retag.prl
-                    >> LV0001.eltec iconv Orig/ZeibJ0213.htm -f windows-1257 -t utf-8 | perl
-                    retag.prl >> LV0001.eltec iconv Orig/ZeibJ0214.htm -f windows-1257 -t utf-8 |
-                    perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0215.htm -f windows-1257 -t utf-8
-                    | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0216.htm -f windows-1257 -t
-                    utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0217.htm -f windows-1257
-                    -t utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0218.htm -f
-                    windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec iconv Orig/ZeibJ0219.htm
-                    -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec iconv
-                    Orig/ZeibJ0220.htm -f windows-1257 -t utf-8 | perl retag.prl >> LV0001.eltec cat
-                    tail.txt >> LV0001.eltec </egXML>
+                    LV0001.eltec 
+                    <!-- ... and repeat that for each file -->
+                    cp tail.txt >> LV0001.eltec </egXML>
                 <p rend="box">The file <ident>LV001-hdr.txt</ident> contains the top part of a TEI
                     file, including a skeleton header; <ident>tail.txt</ident> contains the closing
                         <tag>/body>&lt;/TEI</tag>. </p>
@@ -125,16 +106,28 @@
                         <item>Otherwise, just remove tags</item>
                         <item>Special TEI elements (e.g. <gi>choice</gi>) need special
                             attention</item>
-                        <item>The header may need hand editing </item><item>What to do when TEI usage is unexpected (e.g. <att>n</att> on <gi>div</gi> ? </item>
-                    </list></p>
+                        <item>The header may need hand editing </item>
+                      </list></p>
             </div>
             <div type="slide">
                 <head>The input</head>
-            </div>
+              <p>  <graphic url="../media/lasswitz-0.png" width="98%"/>
+             </p>   <cb/>
+            <p>    <graphic url="../media/lasswitz-1.png" width="98%"/>    
+           </p> </div>
             <div type="slide">
                 <head>The stylesheet</head>
+                      <p>      <graphic url="../media/lasswitz-2.png" width="98%"/>
+             </p>       <cb/>
+                  <p>  <graphic url="../media/lasswitz-3.png" width="98%"/> 
+              A <gi>persName</gi> inside an <gi>author</gi> is handled differently
+                    from one elsewhere.</p>
+                
             </div>
             <div type="slide"><head>The output</head>
+                  <p>      <graphic url="../media/lasswitz-4.png" width="98%"/>
+                </p>       <cb/>
+                <p>  <graphic url="../media/lasswitz-5.png" width="98%"/> </p>
                 <p rend="box">See further <ptr
                     target="http://github.com/distantreading/WG1/Sampler/DE"/></p>
                 

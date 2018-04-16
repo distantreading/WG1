@@ -2,7 +2,7 @@
 <!--<?oxygen RNGSchema="http://www.deutschestextarchiv.de/basisformat.rng" type="xml"?>
 <?xml-model href="http://www.deutschestextarchiv.de/basisformat.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 -->
-<?xml-model href="file:/home/lou/Public/WG1/out/encoding_proposal.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="https://distantreading.github.io/Schema/eltec-1.rnc" type="application/relax-ng-compact-syntax"?>
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">   <teiHeader>
 <fileDesc>

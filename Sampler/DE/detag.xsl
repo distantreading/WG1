@@ -51,7 +51,8 @@
 
     <!-- comment out unwanted content -->
     <xsl:template
-        match="t:figure | t:editionStmt | t:biblFull | t:msDesc | t:encodingDesc | t:front | t:back | t:lg">
+        match="t:figure | t:editionStmt | t:biblFull | t:msDesc |
+                    t:encodingDesc | t:front | t:back | t:lg">
         <xsl:comment>Suppressed <xsl:value-of select="name(.)"/>: <xsl:value-of select="."/>
       </xsl:comment>
     </xsl:template>
@@ -60,7 +61,8 @@
     <xsl:template match="t:lb | t:fw"/>
 
     <!-- suppress some unwanted attributes --> 
-    <xsl:template match="t:pb/@facs | t:p/@part | t:title/@type | t:title/@n | t:bibl/@type | t:bibl/@status"/>
+    <xsl:template match="t:pb/@facs | t:p/@part | t:title/@type | t:title/@n | 
+        t:bibl/@type | t:bibl/@status"/>
 
     <!-- suppress unwanted tags but retain content -->
     <xsl:template match="t:resp/t:note | t:hi">
@@ -75,13 +77,46 @@
     <xsl:template match="t:space"> &#160; </xsl:template>
     
  <!-- measure type not supported -->
-    <xsl:template match="t:measure/@type">
-        <xsl:attribute name="unit">
-            <xsl:value-of select="."/>
-        </xsl:attribute>
+    <xsl:template match="t:measure">
+              <xsl:choose>
+                <xsl:when test="@type = 'tokens'">
+                    <measure unit="words">
+                        <xsl:value-of select="."/>
+                    </measure></xsl:when>
+                <xsl:otherwise>
+                    <xsl:comment>
+                        <xsl:text>Suppressed measure unit-type </xsl:text>
+                        <xsl:value-of select="@type"/>: <xsl:value-of select="."/></xsl:comment>
+                </xsl:otherwise>
+            </xsl:choose>
     </xsl:template>
 
-    <xsl:template match="t:text">
+<!-- milestone attributes tweak -->
+
+<xsl:template match="t:milestone">
+    <milestone>
+    <xsl:attribute name="type">
+        <xsl:value-of select="@unit"/>
+    </xsl:attribute>
+    <xsl:attribute name="rend">
+        <xsl:value-of select="@rendition"/>
+    </xsl:attribute>
+    </milestone>
+</xsl:template>
+    
+    <!-- textclass tweak -->
+    
+    <xsl:template match="t:textClass">
+       <textClass> <xsl:element name="catRef">
+            <xsl:attribute name="target">
+                <xsl:value-of 
+                    select="t:classCode[@scheme='http://www.deutschestextarchiv.de/doku/klassifikation#DTACorpus']"/>
+               
+            </xsl:attribute>
+        </xsl:element>
+    </textClass>
+    </xsl:template>
+        <xsl:template match="t:text">
         <text>
             <xsl:attribute name="xml:id">
                 <xsl:value-of select="$ELTeCid"/>

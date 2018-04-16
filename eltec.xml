@@ -141,13 +141,7 @@
                         </classes>
                     </elementSpec>
 
-                    <elementSpec ident="measure" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.measurement" mode="delete"/>
-                        </classes>
-                    </elementSpec>
-
-                    <!-- constrain extent -->
+                           <!-- constrain extent -->
                     <elementSpec ident="extent" mode="change">
                         <content>
                             <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
@@ -183,6 +177,9 @@
                     </elementSpec>
 
                     <elementSpec ident="measure" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.measurement" mode="delete"/>
+                        </classes>
                         <attList>
                             <attDef ident="unit" usage="req">
                                 <datatype>
