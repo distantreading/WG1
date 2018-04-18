@@ -46,6 +46,7 @@
         <elementRef key="div"/>
         <elementRef key="front"/>
         <elementRef key="head"/>
+       <elementRef key="hi"/>
         <elementRef key="l"/>
         <elementRef key="p"/>
         <elementRef key="pb"/>

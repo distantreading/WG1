@@ -41,7 +41,7 @@
                 <schemaSpec ident="ELTeC" start="TEI">
                     <moduleRef key="tei"/>
                     <moduleRef key="core"
-                        include="author bibl choice corr orig date emph foreign gap head item l label lg list measure
+                        include="author bibl choice corr orig date emph foreign gap head hi item l label lg list measure
             milestone name note p pb publisher pubPlace quote ref relatedItem resp respStmt sp stage hi term title "/>
                     <moduleRef key="textstructure" include="TEI text div body front back trailer"/>
                     <moduleRef key="header"
