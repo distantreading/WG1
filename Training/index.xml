@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Training school on OCR and TEI for the production of ELTeC</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Unpublished source: prepared for Wurzburg Workshop, April 2018</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>No source: this is a born digital document</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2018-04-19">LB add page for ocr day</change>
+         
+         <change when="2018-03-22">LB add header; confirm timetable</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="slide">
+            <head>Würzburg Training School, 16-17 April 2018</head>
+            <p>This two-day Training School is about Optical Character Recognition and Text Encoding
+               for the production of ELTeC (European Literary Text Collection) contributions. The
+               ELTeC will contain a principled sample of European literary production, containing
+               the full text of novels in each of many European languages published between 1850 and
+               1920. </p>
+            <p>The aim of the Training School is to enable a group of Action participants to go from
+               a novel in the form of a scanned book to a TEI-encoded full-text version of the
+               novel. </p>
+            <p>The target audience are researchers from participating countries interested in
+               contributing texts to the ELTeC but who need to digitize texts for this purpose and
+               who are insufficiently familiar with the practicalities of Optical Character
+               Recognition for full-text generation and with the fundamentals of using the
+               Guidelines of the Text Encoding Initiative to do so.</p>
+            <list type="gloss">
+               <label>Local Organizers:</label>
+               <item>Leonard Konle and Fotis Jannidis (University of Würzburg)</item>
+               <label>Trainers:</label>
+               <item>Christian Reul, Leonard Konle, and Lou Burnard </item><label>Participants: </label>
+               <item></item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>Day One : Optical Character Recognition</head>
+            <list>
+               <item>Introduction : OCR basics and Hands-on with Abbyy FineReader, by Leonard Konle
+                  (University of Wurzburg)</item>
+               <item><ref target="https://distantreading.github.io/Training/ocr4all_reul.pdf"
+                     >OCR4all</ref> : talk and demonstration of OCR4ALL: an open source tool
+                  providing a full OCR Workflow, by Christian Reul and Frank Puppe (University of
+                  Würzburg)</item>
+               <item>
+                  <ref target="https://distantreading.github.io/Training/CNC_AR_Wurzburg_TS.pdf"
+                     >Digitization practice in the Czech National Corpus</ref>: talk by Anna
+                  Řehořková (Charles University)</item>
+            </list>
+            <p>Location : Philosophische Fakultät, Room 6.E.8, <ref
+                  target="https://goo.gl/maps/Lx7B3dRRpMs">Googlemaps</ref></p>
+         </div>
+         <div type="slide">
+            <head>Day Two: creating marked up texts</head>
+            <p>In this one day workshop you'll learn: <list>
+                  <item>what TEI XML markup is and why we use it for the ELTeC</item>
+                  <item>how ELTeC texts should be marked up, at levels 0 and 1</item>
+                  <item>some practical ways of creating ELTeC texts starting from other formats,for
+                     example : <list>
+                        <item>plain text output by an OCR system</item>
+                        <item>digital documents created with Word or Open Office</item>
+                        <item>ePub or HTML documents found on the internet</item>
+                     </list></item>
+               </list></p>
+            <p>You should have some previous experience of working with digital documents, for
+               example creating web pages, or editing documents with Word, but you are not expected
+               to know anything about TEI or XML! </p>
+            <p>Almost all the practical work will be done using <ref
+                  target="https://www.oxygenxml.com/xml_editor/download_oxygenxml_editor.html"
+                  >oXygen XML Editor</ref>. If you don't already have it installed, you may like to
+               download an evaluation copy of this software before the workshop. </p>
+            <p>You will also need your own copy of the sample files we will be working with.
+               Download them by clicking <ref target="work.zip">this
+               link</ref><!--, 
+                  or by checking out <ref target="">this github repository</ref>-->.
+            </p>
+         </div>
+         <div type="slide">
+            <head>Provisional Programme (subject to revision) </head>
+            <list>
+               <item>09h30 :<ref target="oxyTut-1.pdf"> Practical session 1</ref>: Using an XML
+                  Editor (oXygen) -- what can we do with it? (45 mins)</item>
+               <item>10h15 : <ref target="tei4eltec.html">What is the TEI and why are we using
+                     it</ref>? (30 mins) </item>
+               <item>10h45 : <hi>coffee break</hi></item>
+               <item>11h00 : <ref target="oxyTut-2.pdf">Practical session 2</ref>: creating an ELTeC
+                  level 0 text from OCR output (60 mins) </item>
+               <item>12h00 : <hi>lunch break</hi></item>
+               <item>13h00 : <ref target="eltecSchema.html">Understanding ELTeC</ref>: explaining
+                  level 0 and level 1 schemas (30 mins)</item>
+               <item>13h30 :<ref target="oxyTut-2.pdf"> Practical session 2 contd</ref>: working
+                  with Abbyy outputs (60 mins)</item>
+               <item>14h30 : <ref target="eltecHdr.html">Understanding the TEI header</ref> (30
+                  mins)</item>
+               <item>15h00 : <hi>coffee break</hi></item>
+               <item>15h15 : <ref target="oxyTut-3.pdf">Practical session 3</ref>: working on your
+                  own (60 mins)</item>
+               <item>16h15 : <ref target="conversions.html">Converting from ePub and HTML</ref> :
+                  some examples (45 mins)</item>
+               <item>17h00 : Open discussion and next steps (30 mins) </item>
+            </list>
+            <p>Location : Philosophische Fakultät, Room 3.E.3, <ref
+                  target="https://goo.gl/maps/Lx7B3dRRpMs">Googlemaps</ref></p>
+         </div>
+      </body>
+   </text>
+</TEI>
