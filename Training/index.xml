@@ -46,7 +46,7 @@
          <div type="slide">
             <head>Day One : Optical Character Recognition</head>
             <list>
-               <item>Introduction : OCR basics and Hands-on with Abbyy FineReader, by Leonard Konle
+               <item>Introduction : <ref target="https://distantreading.github.io/Training/OCRBasics.pdf">OCR basics and Hands-on with Abbyy FineReader</ref>, by Leonard Konle
                   (University of Wurzburg)</item>
                <item><ref target="https://distantreading.github.io/Training/ocr4all_reul.pdf"
                      >OCR4all</ref> : talk and demonstration of OCR4ALL: an open source tool
