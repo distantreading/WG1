@@ -129,6 +129,7 @@
 
                     <elementSpec ident="title" mode="change">
                         <classes mode="replace">
+                            <memberOf key="att.global"/>
                             <memberOf key="model.biblPart"/>
                         </classes>
                     </elementSpec>
