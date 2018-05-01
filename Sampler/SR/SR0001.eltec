@@ -1,33 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://distantreading.github.io/Schema/eltec-0.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
+    <teiHeader xmlns="http://www.tei-c.org/ns/1.0" xml:lang="SR">
         <fileDesc>
             <titleStmt>
-                <author dates="1851 1891" sex="m">Лаза К. Лазареви</author>
-                <title>ШВАБИЦА</title>
+                <title>Швабица: ELTeC издање</title>
+                <title xml:lang="en">Švabica : ELTeC edition</title>
+                <author>Лазаревић, Лазар (1851-1891)
+                    <idno type="viaf">http://viaf.org/viaf/17270562</idno>
+                    <idno type="wiki">https://www.wikidata.org/wiki/Q975807</idno>
+                </author>
+                <author xml:lang="en">Lazarević, Laza K.	(1851-1891)</author>		
+                <respStmt>
+                    <resp>Кодирање за ELTeC</resp>
+                    <name>Цветана Крстев</name>
+                    <name xml:lang="en">Lou Burnard</name>
+                </respStmt>
             </titleStmt>
-            <publicationStmt><p>Demonstration file prepared for the ELTeC Sampler</p></publicationStmt>
+            <extent>
+                <measure unit="words">14857</measure>
+                <measure unit="pages">44</measure>
+            </extent>
+            <publicationStmt xml:lang="en"><!-- this should be translated -->
+                <p>Incorporated into the ELTeC <date>2018-04-22</date>
+                </p>
+            </publicationStmt>
             <sourceDesc>
-                <p xml:lang="en">Converted from a Word file of unknown provenance.</p>
-                <p>Švabica je pripovjetka srpskog književnika Laze Lazarevića prvi put objavljena
-                    1888. godine. Djelomično je autobiografskog karaktera, odnosno inspirirana
-                    autorovim životom za vrijeme studija u Berlinu početkom 1870-ih. Napravljena je
-                    u epistolarnom obliku, odnosno sastoji se od pisama koje Miša, srpski student u
-                    Berlinu šalje svom prijatelju i u kome opisuje svoju ljubav prema gazadaričinoj
-                    kćeri Ani, ali i spoznaju da se sa njome ne može vjenčati i dovesti natrag u
-                    Srbiju, jer je tamo ne bi prihvatili.</p>
+                <bibl>
+                    <author>Лаза К. Лазаревић`</author>
+                    <title>Приповетке, свеска 1</title>
+                    <pubPlace>popuniti</pubPlace> <!-- needs to be supplied! -->
+                    <publisher>popuniti</publisher>
+                    <date>1898</date>
+                    <idno type="wiki">https://www.wikidata.org/wiki/Q43376750</idno>
+                </bibl>
+                
+                <bibl>
+                    <title>Пројекат Антологија српске књижевности - електронски текст Швабице Лазе К. Лазаревића</title>
+                    <title xml:lang="en">Anthology of Serbian Literature Project Etext of Švabica, by Laza K. Lazarević</title>
+                    <ref target="http://www.antologijasrpskeknjizevnosti.rs/ASK_SR_AzbucnikDela.aspx">Word верзија преузета дана <date>2018-02-19</date>
+                    </ref>
+                </bibl>
+                
             </sourceDesc>
         </fileDesc>
-         <revisionDesc>
-            <listChange>
-                <change><date>2018-02-26T11:51:32Z</date><name>Windows User: conversion</name></change>
-            </listChange>
+        <profileDesc>
+            <langUsage>
+                <language ident="sr" usage="99">српски</language>
+                <language ident="de" usage="1">немачки</language>
+            </langUsage>
+            
+            <textClass>
+                <catRef target="#author_m #reprint_1"/>
+                <keywords>
+                    <term>приповетка</term>
+                    <term>реализам</term>
+                </keywords>
+                <keywords xml:lang="EN">
+                    <term>novella</term>
+                    <term>realism</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            <change when="20180501">Incorporate information from Cvetana; make eltec-0 conformant</change>
         </revisionDesc>
     </teiHeader>
-    <text>
-        <body xml:lang="sr" xml:id="SR0001">
-            <p><hi rend="Drop_slovo_Char"><seg rend="color(447DA7)"
-                        style="font-family:Ask_ms_cap;font-size:92pt">К</seg></hi>ад сам се полани
+    <text xml:lang="sr" xml:id="SR0001">
+        <body >
+            <p><hi rend="Drop_slovo_Char">К</hi>ад сам се полани
                 вратио из Италије, дошао ми је до руку овај рукопис. Читао сам га под утисцима који
                 су на ме оставили Помпеји. Кад сам изишао из Помпеја, певао сам песму „Свја сујета
                 человјеческаја, јелика не пребивајут по смерти”. Чудновато да ми се та песма врзла
@@ -414,7 +455,7 @@
                     ја од срца заплакао, да ме није срамота и да не морам место плача прегнути на
                     дело поштена човека. </p>
                 <p>Рекох да ћу почети где сам стао. </p>
-                <p><hi style="font-size:14pt">Глава I</hi>
+                <p><hi >Глава I</hi>
                 </p>
                 <p>Тражи ђавола са свећом </p>
                 <p>Од неко доба она ради сваку ноћ до 12 и дуже, јер спрема поклоне за Божић — ти
@@ -491,7 +532,7 @@
                 <p>Било је већ 1 по поноћи. Чух како и она оде у своју собу и опрезно затвори врата. </p>
                 <p>Ту ноћ нисам ништа мислио, бар не знам да сам шта мислио, па ипак нисам заспао до
                     3 сахата. — „Она хоће срце” — то ми је непрестано излазило пред очи. </p>
-                <p><hi style="font-size:14pt">Глава II</hi>
+                <p><hi >Глава II</hi>
                 </p>
                 <p>О љубофи паклена! </p>
                 <p><hi rend="italic">Потражи сам аутора</hi>
@@ -962,7 +1003,7 @@
                     плашљиво из собе носећи у руци чинију; и Ана оде за њом. </p>
                 <p>— Николай Ивановичъ, — рекох ја Туманову — пожалуйста пойдите вонъ И не пускайте
                     никого изъ дамъ въ комнату.24 </p>
-                <p>— Только, пожалуйста, колотите какь сл<hi style="font-family:Cambria Math"
+                <p>— Только, пожалуйста, колотите какь сл<hi 
                     >ѣ</hi>вдуеть.25 </p>
                 <p>Остали смо у соби само ми људи. И Макс пође к вратима. Ја га стигох кад беше
                     ухватио за кваку. Ухватим га за руку и извучем до сред собе. </p>
@@ -1363,7 +1404,7 @@
                     груди: </p>
                 <p>— Бато, бато! </p>
                 <p>— Не плачи, сешо, — рекох јој. Узех слику и одох напоље...” </p>
-                <p>(1879)<anchor xml:id="bookmark8"/></p>
+                <p>(1879)</p>
             </div>
         </body>
     </text>
