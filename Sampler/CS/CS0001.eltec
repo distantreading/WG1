@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="file:/home/lou/Public/WG1/out/encoding_proposal.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="https://distantreading.github.io/Schema/eltec-0.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title>Vdavky Nanynky Kulichovy : ELTeC edition</title>
-                <author dates="1854 1935" sex="m">Ignát Herrmann</author>
+            <author>Herrmann, Ignát (1854-1935)</author>
             </titleStmt>
             <publicationStmt>
                 <p>Demonstration file prepared for the ELTeC Sampler</p>
@@ -22,19 +22,13 @@
     <text xml:id="CS0001" xml:lang="cs">
         <body>
            
-
-  <div type="liminal"><p><graphic url="../Images/obalka.jpg"/></p></div>
-
-  <div type="liminal"><p><graphic url="../Images/upoutavka_eknihy.jpg"/></p></div>
-
 <div type="liminal">
 
-<p>Vdavky<lb/>
+<p>Vdavky
 Nanynky Kulichovy I</p>
 
 <p>a co se kolem nich sběhlo</p>
 
-<p> </p>
 
 <p>Ignát Herrmann</p>
 
@@ -48,25 +42,21 @@ F. Topič v roce 1924 (HERRMANN, Ignát. Vdavky Nanynky Kulichovy a co se
 kolem nich sběhlo. Díl I. 4. vyd. Praha: F. Topič, 1924. 353 s.
 Sebrané spisy Ignáta Herrmanna, díl XXIV.).</p>
 
-<p> </p>
 
 <p>Na obálce je použit výřez z obrazu Václava
 Jansy (1859–1913) <hi>Maltézské náměstí na Malé Straně</hi>.</p>
 
-<p> </p>
 
 
 
-<p><ref><img xmlns="http://www.w3.org/1999/xhtml" src="../Images/image001.jpg" alt="" class="calibre7"/></ref></p>
 
 <p>Text díla (Ignát Herrmann: Vdavky Nanynky Kulichovy
-I), publikovaného<lb/>
+I), publikovaného
 <ref>Městskou knihovnou v Praze</ref>,
 není vázán autorskými právy.</p>
 
 
 
-<p> </p>
 
 <p>Citační záznam této e-knihy:</p>
 
@@ -76,11 +66,9 @@ datum citace e-knihy – př. cit. rrrr-mm-dd]. ISBN 978-80-7532-594-5 (epub
 
 <p><ref>http://web2.mlp.cz/koweb/00/04/32/54/51/vdavky_nanynky_kulichovy_I.epub</ref>.</p>
 
-<p> </p>
 
 
 
-<p><ref><img xmlns="http://www.w3.org/1999/xhtml" alt="" src="../Images/image002.jpg" class="calibre7"/></ref></p>
 
 <p>Vydání (obálka, upoutávka, citační stránka a grafická
 úprava), jehož autorem je Městská knihovna v Praze, podléhá licenci <ref>Creative Commons Uveďte
@@ -88,7 +76,6 @@ autora-Nevyužívejte dílo komerčně-Zachovejte licenci 3.0 Česko</ref>.</p>
 
 
 
-<p> </p>
 
 <p>Verze 1.0 z 17. 3. 2017.</p>
 
@@ -102,19 +89,16 @@ pro čtenáře </head>
 <p>Tato e-kniha obsahuje poznámky pod čarou, které
 jsou hypertextově provázány.</p>
 
-<p> </p>
 
 <p>Poznámku pod čarou zobrazíte kliknutím na
 hypertextový odkaz, který je umístěn na pozici číslice na konci slova nebo
 odstavce, ke kterému se poznámka vztahuje (např.: Text<ref/><ref/><ref>0</ref>).</p>
 
-<p> </p>
 
 <p>Hypertextový odkaz je jednosměrně nebo
 obousměrně přesměrován na text poznámky pod čarou, která je umístěna průběžně
 v textu nebo na konci dokumentu.</p>
 
-<p> </p>
 
 <p>Případný návrat na původní místo v textu
 e-knihy provedete kliknutím na hypertextový odkaz, který je umístěn na pozici
@@ -125,9 +109,9 @@ pod čarou).</p>
 
 <div type="liminal">
 
-<lg><l>Přemilému příteli a krajanu královéhradeckému<lb/>
-ADOLFU ČERNÉMU a choti jeho paní BOŽENĚ<lb/>
-v upřímné družnosti a oddanosti věnuje I. H.</l></lg>
+<l>Přemilému příteli a krajanu královéhradeckému</l><l>
+ADOLFU ČERNÉMU a choti jeho paní BOŽENĚ</l><l>
+v upřímné družnosti a oddanosti věnuje I. H.</l>
 
 <p>V říjnu 1918.</p>
 
@@ -135,8 +119,8 @@ v upřímné družnosti a oddanosti věnuje I. H.</l></lg>
 
 <div type="liminal">
 
-<lg><l>Děj této pražské historie položen jest<lb/>
-v prvou polovici sedmdesátých let věku devatenáctého.</l></lg>
+<l>Děj této pražské historie položen jest</l><l>
+v prvou polovici sedmdesátých let věku devatenáctého.</l>
 
 </div>
 
@@ -896,10 +880,10 @@ se při jejím zpěvu tak mile chrupalo.</p>
 
 <p>Teď zanotovala:</p>
 
-<lg><l>„Na blízku za městem stojí tam hrob,<lb/>
-kdo koho miluje, slzmi jej skrop,<lb/>
-Mnislav a Běla tam spějí,<lb/>
-Mnislav a Běla tam spějí…!“</l></lg>
+<l>„Na blízku za městem stojí tam hrob,</l><l>
+kdo koho miluje, slzmi jej skrop,</l><l>
+Mnislav a Běla tam spějí,</l><l>
+Mnislav a Běla tam spějí…!“</l>
 
 <p>Náhle se panička odmlčela.</p>
 
@@ -909,10 +893,10 @@ mně tahle na jazyk přijde, dycky mě potká něco nemilého!“</p>
 <p>Ztichla na chvíli, ale pojednou docela
 bezděky pokračovala:</p>
 
-<lg><l>„Štěstí jim nechtělo na světě přát,<lb/>
-smrt však jim popřála pospolu spát,<lb/>
-jak divné věci se dějí,<lb/>
-jak divné věci se dějí!“</l></lg>
+<l>„Štěstí jim nechtělo na světě přát,</l><l>
+smrt však jim popřála pospolu spát,</l><l>
+jak divné věci se dějí,</l><l>
+jak divné věci se dějí!“</l>
 
 <p>„Zatracepená písnička!“ přerušila se opět a mrskla
 hadrem. „Jako s uděláním – z hlavy mi nejde! Copak se to zas na
@@ -9223,10 +9207,10 @@ postelí visela kytara.</p>
 krk, zabral v struny. Nástroj byl rozladěn. Pan Dundr ladil chvíli, a když
 konečně udeřil čistý akord, rozezpíval se tiše, aby neslyšel nikdo jiný:</p>
 
-<lg><l>Můj džbánek, má dýmka, mé děvče, můj zpěv<lb/>
-jsou blaha mého života na světě zjev.<lb/>
-Když džbánek a dýmku a děvčátko mám,<lb/>
-tuť sobě ze srdce i rád zazpívám – –</l></lg>
+<l>Můj džbánek, má dýmka, mé děvče, můj zpěv</l><l>
+jsou blaha mého života na světě zjev.</l><l>
+Když džbánek a dýmku a děvčátko mám,</l><l>
+tuť sobě ze srdce i rád zazpívám – –</l>
 
 <p>Byla to písnička, kterou před lety odnesl z výletu
 do Divoké Šárky. Zpívala ji tam s průvodem kytary vyzrávající slečna,
@@ -9262,8 +9246,8 @@ která je popadala za krk v mosazné vidlici fotografově.</p>
 sáhl po zežloutlé obálce s vysekávanými okraji, na níž bylo napsáno
 vybledajícím již, rezivým písmem:</p>
 
-<lg><l>Toť ze všeho, co kdysi mně tak milo,<lb/>
-toť vše, co z drahé Kristynky mi zbylo!</l></lg>
+<l>Toť ze všeho, co kdysi mně tak milo,</l><l>
+toť vše, co z drahé Kristynky mi zbylo!</l>
 
 <p>Bylo to písmo páně Dundrovo z mladických let, o kterých
 se dnes u Kulichů byl rozpovídal.</p>
@@ -9331,13 +9315,12 @@ abychom zachovali přirozený tok dialogu a vnitřního monologu. Naším cíle
 bylo, aby si současný čtenář knihu užil tak, jako si ji mohli užít tehdejší
 čtenáři.</p>
 
-<p> </p>
 
 <p><hi>Redakce
 MKP</hi></p>
 
 </div>
-<div type="liminal">
+<!--<div type="liminal">
 <head>Poznámky pod čarou</head>
 
 
@@ -9619,26 +9602,23 @@ Zásuvka. Pozn. red.</note>
 <p>Vdavky
 Nanynky Kulichovy I</p>
 
-<p> </p>
 
 <p>Edice E-knihovna</p>
 
 <p>Redakce Kateřina Kováčová</p>
 
-<p> </p>
 
 <p>Vydala Městská
 knihovna v Praze</p>
 
 <p>Mariánské nám. 1, 115 72 Praha 1</p>
 
-<p> </p>
 
 <p>V MKP 1. vydání</p>
 
 <p>Verze 1.0 z 17. 3. 2017</p>
 
-<p> </p>
 
 <p>ISBN 978-80-7532-594-5 (epub)</p>
 </div>
+--></body></text></TEI>
