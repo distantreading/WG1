@@ -1,4 +1,4 @@
-## Czech text from Michael
+## Czech text from Michal
 
 An epub file. So actually a zip archive containing lots of fluff and one HTML file per chapter. What could possibly go wrong?
 
@@ -15,4 +15,9 @@ echo $f; \
 perl -i -pe"s/nbsp/#160/g" $f; \
 xmllint --dropdtd $f | saxon -s:- retag.xsl >> CS0001.eltec; done
 ~~~~
+
+After retagging I manually divided into front body and back. Commented out
+the div containing notes since these are not allowed in eltec-0.
+A later process needs to match the notes up with the ref elements in
+the text and decide what to do with the remaining liminal divs.
 

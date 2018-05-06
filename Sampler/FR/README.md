@@ -9,5 +9,7 @@
   - comment out problematic bits of header and `<abstract>` pro tem
   - change `<seg[@rend]>` to hi
   - comment out `<milestone/>` elements
+  
+- header needs attention; no pb  
 
  
