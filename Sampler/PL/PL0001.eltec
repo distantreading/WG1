@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="file:/home/lou/Public/WG1/out/encoding_proposal.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="https://distantreading.github.io/Schema/eltec-1.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Ogniem i mieczem (With Fire and Sword): ELTeC edition</title>
-                <author dates="1846 1916" sex="m">Henryk Sienkiewicz</author>
+                <title>Ogniem i mieczem : ELTeC edition</title>
+                <title xml:lang="en">With Fire and Sword</title>
+                <author>Sienkiewicz, Henryk (1846-1916)</author>
             </titleStmt>
             <publicationStmt>
                 <p>Demonstration file prepared for the ELTeC Sampler</p>
@@ -83,10 +84,10 @@
                         południowych województwach.</p>
                     <p>Wszelako zimy owej ptactwo nie ciągnęło z wrzaskiem ku Rzeczypospolitej. Na
                         stepie było ciszej, niż zwykle. W chwili, gdy rozpoczyna się powieść nasza,
-                        słońce zachodziło właśnie, a <choice>
+                        słońce zachodziło właśnie, a <!-- choice>
                             <orig>czerwowawe</orig>
-                            <corr>czerwonawe</corr>
-                        </choice> jego promienie rozświecały okolicę pustą zupełnie. Na północnym
+                            --><corr>czerwonawe</corr><!--
+                        </choice --> jego promienie rozświecały okolicę pustą zupełnie. Na północnym
                         krańcu Dzikich pól, nad Omelniczkiem, aż do jego ujścia, najbystrzejszy
                         wzrok nie mógłby odkryć jednej żywej duszy, ani nawet żadnego ruchu w
                         ciemnych, zeschniętych i zwiędłych burzanach. Słońce połową tylko tarczy
@@ -404,7 +405,7 @@
                         tuman i noc. Dopiero gdy odjechali już z pół stajania, wiatr przyniósł od
                         nich słowa kozackiej pieśni:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Oj wyzwoły Boże nas wsich bidnych newilnykiw,</l>
                             <l rend="indent">„Z tiażkoj newoli,</l>
                             <l rend="indent">„Z wiry bisurmanskoj, —</l>
@@ -415,7 +416,7 @@
                             <l> „Wysłuchaj Boże u prośbach naszych,</l>
                             <l>„U neszczasnych mołytwach,</l>
                             <l>„Nas bidnych newilnykiw.“</l>
-                        </lg>
+                        
                     </quote>
                     <p>Głosy cichły zwolna, potem stopiły się z powiewem szumiącym po
                         oczeretach.</p>
@@ -423,10 +424,10 @@
                 <pb n="021"/>
                 <div type="chapter">
                     <head>ROZDZIAŁ II.</head>
-                    <p>Nazajutrz z rana, przybywszy do Czehryna, pan <choice>
+                    <p>Nazajutrz z rana, przybywszy do Czehryna, pan <!-- choice>
                             <orig>Skrzetuski,</orig>
-                            <corr>Skrzetuski</corr>
-                        </choice> stanął w mieście w domu księcia Jeremiego, gdzie też miał kęs
+                            --><corr>Skrzetuski</corr><!--
+                        </choice --> stanął w mieście w domu księcia Jeremiego, gdzie też miał kęs
                         czasu zabawić, aby ludziom i koniom dać wytchnienie po długiej z Krymu
                         podroży, którą z przyczyny wezbrania i nadzwyczaj bystrych prądów na
                         Dnieprze, trzeba było lądem odbywać, gdyż żaden bajdak nie mógł owej zimy
@@ -812,12 +813,12 @@
                         łagodniejszymi głosami lir, przy których wtórze ślepcy śpiewali ulubioną
                         wówczas pieśń:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Sokołe jasnyj</l>
                             <l> Brate mij ridnyj,</l>
                             <l> Ty wysoko łetajesz,</l>
                             <l> Ty daleko widajesz“.</l>
-                        </lg>
+                        
                     </quote>
                     <p>A obok tego rozlegały się dzikie okrzyki: „hu! ha! — hu! ha!“ kozaków,
                         tańczących na rynku trepaka, <pb n="037"/>pomazanych dziegciem i pijanych
@@ -1013,16 +1014,16 @@
                         innymi, a gdy bywało zostawał sam w swojej kwaterze, wówczas chwytał lutnię
                         w rękę i śpiewywał:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Tyś jest specyał nad specyały“.</l>
-                        </lg>
+                        
                     </quote>
                     <p>lub też:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Jak tatarska orda,</l>
                             <l> Bierzesz w jasyr corda!“</l>
-                        </lg>
+                        
                     </quote>
                     <p>Ale że to był człek wesoły i przytem żołnierz wielce w swym zawodzie
                         zamiłowany, więc nie brał zbyt do serca tego, że Anusia uśmiechała się tak
@@ -1499,10 +1500,10 @@
                         Był to człowiek wielkiego charakteru i niepospolitej cnoty. Dorobiwszy się
                         dość szybko średniej fortuny, pomyślał <pb n="066"/>zaraz o starszym swym
                         bracie Konstantynie, któren na Wołyniu w biedzie został i odepchnięty od
-                        możnej <choice>
+                        możnej <!-- choice>
                             <orig>rorodziny</orig>
-                            <corr>rodziny</corr>
-                        </choice>, zmuszony był chodzić po dzierżawach. Tego wraz z żoną i pięcioma
+                            --><corr>rodziny</corr><!--
+                        </choice -->, zmuszony był chodzić po dzierżawach. Tego wraz z żoną i pięcioma
                         synami do Rozłogów sprowadził i każdym kawałkiem chleba się z nimi dzielił.
                         W ten sposób obaj Kurcewicze żyli w spokoju aż do końca 1634 roku, w którym
                         Wasil z królem Władysławem pod Smoleńsk ruszył. Tam to zaszedł ów
@@ -1756,12 +1757,12 @@
                     <p>Ciche dźwięki ozwały się w komnacie, a do wtóru im kniaziówna poczęła śpiewać
                         pieśń pobożną:</p>
                     <quote>
-                        <lg>
+                        
                             <l>I w noc i we dnie wołam do Cię Panie!</l>
                             <l> Pofolguj męce i łzom żałośliwym,</l>
                             <l> Bądź mnie grzesznemu ojcem miłościwym,</l>
                             <l rend="indent">Usłysz wołanie.</l>
-                        </lg>
+                        
                     </quote>
                     <p>Niewidomy przechylił w tył głowę i słuchał słów pieśni, które zdawały się
                         działać jak balsam kojący, bo z twarzy znikały mu stopniowo ból i
@@ -1773,12 +1774,12 @@
                         wychodzi pytać, czy nie apostołowie...</p>
                     <p>Tymczasem Helena śpiewała dalej:</p>
                     <quote>
-                        <lg>
+                        
                             <l>Wskaż-że mi drogę, o Panie nad Pany,</l>
                             <l> Bom jako pątnik na pustyń bezdrożu,</l>
                             <l> Lub jak wśród fali na niezmiernem morzu</l>
                             <l rend="indent">Korab zbłąkany.</l>
-                        </lg>
+                        
                     </quote>
                     <p>Słodki głos jej brzmiał coraz silniej i z tą lutnią w ręku, z oczyma
                         wzniesionemi do góry była tak cudna, że namiestnik oczu nie mógł od niej
@@ -1983,10 +1984,10 @@
                     <p>Nastała chwila milczenia.</p>
                     <p>— Czekam odpowiedzi imość pani.</p>
                     <p>— Wybacz waćpan — odrzekła, ochłonąwszy, kniahini, a głos jej stał się suchy
-                        i ostry — zaszczyt <choice>
+                        i ostry — zaszczyt <!-- choice>
                             <orig>do</orig>
-                            <corr>to</corr>
-                        </choice> dla nas nie mały prośba takiego kawalera, ale nie może z niej nic
+                            --><corr>to</corr><!--
+                        </choice --> dla nas nie mały prośba takiego kawalera, ale nie może z niej nic
                         być, gdyż Helenę obiecałam już komu innemu.</p>
                     <p>— Zważ wszelako waćpani, jako troskliwa opiekunka, czy to nie było przeciw
                         woli kniaziówny i czym nie lepszy niźli ten, komu ją waćpani obiecałaś.</p>
@@ -2109,9 +2110,9 @@
                         cały był pogrążony w zadumie i tęsknocie, gdy wtem z owej zadumy zbudziły go
                         urwane słowa pieśni:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Tużu, tużu, serce bołyt...“</l>
-                        </lg>
+                        
                     </quote>
                     <p>W głębi lasu, na wązkiej wyjeżdżonej przez chłopów drożynie, ukazał się
                         Bohun. Koń jego całkiem był pokryty pianą i błotem.</p>
@@ -2305,10 +2306,10 @@
                         wojłoku, a że większa część życia schodziła mu na pracach obozowych, więc
                         odbiły się one na jego twarzy. Wszelako oblicze to na pierwszy rzut oka
                         zdradzało nadzwyczajnego człowieka. Malowała się w nim żelazna, nieugięta
-                        wola i majestat, przed którym każdy mimowoli musiał <choice>
+                        wola i majestat, przed którym każdy mimowoli musiał <!-- choice>
                             <orig>uczylić</orig>
-                            <corr>uchylić</corr>
-                        </choice> głowy. Widać było, że ten człowiek zna swoją potęgę i wielkość — i
+                            --><corr>uchylić</corr><!--
+                        </choice --> głowy. Widać było, że ten człowiek zna swoją potęgę i wielkość — i
                         gdyby mu jutro włożyć koronę na głowę, nie czułby się ani zdziwionym, ani
                         przygniecionym jej ciężarem. Oczy miał duże, spokojne, prawie słodkie,
                         jednakże gromy zdawały się być w nich uśpione i czułeś, że biada temu, ktoby
@@ -2387,10 +2388,10 @@
                         padał na dziewczynę, to taki <pb n="103"/>zamyślony i szklany, jak gdyby nie
                         na tę patrzył, do której śpiewał niegdyś:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Jak tatarska orda,</l>
                             <l> Bierzesz w jassyr corda!...“</l>
-                        </lg>
+                        
                     </quote>
                     <p>— Co mu się stało? — pytała sama siebie rozpieszczona faworytka całego dworu
                         i tupiąc drobną nóżką, czyniła postanowienie, rzecz tę zbadać. Nie kochała
@@ -2771,10 +2772,10 @@
                         takiego. Zaczęto mówić o Chmielnickim, o jego na Sicz ucieczce, i o
                         grodowych z Czerkas, Bogusławia, Korsunia i innych miast, zbiegłych za nim —
                         ale powiadano też i co innego. Od lat całych krążyły już wieści o wielkiej
-                        wojnie z pogany, której król chciał, by dobrym mołojcom łupu <pb n="120"/><choice>
+                        wojnie z pogany, której król chciał, by dobrym mołojcom łupu <pb n="120"/><!-- choice>
                             <orig>przysposporzyć</orig>
-                            <corr>przysporzyć</corr>
-                        </choice>, ale Lachy nie chcieli — a teraz te wszystkie wieści pomieszały
+                            --><corr>przysporzyć</corr><!--
+                        </choice -->, ale Lachy nie chcieli — a teraz te wszystkie wieści pomieszały
                         się ze sobą i zrodziły w głowach ludzkich niepokój i oczekiwanie czegoś
                         nadzwyczajnego.</p>
                     <p>Niepokój ów przedarł się i za mury łubniańskie. Na te wszystkie oznaki
@@ -2823,10 +2824,10 @@
                     <p>— Weźmiesz czterdziestu pocztowych. Ruszysz <pb n="122"/>dziś pod wieczór, a
                         przed wieczorem przyjdziesz jeszcze po instrukcye. Ważną to misyę waszmości
                         powierzam.</p>
-                    <p>Pan Bychowiec <choice>
+                    <p>Pan Bychowiec <!-- choice>
                             <orig>wszedł</orig>
-                            <corr>wyszedł</corr>
-                        </choice> uradowany; w przedpokoju spotkał Skrzetuskiego z kilkoma oficerami
+                            --><corr>wyszedł</corr><!--
+                        </choice --> uradowany; w przedpokoju spotkał Skrzetuskiego z kilkoma oficerami
                         z artyleryi.</p>
                     <p>— A co tam? — spytali go.</p>
                     <p>— Dziś ruszam w drogę.</p>
@@ -2864,10 +2865,10 @@
                     <p>Książę popatrzył na niego przeciągle swemi czarnemi oczyma i po chwili
                         spytał:</p>
                     <p>— Co ty tam masz?</p>
-                    <p>Namiestnik stał zmieszany jak winowajca, nie mogąc znieść badawczego <choice>
+                    <p>Namiestnik stał zmieszany jak winowajca, nie mogąc znieść badawczego <!-- choice>
                             <orig>spojrzenia,</orig>
-                            <corr>spojrzenia.</corr>
-                        </choice></p>
+                            --><corr>spojrzenia.</corr><!--
+                        </choice --></p>
                     <p>— Już widzę, że muszę prawdę mówić — rzekł — gdyż przed rozumem W. Ks. Mości
                         żadne arcana ostać się nie mogą, jedno nie wiem, znajdęli łaskę w uszach W.
                         Ks. Mości.</p>
@@ -2931,10 +2932,10 @@
                 <pb n="126"/>
                 <div type="chapter">
                     <head>ROZDZIAŁ VII.</head>
-                    <p>Było to już w drugiej połowie marca. <choice>
+                    <p>Było to już w drugiej połowie marca. <!-- choice>
                             <orig>Tratwy</orig>
-                            <corr>Trawy</corr>
-                        </choice> puściły się bujno; perekotypola zakwitły, step zawrzał życiem.
+                            --><corr>Trawy</corr><!--
+                        </choice --> puściły się bujno; perekotypola zakwitły, step zawrzał życiem.
                         Rankiem namiestnik, jadąc na czele swych ludzi, jechał jakby morzem, którego
                         falą ruchliwą była kołysana wiatrem trawa. A wszędy pełno wesołości i głosów
                         wiosennych, krzyków, świergotu, pogwizdywań, kląskań, trzepotania skrzydeł,
@@ -3194,10 +3195,10 @@
                         zaczarowana, tajemnicza, do której ciągnął wszelki duch przygód chciwy.
                         Niejeden całe życie na Ukrainie strawił, a nie mógł się pochwalić, by Sicz
                         widział — chyba żeby chciał zapisać się do bractwa, a do tego mniej już
-                        między szlachtą było ochotników. Czasy Samka <choice>
+                        między szlachtą było ochotników. Czasy Samka <!-- choice>
                             <orig>Zborowwskiego</orig>
-                            <corr>Zborowskiego</corr>
-                        </choice> przeszły i nie miały wrócić więcej. Rozbrat między Siczą a
+                            --><corr>Zborowskiego</corr><!--
+                        </choice --> przeszły i nie miały wrócić więcej. Rozbrat między Siczą a
                         Rzecząpospolitą, który powstał za czasów Nalewajki i Pawluka, nietylko nie
                         ustawał, ale zwiększał się coraz bardziej i napływ na Sicz herbowego ludu,
                         nietylko polskiego ale i ruskiego, nie różniącego się od Niżowców ni mową ni
@@ -3386,10 +3387,10 @@
                     <p>Wiatr świstał, wiosła wydawały plusk jednostajny, a smutny. Przewoźnicy
                         poczęli śpiewać:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Oj to te pili, pilili,</l>
                             <l> Ne tumany ustawali“.</l>
-                        </lg>
+                        
                     </quote>
                     <p>Skrzetuski obwinął się w burkę i położył na posłaniu, które umościli dla
                         niego żołnierze. Począł myśleć o Helenie, o tem, że ona dotąd nie w
@@ -4108,10 +4109,10 @@
                         idziemy pomścić strasznych i okrutnych krzywd naszych, które po
                         chrześcijańsku cierpieliśmy, pókiśmy mogli, od nieszczerych Lachów,
                         komisarzy, starostów i ekonomów, całej szlachty i żydów. Nad któremi
-                        krzywdami jużeście mości <choice>
+                        krzywdami jużeście mości <!-- choice>
                             <orig>panonowie</orig>
-                            <corr>panowie</corr>
-                        </choice> i całe wojsko zaporoskie wiele łez wyleli i mnie dlatego buławę
+                            --><corr>panowie</corr><!--
+                        </choice --> i całe wojsko zaporoskie wiele łez wyleli i mnie dlatego buławę
                         dali, abym się za niewinność naszą i całych wojsk snadniej mógł upominać. Co
                         ja uważając za wielką łaskę mości panów dobrodziei moich, najjaśniejszego
                         carza o pomoc prosić jechałem, którą nam ofiarował. Ale będąc w gotowości i
@@ -4389,14 +4390,14 @@
                         rozserdywsia!“ — a w kilka chwil jakiś przeraźliwy głos jął śpiewać koło
                         ogniska:</p>
                     <quote>
-                        <lg>
+                        
                             <l rend="indent">Hej, hej!</l>
                             <l rend="indent">Tuhaj-bej</l>
                             <l>Rozserdywsia duże,</l>
                             <l rend="indent">Hej, hej,</l>
                             <l rend="indent">Tuhaj-bej</l>
                             <l>Ne serdysia druże!</l>
-                        </lg>
+                        
                     </quote>
                     <p>Wnet tysiące głosów powtórzyło: „Hej-hej! Tuhaj-bej“ — i oto powstawała jedna
                         z tych pieśni, które potem, rzekłbyś, wicher roznosił po całej Ukrainie i
@@ -4701,11 +4702,11 @@
                         wojska; huknęły kotły, zadźwięczały litaury i teorbany, a do wtóru im pieśń,
                         przez tysiące głosów śpiewana, wstrząsnęła powietrzem i stepem:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Hej wy stepy, wy rydnyje,</l>
                             <l> „Krasnym cwitom pysanyje,</l>
                             <l> „Jako morę szyrokije.</l>
-                        </lg>
+                        
                     </quote>
                     <p>Teorbaniści puścili cugle i przechyleni w tył na kulbakach, z oczyma
                         utkwionemi w niebo, uderzali o struny teorbanów; litaurzyści, wyciągnąwszy
@@ -5514,10 +5515,10 @@
                     <p>— Psie! — zawył Tuhaj-bej — ty gubisz wojsko chanowe!</p>
                     <p>I chwilę stali naprzeciw siebie, parskając nozdrzami. Ochłonął pierwszy
                         Chmielnicki.</p>
-                    <p>— <choice>
+                    <p>— <!-- choice>
                             <orig>Tuhaj-beju uspokój się!</orig>
-                            <corr>Tuhaj-beju, uspokój się!</corr>
-                        </choice> — rzekł. — Fala przerwała bitwę, gdy Krzeczowski złamał już
+                            --><corr>Tuhaj-beju, uspokój się!</corr><!--
+                        </choice --> — rzekł. — Fala przerwała bitwę, gdy Krzeczowski złamał już
                         dragonią. Ja ich znam! Jutro już z mniejszą furyą bić się będą. Step
                         rozmięknie do reszty. Husarya ulegnie. Jutro wszyscy będą nasi.</p>
                     <p>— Rzekłeś! — burknął Tuhaj-bej.</p>
@@ -6395,10 +6396,10 @@
                         rozkrzyżował i wykrzyknął:</p>
                     <p>— Skrzetuski! Na Boga żywego, to Skrzetuski!</p>
                     <p>Namiestnik ani drgnął.</p>
-                    <p>— Mości namiestniku, nie poznajesz-że mnie? jam jest Bychowiec. <choice>
+                    <p>— Mości namiestniku, nie poznajesz-że mnie? jam jest Bychowiec. <!-- choice>
                             <orig>Co ci jest.</orig>
-                            <corr>Co ci jest?</corr>
-                        </choice></p>
+                            --><corr>Co ci jest?</corr><!--
+                        </choice --></p>
                     <p>Namiestnik milczał.</p>
                     <p>— Zbudźże się, na Boga! Hej, towarzysze, a bywajcie-no!</p>
                     <pb n="274"/>
@@ -6497,10 +6498,10 @@
                     <p>To rzekłszy, pan Zagłoba jedną ręką pod bok się ułapił, drugą podniósł
                         gąsiorek nad głową i śpiewać począł:</p>
                     <quote>
-                        <lg>
+                        
                             <l>Hej Jaguś, hej Kunduś, daj jeno szklanic,</l>
                             <l> Daj autem i pysia, nie zważaj na nic.</l>
-                        </lg>
+                        
                     </quote>
                     <p>Tu pan Zagłoba przerwał nagle, ujrzawszy Rzędziana, postawił gąsiorek na
                         stole i rzekł:</p>
@@ -6558,10 +6559,10 @@
                         Kurcewiczowej w Rozłogach“.</p>
                     <p>— Toś ty, rarożku, do Łubniów jechał i nie wiesz gdzie Rozłogi? — rzekł
                         Bohun, poglądając strasznym wzrokiem na Rzędziana.</p>
-                    <p>— Gdzie mi kazali, tamem <choice>
+                    <p>— Gdzie mi kazali, tamem <!-- choice>
                             <orig>jechal!</orig>
-                            <corr>jechał!</corr>
-                        </choice> — odparł pachołek.</p>
+                            --><corr>jechał!</corr><!--
+                        </choice --> — odparł pachołek.</p>
                     <p>— Mam-li otworzyć? Sigillum szlacheckie święta rzecz — zauważył Zagłoba.</p>
                     <p>— Mnie tu hetman w. dał prawo wszelakie pisma przeglądać. Otwieraj i
                         czytaj.</p>
@@ -6586,10 +6587,10 @@
                         pociesz, bo i mnie się raz zdarzyło...</p>
                     <p>Nagle rozpoczęta facecya skonała na ustach pana Zagłoby. Bohun siedział
                         nieporuszenie przy stole, ale twarz jego była jakby konwulsyami ściągnięta,
-                        blada, oczy zamknięte, brwi sfałdowane. Działo się z <choice>
+                        blada, oczy zamknięte, brwi sfałdowane. Działo się z <!-- choice>
                             <orig>nlm</orig>
-                            <corr>nim</corr>
-                        </choice> coś strasznego.</p>
+                            --><corr>nim</corr><!--
+                        </choice --> coś strasznego.</p>
                     <p>— Co tobie? — spytał pan Zagłoba.</p>
                     <p>Kozak począł gorączkowo ręką machać, a z ust jego wyszedł przyciszony,
                         chrapliwy głos:</p>
@@ -6888,10 +6889,10 @@
                         zarysowały się przed ich oczyma. We dworze było cicho. Psy nie szczekały.
                         Wielki złoty księżyc świecił nad domostwami. Z sadu dochodził zapach kwiatów
                         wiśni i jabłoni — wszędzie tak było spokojnie, noc tak cudna, że zaiste
-                        brakło tylko tego, aby jaki teorban ozwał się gdzieś pod oknami pięknej <choice>
+                        brakło tylko tego, aby jaki teorban ozwał się gdzieś pod oknami pięknej <!-- choice>
                             <orig>księżnlczki</orig>
-                            <corr>księżniczki</corr>
-                        </choice>.</p>
+                            --><corr>księżniczki</corr><!--
+                        </choice -->.</p>
                     <p>W niektórych oknach było jeszcze światło.</p>
                     <p>Dwaj jeźdźcy zbliżyli się do bramy.</p>
                     <pb n="027"/>
@@ -6910,10 +6911,10 @@
                 <pb n="028"/>
                 <div type="chapter">
                     <head>ROZDZIAŁ II.</head>
-                    <p>Kurcewiczowie nie spali jeszcze. Jedli wieczerzę w owej sieni <choice>
+                    <p>Kurcewiczowie nie spali jeszcze. Jedli wieczerzę w owej sieni <!-- choice>
                             <orig>napełnlonej</orig>
-                            <corr>napełnionej</corr>
-                        </choice> zbroją, która szła przez całą szerokość domu, od majdanu, aż do
+                            --><corr>napełnionej</corr><!--
+                        </choice --> zbroją, która szła przez całą szerokość domu, od majdanu, aż do
                         sadu z drugiej strony. Na widok Bohuna i pana Zagłoby, zerwali się na równe
                         nogi. Na twarzy kniahini odbiło się nietylko zdziwienie, ale
                         nieukontentowanie i przestrach zarazem. Młodych kniaziów było tylko dwóch:
@@ -6929,10 +6930,10 @@
                         Tatarzyna, aleć i to wiadomo, że kto do nieba chce iść, ten musi podróżnego
                         w dom przyjąć, głodnego nakarmić, spragnionego napoić...</p>
                     <p>— Siadajcie tedy, jedzcie i pijcie — mówiła stara kniahini. — Dziękujemy,
-                        żeście przyjechali. No, no <pb n="029"/>Bohun, alem <choice>
+                        żeście przyjechali. No, no <pb n="029"/>Bohun, alem <!-- choice>
                             <orig>slę</orig>
-                            <corr>się</corr>
-                        </choice> ciebie nie spodziewała, chyba, że sprawę masz do nas.</p>
+                            --><corr>się</corr><!--
+                        </choice --> ciebie nie spodziewała, chyba, że sprawę masz do nas.</p>
                     <p>— Może i mam — rzeki zwolna watażka.</p>
                     <p>— Jaką? — pytała niespokojnie kniahini.</p>
                     <p>— Przyjdzie pora, to pogadamy. Dajcie odpocząć. Z Czehryna prosto jadę.</p>
@@ -7003,10 +7004,10 @@
                     <p>— Niech ona mówi za siebie, wy za siebie: przyrzekacie?</p>
                     <p>— Przyrzekamy — rzekła kniahini.</p>
                     <p>— Przyrzekamy — powtórzyli kniaziowie.</p>
-                    <p>Bohun wstał <choice>
+                    <p>Bohun wstał <!-- choice>
                             <orig>nagłe</orig>
-                            <corr>nagle</corr>
-                        </choice> i zwróciwszy się do Zagłoby, rzekł donośnym głosem:</p>
+                            --><corr>nagle</corr><!--
+                        </choice --> i zwróciwszy się do Zagłoby, rzekł donośnym głosem:</p>
                     <p>— Mości Zagłobo! Pokłoń się i ty o dziewkę, może i tobie przyrzekną.</p>
                     <p>— Co ty, kozacze, upił się!? — zawołała kniahini.</p>
                     <p>Bohun, zamiast odpowiedzi, wydobył list Skrzetuskiego i zwróciwszy się do
@@ -7169,10 +7170,10 @@
                         w grzebach napełniał całą sień mdłem światłem, drgającem na kałużach krwi;
                         głąb mroczyła się cieniem. Pan Zagłoba zbliżył się do kniahini, zobaczyć czy
                         nie oddycha jeszcze, i położył jej rękę na twarzy, ale twarz ta była już
-                        zimna — więc wyszedł pośpiesznie na majdan, bo go w tej <choice>
+                        zimna — więc wyszedł pośpiesznie na majdan, bo go w tej <!-- choice>
                             <orig>izble</orig>
-                            <corr>izbie</corr>
-                        </choice> strach brał. Na majdanie kozacy zaczęli już hulankę. Ognie były
+                            --><corr>izbie</corr><!--
+                        </choice --> strach brał. Na majdanie kozacy zaczęli już hulankę. Ognie były
                         porozpalane, a przy ich blasku ujrzał pan Zagłoba stojące beczki miodu, wina
                         i gorzałki z poodbijanemi górnemi dnami. Kozacy czerpali z nich, jak u
                         studni, i pili na śmierć. Inni, rozgrzani już trunkiem, gonili się z
@@ -7209,10 +7210,10 @@
                         rzuciło się, by zastąpić strażników, którzy dotychczas nie brali udziału w
                         hulatyce. Ci nadbiegli wnet, z łatwą do zrozumienia skwapliwością.</p>
                     <p>— Hajda, hajda! — zawołał Zagłoba, ukazując im beczki z napitkami.</p>
-                    <p>— Diakujem, pane! — odparli, <choice>
+                    <p>— Diakujem, pane! — odparli, <!-- choice>
                             <orig>zanurzajac</orig>
-                            <corr>zanurzając</corr>
-                        </choice> blaszanki.</p>
+                            --><corr>zanurzając</corr><!--
+                        </choice --> blaszanki.</p>
                     <p>— Za godzinę zluzować mi i tamtych.</p>
                     <p>— Słucham — odpowiedział essauł.</p>
                     <pb n="040"/>
@@ -7974,11 +7975,11 @@
                         z bielmem na jednem oku, z siwą brodą. „Did“ zbliżył się do Heleny,
                         śpiewając ochrypłym głosem:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Sokole jasnyj, brate mij ridnyj,</l>
                             <l> „Ty wysoko litajesz,</l>
                             <l> „Ty szyroko widajesz.“</l>
-                        </lg>
+                        
                     </quote>
                     <p>Kniaziówna klasnęła w ręce i po raz pierwszy od ucieczki z Rozłogów uśmiech
                         rozjaśnił jej śliczną twarz.</p>
@@ -8187,13 +8188,13 @@
                         rozmów, ze szczekaniem psów. Widząc to wszystko, pan Zagłoba skręcił zaraz w
                         ów jar, zabrząknął w lirę i począł śpiewać:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Ej, tam na hori</l>
                             <l> Żenci żnut,</l>
                             <l> A popid horoju,</l>
                             <l> Popid zełenoju,</l>
                             <l> Kozaki idut“.</l>
-                        </lg>
+                        
                     </quote>
                     <p>Tak śpiewając, zbliżył się do gromady ludzi, stojących przed kuźnią.
                         Rozejrzał się: byli to chłopi, po większej części pijani. Prawie wszyscy
@@ -8557,10 +8558,10 @@
                         był prawdziwym ojcem spokojnych osiedleńców, komisarze zaś jego bali się
                         czynić krzywd powierzonemu sobie ludowi. Ale lud ten, niedawno ze zbójców w
                         rolników zmieniony, przykrzył sobie prawo, surowość rządów i porządek,
-                        uciekał więc tam, kędy nadzieja dzikiej swobody <choice>
+                        uciekał więc tam, kędy nadzieja dzikiej swobody <!-- choice>
                             <orig>zabłysła,</orig>
-                            <corr>zabłysła.</corr>
-                        </choice> W wielu wioskach uciekły do Chmielnickiego nawet i baby. W
+                            --><corr>zabłysła.</corr><!--
+                        </choice --> W wielu wioskach uciekły do Chmielnickiego nawet i baby. W
                         Czabanówce i w Wysokiem wyszła cała ludność, spaliwszy za sobą chaty, aby
                         nie było gdzie wracać. W tych wioskach, w których zostało jeszcze trochę
                         ludu, zbrojono się na gwałt.</p>
@@ -9826,14 +9827,14 @@
                         rzeczek <pb n="151"/>i strumieni, w kraj pusty, głuchy, jedną puszczą
                         szumiący, o którego mieszkańcach mawiano w owych czasach:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Dał dla córeczki</l>
                             <l> Szlachcic Hołota</l>
                             <l> Dziegciu dwie beczki</l>
                             <l> Grzybów wianuszek,</l>
                             <l> Wjunów garnuszek,</l>
                             <l> I lechę błota“.</l>
-                        </lg>
+                        
                     </quote>
                     <p>Na błocie owem rosły wprawdzie nietylko grzyby, ale wbrew owym rytmom i
                         wielkie fortuny pańskie. Wszelako w tej chwili ludzie książęcy, którzy w
@@ -11076,7 +11077,7 @@
                         najliczniejsze głosy.</p>
                     <p>„Did“ uderzył silniej w lirę, odchrząknął i począł śpiewać:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Stań, obernysia, hlań zadywysia, kotory majesz mnoho<ref
                                     xml:id="cite_ref-16" target="#cite_note-16">[16]</ref>,</l>
                             <l> Że równy budesz tomu, w kotoroho ne majesz niczoho,</l>
@@ -11084,7 +11085,7 @@
                             <l> Wsi naszy sprawy, na swojej szali ważyt sprawedływe.</l>
                             <l> Stań, obernysia, hlań zadywysia, kotory wysoko</l>
                             <l> Umom litajesz, mudrosty znajesz, szyroko, hłuboko...“</l>
-                        </lg>
+                        
                     </quote>
                     <p>Tu „did“ przerwał na chwilę i westchnął, a za nim poczęli wzdychać i chłopi.
                         Coraz też ich więcej zbierało się koło niego — a i pan Skrzetuski, choć
@@ -11097,7 +11098,7 @@
                         ciszy i spokoju. Zadumał się i rozżalił — a tymczasem „did“ śpiewał
                         dalej:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Stań, obernysia, hlań zadywysia, kotory wojujesz,</l>
                             <l> Łukom, stryłamy, porochom, kulami i meczem szyrmujesz,</l>
                             <l> Bo też rycere i kawalere peredtym buwały,</l>
@@ -11108,7 +11109,7 @@
                             <l> Korola ne znajesz, rady ne dbajesz, sam sobie sejmujesz.</l>
                             <l> Hej porażajsia ne zapalajsia, bo ty rejmentarujesz,</l>
                             <l> Sam buławoju, wszem polskim kraju, jak sam choczesz kierujesz“.</l>
-                        </lg>
+                        
                     </quote>
                     <p>„Did“ znów ustał, a wtem kamyk wysunął się z pod opartej na nim ręki jednego
                         z semenów i począł się toczyć z szelestem na dół. Kilku chłopów zakryło oczy
@@ -11128,10 +11129,10 @@
                         jednocześnie w kilku miejscach, a teraz to imię, spadłszy na nieoczekujących
                         niczego i bezpiecznych — istotnie jak imię złego ducha — wytrąciło im broń z
                         ręki. Zresztą spisy i kosy nie dały się użyć w ciasnem miejscu, więc też
-                        przyparci, jak stado owiec, do przeciwległej ściany jaru, <choice>
+                        przyparci, jak stado owiec, do przeciwległej ściany jaru, <!-- choice>
                             <orig>rąbami</orig>
-                            <corr>rąbani</corr>
-                        </choice> szablami przez łby i twarze, bici, przebijani, deptani nogami,
+                            --><corr>rąbani</corr><!--
+                        </choice --> szablami przez łby i twarze, bici, przebijani, deptani nogami,
                         wyciągali z szaleństwem strachu ręce i chwytając nieubłagane żelazo, ginęli.
                         Cichy bór napełnił się złowrogim wrzaskiem bitwy. Niektórzy starali się ujść
                         przez prostopadłą ścianę jaru i drapiąc się, kalecząc sobie ręce, spadali na
@@ -11639,12 +11640,12 @@
                         przeszli, cóżeście czynili i jakim sposobem dostaliście się do Baru?</p>
                     <p>Pan Zagłoba wychylił kwartę miodu i rzekł:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„...Sed jam nox humida coelo praecipitat</l>
                             <l> Suadentque sidera cadentia somnos,</l>
                             <l> Sed si tantus amor casus cognoscere nostros,</l>
                             <l> Incipiam“..............</l>
-                        </lg>
+                        
                     </quote>
                     <p>— Moi mości panowie! gdybym zaczął wszystko szczegółowie opowiadać, tedy i
                         dziesięciu nocyby nie starczyło, a pewnie i miodu, bo stare gardło, jak
@@ -11826,10 +11827,10 @@
                         czas jakiś na się w milczeniu.</p>
                     <p>Pan Zagłoba, trzymając się ciągle przy Skrzetuskim, spoglądał na owo morze
                         ludzkie i mruczał:</p>
-                    <p>— Jezu Chryste, pocóżeś stworzył tyle tego <pb n="237"/><choice>
+                    <p>— Jezu Chryste, pocóżeś stworzył tyle tego <pb n="237"/><!-- choice>
                             <orig>tałałajstwa</orig>
-                            <corr>tałatajstwa</corr>
-                        </choice>! To chyba sam Chmielnicki z czernią i wszystkiemi wszami. Nie
+                            --><corr>tałatajstwa</corr><!--
+                        </choice -->! To chyba sam Chmielnicki z czernią i wszystkiemi wszami. Nie
                         rozpustaże to, powiedz mi waszmość? Czapkami nas pokryją. A tak dobrze
                         przedtem bywało w Ukrainie! Walą się i walą! bogdaj was dyabli w piekle
                         walili! I wszystko to na naszą skórę. Bogdaj ich nosacizna zżarła!...</p>
@@ -12822,10 +12823,10 @@
                         korowody.</p>
                     <p>Jakoż zaledwie orszak wspiął się do połowy wysokości wzgórza, trwający
                         dotychczas lekki powiew zmienił się w prawdziwy wicher, który począł
-                        oblatywać wzgórze z jakimś posępnym, <choice>
+                        oblatywać wzgórze z jakimś posępnym, <!-- choice>
                             <orig>złowróżbym</orig>
-                            <corr>złowróżbnym</corr>
-                        </choice> świstem i wówczas mołojcom wydało się, że między owemi rumowiskami
+                            --><corr>złowróżbnym</corr><!--
+                        </choice --> świstem i wówczas mołojcom wydało się, że między owemi rumowiskami
                         odzywają się jakieś ciężkie westchnienia, jakby wychodzące z ugniecionych
                         piersi, jakieś żałosne jęki, jakieś śmiechy, płacze i kwilenia dzieci. Całe
                         wzgórze poczęło się ożywiać, wołać różnymi głosami. Z za kamieni zdawały się
@@ -13002,17 +13003,17 @@
                     <p>Wtem przez ciężką lamową kotarę doszły do niej płynące z daleka dźwięki
                         teorbanu i jednocześnie jakiś głos począł nucić do wtóru znaną pieśń:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Oj cei lubosti</l>
                             <l> „Hirsze od słabosti!</l>
                             <l> „Słabost’ perebudu,</l>
                             <l> „Zdorow-że ja budu,</l>
-                        </lg>
+                        
                         <pb n="019"/>
-                        <lg>
+                        
                             <l>„Wirnoho kochania,</l>
                             <l> „Po wik ne zabudu.“</l>
-                        </lg>
+                        
                     </quote>
                     <p>Kniaziówna podniosła się na łożu, ale w miarę jak słuchała, oczy jej
                         otwierały się coraz szerzej z przerażenia — wreszcie krzyknęła strasznie i
@@ -13462,13 +13463,13 @@
                     <p>Wkrótce przez okna doszedł żywszy gwar <pb n="037"/>rozmowy, brzęk broni, a
                         później słowa pieśni połamanej na kilkanaście głosów:</p>
                     <quote>
-                        <lg>
+                        
                             <l>Bude sława sławna</l>
                             <l> Pomeż kozakami,</l>
                             <l> Pomeż druhami,</l>
                             <l> Na dowhjja lita</l>
                             <l> Do kińca wika...</l>
-                        </lg>
+                        
                     </quote>
                     <p>Głosy i tętent oddalały się i cichły coraz bardziej.</p>
                 </div>
@@ -13492,10 +13493,10 @@
                         wolałbym, żeby zginęła, niż żeby miała w jego plugawych rękach zostawać.</p>
                     <p>— I to nie pociecha, bo jeśli zginęła, to pohańbiona...</p>
                     <pb n="039"/>
-                    <p>— Desperacya! — rzecze <choice>
+                    <p>— Desperacya! — rzecze <!-- choice>
                             <orig>Wołodyjowsk!.</orig>
-                            <corr>Wołodyjowski.</corr>
-                        </choice></p>
+                            --><corr>Wołodyjowski.</corr><!--
+                        </choice --></p>
                     <p>— Och, desperacya! — powtórzył pan Longinus.</p>
                     <p>Zagłoba począł szarpać wąs i brodę, nakoniec wybuchnął:</p>
                     <p>— A żeby ich parchy zjadły, cały ten ród arcypieski! żeby z ich bebechów
@@ -13539,10 +13540,10 @@
                         ludzi wiernych i pewnych, którzy się podejmą niby to do kozaków uciec,
                         pomieszać się między Bohunowymi ludźmi i od nich czegoś się
                         dowiedzieć...</p>
-                    <p>— Ja mam dragonów Rusinów! — przerwał <choice>
+                    <p>— Ja mam dragonów Rusinów! — przerwał <!-- choice>
                             <orig>Wodyjowski</orig>
-                            <corr>Wołodyjowski</corr>
-                        </choice> — ja takich ludzi znajdę.</p>
+                            --><corr>Wołodyjowski</corr><!--
+                        </choice --> — ja takich ludzi znajdę.</p>
                     <p>— Czekaj waść... albo złapać języka z tych hultajów, którzy Bar brali, czy
                         czego nie wiedzą. Wszyscy oni patrzą w Bohuna jak w tęczę, że to im się jego
                             <pb n="041"/>dyabelska fantazya podoba: pieśni o nim śpiewają, — żeby im
@@ -13556,10 +13557,10 @@
                         Poprzebieramy się za chłopów i postaramy się dowiedzieć, gdzie on ją ukrył —
                         a jak raz będziemy wiedzieć, to już głowa moja w tem, że jej dostaniemy.
                         Najwięcej ważę ja i Skrzetuski, bo Bohun nas zna, a jakby poznał — no, toby
-                        nas matki <choice>
+                        nas matki <!-- choice>
                             <orig>rorodzone</orig>
-                            <corr>rodzone</corr>
-                        </choice> potem nie poznały, ale waszmościów obydwóch nie widział.</p>
+                            --><corr>rodzone</corr><!--
+                        </choice --> potem nie poznały, ale waszmościów obydwóch nie widział.</p>
                     <p>— Mnie widział — rzekł pan Podbipięta — ale mniejsza z tem.</p>
                     <p>— Może też jego Pan Bóg poda w nasze ręce! — zawołał pan Wołodyjowski.</p>
                     <p>— Już ja go tam nie chcę widzieć — mówił dalej Zagłoba. — Niech tam kat na
@@ -13758,10 +13759,10 @@
                         już trzeźwy, wleciał jak bomba.</p>
                     <p>— Mości książę, sprawiedliwości! — wołał. — W tym obozie jak u
                         Chmielnickiego, ni na krew, ni na godność względu nie mają! Szablami
-                        dygnitarzy <choice>
+                        dygnitarzy <!-- choice>
                             <orig>koronnnych</orig>
-                            <corr>koronnych</corr>
-                        </choice> sieką! Jeśli mi W. K. M. sprawiedliwości nie wymierzysz, na gardło
+                            --><corr>koronnych</corr><!--
+                        </choice --> sieką! Jeśli mi W. K. M. sprawiedliwości nie wymierzysz, na gardło
                         nie skażesz, to ja sam sobie ją wymierzę.</p>
                     <p>Książę porwał się z za stołu.</p>
                     <p>— Co się stało? kto waszmości pana napastował?</p>
@@ -13777,10 +13778,10 @@
                     <p>Było coś tak strasznego w jego oczach i przyciszonym głosie, że strażnik,
                         choć słynny z zuchwałości, zamilkł nagle, jakby mowę stracił, a panowie aż
                         przybledli.</p>
-                    <p>— Mów waść! — <choice>
+                    <p>— Mów waść! — <!-- choice>
                             <orig>rzeki</orig>
-                            <corr>rzekł</corr>
-                        </choice> książę do Zaćwilichowskiego.</p>
+                            --><corr>rzekł</corr><!--
+                        </choice --> książę do Zaćwilichowskiego.</p>
                     <p>Zaćwilichowski opowiedział rzecz całą, jak nieszlachetnym i niegodnym,
                         nietylko dygnitarza, ale i szlachcica, sentymentem powodowany pan strażnik,
                         począł przeciw boleści pana Skrzetuskiego bluźnić, a następnie z szablą się
@@ -13911,13 +13912,13 @@
                         tylnych szeregach:</p>
                     <pb n="056"/>
                     <quote>
-                        <lg>
+                        
                             <l>„Jedziesz na wojnę, nieboże,</l>
                             <l> „Jedziesz na wojnę!</l>
                             <l> „Noce ci będą na dworze,</l>
                             <l> „A dzionki znojne...“</l>
                             <l> ............</l>
-                        </lg>
+                        
                     </quote>
                     <p>— Starzy żołnierze mówią, że konie zawsze prychają na dobrą wróżbę, co mnie i
                         ojciec nieboszczyk jeszcze powiadał — rzekł Wołodyjowski.</p>
@@ -13944,10 +13945,10 @@
                     <p>— Nie może to być, aby on jej zaniechał — rzekł — choć prawda, że pierwszym
                         razem, gdy mu ją z Rozłogów ów dyabeł porwał, desperował tak, iżeśmy się o
                         jego mentem obawiali, a teraz daleko więcej okazał upamiętania. Ale jeśli mu
-                        Bóg spokój w duszę wlał <choice>
+                        Bóg spokój w duszę wlał <!-- choice>
                             <orig>l</orig>
-                            <corr>i</corr>
-                        </choice> siły dodał, to i lepiej. Jako szczerzy przyjaciele powinniśmy się
+                            --><corr>i</corr><!--
+                        </choice --> siły dodał, to i lepiej. Jako szczerzy przyjaciele powinniśmy się
                         z tego cieszyć.</p>
                     <p>To rzekłszy, Wołodyjowski konia spiął i posunął się naprzód ku Skrzetuskiemu,
                         a zaś Zagłoba jechał czas jakiś w milczeniu, wedle pana Podbipięty.</p>
@@ -13996,12 +13997,12 @@
                         wynędzniała, przez posty i umartwienia.</p>
                     <p>A wtem ów głos znowu zaczął śpiewać w tylnych szeregach:</p>
                     <quote>
-                        <lg>
+                        
                             <l>„Znajdziesz po wojnie, nieboże,</l>
                             <l rend="indent">„Znajdziesz po wojnie,</l>
                             <l> „Pustki z powrotem w komorze,</l>
                             <l> „Ran w skórze hojnie.“</l>
-                        </lg>
+                        
                     </quote>
                     <pb n="060"/>
                     <div type="chapter">
@@ -14171,10 +14172,10 @@
                         <p>— Mości poruczniku, waszmość tu wodzem, tedy rozporządź — rzekł
                             Podbipięta.</p>
                         <p>— Pójdę ja na Zinków, ku Sołodkowcom, a jak będę mógł, to dalej — mówił
-                            Skrzetuski — <choice>
+                            Skrzetuski — <!-- choice>
                                 <orig>waćpan.</orig>
-                                <corr>waćpan,</corr>
-                            </choice>
+                                --><corr>waćpan,</corr><!--
+                            </choice -->
                             <pb n="067"/>mości namiestniku Podbipięto, idź prosto na dół ku
                             Tatarzyskom — ty, Michale, pojedź pod Kupin, a pan Zagłoba potrze do
                             Zbrucza koło Satanowa.</p>
@@ -14235,18 +14236,18 @@
                         <p>Pan Zagłoba uczuł się bardzo samotnym na świecie — aż się sam swej
                             samotności użalił.</p>
                         <p>— Tak to, tak! — mruczał. — Każdy ma się na kogoś obejrzyć, a ja co? Ni
-                            towarzysza, ni ojca, ni matki. Sierotam jest — i <choice>
+                            towarzysza, ni ojca, ni matki. Sierotam jest — i <!-- choice>
                                 <orig>kwital</orig>
-                                <corr>kwita!</corr>
-                            </choice></p>
+                                --><corr>kwita!</corr><!--
+                            </choice --></p>
                         <p>W tej chwili wachmistrz Kosmacz zbliżył się ku niemu:</p>
                         <p>— Mości komendancie, dokąd idziemy?</p>
                         <p>— Dokąd idziemy? — powtórzył pan Zagłoba — co? Nagle wyprostował się w
                             siodle i wąs pokręcił.</p>
-                        <p>— Do Kamieńca, jeśli taka będzie moja <choice>
+                        <p>— Do Kamieńca, jeśli taka będzie moja <!-- choice>
                                 <orig>wolal</orig>
-                                <corr>wola!</corr>
-                            </choice> Rozumiesz, mości wachmistrzu?</p>
+                                --><corr>wola!</corr><!--
+                            </choice --> Rozumiesz, mości wachmistrzu?</p>
                         <p>Wachmistrz skłonił się i cofnął w milczeniu do szeregów, nie zdając sobie
                             sprawy, dlaczego się komendant rozsierdził, pan Zagłoba zaś cisnął
                             jeszcze okolicy kilka groźnych spojrzeń, następnie uspokoił się i
@@ -14397,20 +14398,20 @@
                             szumne, popili się wszyscy mocno, a pan Zagłoba tak się rozochocił, że
                             do wszystkiego był pierwszy. Zaczęły się tedy dziwne obrządki. Stare
                             baby zawiodły Ksenię do komory i zamknęły się tam z nią; bawiły długo,
-                            poczem wyszły i oświadczyły, że mołodycia, jak gołąbka, jak <choice>
+                            poczem wyszły i oświadczyły, że mołodycia, jak gołąbka, jak <!-- choice>
                                 <orig>lilial</orig>
-                                <corr>lilia!</corr>
-                            </choice> Wtedy radość zapanowała w zgromadzeniu, podniósł się krzyk:
-                            „Na <choice>
+                                --><corr>lilia!</corr><!--
+                            </choice --> Wtedy radość zapanowała w zgromadzeniu, podniósł się krzyk:
+                            „Na <!-- choice>
                                 <orig>sławul</orig>
-                                <corr>sławu!</corr>
-                            </choice> na <choice>
+                                --><corr>sławu!</corr><!--
+                            </choice --> na <!-- choice>
                                 <orig>szczastiel</orig>
-                                <corr>szczastie!</corr>
-                            </choice>“ — kobiety jęły klaskać w ręce i krzyczeć: „A szczo? ne <choice>
+                                --><corr>szczastie!</corr><!--
+                            </choice -->“ — kobiety jęły klaskać w ręce i krzyczeć: „A szczo? ne <!-- choice>
                                 <orig>kazałyl</orig>
-                                <corr>kazały!</corr>
-                            </choice>“ — parobcy zaś tupali nogami i każden tańczył w pojedynkę z
+                                --><corr>kazały!</corr><!--
+                            </choice -->“ — parobcy zaś tupali nogami i każden tańczył w pojedynkę z
                             kwartą w ręku, którą przed drzwiami komory „na sławu“ wypijał. Tańczył
                             tak i pan Zagłoba, tem tylko zacność swego urodzenia dystyngwując, że
                             nie kwartą, ale półgarncówką pił przed drzwiami. Potem bondarowie i
@@ -14991,12 +14992,12 @@
                             szable, zmykali pod płoty, <pb n="100"/>więźli między żerdziami i
                             przeskakiwali przez wierzch, wrzeszcząc i wyjąc nieludzkimi głosami.
                             Zdawało się nieszczęsnym, że sam książę Jeremi spadł na nich
-                            niespodzianie jak orzeł, że druzgoce ich cała <choice>
+                            niespodzianie jak orzeł, że druzgoce ich cała <!-- choice>
                                 <orig>okrzyki zwyjego potęga. Nie mieli czasu się opamiętać,
                                     obejrzeć: cięzców,</orig>
-                                <corr>jego potęga. Nie mieli czasu się opamiętać, obejrzeć: okrzyki
-                                    zwycięzców,</corr>
-                            </choice> i świst szabel i huki wystrzałów gnały ich jak burza, gorący
+                                --><corr>jego potęga. Nie mieli czasu się opamiętać, obejrzeć: okrzyki
+                                    zwycięzców,</corr><!--
+                            </choice --> i świst szabel i huki wystrzałów gnały ich jak burza, gorący
                             oddech koński oblewał im karki: „ludy, spasajtes!“ rozległo się ze
                             wszystkich stron — „bij, zabij!“ — odpowiadali napastnicy.</p>
                         <p>I dojrzał nakoniec pan Zagłoba małego pana Wołodyjowskiego, jak stojąc
@@ -15010,19 +15011,19 @@
                             wszystkimi ustawicznie czuwa, by każdy swoje odegrał.</p>
                         <p>Co widząc, pan Zagłoba począł nogami tupać w deski stropu, aż kłęby kurzu
                             powstały, w ręce klaskać i ryczeć:</p>
-                        <p>— Bij psubraty, bij, morduj, ze skóry <choice>
+                        <p>— Bij psubraty, bij, morduj, ze skóry <!-- choice>
                                 <orig>łupl</orig>
-                                <corr>łup,</corr>
-                            </choice> siekaj, tnij, wal, rżnij, morduj! Dalejże w nich, dalej! na
+                                --><corr>łup,</corr><!--
+                            </choice --> siekaj, tnij, wal, rżnij, morduj! Dalejże w nich, dalej! na
                             szable ich i w pień!</p>
                         <p>Tak krzyczał pan Zagłoba i rzucał się, oczy krwią mu zaszły z wysilenia i
                             zaniewidział na chwilę, ale gdy znów wzrok odzyskał, ujrzał jeszcze
                             piękniejszy widok — oto w kupie kilkudziesięciu mołojców pomykał na
                             koniu jak błyskawica Bohun, bez czapki, w koszuli tylko <pb n="101"/>i
-                            hajdawerach, a za nim na czele żołnierzy mały <choice>
+                            hajdawerach, a za nim na czele żołnierzy mały <!-- choice>
                                 <orig>pan.</orig>
-                                <corr>pan</corr>
-                            </choice> Wołodyjowski. „Bij!“ — krzyknął Zagłoba — „to Bohun!“ — ale
+                                --><corr>pan</corr><!--
+                            </choice --> Wołodyjowski. „Bij!“ — krzyknął Zagłoba — „to Bohun!“ — ale
                             głos nie doszedł; tymczasem Bohun z mołojcami przez płot, pan
                             Wołodyjowski przez płot, niektórzy zostali — innym konie zwinęły się w
                             skoku. Spojrzał Zagłoba: Bohun na równinę, pan Wołodyjowski na równinę.
@@ -15455,10 +15456,10 @@
                             resztę puścił w niepamięć i pogodził się z księciem Dominikiem.
                             Cieszyliśmy się wszyscy z tej concordyi — jakoż było i błogosławieństwo
                             Boże. Książę powtórnie pogromił pod Konstantynowem i samo miasto wziął,
-                            bo je nieprzyjaciel po pierwszym szturmie opuścił. Potem ruszyliśmy <choice>
+                            bo je nieprzyjaciel po pierwszym szturmie opuścił. Potem ruszyliśmy <!-- choice>
                                 <orig>po</orig>
-                                <corr>pod</corr>
-                            </choice> Piławce, choć <pb n="119"/>książę nie radził tam chodzić. Ale
+                                --><corr>pod</corr><!--
+                            </choice --> Piławce, choć <pb n="119"/>książę nie radził tam chodzić. Ale
                             zaraz w drodze pokazały się przeciw niemu rozmaite machinacye, niechęci,
                             zawiści i jawne knowania. Nie słuchano go na radach, nie zważano na to,
                             co mówił, a przedewszystkiem usiłowano rozdzielić naszą dywizyę, aby jej
@@ -16332,10 +16333,10 @@
                             pociągnie za sobą rozmiłowaną w nim szlachtę, od której wszystko
                             ostatecznie zależało. Ale i Kazimierzowi sił nie brakło. Przemawiało za
                             nim starszeństwo, po jego stronie stawały wpływy kanclerza, na jego
-                            stronę zdawał <choice>
+                            stronę zdawał <!-- choice>
                                 <orig>sie</orig>
-                                <corr>się</corr>
-                            </choice> przechylać prymas, za nim obstawała większość magnatów, z
+                                --><corr>się</corr><!--
+                            </choice --> przechylać prymas, za nim obstawała większość magnatów, z
                             których każden licznych miał klijentów, a między magnatami i książę
                             Dominik <pb n="156"/>Zasławski-Ostrogski, wojewoda sandomierski po
                             Piławcach zniesławion wprawdzie bardzo i nawet sądem zagrożony, ale
@@ -16940,10 +16941,10 @@
                         <p>— Boże ci dopomóż. Nie trać ducha!</p>
                         <p>— Zaś tam!</p>
                         <p>W tej chwili zbliżył się ku nim jeden z panów Sielickich.</p>
-                        <p>— Cięta jakaś sztuka ten wasz kozak — <choice>
+                        <p>— Cięta jakaś sztuka ten wasz kozak — <!-- choice>
                                 <orig>szepnął</orig>
-                                <corr>szepnął.</corr>
-                            </choice> — Tak sobie z nami poczyna, jak równy, jeśli nie jak lepszy.
+                                --><corr>szepnął.</corr><!--
+                            </choice --> — Tak sobie z nami poczyna, jak równy, jeśli nie jak lepszy.
                             Hu! co za fantazya! musiała się jego matka na jakiego szlachcica
                             zapatrzeć.</p>
                         <p>— E! — rzekł Zagłoba — prędzej się jaki szlachcic na jego matkę
@@ -17595,10 +17596,10 @@
                             konfident — aż to Bohun.</p>
                         <p>— Bohun? — wykrzyknęli Wołodyjowski i Zagłoba.</p>
                         <p>— Tak jest. Poznałem go, bom go w Rozłogach widział — i on mnie takoż.
-                            Słyszę: mówi do <choice>
+                            Słyszę: mówi do <!-- choice>
                                 <orig>Cmielnickiego</orig>
-                                <corr>Chmielnickiego</corr>
-                            </choice>: „to mój znajomy“. A Chmielnicki, jako to prędka u pijaków
+                                --><corr>Chmielnickiego</corr><!--
+                            </choice -->: „to mój znajomy“. A Chmielnicki, jako to prędka u pijaków
                             rezolucya, odpowiada: „kiedy on twój znajomy, synku, tak dać jemu
                             pięćdziesiąt talarów — a ja dam respons“. I dał mi respons, a co do
                             talarów rzekłem, by bestyi nie drażnić, żeby je dla hajduków schował, bo
@@ -17838,15 +17839,15 @@
                         <p>— Zostań przy komendzie, panie Krzysztofie — rzekł Wołodyjowski — boś
                             starszy wiekiem, przytem mnie pewno jechać wypadnie.</p>
                         <p>Po chwili wieczerza była podana. Siedli, jedli, a gdy <pb n="219"/>pan
-                            Zagłoba zaspokoił już nieco pierwszy głód dwoma miskami juszki, rzekł do <choice>
+                            Zagłoba zaspokoił już nieco pierwszy głód dwoma miskami juszki, rzekł do <!-- choice>
                                 <orig>Wierszuła:</orig>
-                                <corr>Wierszułła</corr>
-                            </choice></p>
+                                --><corr>Wierszułła</corr><!--
+                            </choice --></p>
                         <p>— Nie suponujeszże waćpan, gdzie mógł jechać pan Skrzetuski?</p>
-                        <p><choice>
+                        <p><!-- choice>
                                 <orig>Wierszuł</orig>
-                                <corr>Wierszułł</corr>
-                            </choice> kazał iść precz pachołkom, posługującym do stołu, po chwili
+                                --><corr>Wierszułł</corr><!--
+                            </choice --> kazał iść precz pachołkom, posługującym do stołu, po chwili
                             namysłu tak mówić począł:</p>
                         <p>— Suponuję, ale siła Skrzetuskiemu na tajemnicy zależy, więc nie chciałem
                             przy służbie gadać. Korzystał on z pomyślnego czasu, bo pewnie tu do
@@ -17857,10 +17858,10 @@
                         <p>Pan Zagłoba opowiedział po raz trzeci, czy czwarty wszystko jak było, bo
                             opowiadał to zawsze z przyjemnością; Wierszułł również, jak pan
                             Longinus, nie mógł się wydziwić zdarzeniu, nakoniec rzekł:</p>
-                        <p>— To Skrzetuskiemu będzie <choice>
+                        <p>— To Skrzetuskiemu będzie <!-- choice>
                                 <orig>łatwiej,</orig>
-                                <corr>łatwiej.</corr>
-                            </choice></p>
+                                --><corr>łatwiej.</corr><!--
+                            </choice --></p>
                         <p>— W tem rzecz, czy ją odnajdzie. A ludzi ze sobą wziął jakowych?</p>
                         <p>— Nikogo, sam pojechał — z jednym Rusinkiem, pacholikiem i z trzema
                             końmi.</p>
@@ -18708,10 +18709,10 @@
                             nieznośne, jak zniewagi. Nie brakło też i gróźb wśród objawów
                             grubijańskiej serdeczności. Jedni wołali do wojewody: „My Lachiw
                             choczemo ryzaty, a ty nasz czołowik!“ — inni mówili: „A co wy, pany!
-                            dawniej bili nas, a teraz łaski prosicie! Na pohybelże wam, <choice>
+                            dawniej bili nas, a teraz łaski prosicie! Na pohybelże wam, <!-- choice>
                                 <orig>białorączkom!</orig>
-                                <corr>białorączkom!“</corr>
-                            </choice> Ataman Wowk, dawny młynarz w Nestewarze, krzyczał: „Ja kniazia
+                                --><corr>białorączkom!“</corr><!--
+                            </choice --> Ataman Wowk, dawny młynarz w Nestewarze, krzyczał: „Ja kniazia
                             Czetwertyńskoho, moho pana, zarizaw!“ „Wy dajcie nam Jaremu, wołał,
                             taczając się, Jaszewski, a darujemy was zdrowiem!“</p>
                         <pb n="256"/>
@@ -19768,10 +19769,10 @@
                             nieprzyjaciel!</p>
                         <p>— Prawda to, ale ono zawsze niepięknie. A jak mówisz, ów komendant się
                             nazywał — co?</p>
-                        <p>— Pan Regowski. Mówili, że mu na imię <choice>
+                        <p>— Pan Regowski. Mówili, że mu na imię <!-- choice>
                                 <orig>Jakób</orig>
-                                <corr>Jakób.</corr>
-                            </choice></p>
+                                --><corr>Jakób.</corr><!--
+                            </choice --></p>
                         <pb n="299"/>
                         <p>— To ten sam! — mruknął Litwin. — Pana Łaszcza krewny i pana
                             Skrzetuskiego nieprzyjaciel.</p>
@@ -21306,10 +21307,10 @@
                     <p>Wówczas otucha wstąpiła w serca. Rycerstwo wróciło do obozu i wstąpiło na
                         ślizgie wały, aby widokiem tęczy oczy weselić. Zaraz poczęto rozprawiać
                         gwarnie i zgadywać, co ten pomyślny znak zwiastuje, gdy wtem pan
-                        Wołodyjowski, stojąc wraz z <choice>
+                        Wołodyjowski, stojąc wraz z <!-- choice>
                             <orig>innym</orig>
-                            <corr>innymi</corr>
-                        </choice> nad samą fosą, przysłonił swe rysie oczy ręką i zakrzyknął:</p>
+                            --><corr>innymi</corr><!--
+                        </choice --> nad samą fosą, przysłonił swe rysie oczy ręką i zakrzyknął:</p>
                     <p>— Wojsko z pod tęczy wychodzi! wojsko!</p>
                     <p>Zrobił się ruch, jakby wicher poruszył masą ludzi, a potem szmer zerwał się
                         nagle. Słowa: „wojsko idzie!“ przeleciały, jakoby strzała, od jednego końca
@@ -21585,10 +21586,10 @@
                     <p>— Przy szturmach łatwiej ich ciąć, niż w polu — odpowiedział ze słodyczą pan
                         Longinus.</p>
                     <p>— Skoro się książę nasz i Chmielnicki wreszcie spotkali — rzekł pan Michał —
-                        to <choice>
+                        to <!-- choice>
                             <orig>już.</orig>
-                            <corr>już</corr>
-                        </choice> o żadnych układach ani gadać. Albo starosta, albo Kapucyn! Jutro
+                            --><corr>już</corr><!--
+                        </choice --> o żadnych układach ani gadać. Albo starosta, albo Kapucyn! Jutro
                         sądny dzień będzie! — dodał, zacierając ręce.</p>
                     <p>Mały rycerz miał słuszność. W tej wojnie, tak długiej, dwa lwy
                         najstraszniejsze ani razu nie stanęły sobie oko w oko. Gromił jeden hetmanów
@@ -22663,10 +22664,10 @@
                     <p>Tymczasem pan Longinus zbliżył się do niepodpalonej jeszcze belluardy,
                         przechylił się w tył i puścił kamień w sam środek ściany.</p>
                     <p>Obecni aż pochylili głowy, tak głaz huczał. Pękły od ciosu zaraz spojenia;
-                        rozległ się trzask, wieża roztwarła <choice>
+                        rozległ się trzask, wieża roztwarła <!-- choice>
                             <orig>sie</orig>
-                            <corr>się</corr>
-                        </choice> jak złamane podwoje i runęła z łoskotem.</p>
+                            --><corr>się</corr><!--
+                        </choice --> jak złamane podwoje i runęła z łoskotem.</p>
                     <p>Stos drzewa polano smołą i podpalono w jednej chwili.</p>
                     <p>Po niejakim czasie kilkadziesiąt olbrzymich płomieni oświeciło całą równinę.
                         Deszcz padał ciągle, ale ogień przemógł go — i „paliły się te belluardy, z
@@ -22991,10 +22992,10 @@
                         daleko w koszu tatarskim konie rżały — a na wałach rozlegały się od czasu do
                         czasu głosy straży.</p>
                     <p>Chorągwie pancerne książęce były tej nocy na pieszej służbie w obozie, więc
-                        pan Skrzetuski, pan <choice>
+                        pan Skrzetuski, pan <!-- choice>
                             <orig>Podpipięta</orig>
-                            <corr>Podbipięta</corr>
-                        </choice>, mały rycerz i pan Zagłoba, na okopie, szepcąc ze sobą z cicha, w
+                            --><corr>Podbipięta</corr><!--
+                        </choice -->, mały rycerz i pan Zagłoba, na okopie, szepcąc ze sobą z cicha, w
                         przerwach rozmowy wsłuchiwali się w szum deszczu, padającego w fosę. —
                         Skrzetuski mówił:</p>
                     <pb n="122"/>
@@ -23377,10 +23378,10 @@
                         Mało im tego. Połowa wojska od tej zwykłej strzelaniny stopniała, a oni już
                         na nią nosem kręcą.</p>
                     <p>— Bądź waćpan dobrej myśli — rzekł pan Podbipięta.</p>
-                    <p>— Milczałbyś, <choice>
+                    <p>— Milczałbyś, <!-- choice>
                             <orig>boćwino!</orig>
-                            <corr>boćwino! —</corr>
-                        </choice> huknął Zagłoba — boś najwinniejszy. Waćpan to wymyślił tę imprezę,
+                            --><corr>boćwino! —</corr><!--
+                        </choice --> huknął Zagłoba — boś najwinniejszy. Waćpan to wymyślił tę imprezę,
                         która, jeśli nie jest głupia, to ja głupi!</p>
                     <p>— A tak i pójdę, brateńku! — odrzekł pan Longinus.</p>
                     <p>— Pójdziesz! pójdziesz! i wiem dlaczego! Waćpan się za bohatera nie podawaj,
@@ -24040,10 +24041,10 @@
                         oddech wstrzymali, on zaś milczał jeszcze chwilę, potem utkwił oczy w
                         gwiaździstych wysokościach i tak wreszcie mówić począł:</p>
                     <p>— „Co to tam za stukanie słyszę po nocy, w niebieskie podwoje? — pyta sędziwy
-                        klucznik Chrystusowy, ze smacznego snu się zrywając. — <choice>
+                        klucznik Chrystusowy, ze smacznego snu się zrywając. — <!-- choice>
                             <orig>Otwóż</orig>
-                            <corr>Otwórz</corr>
-                        </choice> święty Pietrze, otwórz! Jam Podbipięta.</p>
+                            --><corr>Otwórz</corr><!--
+                        </choice --> święty Pietrze, otwórz! Jam Podbipięta.</p>
                     <pb n="166"/>
                     <p>„Lecz jakież to uczynki, jakaż to szarża, jakie to zasługi ośmielają cię,
                         mości Podbipięto, tak zacnego furtyana inkomodować? Jakiemże to prawem
@@ -24957,14 +24958,14 @@
                     <p>— A kto tam szuka drogi?</p>
                     <p>— Towarzysz ze Zbaraża.</p>
                     <p>— Czołem mu! czołem! — wołały liczne głosy.</p>
-                    <p>I <choice>
+                    <p>I <!-- choice>
                             <orig>rozstępowałi</orig>
-                            <corr>rozstępowali</corr>
-                        </choice> się zaraz, ale inni tłoczyli się jeszcze bardziej, chcąc widzieć
-                        bohatera. I <choice>
+                            --><corr>rozstępowali</corr><!--
+                        </choice --> się zaraz, ale inni tłoczyli się jeszcze bardziej, chcąc widzieć
+                        bohatera. I <!-- choice>
                             <orig>patrzyłi</orig>
-                            <corr>patrzyli</corr>
-                        </choice> zdumieni na tę nędzę, na tę twarz straszną, oświeconą blaskiem
+                            --><corr>patrzyli</corr><!--
+                        </choice --> zdumieni na tę nędzę, na tę twarz straszną, oświeconą blaskiem
                         księżyca — i szeptali do siebie zdumieni:</p>
                     <p>— Ze Zbaraża, ze Zbaraża...</p>
                     <p>Z największym trudem doprowadził ksiądz Skrzetuskiego do plebanii. Tam go,
@@ -25082,10 +25083,10 @@
                     <p>— Szczęście, że nie zginęli — rzekł Skrzetuski — ale myślałem, żeś lepszy
                         pachołek. Zali godziło ci się opuszczać ich w takiej opresyi?</p>
                     <p>— Ej, mój jegomość, żeby to my byli sami, we trzech, pewnobym ja ich nie
-                        opuścił, bo mi się serce krajało... <choice>
+                        opuścił, bo mi się serce krajało... <!-- choice>
                             <orig>ałeśmy</orig>
-                            <corr>aleśmy</corr>
-                        </choice> we czworo byli więc oni rzucili się na ordę, a mnie sami kazali...
+                            --><corr>aleśmy</corr><!--
+                        </choice --> we czworo byli więc oni rzucili się na ordę, a mnie sami kazali...
                         ratować... Żebym to ja był pewny, że jegomości radość nie zabije... bo to my
                         za Jampolem... znaleźli... ale że ksiądz...</p>
                     <p>Skrzetuski począł patrzeć na pachołka i mrugać oczyma, jak człowiek który
@@ -25533,10 +25534,10 @@
                         Leszczyński wzniósł drzewo Krzyża Świętego i błogosławił niem ginących.</p>
                     <pb n="230"/>
                     <p>Tymczasem, z drugiego boku zachodził wojsku królewskiemu cały tabór kozacki,
-                        liczący dwieście tysięcy ludzi, najeżony armatami, ziejący ogniem, <choice>
+                        liczący dwieście tysięcy ludzi, najeżony armatami, ziejący ogniem, <!-- choice>
                             <orig>naksztalt</orig>
-                            <corr>nakształt</corr>
-                        </choice> smoka, wysuwającego powoli z lasów olbrzymie swe kłęby.</p>
+                            --><corr>nakształt</corr><!--
+                        </choice --> smoka, wysuwającego powoli z lasów olbrzymie swe kłęby.</p>
                     <p>Lecz nim wysunął ich ogrom z owej kurzawy, w której zginęły pułki
                         Wiśniowieckiego, poczęli wypadać jeźdźcy, potem ich dziesiątki, potem setki,
                         potem tysiące, potem dziesiątki tysięcy — i pędzić ku wzgórzom, na których
@@ -25728,50 +25729,50 @@
         </body>
         <back>
             <head>Przypisy</head>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-1"><ref target="#cite_ref-1"
+            <note xml:id="cite_note-1"><ref target="#cite_ref-1"
                 /> Są to słowa Maszkiewicza, który mógł nie wiedzieć o bytności Samuela Zborowskiego
                 na Siczy.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-2"><ref target="#cite_ref-2"
+            <note xml:id="cite_note-2"><ref target="#cite_ref-2"
                 /> Prawy brzeg Dniepru nazywano ruskim, lewy tatarskim.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-3"><ref target="#cite_ref-3"
+            <note xml:id="cite_note-3"><ref target="#cite_ref-3"
                 /> Urzędnik wojskowy na Zaporożu, czuwający nad miarami i wagami w kramach,
                 znajdujących się na tak zwanym Kramnym Bazarze w Siczy.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-4"><ref target="#cite_ref-4"
+            <note xml:id="cite_note-4"><ref target="#cite_ref-4"
                 /> Zaporożcy w czasie swych napadów nie oszczędzali nikogo i niczego. Do czasów
                 Chmielnickiego nie było wcale cerkwi w Siczy. Pierwszą właśnie Chmielnicki wystawił;
                 nie pytano tam również nikogo o wyznanie i to, co opowiadają o religijnym nastroju
                 niżowców, jest bajką.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-5"><ref target="#cite_ref-5"
+            <note xml:id="cite_note-5"><ref target="#cite_ref-5"
                 /> Sposób obradowania na Siczy, opisany jest w dyaryuszu Eryka Lassoty, posła
                 cesarskiego na Zaporoże w r. 1594.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-6"><ref target="#cite_ref-6"
+            <note xml:id="cite_note-6"><ref target="#cite_ref-6"
                 /> Słowa historyczne Żółkiewskiego.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-7"><ref target="#cite_ref-7"
+            <note xml:id="cite_note-7"><ref target="#cite_ref-7"
                 /> Wbrew ogólnemu mniemaniu dzisiejszemu, Bauplan twierdzi, iż piechota zaporoska
                 niezmiernie przewyższała jazdę. Wedle Bauplana, 200 Polaków rozbijało z łatwością
                 2,000 jazdy zaporoskiej, ale natomiast 100 pieszych kozaków mogło długo bronić się z
                 zakopu tysiącowi Polaków.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-8"><ref target="#cite_ref-8"
+            <note xml:id="cite_note-8"><ref target="#cite_ref-8"
                 /> Źródła rusińskie, np. Samoił Weliczko, podają ilość wojsk koronnych na 22.000.
                 Cyfra to oczywiście fałszywa.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-bwyd5-9"> Brakującą stronę
+            <note xml:id="cite_note-bwyd5-9"> Brakującą stronę
                 uzupełniono w oparciu o wydanie piąte (1898).</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-10"><ref
+            <note xml:id="cite_note-10"><ref
                     target="#cite_ref-10"/> Samoił Weliczko, 62.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-11"><ref
+            <note xml:id="cite_note-11"><ref
                     target="#cite_ref-11"/> Buława pułkownikowska kozacka, która zastępowała między
                 kozakami list żelazny.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-12"><ref
+            <note xml:id="cite_note-12"><ref
                     target="#cite_ref-12"/> Samoił Wieliczko, str. 79. Pisał Chmielnicki do księcia:
                 „żeby tedi o toje szczosia z hetmanami koronnemi stało, on, kniaź Wiszniewiecki ne
                 urażałsia i gniewa swojeho k’nemu, Chmielnickomu, prostyraty ne izwolił“.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-13"><ref
+            <note xml:id="cite_note-13"><ref
                     target="#cite_ref-13"/> 12 czerwca pod Białocerkwią nie wiedziano jeszcze o
                 śmierci króla.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-14"><ref
+            <note xml:id="cite_note-14"><ref
                     target="#cite_ref-14"/> Rudawski twierdzi, iż słowa owe były wyrzeczone w
                 Niemirowie.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-15"><ref
+            <note xml:id="cite_note-15"><ref
                     target="#cite_ref-15"/> W tym czasie pisał książę do wojewody bracławskiego,
                 między innemi, co następuje: <hi>„O, raczej było umierać potrzeba, aniżeli takich
                     doczekać czasów, które sławę tych zacnych narodów tak turpiter deformarunt et
@@ -25781,16 +25782,16 @@
                     będzie, z tem hultajstwem, ja w tej ojczyźnie wolę nie żyć i nam lepsza rzecz
                     umierać, aniżeliby pogaństwo i hultajstwo miało nam panować“.</hi> Księga
                 pamiętnicza 28, 55.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-16"><ref
+            <note xml:id="cite_note-16"><ref
                     target="#cite_ref-16"/> Zacytowane ułamki wyjęte są ze współczesnej pieśni,
                 zapisanej w Latopiscu, czyli Kroniczce Joachima Jerlicza. Wydawca przypuszcza, że
                 pieśń ułożył sam Jerlicz, ale niczem przypuszczenia nie popiera. Chociaż z drugiej
                 strony polonizmy, których się autor pieśni dopuścił, zdradzają jego
                 narodowość.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-17"><ref
+            <note xml:id="cite_note-17"><ref
                     target="#cite_ref-17"/> Wesele chłopskie z owych czasów opisuje naoczny świadek
                 Beauplan.</note>
-            <note xmlns="http://www.tei-c.org/ns/1.0" xml:id="cite_note-18"><ref
+            <note xml:id="cite_note-18"><ref
                     target="#cite_ref-18"/> Towarzysz z pod poważnego znaku nie mógł iść pod komendę
                 nawet generała wojsk cudzoziemskiego autoramentu, przeciwnie nawet, często generał
                 bywał oddawany pod komendę towarzysza; aby tego uniknąć, generałowie i oficerowie

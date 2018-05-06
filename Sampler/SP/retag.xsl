@@ -5,6 +5,9 @@
     xmlns:t="http://www.tei-c.org/ns/1.0" 
     xmlns="http://www.tei-c.org/ns/1.0" 
     version="2.0">
+    <!-- also need to remove <milestone unit="webpage">
+        and probably deal with note[not(@resp='author')]
+        -->
     
     <xsl:template match="t:principal">
        <respStmt>

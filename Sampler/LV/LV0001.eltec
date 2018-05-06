@@ -4,8 +4,8 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Caurie Ziedi</title>
-<author dates="1867 1924" sex="m">Zeibolts, Jēkabs</author>
+<title>Caurie Ziedi : ELTeC edition</title>
+    <author>Zeibolts, Jēkabs (1867 - 1924)</author>
 </titleStmt>
 <publicationStmt>
 <p>Demonstration file prepared for the ELTeC Sampler</p>
@@ -20,7 +20,7 @@
 </teiHeader>
 <text xml:id="LV0001" xml:lang="LV">
 <body>
-<div n="I">
+<div n="I" type="chapter">
 <head>I</head>
 <p>Ja komet lādzīgam cilvēkam darbs ar atpūtu mainās tā pusgodīgi, tad viņš nemaztik traki neilgojas
 pēc visiem tiem treknumiem, kurus vecais Vācu Mārtiņš tikšķiedīgi solīt sola visiem tiem briedīgiem
@@ -337,7 +337,7 @@ braukšot uz Rīgu.</p>
 man Mailītes vieta rokā, gan tad es zināšu, kas man darāms...»viņš vēl pārdomāja dienas
 piedzīvojumus un tad laidās miegā mātes aijās. </p>
 </div>
-<div n="II">
+<div type="chapter" n="II">
 <head>II</head>
 <p>Tā nu otru dienu Kaupuru Mārtiņam bij skriešana pa Rīgu bez sava gala, kamērkājas sāka sūrstēt.
 Ratu Rīgā bij lērums - viens skaistāks par otru, bet cenassāļas. Pirmajā lingā viņš apmeta visus
@@ -431,7 +431,7 @@ jārāpjas no gultas laukā un jābrauc piemācītāja, baznīcas priekšnieka, 
 «draugiem», laisagādātu Mailītes skolotāja vēlēšanai vajadzīgās apliecības un ieteikšanasrakstus.
 </p>
 </div>
-<div n="III">
+<div type="chapter" n="III">
 <head>III</head>
 <p>Kaķeniešu pagastam bij divas pagastskolas, viena tika saukta par Indēnu skolu, otrapar Mailītes
 skolu. Atminamies pēc Varpogu mātes stāstījuma, ka Indēnu skolotājsLomezis gribot iedabūt Mailītes
@@ -660,7 +660,7 @@ tik daudz sviesta pa nakti viens ir noķepējis...»</p>
 pie arkla :liec, tad atpakaļ neskaties... tāpēc arī dievs manussviedrus svētīja... es varu droši
 sacīt, ka divas balsis jau ir manas... rīt iešupie Vāverītes...» </p>
 </div>
-<div n="IV">
+<div type="chapter" n="IV">
 <head>IV</head>
 <p>Vāverīte bij muižas mājas saimnieks un skaitījās par muižas kalpu runasvīru.Viņš bij mazs,
 izžuvis vīrelis ar ceptam kartupelim līdzīgu seju, mīlēja pīpētkāta pīpi ar astru viduci, raga
@@ -887,7 +887,7 @@ basām kājām un aukstajā rasā nobridieslīdz jostasvietai. Prieks viņam bij
 tik daudz balsu un patslabi paēdis un padzēris, bet bēda vēl lielāka, ka Ezergailenei aizmirsis
 rokunobučot un Lērumiņā ēdis un dzēris - par savu naudu. </p>
 </div>
-<div n="V">
+<div type="chapter" n="V">
 <head>V</head>
 <p>Otru rītu Sveķīša aizgūtņu ceļš gāja uz Kaķu muižu pie Veprēna, muižaskalpu runasvīra. Veprēns ar
 sievu un bērniem dzīvoja malu muižiņā mazā istabelē.No rīta vairāk ļaužu mājā nebij kā Veprēna sieva
@@ -1011,7 +1011,7 @@ Mailītes vieta viņam unnevienam citam!</p>
 apmeklēt mācītāju un citus svarīgos vīrus, no kuriem vērtsizdabūt ieteikšanas rakstus, ko vēlamā
 dienā spert kaķeniešiem galdā. </p>
 </div>
-<div n="VI">
+<div type="chapter" n="VI">
 <head>VI</head>
 <p>Ceturtdienas vakarā Varpogu māte ar meitu pārbrauca no Rīgas mājā un izstāstījavīram gaiši un
 skaidri, kādas viņai domas par Mailītes skolu un skolotāju Kaupuru,kuram jādabūjot šī vieta. Pats
@@ -1337,7 +1337,7 @@ savu istabiņu, tad, pa garo ejudundurojot, tam roka netīšus uzlikās uz Amāl
 nebijaizslēgtas, bet vērās viegli un bez lieka čīksta.</p>
 <p>Amālija bija droša meiča... </p>
 </div>
-<div n="VII">
+<div type="chapter" n="VII">
 <head>VII</head>
 <p>Kaupuram sākās jauka vasaras izdzīve visur un nekur. Rata mugurā vizinādamies,viņš braukāja pa
 tuvējo apciemu un tālāko apvidu, ciemodamies pie draugiem unpaziņām, allaž atgriezdamies vienā no
@@ -1529,7 +1529,7 @@ kas pie viņa ciemojušies un pie viņa galdamielojušies. Viesus pavadījis, vi
 ā&#160;&#160; g u l tā&#160; un iemiga laimīgā sajūtā, ka šonakt viņš guļ pirmoreiz mūžāsavā
 paspārnē. </p>
 </div>
-<div n="VIII">
+<div type="chapter" n="VIII">
 <head>VIII</head>
 <p>Mīksta, kā no dūnām pīta bija Varpogu mātes izmestā cilpa. Viņas gūstāmaismedījums nebij karams
 vai žņaudzams, bet tikai vāļājams un pieradināms ņemtmaizīti devējam rātni no rokas.</p>
@@ -1811,7 +1811,7 @@ divasdienas pie mums ne acu un aizbrauc viens pats uz Mierlavu, mums ne vārdiņ
 tīši darbi, lai mūs skumdinātu un errinātu? Nu, skumties un erroties navmanā dabā, es katrā laikā
 zinu, kas man darāms. Un tu, meitiņ, nebēdā, noķersimmēs viņu, putniņu!...» </p>
 </div>
-<div n="IX">
+<div type="chapter" n="IX">
 <head>IX</head>
 <p>Skosteniešu pagasta Veiku skola, kurā par skolotāju darbojās Kaupura seminārabiedrs Vārpkalniņš,
 atradās tā sauktā krievu lielceļa malā, verstis piecas noMierlavas pilsētas. Skostenieši un viņu
@@ -1887,7 +1887,7 @@ mīlestību. Ilga tolaik vēlapmeklēja Rīgā ģimnāziju, bet gadu atpakaļ, p
 pabeidzaskolas astoto klasi godam un dzīvoja no tā laika pie mātes Virpuķēs. Maizes vaigreznu dēļ
 Ilgai nebija jākalpo svešiem ļaudīm, viņa bija bagātu ļaužu bērns,Virpuķu vienīgā mantiniece. </p>
 </div>
-<div n="X">
+<div type="chapter" n="X">
 <head>X</head>
 <p>Saimniecisku apstākļu un sirds maldu dēļ jaunībā Ilgas tēvs mūža lielāko unskaistāko daļu bija
 nodzīvojis par jaunpuisi un vecpuisi. Mūža kalngalu senpārkāpis un kalna vakarpusē lejā kāpdams, kad
@@ -2109,7 +2109,7 @@ vijās ap Juri, laimes gaidas sirdi modās un nīka, cēlās un zudakā ezerroze
 <p>«Iešu labāk sēņot, lai Juris skrien... bekot!» viņa īgni pasmējās, kāju piezemes piecirzdama.
 </p>
 </div>
-<div n="XI">
+<div type="chapter" n="XI">
 <head>XI</head>
 <p>Ilga pirms brīnītos, tad brīdi no tiesas papriecātos, ja dabūtu zināt, kaVārpkalniņu Juris
 mocījās ne mazāk par viņu. Arī viņš simtu un pirmo reizinoņēmās Ilgu aizmirst un savu par nelaimīgu
@@ -2290,7 +2290,7 @@ brīnumnaktī viņas mīlestībuiegūdams?</p>
 Juris - un kur tad tu tāda miegaina iesi?»</p>
 <p>Iziedama māte gudru ziņu aizslēdza durvis. </p>
 </div>
-<div n="XII">
+<div type="chapter" n="XII">
 <head>XII</head>
 <p>Pagāja trīs dienas, par dieniņām saucamas, tik īsas viņas izlikās Ilgai ar Juri.</p>
 <p>Trešajā dienā Ilga gavilēm sagaidīja savu draudzeni Līviju no Rīgas atbraucam.Māte pašai Ilgai
@@ -2446,7 +2446,7 @@ bēdas.»</p>
 atkal uznāca vecā kaklā krītamā lēkme par tik skaistu joku. Jokiemun smiekliem viņas posās un devās
 ceļā uz Veiku skolu. </p>
 </div>
-<div n="XIII">
+<div type="chapter" n="XIII">
 <head>XIII</head>
 <p>«Velti Vārpkalniņu Juris nepūta kā sila balodis, savā lievenī pie vīnstīgāmapvītā loga stāvēdams:
 «Ilga... manu Ildziņ, nāc!...» Ticēsim dvēseļuiedvesmīgiem sakariem vai domu pārnesībai, bet
@@ -2704,7 +2704,7 @@ Virpuķu nākošais gruntnieks...skuķītis manī ir ieēdies, tur es galvu liek
 <p>Kur Kaupurs galvu liekot, vai ķīlām par nākotnes laimi vai mīkstā dūnu spilveni,tas viņam palika
 neizdomāts, jo veselīgais jaunības miegs aizveda viņu puselpasvilcienā uz savu muižu. </p>
 </div>
-<div n="XIV">
+<div type="chapter" n="XIV">
 <head>XIV</head>
 <p>Brauciens uz Mierlavu iznāca slavens. Kaupurs un Vārpkalniņš bija uzcirtušies pagodam un gaidīja
 skolas lieveni Virpuķietes pa lielceļu garām braucot. Pie lieveņagraudnieks turēja aizjūgto zirgu.
@@ -2875,7 +2875,7 @@ nav vēlams un arī neiznāks.</p>
 <p>Aizbrauca katrs savā sētā, un ikvienam tā bija ap sirdi. ka šī dieniņa ir viņupievīlusi, nav
 radies un vedies tā, kā iepriekš domāts un cerēts. </p>
 </div>
-<div n="XV">
+<div type="chapter" n="XV">
 <head>XV</head>
 <p>Otru izstādes dienu, kā allaž pie svētdienas, ļaužu bija pilna pilsēta.Izstādes iežogotā laukumā
 ļaužu bari klīda, vijās, drūzmējās pa malu malām.</p>
@@ -3274,7 +3274,7 @@ labi!</p>
 <p>Māte ar meitu saskatījās un pasmējās, katra no savas puses rūpīgi pievaldīdamassnaudēju, kad
 klanicas tapa nebēdnīgas un grasījās pašu klanītāju raut sevimlīdzi no droškas zemē. </p>
 </div>
-<div n="XVI">
+<div type="chapter" n="XVI">
 <head>XVI</head>
 <p>Amālija sēdēja savā siltajā augšistabas ligzdiņā, dusmojās par savu Mārtiņuun iešņukstējās
 tītīgās raudās, kad raudamais laiks pienāca. Amālijai dusmasbija vienmērīgas, bet raudas viņa
@@ -3727,7 +3727,7 @@ taisni acīs: «Ja šitais pāris nedzīvo laimīgā laulībā,tad pasaulē jaun
 mantas bez vērtības!»</p>
 <p>Kaķītis noķēra Mailīti. </p>
 </div>
-<div n="XVII">
+<div type="chapter" n="XVII">
 <head>XVII</head>
 <p>Skaidrs rīts ausa, spoža saulīte lēca septembra mēneša pēdējā dienā.Laiciņš piepaturējās, kā
 allažiņ vēlvēlīnā vasarā nākas.</p>
@@ -3816,7 +3816,7 @@ pārīšalaime ir mans roku darbs!»</p>
 <p>Tā Varpogu māte patiesi domāja, bet jaunais vīrs dusēja mīlas saitēs saldā miegā,viņš bija
 apprecējies - kā pa miegam. </p>
 </div>
-<div n="XVIII">
+<div type="chapter" n="XVIII">
 <head>XVIII</head>
 <p>Kad skolotājs precas, tad viss pagasts ņem dalību pie viņa preces. Tā arīkaķeniešu saimniekkārtas
 meitu mātes un mātesmeitas izžadzinājās un galu galāapmierinājās ar Mailītes skolotāja izvēli, kad
@@ -4021,7 +4021,7 @@ izpildīdams visus viņas untumus un neapnicisspēlēdams ar viņu melderīti.</
 neuzcirtusies viņa nekad vairs nenāca no guļamistabas laukā.</p>
 <p>Likās, ka dzīve pa līdzenumu rīt mierīgu gaitu savā parastā gultnē, bez krācēm,bez sēkļiem. </p>
 </div>
-<div n="XIX">
+<div type="chapter" n="XIX">
 <head>XIX</head>
 <p>Pasaulē ieviesās ačugārnais ritums. Ja saule vakaros lēktu un rītos rietētu,ļaudis laikam nemaz
 nebrīnītos.</p>
@@ -4262,7 +4262,7 @@ ik rītus pa tumsu viņš aizzagās uz naudasslēptuvi un acīm un rokām pārli
 dzīvs un vesels.</p>
 <p>Ka no biežas staigāšanas uz stropu ieminās sniegā celiņš, tā viņš neredzēja. </p>
 </div>
-<div n="XX">
+<div type="chapter" n="XX">
 <head>XX</head>
 <p>Pēc beigtiem dienas darbiem Kaupurs kādu vakaru viens pats gāja uz Kaķu krodziņu.Ceļā viņam
 ziņnesis iedeva avīzes un vienu vēstuli, tepat Čaugsterē uz pastunodotu. Viņš atplēsa vēstuli un

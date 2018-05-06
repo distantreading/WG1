@@ -25,3 +25,7 @@ to  convert this to proper TEI (`ogniem-1.tei`), clearing up
 any chad in the process. I then added a minimal  TEI header and removed or commented out valid
 bits of TEI not provided by the ELTeC level 2 schema (specifically @facs, `<trailer>`, and
 `<milestone>`)
+
+eltec-1 : no choice, just corr, so i commented the other bits out
+no lg
+

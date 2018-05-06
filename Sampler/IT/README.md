@@ -6,3 +6,5 @@
   - remove redundant `@part` attribute values
   - comment out problematic bits of header pro tem
  
+add catref
+turn lg to quote, making it eltec-1
