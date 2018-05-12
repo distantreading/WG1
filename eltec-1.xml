@@ -73,7 +73,7 @@
        <elementRef key="respStmt"/>
        <elementRef key="term"/>
        <elementRef key="title"/>
-
+       
      </schemaSpec>
 </div>
      </back>

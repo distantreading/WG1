@@ -68,7 +68,20 @@
        <elementRef key="resp"/>
        <elementRef key="respStmt"/>
        <elementRef key="term"/>
-       <elementRef key="title"/>
+      <elementRef key="title"/>
+       
+       <!-- change class memberships for title to prevent it appearing outside the header -->
+       
+       <elementSpec ident="title" mode="change">
+          <classes mode="replace">
+             <memberOf key="att.global"/>
+             <memberOf key="model.biblPart"/>
+          </classes>
+       </elementSpec>
+       
+       
+       
+       
     </schemaSpec>
 
 </div>       

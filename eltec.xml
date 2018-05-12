@@ -125,16 +125,9 @@
                     </elementSpec>
 
 
-                    <!-- remove bibl title measure and idno from classes which allow them outside header -->
+                    <!-- remove  measure and idno from classes which allow them outside header -->
 
-                    <elementSpec ident="title" mode="change">
-                        <classes mode="replace">
-                            <memberOf key="att.global"/>
-                            <memberOf key="model.biblPart"/>
-                        </classes>
-                    </elementSpec>
-
-                    <elementSpec ident="idno" mode="change">
+              <elementSpec ident="idno" mode="change">
                         <classes mode="replace">
                             <memberOf key="att.typed"/>
                             <memberOf key="model.biblPart"/>
