@@ -74,6 +74,17 @@
        <elementRef key="term"/>
        <elementRef key="title"/>
        
+       <!-- change class memberships for title to suppress some attributes but allow it to appear outside the header -->
+       
+       <elementSpec ident="title" mode="change">
+          <classes mode="replace">
+             <memberOf key="att.global"/>
+             <memberOf key="model.biblPart"/>
+             <memberOf key="model.emphLike"/>
+          </classes>
+       </elementSpec>
+       
+       
      </schemaSpec>
 </div>
      </back>

@@ -1176,51 +1176,7 @@ http://isni.oclc.org/-->
   </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONADA">3.5.4. Dates and Times</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDDATE">13.3.6. Dates and Times</ref>
-  </listRef></classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.fragmentable">
-  <desc versionDate="2016-02-15" xml:lang="en">provides an attribute for representing
-    fragmentation of a structural element, typically as 
-  a consequence of some overlapping hierarchy.</desc>
-  <attList>
-    <attDef ident="part" usage="opt">
-      <desc versionDate="2013-06-21" xml:lang="en">specifies whether or not its parent element is fragmented
-      in some way, typically by some other overlapping structure: for
-      example a speech which is divided between two or more verse
-      stanzas, a paragraph which is split across a page division, a
-      verse line which is divided between two speakers.</desc>
-      <datatype><dataRef key="teidata.enumerated"/></datatype>
-      
-      
-      <defaultVal>N</defaultVal>
-      <valList type="closed">
-        <valItem ident="Y">
-          <gloss versionDate="2013-01-07" xml:lang="en">yes</gloss>
-          <desc versionDate="2013-01-07" xml:lang="en">the element is fragmented in some (unspecified) respect</desc>
-        </valItem>
-        <valItem ident="N">
-          <gloss versionDate="2013-01-07" xml:lang="en">no</gloss>
-          <desc versionDate="2013-01-07" xml:lang="en">the element is not fragmented, or no claim is made as to its completeness</desc>
-        </valItem>
-        <valItem ident="I">
-          <gloss versionDate="2013-01-07" xml:lang="en">initial</gloss>
-          <desc versionDate="2013-01-07" xml:lang="en">this is the initial part of a fragmented element</desc>
-        </valItem>
-        <valItem ident="M">
-          <gloss versionDate="2013-01-07" xml:lang="en">medial</gloss>
-          <desc versionDate="2013-01-07" xml:lang="en">this is a medial part of a fragmented element</desc>
-        </valItem>
-        <valItem ident="F">
-          <gloss versionDate="2013-01-07" xml:lang="en">final</gloss>
-          <desc versionDate="2013-01-07" xml:lang="en">this is the final part of a fragmented element</desc>
-        </valItem>
-      </valList>
-      <remarks versionDate="2013-01-07" xml:lang="en">
-        <p>The values <val>I</val>, <val>M</val>, or <val>F</val>
-        should be used only where it is clear how the element may be
-        be reconstituted.</p>
-      </remarks>
-    </attDef>
-  </attList>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.docStatus">
+  </listRef></classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.docStatus">
   <desc versionDate="2010-05-06" xml:lang="en">provides attributes for use on metadata elements
   describing the status of a document.</desc>
   <attList>
@@ -1318,75 +1274,7 @@ associated with a dated element, at the time indicated.</desc>
       </remarks>
     </attDef></attList><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STGAre">1.3.1.1.3. Rendition Indicators</ref>
-  </listRef></classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" predeclare="true" xml:id="GBLSRC" module="tei" type="atts" ident="att.global.source">
-  <desc versionDate="2016-02-15" xml:lang="en">provides an attribute used by elements to point to an
-    external source.</desc>
-  <attList>
-    <attDef ident="source" usage="opt">
-      <desc versionDate="2010-05-09" xml:lang="en">specifies the source from which some aspect of
-        this element is drawn.</desc>
-      <datatype maxOccurs="unbounded">
-        <dataRef key="teidata.pointer"/>
-      </datatype>
-      <remarks xml:lang="en" versionDate="2017-06-06">
-        <p>The <att>source</att> attribute points to an external source. When used on elements
-          describing schema components such as <gi>schemaSpec</gi> or <gi>moduleRef</gi> it
-          identifies the source from which declarations for the components of the object being
-          defined may be obtained. </p>
-        <p> On other elements it provides a pointer to the bibliographical source from which a
-          quotation or citation is drawn. </p>
-        <p>In either case, the location may be provided using any form of URI, for example an
-          absolute URI, a relative URI, or private scheme URI that is expanded to an absolute URI as
-          documented in a <gi>prefixDef</gi>.</p>
-        <p>If more than one location is specified, the default assumption is that the required
-          source should be obtained by combining the resources indicated. </p>
-      </remarks>
-    </attDef>
-  </attList>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#SOURCE-eg-01">
-      <p><!-- ... --> As Willard McCarty (<bibl xml:id="mcc_2012">2012, p.2</bibl>) tells us, <quote source="#mcc_2012">‘Collaboration’ is a problematic and should be a contested
-          term.</quote>
-        <!-- ... -->
-      </p>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <p>
-        <!-- ... -->
-        <quote source="#chicago_15_ed">Grammatical theories are in flux, and the more we learn, the
-          less we seem to know.</quote>
-        <!-- ... -->
-      </p>
-      <!-- ... -->
-      <bibl xml:id="chicago_15_ed"><title level="m">The Chicago Manual of Style</title>,
-          <edition>15th edition</edition>. <pubPlace>Chicago</pubPlace>: <publisher>University of
-          Chicago Press</publisher> (<date>2003</date>), <biblScope unit="page">p.147</biblScope>.
-      </bibl>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <elementRef key="p" source="tei:2.0.1"/>
-    </egXML>
-    <p>Include in the schema an element named <gi>p</gi> available from the TEI P5 2.0.1
-      release.</p>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <schemaSpec ident="myODD" source="mycompiledODD.xml">
-        <!-- further declarations specifying the components required -->
-      </schemaSpec>
-    </egXML>
-    <p>Create a schema using components taken from the file <ident>mycompiledODD.xml</ident>.</p>
-  </exemplum>
-  <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STGAso">1.3.1.1.4. Sources, certainty, and responsibility</ref>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQQ">3.3.3. Quotation</ref>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TS.html#TSBAWR">8.3.4. Writing</ref>
-  </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="GLOBAL" type="atts" ident="att.global">
+  </listRef></classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="GLOBAL" type="atts" ident="att.global">
   <desc versionDate="2007-10-02" xml:lang="en">provides attributes common to all elements in the TEI encoding scheme.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">TEI 부호화 스키마의 모든 요소에 공통 속성을 제공한다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">提供一組屬性，通用於TEI編碼標準中的所有元素。</desc>
@@ -1404,7 +1292,7 @@ associated with a dated element, at the time indicated.</desc>
     
     
     
-    <memberOf key="att.global.source"/>
+    
   </classes>
   
   <attList>
@@ -1966,117 +1854,6 @@ ressource informatique selon une taxinomie normalisée.</desc>
   </attList>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html#DIBO">9.1. Dictionary Body and Overall Structure</ref>
-  </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.edition">
-  <desc versionDate="2013-01-11" xml:lang="en">provides attributes identifying the source edition from which
-  some encoded feature derives.</desc>
-  <desc versionDate="2009-05-28" xml:lang="fr">fournit des attributs identifiant l'édition source dont provient une quelconque caractéristique encodée.</desc>
-  <attList>
-    <attDef ident="ed" usage="opt">
-      <gloss versionDate="2013-01-11" xml:lang="en">edition</gloss>
-      <gloss versionDate="2009-05-28" xml:lang="fr">édition</gloss>
-      <desc versionDate="2013-11-22" xml:lang="en">supplies a sigil or other arbitrary identifier for the source edition in which
-      the associated feature (for example, a  page, column, or line
-      break) occurs at this point in the text.</desc>
-      <desc versionDate="2009-05-28" xml:lang="fr">fournit un identifiant arbitraire pour l'édition source dans laquelle la caractéristique associée 
-        (par exemple, une page, une colonne ou un saut de ligne) apparaît à ce point du texte.</desc>
-      <datatype maxOccurs="unbounded"><dataRef key="teidata.word"/></datatype>
-    </attDef>
-    <attDef ident="edRef" usage="opt">
-      <gloss versionDate="2013-01-11" xml:lang="en">edition reference</gloss>
-      <desc versionDate="2013-01-11" xml:lang="en">provides a pointer to the source edition in which
-      the associated feature (for example, a  page, column, or line
-      break) occurs at this point in the text.</desc>
-      <datatype maxOccurs="unbounded"><dataRef key="teidata.pointer"/></datatype>
-    </attDef>
-  </attList>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <l>Of Mans First Disobedience,<lb ed="1674"/> and<lb ed="1667"/> the Fruit</l>
-      <l>Of that Forbidden Tree, whose<lb ed="1667 1674"/> mortal tast</l>
-      <l>Brought Death into the World,<lb ed="1667"/> and all<lb ed="1674"/> our woe,</l>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <listBibl>
-        <bibl xml:id="stapledon1937"><author>Olaf Stapledon</author>,
-	<title>Starmaker</title>, <publisher>Methuen</publisher>, <date>1937</date></bibl>
-        <bibl xml:id="stapledon1968"><author>Olaf Stapledon</author>,
-	<title>Starmaker</title>, <publisher>Dover</publisher>, <date>1968</date></bibl>
-      </listBibl>
-      <!-- ... -->
-      <p>Looking into the future aeons from the supreme moment of
-	  the cosmos, I saw the populations still with all their
-	  strength maintaining the<pb n="411" edRef="#stapledon1968"/>essentials of their ancient culture,
-	  still living their personal lives in zest and endless
-	  novelty of action, … I saw myself still
-	  preserving, though with increasing difficulty, my lucid
-	  con-<pb n="291" edRef="#stapledon1937"/>sciousness;</p>
-    </egXML>
-  </exemplum>
-</classSpec><classSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.spanning">
-  <desc versionDate="2006-01-05" xml:lang="en">provides attributes for elements which delimit a span of text by pointing mechanisms rather than by enclosing it.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">포함보다는 포인터 메카니즘을 통하여 구분된 텍스트 구간을 나타내는 요소의 속성을 제공한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">提供元素的屬性，這些元素使用參照機制來限定某一文字段，而非包含此文字段。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">テキスト幅の範囲を内容としてではなく参照機能を使って示す要素に付与さ
-  れる属性を示す．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">fournit des attributs pour les éléments qui délimitent un passage de texte par des mécanismes de pointage plutôt qu'en entourant le passage.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">proporciona atributos para elementos que delimitan un fragmento de texto utilizando los señalizadores en lugar de cerrando el texto.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">assegna degli attributi agli elementi che delimitano una porzione di testo utilizzando dei puntatori invece di racchiudere il testo stesso</desc>
-  <attList>
-    <attDef ident="spanTo" usage="opt">
-      <desc versionDate="2005-10-10" xml:lang="en">indicates the end of a span initiated by the element
-	bearing this attribute.</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">이 속성을 포함하는 요소에 의해 시작된 구간의 끝을 나타낸다.</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">指出文字段的結尾，該文字段以帶有此屬性的元素開頭。</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">当該要素が示す範囲の終点を示す．</desc>
-      <desc versionDate="2009-05-28" xml:lang="fr">indique la fin d'un passage introduit par l'élément portant cet attribut.</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">indica el final de un fragmento de texto iniciado con el elemento al cual es asignaado el atributo.</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">indica la fine della porzione di testo che ha inizio con l'elemento a cui è assegnato l'attributo</desc>
-      <datatype><dataRef key="teidata.pointer"/></datatype>
-      <constraintSpec ident="spanTo-2" scheme="schematron">
-        <desc>The @spanTo attribute must point to an element following the
-	current element</desc>
-        <constraint>
-          <sch:rule context="tei:*[@spanTo]">
-            <sch:assert test="id(substring(@spanTo,2)) and following::*[@xml:id=substring(current()/@spanTo,2)]">
-The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow the current element <sch:name/>
-                  </sch:assert>
-          </sch:rule>
-        </constraint>
-      </constraintSpec>
-    </attDef>
-  </attList>
-  <remarks versionDate="2012-10-29" xml:lang="en">
-    <p>The span is defined as running in document order from the start
-    of the content of the pointing element  to the end of the
-    content of the element pointed to by the <att>spanTo</att> attribute (if
-    any). If no value is supplied for the attribute, the assumption is that the span is
-    coextensive with the pointing element. If no content is present,
-    the assumption is that the starting point of the span is
-    immediately following the element itself. </p>
-  </remarks>
-  <remarks xml:lang="fr" versionDate="2007-06-12">
-    <p> Le passage est défini comme courant depuis le début du contenu de l'élément pointeur (s'il y en a un) jusqu'à la fin du contenu de l'élément
-      pointé par l'attribut <att>spanTo</att> (s'il y en a un), dans l'ordre du document. Si aucune valeur n'est fournie pour l'attribut, il est entendu
-      que le passage est de même étendue que l'élément pointeur.</p>
-  </remarks>
-  <remarks xml:lang="es" versionDate="2008-04-06">
-    <p>El span se define como ejecutándose en la orden del documento des del comienzo del contenido del elemento indicado (si lo hay) al extremo del contenido del elemento señalado por el atributo del spanTo (si lo hay).
-    Si no se suministra ningún valor para el atributo, la asunción es que el span es coextensivo con el elemento indicado.</p>
-  </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
-    <p>
-    当該範囲は，当該文書中にある，(もしあれば)参照要素の内容の始点から，
-    (もしあれば)属性spanToで示された要素の内容の終点までになる．
-    当該属性に値がない場合，当該範囲は，当該参照要素と同じ範囲と想定す
-    る．
-    </p>
-  </remarks>
-  <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHAD">11.3.1.4. Additions and Deletions</ref>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STECAT">1.3.1. Attribute Classes</ref>
   </listRef>
 </classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="TIMED" type="atts" ident="att.timed">
   <desc versionDate="2007-10-02" xml:lang="en">provides attributes common to those elements which
@@ -4690,7 +4467,7 @@ Elements</ref>
     <memberOf key="att.global"/>
     <memberOf key="model.pLike"/>
     
-    <memberOf key="att.fragmentable"/>
+    
     
   </classes>
   <content>
@@ -7303,8 +7080,8 @@ psychological significance.
     <memberOf key="model.milestoneLike"/>
     <memberOf key="att.milestoneUnit"/>
     <memberOf key="att.typed"/>
-    <memberOf key="att.edition"/>
-    <memberOf key="att.spanning"/>
+    
+    
     
   </classes>
   <content>
@@ -7385,8 +7162,8 @@ Elements</ref>
     <memberOf key="att.global"/>
     <memberOf key="model.milestoneLike"/>
     <memberOf key="att.typed"/>
-    <memberOf key="att.edition"/>
-    <memberOf key="att.spanning"/>
+    
+    
     
   </classes>
   <content>
@@ -8593,7 +8370,7 @@ relatedItem element must be empty</sch:report>
     <memberOf key="model.lLike"/>
     
     
-    <memberOf key="att.fragmentable"/>
+    
   </classes>
   <content>
     
@@ -12620,7 +12397,7 @@ supplied to printer.</change>
   </listRef>
 </elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="change"><attList><attDef ident="when" mode="change" usage="req"/></attList></elementSpec><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ST" xml:id="DSTTEI2" ident="tei" type="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="CO" xml:id="DCO" ident="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="DS" xml:id="DDS" ident="textstructure"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="HD" xml:id="DHD" ident="header"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ND" xml:id="DND" ident="namesdates"/></schemaSpec>
             </div>
-
+            
         </back>
 
     </text>
