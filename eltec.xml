@@ -10,13 +10,14 @@
                 <author>Cost Action CA16204 – WG1</author>
             </titleStmt>
             <publicationStmt>
-                <p>Unpublished draft for discussion</p>
+                <p>Submitted for approval to WG1</p>
             </publicationStmt>
             <sourceDesc>
                 <p>A born digital document drafted in TEI format by LB</p>
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
+            <change when="2018-05-23">Redrafted version of encoding_proposal document post Wuerzburg</change>
             <change when="2018-03-16">Revised post-Prague</change>
             <change when="2018-01-17">Expanded metadata section a bit; added comments from CO and
                 BN</change>
@@ -168,7 +169,7 @@
                         </attList>
                     </elementSpec>
 
-                    <elementSpec ident="change">
+                    <elementSpec ident="change" mode="change">
                         <attList>
                             <attDef ident="when" mode="change" usage="req"/>
                         </attList>
