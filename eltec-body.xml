@@ -21,7 +21,7 @@
                created and received.</item>
             <item>The encoding must be easy to apply in a consistent way, starting from both basic
                OCR and pre-existing digital versions.</item>
-         </list> The goal is  not to duplicate the work of scholarly editors or to produce (yet
+         </list> The goal is not to duplicate the work of scholarly editors or to produce (yet
          another) digital edition of a specific source document. Rather it is to ensure that the
          ELTeC texts can be processed satisfactorily, even by simple minded (but XML-aware) systems
          primarily concerned with lexis, and to make life easier for the developers of such systems. </p>
@@ -80,7 +80,7 @@
          same in transcription and source. </p>
       <!-- liminal material -->
       <p>As well as a titlepage or a table of contents, a published novel often includes material
-         such as forewords or appendixes  additional to the text of the novel itself. This
+         such as forewords or appendixes additional to the text of the novel itself. This
             <term>liminal</term> matter is included in an ELTeC text only if it is believed to be
          authorial. Material before the body of the text begins is collected within a <gi>front</gi>
          element, and material following the body in a <gi>back</gi> element. In either case,
@@ -133,29 +133,29 @@
             <item>chapter identifier: each chapter or equivalent will have an identifier
                concatenating the text identifier and a three digit serial number, for example
                   <code>FR042012</code> is the twelfth chapter of the 42nd French novel. </item>
-            <item>If sub-chapter segmentation  is implemented, then the segments will append a
+            <item>If sub-chapter segmentation is implemented, then the segments will append a
                further four digit serial number.</item>
             <item>liminal divisions are not identified; the front element has an identifier
                concatenating the text identifier and the value 000; the back element has an
                identifier concatenating the text identifier and the value 999.</item>
          </list>The identifier will be supplied as the value of an <att>xml:id</att> attribute on
-         each <gi>text</gi>, <gi>div</gi>,  front, back, or <gi>s</gi> element as appropriate.
-         Adding this identifier is an easily automated task built into the workflow for accession to
-         the ELTeC.</p>
+         each <gi>text</gi>, <gi>div</gi>, front, back, or <gi>s</gi> element as appropriate. Adding
+         this identifier is an easily automated task built into the workflow for accession to the
+         ELTeC.</p>
       <p>Note that these identifiers will not necessarily correspond with the numbering used in a
          particular source text. In a work where the first twelve chapters are considered to form
          part one, and the next twelve constitute part two, the first chapter of the second part
          will have an identifier ending <code>013</code>, even though it may be numbered
             <code>1</code> in a source text.</p>
       <p>We do not preserve the lineation of running prose in our source texts, since this is always
-         purely an artefact of the source edition. For the same reason we  reassemble words broken
+         purely an artefact of the source edition. For the same reason we reassemble words broken
          across a line break, silently removing any hyphen present. (This will make it impossible to
          use our texts for hyphenation studies. So be it.) </p>
       <p>The title of a chapter, or of any other subdivision, as given in the source should be
-         encoded using the TEI  <gi>head</gi> element. There may be more than one such element at
-         the start of a <gi>div</gi> element. Novels occasionally include other initial matter, such
-         as a quotation, or a summary of the content of the chapter; these are not specially treated
-         in ELTeC texts. </p>
+         encoded using the TEI <gi>head</gi> element. There may be more than one such element at the
+         start of a <gi>div</gi> element. Novels occasionally include other initial matter, such as
+         a quotation, or a summary of the content of the chapter; these are not specially treated in
+         ELTeC texts. </p>
       <p>The chapters of a novel mostly consist of prose, arranged in paragraphs. It is not unusual
          to find other structures however, specifically verse, or passages of dialogue presented as
          if in a play, with speaker labels and even stage directions. Less frequently, novels may
@@ -168,46 +168,78 @@
          has been a preoccupation of many <q>distant reading</q> style analyses. Although it might
          be helpful to distinguish material purporting to be direct speech from material purporting
          to be narrative in our basic encoding, doing so consistently and accurately would be
-         problematic. ELTeC texts therefore do no more than preserve existing punctuation.  The
+         problematic. ELTeC texts therefore do no more than preserve existing punctuation. The
             <gi>p</gi> element is used for everything which is typeset as a separate block on the
-         page, including  both paragraphs and list items; the <gi>l </gi>element is used for verse
+         page, including both paragraphs and list items; the <gi>l </gi>element is used for verse
          lines or similar, typically set off from the rest of the text. Illustrations and any
          associated text such as a title or heading are excluded. Passages set as if in drama are
          not specially treated. </p>
       <p>Printed texts typically deploy a number of conventions which can cause problems for
          linguistic analyses of even the most basic kind. Changes of font or style (italicization or
          use of superscript, for example) usually signal something, which an analysis should take
-         into account. However,  determining the function of such typographic variation is not
-         always straightforward. ELTeC texts (at level 0) therefore simply indicate the presence of
+         into account. However, determining the function of such typographic variation is not always
+         straightforward. ELTeC texts (at level 0) therefore simply indicate the presence of
          typographic salience, using the<gi> hi</gi> element.</p>
    </div>
-   <div><head>Transcription Guidelines (level 1)</head>
+   <div>
+      <head>Transcription Guidelines (level 1)</head>
       <p>ELTeC encoding at level zero aims above all for consistency and transparency in what is
-         reliably achievable, leaving more  problematic issues to be addressed by linguistic
+         reliably achievable, leaving most problematic issues to be addressed by linguistic
          annotation. </p>
-           <p>If  however a text has been derived from a digital version in which visual features are
-         already captured, whether by means of TEI-style markup or styling information such as that
-         provided by Word, it may be preferable to encode it using ELTeC level 1, using the
-         additional elements discussed in this section.
-              
-              <list>
-            <item>if possible, replace indications of highlighting by an appropriate TEI element,
-               chosen from the following list : <gi>foreign</gi>, <gi>title</gi>,
-               <gi>emph</gi></item>
-            <item>otherwise, replace all indications of highlighting by the TEI <gi>hi</gi>
-               element</item>
-            <item>indications of superscript characters (such as French
-                  <soCalled>14&#x1d49;</soCalled>) should be removed.
-               <!--Instead, the TEI element
+      <p>If however a text has been derived from a digital version in which a more ambitious range
+         of textual features has already been captured, whether by means of TEI-style markup or
+         styling information such as that provided by Word, or if there are sufficient resources
+         available to provide a slightly reacher encoded version, a novel may be encoded at ELTeC
+         level 1, using additional elements discussed in this section. Note that a level one text
+         can always automatically be converted to a level zero text, if this is necessary for
+         compatibility or for some other reason. (An script to do this is available <ref
+            target="https://distantreading.github.io/Scripts/detagger.xsl">on the project
+            website</ref>) The reverse conversion, from level zero to level one, requires human
+         intervention. </p>
+      <p>At level 1, the element <gi>gap</gi> should be used to indicate when something has been
+         omitted from the encoding. For example, a suppressed graphic, or foreword, which at level
+         zero are silently omitted, should be represented by an explicit <gi>gap</gi> element, with
+         attributes indicating what has been omitted from the encoding.</p>
+      <p>At level 1, the following additional elements can be used to mark up the significance of
+         some stretch of text which would otherwise simply be marked as typographically salient
+         using <gi>hi</gi>: <list>
+            <label><gi>foreign</gi></label>
+            <item>a word or phrase in a foreign language</item>
+            <label>
+               <gi>title</gi></label>
+            <item>the title of a book, piece of music, etc.</item>
+            <label><gi>emph</gi></label>
+            <item>a word or phrase being linguistically emphasized e.g. by being shouted</item>
+         </list> The <gi>hi</gi> is also sometimes used for indications of superscript characters
+         (such as French <soCalled>14&#x1d49;</soCalled>); these should simply be removed.
+         <!--Instead, the TEI element
                         <gi>abbr</gi> should be used to indicate the presence of an abbreviated
-                     word: <code><gi>abbr</gi>14e&lt;/abbr></code>--></item>
-         </list></p>
+                     word: <code><gi>abbr</gi>14e&lt;/abbr></code>-->
+      </p>
+      <p>When a sequence of verse lines, or a passage from some other narrative level such as a
+         letter is quoted within a text, the <gi>l</gi> or <gi>p</gi> elements representing it
+         should be wrapped in the <gi>quote</gi> element made available by the ELTeC level one
+         schema.</p>
+      <p>It is not unusual to find special devices such as a row of stars or a rule in the middle of
+         a chapter, usually indicating a discontinuity in the narrative timeline, or structural
+         shift. Such indications are simply ignored in an ELTeC level zero text. At level one the
+         special purpose <gi>milestone</gi> element may be used to mark their presence.</p>
+      <p>Level 1 texts may also represent authorial notes, if these are present, using the element
+            <gi>note</gi> to contain the body of the note, and the element <gi>ref</gi> to represent
+         the point of attachment for the note. Wherever they appear in the text, notes are always
+         separated from it and encoded in a separate <gi>div</gi> element within the <gi>back</gi>
+         element. See examples. </p>
+      <p>Occasionally, the text being transcribed contains self-evident errors. Where these are
+         caused by the encoding process (e.g. an OCR error), these are always silently corrected in
+         the transcription. Where however the original itself is faulty, however, and the
+         transcriber (or a textual editor) has corrected it, the correction should be signalled by
+         using the <gi>corr</gi> element available at level one. </p>
    </div>
    <div>
 
       <head>TEI Elements and textual features</head>
       <p>The following summary table lists the textual features which every ELTeC text must capture,
-         together with an indication of how that feature should be represented. </p>
+         together with an indication of how that feature should be represented. 
       <table>
          <row role="label">
             <cell>Textual Feature</cell>
@@ -259,7 +291,7 @@
 
 
       </table>
-      <p>Some textual features are treated differently at different encoding levels. They are listed
+      <p>Other textual features are treated differently at different encoding levels. They are listed
          in the following table: <table>
             <row role="label">
                <cell>Textual Feature</cell>
@@ -346,7 +378,7 @@
       <p>Note that metadata may be supplied at (at least) two levels: the level of the ELTeC as a
          whole, and that of individual texts within it. Information which applies uniformly to all
          parts of the collection should be supplied in the ELTeC header; information specific to a
-         particular document in the text header. </p>  
+         particular document in the text header. </p>
 
       <p>Every ELTeC text includes a TEI Header supplying metadata to describe it. There is also a
          TEI Header for the whole collection, which has additional information common to all the
@@ -403,9 +435,9 @@
                      is unknown, it may be replaced by a question-mark. The author name should be
                      that under which the author is conventionally catalogued, not necessarily that
                      found on the title page. </item>
-                  <item>at least one <gi>respStmt</gi> element containing one or more
-                        <gi>name</gi> elements and one or more <gi>resp</gi> elements indicating the
-                     person/s responsible for producing the ELTeC edition, and the nature of their
+                  <item>at least one <gi>respStmt</gi> element containing one or more <gi>name</gi>
+                     elements and one or more <gi>resp</gi> elements indicating the person/s
+                     responsible for producing the ELTeC edition, and the nature of their
                      responsibility respectively.</item>
                </list>
             </p>
@@ -433,13 +465,13 @@
                   <measure unit="words">12 000</measure>
                   <measure unit="pages">256</measure>
                </extent></egXML>
-       </div>
+         </div>
          <div>
             <head>The publication statement (<gi>publicationStmt</gi>)</head>
 
             <p>This must contain a single <gi>p</gi> element containing a fixed phrase such as
-               <q>Incorporated into the ELTeC release 1.0</q> (or its equivalent in the appropriate language),
-               followed by a date, tagged with the <gi>date</gi> element. </p>
+                  <q>Incorporated into the ELTeC release 1.0</q> (or its equivalent in the
+               appropriate language), followed by a date, tagged with the <gi>date</gi> element. </p>
             <p> Here is a simple example, for an English text : <egXML
                   xmlns="http://www.tei-c.org/ns/Examples"><publicationStmt>
                      <p>Incorporated into the ELTeC release 1.0 <date>2018-02-12</date></p>
@@ -481,8 +513,8 @@
                   </sourceDesc></egXML>
             </p>
             <p>This encoding shows that the source of the ELTeC text is the digital facsimile
-               provided under the title and ARK identifier indicated, and that that digital facsimile is
-               itself related to a print edition, published in Paris in 1886. </p>
+               provided under the title and ARK identifier indicated, and that that digital
+               facsimile is itself related to a print edition, published in Paris in 1886. </p>
          </div>
       </div>
       <div>
@@ -493,12 +525,13 @@
             contain a <gi>langUsage</gi> element. </p>
          <p> The <gi>textClass</gi> element should contain one <gi>catRef</gi> element, and may also
             contain one or more <gi>keywords</gi> element. The <gi>catRef</gi> element must have a
-            <att>target</att> attribute specifying a series of classificatory codes. These codes are derived
-            from the ELTeC selection criteria, and are listed here. Each <gi>keywords</gi> element
-            may contain one or more <gi>term</gi> element describing some aspect of the text. At
-            present the descriptive keywords may be freely chosen. All the terms in a given
-               <gi>keywords</gi> list should use the same language, which should be that of the text
-            itself, unless otherwise specified by means of an @xml:lang attribute. </p>
+               <att>target</att> attribute specifying a series of classificatory codes. These codes
+            are derived from the ELTeC selection criteria, and are listed here. Each
+               <gi>keywords</gi> element may contain one or more <gi>term</gi> element describing
+            some aspect of the text. At present the descriptive keywords may be freely chosen. All
+            the terms in a given <gi>keywords</gi> list should use the same language, which should
+            be that of the text itself, unless otherwise specified by means of an @xml:lang
+            attribute. </p>
          <p> If used, the <gi>langUsage</gi> element should contain one or more <gi>language</gi>
             element, one for each of the human languages used in the text. The @ident attribute of
             this element identifies the language using the ISO 639-2 code in the same way as the
