@@ -2,6 +2,6 @@ cd /home/lou/Public/WG1/
 teitoodd --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec.xml eltec-compiled.xml
 teitornc  --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec-0.xml distantreading.github.io/Schema/eltec-0.rnc
 teitornc  --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec-1.xml distantreading.github.io/Schema/eltec-1.rnc
-teitohtml --odd --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec-0.xml eltec-0.html
-teitohtml --odd --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec-1.xml eltec-1.html
+teitohtml --odd --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec-0.xml distantreading.github.io/eltec-0.html
+teitohtml --odd --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec-1.xml distantreading.github.io/eltec-1.html
 

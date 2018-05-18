@@ -26,7 +26,10 @@
    </teiHeader>
    <text>
       <body>
-         <p>This reference document defines the encoding scheme to be used
+         <p rend="red">THIS DOCUMENT HAS BEEN SUPERCEDED AND IS NOW OF HISTORICAL INTEREST ONLY!</p><p rend="red">For current Encoding Guidelines, please
+            refer to <ptr target="https://distantreading.github.io/eltec-0.html"/> (level zero) 
+            or <ptr target="https://distantreading.github.io/eltec-1.html"/> (level one)
+         </p><p>This reference document defines the encoding scheme to be used
             for the European Literary Text Collection (ELTeC) which will be a major deliverable of
             COST Action 16204, <title>Distant Reading</title>. This draft reflects decisions taken
             at the WG1 meeting in Prague in February 2018, but has not yet been formally reviewed by

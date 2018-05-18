@@ -261,7 +261,7 @@
 
       <head>TEI Elements and textual features</head>
       <p>The following summary table lists the textual features which every ELTeC text must capture,
-         together with an indication of how that feature should be represented. </p>
+         together with an indication of how that feature should be represented. 
       <table>
          <row role="label">
             <cell>Textual Feature</cell>
@@ -312,7 +312,7 @@
          </row>
 
 
-      </table>
+      </table></p>
       <p>Other textual features are treated differently at different encoding levels. They are listed
          in the following table: <table>
             <row role="label">
@@ -612,186 +612,7 @@
                     teitoodd to produce the compiled ODD eltec-compiled.xml which is used as a basis
                     for the others. </p>
 
-                <schemaSpec xmlns:teix="http://www.tei-c.org/ns/Examples" ident="ELTeC" start="TEI" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML" source="/home/lou/Public/TEI/P5/p5subset.xml"><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.ascribed">
-  <desc versionDate="2006-01-05" xml:lang="en">provides attributes for elements representing speech or action that can be ascribed to a
-    specific individual.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">특정 개인의 대화 또는 행위를 표시하는 요소에 대한 속성을 제공한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">提供的元素屬性代表言詞或行為，可出自某一特定個人。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">特定個人に帰する発話や行動を示すを示す要素に付随する．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">fournit des attributs pour des éléments transcrivant la
-    parole ou l'action qui peuvent être attribuées à un individu en particulier.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">proporciona atributos para los elementos que representan
-    palabras o acciones atribuibles a individuos determinados.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">assegna degli attributi agli elementi che rappresentano
-    parole o azioni attribuibili a singoli individui</desc>
-  <attList>
-    <attDef ident="who">
-      <desc versionDate="2005-11-05" xml:lang="en">indicates the person, or group of people, to whom the element content is ascribed.</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">요소 내용이 속하는 사람 또는 사람의 그룹을 나타낸다.</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">指出該元素內容所歸屬的個人或團體。</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">当該要素の内容が示す人物を示す．</desc>
-      <desc versionDate="2007-06-12" xml:lang="fr">indique la personne ou le groupe de personnes à qui
-        le contenu de l'élément est attribué.</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">indica la persona o grupo de personas a las que se
-        refiere el contenido del elemento.</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">indica la persona o gruppo di persone alle quali
-        viene attribuito il contenuto dell'elemento</desc>
-      <datatype maxOccurs="unbounded"><dataRef key="teidata.pointer"/></datatype>
-      <exemplum xml:lang="en">
-        <p>In the following example from Hamlet, speeches (<gi>sp</gi>) in the body of the play 
-        are linked to <gi>castItem</gi> elements in the <gi>castList</gi> using the <att>who</att>
-        attribute.</p>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="en" valid="feasible">
-          <castItem type="role">
-            <role xml:id="Barnardo">Bernardo</role>
-          </castItem>
-          <castItem type="role">
-            <role xml:id="Francisco">Francisco</role>
-            <roleDesc>a soldier</roleDesc>
-          </castItem>
-          <!-- ... -->
-          <sp who="#Barnardo">
-            <speaker>Bernardo</speaker>
-            <l n="1">Who's there?</l>
-          </sp>
-          <sp who="#Francisco">
-            <speaker>Francisco</speaker>
-            <l n="2">Nay, answer me: stand, and unfold yourself.</l>
-          </sp>
-        </egXML>
-      </exemplum>
-      <remarks versionDate="2013-11-22" xml:lang="en"><p>For transcribed speech, this will typically identify a participant or participant
-        group; in other contexts, it will point to any identified <gi>person</gi> element.</p></remarks>
-      <remarks versionDate="2013-11-22" xml:lang="fr"><p>Pour un discours transcrit, identifiera typiquement un participant ou
-        un groupe participant ; dans d'autres contextes, pointera vers n'importe quel élément
-          <gi>person</gi> identifié.</p></remarks>
-    </attDef>
-  </attList>
-  <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQQ">3.3.3. Quotation</ref>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TS.html#TSBA">8.3. Elements Unique to Spoken Texts</ref>
-  </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.canonical">
-  <desc versionDate="2008-09-05" xml:lang="en">provides attributes which can be used to associate a representation such as a name or title
-    with canonical information about the object being named or referenced.</desc>
-  <desc versionDate="2009-05-25" xml:lang="fr">fournit des attributs qui peuvent être utilisés pour
-    associer une représentation telle qu'un nom ou un titre à l'information canonique concernant
-    l'objet nommé ou auquel il est fait référence.</desc>
-  <attList>
-    <attDef ident="key" usage="opt">
-      <desc versionDate="2008-09-05" xml:lang="en">provides an externally-defined means of identifying the entity (or entities) being
-        named, using a coded value of some kind.</desc>
-      <desc versionDate="2009-05-25" xml:lang="fr"> fournit un moyen, défini de façon externe,
-        d'identifier l'entité (ou les entités) nommé(es), en utilisant une valeur codée
-        d'un certain type.</desc>
-      <datatype><dataRef key="teidata.text"/></datatype>
-      <exemplum xml:lang="en">
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="en">
-          <author>
-            <name key="name 427308" type="organisation">[New Zealand Parliament, Legislative Council]</name>
-          </author>
-        </egXML>
-      </exemplum>
-      <exemplum xml:lang="en">
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="fr">
-          <author>
-            <name key="Hugo, Victor (1802-1885)" ref="http://www.idref.fr/026927608">Victor Hugo</name>
-          </author>
-        </egXML>
-      </exemplum>
-      <remarks versionDate="2013-06-20" xml:lang="en">
-        <p>The value may be a unique identifier from a database, or any other externally-defined
-          string identifying the referent. </p>
-        <p>No particular syntax is proposed for the values of the <att>key</att> attribute, since 
-          its form will depend entirely on practice within a given project. For the same reason, this 
-          attribute is not recommended in data interchange, since there is no way of ensuring 
-          that the values used by one project are distinct from those used by another. In such
-          a situation, a preferable approach for magic tokens which follows standard practice 
-          on the Web is to use a <att>ref</att> attribute whose value is a tag URI as defined in 
-          <ref target="#RFC4151">RFC 4151</ref>.</p>
-      </remarks>
-      <remarks versionDate="2009-05-25" xml:lang="fr">
-        <p>La valeur peut être un identifiant unique dans une base de données, ou toute autre chaîne
-          définie de façon externe identifiant le référent. </p>
-      </remarks>
-    </attDef>
-    <attDef ident="ref" usage="opt">
-      <gloss versionDate="2008-09-05" xml:lang="en">reference</gloss>
-      <gloss versionDate="2009-05-25" xml:lang="fr">référence</gloss>
-      <desc versionDate="2008-09-05" xml:lang="en">provides an explicit means of locating a full definition or identity for the entity being named by
-        means of one or more URIs.</desc>
-      <desc versionDate="2009-05-25" xml:lang="fr">fournit un moyen explicite de localiser une
-        définition complète de l'entité nommée au moyen d'un ou plusieurs URIs.</desc>
-      <datatype minOccurs="1" maxOccurs="unbounded"><dataRef key="teidata.pointer"/></datatype>
-        <exemplum xml:lang="en">
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="en">
-            <name ref="http://viaf.org/viaf/109557338" type="person">Seamus Heaney</name>
-            </egXML>
-        </exemplum>         
-      <remarks versionDate="2014-01-09" xml:lang="en">
-<p>The value must point directly to one or more XML elements or other resources by means of one or more URIs, separated by whitespace. If more than one is supplied the implication is that the name identifies several distinct entities.</p>
-      </remarks>
-      <remarks versionDate="2009-05-25" xml:lang="fr">
-        <p>La valeur doit pointer directement vers un ou plusieurs éléments XML au moyen d'un ou plusieurs URIs, séparés par un espace. Si plus d'un URI est fourni, cela implique que le nom identifie plusieurs entités distinctes.</p>
-      </remarks>
-    </attDef>
-  </attList>
-  <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDATTSnr">13.1.1. Linking Names and Their Referents</ref>
-  </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.cReferencing">
-  <desc versionDate="2012-09-23" xml:lang="en">provides an attribute which may be used to supply a
-  <term>canonical reference</term> as a means of identifying the
-  target of a pointer.</desc>
-  <attList>
-    <attDef ident="cRef">
-      <gloss versionDate="2012-09-23" xml:lang="en">canonical reference</gloss>
-      <gloss versionDate="2007-12-20" xml:lang="ko">표준 참조</gloss>
-      <gloss versionDate="2008-04-06" xml:lang="es">referencia canónica</gloss>
-      <gloss versionDate="2008-03-30" xml:lang="fr">référence canonique</gloss>
-      <gloss versionDate="2007-11-06" xml:lang="it">riferimento canonico</gloss>
-      <desc versionDate="2013-11-22" xml:lang="en">specifies the destination of the pointer by supplying a canonical reference expressed using the
-        scheme defined in a <gi>refsDecl</gi> element in the TEI header</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">TEI 헤더의 <gi>refsDecl</gi> 요소에서 정의된 체계의 표준 참조를 이용하여
-        포인터의 목적지를 명시한다.</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">用元素<gi>refsDecl</gi>在TEI標頭內所定義的標準參照來說明指標所指位置。</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">TEIヘダー内の要素<gi>refsDecl</gi>で定義されているスキームにある，
-        標準的な参照により，当該ポインタの参照場所を示す．</desc>
-      <desc versionDate="2009-01-06" xml:lang="fr">précise la cible du pointeur en fournissant une
-        référence canonique issue d'un modèle défini par un élément <gi>refsDecl</gi>dans l'En-tête
-        TEI.</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">especifica la destinación de un señalizador
-        proporcionando una referencia canónica de un esquema definido en un elemento
-        <gi>refsDecl</gi> en el encabezado TEI.</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">specifica la destinazione di un puntatore usando un
-        riferimento canonico a partire da uno schema definito in un elemento <gi>refsDecl</gi>
-        nell'intestazione TEI</desc>
-      <datatype maxOccurs="1"><dataRef key="teidata.text"/></datatype>
-          <remarks versionDate="2012-09-23" xml:lang="en">
-        <p>The value of <att>cRef</att> should be constructed so
-      that when the algorithm for the resolution of canonical
-      references (described in section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SACR">16.2.5. Canonical References</ref>) is
-      applied to it the result is a valid URI reference to the
-      intended target</p>
-<p>The <gi>refsDecl</gi> to use may be indicated with the <att>decls</att> attribute.</p>
-        <p>Currently these Guidelines only provide for a single canonical reference to be encoded on
-          any given <gi>ptr</gi> element.</p>
-      </remarks>
-      <remarks xml:lang="fr" versionDate="2007-06-12">
-<p>Le résultat de l’application de l'algorithme pour la résolution des
-        références canoniques (décrit à la section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SACR">16.2.5. Canonical References</ref>). Ce sera une référence URI
-        valide pour la cible prévue.</p>        <p>La <gi>refsDecl</gi> à utiliser peut être indiquée à l'aide
-        de l'attribut <att>decls</att>.  Actuellement ces Principes
-        directeurs ne permettent que l'encodage d'une unique référence
-        canonique pour tout élément <gi>ptr</gi> donné.</p>
-      </remarks>
-      <remarks xml:lang="ja" versionDate="2008-04-05">
-        <p> 要素<gi>refsDecl</gi>は，属性<att>decls</att>を伴い，使用され るだろう． </p>
-        <p> 現行ガイドラインでは，要素<gi>ptr</gi>は，ひつとの標準的な参照 をとることを想定している． </p>
-      </remarks>
-    </attDef>
-  </attList>
-</classSpec><classSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.datable.w3c" xml:id="DATABLEW3C">
+                <schemaSpec xmlns:teix="http://www.tei-c.org/ns/Examples" ident="ELTeC" start="TEI" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML" source="/home/lou/Public/TEI/P5/p5subset.xml"><classSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.datable.w3c" xml:id="DATABLEW3C">
   <desc versionDate="2013-11-22" xml:lang="en">provides attributes for normalization of elements that contain
   datable events  conforming to the W3C
   <title ref="#XSD2">XML Schema Part 2: Datatypes Second Edition</title>.</desc>
@@ -1069,46 +890,7 @@
   </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONADA">3.5.4. Dates and Times</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDDATE">13.3.6. Dates and Times</ref>
-  </listRef></classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.docStatus">
-  <desc versionDate="2010-05-06" xml:lang="en">provides attributes for use on metadata elements
-  describing the status of a document.</desc>
-  <attList>
-    <attDef ident="status">
-      <desc versionDate="2010-05-06" xml:lang="en">describes the status of a document either currently or, when
-associated with a dated element, at the time indicated.</desc>
-      <datatype><dataRef key="teidata.enumerated"/></datatype>
-      <defaultVal>draft</defaultVal>
-      <valList type="open">
-        <valItem ident="approved"/>
-        <valItem ident="candidate"/>
-        <valItem ident="cleared"/>
-        <valItem ident="deprecated"/>
-        <valItem ident="draft"/>
-        <valItem ident="embargoed"/>
-        <valItem ident="expired"/>
-        <valItem ident="frozen"/>
-        <valItem ident="galley"/>
-        <valItem ident="proposed"/>
-        <valItem ident="published"/>
-        <valItem ident="recommendation"/>
-        <valItem ident="submitted"/>
-        <valItem ident="unfinished"/>
-        <valItem ident="withdrawn"/>
-      </valList>
-    </attDef>
-  </attList>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <revisionDesc status="published">
-        <change when="2010-10-21" status="published"/>
-        <change when="2010-10-02" status="cleared"/>
-        <change when="2010-08-02" status="embargoed"/>
-        <change when="2010-05-01" status="frozen" who="#MSM"/>
-        <change when="2010-03-01" status="draft" who="#LB"/>
-      </revisionDesc>
-    </egXML>
-  </exemplum>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" predeclare="true" module="tei" type="atts" ident="att.global.rendition"><desc versionDate="2014-12-02" xml:lang="en">provides rendering attributes common to all elements in the TEI encoding scheme.</desc><classes/><attList><attDef ident="rend" usage="opt">
+  </listRef></classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" predeclare="true" module="tei" type="atts" ident="att.global.rendition"><desc versionDate="2014-12-02" xml:lang="en">provides rendering attributes common to all elements in the TEI encoding scheme.</desc><classes/><attList><attDef ident="rend" usage="opt">
       <gloss versionDate="2007-07-02" xml:lang="en">rendition</gloss>
       <gloss versionDate="2007-12-20" xml:lang="ko">번역</gloss>
       <gloss versionDate="2008-04-06" xml:lang="es">interpretación</gloss>
@@ -1417,190 +1199,6 @@ and that a single TEI document may contain texts in many languages.</p>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STGA">1.3.1.1. Global Attributes</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.internetMedia">
-  <desc versionDate="2007-10-18" xml:lang="en">provides attributes for specifying the type of a computer
-  resource using a standard taxonomy.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">표준 분류법을 사용하는 컴퓨터 자원의 유형을 명시하는 속성을 제시한다.</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">
-  標準的な用語による計算機資源の種類を表す属性を示す．
-</desc>
-  <desc versionDate="2009-05-27" xml:lang="fr">fournit des attributs pour spécifier le type de
-ressource informatique selon une taxinomie normalisée.</desc>
-  <desc versionDate="2007-11-06" xml:lang="it">indica degli attributi che specificano il tipo di risorsa informatica utilizzando una tassonomia standard</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">atributos para registrar un periodo temporal normalizado</desc>
-  <attList>
-    <attDef ident="mimeType" usage="opt">
-      <gloss versionDate="2007-07-02" xml:lang="en">MIME media type</gloss>
-      <gloss versionDate="2007-12-20" xml:lang="ko">MIME 매체 유형</gloss>
-      <gloss versionDate="2008-04-06" xml:lang="es">Tipo de media del MIME</gloss>
-      <gloss versionDate="2008-03-30" xml:lang="fr">type de média MIME</gloss>
-      <desc versionDate="2007-06-14" xml:lang="en">specifies the applicable multimedia internet mail extension (MIME) media type</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">적용 가능한 다중매체 인터넷 메일 확장자(MIME) 매체 유형을 명시한다.</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">
-      当該データのMIMEタイプ．</desc>
-      <desc versionDate="2008-03-30" xml:lang="fr">spécifie le type MIME (multipurpose internet mail extension) applicable.</desc>
-      <desc versionDate="2007-11-06" xml:lang="it">specifica il tipo MIME appropriato</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">El tipo de MIME</desc>
-      <desc versionDate="2006-06-05" xml:lang="zh-TW">MIME協定種類</desc>
-      <datatype minOccurs="1" maxOccurs="unbounded"><dataRef key="teidata.word"/></datatype>
-    </attDef>
-  </attList>
-  <exemplum xml:lang="en">
-    <p>In this example <att>mimeType</att> is used to indicate that the URL points to a TEI XML file encoded in UTF-8.</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <ref mimeType="application/tei+xml; charset=UTF-8" target="http://sourceforge.net/p/tei/code/HEAD/tree/trunk/P5/Source/guidelines-en.xml"/>
-    </egXML>
-  </exemplum>
-  <remarks versionDate="2013-12-06" xml:lang="en">
-    <p>This attribute class provides an attribute for describing a
-    computer resource, typically available over the internet,
-    using a value taken from a standard taxonomy. At present only a single
-    taxonomy is supported, the Multipurpose Internet Mail Extensions
-    (MIME) Media Type system. This typology of media types is
-    defined by the Internet Engineering Task Force in <ref target="http://www.ietf.org/rfc/rfc2046.txt">RFC 2046</ref>. The
-    <ref target="http://www.iana.org/assignments/media-types/">list of
-    types</ref> is maintained by the Internet Assigned Numbers
-    Authority (IANA). The <att>mimeType</att> attribute must have a value taken from this list.</p>
-  </remarks>
-  <remarks xml:lang="fr" versionDate="2007-06-12">
-    <p>Cette classe d'attributs fournit des attributs pour décrire une ressource
-                informatique, en général disponible sur internet, selon les taxinomies normalisées.
-                Actuellement une seule taxinomie est reconnue : le système "Multipurpose Internet
-                Mail Extensions Media Type". Ce système de typologie des types de média est définie
-                par l'Internet Engineering Task Force dans<ref target="http://www.ietf.org/rfc/rfc2046.txt">RFC 2046</ref>. La <ref target="http://www.iana.org/assignments/media-types/">liste des types</ref>
-                est maintenue par l'Internet Assigned Numbers Authority. </p>
-  </remarks>
-  <remarks xml:lang="es" versionDate="2008-04-06">
-    <p>Esta clase de atributo proporciona los atributos para describir un recurso del ordenador, típicamente disponibles en Internet, según las taxonomías estándar. Solamente una única taxonomía se utiliza actualmente, el sistema Multipurpose Internet Mail Extensions
-    Media Type. Este sistema de tipología de los tipos de media es definido por el Internet Engineering Task Force <ref target="http://www.ietf.org/rfc/rfc2046.txt">RFC 2046</ref>. 
-    . La <ref target="http://www.iana.org/assignments/media-types/">lista de tipos</ref> es mantenida por el Internet Assigned Numbers Authority.</p>
-  </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
-    <p>
-    当該属性クラスは，計算機資源を示すためのもので，一般には，インター
-    ネット上にある資源を標準的な用語で示す．現時点では，MIMEタイプに従っ
-    MIMEタイプについては，IETFの
-    <ref target="http://www.ietf.org/rfc/rfc2046.txt">RFC 2046</ref>
-    で規定されている．
-    <ref target="http://www.iana.org/assignments/media-types/">
-    使用できるタイプ名</ref>の管理は，IANAで行われている．
-    </p>
-  </remarks>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.placement">
-  <desc versionDate="2006-06-08" xml:lang="en">provides attributes for describing where on the source page or
-  object a textual element appears.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">원본 페이지 또는 대상에서 텍스트 요소가 나타나는 위치를 기술하기 위한 속성을 제공한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">提供屬性，描述文件元素在來源頁面或物件上出現的位置。</desc>
-  <desc versionDate="2008-04-21" xml:lang="ja">テキスト要素が出現する元資料中のページやオブジェクトを表す属性を示す．</desc>
-  <desc versionDate="2009-05-28" xml:lang="fr">fournit des attributs pour décrire l'emplacement où apparaît un élément textuel dans la page ou l'objet source.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">proporciona atributos para
-  describir en que página u objeto de la fuente aparece el elemento
-  textual.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">identifica degli attributi
-  che descrivono la collocazione di un elemento testuale all'interno
-  della pagina o dell'oggetto di origine</desc>
-  <attList>
-    <attDef ident="place" usage="rec">
-      <desc versionDate="2012-10-07" xml:lang="en">specifies where this item is placed.</desc>
-      <desc xml:lang="fr" versionDate="2007-06-12">specifie  où cet  item se trouve.</desc>
-      <datatype maxOccurs="unbounded"><dataRef key="teidata.enumerated"/></datatype>
-      <valList type="semi">
-        <valItem ident="below">
-          <desc versionDate="2009-01-22" xml:lang="en">below the line</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">행 아래</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">行底</desc>
-          <desc versionDate="2008-04-21" xml:lang="ja">当該線の下．</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">debajo de la línea</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">au-dessous de la ligne</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">al di sotto della linea</desc>
-        </valItem>
-        <valItem ident="bottom">
-          <desc versionDate="2009-01-22" xml:lang="en">at the foot of the page</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">아래 여백</desc>
-          <desc versionDate="2009-05-28" xml:lang="fr">dans la marge inférieure</desc>
-          <desc versionDate="2007-11-06" xml:lang="it">margine inferiore</desc>
-          <desc versionDate="2007-05-04" xml:lang="es">en el margen inferior</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">頁尾空白處</desc>
-          <desc versionDate="2008-04-21" xml:lang="ja">下の余白．</desc>
-        </valItem>
-        <valItem ident="margin">
-          <desc versionDate="2009-01-22" xml:lang="en">in the margin (left, right, or both)</desc>
-          <desc versionDate="2009-05-28" xml:lang="fr">dans la marge (gauche, droite ou les deux en même temps)</desc>
-        </valItem>
-        <valItem ident="top">
-          <desc versionDate="2009-01-22" xml:lang="en">at the top of the page</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">위쪽 여백에 있음</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">頁首空白處</desc>
-          <desc versionDate="2008-04-21" xml:lang="ja">上の余白．</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">en el margen superior</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">nel margine superiore</desc>
-          <desc versionDate="2009-05-28" xml:lang="fr">dans la marge supérieure</desc>
-        </valItem>
-        <valItem ident="opposite">
-          <desc versionDate="2009-01-22" xml:lang="en">on the opposite, i.e. facing, page</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">맞쪽, 즉 마주보는 페이지</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">對頁頁面</desc>
-          <desc versionDate="2008-04-21" xml:lang="ja">反対側．例えば，見返しや，向かいのページなど．</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">en el opuesto,es decir en el anverso, reverso, etc.</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">sur la page opposée</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">nella pagina accanto</desc>
-        </valItem>
-        <valItem ident="overleaf">
-          <desc versionDate="2009-01-22" xml:lang="en">on the other side of the leaf</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">장의 반대쪽에 있음</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">書頁反頁頁面</desc>
-          <desc versionDate="2008-04-21" xml:lang="ja">裏面．</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">en la otra cara de
-          la página</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">de l'autre côté de la feuille</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">dall'altro lato del
-          foglio</desc>
-        </valItem>
-        <valItem ident="above">
-          <desc versionDate="2009-01-22" xml:lang="en">above the line</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">행 위에 있음</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">行上方</desc>
-          <desc versionDate="2008-04-21" xml:lang="ja">当該線の上．</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">sobre la línea</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">au-dessus de la ligne</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">al di sopra della linea</desc>
-        </valItem>
-        <valItem ident="end">
-          <desc versionDate="2009-01-22" xml:lang="en">at the end of e.g. chapter or volume.</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">주석이 장 또는 책 뒤에 나타난다.</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">註解出現於章節或書冊的結尾</desc>
-          <desc versionDate="2008-04-21" xml:lang="ja">章末や巻末に注釈がある．</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">al final del capítulo o del volumen.</desc>
-          <desc versionDate="2009-05-28" xml:lang="fr">à la fin, par exemple d'un chapitre ou d'un volume</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">alla fine del capitolo o del volume</desc>
-        </valItem>
-        <valItem ident="inline">
-          <desc versionDate="2009-01-22" xml:lang="en">within the body of the text.</desc>
-          <desc versionDate="2009-05-28" xml:lang="fr">dans le corps du texte</desc>
-        </valItem>
-        <valItem ident="inspace">
-          <desc versionDate="2009-01-22" xml:lang="en"> in a predefined space, for example left by an earlier scribe.</desc>
-          <desc versionDate="2009-05-28" xml:lang="fr">dans un espace prédéfini, par exemple à gauche d'un scripteur précédent</desc>
-        </valItem>
-      </valList>
-      <exemplum xml:lang="en">
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          <add place="margin">[An addition written in the margin]</add>
-          <add place="bottom opposite">[An addition written at the
-	  foot of the current page and also on the facing page]</add>
-        </egXML>
-      </exemplum>
-      <exemplum xml:lang="en">
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          <note place="bottom">Ibid, p.7</note>
-        </egXML>
-      </exemplum>
-    </attDef>
-  </attList>
-  <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COEDADD">3.4.3. Additions, Deletions, and Omissions</ref>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHAD">11.3.1.4. Additions and Deletions</ref>
-  </listRef>
 </classSpec><classSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="tei" xml:id="TYPED" type="atts" ident="att.typed"><desc versionDate="2007-10-02" xml:lang="en">provides attributes which can be used to classify or subclassify elements in any way.</desc><desc versionDate="2007-12-20" xml:lang="ko">요소의 분류 또는 하위분류에서 사용될 수 있는 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供可依任何方法將元素分類或次要分類的一般屬性。</desc><desc versionDate="2008-04-05" xml:lang="ja">要素を分類するための属性を示す．
 </desc><desc versionDate="2009-05-29" xml:lang="fr">fournit des attributs qui peuvent être
       utilisés pour classer ou interclasser des éléments de n'importe quelle façon.</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona atributos genéricos utilizables para cualquier clasificación o subclasificación de elementos.</desc><desc versionDate="2007-01-21" xml:lang="it">assegna degli attributi generici utilizzabili per qualsiasi classificazione e sottoclassificazione di elementi</desc><classes/><constraintSpec scheme="schematron" ident="subtypeTyped">
@@ -1747,82 +1345,6 @@ ressource informatique selon une taxinomie normalisée.</desc>
   </attList>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html#DIBO">9.1. Dictionary Body and Overall Structure</ref>
-  </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="TIMED" type="atts" ident="att.timed">
-  <desc versionDate="2007-10-02" xml:lang="en">provides attributes common to those elements which
-  have a duration in time, expressed either absolutely or by reference
-  to an alignment map.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">절대적 또는 배열 지도에 대한 참조에 의해 표현된 시간의 지속을 나타내는 요소들 사이에 공통적 속성을 제공한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">提供一組屬性，通用於帶有時間長度的元素，這些元素以絕對方式表明，或是參照到組序表。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">時間幅を持つ要素に共通する属性を示す．絶対的または関連図への参照で示
-  される．</desc>
-  <desc versionDate="2009-05-28" xml:lang="fr">fournit des attributs communs aux éléments qui
-      expriment une durée dans le temps, soit de manière absolue, soit en se référant à une carte d'alignement.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">proporciona un conjunto de atributos comunes a los elementos que tienen una duración en el tiempo expresada en términs absolutos o por referencia a un esquema de alineamiento</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">assegna un insieme di attributi comuni agli elementi che hanno una durata nel tempo espressa in termini assoluti o rispetto a uno schema di allineamento</desc>
-  <classes>
-    
-  </classes>
-  <attList>
-    <attDef ident="start" usage="opt">
-      <desc versionDate="2005-10-10" xml:lang="en">indicates the location within a temporal alignment at
-      which this element begins.</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">이 요소가 시작된 시간 배열 내의 위치를 제시한다.</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">指出時間組序中此元素的起始位置。</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">時間関連図上で，当該要素が始まることを示す時間点を示す．</desc>
-      <desc versionDate="2007-06-12" xml:lang="fr">indique dans un alignement temporel (un ordre chronologique) l'endroit où commence cet élément.</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">indica el punto en el ámbito de un alineamiento temporal en el cual comienza el elemento</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">indica il punto nell'ambito di un allineamento temporale in cui comincia l'elemento</desc>
-      <datatype><dataRef key="teidata.pointer"/></datatype>
-      <remarks versionDate="2005-10-10" xml:lang="en">
-        <p>If no value is supplied, the element is assumed to follow
-	the immediately preceding element at the same hierarchic
-	level.</p>
-      </remarks>
-      <remarks xml:lang="fr" versionDate="2007-06-12">
-        <p> Si aucune valeur n'est donnée, il est entendu que l'élément suit l'élément immédiatement précédent au même niveau hiérarchique.</p>
-      </remarks>
-      <remarks xml:lang="es" versionDate="2008-04-06">
-        <p>Si no se suministra ningún valor, el elemento es asumido para seguir el elemento inmediatament anterior en el mismo nivel jerárquico.</p>
-      </remarks>
-      <remarks xml:lang="ja" versionDate="2008-04-05">
-        <p>
-	値がない場合は，当該要素は同じ構造レベル上の直前の要素の後に続
-	くものとされる．
-	</p>
-      </remarks>
-    </attDef>
-    <attDef ident="end" usage="opt">
-      <desc versionDate="2005-10-10" xml:lang="en">indicates the location within a temporal alignment at
-      which this element ends.</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">이 요소가 종료된 시간 배열 내의 위치를 제시한다.</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">指出時間組序 (順序點) 中此元素的結尾位置。</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">時間関連図上で，当該要素が終わることを示す時間点を示す．</desc>
-      <desc versionDate="2007-06-12" xml:lang="fr">indique l'endroit où se termine cet élément dans un alignement temporel.</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">indica el punto en el ámbito de un alineamiento temporal en el cual comienza el elemento</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">indica il punto nell'ambito di un allineamento temporale in cui termina l'elemento</desc>
-      <datatype><dataRef key="teidata.pointer"/></datatype>
-      <remarks versionDate="2005-10-10" xml:lang="en">
-        <p>If no value is supplied, the element is assumed to precede
-        the immediately following element at the same hierarchic
-        level.</p>
-      </remarks>
-      <remarks xml:lang="fr" versionDate="2007-06-12">
-        <p>Si aucune valeur n'est donnée, il est entendu que l'élément précède l'élément immédiatement suivant au même niveau hiérarchique.</p>
-      </remarks>
-      <remarks xml:lang="es" versionDate="2008-04-06">
-        <p>Si no se suministra ningún valor, el elemento es asumido para preceder el elemento inmediatamente posterior en el mismo nivel jerárquico.</p>
-      </remarks>
-      <remarks xml:lang="ja" versionDate="2008-04-05">
-        <p>
-	値がない場合は，当該要素は同じ構造レベル上の直前の要素の後に続
-	くものとされる．
-	</p>
-      </remarks>
-    </attDef>
-  </attList>
-  <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TS.html#TSBATI">8.3.5. Temporal Information</ref>
   </listRef>
 </classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="AGENT" type="model" ident="model.nameLike.agent">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements which contain names of individuals
@@ -4716,9 +4238,9 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
     
     <memberOf key="att.pointing"/>
     <memberOf key="att.typed"/>
-    <memberOf key="att.canonical"/>
+    
     <memberOf key="att.sortable"/>
-    <memberOf key="att.cReferencing"/>
+    
   </classes>
   <content>
     <macroRef key="macro.phraseSeq"/>
@@ -5141,7 +4663,7 @@ Normalization</ref>
   <classes>
     <memberOf key="att.global"/>
     <memberOf key="model.global.edit"/>
-    <memberOf key="att.timed"/>
+    
     
   </classes>
   <content>
@@ -5629,10 +5151,10 @@ Measures</ref>
     <memberOf key="att.global"/>
     <memberOf key="model.ptrLike"/>
     <memberOf key="att.pointing"/>
-    <memberOf key="att.internetMedia"/>
+    
     <memberOf key="att.typed"/>
     
-    <memberOf key="att.cReferencing"/>
+    
   </classes>
   <content>
     <macroRef key="macro.paraContent"/>
@@ -6219,7 +5741,7 @@ Measures</ref>
   <classes>
     <memberOf key="att.global"/>
     <memberOf key="att.typed"/>
-    <memberOf key="att.placement"/>
+    
     
     <memberOf key="model.labelLike"/>
   </classes>
@@ -6561,7 +6083,7 @@ entre les Romains.</label>
   <classes>
     <memberOf key="att.global"/>
     <memberOf key="att.typed"/>
-    <memberOf key="att.placement"/>
+    
     
     <memberOf key="model.headLike"/>
     <memberOf key="model.pLike.front"/>
@@ -6739,7 +6261,7 @@ entre les Romains.</label>
   <classes>
     <memberOf key="att.global"/>
     <memberOf key="model.noteLike"/>
-    <memberOf key="att.placement"/>
+    
     <memberOf key="att.pointing"/>
     <memberOf key="att.typed"/>
     
@@ -7169,7 +6691,7 @@ Elements</ref>
     dell'autore (o degli autori), personale o collettivo, di un'opera; è la dichiarazione di
     responsabilità primaria di ciascuna unità bibliografica.</desc><desc versionDate="2017-06-04" xml:lang="de">enthält in einer bibliografischen Referenz den oder die Namen eines Autors eines Werks
     (oder einer für das Werk verantwortlichen Körperschaft); zum Beispiel in der Form, wie sie eine
-    anerkannte bibliografische Instanz anbietet.</desc><classes><memberOf key="att.global"/><memberOf key="model.respLike"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="persName"/><elementRef key="orgName"/><elementRef key="date"/><elementRef key="idno"/></alternate></content><attList/><exemplum xml:lang="en">
+    anerkannte bibliografische Instanz anbietet.</desc><classes><memberOf key="att.global"/><memberOf key="model.respLike"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="date"/><elementRef key="idno"/></alternate></content><attList/><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#COBICOR-eg-251">
       <author>British Broadcasting Corporation</author>
       <author>La Fayette, Marie Madeleine Pioche de la Vergne, comtesse de (1634–1693)</author>
@@ -7271,7 +6793,7 @@ places, in particular where  multiple names are given.</p>
     bibliografischen Objekts eine Rolle gespielt.</desc>
   <classes>
     <memberOf key="att.global"/>
-    <memberOf key="att.canonical"/>
+    
     <memberOf key="model.respLike"/>
     
   </classes>
@@ -7375,7 +6897,7 @@ places, in particular where  multiple names are given.</p>
     Rolle einer Organisation bei der Herstellung oder Distribution eines Werkes beschreibt.</desc>
   <classes>
     <memberOf key="att.global"/>
-    <memberOf key="att.canonical"/>
+    
     <memberOf key="att.datable"/>
   </classes>
   <content>
@@ -7450,7 +6972,7 @@ places, in particular where  multiple names are given.</p>
     <memberOf key="att.global"/>
     <memberOf key="model.emphLike"/>
     
-    <memberOf key="att.canonical"/>
+    
     <memberOf key="att.typed"/>
     <memberOf key="att.datable"/>
   </classes>
@@ -8057,7 +7579,7 @@ epistemology, methodology and history of
     
     
     <memberOf key="att.sortable"/>
-    <memberOf key="att.docStatus"/>
+    
   </classes>
   <content>
     
@@ -8479,7 +8001,7 @@ relatedItem element must be empty</sch:report>
   <classes>
     <memberOf key="att.global"/>
     <memberOf key="model.divPart"/>
-    <memberOf key="att.ascribed"/>
+    
   </classes>
   <content>
     <sequence>
@@ -8600,9 +8122,9 @@ relatedItem element must be empty</sch:report>
         scena all'interno di un testo o di un frammento di testo drammatico.</desc>
   <desc versionDate="2017-06-13" xml:lang="de">enthält jegliche Regieanweisung in einem Dramentext oder -fragment.</desc>
   <classes>
-    <memberOf key="att.ascribed"/>
+    
     <memberOf key="att.global"/>
-    <memberOf key="att.placement"/>
+    
     <memberOf key="model.stageLike"/>
   </classes>
   <content>
@@ -9323,6 +8845,10 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
                                     <valItem ident="titlepage">
                                         <desc>title page transcription (level 1 only)</desc>
                                     </valItem>
+                                    <valItem ident="notes">
+                                        <desc>collects authorial notes (level 1 only)</desc>
+                                    </valItem>
+                                    
                                     <valItem ident="liminal">
                                         <desc>authorial preface, foreword, back matter etc.</desc>
                                     </valItem>
@@ -11829,7 +11355,7 @@ should be supplied for the <att>scheme</att> attribute.</p>
   <desc versionDate="2007-01-21" xml:lang="it">sintetizza la storia delle revisioni di un file</desc>
   <classes>
     <memberOf key="att.global"/>
-    <memberOf key="att.docStatus"/>
+    
   </classes>
   <content>
     <alternate>
@@ -11897,7 +11423,7 @@ should be supplied for the <att>scheme</att> attribute.</p>
     Basisdokuments oder während der Überarbeitung einer elektronischen Datei.</desc><desc versionDate="2007-05-04" xml:lang="es">resume un cambio o corrección determinada llevada a cabo
     en una versión dada de un texto electrónico en el que trabajan diversos investigadores.</desc><desc versionDate="2007-01-21" xml:lang="it">sintetizza un particolare cambiamento o correzione
     effettuato ad una particolare versione di un documento elettronico, condivisa da più
-    ricercatori.</desc><classes><memberOf key="att.ascribed"/><memberOf key="att.datable"/><memberOf key="att.docStatus"/><memberOf key="att.global"/><memberOf key="att.typed"/></classes><content><macroRef key="macro.specialPara"/></content><attList><attDef ident="when" mode="change" usage="req"/><attDef ident="target">
+    ricercatori.</desc><classes><memberOf key="att.datable"/><memberOf key="att.global"/><memberOf key="att.typed"/></classes><content><macroRef key="macro.specialPara"/></content><attList><attDef ident="when" mode="change" usage="req"/><attDef ident="target">
       <gloss versionDate="2016-11-25" xml:lang="de">Ziel</gloss>
       <desc versionDate="2011-10-31" xml:lang="en">points to one or more elements that belong to this change.</desc>
       <desc versionDate="2016-11-25" xml:lang="de">verweist auf ein oder mehrere Elemente, die zu dieser Änderung gehören.  </desc>

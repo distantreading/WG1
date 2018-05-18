@@ -51,22 +51,30 @@
                     <moduleRef key="namesdates" include="affiliation forename  persName  surname"/>
                     <!--Class modifications to reduce attribute clutter -->
                     <!-- first remove classes which provide attributes we dont want -->
+                    <classSpec ident="att.ascribed" type="atts" mode="delete"/>
                     <classSpec ident="att.breaking" type="atts" mode="delete"/>
+                    <classSpec ident="att.cReferencing" type="atts" mode="delete"/>
+                    <classSpec ident="att.canonical" type="atts" mode="delete"/>
                     <classSpec ident="att.datable.iso" type="atts" mode="delete"/>
                     <classSpec ident="att.datable.custom" type="atts" mode="delete"/>
                     <classSpec ident="att.declarable" type="atts" mode="delete"/>
                     <classSpec ident="att.declaring" type="atts" mode="delete"/>
                     <classSpec ident="att.divLike" type="atts" mode="delete"/>
+                    <classSpec ident="att.docStatus" type="atts" mode="delete"/>
                     <classSpec ident="att.edition" type="atts" mode="delete"/>
                     <classSpec ident="att.editLike" type="atts" mode="delete"/>
                     <classSpec ident="att.fragmentable" type="atts" mode="delete"/>
                     <classSpec ident="att.global.responsibility" type="atts" mode="delete"/>
                     <classSpec ident="att.global.source" type="atts" mode="delete"/>
+                    <classSpec ident="att.internetMedia" type="atts" mode="delete"/>
+                
                     <classSpec ident="att.measurement" type="atts" mode="delete"/>
                     <classSpec ident="att.naming" type="atts" mode="delete"/>
                     <classSpec ident="att.personal" type="atts" mode="delete"/>
+                    <classSpec ident="att.placement" type="atts" mode="delete"/>
                     <classSpec ident="att.ranging" type="atts" mode="delete"/>
                     <classSpec ident="att.spanning" type="atts" mode="delete"/>
+                    <classSpec ident="att.timed" type="atts" mode="delete"/>
                     <classSpec ident="att.written" type="atts" mode="delete"/>
                     <!-- next modify classes which provide some attributes we want and some we don't -->
                     <classSpec type="atts" ident="att.global.rendition" mode="change">
@@ -121,9 +129,9 @@
                         <content>
                             <alternate maxOccurs="unbounded" minOccurs="0">
                                 <textNode/>
-                                <elementRef key="persName"/>
+          <!--                      <elementRef key="persName"/>
                                 <elementRef key="orgName"/>
-                                <elementRef key="date"/>
+       -->                         <elementRef key="date"/>
                                 <elementRef key="idno"/>
                             </alternate>
                         </content>
@@ -154,6 +162,10 @@
                                     <valItem ident="titlepage">
                                         <desc>title page transcription (level 1 only)</desc>
                                     </valItem>
+                                    <valItem ident="notes">
+                                        <desc>collects authorial notes (level 1 only)</desc>
+                                    </valItem>
+                                    
                                     <valItem ident="liminal">
                                         <desc>authorial preface, foreword, back matter etc.</desc>
                                     </valItem>
@@ -210,6 +222,9 @@
                             </sequence>
                         </content>
                     </elementSpec>
+                    
+                    
+                    
                 </schemaSpec>
             </div>
             
