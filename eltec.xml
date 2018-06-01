@@ -222,8 +222,69 @@
                             </sequence>
                         </content>
                     </elementSpec>
+              <!-- adding better examples -->
+                    <elementSpec ident="pb" mode="change" >
+                       <exemplum xml:lang="en">
+                            <p>A page break may be associated with a facsimile image of the page it introduces by means of
+                                the <att>facs</att> attribute</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+                                <body>
+                                    <pb n="1" facs="page1.png"/>
+                                    <!-- page1.png contains an image of the page;
+                        the text it contains is encoded here -->
+                                    <p>
+                                        <!-- ... -->
+                                    </p>
+                                    <pb n="2" facs="page2.png"/>
+                                    <!-- similarly, for page 2 -->
+                                    <p>
+                                        <!-- ... -->
+                                    </p>
+                                </body>
+                            </egXML>
+                        </exemplum>
+                        
+                        
+                        
+                        <exemplum >
+                        
+                            <ab>If a page break interrupts a word
+                                the word fragments may be reassembled 
+                                following it. 
+                                <graphic url="media/inWordpb.png"></graphic></ab>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" >
+                           <p>My own relations too were nobly generous and by their kindness I have been 
+                                <pb n="100"/>
+                                established in this shop, and for thre last year have carried on
+                                this little business.... 
+                                </p>
+                            </egXML>
+                        </exemplum>
+                        <remarks>  <p>A <gi>pb</gi> element should appear at the start of the page
+                            which it identifies. The global <att>n</att> attribute indicates
+                            the number or other value associated with this page. This will
+                            normally be the page number or signature printed on it, since the
+                            physical sequence number is implicit in the presence of the
+                            <gi>pb</gi> element itself. </p>
+                        </remarks>   
+                    </elementSpec>
                     
                     
+                    <elementSpec ident="trailer" mode="change" >
+                        <exemplum >
+                            <ab><graphic url="media/trailer.png"></graphic></ab>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" >
+                                <div type="volume" n="1">
+                                    <!-- more chapters here -->
+                                    <div type="chapter" n="23">
+                                        <!-- more paragraphs here -->
+                                        <p>.... and to think of the money it cost!</p>
+                                    </div>
+                                    <trailer>End of the first volume.</trailer>
+                                </div>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     
                 </schemaSpec>
             </div>

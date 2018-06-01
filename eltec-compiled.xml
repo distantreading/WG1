@@ -6553,136 +6553,51 @@ psychological significance.
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CORS5">3.10.3. Milestone
 Elements</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="pb">
-  <gloss versionDate="2017-06-14" xml:lang="en">page beginning</gloss>
-  <gloss versionDate="2007-12-20" xml:lang="ko">페이지 바꿈</gloss>
-  <gloss versionDate="2007-05-02" xml:lang="zh-TW">分頁</gloss>
-  <gloss versionDate="2009-01-06" xml:lang="fr">saut de page</gloss>
-  <gloss versionDate="2007-05-04" xml:lang="es">cambio de página</gloss>
-  <gloss versionDate="2007-01-21" xml:lang="it">interruzione di pagina</gloss>
-  <gloss versionDate="2017-06-25" xml:lang="de">Seitenanfang</gloss>
-  <desc versionDate="2017-06-14" xml:lang="en">marks the beginning of a new page in a paginated document.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">표준 참조 시스템에서 텍스트 페이지와 다음 페이지 사이의 경계를 표지한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">以標準參照系統來標記頁與頁之間的分界線。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">テキストのページ境界を，標準的な参照システム示す．</desc>
-  <desc xml:lang="fr" versionDate="2007-06-12">marque le début d'une
-  page de texte dans un document paginé.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">marca la frontera entre una página de un texto y la
-    siguiente en un sistema de referencia estándard.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">indica il limite tra una pagina di un testo e la
-    successiva in un sistema di riferimento standard</desc>
-  <desc versionDate="2017-06-25" xml:lang="de">markiert den Anfang 
-    einer neuen Seite in einem Dokument mit Seitenzahlen</desc>
-  <classes>
-    <memberOf key="att.global"/>
-    <memberOf key="model.milestoneLike"/>
-    <memberOf key="att.typed"/>
-    
-    
-    
-  </classes>
-  <content>
-    
-  </content>
-  <exemplum xml:lang="en">
-    <p>Page numbers may vary in different editions of a text.</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <p> ... <pb n="145" ed="ed2"/>
-            <!-- Page 145 in edition "ed2" starts here --> ... <pb n="283" ed="ed1"/>
-            <!-- Page 283 in edition "ed1" starts here--> ... </p>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="de" versionDate="2017-06-25">
-    <p>Die Seitenzahlen können in verschiedenen Ausgaben eines Textes variieren.</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <p> ... <pb n="145" ed="ed2"/>
-        <!-- Seite 145 in Ausgabe "ed2" beginnt hier --> ... <pb n="283" ed="ed1"/>
-        <!-- Seite 283 in Ausgabe "ed1" beginnt hier --> ... </p>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <p>A page break may be associated with a facsimile image of the page it introduces by means of
-      the <att>facs</att> attribute</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <body>
-        <pb n="1" facs="page1.png"/>
-        <!-- page1.png contains an image of the page;
+</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="core" ident="pb"><gloss versionDate="2017-06-14" xml:lang="en">page beginning</gloss><gloss versionDate="2007-12-20" xml:lang="ko">페이지 바꿈</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">分頁</gloss><gloss versionDate="2009-01-06" xml:lang="fr">saut de page</gloss><gloss versionDate="2007-05-04" xml:lang="es">cambio de página</gloss><gloss versionDate="2007-01-21" xml:lang="it">interruzione di pagina</gloss><gloss versionDate="2017-06-25" xml:lang="de">Seitenanfang</gloss><desc versionDate="2017-06-14" xml:lang="en">marks the beginning of a new page in a paginated document.</desc><desc versionDate="2007-12-20" xml:lang="ko">표준 참조 시스템에서 텍스트 페이지와 다음 페이지 사이의 경계를 표지한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">以標準參照系統來標記頁與頁之間的分界線。</desc><desc versionDate="2008-04-05" xml:lang="ja">テキストのページ境界を，標準的な参照システム示す．</desc><desc xml:lang="fr" versionDate="2007-06-12">marque le début d'une
+  page de texte dans un document paginé.</desc><desc versionDate="2007-05-04" xml:lang="es">marca la frontera entre una página de un texto y la
+    siguiente en un sistema de referencia estándard.</desc><desc versionDate="2007-01-21" xml:lang="it">indica il limite tra una pagina di un testo e la
+    successiva in un sistema di riferimento standard</desc><desc versionDate="2017-06-25" xml:lang="de">markiert den Anfang 
+    einer neuen Seite in einem Dokument mit Seitenzahlen</desc><classes><memberOf key="att.global"/><memberOf key="model.milestoneLike"/><memberOf key="att.typed"/></classes><content/><attList/><exemplum xml:lang="en">
+                            <p>A page break may be associated with a facsimile image of the page it introduces by means of
+                                the <att>facs</att> attribute</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+                                <body>
+                                    <pb n="1" facs="page1.png"/>
+                                    <!-- page1.png contains an image of the page;
                         the text it contains is encoded here -->
-        <p>
-          <!-- ... -->
-        </p>
-        <pb n="2" facs="page2.png"/>
-        <!-- similarly, for page 2 -->
-        <p>
-          <!-- ... -->
-        </p>
-      </body>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="de" versionDate="2017-06-25">
-    <p>Ein Seitenumbruch kann über das <att>facs</att>-Attribut mit einem Faksimile der Seite verknüpft
-      werden.</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <body>
-        <pb n="1" facs="page1.png"/>
-        <!-- page1.png enthält eine Abbildung der Seite;
-                        der enthaltene Text ist hier kodiert -->
-        <p>
-          <!-- ... -->
-        </p>
-        <pb n="2" facs="page2.png"/>
-        <!-- dasselbe gilt für Seite 2 -->
-        <p>
-          <!-- ... -->
-        </p>
-      </body>
-    </egXML>
-  </exemplum>
-  <remarks versionDate="2016-11-29" xml:lang="en">
-    <p>A <gi>pb</gi> element should appear at the start of the page
-    which it identifies. The global <att>n</att> attribute indicates
-    the number or other value associated with this page. This will
-    normally be the page number or signature printed on it, since the
-    physical sequence number is implicit in the presence of the
-    <gi>pb</gi> element itself. </p>
-    <p>The <att>type</att> attribute may be used to characterize 
-      the page break in any respect. The more specialized attributes 
-      <att>break</att>, <att>ed</att>, or <att>edRef</att> should be 
-      preferred when the intent is to indicate whether or not the 
-      page break is word-breaking, or to note the source from 
-      which it derives.</p>
-  </remarks>
-  <remarks xml:lang="fr" versionDate="2007-06-12">
-    <p>Un élément <gi>pb</gi> apparaît au début de la page à laquelle
-    il se rapporte. L'attribut global <att>n</att> donne un numéro ou
-    une autre valeur associée à cette page. Ce sera normalement le
-    numéro de page ou la signature qui y est imprimée, puisque le
-    numéro d'ordre matériel est implicite avec l'élément <gi>pb</gi>
-    lui-même.</p>
-    <p> L' attribut <att>type</att> sera employé pour indiquer toutes ses
-      caractéristiques du saut de page, par exemple comme coupure de mot ou non. </p>
-  </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
-    <p> 当該要素にあるグローバル属性<att>n</att>は，当該要素<gi>pb</gi>があ る場所に続いてあるページと関連する数値を示す．符号化する人は，改ペー
-      ジと関連する数値が，物理的な一連の番号になるのか，または印刷されてい る番号になるのかについて，明確で一貫した方針を採るべきである．
-      一般には，要素<gi>pb</gi>は，参照するページの始めに置かれるべきである． </p>
-  </remarks>
-  <remarks versionDate="2016-11-29" xml:lang="de">
-    <p>Ein <gi>pb</gi>-Element soll am Beginn der Seite stehen, die es kennzeichnet. 
-      Das globale <att>n</att>-Attribut gibt die Zahl (oder einen anderen Wert) an, 
-      der mit dieser Seite verbunden ist. Üblicherweise ist das die Seitenzahl 
-      oder eine auf der Seite abgedruckte Signatur, da die Position in der 
-      physikalischen Sequenz durch das <gi>pb</gi>-Element implizit ist. </p>
-    <p>Das <att>type</att>-Attribut kann verwendet werden, den Seitenumbruch 
-      näher zu beschreiben, wenn nicht die speziellen Attribute 
-      <att>break</att> (Worttrennung), <att>ed</att> oder <att>edRef</att> 
-      (Textzeuge, in dem der Seitenumbruch vorkommt) verwendet werden können.</p>
-  </remarks>
-  <listRef>
+                                    <p>
+                                        <!-- ... -->
+                                    </p>
+                                    <pb n="2" facs="page2.png"/>
+                                    <!-- similarly, for page 2 -->
+                                    <p>
+                                        <!-- ... -->
+                                    </p>
+                                </body>
+                            </egXML>
+                        </exemplum><exemplum>
+                        
+                            <ab>If a page break interrupts a word
+                                the word fragments may be reassembled 
+                                following it. 
+                                <graphic url="media/inWordpb.png"/></ab>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           <p>My own relations too were nobly generous and by their kindness I have been 
+                                <pb n="100"/>
+                                established in this shop, and for thre last year have carried on
+                                this little business.... 
+                                </p>
+                            </egXML>
+                        </exemplum><remarks>  <p>A <gi>pb</gi> element should appear at the start of the page
+                            which it identifies. The global <att>n</att> attribute indicates
+                            the number or other value associated with this page. This will
+                            normally be the page number or signature printed on it, since the
+                            physical sequence number is implicit in the presence of the
+                            <gi>pb</gi> element itself. </p>
+                        </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CORS5">3.10.3. Milestone
 Elements</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="core" ident="author"><gloss versionDate="2011-11-26" xml:lang="fr">auteur</gloss><gloss versionDate="2017-06-04" xml:lang="de">Autor</gloss><desc versionDate="2011-11-26" xml:lang="en">in a bibliographic reference, contains the name(s) of an
+  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="core" ident="author"><gloss versionDate="2011-11-26" xml:lang="fr">auteur</gloss><gloss versionDate="2017-06-04" xml:lang="de">Autor</gloss><desc versionDate="2011-11-26" xml:lang="en">in a bibliographic reference, contains the name(s) of an
   author, personal or corporate, of a work; for example in the same
   form as that provided by a recognized bibliographic name authority.</desc><desc versionDate="2007-12-20" xml:lang="ko">참고문헌에 작가, 단독 저자, 공동 저자의 이름을 포함한다; 서지 항목의 책임에 관한 1차적 진술.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">在書目參照中，包含一件作品的作者 (群) 姓名，無論是個人或是團體性質；這也是書目項目責任歸屬的主要陳述。</desc><desc versionDate="2008-04-05" xml:lang="ja">書誌情報における，著作者(個人・団体)の名前を示す．書誌項目における歴 任者を示す第一位の記述を示す．</desc><desc versionDate="2009-01-06" xml:lang="fr">dans une référence bibliographique contient le nom de la
     (des) personne(s) physique(s) ou du collectif, auteur(s) d'une oeuvre ; par exemple dans la même forme que celle utilisée par une référence bibliographique reconnue.</desc><desc versionDate="2007-05-04" xml:lang="es">en una referencia bibliográfica, contiene el nombre del
@@ -8932,76 +8847,25 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
     </egXML>
   </exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDIV">4.1. Divisions of the Body</ref>
-  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="textstructure" ident="trailer">
-  <desc versionDate="2005-01-14" xml:lang="en">contains a closing title or footer appearing at the end of a division of a text.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역의 종료부에 나타나는 마지막 제목 또는 꼬리말을 포함한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">包含文本中一個區段結束時的結尾題名或尾錄。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">テキスト部分の最後にある，結びのタイトルや脚注を示す．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">contient un titre de fin ou de bas de page à la fin d’une
-    division du texte.</desc>
-  <desc versionDate="2017-06-25" xml:lang="de">enthält einen abschließenden Nachsatz oder eine Fußzeile am Ende eines Textabschnitts.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">contiene una fórmula de clausura o un elemento a pie de
-    página que aparece al final de una sección de texto</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">contiene una formula di chiusura o un elemento a piè di
-    pagina che compare alla fine di una sezione di testo</desc>
-  <classes>
-    <memberOf key="att.global"/>
-    <memberOf key="att.typed"/>
-    <memberOf key="model.divBottomPart"/>
-  </classes>
-  <content>
-    
-      <alternate minOccurs="0" maxOccurs="unbounded">
-	<textNode/>
-	<elementRef key="lg"/>
-	<classRef key="model.gLike"/>
-	<classRef key="model.phrase"/>
-	<classRef key="model.inter"/>
-	<classRef key="model.lLike"/>
-	<classRef key="model.global"/>
-      </alternate>
-    
-  </content>
-  <exemplum xml:lang="mul">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <trailer>Explicit pars tertia</trailer>
-    </egXML>
-  </exemplum>
-   <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <trailer>
-	<l>In stead of FINIS this advice <hi>I</hi> send,</l>
-	<l>Let Rogues and Thieves beware of <lb/>
-	<hi>Hamans</hi> END.</l>
-      </trailer>
-    </egXML>
-    <p>From EEBO A87070</p>
-   </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <trailer>Explicit pars tertia</trailer>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#biblzh-tw_n61">
-      <trailer>畢竟董卓性命如何，且聽下文分解。</trailer>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="de" versionDate="2017-06-25">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <trailer>
-        <l>In stead of FINIS this advice <hi>I</hi> send,</l>
-        <l>Let Rogues and Thieves beware of <lb/>
-          <hi>Hamans</hi> END.</l>
-      </trailer>
-    </egXML>
-    <p>Aus EEBO A87070</p>
-  </exemplum>
-  <listRef>
+  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="textstructure" ident="trailer"><desc versionDate="2005-01-14" xml:lang="en">contains a closing title or footer appearing at the end of a division of a text.</desc><desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역의 종료부에 나타나는 마지막 제목 또는 꼬리말을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含文本中一個區段結束時的結尾題名或尾錄。</desc><desc versionDate="2008-04-05" xml:lang="ja">テキスト部分の最後にある，結びのタイトルや脚注を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient un titre de fin ou de bas de page à la fin d’une
+    division du texte.</desc><desc versionDate="2017-06-25" xml:lang="de">enthält einen abschließenden Nachsatz oder eine Fußzeile am Ende eines Textabschnitts.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una fórmula de clausura o un elemento a pie de
+    página que aparece al final de una sección de texto</desc><desc versionDate="2007-01-21" xml:lang="it">contiene una formula di chiusura o un elemento a piè di
+    pagina che compare alla fine di una sezione di testo</desc><classes><memberOf key="att.global"/><memberOf key="att.typed"/><memberOf key="model.divBottomPart"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="lg"/><classRef key="model.gLike"/><classRef key="model.phrase"/><classRef key="model.inter"/><classRef key="model.lLike"/><classRef key="model.global"/></alternate></content><attList/><exemplum>
+                            <ab><graphic url="media/trailer.png"/></ab>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <div type="volume" n="1">
+                                    <!-- more chapters here -->
+                                    <div type="chapter" n="23">
+                                        <!-- more paragraphs here -->
+                                        <p>.... and to think of the money it cost!</p>
+                                    </div>
+                                    <trailer>End of the first volume.</trailer>
+                                </div>
+                            </egXML>
+                        </exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSCO">4.2.4. Content of Textual Divisions</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDTB">4.2. Elements Common to All Divisions</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="textstructure" ident="front">
+  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="textstructure" ident="front">
   <gloss versionDate="2005-01-14" xml:lang="en">front matter</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">전면부 내용</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">正文前資訊</gloss>

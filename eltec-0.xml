@@ -54,6 +54,7 @@
         <elementRef key="text"/>
          <elementRef key="trailer"/>
   
+  
      <!-- the following are needed in header-->
 
        <elementRef key="author"/>
