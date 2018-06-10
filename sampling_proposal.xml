@@ -353,9 +353,8 @@
                     <label>Reprint count</label>
                     <item><p>We propose to use the number of times a work is reprinted as an
                             objective measure of its reception, using categories like the following: </p><list>
-                            <item>low: reprinted less than 10 times </item>
-                            <item>medium: reprinted 10 to 100 times</item>
-                            <item>high: reprinted more than 100 times </item>
+                                <item>low: no reprints at all, or one reprint (30% of all novels in a language collection)</item>
+                            <item>high: reprinted more than once (30% of all novels in a language collection)</item> 
                         </list></item>
                     <label>Author gender</label>
                     <item>
