@@ -355,6 +355,7 @@
                             objective measure of its reception, using categories like the following: </p><list>
                                 <item>low: no reprints at all, or one reprint (30% of all novels in a language collection)</item>
                             <item>high: reprinted more than once (30% of all novels in a language collection)</item> 
+                                <item>We will not include digitizations of texts in the reprint count.</item>
                         </list></item>
                     <label>Author gender</label>
                     <item>
