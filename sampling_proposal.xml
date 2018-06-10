@@ -303,8 +303,7 @@
                         equally split by decades. </item>
                     <item>have first been published in a European country. [maybe not "first":
                         within that decade]</item>
-                    <item>be a novel, i.e. a fictional prose narrative of a minimum length of 10,000
-                        words.</item>
+                    <item>be a novel, i.e. a fictional prose narrative.</item>
                     <item>have originally been written in the language of the given
                         subcollection</item>
                 </list>
@@ -369,11 +368,11 @@
                     </item>
                     <label>Length</label>
                     <item>
-                        <p>We should maybe try to include a variety of lengths</p>
+                        <p>We should try to include a variety of lengths</p>
                         <list>
-                            <item>short (less than 5000 words) </item>
-                            <item>medium (5000 to 20000 words)</item>
-                            <item>long (more than 20000 words)</item>
+                            <item>short (10-50k word tokens) </item>
+                            <item>medium (50k-200k word tokens)</item>
+                            <item>long (>200k word tokens)</item>
                         </list></item>
 
                     <label>Kind of novel</label>
