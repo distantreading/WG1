@@ -49,7 +49,7 @@
                     discussion paper focuses on corpus design and metadata because both tasks
                     interplay with each other.</p>
                 <p>The goal of CA16204 is to create a big benchmark corpus of literature from
-                    1850-1920 (first period) for different computational distant reading methods for
+                    1840-1920 (first period) for different computational distant reading methods for
                     corpus annotation and analysis. The task of creating annotation guidelines of
                     WG1 needs to be closely communicated and coordinated with WG2 in order to know
                     which methods and tools needs which kind(s) of annotation model and format. The
@@ -183,18 +183,18 @@
                 <list type="unordered">
                     <item>Languages: Dutch, English, French, German, Greek, Italian, Polish,
                         Portuguese, Russian, Spanish (ELTeC core)</item>
-                    <item>first iteration: 6 subcollections (100 novels per language) 1850 to 1920
+                    <item>first iteration: 6 subcollections (100 novels per language) 1840 to 1920
                         starting with British, French, Spanish, German, Greek, Polish</item>
-                    <item>second iteration: 4 subcollections (100 novels per language) 1850 to
+                    <item>second iteration: 4 subcollections (100 novels per language) 1840 to
                         1920</item>
                     <item>third iteration: 6 subcollections in additional languages and
-                        subcollections for all 16 languages 1780-1850, </item>
+                        subcollections for all 16 languages 1780-1839, </item>
                     <item>We will also try to include additional languages such as Hungarian,
                         Serbian, Swiss , Romanian, Czech, Latvian, Norwegian.</item>
                 </list>
                 <p>In this way, ELTeC is balanced with respect to language. With respect to genre,
                     the corpus is not balanced but homogenous; all texts in the corpus shall be full
-                    novels. With respect to time, the corpus design shall focus on the period 1850
+                    novels. With respect to time, the corpus design shall focus on the period 1840
                     to 1920.</p>
                 <p>Before discussing the criteria in more detail, we would like to ask another
                     methodical question concerning corpus sampling: would we like to use each
@@ -291,15 +291,13 @@
                 </list>
                 <p>Organization</p>
                 <list>
-                    <item>Please note: Contact the sampling support Team: Carolin, Pieter and Diana!
+                    <item>Please note: Contact the sampling support Team: Carolin, Lou, Pieter and Diana!
                         Task: To control the corpus sampling according to the selection criteria. </item>
-                    <item> List of documents in ELTeC core:
-                        https://docs.google.com/spreadsheets/d/1LHRWEJdi8lPPvVKjjNdS3Tv1_vd0sP0_3GvoGw2c23w/edit?ts=5a6a36f2#gid=698963499</item>
                 </list>
                 <p>Criteria: Eligibility. </p>
                 <p> In order to be included, a text must... </p>
                 <list>
-                    <item>have been first published as a book between 1850 and 1920, sub-grouped and
+                    <item>have been first published as a book between 1840 and 1920, sub-grouped and
                         equally split by decades. </item>
                     <item>have first been published in a European country. [maybe not "first":
                         within that decade]</item>
@@ -322,18 +320,14 @@
                 </list>
                 <list type="gloss">
 
-                    <label> Date : 1850 to 1920 (first iteration)</label>
+                    <label> Date : 1840 to 1920 (first iteration)</label>
                     <item>
-                        <p>We will divide by decade</p>
+                        <p>We will divide into four groups</p>
                         <list type="unordered">
-                            <item>group A(1850-1860)</item>
-                            <item>group B (1861-1870)</item>
-                            <item>group C (1871-1880)</item>
-                            <item>group D (1881-1890) </item>
-                            <item>group E (1891-1900)</item>
-                            <item>group F (1901-1910)</item>
-                            <item>group G (1911-1920)</item>
-                            <item>Open Question: Should we extend the period to 1840?</item>
+                            <item>group A(1840-1860)</item>
+                            <item>group B (1861-1880)</item>
+                            <item>group C (1881-1900)</item>
+                            <item>group D (1901-1920) </item>
                         </list>
                     </item>
 
