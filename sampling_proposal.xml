@@ -379,7 +379,9 @@
                 </list>
                 <p>The following table suggests minimum and maximum numbers of titles to be selected
                     for each criterion. For each language collection we collect 100 different novels. In each date group, we will have 
-                    25 novels. 
+                    25 novels. In a language collection, we will have at least 30 novels for the category high reprints and 
+                    30 for the category low reprints. In a language collection, we will have at least 10 novels from female authors
+                    and 20 novels per length category (long, medium short). 
                 </p>
                 <table rend="rules">
                     <row role="label">
