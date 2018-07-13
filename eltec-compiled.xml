@@ -544,7 +544,7 @@
          <p>This must contain a <gi>langUsage</gi> element detailing the language or languages used in the text, 
             followed by a <gi>textDesc</gi> element providing information about
             the classification of this text. </p>
-         <p>The <gi>textDesc</gi> contains one of each of the following elements from the <ident>model.textDescPart</ident> class
+         <p>The <gi>textDesc</gi> element contains one of each of the following elements from the <ident>model.textDescPart</ident> class
             in the order indicated:
          <specList>
             <specDesc key="model.textDescPart"/>
