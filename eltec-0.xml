@@ -71,6 +71,11 @@
        <elementRef key="respStmt"/>
        <elementRef key="term"/>
       <elementRef key="title"/>
+       <elementRef key="textDesc"/>
+       <elementRef key="authorGender"/>
+       <elementRef key="size"/>
+       <elementRef key="canonicity"/>
+       <elementRef key="timeSlot"/>
        
        <!-- change class memberships for title to prevent it appearing outside the header -->
        

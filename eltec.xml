@@ -2,7 +2,8 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" 
+    xmlns:e="http://distantreading.net/eltec/ns">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -17,7 +18,9 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-            <change when="2018-05-23">Redrafted version of encoding_proposal document post Wuerzburg</change>
+            <change when="2018-07-04">Experiment with textDesc instead of catRef; tighten up header requirements</change>
+            <change when="2018-05-23">Redrafted version of encoding_proposal document post
+                Wuerzburg</change>
             <change when="2018-03-16">Revised post-Prague</change>
             <change when="2018-01-17">Expanded metadata section a bit; added comments from CO and
                 BN</change>
@@ -46,9 +49,12 @@
             milestone name note p pb publisher pubPlace quote ref relatedItem resp respStmt sp stage hi term title "/>
                     <moduleRef key="textstructure" include="TEI text div body front back trailer"/>
                     <moduleRef key="header"
-                        include="catDesc category catRef change classCode  encodingDesc extent fileDesc idno  keywords langUsage language  
-            profileDesc publicationStmt revisionDesc sourceDesc taxonomy teiHeader textClass titleStmt"/>
+                        include="change  encodingDesc 
+                        extent fileDesc idno keywords langUsage language  
+            profileDesc publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
                     <moduleRef key="namesdates" include="affiliation forename  persName  surname"/>
+                    <moduleRef key="corpus" include="textDesc"/>
+                    
                     <!--Class modifications to reduce attribute clutter -->
                     <!-- first remove classes which provide attributes we dont want -->
                     <classSpec ident="att.ascribed" type="atts" mode="delete"/>
@@ -67,7 +73,7 @@
                     <classSpec ident="att.global.responsibility" type="atts" mode="delete"/>
                     <classSpec ident="att.global.source" type="atts" mode="delete"/>
                     <classSpec ident="att.internetMedia" type="atts" mode="delete"/>
-                
+
                     <classSpec ident="att.measurement" type="atts" mode="delete"/>
                     <classSpec ident="att.naming" type="atts" mode="delete"/>
                     <classSpec ident="att.personal" type="atts" mode="delete"/>
@@ -107,16 +113,53 @@
                         </attList>
                     </classSpec>
 
-                    <!-- now tweaks for individual elements -->
-                    <!-- simplify publicationStmt -->
+                    <!-- tweaks for individual elements -->
+                    
+                    <!-- remove @version from TEI : it doesnt mean what you think -->
+                    <elementSpec ident="TEI" mode="change">
+                        <attList>
+                            <attDef ident="version" mode="delete"/>
+                        </attList>
+                    </elementSpec>
+
+<elementSpec ident="title" mode="change">
+    <constraintSpec mode="add" ident="noEmptyTitle" scheme="schematron">
+        <constraint>
+            <assert xmlns="http://purl.oclc.org/dsdl/schematron"
+                test="child::* or child::text()[normalize-space()]" role="ERROR">You must provide a title for the text </assert>
+        </constraint>
+    </constraintSpec>
+</elementSpec>
+
+
+                    <!-- simplify publicationStmt  -->
                     <elementSpec ident="publicationStmt" mode="change">
                         <content>
                             <elementRef key="p"/>
                         </content>
                     </elementSpec>
 
-
-                    <!-- make xml:id and xml:lang obligatory for text -->
+                    <!-- simplify encodingDesc; require and constrain @n  -->
+                    <elementSpec ident="encodingDesc" mode="change">
+                        <content>
+                            <elementRef key="p"/>
+                        </content>
+                        <attList >
+                            <attDef ident="n" mode="change" usage="req">
+                                <datatype><dataRef key="teidata.enumerated"></dataRef></datatype>
+                                <valList type="closed" mode="replace">
+                                    <valItem ident="eltec-0"/>
+                                    <valItem ident="eltec-1"/>
+                                    <valItem ident="eltec-2"/>                                   
+                                </valList>
+                            </attDef>
+                        </attList>
+                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <encodingDesc n="eltec-0"><p>Encoded to ELTeC level zero</p></encodingDesc>
+                        </egXML></exemplum>
+                    </elementSpec>
+                    
+                    <!-- make xml:id and xml:lang compulsory for text -->
                     <elementSpec ident="text" mode="change">
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req"/>
@@ -124,23 +167,181 @@
                         </attList>
                     </elementSpec>
 
+                    <!-- make various elements compulsory in the header -->
+                    <elementSpec ident="teiHeader" mode="change">
+                        <content>
+                            <sequence>
+                                <elementRef key="fileDesc"/>
+                                <elementRef key="encodingDesc"/>
+                                <elementRef key="profileDesc"/>
+                                <!-- if we decide to add xenodata, it goes here -->
+                                <elementRef key="revisionDesc"/>
+                            </sequence>
+                        </content>
+                    </elementSpec>
+
+
+                    <!-- define new elements for selection criteria -->
+                    <elementSpec ident="authorGender" mode="add" ns="http://distantreading.net/eltec/ns">
+                        <desc>specifies the sex of the author where this is known</desc>
+                        <classes>
+                            <memberOf key="model.textDescPart"/>
+                        </classes>
+                        <content>
+                            <empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="key" mode="add" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="M">
+                                        <desc>male author</desc>
+                                    </valItem>
+                                    <valItem ident="F">
+                                        <desc>female author</desc>
+                                    </valItem>
+                                    <valItem ident="U">
+                                        <desc>author sex unknown</desc>
+                                    </valItem>
+                                    <valItem ident="X">
+                                        <desc>author sex mixed</desc>
+                                    </valItem>
+                                </valList>
+                                <remarks>
+                                    <p>This attribute should indicate the biological sex of the
+                                        author, not the sex claimed or implied by the author's
+                                        name</p>
+                                </remarks>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="size" mode="add" ns="http://distantreading.net/eltec/ns">
+                        <desc>indicates the size group to which the text belongs</desc>
+                        <classes>
+                            <memberOf key="model.textDescPart"/>
+                        </classes>
+                        <content>
+                            <empty/>
+                        </content>
+
+                        <attList>
+                            <attDef ident="key" mode="add" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="long">
+                                        <desc>more than 200,000 words</desc>
+                                    </valItem>
+                                    <valItem ident="medium">
+                                        <desc>50,000 to 200,000 words</desc>
+                                    </valItem>
+                                    <valItem ident="short">
+                                        <desc>10,000 to 50,000 words</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="canonicity" mode="add" ns="http://distantreading.net/eltec/ns">
+                        <desc>indicates the degree to which the text has become part of a literary
+                            canon</desc>
+                        <classes>
+                            <memberOf key="model.textDescPart"/>
+                        </classes>
+                        <content>
+                            <empty/>
+                        </content>
+
+                        <attList>
+                            <attDef ident="key" mode="add" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="high">
+                                        <desc>text has been reprinted more than once outside its original
+                                        time slot</desc>
+                                    </valItem>
+                                    <valItem ident="low">
+                                        <desc>text has not been reprinted after its original time
+                                            slot</desc>
+                                    </valItem>
+                                </valList>
+                                <remarks>
+                                    <p>A work which has been republished several times over a
+                                        reasonably long time since its first appearance is
+                                        considered highly canonical.</p>
+                                </remarks>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="timeSlot" mode="add" ns="http://distantreading.net/eltec/ns">
+                        <desc>specifies the time period during which the work was first published </desc>
+                        <classes>
+                            <memberOf key="model.textDescPart"/>
+                        </classes>
+                        <content>
+                            <empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="key" mode="add" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="T1">
+                                        <desc>work first published between 1840 and 1859</desc>
+                                    </valItem>
+                                    <valItem ident="T2">
+                                        <desc>work first published between 1860 and 1879</desc>
+                                    </valItem>
+                                    <valItem ident="T3">
+                                        <desc>work first published between 1880 and 1899</desc>
+                                    </valItem>
+                                    <valItem ident="T4">
+                                        <desc>work first published between 1900 and 1919</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    
+                  <!-- require one of each profileDesc component in a specific order -->
+                    <elementSpec ident="profileDesc" mode="change">
+                        <content>
+                            <classRef key="model.profileDescPart"  expand="sequence"/>                           
+                        </content>
+                    </elementSpec>                   
+                    <!-- require one of each textDesc component in a specific order -->
+                    <elementSpec ident="textDesc" mode="change">
+                        <content>
+                            <classRef key="model.textDescPart" expand="sequence"/>
+                        </content>
+                    </elementSpec>
+
                     <!-- restrict content for author -->
                     <elementSpec ident="author" mode="change">
                         <content>
                             <alternate maxOccurs="unbounded" minOccurs="0">
                                 <textNode/>
-          <!--                      <elementRef key="persName"/>
-                                <elementRef key="orgName"/>
-       -->                         <elementRef key="date"/>
+                                <elementRef key="date"/>
                                 <elementRef key="idno"/>
+                                <!-- idno is used to indicate VIAF or other external id for an author -->
                             </alternate>
                         </content>
+                        <!-- a constraintSpec might be useful to check form of author name  -->
                     </elementSpec>
 
 
                     <!-- remove  measure and idno from classes which allow them outside header -->
 
-              <elementSpec ident="idno" mode="change">
+                    <elementSpec ident="idno" mode="change">
                         <classes mode="replace">
                             <memberOf key="att.typed"/>
                             <memberOf key="model.biblPart"/>
@@ -148,45 +349,13 @@
                         </classes>
                     </elementSpec>
 
-                           <!-- constrain extent -->
+                    <!-- constrain extent and its components -->
                     <elementSpec ident="extent" mode="change">
                         <content>
                             <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                     </elementSpec>
-
-                    <elementSpec ident="div" mode="change">
-                        <attList>
-                            <attDef ident="type" mode="change">
-                                <valList type="semi">
-                                    <valItem ident="titlepage">
-                                        <desc>title page transcription (level 1 only)</desc>
-                                    </valItem>
-                                    <valItem ident="notes">
-                                        <desc>collects authorial notes (level 1 only)</desc>
-                                    </valItem>
-                                    
-                                    <valItem ident="liminal">
-                                        <desc>authorial preface, foreword, back matter etc.</desc>
-                                    </valItem>
-                                    <valItem ident="chapter">
-                                        <desc>chapter not further divided</desc>
-                                    </valItem>
-                                    <valItem ident="group">
-                                        <desc>any grouping of chapters or groups, e.g. part, volume,
-                                            etc.</desc>
-                                    </valItem>
-                                </valList>
-                            </attDef>
-                        </attList>
-                    </elementSpec>
-
-                    <elementSpec ident="change" mode="change">
-                        <attList>
-                            <attDef ident="when" mode="change" usage="req"/>
-                        </attList>
-                    </elementSpec>
-
+                   
                     <elementSpec ident="measure" mode="change">
                         <classes mode="change">
                             <memberOf key="att.measurement" mode="delete"/>
@@ -213,7 +382,17 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-
+                  
+                    <!-- require a date on change -->
+                    
+                    <elementSpec ident="change" mode="change">
+                        <attList>
+                            <attDef ident="when" mode="change" usage="req"/>
+                        </attList>
+                    </elementSpec>
+                    
+                    
+<!--
                     <elementSpec ident="textClass" mode="change">
                         <content>
                             <sequence>
@@ -221,12 +400,64 @@
                                 <elementRef key="keywords" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
+                    </elementSpec>-->
+
+                    <!--  <elementSpec ident="catRef" mode="change">
+                        <desc>For ELTeC the possible values are constrained by a value list</desc>
+                        <attList>
+                            <attDef ident="key" mode="add">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="authorM">
+                                        <desc>male author</desc>
+                                    </valItem>
+                                    <valItem ident="authorF">
+                                        <desc>female author</desc>
+                                    </valItem>
+                                    <valItem ident="authorU">
+                                        <desc>author gender unknown</desc>
+                                    </valItem>
+                                    <valItem ident="authorX">
+                                        <desc>author gender mixed</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>-->
+                    
+                    <elementSpec ident="div" mode="change">
+                        <attList>
+                            <attDef ident="type" mode="change">
+                                <valList type="semi">
+                                    <valItem ident="titlepage">
+                                        <desc>title page transcription (level 1 only)</desc>
+                                    </valItem>
+                                    <valItem ident="notes">
+                                        <desc>collects authorial notes (level 1 only)</desc>
+                                    </valItem>
+                                    
+                                    <valItem ident="liminal">
+                                        <desc>authorial preface, foreword, back matter etc.</desc>
+                                    </valItem>
+                                    <valItem ident="chapter">
+                                        <desc>chapter not further divided</desc>
+                                    </valItem>
+                                    <valItem ident="group">
+                                        <desc>any grouping of chapters or groups, e.g. part, volume,
+                                            etc.</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
                     </elementSpec>
-              <!-- adding better examples -->
-                    <elementSpec ident="pb" mode="change" >
-                       <exemplum xml:lang="en">
-                            <p>A page break may be associated with a facsimile image of the page it introduces by means of
-                                the <att>facs</att> attribute</p>
+                    
+                    <!-- adding better examples -->
+                    <elementSpec ident="pb" mode="change">
+                        <exemplum xml:lang="en">
+                            <p>A page break may be associated with a facsimile image of the page it
+                                introduces by means of the <att>facs</att> attribute</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
                                 <body>
                                     <pb n="1" facs="page1.png"/>
@@ -243,37 +474,34 @@
                                 </body>
                             </egXML>
                         </exemplum>
-                        
-                        
-                        
-                        <exemplum >
-                        
-                            <ab>If a page break interrupts a word
-                                the word fragments may be reassembled 
-                                following it. 
-                                <graphic url="media/inWordpb.png"></graphic></ab>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" >
-                           <p>My own relations too were nobly generous and by their kindness I have been 
-                                <pb n="100"/>
-                                established in this shop, and for thre last year have carried on
-                                this little business.... 
-                                </p>
+
+
+
+                        <exemplum>
+
+                            <ab>If a page break interrupts a word the word fragments may be
+                                reassembled following it. <graphic url="media/inWordpb.png"/></ab>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>My own relations too were nobly generous and by their kindness I
+                                    have been <pb n="100"/> established in this shop, and for thre
+                                    last year have carried on this little business.... </p>
                             </egXML>
                         </exemplum>
-                        <remarks>  <p>A <gi>pb</gi> element should appear at the start of the page
-                            which it identifies. The global <att>n</att> attribute indicates
-                            the number or other value associated with this page. This will
-                            normally be the page number or signature printed on it, since the
-                            physical sequence number is implicit in the presence of the
-                            <gi>pb</gi> element itself. </p>
-                        </remarks>   
+                        <remarks>
+                            <p>A <gi>pb</gi> element should appear at the start of the page which it
+                                identifies. The global <att>n</att> attribute indicates the number
+                                or other value associated with this page. This will normally be the
+                                page number or signature printed on it, since the physical sequence
+                                number is implicit in the presence of the <gi>pb</gi> element
+                                itself. </p>
+                        </remarks>
                     </elementSpec>
-                    
-                    
-                    <elementSpec ident="trailer" mode="change" >
-                        <exemplum >
-                            <ab><graphic url="media/trailer.png"></graphic></ab>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" >
+
+
+                    <elementSpec ident="trailer" mode="change">
+                        <exemplum>
+                            <ab><graphic url="media/trailer.png"/></ab>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <div type="volume" n="1">
                                     <!-- more chapters here -->
                                     <div type="chapter" n="23">
@@ -285,10 +513,10 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    
+
                 </schemaSpec>
             </div>
-            
+
         </back>
 
     </text>

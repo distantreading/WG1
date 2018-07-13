@@ -1,5 +1,5 @@
 
-<body xmlns="http://www.tei-c.org/ns/1.0">
+<body xmlns="http://www.tei-c.org/ns/1.0" xmlns:e="http://distantreading.net/eltec/ns">
    <p>This reference document defines the encoding scheme to be used for the European Literary Text
       Collection (ELTeC) which will be a major deliverable of COST Action 16204, <title>Distant
          Reading</title>. All texts included in the ELTeC should be conformant to the schema
@@ -407,13 +407,13 @@
                   </sourceDesc>
                </fileDesc>
                <profileDesc>
-                  <!-- additional descriptive information -->
+                  <!-- additional descriptive information, selection criteria, etc. -->
                </profileDesc>
                <revisionDesc>
                   <!-- revision information -->
                </revisionDesc>
             </teiHeader></egXML></p>
-      <p> Each of the TEI elements shown above should be provided and used as described below. The
+      <p> Each of the TEI elements shown above must be provided and used as described below. The
          ELTeC schemas will reject as invalid a document in which these conventions are not
          followed. </p>
       <p> The natural language used for text in the Header should be that of the language collection
@@ -432,7 +432,7 @@
                      title has been translated into some other language. </item>
                   <item>at least one <gi>author</gi> element containing the standard name of the
                      author, in the form SURNAME, FORENAMES (BIRTHYEAR - DEATHYEAR). If either date
-                     is unknown, it may be replaced by a question-mark. The author name should be
+                     is unknown, it should be replaced by a question-mark. The author name should be
                      that under which the author is conventionally catalogued, not necessarily that
                      found on the title page. </item>
                   <item>at least one <gi>respStmt</gi> element containing one or more <gi>name</gi>
@@ -520,10 +520,19 @@
       <div>
          <head>The profile description (<gi>profileDesc</gi>)</head>
 
-         <p>This must contain at least one <gi>textClass</gi> element providing information about
-            the classification of this text. If the text uses more than one language, it may also
-            contain a <gi>langUsage</gi> element. </p>
-         <p> The <gi>textClass</gi> element should contain one <gi>catRef</gi> element, and may also
+         <p>This must contain a <gi>langUsage</gi> element detailing the language or languages used in the text, 
+            followed by a <gi>textDesc</gi> element providing information about
+            the classification of this text. </p>
+         <p>The <gi>textDesc</gi> contains one of each of the following elements from the <ident>model.textDescPart</ident> class
+            in the order indicated:
+         <specList>
+            <specDesc key="model.textDescPart" />
+         </specList>
+         These elements are used to represent the selection criteria applicable to the current text. They are specific to the ELTeC
+         project, and are therefore taken from the ELTeC namespace (<ident>http://distantreading.net/eltec/ns</ident>) rather than
+            the TEI namespace. 
+         </p>
+       <!--  <p> The <gi>textClass</gi> element should contain one <gi>catRef</gi> element, and may also
             contain one or more <gi>keywords</gi> element. The <gi>catRef</gi> element must have a
                <att>target</att> attribute specifying a series of classificatory codes. These codes
             are derived from the ELTeC selection criteria, and are listed here. Each
@@ -531,31 +540,30 @@
             some aspect of the text. At present the descriptive keywords may be freely chosen. All
             the terms in a given <gi>keywords</gi> list should use the same language, which should
             be that of the text itself, unless otherwise specified by means of an @xml:lang
-            attribute. </p>
-         <p> If used, the <gi>langUsage</gi> element should contain one or more <gi>language</gi>
+            attribute. </p>-->
+         <p> The <gi>langUsage</gi> element should contain one or more <gi>language</gi>
             element, one for each of the human languages used in the text. The @ident attribute of
             this element identifies the language using the ISO 639-2 code in the same way as the
             @xml:lang attribute. The @usage attribute may be used to indicate approximately what
-            percentage of the text uses this language. A brief description of the language may be
-            given within the element. </p>
+            percentage of the text uses this language, or otherwise qualify it by means of a brief description. </p>
+         <p>The <gi>textDesc</gi> element contains four  elements defining the selection criteria applicable to
+         this text. These are specific to ELTeC and are therefore defined in the ELTeC namespace.</p>
          <p> Here is an imaginary Italian example: <egXML xmlns="http://www.tei-c.org/ns/Examples"><profileDesc>
                   <langUsage>
-                     <language ident="en" usage="10">citazioni inglesi</language>
+                    <language ident="it" usage="80"/>
+                    <language ident="en" usage="10">citazioni inglesi</language>
                      <language ident="de" usage="10">citazioni tedeschi</language>
                   </langUsage>
-                  <textClass>
-                     <catRef target="#authorM #canon1 #period5 #size2"/>
-                     <keywords xml:lang="en">
-                        <term>historical romance</term>
-                        <term>multilingual</term>
-                     </keywords>
-                     <keywords>
-                        <term>romanzo storico</term>
-                        <term>plurilingue</term>
-                     </keywords>
-                  </textClass>
+                  <textDesc>
+                     <e:authorGender key="M"/>
+                     <e:canonicity key="low"/>
+                     <e:size key="large"/>
+                     <e:timeSlot key="T3"/>
+                </textDesc>
                </profileDesc></egXML>
-         </p>
+     This text is mostly in Italian, but approximately a tenth of it is taken up with quotations in English, and another tenth with quotations
+     in German. Its description indicates that it has a male author, is of low canonicity (i.e. has not been republished after
+         its original publication time slot), contains more than 200,000 words, and was first published between 1880 and 1899. </p>
       </div>
       <div>
 

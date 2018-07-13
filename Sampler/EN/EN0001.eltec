@@ -1,46 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://distantreading.github.io/Schema/eltec-1.rnc" type="application/relax-ng-compact-syntax"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader> <fileDesc>
-        <titleStmt>
-            <title>Howards End : ELTeC edition</title>
-            <author>Forster, Edward Morgan (1879-1970)</author>
-            <respStmt>
-                <resp>ELTeC encoding</resp>
-                <name>Lou Burnard</name>
-            </respStmt>
-        </titleStmt>
-        <extent>
-            <measure unit="words">21,0010</measure>
-            <measure unit="pages">245</measure> 
-        </extent>
-        <publicationStmt>
-            <p>Incorporated into the ELTeC <date>2018-02-12</date></p>
-        </publicationStmt>
-        <sourceDesc>
-            <bibl>
-                <author>E.M. Forster</author>
-                <title>Howards End</title>
-                <pubPlace>London</pubPlace>
-                <publisher>Edward Arnold</publisher>
-                <date>1910</date>
-                <idno type="wiki">https://www.wikidata.org/wiki/Q1146642</idno>           
-            <relatedItem>
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../distantreading.github.io/Schema/eltec-1.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:e="http://distantreading.net/eltec/ns">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Howards End : ELTeC edition</title>
+                <author>Forster, Edward Morgan (1879-1970)</author>
+                <respStmt>
+                    <resp>ELTeC encoding</resp>
+                    <name>Lou Burnard</name>
+                </respStmt>
+            </titleStmt>
+            <extent>
+                <measure unit="words">21,0010</measure>
+                <measure unit="pages">245</measure>
+            </extent>
+            <publicationStmt>
+                <p>Incorporated into the ELTeC <date>2018-02-12</date></p>
+            </publicationStmt>
+            <sourceDesc>
                 <bibl>
-                    <title>The Project Gutenberg Etext of Howards End, by E. M.
-                        Forster</title>
-                    <ref
-                        target="http://www.gutenberg.org/files/2891/2891-h/2891-h.htm"
-                        >HTML version downloaded on <date>2017-12-26</date></ref>
-                </bibl>
-            </relatedItem></bibl>
-        </sourceDesc>
-    </fileDesc>
-        <encodingDesc n="ELTeC-0"><p/></encodingDesc>
+                    <author>E.M. Forster</author>
+                    <title>Howards End</title>
+                    <pubPlace>London</pubPlace>
+                    <publisher>Edward Arnold</publisher>
+                    <date>1910</date>
+                    <idno type="wiki">https://www.wikidata.org/wiki/Q1146642</idno>
+                    <relatedItem>
+                        <bibl>
+                            <title>The Project Gutenberg Etext of Howards End, by E. M.
+                                Forster</title>
+                            <ref target="http://www.gutenberg.org/files/2891/2891-h/2891-h.htm">HTML
+                                version downloaded on <date>2017-12-26</date></ref>
+                        </bibl>
+                    </relatedItem></bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc n="eltec-0">
+            <p></p>
+        </encodingDesc>
         <profileDesc>
-            <langUsage><language ident="en"></language></langUsage>
-            <textClass>
-                <catRef target="#authorM #canon1 #period5 #size2"/>
-            </textClass>
+            <langUsage>
+                <language ident="en"/>
+            </langUsage>
+            <textDesc>
+                <e:authorGender key="M"/>
+                <e:size key="long"/>
+                <e:canonicity key="high"/>
+                <e:timeSlot key="T4"/>
+            </textDesc>
+            <!--  <textClass>
+                <catRef target="#authorM"/>
+                <catRef target="#canon1"/>
+                <catRef target="#period5"/> 
+                <catRef target="#size2"/>
+            </textClass>-->
         </profileDesc>
         <revisionDesc>
             <change when="2018-04-20">Header made</change>
@@ -61,13 +74,13 @@
                 <quote>
                     <p><hi>Howards End,</hi>
                         <hi> Tuesday.</hi></p>
-                    <p><hi>Dearest Meg, </hi></p><p>It isn't going to be what we expected.  It
-                        is old and little, and altogether delightful&#x2014;red brick.  We can
-                        scarcely pack in as it is, and the dear knows what will happen when Paul
-                        (younger son) arrives tomorrow.  From hall you go right or left into
-                        dining-room or drawing-room.  Hall itself is practically a room.  You open
-                        another door in it, and there are the stairs going up in a sort of tunnel to
-                        the first-floor.  Three bedrooms in a row there, and three attics in a row
+                    <p><hi>Dearest Meg, </hi></p><p>It isn't going to be what we expected.  It is
+                        old and little, and altogether delightful&#x2014;red brick.  We can scarcely
+                        pack in as it is, and the dear knows what will happen when Paul (younger
+                        son) arrives tomorrow.  From hall you go right or left into dining-room or
+                        drawing-room.  Hall itself is practically a room.  You open another door in
+                        it, and there are the stairs going up in a sort of tunnel to the
+                        first-floor.  Three bedrooms in a row there, and three attics in a row
                         above.  That isn't all the house really, but it's all that one
                         notices&#x2014;nine windows as you look up from the front garden.
                         </p><p>Then there's a very big wych-elm&#x2014;to the left as you look
@@ -6833,8 +6846,7 @@
                     think of that, she tore up the letter, and then wrote another:</p>
                 <quote><p>Dear Mr. Bast, </p><p>I have spoken to Mr. Wilcox about you, as I
                         promised, and am sorry to say that he has no vacancy for
-                            you.</p><p><hi>Yours truly, </hi></p><p><hi>M. J.
-                            Schlegel</hi></p>
+                            you.</p><p><hi>Yours truly, </hi></p><p><hi>M. J. Schlegel</hi></p>
                 </quote>
                 <p>    She enclosed this in a note to Helen, over which she took less trouble than
                     she might have done; but her head was aching, and she could not stop to pick her

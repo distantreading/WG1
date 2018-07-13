@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:base="file:/home/lou/Public/WG1/eltec.xml"><?TEIVERSION Version 3.3.0a. Last updated on
+<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:e="http://distantreading.net/eltec/ns" xml:base="file:/home/lou/Public/WG1/eltec.xml"><?TEIVERSION Version 3.3.0a. Last updated on
 	11th July 2017, revision 9b793ec?>
     <teiHeader>
         <fileDesc>
@@ -14,7 +14,9 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-            <change when="2018-05-23">Redrafted version of encoding_proposal document post Wuerzburg</change>
+            <change when="2018-07-04">Experiment with textDesc instead of catRef; tighten up header requirements</change>
+            <change when="2018-05-23">Redrafted version of encoding_proposal document post
+                Wuerzburg</change>
             <change when="2018-03-16">Revised post-Prague</change>
             <change when="2018-01-17">Expanded metadata section a bit; added comments from CO and
                 BN</change>
@@ -428,13 +430,13 @@
                   </sourceDesc>
                </fileDesc>
                <profileDesc>
-                  <!-- additional descriptive information -->
+                  <!-- additional descriptive information, selection criteria, etc. -->
                </profileDesc>
                <revisionDesc>
                   <!-- revision information -->
                </revisionDesc>
             </teiHeader></egXML></p>
-      <p> Each of the TEI elements shown above should be provided and used as described below. The
+      <p> Each of the TEI elements shown above must be provided and used as described below. The
          ELTeC schemas will reject as invalid a document in which these conventions are not
          followed. </p>
       <p> The natural language used for text in the Header should be that of the language collection
@@ -453,7 +455,7 @@
                      title has been translated into some other language. </item>
                   <item>at least one <gi>author</gi> element containing the standard name of the
                      author, in the form SURNAME, FORENAMES (BIRTHYEAR - DEATHYEAR). If either date
-                     is unknown, it may be replaced by a question-mark. The author name should be
+                     is unknown, it should be replaced by a question-mark. The author name should be
                      that under which the author is conventionally catalogued, not necessarily that
                      found on the title page. </item>
                   <item>at least one <gi>respStmt</gi> element containing one or more <gi>name</gi>
@@ -539,10 +541,19 @@
       <div>
          <head>The profile description (<gi>profileDesc</gi>)</head>
 
-         <p>This must contain at least one <gi>textClass</gi> element providing information about
-            the classification of this text. If the text uses more than one language, it may also
-            contain a <gi>langUsage</gi> element. </p>
-         <p> The <gi>textClass</gi> element should contain one <gi>catRef</gi> element, and may also
+         <p>This must contain a <gi>langUsage</gi> element detailing the language or languages used in the text, 
+            followed by a <gi>textDesc</gi> element providing information about
+            the classification of this text. </p>
+         <p>The <gi>textDesc</gi> contains one of each of the following elements from the <ident>model.textDescPart</ident> class
+            in the order indicated:
+         <specList>
+            <specDesc key="model.textDescPart"/>
+         </specList>
+         These elements are used to represent the selection criteria applicable to the current text. They are specific to the ELTeC
+         project, and are therefore taken from the ELTeC namespace (<ident>http://distantreading.net/eltec/ns</ident>) rather than
+            the TEI namespace. 
+         </p>
+       <!--  <p> The <gi>textClass</gi> element should contain one <gi>catRef</gi> element, and may also
             contain one or more <gi>keywords</gi> element. The <gi>catRef</gi> element must have a
                <att>target</att> attribute specifying a series of classificatory codes. These codes
             are derived from the ELTeC selection criteria, and are listed here. Each
@@ -550,31 +561,30 @@
             some aspect of the text. At present the descriptive keywords may be freely chosen. All
             the terms in a given <gi>keywords</gi> list should use the same language, which should
             be that of the text itself, unless otherwise specified by means of an @xml:lang
-            attribute. </p>
-         <p> If used, the <gi>langUsage</gi> element should contain one or more <gi>language</gi>
+            attribute. </p>-->
+         <p> The <gi>langUsage</gi> element should contain one or more <gi>language</gi>
             element, one for each of the human languages used in the text. The @ident attribute of
             this element identifies the language using the ISO 639-2 code in the same way as the
             @xml:lang attribute. The @usage attribute may be used to indicate approximately what
-            percentage of the text uses this language. A brief description of the language may be
-            given within the element. </p>
+            percentage of the text uses this language, or otherwise qualify it by means of a brief description. </p>
+         <p>The <gi>textDesc</gi> element contains four  elements defining the selection criteria applicable to
+         this text. These are specific to ELTeC and are therefore defined in the ELTeC namespace.</p>
          <p> Here is an imaginary Italian example: <egXML xmlns="http://www.tei-c.org/ns/Examples"><profileDesc>
                   <langUsage>
-                     <language ident="en" usage="10">citazioni inglesi</language>
+                    <language ident="it" usage="80"/>
+                    <language ident="en" usage="10">citazioni inglesi</language>
                      <language ident="de" usage="10">citazioni tedeschi</language>
                   </langUsage>
-                  <textClass>
-                     <catRef target="#authorM #canon1 #period5 #size2"/>
-                     <keywords xml:lang="en">
-                        <term>historical romance</term>
-                        <term>multilingual</term>
-                     </keywords>
-                     <keywords>
-                        <term>romanzo storico</term>
-                        <term>plurilingue</term>
-                     </keywords>
-                  </textClass>
+                  <textDesc>
+                     <e:authorGender key="M"/>
+                     <e:canonicity key="low"/>
+                     <e:size key="large"/>
+                     <e:timeSlot key="T3"/>
+                </textDesc>
                </profileDesc></egXML>
-         </p>
+     This text is mostly in Italian, but approximately a tenth of it is taken up with quotations in English, and another tenth with quotations
+     in German. Its description indicates that it has a male author, is of low canonicity (i.e. has not been republished after
+         its original publication time slot), contains more than 200,000 words, and was first published between 1880 and 1899. </p>
       </div>
       <div>
 
@@ -2012,18 +2022,6 @@ expliquer d'autres parties d'un document.</desc>
 </classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.descLike">
   <desc versionDate="2012-10-07" xml:lang="en">groups elements which contain a description of their function.</desc>
   <desc xml:lang="fr" versionDate="2007-06-12">regroupe des éléments qui contiennent une description de la fonction d'un élément.</desc>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="GLOSSLIKE" type="model" ident="model.glossLike">
-  <desc versionDate="2005-11-06" xml:lang="en">groups elements which provide an alternative name, explanation, or description for any
-    markup construct.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">마크업 구성에 대한 대체명, 설명 또는 기술을 제시하는 요소를 모아 놓는다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素提供某一標籤的替代名稱、解釋或描述。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">代替名またはマークアップ構造を示す要素をまとめる．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">regroupe des éléments qui proposent un nom alternatif,
-    une explication, ou une description pour n'importe quelle structure de codage</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">agrupa los elementos que proporcionan un nombre,
-    descripción o explicación alternativa a elementos de codificación.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">raggruppa elementi che assegnano un nome, descrizione o
-    spiegazione alternativi a elementi di codifica</desc>
 </classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="QUOTELIKE" type="model" ident="model.quoteLike">
   <desc versionDate="2005-11-17" xml:lang="en">groups elements used to directly contain quotations.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인용을 직접 포함하는 요소를 모아 놓는다.</desc>
@@ -2221,17 +2219,20 @@ fin d'une division de texte.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBI">3.11. Bibliographic Citations and References</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="CATEGORIZE" type="model" ident="model.catDescPart">
-  <desc versionDate="2013-02-02" xml:lang="en">groups component elements of the TEI header Category Description.</desc>
-  <desc versionDate="2009-01-05" xml:lang="fr">regroupe des éléments composants de l'élément
-    <gi>catDesc</gi> dans l'en-tête TEI.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">TEI 헤더 범주 기술의 성분 요소를 모아 놓는다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集可用於元素<gi>catDesc</gi>內、並多次出現的元素</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">TEIヘダーの要素をまとめる．</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">agrupa elementos que pueden usarse dentro de
-    <gi>catDesc</gi> y que aparecen en numerosas ocasiones.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">raggruppa gli elementi utilizzati all'interno di
-      <gi>catDesc</gi> e che appaiono più volte</desc>
+</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.textDescPart">
+  
+  <desc versionDate="2012-03-14" xml:lang="en">groups elements used to categorize a text for example in terms of its situational
+    parameters.</desc>
+  <desc versionDate="2007-12-20" xml:lang="ko">예를 들어, 상황적 변인을 통해, 텍스트를 범주화하는 요소를 모아 놓는다.</desc>
+  <desc versionDate="2007-05-02" xml:lang="zh-TW">將文本分類的元素，例如以文本的狀況參數來分類。</desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">テキストを分類するための要素をまとめる．例えば，状況パラメータの項目 など．</desc>
+  <desc versionDate="2009-05-28" xml:lang="fr">regroupe des éléments destinés à attribuer une catégorie à un texte, par exemple
+    en utilisant  des termes qui caractérisent sa situation.</desc>
+  <desc versionDate="2007-05-04" xml:lang="es">elementos usados para categorizar un texto, por ejemplo
+    en términos relativos a parámetros situcionales.</desc>
+  <desc versionDate="2007-01-21" xml:lang="it">elementi utilizzati per categorizzare un testo, per
+    esempio in termini di relativi parametri situazionali</desc>
+  <classes/>
 </classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.addressLike">
   <desc versionDate="2007-10-02" xml:lang="en">groups elements used to represent a postal or email address.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">우편 또는 전자메일 주소를 나타내는 요소를 모아 놓는다.</desc>
@@ -2468,19 +2469,6 @@ fin d'une division de texte.</desc>
     haut.</desc>
   <desc versionDate="2007-11-06" xml:lang="it">raggruppa partizioni testuali di primo livello</desc>
   <desc versionDate="2007-05-04" xml:lang="es">agrupa divisiones estructurales de nivel superior.</desc>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.teiHeaderPart">
-  <desc versionDate="2013-02-02" xml:lang="en">groups high level elements which may appear more than once in a TEI header.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">TEI 헤더에 한번 이상 출현하는 상위 층위 요소들을 모아 놓는다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集可在<gi>teiHeader</gi>中使用並且可多次出現的元素</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">TEIヘダー内で高々1回出現する，上位レベルの要素をまとめる．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">regroupe des éléments de macrostructure qui peuvent
-    apparaître plus d'une fois dans l’en-tête TEI.</desc>
-  <desc versionDate="2006-10-18" xml:lang="de">umfasst Elemente, die innerhalb von TEI Header benutzt
-    werden dürfen und mehrmals auftreten können.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">agrupa elementos que pueden usarse al interno del
-      <gi>teiHeader</gi> y aparecen en diversas ocasiones.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">raggruppa gli elementi utilizzati all'interno di
-      <gi>teiHeader</gi> e che appaiono più volte.</desc>
 </classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="SOURCEDESC" type="model" ident="model.sourceDescPart">
   <desc versionDate="2007-10-22" xml:lang="en">groups elements which may be used inside <gi>sourceDesc</gi> and appear multiple times.</desc>
   <desc versionDate="2009-01-05" xml:lang="fr">regroupe des éléments que l'on peut utiliser plusieurs fois dans l'élément <gi>sourceDesc</gi>.</desc>
@@ -2493,21 +2481,6 @@ fin d'une division de texte.</desc>
       <gi>sourceDesc</gi> (descripción de la fuente) y que aparecen en diversas ocasiones.</desc>
   <desc versionDate="2007-01-21" xml:lang="it">raggruppa gli elementi utilizzati all'interno di
       <gi>sourceDesc</gi> e che appaiono più volte.</desc>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.encodingDescPart">
-  <desc versionDate="2009-11-08" xml:lang="en">groups elements which may be used inside <gi>encodingDesc</gi> and appear multiple times.</desc>
-  <desc versionDate="2009-01-05" xml:lang="fr">regroupe des éléments
-  qui peuvent apparaître plusieurs fois dans
-    l'élément <gi>encodingDesc</gi>.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">
-      <gi>encodingDesc</gi> 내부에 사용되어 여러 번 출현될 수 있는 요소들을 모아 놓는다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集可在<gi>encodingDesc</gi>中使用並且可多次出現的元素</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">要素<gi>encodingDesc</gi>内で使われ，複数回出現可能な要素をまとめる．</desc>
-  <desc versionDate="2006-10-18" xml:lang="de"> umfasst Elemente, die in <gi>encodingDesc</gi> verwendet
-    werden und mehrfach auftreten können.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">agrupa elementos que pueden aparecer al interno de
-      <gi>encodingDesc</gi> (Descripción de la codificación) y que aparecen en diversas ocasiones.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">raggruppa gli elementi utilizzati all'interno di
-      <gi>encodingDesc</gi> e che appaiono più volte.</desc>
 </classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="PROFILE" type="model" ident="model.profileDescPart">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements which may be used inside <gi>profileDesc</gi>
 and appear multiple times.</desc>
@@ -3483,32 +3456,6 @@ resource, either within the current document or elsewhere.</desc>
         Syntax</title>
          </ref>
       </p>
-  </remarks>
-</dataSpec><dataSpec module="tei" ident="teidata.version">
-  <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2013-11-20" xml:lang="en">defines the range of attribute values which may be used to
-  specify a TEI or Unicode version number.</desc>
-  <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="fr" versionDate="2007-06-12">définit la gamme des valeurs d'attribut
-  exprimant un numéro de version TEI.</desc>
-  <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0">
-      <dataRef name="token" restriction="[\d]+(\.[\d]+){0,2}"/>
-   </content>
-  <remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2012-06-17" xml:lang="en">
-      <p>The value of this attribute follows the pattern specified by
-    the Unicode consortium for its version number (<ptr target="http://unicode.org/versions/"/>). A version number
-    contains digits and fullstop characters only. The first number
-    supplied identifies the major version number. A second and third
-    number, for minor and sub-minor version numbers, may also be
-    supplied.
-</p>
-  </remarks>
-  <remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="fr" versionDate="2007-06-12">
-      <p>La valeur de cet attribut devrait suivre le format proposé par
-    le Consortium Unicode pour identifier les versions (<ptr target="http://unicode.org/versions/"/>). Un numéro de version
-    ne contient que des chiffres et des points. Le numéro
-    initiale identifie le numéro majeur de la version. Un deuxième et
-    un troisième numéro sont aussi disponibles pour la numérotation
-    facultative des versions mineures ou sous-mineurs.
-</p>
   </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.versionNumber">
   <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2013-04-14" xml:lang="en">defines the range of attribute values used for version numbers.</desc>
@@ -6558,8 +6505,8 @@ Elements</ref>
     siguiente en un sistema de referencia estándard.</desc><desc versionDate="2007-01-21" xml:lang="it">indica il limite tra una pagina di un testo e la
     successiva in un sistema di riferimento standard</desc><desc versionDate="2017-06-25" xml:lang="de">markiert den Anfang 
     einer neuen Seite in einem Dokument mit Seitenzahlen</desc><classes><memberOf key="att.global"/><memberOf key="model.milestoneLike"/><memberOf key="att.typed"/></classes><content/><attList/><exemplum xml:lang="en">
-                            <p>A page break may be associated with a facsimile image of the page it introduces by means of
-                                the <att>facs</att> attribute</p>
+                            <p>A page break may be associated with a facsimile image of the page it
+                                introduces by means of the <att>facs</att> attribute</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
                                 <body>
                                     <pb n="1" facs="page1.png"/>
@@ -6576,24 +6523,21 @@ Elements</ref>
                                 </body>
                             </egXML>
                         </exemplum><exemplum>
-                        
-                            <ab>If a page break interrupts a word
-                                the word fragments may be reassembled 
-                                following it. 
-                                <graphic url="media/inWordpb.png"/></ab>
+
+                            <ab>If a page break interrupts a word the word fragments may be
+                                reassembled following it. <graphic url="media/inWordpb.png"/></ab>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                           <p>My own relations too were nobly generous and by their kindness I have been 
-                                <pb n="100"/>
-                                established in this shop, and for thre last year have carried on
-                                this little business.... 
-                                </p>
+                                <p>My own relations too were nobly generous and by their kindness I
+                                    have been <pb n="100"/> established in this shop, and for thre
+                                    last year have carried on this little business.... </p>
                             </egXML>
-                        </exemplum><remarks>  <p>A <gi>pb</gi> element should appear at the start of the page
-                            which it identifies. The global <att>n</att> attribute indicates
-                            the number or other value associated with this page. This will
-                            normally be the page number or signature printed on it, since the
-                            physical sequence number is implicit in the presence of the
-                            <gi>pb</gi> element itself. </p>
+                        </exemplum><remarks>
+                            <p>A <gi>pb</gi> element should appear at the start of the page which it
+                                identifies. The global <att>n</att> attribute indicates the number
+                                or other value associated with this page. This will normally be the
+                                page number or signature printed on it, since the physical sequence
+                                number is implicit in the presence of the <gi>pb</gi> element
+                                itself. </p>
                         </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CORS5">3.10.3. Milestone
 Elements</ref>
@@ -6870,32 +6814,13 @@ places, in particular where  multiple names are given.</p>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD22">2.2.2. The Edition Statement</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD26">2.2.5. The Series Statement</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="title">
-  <gloss versionDate="2007-06-12" xml:lang="fr">titre</gloss>
-  <gloss versionDate="2017-06-04" xml:lang="de">Titel</gloss>
-  <desc versionDate="2008-10-25" xml:lang="en">contains a title for any kind of work.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">다양한 종류의 작업에 대한 전체 제목을 제공한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">包含任何種類作品的完整題名
-                    。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">作品の完全なタイトルを示す．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">contient le titre complet d'une oeuvre quelconque</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">contiene el título completo de una obra de
-                    cualquier tipo.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">contiene il titolo completo di una qualsiaisi                    opera.</desc>
-  <desc versionDate="2017-06-04" xml:lang="de">beinhaltet einen Titel eines beliebigen Werks.</desc>
-  <classes>
-    <memberOf key="att.global"/>
-    <memberOf key="model.emphLike"/>
-    
-    
-    <memberOf key="att.typed"/>
-    <memberOf key="att.datable"/>
-  </classes>
-  <content>
-    <macroRef key="macro.paraContent"/>
-  </content>
-  <attList>
-    <attDef ident="level" usage="opt">
+</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="core" ident="title"><gloss versionDate="2007-06-12" xml:lang="fr">titre</gloss><gloss versionDate="2017-06-04" xml:lang="de">Titel</gloss><desc versionDate="2008-10-25" xml:lang="en">contains a title for any kind of work.</desc><desc versionDate="2007-12-20" xml:lang="ko">다양한 종류의 작업에 대한 전체 제목을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含任何種類作品的完整題名
+                    。</desc><desc versionDate="2008-04-05" xml:lang="ja">作品の完全なタイトルを示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient le titre complet d'une oeuvre quelconque</desc><desc versionDate="2007-05-04" xml:lang="es">contiene el título completo de una obra de
+                    cualquier tipo.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene il titolo completo di una qualsiaisi                    opera.</desc><desc versionDate="2017-06-04" xml:lang="de">beinhaltet einen Titel eines beliebigen Werks.</desc><classes><memberOf key="att.global"/><memberOf key="model.emphLike"/><memberOf key="att.typed"/><memberOf key="att.datable"/></classes><content><macroRef key="macro.paraContent"/></content><constraintSpec mode="add" ident="noEmptyTitle" scheme="schematron">
+        <constraint>
+            <assert xmlns="http://purl.oclc.org/dsdl/schematron" test="child::* or child::text()[normalize-space()]" role="ERROR">You must provide a title for the text </assert>
+        </constraint>
+    </constraintSpec><attList><attDef ident="level" usage="opt">
       <desc versionDate="2005-03-05" xml:lang="en">indicates the bibliographic level for a title, that is, whether
                                         it identifies an article, book, journal, series, or
                                         unpublished material.</desc>
@@ -7060,7 +6985,13 @@ places, in particular where  multiple names are given.</p>
 	in such contexts,
         its value should not contradict the value implied by its
 	parent element. 
-	
+	<!--, the <att>level</att>, if given, must
+        be<q>a</q>; if it appears directly enclosed within a
+        <gi>monogr</gi> element, <att>level</att> must be <q>m</q>,
+        <q>j</q>, or <q>u</q>; when <gi>title</gi> is directly
+        enclosed by ,<att>level</att> must be . If it appears within a
+        <gi>msItem</gi>, the <att>level</att> attribute should not be
+        supplied.-->
 	</p>
       </remarks>
       <remarks xml:lang="fr" versionDate="2007-06-12">
@@ -7097,8 +7028,7 @@ doit pas être utilisé.</p>
           Attributwert dem impliziten Wert des Eltern-Elements nicht widersprechen. 
         </p>
       </remarks>
-    </attDef>
-    <attDef ident="type" mode="change">
+    </attDef><attDef ident="type" mode="change">
       <desc versionDate="2005-01-14" xml:lang="en">classifies the title according to some convenient typology.</desc>
       <desc versionDate="2007-12-20" xml:lang="ko">어떤 편의적 유형에 따른 제목 분류</desc>
       <desc versionDate="2007-05-02" xml:lang="zh-TW">用合適的分類方法將題名分類。</desc>
@@ -7244,70 +7174,57 @@ inclus, peuvent être encodés dans un élément
           Untertitel und allfälligen parallelen Titeln, kann mit einem einzigen <gi>title</gi>-Element
           ausgezeichnet werden.</p>
       </remarks>
-    </attDef>
-  </attList>
-  <exemplum xml:lang="en">
+    </attDef></attList><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <title>Information Technology and the Research Process: Proceedings of
                                         a conference held at Cranfield Institute of Technology, UK,
                                         18–21 July 1989</title>
     </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
+  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <title>La vie mode d'emploi. Romans.</title>
     </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
+  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Maingeneau_Analyser">
       <title>Analyser les textes de communication</title>
     </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
+  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <title>Mélanges de linguistique française et de philologie et littérature médiévales
           offerts à Monsieur Paul Imbs.</title>
     </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
+  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Melanges_Imbs">
       <title>Les fleurs du Mal de Charles Baudelaire : une édition électronique</title>
     </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
+  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Belloc_Neons">
       <p>quand il rentre de ses chantiers de maçonnerie il dit rien, il pose son cul sur une
           chaise, toujours au même endroit, et il lit <title>l'Humanité.</title>
          </p>
     </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
+  </exemplum><exemplum xml:lang="zh-TW">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <title>毛語錄</title>
     </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
+  </exemplum><exemplum xml:lang="zh-TW">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <title>嚐書：視界與舌尖之外</title>
     </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
+  </exemplum><exemplum xml:lang="zh-TW">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <title> 蒼天有淚—無語問蒼天，台北，1997年12月1日。</title>
     </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
+  </exemplum><exemplum xml:lang="zh-TW">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <title>大般若波羅蜜多經：OCR辨識版本</title>
     </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
+  </exemplum><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <title>Hardy's Tess of the D'Urbervilles: a machine readable
                               edition</title>
     </egXML>
-  </exemplum>
-  <exemplum xml:lang="mul">
+  </exemplum><exemplum xml:lang="mul">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <title type="full">
         <title type="main">Synthèse</title>
@@ -7316,36 +7233,30 @@ epistemology, methodology and history of
                                         science</title>
       </title>
     </egXML>
-  </exemplum>
-  <remarks versionDate="2008-09-05" xml:lang="en">
+  </exemplum><remarks versionDate="2008-09-05" xml:lang="en">
     <p>The attributes <att>key</att> and <att>ref</att>, inherited from the class
                                         <ident type="class">att.canonical</ident> may be used to
                               indicate the canonical form for the title; the former, by supplying
                               (for example) the identifier of a record in some external library
                               system; the latter by pointing to an XML element somewhere containing
                               the canonical form of the title.</p>
-  </remarks>
-  <remarks versionDate="2008-12-09" xml:lang="fr">
+  </remarks><remarks versionDate="2008-12-09" xml:lang="fr">
     <p>Les attributs <att>key</att> et <att>ref</att>, hérités de la classe <ident type="class">att.canonical</ident> sont utilisés pour
                               indiquer la forme canonique du titre ; le premier donne (par exemple)
                               l’identifiant d’un enregistrement dans un système externe de
                               bibliothèque ; le second pointe vers un élément XML contenant la forme
                               canonique du titre.</p>
-  </remarks>
-  <remarks versionDate="2017-06-04" xml:lang="de">
+  </remarks><remarks versionDate="2017-06-04" xml:lang="de">
     <p>Die Attribute <att>key</att> und <att>ref</att>, die durch die Zugehörigkeit zur Klasse
       <ident type="class">att.canonical</ident> verfügbar sind, können dafür verwendet werden, den
       kanonischen Titel anzugeben: Ersteres indem (z. B.) die Kennung eines Datensatzes einer externen
       Bibliothek herangezogen wird; Letzteres durch den Verweis auf ein XML-Element, das den
       kanonischen Titel enthält.</p>
-  </remarks>
-  
-  <listRef>
+  </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBICOR">3.11.2.2. Titles, Authors, and Editors</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD21">2.2.1. The Title Statement</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD26">2.2.5. The Series Statement</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="publisher">
+  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="publisher">
   <gloss versionDate="2009-01-06" xml:lang="fr">éditeur</gloss>
   <gloss versionDate="2017-06-13" xml:lang="de">Verlag</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">provides the name of the organization responsible for the publication or distribution of a
@@ -8232,79 +8143,24 @@ by the stage direction.</p>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV">3.12. Passages of Verse or Drama</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRSTA">7.2.4. Stage Directions</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="textstructure" ident="TEI">
-  <gloss versionDate="2005-12-24" xml:lang="en">TEI document</gloss>
-  <gloss versionDate="2007-12-20" xml:lang="ko">TEI 문서</gloss>
-  <gloss versionDate="2007-05-02" xml:lang="zh-TW">TEI文件</gloss>
-  <gloss versionDate="2007-06-12" xml:lang="fr">document TEI</gloss>
-  <gloss versionDate="2006-10-18" xml:lang="de">TEI-Dokument</gloss>
-  <gloss versionDate="2007-05-04" xml:lang="es">documento TEI</gloss>
-  <gloss versionDate="2007-01-21" xml:lang="it">documento TEI</gloss>
-  <desc versionDate="2017-02-07" xml:lang="en">contains a single TEI-conformant document, combining
+</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="textstructure" ident="TEI"><gloss versionDate="2005-12-24" xml:lang="en">TEI document</gloss><gloss versionDate="2007-12-20" xml:lang="ko">TEI 문서</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">TEI文件</gloss><gloss versionDate="2007-06-12" xml:lang="fr">document TEI</gloss><gloss versionDate="2006-10-18" xml:lang="de">TEI-Dokument</gloss><gloss versionDate="2007-05-04" xml:lang="es">documento TEI</gloss><gloss versionDate="2007-01-21" xml:lang="it">documento TEI</gloss><desc versionDate="2017-02-07" xml:lang="en">contains a single TEI-conformant document, combining
     a single TEI header with one or more members of the <ident type="class">model.resourceLike</ident> class. Multiple <gi>TEI</gi>
-    elements may be combined to form a <gi>teiCorpus</gi> element.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">TEI 헤더와 텍스트로 구성된 단일 TEI 구조 문서를 포함한다. 독립 요소 또는 <gi>teiCorpus</gi> 요소의 부분.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">包含符合TEI標準的單一文件，由一個TEI標頭及一份文本組成，可單獨出現或是作為元素<gi>teiCorpus</gi>的一部分。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">TEIに準拠する文書</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">contient un seul document conforme à la TEI, qui
+    elements may be combined to form a <gi>teiCorpus</gi> element.</desc><desc versionDate="2007-12-20" xml:lang="ko">TEI 헤더와 텍스트로 구성된 단일 TEI 구조 문서를 포함한다. 독립 요소 또는 <gi>teiCorpus</gi> 요소의 부분.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含符合TEI標準的單一文件，由一個TEI標頭及一份文本組成，可單獨出現或是作為元素<gi>teiCorpus</gi>的一部分。</desc><desc versionDate="2008-04-05" xml:lang="ja">TEIに準拠する文書</desc><desc versionDate="2007-06-12" xml:lang="fr">contient un seul document conforme à la TEI, qui
             comprend un en-tête TEI et un texte, soit de façon isolée, soit comme  partie d’un
-            élément <gi>teiCorpus</gi>.</desc>
-  <desc versionDate="2017-06-13" xml:lang="de">enthält ein einzelnes TEI-konformes Dokument, das aus einem einzigen TEI-Header und einem oder
+            élément <gi>teiCorpus</gi>.</desc><desc versionDate="2017-06-13" xml:lang="de">enthält ein einzelnes TEI-konformes Dokument, das aus einem einzigen TEI-Header und einem oder
     mehreren Mitgliedern der <ident type="class">model.resourceLike</ident>-Klasse besteht. Mehrere
-    <gi>TEI</gi>-Elemente können in einem <gi>teiCorpus</gi>-Element zusammengefasst werden.</desc>
-  <desc versionDate="2017-02-06" xml:lang="es">contiene un solo documento conforme a la norma TEI, combinando una sola cabecera TEI (teiHeader) con uno o más miembros de la clase <ident type="class">model.resourceLike</ident>. Múltiples elementos TEI se pueden combinar para formar un elemento <gi>teiCorpus</gi>.
-   </desc>
-  <desc versionDate="2007-01-21" xml:lang="it">contiene un documento TEI-conforme, comprendente un'intestazione e un testo, sia esso isolato o parte di un elemento <gi>teiCorpus</gi>
-   </desc>
-  <classes>
-    <memberOf key="att.global"/>
-    <memberOf key="att.typed"/>
-  </classes>
-  <content>
-    <sequence>
-      <elementRef key="teiHeader"/>
-      <classRef key="model.resourceLike" minOccurs="1" maxOccurs="unbounded"/>
-    </sequence>
-  </content>
-  <constraintSpec ident="c1" scheme="schematron">
+    <gi>TEI</gi>-Elemente können in einem <gi>teiCorpus</gi>-Element zusammengefasst werden.</desc><desc versionDate="2017-02-06" xml:lang="es">contiene un solo documento conforme a la norma TEI, combinando una sola cabecera TEI (teiHeader) con uno o más miembros de la clase <ident type="class">model.resourceLike</ident>. Múltiples elementos TEI se pueden combinar para formar un elemento <gi>teiCorpus</gi>.
+   </desc><desc versionDate="2007-01-21" xml:lang="it">contiene un documento TEI-conforme, comprendente un'intestazione e un testo, sia esso isolato o parte di un elemento <gi>teiCorpus</gi>
+   </desc><classes><memberOf key="att.global"/><memberOf key="att.typed"/></classes><content><sequence minOccurs="1" maxOccurs="1"><elementRef key="teiHeader"/><classRef key="model.resourceLike" minOccurs="1" maxOccurs="unbounded"/></sequence></content><constraintSpec ident="c1" scheme="schematron">
     <constraint>
       <ns xmlns="http://purl.oclc.org/dsdl/schematron" prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
       <ns xmlns="http://purl.oclc.org/dsdl/schematron" prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
     </constraint>
-  </constraintSpec>
-  <constraintSpec ident="c2" scheme="schematron">
+  </constraintSpec><constraintSpec ident="c2" scheme="schematron">
     <constraint>
       <ns xmlns="http://purl.oclc.org/dsdl/schematron" prefix="rng" uri="http://relaxng.org/ns/structure/1.0"/>
     </constraint>
-  </constraintSpec>
-  <attList>
-    <attDef ident="version" usage="opt">
-      <desc versionDate="2012-04-18" xml:lang="en">specifies the major version number of the TEI Guidelines against
-      which this document is valid.</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">TEI 스키마의 버전</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">TEI架構的版本</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">TEIスキームの版を示す．</desc>
-      <desc versionDate="2007-06-12" xml:lang="fr">la version majeure du schéma TEI</desc>
-      <desc versionDate="2017-06-13" xml:lang="de">gibt die Hauptversionsnummer der TEI-Richtlinien an, gegen die dieses Dokument validiert wird.</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">Versión del esquema TEI</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">versione dello schema TEI</desc>
-      <datatype><dataRef key="teidata.version"/></datatype>
-      <remarks versionDate="2012-07-17" xml:lang="en">
-        <p>The major version number is historically prefixed by a P
-(for Proposal), and is distinct from the version number
-used for individual releases of the Guidelines, as used by (for
-example) the <att>source</att> of the <gi>schemaSpec</gi> element. The current version is
-P5. </p>
-      </remarks>
-      <remarks versionDate="2017-06-13" xml:lang="de">
-        <p>Der Hauptversionsnummer wird traditionell ein P (für Proposal) vorangestellt. Sie unterscheidet
-          sich von den Versionsnummern für einzelne Veröffentlichungen der TEI-Richtlinien, wie sie (zum
-          Beispiel) vom Attribut <att>source</att> des Elementes <gi>schemaSpec</gi> benutzt wird. Die
-          aktuelle Version ist P5.</p>
-      </remarks>
-    </attDef>
-  </attList>
-  <exemplum xml:lang="en">
+  </constraintSpec><attList><attDef ident="version" mode="delete"/></attList><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <TEI version="5.0">
         <teiHeader>
@@ -8328,8 +8184,7 @@ P5. </p>
         </text>
       </TEI>
     </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
+  </exemplum><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <TEI version="5.0">
         <teiHeader>
@@ -8353,9 +8208,7 @@ P5. </p>
 </facsimile>
       </TEI>
     </egXML>
-  </exemplum>
-
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
+  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <TEI version="5.0">
         <teiHeader>
@@ -8378,8 +8231,7 @@ P5. </p>
         </text>
       </TEI>
     </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
+  </exemplum><exemplum xml:lang="zh-TW">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <TEI version="5.0">
         <teiHeader>
@@ -8402,29 +8254,23 @@ P5. </p>
         </text>
       </TEI>
     </egXML>
-  </exemplum>
-  <remarks versionDate="2015-03-10" xml:lang="en">
+  </exemplum><remarks versionDate="2015-03-10" xml:lang="en">
     <p>This element is required. It is customary to specify the
 TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
     the <att>xmlns</att> attribute.</p>
-  </remarks>
-  <remarks xml:lang="fr" versionDate="2007-06-12">
+  </remarks><remarks xml:lang="fr" versionDate="2007-06-12">
     <p>Cet élément est obligatoire.</p>
-  </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  </remarks><remarks xml:lang="ja" versionDate="2008-04-05">
     <p>
     当該要素は必須である．
     </p>
-  </remarks>
-  <remarks versionDate="2017-06-13" xml:lang="de">
+  </remarks><remarks versionDate="2017-06-13" xml:lang="de">
     <p>Dieses Element ist obligatorisch. Es ist notwendig, darin den TEI-Namensraum <ident type="ns">http://www.tei-c.org/ns/1.0</ident> mithilfe des <att>xmlns</att>-Attributs zu
       spezifizieren.</p>
-  </remarks>
-  <listRef>
+  </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DS">4. Default Text Structure</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCDEF">15.1. Varieties of Composite Text</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="textstructure" ident="text"><gloss versionDate="2007-06-12" xml:lang="fr">texte</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a single text of any kind, whether unitary or composite, for example a poem or
+  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="textstructure" ident="text"><gloss versionDate="2007-06-12" xml:lang="fr">texte</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a single text of any kind, whether unitary or composite, for example a poem or
     drama, a collection of essays, a novel, a dictionary, or a corpus sample.</desc><desc versionDate="2007-12-20" xml:lang="ko">어떤 종류의 단일 텍스트를 포함한다. 예를 들어, 시 또는 드라마, 수필선, 소설, 사전 또는 코퍼스
     표본과 같은 단일 텍스트 또는 혼합 텍스트.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含一份任何種類的文本，無論是單一或複合的，例如詩詞或戲劇、散文集、小說、字典、或是文集範例。</desc><desc versionDate="2008-04-05" xml:lang="ja">ひとつのテキストを示す．単体でも複合体でもよい．例えば，詩，舞台芸術， 随筆，小説，辞書，コーパスなど．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient un seul texte quelconque, simple ou composite,
     par exemple un poème ou une pièce de théâtre, un recueil d’essais, un roman, un dictionnaire ou
@@ -9306,44 +9152,13 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSBACK">4.7. Back Matter</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DS">4. Default Text Structure</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="teiHeader">
-  <gloss versionDate="2013-02-02" xml:lang="en">TEI header</gloss>
-  <gloss versionDate="2009-01-05" xml:lang="fr">en-tête TEI</gloss>
-  <gloss versionDate="2007-12-20" xml:lang="ko">TEI 헤더</gloss>
-  <gloss versionDate="2007-05-02" xml:lang="zh-TW">TEI標頭</gloss>
-  <gloss versionDate="2006-10-18" xml:lang="de">TEI-Header (elektronische Titelseite)</gloss>
-  <gloss versionDate="2007-05-04" xml:lang="es">Encabezado TEI</gloss>
-  <gloss versionDate="2007-01-21" xml:lang="it">intestazione</gloss>
-  <desc versionDate="2016-02-19" xml:lang="en">supplies descriptive and
+</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="header" ident="teiHeader"><gloss versionDate="2013-02-02" xml:lang="en">TEI header</gloss><gloss versionDate="2009-01-05" xml:lang="fr">en-tête TEI</gloss><gloss versionDate="2007-12-20" xml:lang="ko">TEI 헤더</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">TEI標頭</gloss><gloss versionDate="2006-10-18" xml:lang="de">TEI-Header (elektronische Titelseite)</gloss><gloss versionDate="2007-05-04" xml:lang="es">Encabezado TEI</gloss><gloss versionDate="2007-01-21" xml:lang="it">intestazione</gloss><desc versionDate="2016-02-19" xml:lang="en">supplies descriptive and
     declarative metadata associated with a digital resource or set of
-    resources.</desc>
-  <desc versionDate="2009-01-05" xml:lang="fr">fournit des informations descriptives et déclaratives qui
-    constituent une page de titre électronique au début de tout texte conforme à la TEI.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">모든 TEI 구조의 텍스트 서두에 위치하는 전자 제목 페이지를 구성하는 기술적이고 선언적인 정보를
-    제공한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">在所有符合TEI標準的文本起始的電子題名頁當中提供敘述性以及宣告性的資訊。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">全てのTEI準拠テキストが伴う，電子版のタイトルページを構成する，記述 的・宣言的情報を示す．</desc>
-    <desc versionDate="2016-11-25" xml:lang="de">beinhaltet beschreibende und erklärende Metadaten, die einer digitalen Ressource oder einer Sammlung von Ressourcen vorangestellt sind.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">proporciona información descriptiva y declarativa de una
-    página de título electrónico prefijada como un texto conforme a TEI.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">fornisce informazioni descrittive e dichiarative che
-    costituiscono un frontespizio elettronico che precede qualsiasi testo TEI-conforme.</desc>
-  <classes>
-    <memberOf key="att.global"/>
-  </classes>
-  <content>
-    <sequence>
-      <elementRef key="fileDesc"/>
-      
-        <classRef key="model.teiHeaderPart" minOccurs="0" maxOccurs="unbounded"/>
-      
-      
-        <elementRef key="revisionDesc" minOccurs="0"/>
-      
-    </sequence>
-  </content>
-  
-  <exemplum xml:lang="en">
+    resources.</desc><desc versionDate="2009-01-05" xml:lang="fr">fournit des informations descriptives et déclaratives qui
+    constituent une page de titre électronique au début de tout texte conforme à la TEI.</desc><desc versionDate="2007-12-20" xml:lang="ko">모든 TEI 구조의 텍스트 서두에 위치하는 전자 제목 페이지를 구성하는 기술적이고 선언적인 정보를
+    제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">在所有符合TEI標準的文本起始的電子題名頁當中提供敘述性以及宣告性的資訊。</desc><desc versionDate="2008-04-05" xml:lang="ja">全てのTEI準拠テキストが伴う，電子版のタイトルページを構成する，記述 的・宣言的情報を示す．</desc><desc versionDate="2016-11-25" xml:lang="de">beinhaltet beschreibende und erklärende Metadaten, die einer digitalen Ressource oder einer Sammlung von Ressourcen vorangestellt sind.</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona información descriptiva y declarativa de una
+    página de título electrónico prefijada como un texto conforme a TEI.</desc><desc versionDate="2007-01-21" xml:lang="it">fornisce informazioni descrittive e dichiarative che
+    costituiscono un frontespizio elettronico che precede qualsiasi testo TEI-conforme.</desc><classes><memberOf key="att.global"/></classes><content><sequence minOccurs="1" maxOccurs="1"><elementRef key="fileDesc"/><elementRef key="encodingDesc"/><elementRef key="profileDesc"/><elementRef key="revisionDesc"/></sequence></content><attList/><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <teiHeader>
         <fileDesc>
@@ -9409,8 +9224,7 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
         </revisionDesc>
       </teiHeader>
     </egXML>
-  </exemplum>
-  <exemplum versionDate="2010-02-26" xml:lang="fr">
+  </exemplum><exemplum versionDate="2010-02-26" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Becque-ee">
       <teiHeader>
         <fileDesc>
@@ -9448,8 +9262,7 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
         </profileDesc>
       </teiHeader>
     </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
+  </exemplum><exemplum xml:lang="zh-TW">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <teiHeader>
         <fileDesc>
@@ -9490,30 +9303,23 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
         </revisionDesc>
       </teiHeader>
     </egXML>
-  </exemplum>
-  <remarks versionDate="2005-01-14" xml:lang="en">
+  </exemplum><remarks versionDate="2005-01-14" xml:lang="en">
     <p>One of the few elements unconditionally required in any TEI
       document.</p>
-  </remarks>
-  <remarks xml:lang="fr" versionDate="2007-06-12">
+  </remarks><remarks xml:lang="fr" versionDate="2007-06-12">
     <p>Un des seuls éléments obligatoires dans tout document TEI.
       </p>
-  </remarks>
-  <remarks xml:lang="es" versionDate="2008-04-06">
+  </remarks><remarks xml:lang="es" versionDate="2008-04-06">
     <p>Uno de los pocos elementos incondicionalmente requeridos en cualquier documento de TEI.</p>
-  </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  </remarks><remarks xml:lang="ja" versionDate="2008-04-05">
     <p> 当該要素は，TEI文書中で無条件に必要となる要素の1つである．
       </p>
-  </remarks>
-  <remarks xml:lang="de" versionDate="2016-11-25">
+  </remarks><remarks xml:lang="de" versionDate="2016-11-25">
       <p>Eines der wenigen Elemente, die verpflichtend für ein valides TEI-Dokument sind.</p>
-  </remarks>
-  <listRef>
+  </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD11">2.1.1. The TEI Header and Its Components</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCDEF">15.1. Varieties of Composite Text</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="fileDesc">
+  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="fileDesc">
   <gloss versionDate="2007-07-05" xml:lang="en">file description</gloss>
   <gloss versionDate="2009-01-05" xml:lang="fr">description bibliographique du fichier</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">파일 기술</gloss>
@@ -10025,564 +9831,30 @@ means of a <gi>glyph</gi> or <gi>char</gi> element referenced here as <code>#sym
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD3">2.2.7. The Source Description</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="encodingDesc">
-  <gloss versionDate="2007-07-04" xml:lang="en">encoding description</gloss>
-  <gloss versionDate="2009-01-05" xml:lang="fr">description de l'encodage</gloss>
-  <gloss versionDate="2007-12-20" xml:lang="ko">부호화 기술</gloss>
-  <gloss versionDate="2007-05-02" xml:lang="zh-TW">編碼描述</gloss>
-  <gloss versionDate="2006-10-18" xml:lang="de">Beschreibung der Kodierung</gloss>
-  <gloss versionDate="2007-05-04" xml:lang="es">Descripción de la codificación</gloss>
-  <gloss versionDate="2007-01-21" xml:lang="it">descrizione della codifica</gloss>
-  <desc versionDate="2005-01-14" xml:lang="en">documents the relationship between an electronic text and the
-source or sources from which it was derived.</desc>
-  <desc versionDate="2009-01-05" xml:lang="fr">documente la relation d'un texte électronique avec sa ou ses sources.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">전자 텍스트와 그것의 원전 텍스트 혹은 텍스트들 사이의 관련성을 기록한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">記錄電子文件和其ㄧ個或多個文件來源之間的關係。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">電子テキストとその元資料との関係を示す．</desc>
-    <desc versionDate="2016-11-17" xml:lang="de">dokumentiert das Verhältnis zwischen dem elektronischen Text und seiner Quelle oder den Quellen, von denen er sich ableitet.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">documenta la relación entre un texto electrónico y la fuente o fuentes de las que este deriva.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">documenta la relazione fra un documento elettronico e la o le fonti da cui è derivato.</desc>
-  <classes>
-    <memberOf key="att.global"/>
-    <memberOf key="model.teiHeaderPart"/>
-  </classes>
-  <content>
-    
-      
-        <alternate minOccurs="1" maxOccurs="unbounded">
-          <classRef key="model.encodingDescPart"/>
-          <classRef key="model.pLike"/>
-        </alternate>
-      
-    
-  </content>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <encodingDesc>
-        <p>Basic encoding, capturing lexical information only. All
-hyphenation, punctuation, and variant spellings normalized. No
-formatting or layout information preserved.</p>
-      </encodingDesc>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <encodingDesc>
-        <projectDesc>
-          <p>Corpus de
-                      textes sélectionnés pour la formation MISAT, Frejus,
-		      juillet 2010.
-                    </p>
-        </projectDesc>
-        <samplingDecl>
-          <p>Corpus
-                      d'échantillons de 2000 mots pris au début de chaque texte. </p>
-        </samplingDecl>
-      </encodingDesc>
-    </egXML>
-  </exemplum>
-  <listRef>
+</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="header" ident="encodingDesc"><gloss versionDate="2007-07-04" xml:lang="en">encoding description</gloss><gloss versionDate="2009-01-05" xml:lang="fr">description de l'encodage</gloss><gloss versionDate="2007-12-20" xml:lang="ko">부호화 기술</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">編碼描述</gloss><gloss versionDate="2006-10-18" xml:lang="de">Beschreibung der Kodierung</gloss><gloss versionDate="2007-05-04" xml:lang="es">Descripción de la codificación</gloss><gloss versionDate="2007-01-21" xml:lang="it">descrizione della codifica</gloss><desc versionDate="2005-01-14" xml:lang="en">documents the relationship between an electronic text and the
+source or sources from which it was derived.</desc><desc versionDate="2009-01-05" xml:lang="fr">documente la relation d'un texte électronique avec sa ou ses sources.</desc><desc versionDate="2007-12-20" xml:lang="ko">전자 텍스트와 그것의 원전 텍스트 혹은 텍스트들 사이의 관련성을 기록한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">記錄電子文件和其ㄧ個或多個文件來源之間的關係。</desc><desc versionDate="2008-04-05" xml:lang="ja">電子テキストとその元資料との関係を示す．</desc><desc versionDate="2016-11-17" xml:lang="de">dokumentiert das Verhältnis zwischen dem elektronischen Text und seiner Quelle oder den Quellen, von denen er sich ableitet.</desc><desc versionDate="2007-05-04" xml:lang="es">documenta la relación entre un texto electrónico y la fuente o fuentes de las que este deriva.</desc><desc versionDate="2007-01-21" xml:lang="it">documenta la relazione fra un documento elettronico e la o le fonti da cui è derivato.</desc><classes><memberOf key="att.global"/></classes><content><elementRef key="p"/></content><attList><attDef ident="n" mode="change" usage="req">
+                                <datatype><dataRef key="teidata.enumerated"/></datatype>
+                                <valList type="closed" mode="replace">
+                                    <valItem ident="eltec-0"/>
+                                    <valItem ident="eltec-1"/>
+                                    <valItem ident="eltec-2"/>                                   
+                                </valList>
+                            </attDef></attList><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <encodingDesc n="eltec-0"><p>Encoded to ELTeC level zero</p></encodingDesc>
+                        </egXML></exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD5">2.3. The Encoding Description</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD11">2.1.1. The TEI Header and Its Components</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="taxonomy">
-  <gloss versionDate="2009-05-04" xml:lang="fr">taxinomie</gloss>
-  <gloss versionDate="2016-11-17" xml:lang="de">Taxonomie</gloss>
-  <desc versionDate="2011-11-02" xml:lang="en">defines a typology either implicitly, by means of a bibliographic
-    citation, or explicitly by a structured taxonomy.</desc>
-  <desc versionDate="2009-01-05" xml:lang="fr">définit une typologie 
-    soit implicitement au moyen d’une référence bibliographique, soit explicitement au moyen d’une
-    taxinomie structurée.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">서지 정보 인용으로 비명시적으로 또는 구조화된 분류법으로 명시적으로 텍스트를 분류하는 유형을 정의한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義文件分類的類型學，可以是潛在地以書目資料的方式，或是明確地以結構分類法的方式來分類。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">テキストの分類法を，書誌情報を参照したり，または構造化された分類法を 示すことで，定義する．</desc>
-    <desc versionDate="2016-11-17" xml:lang="de">definiert eine Typologie entweder implizit durch einen bibliografischen Verweis oder explizit durch eine strukturierte Taxonomie.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define una tipología o
-    implícitamente, mediante una cita bibliográfica, o explícitamente, mediante una taxonomía
-    estructurada.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">definisce una tipologia o
-    in modo implicito, usando una citazione bibliograficha, o in modo esplicito attraverso una
-    tassonomia strutturata.</desc>
-  <classes>
-    <memberOf key="att.global"/>
-  </classes>
-  <content>
-    <alternate>
-      
-      
-      
-      
-      
-      
-      
-      
-      <alternate>
-	<alternate minOccurs="1" maxOccurs="unbounded">
-          <elementRef key="category"/>
-          <elementRef key="taxonomy"/>
-	</alternate>
-	<sequence>
-	  <alternate minOccurs="1" maxOccurs="unbounded">
-            <classRef key="model.glossLike"/>
-            <classRef key="model.descLike"/>
-	  </alternate>
-	  <alternate minOccurs="0" maxOccurs="unbounded">
-            <elementRef key="category"/>
-            <elementRef key="taxonomy"/>
-	  </alternate>
-	</sequence>
-      </alternate>
-      <sequence>
-        <classRef key="model.biblLike"/>
-        <alternate minOccurs="0" maxOccurs="unbounded">
-          <elementRef key="category"/>
-          <elementRef key="taxonomy"/>
-        </alternate>
-      </sequence>
-    </alternate>
-  </content>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <taxonomy xml:id="tax.b">
-        <bibl>Brown Corpus</bibl>
-        <category xml:id="tax.b.a">
-          <catDesc>Press Reportage</catDesc>
-          <category xml:id="tax.b.a1">
-            <catDesc>Daily</catDesc>
-          </category>
-          <category xml:id="tax.b.a2">
-            <catDesc>Sunday</catDesc>
-          </category>
-          <category xml:id="tax.b.a3">
-            <catDesc>National</catDesc>
-          </category>
-          <category xml:id="tax.b.a4">
-            <catDesc>Provincial</catDesc>
-          </category>
-          <category xml:id="tax.b.a5">
-            <catDesc>Political</catDesc>
-          </category>
-          <category xml:id="tax.b.a6">
-            <catDesc>Sports</catDesc>
-          </category>
-        </category>
-        <category xml:id="tax.b.d">
-          <catDesc>Religion</catDesc>
-          <category xml:id="tax.b.d1">
-            <catDesc>Books</catDesc>
-          </category>
-          <category xml:id="tax.b.d2">
-            <catDesc>Periodicals and tracts</catDesc>
-          </category>
-        </category>
-      </taxonomy>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <taxonomy xml:id="fr_tax.a">
-        <category xml:id="fr_tax.a.a">
-          <catDesc>littérature</catDesc>
-        </category>
-        <category xml:id="fr_tax.a.a.1">
-          <catDesc>Drame bourgeois</catDesc>
-        </category>
-        <category xml:id="fr_tax.a.a.1.α">
-          <catDesc>Comédie larmoyante</catDesc>
-        </category>
-        <category xml:id="fr_tax.a.b">
-          <catDesc>Correspondance</catDesc>
-        </category>
-        <category xml:id="fr_tax.a.b.1.a">
-          <catDesc>Dernières lettres</catDesc>
-        </category>
-        <category xml:id="fr_tax.a.c.">
-          <catDesc>Littérature européenne -- 16e siècle</catDesc>
-        </category>
-        <category xml:id="fr_tax.a.c.1">
-          <catDesc>Satire de la Renaissance </catDesc>
-        </category>
-        <category xml:id="fr_tax.a.d">
-          <catDesc>Récits de voyage</catDesc>
-        </category>
-        <category xml:id="fr_tax.a.d.1">
-          <catDesc>Récits de la mer </catDesc>
-        </category>
-      </taxonomy>
-      <bibl>indexation selon le système d'indexation RAMEAU, géré par la Bibliothèque nationale de
-          France</bibl>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <taxonomy xml:id="zh-tw_tax.b">
-        <bibl>布朗集</bibl>
-        <category xml:id="zh-tw_tax.b.a">
-          <catDesc>媒體採訪報導</catDesc>
-          <category xml:id="zh-tw_tax.b.a1">
-            <catDesc>日報</catDesc>
-          </category>
-          <category xml:id="zh-tw_tax.b.a2">
-            <catDesc>週日</catDesc>
-          </category>
-          <category xml:id="zh-tw_tax.b.a3">
-            <catDesc>全國性</catDesc>
-          </category>
-          <category xml:id="zh-tw_tax.b.a4">
-            <catDesc>地方性</catDesc>
-          </category>
-          <category xml:id="zh-tw_tax.b.a5">
-            <catDesc>政治</catDesc>
-          </category>
-          <category xml:id="zh-tw_tax.b.a6">
-            <catDesc>體育</catDesc>
-          </category>
-        </category>
-        <category xml:id="zh-tw_tax.b.d">
-          <catDesc>宗教</catDesc>
-          <category xml:id="zh-tw_tax.b.d1">
-            <catDesc>藝文</catDesc>
-          </category>
-          <category xml:id="zh-tw_tax.b.d2">
-            <catDesc>期刊與短文</catDesc>
-          </category>
-        </category>
-      </taxonomy>
-    </egXML>
-  </exemplum>
-<exemplum xml:lang="en">
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<taxonomy>
-<category xml:id="literature">
-   <catDesc>Literature</catDesc>
-   <category xml:id="poetry">
-      <catDesc>Poetry</catDesc>
-      <category xml:id="sonnet">
-         <catDesc>Sonnet</catDesc>
-         <category xml:id="shakesSonnet">
-            <catDesc>Shakespearean Sonnet</catDesc>
-         </category>
-         <category xml:id="petraSonnet">
-            <catDesc>Petrarchan Sonnet</catDesc>
-         </category>
-      </category>
-      <category xml:id="haiku">
-         <catDesc>Haiku</catDesc>
-      </category>
-   </category>
-   <category xml:id="drama">
-      <catDesc>Drama</catDesc>
-   </category>
-   </category>
-<category xml:id="meter">
-   <catDesc>Metrical Categories</catDesc>
-   <category xml:id="feet">
-      <catDesc>Metrical Feet</catDesc>
-      <category xml:id="iambic">
-      <catDesc>Iambic</catDesc>
-   </category>
-   <category xml:id="trochaic">
-      <catDesc>trochaic</catDesc>
-   </category>
-   </category>
-   <category xml:id="feetNumber">
-      <catDesc>Number of feet</catDesc>
-      <category xml:id="pentameter">
-         <catDesc>&gt;Pentameter</catDesc>
-      </category>
-      <category xml:id="tetrameter">
-         <catDesc>&gt;Tetrameter</catDesc>
-      </category>
-   </category>
-</category>
-</taxonomy>
-            
-            <!-- elsewhere in document -->
-            
-            <lg ana="#shakesSonnet #iambic #pentameter">
-               <l>Shall I compare thee to a summer's day</l>
-               <!-- ... -->
-            </lg>
-            
-         </egXML>
-</exemplum>
-    <remarks versionDate="2015-10-31" xml:lang="en">
-      <p>Nested taxonomies are common in many fields, so the
-      <gi>taxonomy</gi> element can be nested.</p>
-    </remarks>
-    <remarks versionDate="2016-11-17" xml:lang="de">
-        <p>
-            Da in vielen Bereichen verschachtelte Taxonomien gängig sind, kann das <gi>taxonomy</gi>-Element verschachtelt werden.
-        </p>
-    </remarks>
-  <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD55">2.3.7. The Classification Declaration</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="category">
-  <gloss versionDate="2009-01-05" xml:lang="fr">catégorie</gloss>
-    <gloss versionDate="2016-11-17" xml:lang="de">Kategorie</gloss>
-  <desc versionDate="2005-01-14" xml:lang="en">contains an individual descriptive category, possibly nested within a superordinate
-    category, within a user-defined taxonomy.</desc>
-  <desc versionDate="2009-01-05" xml:lang="fr"> contient une catégorie descriptive particulière,
-    éventuellement intégrée dans une catégorie de niveau supérieur, à l’intérieur d’une taxinomie
-    définie par l’utilisateur.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">사용자가 정의한 분류법 안의 개별 기술 범주를 포함한다. 상위 범주 내에 포함될 수 있다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">在使用者定義之分類法當中，此元素包含一項個別的描述性類目，該類目可能位於一個更上層的類目之中。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">記述的な分類項目を示す．利用者が定義した分類法の元に上位分類項目中に 入れ子にしてもよい．</desc>
-    <desc versionDate="2016-11-17" xml:lang="de">enthält eine eigenständige, gegebenfalls in eine übergeordnete Kategorie eingebettete, deskriptive Kategorie in einer benutzerdefinierten Taxonomie.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">contiene una categoría descriptiva individual,
-    posiblemente anidada dentro de una categoría superior, dentro de una taxonomía definida por el
-    usuario.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">contiene una sola categoria descrittiva, possibilmente
-    innestata in una categoria più generale, all'interno di una tassonomia definita dall'utente.</desc>
-  <classes>
-    <memberOf key="att.global"/>
-  </classes>
-  <content>
-    <sequence>
-      <alternate>
-        
-          <elementRef key="catDesc" minOccurs="1" maxOccurs="unbounded"/>
-        
-        
-          <alternate minOccurs="0" maxOccurs="unbounded">
-            <classRef key="model.descLike"/>
-            <classRef key="model.glossLike"/>
-          </alternate>
-        
-      </alternate>
-      
-        <elementRef key="category" minOccurs="0" maxOccurs="unbounded"/>
-      
-    </sequence>
-  </content>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <category xml:id="b1">
-        <catDesc>Prose reportage</catDesc>
-      </category>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <category xml:id="fr_tax.a.d2">
-        <catDesc>Récits de voyage</catDesc>
-      </category>
-      <bibl>indexation selon le système d'indexation RAMEAU, géré par la Bibliothèque nationale de
-          France</bibl>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <category xml:id="fr_b1">
-        <catDesc>Devinettes et énigmes </catDesc>
-        <category xml:id="fr_b11">
-          <catDesc>Anagrammes </catDesc>
-        </category>
-      </category>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <category xml:id="zh-tw_b1">
-        <catDesc>報導文學</catDesc>
-      </category>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <category xml:id="zh-tw_b2">
-        <catDesc>散文 </catDesc>
-        <category xml:id="zh-tw_b11">
-          <catDesc>報導性質</catDesc>
-        </category>
-        <category xml:id="zh-tw_b12">
-          <catDesc>虛構</catDesc>
-        </category>
-      </category>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <category xml:id="b2">
-        <catDesc>Prose </catDesc>
-        <category xml:id="b11">
-          <catDesc>journalism</catDesc>
-        </category>
-        <category xml:id="b12">
-          <catDesc>fiction</catDesc>
-        </category>
-      </category>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="mul">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <category xml:id="LIT">
-        <catDesc xml:lang="pl">literatura piękna</catDesc>
-        <catDesc xml:lang="en">fiction</catDesc>
-        <category xml:id="LPROSE">
-          <catDesc xml:lang="pl">proza</catDesc>
-          <catDesc xml:lang="en">prose</catDesc>
-        </category>
-        <category xml:id="LPOETRY">
-          <catDesc xml:lang="pl">poezja</catDesc>
-          <catDesc xml:lang="en">poetry</catDesc>
-        </category>
-        <category xml:id="LDRAMA">
-          <catDesc xml:lang="pl">dramat</catDesc>
-          <catDesc xml:lang="en">drama</catDesc>
-        </category>
-      </category>
-    </egXML>
-  </exemplum>
-  <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD55">2.3.7. The Classification Declaration</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="catDesc">
-  <gloss versionDate="2005-01-14" xml:lang="en">category description</gloss>
-  <gloss versionDate="2009-01-05" xml:lang="fr">Description de la catégorie</gloss>
-  <gloss versionDate="2007-12-20" xml:lang="ko">범주 기술</gloss>
-  <gloss versionDate="2007-05-02" xml:lang="zh-TW">類目描述</gloss>
-  <gloss versionDate="2006-10-18" xml:lang="de">Beschreibung der Kategorie</gloss>
-  <gloss versionDate="2007-05-04" xml:lang="es">descripción de una categoría</gloss>
-  <gloss versionDate="2007-01-21" xml:lang="it">descrizione della categoria</gloss>
-  <desc versionDate="2005-01-14" xml:lang="en">describes some category within a taxonomy or text typology, either in the form of a brief
-    prose description or in terms of the situational parameters used by the TEI formal <gi>textDesc</gi>.</desc>
-  <desc versionDate="2009-01-05" xml:lang="fr">décrit une catégorie particulière à l’intérieur d’une
-    taxinomie ou d’une typologie de texte, sous forme d’un court texte descriptif suivi ou dans les
-    termes des paramètres contextuels utilisés dans l’élément Description du texte
-    <gi>textDesc</gi>.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">간단한 산문체 기술 형식 또는 TEI의 형식적 텍스트 기술에 의해 사용된 상황 매개변수를 통해 분류법
-    또는 텍스트 유형 내에서 어떤 범주를 기술한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">描述分類法中或文件類型學中的某些類目，可用短文描述的型式，或是用TEI正式元素<gi>textDesc</gi>所使用的狀況參數。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">テキスト分類や分類法における分類項目を示す．簡単な散文形式またはTEI
-    のtextDescで使用される状況パラメータで示される．</desc>
-  <desc versionDate="2016-11-25" xml:lang="de">beschreibt eine Kategorie innerhalb einer Taxonomie oder Texttypologie, 
-    entweder als einfacher Fließtext oder über kontextbezogene Parameter, mittels des strukturierten <gi>textDesc</gi>-Elements.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">describe alguna categoría dentro de una taxonomía o
-    tipología textual, a través de una breve e descripción en prosa o en términos de parámetros
-    situacionales usados por el <gi>textDesc</gi> formal de TEI.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">descrive una categoria all'interno di una tassonomia o
-    tipologia di testo, sotto forma di una breve descrizione in prosa o secondo i parametri
-    situazionali usati in modo formale dall'elemento TEI <gi>textDesc</gi>.</desc>
-  <classes>
-    <memberOf key="att.global"/>
-  </classes>
-  <content>
-    
-      <alternate minOccurs="0" maxOccurs="unbounded">
-        <textNode/>
-        <classRef key="model.limitedPhrase"/>
-        <classRef key="model.catDescPart"/>
-      </alternate>
-    
-  </content>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <catDesc>Prose reportage</catDesc>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <catDesc>Texte documentaire</catDesc>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <category>
-        <catDesc>genre</catDesc>
-        <category>
-          <catDesc>Géneral</catDesc>
-        </category>
-        <category>
-          <catDesc>Journal</catDesc>
-        </category>
-        <category>
-          <catDesc>Manuel technique</catDesc>
-        </category>
-      </category>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <catDesc>報導文學</catDesc>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <catDesc>
-        <textDesc n="novel">
-          <channel mode="w">出版品；專輯</channel>
-          <constitution type="single"/>
-          <derivation type="original"/>
-          <domain type="art"/>
-          <factuality type="fiction"/>
-          <interaction type="none"/>
-          <preparedness type="prepared"/>
-          <purpose type="entertain" degree="high"/>
-          <purpose type="inform" degree="medium"/>
-        </textDesc>
-      </catDesc>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <catDesc>
-        <textDesc n="novel">
-          <channel mode="w">print; part issues</channel>
-          <constitution type="single"/>
-          <derivation type="original"/>
-          <domain type="art"/>
-          <factuality type="fiction"/>
-          <interaction type="none"/>
-          <preparedness type="prepared"/>
-          <purpose type="entertain" degree="high"/>
-          <purpose type="inform" degree="medium"/>
-        </textDesc>
-      </catDesc>
-    </egXML>
-  </exemplum>
-  <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD55">2.3.7. The Classification Declaration</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="profileDesc">
-  <gloss versionDate="2005-01-14" xml:lang="en">text-profile description</gloss>
-  <gloss versionDate="2009-01-05" xml:lang="fr">description du profil</gloss>
-  <gloss versionDate="2007-12-20" xml:lang="ko">텍스트-개요 기술</gloss>
-  <gloss versionDate="2007-05-02" xml:lang="zh-TW">文件背景描述</gloss>
-  <gloss versionDate="2006-10-18" xml:lang="de">Beschreibung des Textprofils</gloss>
-  <gloss versionDate="2007-05-04" xml:lang="es">descripción del perfil del texto.</gloss>
-  <gloss versionDate="2007-01-21" xml:lang="it">descrizione del profilo del testo</gloss>
-  <desc versionDate="2005-01-14" xml:lang="en">provides a detailed description of non-bibliographic aspects of a text, specifically the
+  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="header" ident="profileDesc"><gloss versionDate="2005-01-14" xml:lang="en">text-profile description</gloss><gloss versionDate="2009-01-05" xml:lang="fr">description du profil</gloss><gloss versionDate="2007-12-20" xml:lang="ko">텍스트-개요 기술</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">文件背景描述</gloss><gloss versionDate="2006-10-18" xml:lang="de">Beschreibung des Textprofils</gloss><gloss versionDate="2007-05-04" xml:lang="es">descripción del perfil del texto.</gloss><gloss versionDate="2007-01-21" xml:lang="it">descrizione del profilo del testo</gloss><desc versionDate="2005-01-14" xml:lang="en">provides a detailed description of non-bibliographic aspects of a text, specifically the
     languages and sublanguages used, the situation in which it was produced, the participants and
-    their setting.</desc>
-  <desc versionDate="2009-01-05" xml:lang="fr"> fournit une description détaillée des aspects
+    their setting.</desc><desc versionDate="2009-01-05" xml:lang="fr"> fournit une description détaillée des aspects
     non bibliographiques du texte, notamment les langues utilisées et leurs variantes, les
-    circonstances de sa production, les collaborateurs et leur statut.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">분명하게 언어와 특수 언어가 사용된 텍스트, 텍스트가 생산된 상황, 참여자, 배경에 관한 비서지적
-    측면을 상세히 기술한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">提供文件非書目性方面的細節描述，特別是所使用的語言及次要語言、在何種情況下製作、參與人員及其環境背景。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">書誌情報的ではない詳細な解説を示す．例えば，言語や特殊言語，生成され たときの状況，参加者など．</desc>
-    <desc versionDate="2016-11-17" xml:lang="de">enthält eine detaillierte Beschreibung der nicht-bibliografischen Merkmale des Textes, besonders der verwendeten Sprachen und Subsprachen, 
-        der Entstehungsbedingungen eines Textes sowie der Beteiligten und deren Umfeld.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">proporciona una descripción detallada de los aspectos no
+    circonstances de sa production, les collaborateurs et leur statut.</desc><desc versionDate="2007-12-20" xml:lang="ko">분명하게 언어와 특수 언어가 사용된 텍스트, 텍스트가 생산된 상황, 참여자, 배경에 관한 비서지적
+    측면을 상세히 기술한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供文件非書目性方面的細節描述，特別是所使用的語言及次要語言、在何種情況下製作、參與人員及其環境背景。</desc><desc versionDate="2008-04-05" xml:lang="ja">書誌情報的ではない詳細な解説を示す．例えば，言語や特殊言語，生成され たときの状況，参加者など．</desc><desc versionDate="2016-11-17" xml:lang="de">enthält eine detaillierte Beschreibung der nicht-bibliografischen Merkmale des Textes, besonders der verwendeten Sprachen und Subsprachen, 
+        der Entstehungsbedingungen eines Textes sowie der Beteiligten und deren Umfeld.</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona una descripción detallada de los aspectos no
     bibliográficos de un texto, especialmente las lenguas y jergas usadas, la situación en que se
-    aparecen, los participantes que intervienen, etc.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">fornisce una descrizione dettagliata degli aspetti non
+    aparecen, los participantes que intervienen, etc.</desc><desc versionDate="2007-01-21" xml:lang="it">fornisce una descrizione dettagliata degli aspetti non
     bibliografici di un testo, in modo particolare le lingue e i linguaggi secondari utilizzati, la
-    situazione in cui è stato prodotto il testo, i partecipanti e la relativa ambientazione</desc>
-  <classes>
-    <memberOf key="att.global"/>
-    <memberOf key="model.teiHeaderPart"/>
-  </classes>
-  <content>
-    
-      
-        <classRef key="model.profileDescPart" minOccurs="0" maxOccurs="unbounded"/>
-      
-    
-  </content>
-  <exemplum xml:lang="en">
+    situazione in cui è stato prodotto il testo, i partecipanti e la relativa ambientazione</desc><classes><memberOf key="att.global"/></classes><content><classRef key="model.profileDescPart" expand="sequence"/></content><attList/><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <profileDesc>
         <langUsage>
@@ -10607,8 +9879,7 @@ formatting or layout information preserved.</p>
         </settingDesc>
       </profileDesc>
     </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
+  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <profileDesc>
         <langUsage>
@@ -10633,8 +9904,7 @@ formatting or layout information preserved.</p>
         </settingDesc>
       </profileDesc>
     </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
+  </exemplum><exemplum xml:lang="zh-TW">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <profileDesc>
         <langUsage>
@@ -10659,21 +9929,17 @@ formatting or layout information preserved.</p>
         </settingDesc>
       </profileDesc>
     </egXML>
-  </exemplum>
-  <remarks versionDate="2017-06-25" xml:lang="en">
+  </exemplum><remarks versionDate="2017-06-25" xml:lang="en">
     <p>Although the content model permits it, it is rarely
 meaningful to supply multiple occurrences for any of the child
 elements of  <gi>profileDesc</gi> unless these are documenting multiple texts.</p>
-  </remarks>
-  <remarks versionDate="2017-06-25" xml:lang="de">
+  </remarks><remarks versionDate="2017-06-25" xml:lang="de">
       <p>Obwohl durch das Inhaltsmodell erlaubt, erscheint es in den seltensten Fällen sinnvoll, mehrere Vorkommen der erlaubten Kindelemente der <gi>profileDesc</gi> zu notieren – außer diese beziehen sich auf unterschiedliche Texte.
         </p>
-  </remarks>
-  <listRef>
+  </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD4">2.4. The Profile Description</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD11">2.1.1. The TEI Header and Its Components</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="langUsage">
+  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="langUsage">
   <gloss versionDate="2005-01-14" xml:lang="en">language usage</gloss>
   <gloss versionDate="2009-01-05" xml:lang="fr">langue utilisée</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">언어 사용</gloss>
@@ -10855,75 +10121,7 @@ langues, registres, dialectes, etc. présents à l’intérieur d’un texte.</d
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD41">2.4.2. Language Usage</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="header" ident="textClass"><gloss versionDate="2005-01-14" xml:lang="en">text classification</gloss><gloss versionDate="2009-01-05" xml:lang="fr">classification du texte</gloss><gloss versionDate="2007-12-20" xml:lang="ko">텍스트 분류</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">文件分類</gloss><gloss versionDate="2006-10-18" xml:lang="de">Textklassifikation</gloss><gloss versionDate="2007-05-04" xml:lang="es">clasificación de texto</gloss><gloss versionDate="2007-01-21" xml:lang="it">classificazione del testo</gloss><desc versionDate="2005-01-14" xml:lang="en">groups information which describes the nature or topic of a text in terms of a standard
-    classification scheme, thesaurus, etc.</desc><desc versionDate="2009-01-05" xml:lang="fr">regroupe des informations décrivant la nature ou le sujet
-    d’un texte selon des termes issus d’un système de classification standardisé, d’un thésaurus,
-    etc.</desc><desc versionDate="2007-12-20" xml:lang="ko">표준 분류 스키마, 시소러스 등을 통해서 텍스트의 특성 또는 주제를 기술하는 정보를 모아 놓는다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">匯集以標準分類架構、索引典等來描述文件性質或主題的資訊。</desc><desc versionDate="2008-04-05" xml:lang="ja">標準的な分類スキーム，分類語彙などにより，テキストの性格や話題を示す 情報をまとめる．</desc><desc versionDate="2016-11-24" xml:lang="de">gruppiert Informationen über Art oder Thematik eines Textes unter 
-      Bezug auf ein Standard-Klassifikationsschema, einen Thesaurus o. ä.
-  </desc><desc versionDate="2007-05-04" xml:lang="es">agrupa información que describe la naturaleza o la
-    temática de un texto en términos de un esquema de clasificación estándard.</desc><desc versionDate="2007-01-21" xml:lang="it">raggruppa le informazioni che descrivono la natura o
-    l'argomento di un testo secondo uno schema di classificazione standard, un dizionario i
-    sinonimi, ecc.</desc><classes><memberOf key="att.global"/><memberOf key="model.profileDescPart"/></classes><content><sequence minOccurs="1" maxOccurs="1"><elementRef key="catRef" minOccurs="1" maxOccurs="unbounded"/><elementRef key="keywords" minOccurs="0" maxOccurs="unbounded"/></sequence></content><attList/><exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <taxonomy>
-        <category xml:id="acprose">
-          <catDesc>Academic prose</catDesc>
-        </category>
-        <!-- other categories here -->
-      </taxonomy>
-      <!-- ... -->
-      <textClass>
-        <catRef target="#acprose"/>
-        <classCode scheme="http://www.udcc.org">001.9</classCode>
-        <keywords scheme="http://authorities.loc.gov">
-          <list>
-            <item>End of the world</item>
-            <item>History - philosophy</item>
-          </list>
-        </keywords>
-      </textClass>
-    </egXML>
-  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <textClass>
-        <keywords scheme="#fr_RAMEAU">
-          <list>
-            <item>Littérature française -- 20ème siècle -- Histoire et critique</item>
-            <item>Littérature française -- Histoire et critique -- Théorie, etc.</item>
-            <item>Français (langue) -- Style -- Bases de données.</item>
-          </list>
-        </keywords>
-      </textClass>
-    </egXML>
-  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <textClass>
-        <catRef target="#fr_forme_prose"/>
-      </textClass>
-    </egXML>
-  </exemplum><exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <taxonomy>
-        <category xml:id="zh-tw_chineseliterature">
-          <catDesc>中國文學</catDesc>
-        </category>
-        <!-- 其他文類 -->
-      </taxonomy>
-      <!-- ... -->
-      <textClass>
-        <catRef target="#zh-tw_chineseliterature"/>
-        <classCode scheme="http://www.ncl.edu.tw/">820</classCode>
-        <keywords scheme="http://authorities.loc.gov">
-          <list>
-            <item>傷痕文學</item>
-            <item>語文類</item>
-          </list>
-        </keywords>
-      </textClass>
-    </egXML>
-  </exemplum><listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD43">2.4.3. The Text Classification</ref>
-  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="keywords">
+</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="keywords">
   <gloss versionDate="2009-04-28" xml:lang="fr">mot clé</gloss>
   <gloss versionDate="2016-11-24" xml:lang="de">Schlagwörter</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">contains a list of keywords or phrases identifying the topic or nature of a text.</desc>
@@ -11021,181 +10219,6 @@ should be supplied for the <att>scheme</att> attribute.</p>
           in einem <gi>item</gi>-Element zu notieren, das wiederum Kindelement eines <gi>list</gi>-Elementes ist. 
           Allerdings ist dieses Vorgehen veraltet und wird daher nicht empfohlen.</p>
       <p>Wenn keine kontrollierte Liste für die verwendeten Schlagwörter existiert, sollte das <att>scheme</att>-Attribute nicht gesetzt werden.</p>
-  </remarks>
-  <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD43">2.4.3. The Text Classification</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="classCode">
-  <gloss versionDate="2007-07-04" xml:lang="en">classification code</gloss>
-  <gloss versionDate="2008-03-30" xml:lang="fr">code de classification</gloss>
-  <gloss versionDate="2007-12-20" xml:lang="ko">분류 부호</gloss>
-  <gloss versionDate="2008-04-06" xml:lang="es">código de clasificación</gloss>
-  <gloss versionDate="2016-11-24" xml:lang="de">Klassifikationscode</gloss>
-  <gloss versionDate="2007-01-21" xml:lang="it">codice di clasificazione</gloss>
-  <desc versionDate="2005-01-14" xml:lang="en">contains the classification code used for this text in some standard classification system.</desc>
-  <desc versionDate="2009-04-22" xml:lang="fr">contient le code de classification attribué à ce texte en
-    référence à un système standard de classification.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">표준 분류 체계에서 이 텍스트에 대하여 사용된 분류 부호를 포함한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">包含文件在某標準分類系統中所屬的分類代碼。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">当該テキストで使用されている，ある規格に従った分類コードを示す．</desc>
-    <desc versionDate="2016-11-24" xml:lang="de">enthält den für den Text verwendeten Klassifikationscode auf Basis eines normierten Klassifikationssystems.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">indica el código de clasificación empleado para este
-    texto en algún sistema de clasificación estándard.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">contiene il codice di classificazione utilizzato per
-    questo testo in un sistema di calssificazione standard.</desc>
-  <classes>
-    <memberOf key="att.global"/>
-  </classes>
-  <content>
-    <macroRef key="macro.phraseSeq.limited"/>
-  </content>
-  <attList>
-    <attDef ident="scheme" usage="req">
-      <desc versionDate="2016-11-04" xml:lang="en">identifies the
-      classification system in use, as defined by, e.g. a <gi>taxonomy</gi> element, or
-      some other resource.</desc>
-      <desc versionDate="2009-04-22" xml:lang="fr">identifie le système de classification ou la
-        taxinomie utilisée.</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">사용하고 있는 분류 체계 또는 분류법을 표시한다.</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">說明使用中的分類系統或分類法。</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">当該分類法を定義する．</desc>
-        <desc versionDate="2016-11-24" xml:lang="de">benennt das verwendete Klassifikationssystem, definiert z. B. durch Verweis auf ein 
-            <gi>taxonomy</gi>-Element oder eine andere Ressource</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">identifica el sistema de clasificación o taxonomía en
-        uso.</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">idantifica il sistema di classificazione o la
-        tassonomia utilizzati.</desc>
-      <datatype><dataRef key="teidata.pointer"/></datatype>
-    </attDef>
-  </attList>
-  <exemplum xml:lang="und">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <classCode scheme="http://www.udc.org">410</classCode>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <classCode scheme="http://www.oclc.org/">801</classCode>
-      <bibl>classification Dewey</bibl>
-    </egXML>
-  </exemplum>
-  <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD43">2.4.3. The Text Classification</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="catRef">
-  <gloss versionDate="2005-01-14" xml:lang="en">category reference</gloss>
-  <gloss versionDate="2009-01-05" xml:lang="fr">référence à la catégorie</gloss>
-  <gloss versionDate="2007-12-20" xml:lang="ko">범주 참조</gloss>
-  <gloss versionDate="2007-05-02" xml:lang="zh-TW">類目參照</gloss>
-  <gloss versionDate="2006-10-18" xml:lang="de">Verweis auf eine Kategorie</gloss>
-  <gloss versionDate="2007-05-04" xml:lang="es">referencia de categoría</gloss>
-  <gloss versionDate="2007-01-21" xml:lang="it">riferimento alla categoria</gloss>
-  <desc versionDate="2005-01-14" xml:lang="en">specifies one or more defined categories within some taxonomy or text typology.</desc>
-  <desc versionDate="2009-01-05" xml:lang="fr">spécifie une ou plusieurs catégories définies dans une
-    taxinomie ou une typologie textuelle.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">분류법 또는 텍스트 유형 내에서 하나 이상의 정의된 범주를 명시한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">標明在某分類法或文件類型學中，一個或多個已定義之類目。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">分類法やテキスト分類中の，ひとつ以上の分類項目を定義する．</desc>
-  <desc versionDate="2006-10-18" xml:lang="de">gibt eine oder mehrere Kategorien an, die innerhalb einer
-    Taxonomie oder Texttypologie definiert sind.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">indica una o más categorías definidas al interno de una
-    taxonomía o tipología textual.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">specifica una o più categorie definite all'interno di una
-    tassonomia o tipologia di testo</desc>
-  <classes>
-    <memberOf key="att.global"/>
-    <memberOf key="att.pointing"/>
-  </classes>
-  <content>
-    
-  </content>
-  <attList>
-    <attDef ident="scheme" usage="opt">
-      <desc versionDate="2013-12-20" xml:lang="en">identifies the classification scheme within which the set of categories concerned is
-        defined, for example by a <gi>taxonomy</gi> element, or by
-      some other resource.</desc>
-      <desc versionDate="2009-01-05" xml:lang="fr">identifie le schéma de classification dans lequel est
-        défini le jeu de catégories concerné.</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">관련 범주 집합이 정의된 분류 스키마를 표시한다.</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">標明該分類架構，其中相關的類目群組已被定義</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">当該分類項目が定義されている分類スキームを示す．</desc>
-        <desc versionDate="2016-11-24" xml:lang="de">gibt das Klassifikationsschema an, in dem die entsprechenden Kategorien definiert sind, 
-            z. B. über ein <gi>taxonomy</gi>-Element oder eine andere Ressource. 
-        </desc>
-      <desc versionDate="2007-05-04" xml:lang="es">indica el esquema de clasificación al interno del
-        cual se define una serie de categorias referidas.</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">identifica lo schema di classificazione all'interno
-        del quale sono definite le categorie interessate.</desc>
-      <datatype><dataRef key="teidata.pointer"/></datatype>
-    </attDef>
-  </attList>
-  <exemplum versionDate="2013-12-20" xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <catRef scheme="#myTopics" target="#news #prov #sales2"/>
-      <!-- elsewhere -->
-      <taxonomy xml:id="myTopics">
-        <category xml:id="news">
-          <catDesc>Newspapers</catDesc>
-        </category>
-        <category xml:id="prov">
-          <catDesc>Provincial</catDesc>
-        </category>
-        <category xml:id="sales2">
-          <catDesc>Low to average annual sales</catDesc>
-        </category>
-      </taxonomy>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2013-12-20" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <catRef scheme="#mesTopos" target="#fr_lex #fr_dict #fr_gloss"/>
-      <!-- ailleurs dans le document -->
-      <taxonomy xml:id="mesTopos">
-        <category xml:id="fr_lexique">
-          <catDesc>Lexique</catDesc>
-        </category>
-        <category xml:id="fr_dict">
-          <catDesc>Dictionnaire</catDesc>
-        </category>
-        <category xml:id="fr_gloss">
-          <catDesc>Glossaire</catDesc>
-        </category>
-      </taxonomy>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <catRef target="#zh-tw_news #zh-tw_prov #zh-tw_sales2"/>
-      <!-- elsewhere -->
-      <taxonomy>
-        <category xml:id="zh-tw_news">
-          <catDesc>報紙</catDesc>
-        </category>
-        <category xml:id="zh-tw_prov">
-          <catDesc>全省的</catDesc>
-        </category>
-        <category xml:id="zh-tw_sales2">
-          <catDesc>低於每年平均銷售額</catDesc>
-        </category>
-      </taxonomy>
-    </egXML>
-  </exemplum>
-  <remarks versionDate="2016-11-04" xml:lang="en">
-    <p>The <att>scheme</att> attribute needs to be supplied only if more than one
-    taxonomy has been declared. </p>
-  </remarks>
-  <remarks xml:lang="fr" versionDate="2016-11-04">
-    <p>L'attribut <att>scheme</att> n'est donné que si plus d'une taxinomie a été déclarée.</p>
-  </remarks>
-  <remarks xml:lang="es" versionDate="2008-04-06">
-    <p>El atributo del esquema necesita ser suministrado solamente si se ha declarado más de una
-      taxonomía</p>
-  </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
-    <p> 当該属性sdchemeは，複数の分類法が宣言されている場合にのみ，必要と なる． </p>
-  </remarks>
-  <remarks xml:lang="de" versionDate="2016-11-24">
-      <p>Das <att>scheme</att>-Attribut muss nur dann verwendet werden, wenn mehr als eine Taxonomie deklariert ist.</p>
   </remarks>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD43">2.4.3. The Text Classification</ref>
@@ -11643,9 +10666,147 @@ supplied to printer.</change>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHPA">15.2.2. The Participant Description</ref>
   </listRef>
-</elementSpec><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ST" xml:id="DSTTEI2" ident="tei" type="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="CO" xml:id="DCO" ident="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="DS" xml:id="DDS" ident="textstructure"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="HD" xml:id="DHD" ident="header"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ND" xml:id="DND" ident="namesdates"/></schemaSpec>
+</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="corpus" ident="textDesc"><gloss versionDate="2005-01-14" xml:lang="en">text description</gloss><gloss versionDate="2007-12-20" xml:lang="ko">텍스트 기술</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">文本描述</gloss><gloss versionDate="2007-06-12" xml:lang="fr">description de texte</gloss><gloss versionDate="2007-05-04" xml:lang="es">descripción del texto</gloss><gloss versionDate="2007-01-21" xml:lang="it">descrizione del testo</gloss><desc versionDate="2005-01-14" xml:lang="en">provides a description of a text in terms of its
+situational parameters.</desc><desc versionDate="2007-12-20" xml:lang="ko">장면적 매개변수를 통해 텍스트에 대해 기술한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供文本在情境特徵方面的相關描述。</desc><desc versionDate="2008-04-05" xml:lang="ja">状況パラメータにより，テキストの情報を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">fournit la description d'un texte sous l'angle du
+      contexte situationnel</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona una descripción de un texto en términos de sus parámetros situacionales</desc><desc versionDate="2007-01-21" xml:lang="it">fornisce la descrizione di un testo in termini di paramentri situazionali</desc><classes><memberOf key="att.global"/><memberOf key="model.profileDescPart"/></classes><content><classRef key="model.textDescPart" expand="sequence"/></content><attList/><exemplum xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <textDesc n="Informal domestic conversation">
+        <channel mode="s">  </channel>
+        <constitution type="single">  </constitution>
+        <derivation type="original">  </derivation>
+        <domain type="domestic">  </domain>
+        <factuality type="mixed">  </factuality>
+        <interaction type="complete" active="plural" passive="many">  </interaction>
+        <preparedness type="spontaneous">  </preparedness>
+        <purpose type="entertain" degree="high">  </purpose>
+        <purpose type="inform" degree="medium"/>
+      </textDesc>
+    </egXML>
+  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <textDesc n="Informal domestic conversation">
+        <channel mode="s"> </channel>
+        <constitution type="single"> </constitution>
+        <derivation type="original"> </derivation>
+        <domain type="domestic"> </domain>
+        <factuality type="mixed"> </factuality>
+        <interaction type="complete" active="plural" passive="many"> </interaction>
+        <preparedness type="spontaneous"> </preparedness>
+        <purpose type="entertain" degree="high"> </purpose>
+        <purpose type="inform" degree="medium"/>
+      </textDesc>
+    </egXML>
+  </exemplum><exemplum xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <textDesc n="非正式的家常談天">
+        <channel mode="s"> </channel>
+        <constitution type="single"> </constitution>
+        <derivation type="original"> </derivation>
+        <domain type="domestic"> </domain>
+        <factuality type="mixed"> </factuality>
+        <interaction type="complete" active="plural" passive="many"> </interaction>
+        <preparedness type="spontaneous"> </preparedness>
+        <purpose type="entertain" degree="high"> </purpose>
+        <purpose type="inform" degree="medium"/>
+      </textDesc>
+    </egXML>
+  </exemplum><listRef>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD">15.2.1. The Text Description</ref>
+  </listRef></elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="authorGender" mode="add" ns="http://distantreading.net/eltec/ns"><desc>specifies the sex of the author where this is known</desc><classes>
+                            <memberOf key="model.textDescPart"/>
+                        </classes><content>
+                            <empty/>
+                        </content><attList><attDef ident="key" mode="add" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="M">
+                                        <desc>male author</desc>
+                                    </valItem>
+                                    <valItem ident="F">
+                                        <desc>female author</desc>
+                                    </valItem>
+                                    <valItem ident="U">
+                                        <desc>author sex unknown</desc>
+                                    </valItem>
+                                    <valItem ident="X">
+                                        <desc>author sex mixed</desc>
+                                    </valItem>
+                                </valList>
+                                <remarks>
+                                    <p>This attribute should indicate the biological sex of the
+                                        author, not the sex claimed or implied by the author's
+                                        name</p>
+                                </remarks>
+                            </attDef></attList></elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="size" mode="add" ns="http://distantreading.net/eltec/ns"><desc>indicates the size group to which the text belongs</desc><classes>
+                            <memberOf key="model.textDescPart"/>
+                        </classes><content>
+                            <empty/>
+                        </content><attList><attDef ident="key" mode="add" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="long">
+                                        <desc>more than 200,000 words</desc>
+                                    </valItem>
+                                    <valItem ident="medium">
+                                        <desc>50,000 to 200,000 words</desc>
+                                    </valItem>
+                                    <valItem ident="short">
+                                        <desc>10,000 to 50,000 words</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef></attList></elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="canonicity" mode="add" ns="http://distantreading.net/eltec/ns"><desc>indicates the degree to which the text has become part of a literary
+                            canon</desc><classes>
+                            <memberOf key="model.textDescPart"/>
+                        </classes><content>
+                            <empty/>
+                        </content><attList><attDef ident="key" mode="add" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="high">
+                                        <desc>text has been reprinted more than once outside its original
+                                        time slot</desc>
+                                    </valItem>
+                                    <valItem ident="low">
+                                        <desc>text has not been reprinted after its original time
+                                            slot</desc>
+                                    </valItem>
+                                </valList>
+                                <remarks>
+                                    <p>A work which has been republished several times over a
+                                        reasonably long time since its first appearance is
+                                        considered highly canonical.</p>
+                                </remarks>
+                            </attDef></attList></elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="timeSlot" mode="add" ns="http://distantreading.net/eltec/ns"><desc>specifies the time period during which the work was first published </desc><classes>
+                            <memberOf key="model.textDescPart"/>
+                        </classes><content>
+                            <empty/>
+                        </content><attList><attDef ident="key" mode="add" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="T1">
+                                        <desc>work first published between 1840 and 1859</desc>
+                                    </valItem>
+                                    <valItem ident="T2">
+                                        <desc>work first published between 1860 and 1879</desc>
+                                    </valItem>
+                                    <valItem ident="T3">
+                                        <desc>work first published between 1880 and 1899</desc>
+                                    </valItem>
+                                    <valItem ident="T4">
+                                        <desc>work first published between 1900 and 1919</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef></attList></elementSpec><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ST" xml:id="DSTTEI2" ident="tei" type="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="CO" xml:id="DCO" ident="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="DS" xml:id="DDS" ident="textstructure"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="HD" xml:id="DHD" ident="header"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ND" xml:id="DND" ident="namesdates"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="CC" xml:id="DCCHDR" ident="corpus"/></schemaSpec>
             </div>
-            
+
         </back>
 
     </text>
