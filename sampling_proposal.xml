@@ -378,25 +378,25 @@
                         </list></item>
                 </list>
                 <p>The following table suggests minimum and maximum numbers of titles to be selected
-                    for each criterion. For example, for each language, we would aim to select
-                    100 different titles. Of these, no more than 20 will come from
-                    each date period defined above. Of these, we will aim to have between 5 and 10
-                    examples from each of the reprint categories defined (high, medium, low). Of
-                    these, the number produced by male authors will be between 5 and 8, as will the
-                    number produced by female authors, and the number produced by authors of unknown
-                    or indeterminate sex. </p>
+                    for each criterion. For each language collection we collect 100 different novels. In each date group, we will have 
+                    25 novels. In a language collection, we will have at least 30 novels for the category high reprints and 
+                    30 for the category low reprints. In a language collection, we will have at least 10 novels from female authors
+                    and 20 novels per length category (long, medium short). 
+                </p>
                 <table rend="rules">
                     <row role="label">
                         <cell>Language</cell>
-                        <cell>Date</cell>
-                        <cell>Reprint</cell>
-                        <cell>Author</cell>
+                        <cell>Date Group</cell>
+                        <cell>Reprint Category</cell>
+                        <cell>Author Category</cell>
+                        <cell>Length Category</cell>
                     </row>
                     <row>
                         <cell>100</cell>
+                        <cell>25</cell>
+                        <cell>30</cell>
+                        <cell>10</cell>
                         <cell>20</cell>
-                        <cell>5-10</cell>
-                        <cell>5-8</cell>
                     </row>
                 </table>
 
