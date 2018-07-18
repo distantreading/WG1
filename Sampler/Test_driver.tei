@@ -1,0 +1,28 @@
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0"
+	   xmlns:xi="http://www.w3.org/2001/XInclude">
+     <teiHeader>
+         <fileDesc>
+             <titleStmt>
+                 <title>ELTeC Sampler Test Corpus</title>
+             </titleStmt>
+	        <publicationStmt>
+	           <p>Not published or publishable</p>
+	        </publicationStmt>
+	        <sourceDesc>
+	           <p>No source: this is a driver file</p>
+	        </sourceDesc>
+         </fileDesc>
+     </teiHeader>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/CH0001.eltec'/>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/CS0001.eltec'/>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/DE0001.eltec'/>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/DU0001.eltec'/>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/EN0001.eltec'/>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/FR0001.eltec'/>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/IT0001.eltec'/>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/LV0001.eltec'/>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/PL0001.eltec'/>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/PL0002.eltec'/>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/SP0002.eltec'/>
+<xi:include href='/home/lou/Public/WG1/Sampler/Test/SR0001.eltec'/>
+</teiCorpus>
