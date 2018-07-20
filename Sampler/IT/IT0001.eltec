@@ -6,14 +6,7 @@
 		<fileDesc>
 			<titleStmt>
 				<title>I Viceré : editiziona ELTeC</title>
-				<!--	<title type="sub">title</title>
-				<title type="short">title</title>
-				<title type="idno">
-					<idno type="viaf">204624953</idno>
-				</title>
-		-->
-				<author>
-					<idno type="viaf">2468980</idno> De Roberto, Federico (1861-1927) </author>
+				<author><idno type="viaf">2468980</idno>De Roberto, Federico (1861-1927) </author>
 				<respStmt>
 					<resp>principal</resp>
 					<name>Christof Schöch</name>
@@ -62,7 +55,7 @@
 <langUsage><language ident="IT">italian</language></langUsage>
 			<textDesc>
 				<authorGender xmlns="http://distantreading.net/eltec/ns" key="M"></authorGender>
-				<size xmlns="http://distantreading.net/eltec/ns" key="medium"></size>
+				<size xmlns="http://distantreading.net/eltec/ns" key="long"></size>
 				<canonicity xmlns="http://distantreading.net/eltec/ns" key="low"></canonicity>
 				<timeSlot xmlns="http://distantreading.net/eltec/ns" key="T3"></timeSlot>
 			</textDesc>

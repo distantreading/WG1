@@ -47,7 +47,7 @@
             <langUsage><language ident="FRA">francais</language></langUsage>
             <textDesc>
                 <authorGender xmlns="http://distantreading.net/eltec/ns" key="M"></authorGender>
-                <size xmlns="http://distantreading.net/eltec/ns" key="medium"></size>
+                <size xmlns="http://distantreading.net/eltec/ns" key="long"></size>
                 <canonicity xmlns="http://distantreading.net/eltec/ns" key="low"></canonicity>
                 <timeSlot xmlns="http://distantreading.net/eltec/ns" key="T1"></timeSlot>
             </textDesc>

@@ -11,9 +11,9 @@
             </head>
             <body>
                 <xsl:variable name="textCount">
-                    <xsl:value-of select="count(//text)"/>
+                    <xsl:value-of select="count(//t:text)"/>
                 </xsl:variable>
-
+                <xsl:message><xsl:value-of select="$textCount"/> texts found </xsl:message>
 
                 <table class="catalogue">
                     <tr class="label">
@@ -29,11 +29,8 @@
                     <xsl:for-each select="//t:text">
                         <tr>
                             <xsl:variable name="wc">
-                                <xsl:value-of
-                                    select="
-                                        string-length(normalize-space(.)) -
-                                        string-length(translate(normalize-space(.), ' ,.:', ''))"
-                                />
+
+                                <xsl:value-of select="e:word-count(.)"/>
                             </xsl:variable>
                             <xsl:variable name="wcn">
                                 <xsl:choose>
@@ -91,73 +88,75 @@
                 <table class="balance">
                     <thead>Balance counts </thead>
                     <tr>
-                        <td>authorGender</td>
-                        <td>
-                            <xsl:text>M : </xsl:text>
-                            <xsl:value-of select="e:checkBalance($textCount/3,
-                                count(//e:authorGender[@key = 'M']))"/>
-                        </td>
-                        <td>
-                            <xsl:text>F : </xsl:text>
-                            <xsl:value-of select="e:checkBalance($textCount/3,count(//e:authorGender[@key = 'F']))"/>
-                        </td>
-                        <td>
-                            <xsl:text>U : </xsl:text>
-                            <xsl:value-of select="count(//e:authorGender[@key = 'U'])"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>size</td>
-                        <td>
-                            <xsl:text>short : </xsl:text>
-                            <xsl:value-of select="count(//e:size[@key = 'short'])"/>
-                        </td>
-                        <td>
-                            <xsl:text>medium : </xsl:text>
-                            <xsl:value-of select="count(//e:size[@key = 'medium'])"/>
-                        </td>
-                        <td>
-                            <xsl:text>long : </xsl:text>
-                            <xsl:value-of select="count(//e:size[@key = 'long'])"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>canonicity</td>
-                        <td>
-                            <xsl:text>low : </xsl:text>
-                            <xsl:value-of select="count(//e:canonicity[@key = 'low'])"/>
-                        </td>
-                        <td>
-                            <xsl:text>high : </xsl:text>
-                            <xsl:value-of select="count(//e:canonicity[@key = 'high'])"/>
-                        </td>
-                        <td>
-                            <xsl:text>unknown : </xsl:text>
-                            <xsl:value-of select="count(//e:canonicity[@key = 'unknown'])"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>timeslot</td>
-                        <td>
-                            <xsl:text>T1 : </xsl:text>
-                            <xsl:value-of select="count(//e:timeSlot[@key = 'T1'])"/>
-                        </td>
-                        <td>
-                            <xsl:text>T2 : </xsl:text>
-                            <xsl:value-of select="count(//e:timeSlot[@key = 'T2'])"/>
-                        </td>
-                        <td>
-                            <xsl:text>T3 : </xsl:text>
-                            <xsl:value-of select="count(//e:timeSlot[@key = 'T3'])"/>
-                        </td>
-                        <td>
-                            <xsl:text>T4 : </xsl:text>
-                            <xsl:value-of select="count(//e:timeSlot[@key = 'T4'])"/>
-                        </td>
-                    </tr>
-
-
-
+                        <xsl:variable name="authorG" select="//e:authorGender"/>
+                        <td>Author Gender</td>
+                        <xsl:variable name="genderVals">M,F,U</xsl:variable>
+                        <xsl:for-each select="tokenize($genderVals, ',')">
+                            <xsl:variable name="val">
+                                <xsl:value-of select="."/>
+                            </xsl:variable>
+                            <td>
+                                <xsl:value-of select="$val"/>
+                                <xsl:text> : </xsl:text>
+                                <xsl:value-of
+                                    select="
+                                        e:checkBalance($textCount/3,
+                                        count($authorG[@key = $val]))"
+                                />
+                            </td>
+                        </xsl:for-each>
+                    </tr><tr><xsl:variable name="sizes" select="//e:size"/>
+                        <td>Size</td>
+                        <xsl:variable name="sizeVals">short,medium,long</xsl:variable>
+                        <xsl:for-each select="tokenize($sizeVals, ',')">
+                            <xsl:variable name="val">
+                                <xsl:value-of select="."/>
+                            </xsl:variable>
+                            <td>
+                                <xsl:value-of select="$val"/>
+                                <xsl:text> : </xsl:text>
+                                <xsl:value-of
+                                    select="
+                                    e:checkBalance($textCount/3,
+                                    count($sizes[@key = $val]))"
+                                />
+                            </td>
+                        </xsl:for-each> </tr>
+                    <tr><xsl:variable name="canons" select="//e:canonicity"/>
+                        <td>Canonicity</td>
+                        <xsl:variable name="canonVals">low,high,unknown</xsl:variable>
+                        <xsl:for-each select="tokenize($canonVals, ',')">
+                            <xsl:variable name="val">
+                                <xsl:value-of select="."/>
+                            </xsl:variable>
+                            <td>
+                                <xsl:value-of select="$val"/>
+                                <xsl:text> : </xsl:text>
+                                <xsl:value-of
+                                    select="
+                                    e:checkBalance($textCount/3,
+                                    count($canons[@key = $val]))"
+                                />
+                            </td>
+                        </xsl:for-each> </tr></table>
+                <table class="balance">
+                    <tr><xsl:variable name="slots" select="//e:timeSlot"/>
+                        <td>Time Slot</td>
+                        <xsl:variable name="slotVals">T1,T2,T3,T4</xsl:variable>
+                        <xsl:for-each select="tokenize($slotVals, ',')">
+                            <xsl:variable name="val">
+                                <xsl:value-of select="."/>
+                            </xsl:variable>
+                            <td>
+                                <xsl:value-of select="$val"/>
+                                <xsl:text> : </xsl:text>
+                                <xsl:value-of
+                                    select="
+                                    e:checkBalance($textCount/4,
+                                    count($slots[@key = $val]))"
+                                />
+                            </td>
+                        </xsl:for-each> </tr>
 
                 </table>
             </body>
@@ -165,42 +164,28 @@
 
 
     </xsl:template>
-    
+
     <xsl:function name="e:checkBalance" as="xs:string">
         <xsl:param name="target" as="xs:integer"/>
         <xsl:param name="count" as="xs:integer"/>
         <xsl:variable name="whoops">
             <xsl:if test="$count lt $target">
-              <xsl:text> ** Unbalanced : need at least </xsl:text>
-              <xsl:value-of select="$target - $count"/> <xsl:text> more **</xsl:text>
-                  </xsl:if>
+                <xsl:text> ** Unbalanced : need at least </xsl:text>
+                <xsl:value-of select="$target - $count"/>
+                <xsl:text> more **</xsl:text>
+            </xsl:if>
         </xsl:variable>
-        <xsl:value-of select="concat($count, $whoops)" />
-        
-    </xsl:function>
-    
-    <!-- <xsl:template match="t:teiHeader">
-        
-            <td>
-                <xsl:value-of select="t:fileDesc/t:titleStmt/t:title[1]"/>
-            </td>
-            <td>
-                <xsl:value-of select="t:fileDesc/t:titleStmt/t:author[1]/text()"/>
-            </td>
-            <td>
-                <xsl:value-of select="t:profileDesc/t:textDesc/e:authorGender/@key"/>
-            </td>
-            <td>
-               
-                <xsl:value-of select="t:profileDesc/t:textDesc/e:size/@key"/>
-            </td>
-            <td>
-                <xsl:value-of select="t:profileDesc/t:textDesc/e:canonicity/@key"/>
-            </td>
-            <td>
-                <xsl:value-of select="t:profileDesc/t:textDesc/e:timeSlot/@key"/>
-            </td>
+        <xsl:value-of select="concat($count, $whoops)"/>
 
-        
-    </xsl:template>-->
+    </xsl:function>
+
+    <xsl:function name="e:word-count" as="xs:integer" xmlns:functx="http://www.functx.com">
+        <xsl:param name="arg" as="xs:string?"/>
+
+        <xsl:sequence
+            select="
+                count(tokenize($arg, '\W+')[. != ''])
+                "/>
+
+    </xsl:function>
 </xsl:stylesheet>

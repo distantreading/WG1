@@ -32,7 +32,7 @@ with identifier 005433</p>
 		  <language ident="de">Alemán</language> 
 		</langUsage> <textDesc>
 			<authorGender xmlns="http://distantreading.net/eltec/ns" key="M"></authorGender>
-			<size xmlns="http://distantreading.net/eltec/ns" key="short"></size>
+			<size xmlns="http://distantreading.net/eltec/ns" key="medium"></size>
 			<canonicity xmlns="http://distantreading.net/eltec/ns" key="high"></canonicity>
 			<timeSlot xmlns="http://distantreading.net/eltec/ns" key="T2"></timeSlot>
 		</textDesc>
