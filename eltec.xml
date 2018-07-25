@@ -2,7 +2,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" 
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:e="http://distantreading.net/eltec/ns">
     <teiHeader>
         <fileDesc>
@@ -19,7 +19,8 @@
         </fileDesc>
         <revisionDesc>
             <change when="2018-07-25">require xml:id on TEI, not text</change>
-            <change when="2018-07-04">Experiment with textDesc instead of catRef; tighten up header requirements</change>
+            <change when="2018-07-04">Experiment with textDesc instead of catRef; tighten up header
+                requirements</change>
             <change when="2018-05-23">Redrafted version of encoding_proposal document post
                 Wuerzburg</change>
             <change when="2018-03-16">Revised post-Prague</change>
@@ -55,7 +56,7 @@
             profileDesc publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
                     <moduleRef key="namesdates" include="affiliation forename  persName  surname"/>
                     <moduleRef key="corpus" include="textDesc"/>
-                    
+
                     <!--Class modifications to reduce attribute clutter -->
                     <!-- first remove classes which provide attributes we dont want -->
                     <classSpec ident="att.ascribed" type="atts" mode="delete"/>
@@ -115,7 +116,7 @@
                     </classSpec>
 
                     <!-- tweaks for individual elements -->
-                    
+
                     <!-- remove @version from TEI : it doesnt mean what you think -->
                     <elementSpec ident="TEI" mode="change">
                         <attList>
@@ -123,14 +124,15 @@
                         </attList>
                     </elementSpec>
 
-<elementSpec ident="title" mode="change">
-    <constraintSpec mode="add" ident="noEmptyTitle" scheme="schematron">
-        <constraint>
-            <assert xmlns="http://purl.oclc.org/dsdl/schematron"
-                test="child::* or child::text()[normalize-space()]" role="ERROR">You must provide a title for the text </assert>
-        </constraint>
-    </constraintSpec>
-</elementSpec>
+                    <elementSpec ident="title" mode="change">
+                        <constraintSpec mode="add" ident="noEmptyTitle" scheme="schematron">
+                            <constraint>
+                                <assert xmlns="http://purl.oclc.org/dsdl/schematron"
+                                    test="child::* or child::text()[normalize-space()]" role="ERROR"
+                                    >You must provide a title for the text </assert>
+                            </constraint>
+                        </constraintSpec>
+                    </elementSpec>
 
 
                     <!-- simplify publicationStmt  -->
@@ -145,21 +147,26 @@
                         <content>
                             <elementRef key="p"/>
                         </content>
-                        <attList >
+                        <attList>
                             <attDef ident="n" mode="change" usage="req">
-                                <datatype><dataRef key="teidata.enumerated"></dataRef></datatype>
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
                                 <valList type="closed" mode="replace">
                                     <valItem ident="eltec-0"/>
                                     <valItem ident="eltec-1"/>
-                                    <valItem ident="eltec-2"/>                                   
+                                    <valItem ident="eltec-2"/>
                                 </valList>
                             </attDef>
                         </attList>
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <encodingDesc n="eltec-0"><p>Encoded to ELTeC level zero</p></encodingDesc>
-                        </egXML></exemplum>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <encodingDesc n="eltec-0"><p>Encoded to ELTeC level
+                                    zero</p></encodingDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
-                    
+
                     <!-- make xml:id and xml:lang compulsory for TEI -->
                     <elementSpec ident="TEI" mode="change">
                         <attList>
@@ -183,7 +190,8 @@
 
 
                     <!-- define new elements for selection criteria -->
-                    <elementSpec ident="authorGender" mode="add" ns="http://distantreading.net/eltec/ns">
+                    <elementSpec ident="authorGender" mode="add"
+                        ns="http://distantreading.net/eltec/ns">
                         <desc>specifies the sex of the author where this is known</desc>
                         <classes>
                             <memberOf key="model.textDescPart"/>
@@ -247,7 +255,8 @@
                         </attList>
                     </elementSpec>
 
-                    <elementSpec ident="canonicity" mode="add" ns="http://distantreading.net/eltec/ns">
+                    <elementSpec ident="canonicity" mode="add"
+                        ns="http://distantreading.net/eltec/ns">
                         <desc>indicates the degree to which the text has become part of a literary
                             canon</desc>
                         <classes>
@@ -264,23 +273,24 @@
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="high">
-                                        <desc>text has been republished very frequently since its original
-                                        appearance</desc>
+                                        <desc>text has been republished very frequently since its
+                                            original appearance</desc>
                                     </valItem>
                                     <valItem ident="high">
-                                        <desc>text has been republished occasionally since its original
-                                            appearance</desc>
+                                        <desc>text has been republished occasionally since its
+                                            original appearance</desc>
                                     </valItem>
                                     <valItem ident="low">
-                                        <desc>text has not been reprinted since its original appearance</desc>
+                                        <desc>text has not been reprinted since its original
+                                            appearance</desc>
                                     </valItem>
                                 </valList>
                                 <remarks>
-                                    <p>Frequency of publication is assessed with reference to
-                                        20 year time periods. A work which has been republished in more
-                                        than four such periods, i.e. over a
-                                        reasonably long time since its first appearance, is
-                                        considered highly canonical.</p>
+                                    <p>Frequency of publication is assessed with reference to 20
+                                        year time periods. A work which has been republished in more
+                                        than four such periods, i.e. over a reasonably long time
+                                        since its first appearance, is considered highly
+                                        canonical.</p>
                                 </remarks>
                             </attDef>
                         </attList>
@@ -317,13 +327,13 @@
                         </attList>
                     </elementSpec>
 
-                    
-                  <!-- require one of each profileDesc component in a specific order -->
+
+                    <!-- require one of each profileDesc component in a specific order -->
                     <elementSpec ident="profileDesc" mode="change">
                         <content>
-                            <classRef key="model.profileDescPart"  expand="sequence"/>                           
+                            <classRef key="model.profileDescPart" expand="sequence"/>
                         </content>
-                    </elementSpec>                   
+                    </elementSpec>
                     <!-- require one of each textDesc component in a specific order -->
                     <elementSpec ident="textDesc" mode="change">
                         <content>
@@ -361,7 +371,7 @@
                             <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                     </elementSpec>
-                   
+
                     <elementSpec ident="measure" mode="change">
                         <classes mode="change">
                             <memberOf key="att.measurement" mode="delete"/>
@@ -388,17 +398,17 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                  
+
                     <!-- require a date on change -->
-                    
+
                     <elementSpec ident="change" mode="change">
                         <attList>
                             <attDef ident="when" mode="change" usage="req"/>
                         </attList>
                     </elementSpec>
-                    
-                    
-            
+
+
+
                     <elementSpec ident="div" mode="change">
                         <attList>
                             <attDef ident="type" mode="change">
@@ -409,7 +419,7 @@
                                     <valItem ident="notes">
                                         <desc>collects authorial notes (level 1 only)</desc>
                                     </valItem>
-                                    
+
                                     <valItem ident="liminal">
                                         <desc>authorial preface, foreword, back matter etc.</desc>
                                     </valItem>
@@ -424,8 +434,52 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <!-- adding better examples -->
+
+                    <elementSpec ident="TEI" mode="change">
+                        <exemplum  xml:lang="en">
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">       <TEI xml:id="ENG0001" xml:lang="ENG">
+                                <teiHeader>
+                                    <fileDesc>
+                                        <titleStmt>
+                                            <title><!-- title of work --></title>
+                                            <author><!-- information about the author --></author>
+                                            <respStmt>
+                                                <resp>encoder</resp>
+                                                <name><!-- information about the encoder --></name>
+                                            </respStmt>
+                                        </titleStmt>
+                                        <extent>
+                                            <!-- size of the text, in pages and words -->
+                                        </extent>
+                                        <publicationStmt>
+                                            <p><!-- standard text about status as part of ELTeC --></p>
+                                        </publicationStmt>
+                                        <sourceDesc>
+                                            <bibl>
+                                                <!-- bibliographic description of the source -->
+                                            </bibl>
+                                        </sourceDesc>
+                                    </fileDesc>
+                                    <profileDesc>
+                                        <!-- additional descriptive information -->
+                                    </profileDesc>
+                                    <revisionDesc>
+                                        <change when="2017-07-27"
+                                            ><!-- revision information --></change>
+                                    </revisionDesc>
+                                </teiHeader>
+                                <text>
+                                    <body>
+                                        <!-- transcription of text here -->
+                                    </body>
+                                </text>
+                            </TEI></egXML>
+                        </exemplum>
+                    </elementSpec>
+                
+
                     <elementSpec ident="pb" mode="change">
                         <exemplum xml:lang="en">
                             <p>A page break may be associated with a facsimile image of the page it
