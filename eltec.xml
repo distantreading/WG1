@@ -18,6 +18,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
+            <change when="2018-07-25">require xml:id on TEI, not text</change>
             <change when="2018-07-04">Experiment with textDesc instead of catRef; tighten up header requirements</change>
             <change when="2018-05-23">Redrafted version of encoding_proposal document post
                 Wuerzburg</change>
@@ -159,8 +160,8 @@
                         </egXML></exemplum>
                     </elementSpec>
                     
-                    <!-- make xml:id and xml:lang compulsory for text -->
-                    <elementSpec ident="text" mode="change">
+                    <!-- make xml:id and xml:lang compulsory for TEI -->
+                    <elementSpec ident="TEI" mode="change">
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req"/>
                             <attDef ident="xml:lang" mode="change" usage="req"/>
@@ -263,17 +264,22 @@
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="high">
-                                        <desc>text has been reprinted more than once outside its original
-                                        time slot</desc>
+                                        <desc>text has been republished very frequently since its original
+                                        appearance</desc>
+                                    </valItem>
+                                    <valItem ident="high">
+                                        <desc>text has been republished occasionally since its original
+                                            appearance</desc>
                                     </valItem>
                                     <valItem ident="low">
-                                        <desc>text has not been reprinted after its original time
-                                            slot</desc>
+                                        <desc>text has not been reprinted since its original appearance</desc>
                                     </valItem>
                                 </valList>
                                 <remarks>
-                                    <p>A work which has been republished several times over a
-                                        reasonably long time since its first appearance is
+                                    <p>Frequency of publication is assessed with reference to
+                                        20 year time periods. A work which has been republished in more
+                                        than four such periods, i.e. over a
+                                        reasonably long time since its first appearance, is
                                         considered highly canonical.</p>
                                 </remarks>
                             </attDef>
@@ -392,41 +398,7 @@
                     </elementSpec>
                     
                     
-<!--
-                    <elementSpec ident="textClass" mode="change">
-                        <content>
-                            <sequence>
-                                <elementRef key="catRef" minOccurs="1" maxOccurs="unbounded"/>
-                                <elementRef key="keywords" minOccurs="0" maxOccurs="unbounded"/>
-                            </sequence>
-                        </content>
-                    </elementSpec>-->
-
-                    <!--  <elementSpec ident="catRef" mode="change">
-                        <desc>For ELTeC the possible values are constrained by a value list</desc>
-                        <attList>
-                            <attDef ident="key" mode="add">
-                                <datatype>
-                                    <dataRef key="teidata.enumerated"/>
-                                </datatype>
-                                <valList type="closed">
-                                    <valItem ident="authorM">
-                                        <desc>male author</desc>
-                                    </valItem>
-                                    <valItem ident="authorF">
-                                        <desc>female author</desc>
-                                    </valItem>
-                                    <valItem ident="authorU">
-                                        <desc>author gender unknown</desc>
-                                    </valItem>
-                                    <valItem ident="authorX">
-                                        <desc>author gender mixed</desc>
-                                    </valItem>
-                                </valList>
-                            </attDef>
-                        </attList>
-                    </elementSpec>-->
-                    
+            
                     <elementSpec ident="div" mode="change">
                         <attList>
                             <attDef ident="type" mode="change">
@@ -474,8 +446,6 @@
                                 </body>
                             </egXML>
                         </exemplum>
-
-
 
                         <exemplum>
 

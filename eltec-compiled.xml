@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:e="http://distantreading.net/eltec/ns" xml:base="file:/home/lou/Public/WG1/eltec.xml"><?TEIVERSION Version 3.3.0a. Last updated on
-	11th July 2017, revision 9b793ec?>
+<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:e="http://distantreading.net/eltec/ns" xml:base="file:/home/lou/Public/WG1/eltec.xml"><?TEIVERSION Version 3.5.0a. Last updated on
+	23rd July 2018, revision 206c146?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -14,6 +14,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
+            <change when="2018-07-25">require xml:id on TEI, not text</change>
             <change when="2018-07-04">Experiment with textDesc instead of catRef; tighten up header requirements</change>
             <change when="2018-05-23">Redrafted version of encoding_proposal document post
                 Wuerzburg</change>
@@ -622,7 +623,131 @@
                     teitoodd to produce the compiled ODD eltec-compiled.xml which is used as a basis
                     for the others. </p>
 
-                <schemaSpec xmlns:teix="http://www.tei-c.org/ns/Examples" ident="ELTeC" start="TEI" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML" source="/home/lou/Public/TEI/P5/p5subset.xml"><classSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.datable.w3c" xml:id="DATABLEW3C">
+                <schemaSpec xmlns:teix="http://www.tei-c.org/ns/Examples" ident="ELTeC" start="TEI" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML" source="/home/lou/Public/TEI/P5/p5subset.xml"><classSpec module="tei" type="atts" ident="att.ascribed.directed">
+    <desc versionDate="2018-07-19" xml:lang="en">provides attributes for elements representing speech or action that can be directed at a
+        group or individual.</desc>
+    <classes>
+        
+    </classes>
+    <attList>
+        <attDef ident="toWhom">
+            <desc versionDate="2018-07-19" xml:lang="en">indicates the person, or group of people, to whom a speech act or action is directed.</desc>
+            
+            <datatype maxOccurs="unbounded"><dataRef key="teidata.pointer"/></datatype>
+            <exemplum xml:lang="en">
+                <p>In the following example from Mary Pix's The False Friend, speeches (<gi>sp</gi>) in the body of the play 
+                    are linked to <gi>castItem</gi> elements in the <gi>castList</gi> using the <att>toWhom</att>
+                    attribute, which is used to specify who the speech is directed to. Additionally, the <gi>stage</gi>
+                    includes <att>toWhom</att> to indicate the directionality of the action. 
+                </p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="en" valid="feasible" source="#toWhom-eg-1">
+                    <castItem type="role">
+                        <role xml:id="emil">Emilius.</role>
+                    </castItem>
+                    <castItem type="role">
+                        <role xml:id="lov">Lovisa</role>
+                    </castItem>
+                    <castItem type="role">
+                        <role xml:id="serv">A servant</role>
+                    </castItem>
+                    <!-- ... -->
+                    <sp who="#emil" toWhom="#lov">
+                        <speaker>Emil.</speaker>
+                        <l n="1">My love!</l>
+                    </sp>
+                    <sp who="#lov" toWhom="#emil">
+                        <speaker>Lov.</speaker>
+                        <l n="2">I have no Witness of my Noble Birth</l>
+                        <stage who="emil" toWhom="#serv">Pointing to her Woman.</stage>
+                        <l>But that poor helpless wretch——</l>
+                    </sp>
+                </egXML>
+            </exemplum>
+            <remarks versionDate="2013-11-22" xml:lang="en"><p>To indicate the recipient of written correspondence, use the elements used in section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD44CD">2.4.6. Correspondence Description</ref>, rather than a <att>toWhom</att> attribute.</p></remarks>
+        </attDef>
+    </attList>
+    <listRef>
+        <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQQ">3.3.3. Quotation</ref>
+        <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TS.html#TSBA">8.3. Elements Unique to Spoken Texts</ref>
+    </listRef>
+</classSpec><classSpec rend="change" module="tei" type="atts" ident="att.dimensions"><desc versionDate="2007-08-05" xml:lang="en">provides attributes for describing the size of physical objects.</desc><desc versionDate="2007-12-20" xml:lang="ko">물리적 대상의 크기를 기술하는 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供符合某種度量值的屬性值。</desc><desc versionDate="2008-04-05" xml:lang="ja">物理的対象の大きさを表す属性を示す． </desc><desc versionDate="2009-05-25" xml:lang="fr">fournit des attributs
+  pour décrire la taille des objets    physiques</desc><desc versionDate="2007-11-06" xml:lang="it">assegna degli attributi che descrivono la grandezza di
+    oggetti fisici</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona atributos que califican una determinata
+    medición.</desc><classes/><attList><attDef ident="unit" usage="opt">
+      <desc versionDate="2007-08-02" xml:lang="en">names the unit used for the measurement</desc>
+      <desc versionDate="2007-12-20" xml:lang="ko">측정 단위의 이름을 기술한다.</desc>
+      <desc versionDate="2007-05-02" xml:lang="zh-TW">度量單位的名稱。</desc>
+      <desc versionDate="2008-04-05" xml:lang="ja">当該大きさの単位を示す．</desc>
+      <desc versionDate="2007-06-12" xml:lang="fr">noms des unités utilisées pour la mesure.</desc>
+      <desc versionDate="2007-05-04" xml:lang="es">especifica las unidades usadas para la medición.</desc>
+      <desc versionDate="2007-01-21" xml:lang="it">specifica le unità usate per la misurazione</desc>
+      <datatype><dataRef key="teidata.enumerated"/></datatype>
+      <valList type="semi">
+        <valItem ident="cm">
+          <gloss versionDate="2007-08-02" xml:lang="en">centimetres</gloss>
+          <gloss versionDate="2007-06-12" xml:lang="fr">centimètres</gloss>
+          <gloss versionDate="2007-05-04" xml:lang="es">centímetros</gloss>
+          <gloss versionDate="2007-01-21" xml:lang="it">centimetri</gloss>
+        </valItem>
+        <valItem ident="mm">
+          <gloss versionDate="2007-08-02" xml:lang="en">millimetres</gloss>
+          <gloss versionDate="2007-06-12" xml:lang="fr">millimètres</gloss>
+          <gloss versionDate="2007-05-04" xml:lang="es">milímetros</gloss>
+          <gloss versionDate="2007-01-21" xml:lang="it">millimetri</gloss>
+        </valItem>
+        <valItem ident="in">
+          <gloss versionDate="2007-08-02" xml:lang="en">inches</gloss>
+          <gloss versionDate="2007-06-12" xml:lang="fr">pouces</gloss>
+          <gloss versionDate="2007-05-04" xml:lang="es">pulgadas</gloss>
+          <gloss versionDate="2007-01-21" xml:lang="it">pollici</gloss>
+        </valItem>
+        <valItem ident="lines">
+          <desc versionDate="2007-08-02" xml:lang="en">lines of text</desc>
+          <desc versionDate="2007-12-20" xml:lang="ko">텍스트의 행</desc>
+          <desc versionDate="2008-04-06" xml:lang="es">líneas de texto</desc>
+          <desc versionDate="2008-04-05" xml:lang="ja">テキスト行</desc>
+          <desc versionDate="2008-03-30" xml:lang="fr">lignes de texte</desc>
+          <desc versionDate="2007-11-06" xml:lang="it">righe di testo</desc>
+        </valItem>
+        <valItem ident="chars">
+          <gloss versionDate="2007-08-02" xml:lang="en">characters</gloss>
+          <gloss versionDate="2007-12-20" xml:lang="ko">문자</gloss>
+          <gloss versionDate="2008-04-06" xml:lang="es">caracteres</gloss>
+          <gloss versionDate="2007-11-06" xml:lang="it">caratteri</gloss>
+          <desc versionDate="2007-08-02" xml:lang="en">characters of text</desc>
+          <desc versionDate="2007-12-20" xml:lang="ko">텍스트의 문자</desc>
+          <desc versionDate="2008-04-06" xml:lang="es">caracteres del texto</desc>
+          <desc versionDate="2008-04-05" xml:lang="ja">文字列</desc>
+          <desc versionDate="2008-03-30" xml:lang="fr">caractères du texte</desc>
+          <desc versionDate="2007-11-06" xml:lang="it">caratteri di testo</desc>
+        </valItem>
+      </valList>
+    </attDef><attDef ident="quantity">
+      <desc versionDate="2007-08-02" xml:lang="en">specifies the length in the units specified</desc>
+      <desc versionDate="2007-12-20" xml:lang="ko">명시된 단위의 길이를 명시한다.</desc>
+      <desc versionDate="2008-04-06" xml:lang="es">especifica la longitud en las unidades especificadas</desc>
+      <desc versionDate="2008-04-05" xml:lang="ja">当該単位の大きさを示す．</desc>
+      <desc versionDate="2008-03-30" xml:lang="fr">spécifie la longueur dans les unités indiquées</desc>
+      <desc versionDate="2007-11-06" xml:lang="it">specifica la lunghezza nelle unità indicate</desc>
+      <datatype><dataRef key="teidata.numeric"/></datatype>
+    </attDef><attDef ident="extent" usage="opt">
+      <desc versionDate="2008-09-10" xml:lang="en">indicates the size of the object concerned using a project-specific vocabulary combining
+        quantity and units in a single string of words.</desc>
+      <desc versionDate="2009-05-25" xml:lang="fr">indique la dimension de l'objet en utilisant
+        un vocabulaire spécifique à un projet qui combine la quantité et
+	l'unité dans une chaîne seule de mots.</desc>
+      <datatype><dataRef key="teidata.text"/></datatype>
+      <exemplum xml:lang="en">
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+          <gap extent="5 words"/>
+        </egXML>
+      </exemplum>
+      <exemplum xml:lang="en">
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+          <height extent="half the page"/>
+        </egXML>
+      </exemplum>
+    </attDef></attList></classSpec><classSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.datable.w3c" xml:id="DATABLEW3C">
   <desc versionDate="2013-11-22" xml:lang="en">provides attributes for normalization of elements that contain
   datable events  conforming to the W3C
   <title ref="#XSD2">XML Schema Part 2: Datatypes Second Edition</title>.</desc>
@@ -900,7 +1025,7 @@
   </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONADA">3.5.4. Dates and Times</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDDATE">13.3.6. Dates and Times</ref>
-  </listRef></classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" predeclare="true" module="tei" type="atts" ident="att.global.rendition"><desc versionDate="2014-12-02" xml:lang="en">provides rendering attributes common to all elements in the TEI encoding scheme.</desc><classes/><attList><attDef ident="rend" usage="opt">
+  </listRef></classSpec><classSpec rend="change" predeclare="true" module="tei" type="atts" ident="att.global.rendition"><desc versionDate="2014-12-02" xml:lang="en">provides rendering attributes common to all elements in the TEI encoding scheme.</desc><classes/><attList><attDef ident="rend" usage="opt">
       <gloss versionDate="2007-07-02" xml:lang="en">rendition</gloss>
       <gloss versionDate="2007-12-20" xml:lang="ko">번역</gloss>
       <gloss versionDate="2008-04-06" xml:lang="es">interpretación</gloss>
@@ -959,7 +1084,7 @@
       </remarks>
     </attDef></attList><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STGAre">1.3.1.1.3. Rendition Indicators</ref>
-  </listRef></classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="GLOBAL" type="atts" ident="att.global">
+  </listRef></classSpec><classSpec module="tei" xml:id="GLOBAL" type="atts" ident="att.global">
   <desc versionDate="2007-10-02" xml:lang="en">provides attributes common to all elements in the TEI encoding scheme.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">TEI 부호화 스키마의 모든 요소에 공통 속성을 제공한다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">提供一組屬性，通用於TEI編碼標準中的所有元素。</desc>
@@ -1209,6 +1334,24 @@ and that a single TEI document may contain texts in many languages.</p>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STGA">1.3.1.1. Global Attributes</ref>
   </listRef>
+</classSpec><classSpec module="tei" type="atts" ident="att.notated">
+  <desc versionDate="2013-01-11" xml:lang="en">provides an attribute to indicate any specialised notation used for element content.</desc>
+  
+  <attList>
+    <attDef ident="notation" usage="opt">
+      <desc versionDate="2012-03-26" xml:lang="en">names the notation used for the content of the element.</desc>
+      <desc versionDate="2007-12-20" xml:lang="ko">요소 내용으로 사용되어 앞서 정의된 표기법 이름을 제시한다.</desc>
+      <desc versionDate="2007-05-02" xml:lang="zh-TW">提供先前已定義過、適用於該元素內容的記號名稱。</desc>
+      <desc versionDate="2008-04-05" xml:lang="ja">当該要素の内容にある既定表記法の名前を示す．</desc>
+      <desc versionDate="2007-06-12" xml:lang="fr">précise le nom d'une notation définie précédemment,
+        utilisée dans le contenu de l'élément.</desc>
+      <desc versionDate="2007-05-04" xml:lang="es">indica el nombre de una anotación definida
+        previamente y usada para el contenido de un elemento.</desc>
+      <desc versionDate="2007-01-21" xml:lang="it">fornisce il nome di un'annotazione definita
+        precedentemente utilizzata come contenuto dell'elemento.</desc>
+      <datatype><dataRef key="teidata.enumerated"/></datatype>
+    </attDef>
+  </attList>
 </classSpec><classSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="tei" xml:id="TYPED" type="atts" ident="att.typed"><desc versionDate="2007-10-02" xml:lang="en">provides attributes which can be used to classify or subclassify elements in any way.</desc><desc versionDate="2007-12-20" xml:lang="ko">요소의 분류 또는 하위분류에서 사용될 수 있는 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供可依任何方法將元素分類或次要分類的一般屬性。</desc><desc versionDate="2008-04-05" xml:lang="ja">要素を分類するための属性を示す．
 </desc><desc versionDate="2009-05-29" xml:lang="fr">fournit des attributs qui peuvent être
       utilisés pour classer ou interclasser des éléments de n'importe quelle façon.</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona atributos genéricos utilizables para cualquier clasificación o subclasificación de elementos.</desc><desc versionDate="2007-01-21" xml:lang="it">assegna degli attributi generici utilizzabili per qualsiasi classificazione e sottoclassificazione di elementi</desc><classes/><constraintSpec scheme="schematron" ident="subtypeTyped">
@@ -1270,7 +1413,7 @@ and that a single TEI document may contain texts in many languages.</p>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAPTL">16.1.1. Pointers and Links</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SASE">16.3. Blocks, Segments, and Anchors</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html#TCAPLK">12.2. Linking the Apparatus to the Text</ref>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html#TDTAGCONT">22.5.2. RELAX NG Content Models</ref>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html#TDTAGCONT">22.5.1.2. Defining Content Models: RELAX NG</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TS.html#TSBA">8.3. Elements Unique to Spoken Texts</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#MDMDAL">23.3.1.4. Modification of Attribute and Attribute Value Lists</ref>
   </listRef></classSpec><classSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="tei" type="atts" ident="att.pointing"><desc versionDate="2016-01-15" xml:lang="en">provides a set of attributes used by all elements which point
@@ -1298,7 +1441,7 @@ and that a single TEI document may contain texts in many languages.</p>
     </attDef></attList><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STGAla">1.3.1.1.2. Language Indicators</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6. Simple Links and Cross-References</ref>
-  </listRef></classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="atts" ident="att.sortable">
+  </listRef></classSpec><classSpec module="tei" type="atts" ident="att.sortable">
   <desc versionDate="2011-11-06" xml:lang="en">provides attributes for elements in lists or groups that are sortable, but whose sorting key cannot be derived mechanically from the element content.</desc>
   <attList>
     <attDef ident="sortKey" usage="opt">
@@ -1356,7 +1499,7 @@ and that a single TEI document may contain texts in many languages.</p>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html#DIBO">9.1. Dictionary Body and Overall Structure</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="AGENT" type="model" ident="model.nameLike.agent">
+</classSpec><classSpec module="tei" xml:id="AGENT" type="model" ident="model.nameLike.agent">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements which contain names of individuals
 or corporate bodies.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">개인 또는 기업체의 이름을 포함하는 요소를 모아 놓는다.</desc>
@@ -1389,7 +1532,7 @@ or corporate bodies.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONA">3.5. Names, Numbers, Dates, Abbreviations, and Addresses</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.segLike">
+</classSpec><classSpec module="tei" type="model" ident="model.segLike">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements used for arbitrary segmentation.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">임의적 분할에 사용되는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集用於隨機分割的元素。</desc>
@@ -1426,7 +1569,7 @@ or corporate bodies.</desc>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SASE">16.3. Blocks, Segments, and Anchors</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/AI.html#AILC">17.1. Linguistic Segment Categories</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.hiLike">
+</classSpec><classSpec module="tei" type="model" ident="model.hiLike">
   <desc versionDate="2007-10-06" xml:lang="en">groups phrase-level elements which are typographically distinct but to which no specific
     function can be attributed.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인쇄상 구분되나 특정 기능이 없는 구 층위 요소를 모아 놓는다.</desc>
@@ -1446,7 +1589,7 @@ or corporate bodies.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQ">3.3. Highlighting and Quotation</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.emphLike">
+</classSpec><classSpec module="tei" type="model" ident="model.emphLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups phrase-level elements which are typographically
   distinct and to which a specific function can be attributed.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인쇄상 구분되며 특정 기능을 수행하는 구-층위 요소를 모아 놓는다.</desc>
@@ -1463,7 +1606,7 @@ or corporate bodies.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQ">3.3. Highlighting and Quotation</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.highlighted">
+</classSpec><classSpec module="tei" type="model" ident="model.highlighted">
   <desc versionDate="2007-10-03" xml:lang="en">groups phrase-level elements which are typographically distinct.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인쇄상 구분되는 구-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集與顯目標示相關的詞組層次元素。</desc>
@@ -1480,7 +1623,7 @@ or corporate bodies.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQ">3.3. Highlighting and Quotation</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="CLDATE" type="model" ident="model.dateLike">
+</classSpec><classSpec module="tei" xml:id="CLDATE" type="model" ident="model.dateLike">
   <desc versionDate="2007-01-31" xml:lang="en">groups elements containing temporal expressions.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">시간 표현을 포함하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集包含時間格式的元素。</desc>
@@ -1499,7 +1642,7 @@ or corporate bodies.</desc>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONADA">3.5.4. Dates and Times</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDDATE">13.3.6. Dates and Times</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.measureLike">
+</classSpec><classSpec module="tei" type="model" ident="model.measureLike">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements which denote a number, a quantity, a measurement, or similar piece of text
     that conveys some numerical meaning.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">숫자, 양, 측정값 등 수치적 의미를 드러내는 텍스트 부분을 가리키는 요소를 모아 놓는다.</desc>
@@ -1518,7 +1661,7 @@ or corporate bodies.</desc>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONANU">3.5.3. Numbers and
 Measures</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.egLike">
+</classSpec><classSpec module="tei" type="model" ident="model.egLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements containing examples or illustrations.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">예 또는 실례를 포함하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集包含範例的元素</desc>
@@ -1534,7 +1677,7 @@ Measures</ref>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html#TDphraseTE">22.1.1. Phrase Level Terms</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.graphicLike">
+</classSpec><classSpec module="tei" type="model" ident="model.graphicLike">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements containing images, formulae, and 
   similar objects.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">이미지, 수식, 그리고 유사 대상을 포함하는 요소를 모아 놓는다.</desc>
@@ -1550,7 +1693,7 @@ Measures</ref>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COGR">3.9. Graphics and Other Non-textual Components</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.offsetLike">
+</classSpec><classSpec module="tei" type="model" ident="model.offsetLike">
   <desc versionDate="2007-10-09" xml:lang="en">groups elements which can appear only as part of a place name.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">장소명의 부분으로서만 나타날 수 있는 요소를 모아 놓는다.</desc>
   <desc versionDate="2008-04-06" xml:lang="es">agrupa los elementos que pueden aparecer solamente como
@@ -1565,7 +1708,7 @@ Measures</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPLAC">13.2.3. Place Names</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.pPart.msdesc">
+</classSpec><classSpec module="tei" type="model" ident="model.pPart.msdesc">
   <desc versionDate="2007-10-18" xml:lang="en">groups phrase-level elements used in manuscript description.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">원고 기술에서 사용되는 구-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集描述寫本的元素</desc>
@@ -1583,7 +1726,7 @@ Measures</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#MS">10. Manuscript Description</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.pPart.editorial">
+</classSpec><classSpec module="tei" type="model" ident="model.pPart.editorial">
   <desc versionDate="2007-10-18" xml:lang="en">groups phrase-level elements for simple editorial interventions that may be useful both
 in transcribing and in authoring.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">전사와 저작 모두에서 유용할 수 있는 간단한 편집 간섭에 대한 구-층위 요소를 모아 놓는다.</desc>
@@ -1602,7 +1745,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COED">3.4. Simple Editorial Changes</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.pPart.transcriptional">
+</classSpec><classSpec module="tei" type="model" ident="model.pPart.transcriptional">
   <desc versionDate="2007-10-03" xml:lang="en">groups phrase-level elements used for editorial transcription of pre-existing source
     materials.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">앞서 존재하는 원본 자료의 편집상 전사에 사용되는 구-층위 요소를 모아 놓는다.</desc>
@@ -1620,7 +1763,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COED">3.4. Simple Editorial Changes</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="EDIT" type="model" ident="model.pPart.edit">
+</classSpec><classSpec module="tei" xml:id="EDIT" type="model" ident="model.pPart.edit">
   <desc versionDate="2005-10-10" xml:lang="en">groups phrase-level elements for simple editorial correction and transcription.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">간단한 편집상 수정과 전사에 대한 구-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的詞組層次元素用於簡單的編輯更正或轉錄</desc>
@@ -1637,7 +1780,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COED">3.4. Simple Editorial Changes</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="CLLOC" type="model" ident="model.ptrLike">
+</classSpec><classSpec module="tei" xml:id="CLLOC" type="model" ident="model.ptrLike">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements used for purposes of location and reference.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">위치 및 참조에 대한 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素用於位置和參照</desc>
@@ -1656,7 +1799,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6. Simple Links and Cross-References</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="VEPHR" type="model" ident="model.lPart">
+</classSpec><classSpec module="tei" xml:id="VEPHR" type="model" ident="model.lPart">
   <desc versionDate="2005-11-26" xml:lang="en">groups phrase-level elements which may appear within verse only.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">운문 내에서만 나타날 수 있는 구-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集僅可能出現於韻文內的詞組層次元素。</desc>
@@ -1673,7 +1816,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html#VESE">6.2. Components of the Verse Line</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="METADATA" type="model" ident="model.global.meta">
+</classSpec><classSpec module="tei" xml:id="METADATA" type="model" ident="model.global.meta">
   <desc versionDate="2007-10-03" xml:lang="en">groups globally available elements which describe the status of other elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">다른 요소의 상태를 기술하며, 전체적으로 이용가능한 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集描述其他元素狀態的空白元素，例如連結或抽象詮釋，或者提供正確度等，且空白元素可能出現於文件任一處。</desc>
@@ -1722,7 +1865,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="REFSYS" type="model" ident="model.milestoneLike">
+</classSpec><classSpec module="tei" xml:id="REFSYS" type="model" ident="model.milestoneLike">
   <desc versionDate="2007-10-18" xml:lang="en">groups milestone-style
 elements used to represent reference systems.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">참조 체계를 표상하는 이정표 유형의 요소를 모아 놓는다.</desc>
@@ -1741,7 +1884,7 @@ elements used to represent reference systems.</desc>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CORS5">3.10.3. Milestone
 Elements</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.gLike">
+</classSpec><classSpec module="tei" type="model" ident="model.gLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements used to represent individual non-Unicode characters or glyphs.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">개별 비유니코드 문자 또는 그림문자를 표상하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素穿插於正規文本中，代表非統一碼項目。</desc>
@@ -1753,7 +1896,7 @@ Elements</ref>
     rapresentano oggetti non Unicode</desc>
 
 
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" xml:id="ODDDECL" ident="model.oddDecl">
+</classSpec><classSpec module="tei" type="model" xml:id="ODDDECL" ident="model.oddDecl">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements which generate declarations in some markup language in ODD documents.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">ODD 문서에서 마크업 언어로 선언을 생성하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素使ODD文件內某些標記語言中產生宣告。</desc>
@@ -1768,7 +1911,7 @@ Elements</ref>
     
     <memberOf key="model.inter"/>
   </classes>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.phrase.xml">
+</classSpec><classSpec module="tei" type="model" ident="model.phrase.xml">
   <desc versionDate="2007-10-03" xml:lang="en">groups phrase-level elements used to encode XML constructs such as element names, attribute
     names, and attribute values</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">요소명, 속성명, 그리고 속성값과 같이 XML 구성물을 부호화하는 구-층위 요소를 모아 놓는다.</desc>
@@ -1788,7 +1931,7 @@ Elements</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html#TD">22. Documentation Elements</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.specDescLike">
+</classSpec><classSpec module="tei" type="model" ident="model.specDescLike">
   <desc versionDate="2007-10-22" xml:lang="en">groups elements for referring to specification elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">명시 요소를 참조하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素參照到細節元素</desc>
@@ -1803,7 +1946,7 @@ Elements</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html#TD">22. Documentation Elements</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="CLBIBL" type="model" ident="model.biblLike">
+</classSpec><classSpec module="tei" xml:id="CLBIBL" type="model" ident="model.biblLike">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements containing a bibliographic description.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">서지 기술을 포함하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集包含書目描述的元素。</desc>
@@ -1820,7 +1963,7 @@ Elements</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBI">3.11. Bibliographic Citations and References</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" ident="model.headLike" module="tei" type="model">
+</classSpec><classSpec ident="model.headLike" module="tei" type="model">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements used to provide a title or heading at the start of a text
   division.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역의 시작부에서 제목 또는 표제를 제시하는 요소를 모아 놓는다.</desc>
@@ -1832,7 +1975,7 @@ un intitulé au début d'une division de texte</desc>
   <classes>
       <memberOf key="model.divTopPart"/>
   </classes>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" ident="model.labelLike" module="tei" type="model">
+</classSpec><classSpec ident="model.labelLike" module="tei" type="model">
   <desc versionDate="2007-06-13" xml:lang="en">groups elements used to gloss or explain other parts of a document.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">문서의 다른 부분을 해설 또는 설명하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2008-04-06" xml:lang="es">agrupa los elementos usados para glosar o para explicar otras partes de un documento.</desc>
@@ -1843,7 +1986,7 @@ expliquer d'autres parties d'un document.</desc>
   <classes>
     <memberOf key="model.inter"/>
   </classes>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="LISTS" type="model" ident="model.listLike">
+</classSpec><classSpec module="tei" xml:id="LISTS" type="model" ident="model.listLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups list-like elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">목록 같은 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集所有類似列表的元素</desc>
@@ -1858,7 +2001,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COLI">3.7. Lists</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="NOTES" type="model" ident="model.noteLike">
+</classSpec><classSpec module="tei" xml:id="NOTES" type="model" ident="model.noteLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups globally-available note-like elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">전체적으로 이용 가능한 주석 같은 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集所有類似註解的元素。</desc>
@@ -1874,7 +2017,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONO">3.8. Notes, Annotation, and Indexing</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" xml:id="CLLINES" ident="model.lLike">
+</classSpec><classSpec module="tei" type="model" xml:id="CLLINES" ident="model.lLike">
   <desc versionDate="2005-11-08" xml:lang="en">groups elements representing metrical components such as verse lines.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">운문 행 같이 운율적 성분을 표상하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集代表韻律組件的元素，例如詩行。</desc>
@@ -1886,7 +2029,7 @@ expliquer d'autres parties d'un document.</desc>
   <classes>
       <memberOf key="model.divPart"/>
   </classes>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="PARAGRAPH" type="model" ident="model.pLike">
+</classSpec><classSpec module="tei" xml:id="PARAGRAPH" type="model" ident="model.pLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups paragraph-like elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">문단 같은 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">該元素集是以交換資料為目的段落。</desc>
@@ -1900,7 +2043,7 @@ expliquer d'autres parties d'un document.</desc>
     <memberOf key="model.divPart"/>
     
   </classes>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="STAGEDIR" type="model" ident="model.stageLike">
+</classSpec><classSpec module="tei" xml:id="STAGEDIR" type="model" ident="model.stageLike">
   <desc versionDate="2007-08-29" xml:lang="en">groups elements containing stage directions or similar things defined by the module for
     performance texts.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">공연 텍스트의 모듈에 의해 정의된 무대 지시 또는 유사 내용을 포함하는 요소를 모아 놓는다.</desc>
@@ -1934,7 +2077,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DROTH">7.3. Other Types of Performance Text</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="EDITINCL" type="model" ident="model.global.edit">
+</classSpec><classSpec module="tei" xml:id="EDITINCL" type="model" ident="model.global.edit">
   <desc versionDate="2007-10-03" xml:lang="en">groups globally available elements which perform a specifically editorial function.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">명확한 편집 기능을 수행하며, 전체적으로 이용 가능한 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的空白元素有特殊的編輯功能，例如指出來源文件中一個文字段的附加、刪除、或缺漏的起始點。</desc>
@@ -1953,7 +2096,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="CHUNK" type="model" ident="model.divPart">
+</classSpec><classSpec module="tei" xml:id="CHUNK" type="model" ident="model.divPart">
   <desc versionDate="2011-12-12" xml:lang="en">groups paragraph-level elements appearing directly within divisions.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">구역 내에서 직접적으로 나타나는 문단-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集可出現於段落與其他區塊之間，而非出現於兩者之內的元素。</desc>
@@ -1984,7 +2127,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" predeclare="true" module="tei" xml:id="PLACPART" type="model" ident="model.placeNamePart">
+</classSpec><classSpec predeclare="true" module="tei" xml:id="PLACPART" type="model" ident="model.placeNamePart">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements which form part of a place name.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">장소명의 부분을 형성하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集構成地點名稱部分的元素。</desc>
@@ -2001,7 +2144,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPLAC">13.2.3. Place Names</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" predeclare="true" module="tei" type="model" ident="model.placeStateLike">
+</classSpec><classSpec predeclare="true" module="tei" type="model" ident="model.placeStateLike">
   <desc versionDate="2007-10-09" xml:lang="en">groups elements which describe changing states of a place.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">장소의 변화하는 상태를 기술하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2008-04-06" xml:lang="es">agrupa los elementos que describen aspectos variables de
@@ -2013,16 +2156,16 @@ expliquer d'autres parties d'un document.</desc>
   <classes>
     <memberOf key="model.nameLike"/>
   </classes>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.certLike">
+</classSpec><classSpec module="tei" type="model" ident="model.certLike">
   <desc versionDate="2011-11-10" xml:lang="en">groups elements which are used to indicate uncertainty or
   precision of other elements.</desc>
   <classes>
     
   </classes>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.descLike">
+</classSpec><classSpec module="tei" type="model" ident="model.descLike">
   <desc versionDate="2012-10-07" xml:lang="en">groups elements which contain a description of their function.</desc>
   <desc xml:lang="fr" versionDate="2007-06-12">regroupe des éléments qui contiennent une description de la fonction d'un élément.</desc>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="QUOTELIKE" type="model" ident="model.quoteLike">
+</classSpec><classSpec module="tei" xml:id="QUOTELIKE" type="model" ident="model.quoteLike">
   <desc versionDate="2005-11-17" xml:lang="en">groups elements used to directly contain quotations.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인용을 직접 포함하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集直接包含引言的元素。</desc>
@@ -2036,7 +2179,7 @@ expliquer d'autres parties d'un document.</desc>
     <memberOf key="model.qLike"/>
     
   </classes>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="HQINTER" type="model" ident="model.qLike">
+</classSpec><classSpec module="tei" xml:id="HQINTER" type="model" ident="model.qLike">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements related to highlighting which can appear either within or between
     chunk-level elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">덩어리 층위 요소 내에서 또는 그 사이에서 나타날 수 있는 주요 부분과 관련된 요소를 모아 놓는다.</desc>
@@ -2054,7 +2197,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQ">3.3. Highlighting and Quotation</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="RESPLIKE" type="model" ident="model.respLike">
+</classSpec><classSpec module="tei" xml:id="RESPLIKE" type="model" ident="model.respLike">
   <desc versionDate="2008-10-12" xml:lang="en">groups elements which are used to indicate intellectual or other significant responsibility,
     for example within a bibliographic element.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">예를 들어 서지 요소 내에서 지적 책임을 나타내는 요소를 모아 놓는다.</desc>
@@ -2071,7 +2214,7 @@ expliquer d'autres parties d'un document.</desc>
     <memberOf key="model.biblPart"/>
     
   </classes>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="DIVTOP" type="model" ident="model.divWrapper">
+</classSpec><classSpec module="tei" xml:id="DIVTOP" type="model" ident="model.divWrapper">
   <desc versionDate="2007-10-02" xml:lang="en">groups elements which can appear at either top or bottom of a
   textual division.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역 상단 또는 하단에 나타날 수 있는 요소를 모아 놓는다.</desc>
@@ -2088,7 +2231,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDTB">4.2. Elements Common to All Divisions</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.divTopPart">
+</classSpec><classSpec module="tei" type="model" ident="model.divTopPart">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements which can occur only at the beginning of a text division.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역의 시작부에만 나타날 수 있는 요소를 모아 놓는다.</desc>
   <desc versionDate="2008-04-06" xml:lang="es">agrupa los elementos que pueden aparecer solamente al
@@ -2104,7 +2247,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">4.6. Title Pages</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.divTop">
+</classSpec><classSpec module="tei" type="model" ident="model.divTop">
   <desc versionDate="2007-10-02" xml:lang="en">groups elements appearing at  the beginning of a
   text division.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역 시작에 나타나는 요소를 모아 놓는다.</desc>
@@ -2118,7 +2261,7 @@ division de texte.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDTB">4.2. Elements Common to All Divisions</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="DRFRONT" type="model" ident="model.frontPart.drama">
+</classSpec><classSpec module="tei" xml:id="DRFRONT" type="model" ident="model.frontPart.drama">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements which appear at the level of divisions within front or back matter of
     performance texts only.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">단지 공연 텍스트 앞쪽 자료 또는 뒤쪽 자료 내의 구역 층위에서 나타나는 요소를 모아 놓는다.</desc>
@@ -2138,7 +2281,7 @@ division de texte.</desc>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRFAB">7.1. Front and Back Matter
  </ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="FMCHUNK" type="model" ident="model.pLike.front">
+</classSpec><classSpec module="tei" xml:id="FMCHUNK" type="model" ident="model.pLike.front">
   <desc versionDate="2007-10-03" xml:lang="en">groups paragraph-like elements which can occur as direct constituents of front matter.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">앞쪽 자료의 직접 구성성분으로 나타날 수 있는 문단 같은 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">未提供完整標題頁時，匯集的元素可顯示為正文前資訊的直接組成要素。</desc>
@@ -2152,7 +2295,7 @@ division de texte.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">4.6. Title Pages</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.divBottomPart">
+</classSpec><classSpec module="tei" type="model" ident="model.divBottomPart">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements which can occur only at the end of a text
   division.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역의 종료부에만 나타날 수 있는 요소를 모아 놓는다.</desc>
@@ -2167,7 +2310,7 @@ fin d'une division de texte.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">4.6. Title Pages</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="DIVBOT" type="model" ident="model.divBottom">
+</classSpec><classSpec module="tei" xml:id="DIVBOT" type="model" ident="model.divBottom">
   <desc versionDate="2007-10-02" xml:lang="en">groups elements appearing at the end of a text
     division.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역의 종료부에 나타타는 요소를 모아 놓는다.</desc>
@@ -2183,7 +2326,7 @@ fin d'une division de texte.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDTB">4.2. Elements Common to All Divisions</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="CHOOSEABLE" type="model" ident="model.choicePart">
+</classSpec><classSpec module="tei" xml:id="CHOOSEABLE" type="model" ident="model.choicePart">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements (other than <gi>choice</gi> itself) which can be used within a
     <gi>choice</gi> alternation.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko"><gi>choice</gi> 대체 내에서 사용될 수 있는 (<gi>choice</gi> 외의) 요소를
@@ -2202,7 +2345,7 @@ fin d'une division de texte.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COED">3.4. Simple Editorial Changes</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.imprintPart">
+</classSpec><classSpec module="tei" type="model" ident="model.imprintPart">
   <desc versionDate="2005-11-15" xml:lang="en">groups the bibliographic elements which occur inside imprints.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">간기 내에 나타날 수 있는 서지 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集出現於版本說明內的書目元素。</desc>
@@ -2219,7 +2362,7 @@ fin d'une division de texte.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBI">3.11. Bibliographic Citations and References</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.textDescPart">
+</classSpec><classSpec module="tei" type="model" ident="model.textDescPart">
   
   <desc versionDate="2012-03-14" xml:lang="en">groups elements used to categorize a text for example in terms of its situational
     parameters.</desc>
@@ -2233,7 +2376,7 @@ fin d'une division de texte.</desc>
   <desc versionDate="2007-01-21" xml:lang="it">elementi utilizzati per categorizzare un testo, per
     esempio in termini di relativi parametri situazionali</desc>
   <classes/>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.addressLike">
+</classSpec><classSpec module="tei" type="model" ident="model.addressLike">
   <desc versionDate="2007-10-02" xml:lang="en">groups elements used to represent a postal or email address.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">우편 또는 전자메일 주소를 나타내는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的詞組層次元素代表郵寄或電子郵件地址。</desc>
@@ -2251,7 +2394,7 @@ fin d'une division de texte.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#ST">1. The TEI Infrastructure</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="NAMING" type="model" ident="model.nameLike">
+</classSpec><classSpec module="tei" xml:id="NAMING" type="model" ident="model.nameLike">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements which name or refer to a person, place, or organization.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인물, 장소, 또는 조직의 이름 또는 지시를 나타내는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的空白元素可出現於TEI文件內的任何位置。</desc>
@@ -2282,7 +2425,7 @@ fin d'une division de texte.</desc>
   <remarks xml:lang="ja" versionDate="2008-04-05">
     <p> 日付欄，住所情報，責任表示等に現れる，名前を示す要素の親集合． </p>
   </remarks>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="GLOBINCL" type="model" ident="model.global">
+</classSpec><classSpec module="tei" xml:id="GLOBINCL" type="model" ident="model.global">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements which may appear at any point within a TEI text.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">TEI 텍스트 내의 어떤 지점에서 나타날 수 있는 요소를 모아 놓는다.</desc>
   <desc versionDate="2008-04-05" xml:lang="ja">TEIデータ内のどこでも出現可能な要素をまとめる．</desc>
@@ -2295,7 +2438,7 @@ fin d'une division de texte.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="BIBLPART" type="model" ident="model.biblPart">
+</classSpec><classSpec module="tei" xml:id="BIBLPART" type="model" ident="model.biblPart">
   <desc versionDate="2007-10-02" xml:lang="en">groups elements which represent components of a bibliographic description.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">서지 기술의 성분을 표상하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集可出現於書目引用元素內的元素。</desc>
@@ -2309,7 +2452,7 @@ fin d'une division de texte.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBI">3.11. Bibliographic Citations and References</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="CLFRONT" type="model" ident="model.frontPart">
+</classSpec><classSpec module="tei" xml:id="CLFRONT" type="model" ident="model.frontPart">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements which appear at the level of divisions within front or back matter.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">전면부 또는 후면부 자료 내에서 구역 층위에 나타나는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素出現於正文前或後資訊內的區段層次中。</desc>
@@ -2325,7 +2468,7 @@ fin d'une division de texte.</desc>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRFAB">7.1. Front and Back Matter
  </ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="DATA" type="model" ident="model.pPart.data">
+</classSpec><classSpec module="tei" xml:id="DATA" type="model" ident="model.pPart.data">
   <desc versionDate="2005-10-10" xml:lang="en">groups phrase-level elements containing names, dates, numbers, measures, and similar data.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">이름, 날짜, 수, 측정, 그리고 유사 데이터를 포함하는 구-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集包含名稱、日期、數字、度量和類似數據的詞組層次元素。</desc>
@@ -2343,7 +2486,7 @@ fin d'une division de texte.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONA">3.5. Names, Numbers, Dates, Abbreviations, and Addresses</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="INTER" type="model" ident="model.inter">
+</classSpec><classSpec module="tei" xml:id="INTER" type="model" ident="model.inter">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements which can appear either within or between paragraph-like elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">문단 같은 요소 내에서 또는 그 사이에서 나타날 수 있는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集中間層次的元素：可出現於段落內與段落之間，或方塊性層次內與層次間。</desc>
@@ -2364,7 +2507,7 @@ fin d'une division de texte.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="COMMON" type="model" ident="model.common">
+</classSpec><classSpec module="tei" xml:id="COMMON" type="model" ident="model.common">
   <desc versionDate="2005-10-10" xml:lang="en">groups common chunk- and inter-level elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">공통적인 덩어리 및 상호 층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集通用的方塊性與中間層次元素。</desc>
@@ -2394,7 +2537,7 @@ fin d'une division de texte.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="PHRASE" type="model" ident="model.phrase">
+</classSpec><classSpec module="tei" xml:id="PHRASE" type="model" ident="model.phrase">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements which can occur at the level of individual words or phrases.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">개별 단어 또는 구 층위에서 나타날 수 있는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素可出現於個人字詞層次上。</desc>
@@ -2422,7 +2565,7 @@ fin d'une division de texte.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.limitedPhrase">
+</classSpec><classSpec module="tei" type="model" ident="model.limitedPhrase">
   <desc versionDate="2008-02-23" xml:lang="en">groups phrase-level elements excluding those elements primarily intended for transcription
     of existing sources.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">존재하는 원본의 전사의 주요 목적에 해당하는 요소를 배제한 구 층위 요소를 모아 놓는다.</desc>
@@ -2437,7 +2580,7 @@ fin d'une division de texte.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" ident="model.divLike" module="tei" type="model">
+</classSpec><classSpec ident="model.divLike" module="tei" type="model">
   <desc versionDate="2007-10-02" xml:lang="en">groups elements used to represent un-numbered generic structural divisions.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">숫자화되지 않은 일반 구조 구역을 표상하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素代表未編號的一般結構性區段。</desc>
@@ -2448,7 +2591,7 @@ fin d'une division de texte.</desc>
     partizioni testuali generiche non numerate</desc>
   <desc versionDate="2007-05-04" xml:lang="es">agrupa los elementos usados para representar divisiones
     estructurales recursivamente.</desc>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" ident="model.divGenLike" module="tei" type="model">
+</classSpec><classSpec ident="model.divGenLike" module="tei" type="model">
   <desc versionDate="2007-02-11" xml:lang="en">groups elements used to represent a structural division which is generated rather than
     explicitly present in the source.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">원본에 분명하게 나타났다기보다 생성된 구조적 구역을 표상하는 요소를 모아 놓는다.</desc>
@@ -2460,7 +2603,7 @@ fin d'une division de texte.</desc>
     partizione testuale generata piuttosto che esplicitamente presente nella fonte</desc>
   <desc versionDate="2007-05-04" xml:lang="es">agrupa elementos usados para representar divisiones
     estructurales que se generan explícitamente porque estan presentes en la fuente.</desc>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" ident="model.div1Like" module="tei" type="model">
+</classSpec><classSpec ident="model.div1Like" module="tei" type="model">
   <desc versionDate="2007-02-11" xml:lang="en">groups top-level structural divisions.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">최상위 층위 구조 구역을 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集頂端層次的結構性區段。</desc>
@@ -2469,30 +2612,30 @@ fin d'une division de texte.</desc>
     haut.</desc>
   <desc versionDate="2007-11-06" xml:lang="it">raggruppa partizioni testuali di primo livello</desc>
   <desc versionDate="2007-05-04" xml:lang="es">agrupa divisiones estructurales de nivel superior.</desc>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="SOURCEDESC" type="model" ident="model.sourceDescPart">
+</classSpec><classSpec module="tei" xml:id="SOURCEDESC" type="model" ident="model.sourceDescPart">
   <desc versionDate="2007-10-22" xml:lang="en">groups elements which may be used inside <gi>sourceDesc</gi> and appear multiple times.</desc>
   <desc versionDate="2009-01-05" xml:lang="fr">regroupe des éléments que l'on peut utiliser plusieurs fois dans l'élément <gi>sourceDesc</gi>.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko"><gi>sourceDesc</gi> 내부에 사용되어 여러 번 출현할 수 있는 요소들을 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集可在<gi>sourceDesc</gi>中使用並且可多次出現的元素</desc>
   <desc versionDate="2008-04-05" xml:lang="ja">要素<gi>sourceDesc</gi>内で，複数回出現可能な要素をまとめる．</desc>
-  <desc versionDate="2006-10-18" xml:lang="de"> umfasst Elemente, die innerhalb von <gi>sourceDesc</gi>
+  <desc versionDate="2018-07-18" xml:lang="de"> umfasst Elemente, die innerhalb des <gi>sourceDesc</gi>-Elements
     verwendet werden und mehrfach auftreten können.</desc>
   <desc versionDate="2007-05-04" xml:lang="es">agrupa los elementos que pueden usarse al interno de
       <gi>sourceDesc</gi> (descripción de la fuente) y que aparecen en diversas ocasiones.</desc>
   <desc versionDate="2007-01-21" xml:lang="it">raggruppa gli elementi utilizzati all'interno di
       <gi>sourceDesc</gi> e che appaiono più volte.</desc>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" xml:id="PROFILE" type="model" ident="model.profileDescPart">
+</classSpec><classSpec module="tei" xml:id="PROFILE" type="model" ident="model.profileDescPart">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements which may be used inside <gi>profileDesc</gi>
 and appear multiple times.</desc>
   <desc versionDate="2009-10-06" xml:lang="fr">regroupe des éléments que l'on peut utiliser plusieurs fois dans l'élément <gi>profileDesc</gi>.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko"><gi>profileDesc</gi> 내부에 사용되어 여러 번 출현할 수 있는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集可用於元素<gi>profileDesc</gi>內，且多次出現的元素</desc>
   <desc versionDate="2008-04-05" xml:lang="ja">要素<gi>profileDesc</gi>内で使われ，複数回出現可能な要素をまとめる．</desc>
-  <desc versionDate="2006-10-18" xml:lang="de">umfasst Elemente die in der<gi>profileDesc</gi> genutzt werden und mehrfach auftreten
+  <desc versionDate="2018-07-18" xml:lang="de">umfasst Elemente, die innerhalb des <gi>profileDesc</gi>-Elements genutzt werden und mehrfach auftreten
   können.</desc>
   <desc versionDate="2007-05-04" xml:lang="es">agrupa los elementos que pueden ser usados al interno de <gi>profileDesc</gi> y que aparecen en diversas ocasiones.</desc>
   <desc versionDate="2007-01-21" xml:lang="it">raggruppa gli elementi utilizzati all'interno di <gi>profileDesc</gi> e che appaiono più volte.</desc>
-</classSpec><macroSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="pe" ident="macro.paraContent">
+</classSpec><macroSpec module="tei" ident="macro.paraContent">
   <gloss versionDate="2005-01-14" xml:lang="en">paragraph content</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">문단 내용</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">段落內容</gloss>
@@ -2523,7 +2666,7 @@ and appear multiple times.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</macroSpec><macroSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="pe" ident="macro.phraseSeq">
+</macroSpec><macroSpec module="tei" ident="macro.phraseSeq">
   <gloss versionDate="2005-01-14" xml:lang="en">phrase sequence</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">구 연쇄</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">詞組序列</gloss>
@@ -2544,6 +2687,7 @@ and appear multiple times.</desc>
       <alternate minOccurs="0" maxOccurs="unbounded">
         <textNode/>
         <classRef key="model.gLike"/>
+        <classRef key="model.qLike"/>
         <classRef key="model.phrase"/>
         <classRef key="model.global"/>
       </alternate>
@@ -2552,7 +2696,7 @@ and appear multiple times.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STECST">1.4.1. Standard Content Models</ref>
   </listRef>
-</macroSpec><macroSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="pe" ident="macro.phraseSeq.limited">
+</macroSpec><macroSpec module="tei" ident="macro.phraseSeq.limited">
   <gloss versionDate="2007-04-14" xml:lang="en">limited phrase sequence</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">한정된 구 연쇄</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">限定詞組序列</gloss>
@@ -2580,7 +2724,7 @@ used for transcribing extant documents.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STECST">1.4.1. Standard Content Models</ref>
   </listRef>
-</macroSpec><macroSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="pe" ident="macro.specialPara">
+</macroSpec><macroSpec module="tei" ident="macro.specialPara">
   <gloss versionDate="2005-01-14" xml:lang="en">'special' paragraph content</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">특별 문단 내용</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">「特殊」段落內容</gloss>
@@ -3345,21 +3489,21 @@ value.</desc>
   
 </dataSpec><dataSpec module="tei" ident="teidata.pattern">
   
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-10-18" xml:lang="en">defines attribute values which
+  <desc versionDate="2007-10-18" xml:lang="en">defines attribute values which
     are expressed as a regular expression.</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-12-20" xml:lang="ko">정규표현으로 표시된 속성 값을 정의한다.</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍以固定方法表示</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2008-04-05" xml:lang="ja">正規表現を属性値として定義する．</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-06-12" xml:lang="fr">définit la gamme des valeurs
+  <desc versionDate="2007-12-20" xml:lang="ko">정규표현으로 표시된 속성 값을 정의한다.</desc>
+  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍以固定方法表示</desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">正規表現を属性値として定義する．</desc>
+  <desc versionDate="2007-06-12" xml:lang="fr">définit la gamme des valeurs
     d'attributs exprimant une expression régulière</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-05-04" xml:lang="es">define una gama de valores de
+  <desc versionDate="2007-05-04" xml:lang="es">define una gama de valores de
     atributos expresados como una expresión regular.</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2007-01-21" xml:lang="it">definisce una gamma di valori di
+  <desc versionDate="2007-01-21" xml:lang="it">definisce una gamma di valori di
     attributi rappresentati come espressione regolare</desc>
-  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+  <content>
     <dataRef name="token"/>
   </content>
-  <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2013-03-18" xml:lang="en">
+  <remarks versionDate="2013-03-18" xml:lang="en">
     <p>
       <cit rend="display">
         <quote>A regular expression, often called a <term>pattern</term>, is an
@@ -3380,7 +3524,7 @@ value.</desc>
       supported by XSD Schema. </p>
     
   </remarks>
-  <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="ja" versionDate="2008-04-05">
+  <remarks xml:lang="ja" versionDate="2008-04-05">
     <p>
       <cit>
         <quote> 正規表現は，よく<term>パタン/パターン</term>ともいわれるもので，
@@ -3393,7 +3537,7 @@ value.</desc>
       </cit>
     </p>
   </remarks>
-  <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0" versionDate="2009-05-25" xml:lang="fr">
+  <remarks versionDate="2009-05-25" xml:lang="fr">
     <p>
       <cit>
         <quote>Une expression régulière, souvent appelée <term>modèle</term>,
@@ -3604,7 +3748,7 @@ defined in <ptr target="#XSLT2"/>
   </alternate>
   </content>
   
-</dataSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="model" ident="model.resourceLike" predeclare="true">
+</dataSpec><classSpec module="tei" type="model" ident="model.resourceLike" predeclare="true">
   <desc versionDate="2016-02-19" xml:lang="en">groups separate elements
     which constitute the content of a digital resource, as opposed to its
     metadata.</desc>
@@ -3618,7 +3762,7 @@ en-tête et un texte, constitue un document TEI.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" type="atts" ident="att.milestoneUnit">
+</classSpec><classSpec module="core" type="atts" ident="att.milestoneUnit">
   <desc versionDate="2012-07-16" xml:lang="en">provides an attribute to indicate the type of section which is changing at a specific milestone.</desc>
   <attList>
     <attDef ident="unit" usage="req">
@@ -3809,7 +3953,7 @@ Elements</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD54M">2.3.6.3. Milestone Method</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD54">2.3.6. The Reference System Declaration</ref>
   </listRef>
-</classSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="p">
+</classSpec><elementSpec module="core" ident="p">
   <gloss versionDate="2005-01-14" xml:lang="en">paragraph</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">문단</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">段落</gloss>
@@ -3835,10 +3979,10 @@ Elements</ref>
   <content>
     <macroRef key="macro.paraContent"/>
   </content>
-  <constraintSpec ident="abstractModel-p" scheme="schematron">
+  <constraintSpec ident="abstractModel-structure-p" scheme="schematron">
     <constraint>
-      <report xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" test="not(ancestor::floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure                )">
-        Abstract model violation: Paragraphs may not contain other paragraphs or ab elements.
+      <report xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure                )">
+        Abstract model violation: Paragraphs may not occur inside other paragraphs or ab elements.
       </report>
     </constraint>
   </constraintSpec>
@@ -3881,7 +4025,7 @@ Elements</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COPA">3.1. Paragraphs</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRPAL">7.2.5. Speech Contents</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="foreign">
+</elementSpec><elementSpec module="core" ident="foreign">
   <gloss versionDate="2007-12-20" xml:lang="ko">외국어</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">外文</gloss>
   <gloss versionDate="2009-01-06" xml:lang="fr">étranger</gloss>
@@ -3982,7 +4126,7 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQHF">3.3.2.1. Foreign Words or Expressions</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="emph">
+</elementSpec><elementSpec module="core" ident="emph">
   <gloss versionDate="2005-01-14" xml:lang="en">emphasized</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">강조</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">強調</gloss>
@@ -4048,7 +4192,7 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQHE">3.3.2.2. Emphatic Words and Phrases</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQH">3.3.2. Emphasis, Foreign Words, and Unusual Language</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="hi">
+</elementSpec><elementSpec module="core" ident="hi">
   <gloss versionDate="2005-01-14" xml:lang="en">highlighted</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">강조체</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">顯目標示</gloss>
@@ -4096,7 +4240,7 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQHE">3.3.2.2. Emphatic Words and Phrases</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQH">3.3.2. Emphasis, Foreign Words, and Unusual Language</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="quote">
+</elementSpec><elementSpec module="core" ident="quote">
   <gloss versionDate="2005-01-14" xml:lang="en">quotation</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">인용</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">引文</gloss>
@@ -4120,6 +4264,7 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
     <memberOf key="model.quoteLike"/>
     <memberOf key="att.typed"/>
     
+    <memberOf key="att.notated"/>
   </classes>
   <content>
     <macroRef key="macro.specialPara"/>
@@ -4163,7 +4308,7 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQQ">3.3.3. Quotation</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSGRP">4.3.1. Grouped Texts</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="term">
+</elementSpec><elementSpec module="core" ident="term">
   <gloss versionDate="2009-01-06" xml:lang="fr">terme</gloss>
   <gloss versionDate="2016-11-25" xml:lang="de">Fachbegriff</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">contains a single-word, multi-word, or symbolic
@@ -4282,7 +4427,7 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQU">3.3.4. Terms, Glosses, Equivalents, and Descriptions</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="corr">
+</elementSpec><elementSpec module="core" ident="corr">
   <gloss versionDate="2006-03-20" xml:lang="en">correction</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">정정</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">更正</gloss>
@@ -4361,7 +4506,7 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COEDCOR">3.4.1. Apparent Errors</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="choice">
+</elementSpec><elementSpec module="core" ident="choice">
   <gloss versionDate="2009-01-06" xml:lang="fr">choix</gloss>
   <gloss versionDate="2016-11-25" xml:lang="de">Alternative</gloss>  
   <desc versionDate="2005-01-14" xml:lang="en">groups a number of alternative encodings for the same point in
@@ -4380,14 +4525,12 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
     <memberOf key="model.pPart.editorial"/>
     
   </classes>
-  <content>
-    
-      <alternate minOccurs="0" maxOccurs="unbounded">
-        <classRef key="model.choicePart"/>
-        <elementRef key="choice"/>
-      </alternate>
-    
-  </content>
+<content>
+  <alternate minOccurs="2" maxOccurs="unbounded">
+    <classRef key="model.choicePart"/>
+    <elementRef key="choice"/>
+  </alternate>
+</content>
   <exemplum xml:lang="en">
     <p>An American encoding of <title>Gulliver's Travels</title> which
             retains the British spelling but also provides a version
@@ -4485,7 +4628,7 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COED">3.4. Simple Editorial Changes</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="orig">
+</elementSpec><elementSpec module="core" ident="orig">
   <gloss versionDate="2005-01-14" xml:lang="en">original form</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">원형식</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">原文格式</gloss>
@@ -4583,7 +4726,7 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
 Normalization</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html#TC">12. Critical Apparatus</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="gap">
+</elementSpec><elementSpec module="core" ident="gap">
   <gloss versionDate="2008-12-09" xml:lang="fr">omission</gloss>
   <gloss versionDate="2016-11-25" xml:lang="de">Auslassung</gloss>
   <desc versionDate="2008-01-24" xml:lang="en">indicates a point where material has been omitted in a transcription, whether for editorial
@@ -4612,6 +4755,7 @@ Normalization</ref>
     <memberOf key="model.global.edit"/>
     
     
+    <memberOf key="att.dimensions"/>
   </classes>
   <content>
         <alternate minOccurs="0" maxOccurs="unbounded">
@@ -4633,7 +4777,7 @@ Normalization</ref>
       <desc versionDate="2017-02-06" xml:lang="fr">donne la raison de l'omission</desc>
       <desc versionDate="2007-05-04" xml:lang="es">declara la causa de la omisión</desc>
       <desc versionDate="2007-01-21" xml:lang="it">indica il motivo dell'omisione</desc>
-      <desc versionDate="2016-11-25" xml:lang="de">gibt den Grund für die Auslassung an</desc>
+      <desc versionDate="2017-02-07" xml:lang="de">gibt den Grund für die Auslassung an</desc>
       <datatype maxOccurs="unbounded">
 	<dataRef key="teidata.enumerated"/>
       </datatype>
@@ -4678,29 +4822,6 @@ Normalization</ref>
 	  <gloss versionDate="2017-02-06" xml:lang="fr">échantillonnage</gloss>
 	</valItem>
       </valList>
-    </attDef>
-  <attDef ident="hand" usage="opt" validUntil="2017-08-01">
-      <gloss versionDate="2016-11-25" xml:lang="de">Schreibhand</gloss>
-      <desc versionDate="2005-01-14" xml:lang="en">in the case of text omitted from the transcription because of deliberate deletion by an
-        identifiable hand, indicates the hand which made the deletion.</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">어떤 특정 수작업자가 의도적으로 전사본에서 생략된 텍스트의 경우, 그 생략의 장본인을 표시한다.</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">若省略的內容是被身分明確的抄寫員由轉錄當中刻意刪除，則在此表明抄寫員的身分。</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">特定可能な筆致による熟慮した削除の場合，転記の際にその筆致を示す．</desc>
-      <desc versionDate="2007-06-12" xml:lang="fr">lorsque du texte est omis de la transcription en
-        raison d'une suppression volontaire par une main identifiable, indique quelle est cette
-        main.</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">en el caso de texto omitido en la transcripción a
-        causa de una supresión deliberada por una mano identidicada, indica la mano que ha ejecutado
-        la omisión.</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">nel caso in cui il testo sia stato volontariamente
-        omesso dalla trascrizione da una mano identificabile, indica la mano autrice dell'omissione</desc>
-      <desc versionDate="2016-11-25" xml:lang="de">im Falle von Text, der in der Transkription wegen bewusster Tilgung 
-        durch eine identifizierbare Schreibhand weggelassen wird. Bezeichnet die Schreibhand, die die Tilgung vorgenommen hat.</desc>
-      <datatype><dataRef key="teidata.pointer"/></datatype>
-    <remarks versionDate="2016-02-20" xml:lang="p"><p>The hand responsible for the deletion
-      should be specified on a surrounding <gi>del</gi> element rather than directly on the 
-      <gi>gap</gi> element. </p></remarks>
-    
     </attDef>
     <attDef ident="agent" usage="opt">
       <gloss versionDate="2016-11-25" xml:lang="de">Ursache</gloss>
@@ -4762,44 +4883,44 @@ Normalization</ref>
     </attDef>
   </attList>
   <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <gap quantity="4" unit="chars" reason="illegible"/>
     </egXML>
   </exemplum>
   <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <gap quantity="4" unit="chars" reason="illegible"/>
     </egXML>
   </exemplum>
   <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <gap quantity="1" unit="essay" reason="sampling"/>
     </egXML>
   </exemplum>
   <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <gap quantity="4" unit="字" reason="無法識讀"/>
     </egXML>
   </exemplum>
   <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <gap quantity="1" unit="文章" reason="抽樣"/>
     </egXML>
   </exemplum>
   <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <gap quantity="1" unit="essay" reason="sampling"/>
     </egXML>
   </exemplum>
   <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <del>
         <gap atLeast="4" atMost="8" unit="chars" reason="illegible"/>
       </del>
     </egXML>
   </exemplum>
   <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <gap extent="several lines" reason="lost"/>
     </egXML>
   </exemplum>
@@ -4847,7 +4968,7 @@ Normalization</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COEDADD">3.4.3. Additions, Deletions, and Omissions</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="name">
+</elementSpec><elementSpec module="core" ident="name">
   <gloss versionDate="2005-01-14" xml:lang="en">name, proper noun</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">이름, 고유명사</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">名稱，特定名稱</gloss>
@@ -4907,7 +5028,7 @@ Normalization</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONARS">3.5.1. Referring Strings</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="core" ident="measure"><gloss versionDate="2009-01-06" xml:lang="fr">mesure</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a word or phrase referring to some quantity of an object or commodity, usually
+</elementSpec><elementSpec rend="change" module="core" ident="measure"><gloss versionDate="2009-01-06" xml:lang="fr">mesure</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a word or phrase referring to some quantity of an object or commodity, usually
         comprising a number, a unit, and a commodity name.</desc><desc versionDate="2007-12-20" xml:lang="ko">개체 또는 물체의 수량을 지시하는 단어 또는 구를 포함한다. 이들은 숫자, 단위, 물체명으로
         구성되어 있다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含用來表示某物品數量的字詞，通常是由數字、單位和物品名稱所組成。</desc><desc versionDate="2008-04-05" xml:lang="ja">ある対象や商品の大きさを表す語句を示す．一般には，数値，単位，商品名 を含む．</desc><desc versionDate="2009-01-06" xml:lang="fr">contient un mot ou une expression faisant référence à
         la quantité d'un objet ou d'un produit, comprenant en général un nombre, une unité et le nom
@@ -4983,7 +5104,7 @@ Normalization</ref>
   </exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONANU">3.5.3. Numbers and
 Measures</ref>
-  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="date">
+  </listRef></elementSpec><elementSpec module="core" ident="date">
   <gloss versionDate="2009-01-06" xml:lang="fr">date</gloss>
   <gloss versionDate="2016-11-25" xml:lang="de">Datum</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">contains a date in any format.</desc>
@@ -5001,6 +5122,7 @@ Measures</ref>
     <memberOf key="att.datable"/>
     
     
+    <memberOf key="att.dimensions"/>
     <memberOf key="att.typed"/>
   </classes>
   <content>
@@ -5076,7 +5198,7 @@ Measures</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHSE">15.2.3. The Setting Description</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDDATE">13.3.6. Dates and Times</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="ref">
+</elementSpec><elementSpec module="core" ident="ref">
   <gloss versionDate="2007-07-04" xml:lang="en">reference</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">참조</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW"/>
@@ -5151,7 +5273,7 @@ Measures</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6. Simple Links and Cross-References</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAPT">16.1. Links</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="list">
+</elementSpec><elementSpec module="core" ident="list">
   <gloss versionDate="2007-06-12" xml:lang="fr">liste</gloss>
   <gloss versionDate="2016-11-25" xml:lang="de">Liste</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">contains any sequence of items organized as a list.</desc>
@@ -5570,7 +5692,7 @@ Measures</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COLI">3.7. Lists</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="item">
+</elementSpec><elementSpec module="core" ident="item">
   <gloss versionDate="2017-06-04" xml:lang="de">Listenpunkt</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">contains one component of a list.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">목록에서 하나의 성분을 포함한다.</desc>
@@ -5669,7 +5791,7 @@ Measures</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COLI">3.7. Lists</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD6">2.6. The Revision Description</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="label">
+</elementSpec><elementSpec module="core" ident="label">
   <gloss versionDate="2009-01-06" xml:lang="fr">étiquette</gloss>
   <gloss versionDate="2017-06-25" xml:lang="de">Label</gloss>
   <desc versionDate="2011-11-05" xml:lang="en">contains any label or heading used to identify part of a text,
@@ -6006,7 +6128,7 @@ entre les Romains.</label>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COLI">3.7. Lists</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="head">
+</elementSpec><elementSpec module="core" ident="head">
   <gloss versionDate="2005-01-14" xml:lang="en">heading</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">표제부</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">標題</gloss>
@@ -6196,7 +6318,7 @@ entre les Romains.</label>
     
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSHD">4.2.1. Headings and Trailers</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="note">
+</elementSpec><elementSpec module="core" ident="note">
   <gloss versionDate="2017-06-25" xml:lang="de">Anmerkung</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">contains a note or annotation.</desc>
   <desc versionDate="2009-01-06" xml:lang="fr">contient une note ou une annotation</desc>
@@ -6413,7 +6535,7 @@ psychological significance.
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBICON">3.11.2.8. Notes and Statement of Language</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html#DITPNO">9.3.5.4. Notes within Entries</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="milestone">
+</elementSpec><elementSpec module="core" ident="milestone">
   <gloss versionDate="2009-01-06" xml:lang="fr">borne</gloss>
   <gloss versionDate="2016-11-29" xml:lang="de">Grenzpunkt</gloss>
   <desc versionDate="2008-06-21" xml:lang="en">marks a boundary point separating any kind of section of a text, typically but not
@@ -6446,9 +6568,7 @@ psychological significance.
     
     
   </classes>
-  <content>
-    
-  </content>
+  <content><empty/></content>
   
   <exemplum xml:lang="mul">
     <egXML xmlns="http://www.tei-c.org/ns/Examples"><milestone n="23" ed="La" unit="Dreissiger"/>
@@ -6500,11 +6620,11 @@ psychological significance.
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CORS5">3.10.3. Milestone
 Elements</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="core" ident="pb"><gloss versionDate="2017-06-14" xml:lang="en">page beginning</gloss><gloss versionDate="2007-12-20" xml:lang="ko">페이지 바꿈</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">分頁</gloss><gloss versionDate="2009-01-06" xml:lang="fr">saut de page</gloss><gloss versionDate="2007-05-04" xml:lang="es">cambio de página</gloss><gloss versionDate="2007-01-21" xml:lang="it">interruzione di pagina</gloss><gloss versionDate="2017-06-25" xml:lang="de">Seitenanfang</gloss><desc versionDate="2017-06-14" xml:lang="en">marks the beginning of a new page in a paginated document.</desc><desc versionDate="2007-12-20" xml:lang="ko">표준 참조 시스템에서 텍스트 페이지와 다음 페이지 사이의 경계를 표지한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">以標準參照系統來標記頁與頁之間的分界線。</desc><desc versionDate="2008-04-05" xml:lang="ja">テキストのページ境界を，標準的な参照システム示す．</desc><desc xml:lang="fr" versionDate="2007-06-12">marque le début d'une
+</elementSpec><elementSpec rend="change" module="core" ident="pb"><gloss versionDate="2017-06-14" xml:lang="en">page beginning</gloss><gloss versionDate="2007-12-20" xml:lang="ko">페이지 바꿈</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">分頁</gloss><gloss versionDate="2009-01-06" xml:lang="fr">saut de page</gloss><gloss versionDate="2007-05-04" xml:lang="es">cambio de página</gloss><gloss versionDate="2007-01-21" xml:lang="it">interruzione di pagina</gloss><gloss versionDate="2017-06-25" xml:lang="de">Seitenanfang</gloss><desc versionDate="2017-06-14" xml:lang="en">marks the beginning of a new page in a paginated document.</desc><desc versionDate="2007-12-20" xml:lang="ko">표준 참조 시스템에서 텍스트 페이지와 다음 페이지 사이의 경계를 표지한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">以標準參照系統來標記頁與頁之間的分界線。</desc><desc versionDate="2008-04-05" xml:lang="ja">テキストのページ境界を，標準的な参照システム示す．</desc><desc xml:lang="fr" versionDate="2007-06-12">marque le début d'une
   page de texte dans un document paginé.</desc><desc versionDate="2007-05-04" xml:lang="es">marca la frontera entre una página de un texto y la
     siguiente en un sistema de referencia estándard.</desc><desc versionDate="2007-01-21" xml:lang="it">indica il limite tra una pagina di un testo e la
     successiva in un sistema di riferimento standard</desc><desc versionDate="2017-06-25" xml:lang="de">markiert den Anfang 
-    einer neuen Seite in einem Dokument mit Seitenzahlen</desc><classes><memberOf key="att.global"/><memberOf key="model.milestoneLike"/><memberOf key="att.typed"/></classes><content/><attList/><exemplum xml:lang="en">
+    einer neuen Seite in einem Dokument mit Seitenzahlen</desc><classes><memberOf key="att.global"/><memberOf key="model.milestoneLike"/><memberOf key="att.typed"/></classes><content><empty/></content><attList/><exemplum xml:lang="en">
                             <p>A page break may be associated with a facsimile image of the page it
                                 introduces by means of the <att>facs</att> attribute</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
@@ -6541,7 +6661,7 @@ Elements</ref>
                         </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CORS5">3.10.3. Milestone
 Elements</ref>
-  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="core" ident="author"><gloss versionDate="2011-11-26" xml:lang="fr">auteur</gloss><gloss versionDate="2017-06-04" xml:lang="de">Autor</gloss><desc versionDate="2011-11-26" xml:lang="en">in a bibliographic reference, contains the name(s) of an
+  </listRef></elementSpec><elementSpec rend="change" module="core" ident="author"><gloss versionDate="2011-11-26" xml:lang="fr">auteur</gloss><gloss versionDate="2017-06-04" xml:lang="de">Autor</gloss><desc versionDate="2011-11-26" xml:lang="en">in a bibliographic reference, contains the name(s) of an
   author, personal or corporate, of a work; for example in the same
   form as that provided by a recognized bibliographic name authority.</desc><desc versionDate="2007-12-20" xml:lang="ko">참고문헌에 작가, 단독 저자, 공동 저자의 이름을 포함한다; 서지 항목의 책임에 관한 1차적 진술.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">在書目參照中，包含一件作品的作者 (群) 姓名，無論是個人或是團體性質；這也是書目項目責任歸屬的主要陳述。</desc><desc versionDate="2008-04-05" xml:lang="ja">書誌情報における，著作者(個人・団体)の名前を示す．書誌項目における歴 任者を示す第一位の記述を示す．</desc><desc versionDate="2009-01-06" xml:lang="fr">dans une référence bibliographique contient le nom de la
     (des) personne(s) physique(s) ou du collectif, auteur(s) d'une oeuvre ; par exemple dans la même forme que celle utilisée par une référence bibliographique reconnue.</desc><desc versionDate="2007-05-04" xml:lang="es">en una referencia bibliográfica, contiene el nombre del
@@ -6619,7 +6739,7 @@ places, in particular where  multiple names are given.</p>
   </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBICOR">3.11.2.2. Titles, Authors, and Editors</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD21">2.2.1. The Title Statement</ref>
-  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="respStmt">
+  </listRef></elementSpec><elementSpec module="core" ident="respStmt">
   <gloss versionDate="2005-03-01" xml:lang="en">statement of responsibility</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">책임성 진술</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">責任陳述</gloss>
@@ -6733,7 +6853,7 @@ places, in particular where  multiple names are given.</p>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD22">2.2.2. The Edition Statement</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD26">2.2.5. The Series Statement</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="resp">
+</elementSpec><elementSpec module="core" ident="resp">
   <gloss versionDate="2007-07-04" xml:lang="en">responsibility</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">책임성</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW"/>
@@ -6814,7 +6934,7 @@ places, in particular where  multiple names are given.</p>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD22">2.2.2. The Edition Statement</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD26">2.2.5. The Series Statement</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="core" ident="title"><gloss versionDate="2007-06-12" xml:lang="fr">titre</gloss><gloss versionDate="2017-06-04" xml:lang="de">Titel</gloss><desc versionDate="2008-10-25" xml:lang="en">contains a title for any kind of work.</desc><desc versionDate="2007-12-20" xml:lang="ko">다양한 종류의 작업에 대한 전체 제목을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含任何種類作品的完整題名
+</elementSpec><elementSpec rend="change" module="core" ident="title"><gloss versionDate="2007-06-12" xml:lang="fr">titre</gloss><gloss versionDate="2017-06-04" xml:lang="de">Titel</gloss><desc versionDate="2008-10-25" xml:lang="en">contains a title for any kind of work.</desc><desc versionDate="2007-12-20" xml:lang="ko">다양한 종류의 작업에 대한 전체 제목을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含任何種類作品的完整題名
                     。</desc><desc versionDate="2008-04-05" xml:lang="ja">作品の完全なタイトルを示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient le titre complet d'une oeuvre quelconque</desc><desc versionDate="2007-05-04" xml:lang="es">contiene el título completo de una obra de
                     cualquier tipo.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene il titolo completo di una qualsiaisi                    opera.</desc><desc versionDate="2017-06-04" xml:lang="de">beinhaltet einen Titel eines beliebigen Werks.</desc><classes><memberOf key="att.global"/><memberOf key="model.emphLike"/><memberOf key="att.typed"/><memberOf key="att.datable"/></classes><content><macroRef key="macro.paraContent"/></content><constraintSpec mode="add" ident="noEmptyTitle" scheme="schematron">
         <constraint>
@@ -7256,7 +7376,7 @@ epistemology, methodology and history of
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBICOR">3.11.2.2. Titles, Authors, and Editors</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD21">2.2.1. The Title Statement</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD26">2.2.5. The Series Statement</ref>
-  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="publisher">
+  </listRef></elementSpec><elementSpec module="core" ident="publisher">
   <gloss versionDate="2009-01-06" xml:lang="fr">éditeur</gloss>
   <gloss versionDate="2017-06-13" xml:lang="de">Verlag</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">provides the name of the organization responsible for the publication or distribution of a
@@ -7273,6 +7393,7 @@ epistemology, methodology and history of
     bibliografischen Objekts verantwortlich ist.</desc>
   <classes>
     <memberOf key="att.global"/>
+    
     <memberOf key="model.imprintPart"/>
     
   </classes>
@@ -7327,7 +7448,7 @@ epistemology, methodology and history of
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBICOI">3.11.2.4. Imprint, Size of a Document, and Reprint Information</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD24">2.2.4. Publication, Distribution, Licensing, etc.</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="pubPlace">
+</elementSpec><elementSpec module="core" ident="pubPlace">
   <gloss versionDate="2007-07-04" xml:lang="en">publication place</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">출판지</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW"/>
@@ -7375,7 +7496,7 @@ epistemology, methodology and history of
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBICOI">3.11.2.4. Imprint, Size of a Document, and Reprint Information</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="bibl">
+</elementSpec><elementSpec module="core" ident="bibl">
   <gloss versionDate="2005-01-14" xml:lang="en">bibliographic citation</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">서지 인용</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">書目資料</gloss>
@@ -7590,7 +7711,7 @@ relatedItem element must be empty</sch:report>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBIRI">3.11.2.7. Related Items</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="l">
+</elementSpec><elementSpec module="core" ident="l">
   <gloss versionDate="2005-01-14" xml:lang="en">verse line</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">운문 시행</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">詩行</gloss>
@@ -7643,7 +7764,7 @@ relatedItem element must be empty</sch:report>
     </egXML>
   </exemplum>
   <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <l met="平平仄仄平" part="Y"/>
     </egXML>
   </exemplum>
@@ -7652,7 +7773,7 @@ relatedItem element must be empty</sch:report>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV">3.12. Passages of Verse or Drama</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRPAL">7.2.5. Speech Contents</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="lg">
+</elementSpec><elementSpec module="core" ident="lg">
   <gloss versionDate="2005-01-14" xml:lang="en">line group</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">시행군</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">行組</gloss>
@@ -7802,7 +7923,7 @@ relatedItem element must be empty</sch:report>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV">3.12. Passages of Verse or Drama</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRPAL">7.2.5. Speech Contents</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="sp">
+</elementSpec><elementSpec module="core" ident="sp">
   <gloss versionDate="2005-01-14" xml:lang="en">speech</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">대화</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">演說</gloss>
@@ -7827,7 +7948,7 @@ relatedItem element must be empty</sch:report>
   <classes>
     <memberOf key="att.global"/>
     <memberOf key="model.divPart"/>
-    
+    <memberOf key="att.ascribed.directed"/>
   </classes>
   <content>
     <sequence>
@@ -7928,7 +8049,7 @@ relatedItem element must be empty</sch:report>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV">3.12. Passages of Verse or Drama</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRSP">7.2.2. Speeches and Speakers</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="core" ident="stage">
+</elementSpec><elementSpec module="core" ident="stage">
   <gloss versionDate="2005-01-14" xml:lang="en">stage direction</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">무대지시</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">舞台指示</gloss>
@@ -7948,7 +8069,7 @@ relatedItem element must be empty</sch:report>
         scena all'interno di un testo o di un frammento di testo drammatico.</desc>
   <desc versionDate="2017-06-13" xml:lang="de">enthält jegliche Regieanweisung in einem Dramentext oder -fragment.</desc>
   <classes>
-    
+    <memberOf key="att.ascribed.directed"/>
     <memberOf key="att.global"/>
     
     <memberOf key="model.stageLike"/>
@@ -8143,7 +8264,7 @@ by the stage direction.</p>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV">3.12. Passages of Verse or Drama</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRSTA">7.2.4. Stage Directions</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="textstructure" ident="TEI"><gloss versionDate="2005-12-24" xml:lang="en">TEI document</gloss><gloss versionDate="2007-12-20" xml:lang="ko">TEI 문서</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">TEI文件</gloss><gloss versionDate="2007-06-12" xml:lang="fr">document TEI</gloss><gloss versionDate="2006-10-18" xml:lang="de">TEI-Dokument</gloss><gloss versionDate="2007-05-04" xml:lang="es">documento TEI</gloss><gloss versionDate="2007-01-21" xml:lang="it">documento TEI</gloss><desc versionDate="2017-02-07" xml:lang="en">contains a single TEI-conformant document, combining
+</elementSpec><elementSpec rend="change" module="textstructure" ident="TEI"><gloss versionDate="2005-12-24" xml:lang="en">TEI document</gloss><gloss versionDate="2007-12-20" xml:lang="ko">TEI 문서</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">TEI文件</gloss><gloss versionDate="2007-06-12" xml:lang="fr">document TEI</gloss><gloss versionDate="2006-10-18" xml:lang="de">TEI-Dokument</gloss><gloss versionDate="2007-05-04" xml:lang="es">documento TEI</gloss><gloss versionDate="2007-01-21" xml:lang="it">documento TEI</gloss><desc versionDate="2017-02-07" xml:lang="en">contains a single TEI-conformant document, combining
     a single TEI header with one or more members of the <ident type="class">model.resourceLike</ident> class. Multiple <gi>TEI</gi>
     elements may be combined to form a <gi>teiCorpus</gi> element.</desc><desc versionDate="2007-12-20" xml:lang="ko">TEI 헤더와 텍스트로 구성된 단일 TEI 구조 문서를 포함한다. 독립 요소 또는 <gi>teiCorpus</gi> 요소의 부분.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含符合TEI標準的單一文件，由一個TEI標頭及一份文本組成，可單獨出現或是作為元素<gi>teiCorpus</gi>的一部分。</desc><desc versionDate="2008-04-05" xml:lang="ja">TEIに準拠する文書</desc><desc versionDate="2007-06-12" xml:lang="fr">contient un seul document conforme à la TEI, qui
             comprend un en-tête TEI et un texte, soit de façon isolée, soit comme  partie d’un
@@ -8160,9 +8281,9 @@ by the stage direction.</p>
     <constraint>
       <ns xmlns="http://purl.oclc.org/dsdl/schematron" prefix="rng" uri="http://relaxng.org/ns/structure/1.0"/>
     </constraint>
-  </constraintSpec><attList><attDef ident="version" mode="delete"/></attList><exemplum xml:lang="en">
+  </constraintSpec><attList><attDef ident="xml:id" mode="change" usage="req"/><attDef ident="xml:lang" mode="change" usage="req"/><attDef ident="version" mode="delete"/></attList><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <TEI version="5.0">
+      <TEI version="3.3.0">
         <teiHeader>
           <fileDesc>
             <titleStmt>
@@ -8186,7 +8307,7 @@ by the stage direction.</p>
     </egXML>
   </exemplum><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <TEI version="5.0">
+      <TEI version="2.9.1">
         <teiHeader>
           <fileDesc>
             <titleStmt>
@@ -8210,7 +8331,7 @@ by the stage direction.</p>
     </egXML>
   </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <TEI version="5.0">
+      <TEI version="3.3.0">
         <teiHeader>
           <fileDesc>
             <titleStmt>
@@ -8233,7 +8354,7 @@ by the stage direction.</p>
     </egXML>
   </exemplum><exemplum xml:lang="zh-TW">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <TEI version="5.0">
+      <TEI version="3.3.0">
         <teiHeader>
           <fileDesc>
             <titleStmt>
@@ -8270,16 +8391,59 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
   </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DS">4. Default Text Structure</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCDEF">15.1. Varieties of Composite Text</ref>
-  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="textstructure" ident="text"><gloss versionDate="2007-06-12" xml:lang="fr">texte</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a single text of any kind, whether unitary or composite, for example a poem or
-    drama, a collection of essays, a novel, a dictionary, or a corpus sample.</desc><desc versionDate="2007-12-20" xml:lang="ko">어떤 종류의 단일 텍스트를 포함한다. 예를 들어, 시 또는 드라마, 수필선, 소설, 사전 또는 코퍼스
-    표본과 같은 단일 텍스트 또는 혼합 텍스트.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含一份任何種類的文本，無論是單一或複合的，例如詩詞或戲劇、散文集、小說、字典、或是文集範例。</desc><desc versionDate="2008-04-05" xml:lang="ja">ひとつのテキストを示す．単体でも複合体でもよい．例えば，詩，舞台芸術， 随筆，小説，辞書，コーパスなど．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient un seul texte quelconque, simple ou composite,
+  </listRef></elementSpec><elementSpec module="textstructure" ident="text">
+  <gloss versionDate="2007-06-12" xml:lang="fr">texte</gloss>
+  <desc versionDate="2005-01-14" xml:lang="en">contains a single text of any kind, whether unitary or composite, for example a poem or
+    drama, a collection of essays, a novel, a dictionary, or a corpus sample.</desc>
+  <desc versionDate="2007-12-20" xml:lang="ko">어떤 종류의 단일 텍스트를 포함한다. 예를 들어, 시 또는 드라마, 수필선, 소설, 사전 또는 코퍼스
+    표본과 같은 단일 텍스트 또는 혼합 텍스트.</desc>
+  <desc versionDate="2007-05-02" xml:lang="zh-TW">包含一份任何種類的文本，無論是單一或複合的，例如詩詞或戲劇、散文集、小說、字典、或是文集範例。</desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">ひとつのテキストを示す．単体でも複合体でもよい．例えば，詩，舞台芸術， 随筆，小説，辞書，コーパスなど．</desc>
+  <desc versionDate="2007-06-12" xml:lang="fr">contient un seul texte quelconque, simple ou composite,
     par exemple un poème ou une pièce de théâtre, un recueil d’essais, un roman, un dictionnaire ou
-    un échantillon de corpus.</desc><desc versionDate="2017-06-25" xml:lang="de">enthält einen einzelnen, eigenständigen oder kompilierten Text, zum Beispiel ein Gedicht oder
-    Drama, eine Sammlung von Aufsätzen, einen Roman, ein Wörterbuch oder ein Korpus-Sample.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene un único texto de cualquier tipo, sea este
+    un échantillon de corpus.</desc>
+  <desc versionDate="2017-06-25" xml:lang="de">enthält einen einzelnen, eigenständigen oder kompilierten Text, zum Beispiel ein Gedicht oder
+    Drama, eine Sammlung von Aufsätzen, einen Roman, ein Wörterbuch oder ein Korpus-Sample.</desc>
+  <desc versionDate="2007-05-04" xml:lang="es">contiene un único texto de cualquier tipo, sea este
     unitario o combinado, p.ej. un texto en verso o teatral, una recopilación de ensayos, una
-    novela, un diccionario, o una fragmento de corpus.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene un unico testo di qualsiasi tipo, sia esso
+    novela, un diccionario, o una fragmento de corpus.</desc>
+  <desc versionDate="2007-01-21" xml:lang="it">contiene un unico testo di qualsiasi tipo, sia esso
     unitario o composito, per esempio un testo in versi o teatrale, una raccolta di saggi, un
-    romanzo, un dizionario, o una porzione di corpus</desc><classes><memberOf key="att.global"/><memberOf key="att.typed"/><memberOf key="model.resourceLike"/></classes><content><sequence minOccurs="1" maxOccurs="1"><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/><sequence minOccurs="0" maxOccurs="1"><elementRef key="front"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence><alternate minOccurs="1" maxOccurs="1"><elementRef key="body"/><elementRef key="group"/></alternate><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/><sequence minOccurs="0" maxOccurs="1"><elementRef key="back"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence></content><attList><attDef ident="xml:id" mode="change" usage="req"/><attDef ident="xml:lang" mode="change" usage="req"/></attList><exemplum xml:lang="en">
+    romanzo, un dizionario, o una porzione di corpus</desc>
+  <classes>
+    <memberOf key="att.global"/>
+    
+    <memberOf key="att.typed"/>
+    
+    <memberOf key="model.resourceLike"/>
+  </classes>
+  <content>
+    <sequence>
+      
+        <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+      
+      <sequence minOccurs="0">
+        <elementRef key="front"/>
+        
+          <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+        
+      </sequence>
+      <alternate>
+        <elementRef key="body"/>
+        <elementRef key="group"/>
+      </alternate>
+      
+        <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+      
+      <sequence minOccurs="0">
+        <elementRef key="back"/>
+        
+          <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+        
+      </sequence>
+    </sequence>
+  </content>
+  <exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#lowellAut">
       <text>
         <front>
@@ -8293,7 +8457,8 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
         </body>
       </text>
     </egXML>
-  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
+  </exemplum>
+  <exemplum versionDate="2008-04-06" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Hugo-Nuit">
       <text>
         <front>
@@ -8306,10 +8471,11 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
         </body>
       </text>
     </egXML>
-  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
+  </exemplum>
+  <exemplum versionDate="2008-04-06" xml:lang="fr">
     <p>Le <gi>body</gi> d'un texte peut être remplacé par un groupe de textes enchâssés, comme
         dans la structure suivante : </p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible" source="#UND">
       <TEI>
         <teiHeader>
           <!--[ en-tête du texte composite ]-->
@@ -8349,7 +8515,8 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
         </text>
       </TEI>
     </egXML>
-  </exemplum><exemplum xml:lang="zh-TW">
+  </exemplum>
+  <exemplum xml:lang="zh-TW">
     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#biblzh-tw_n59">
       <text>
         <front>
@@ -8366,9 +8533,10 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
         </body>
       </text>
     </egXML>
-  </exemplum><exemplum xml:lang="en">
+  </exemplum>
+  <exemplum xml:lang="en">
     <p>The body of a text may be replaced by a group of nested texts, as in the following schematic:</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible" source="#UND">
       <text>
         <front>
           <!-- front matter for the whole group -->
@@ -8383,9 +8551,10 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
         </group>
       </text>
     </egXML>
-  </exemplum><exemplum xml:lang="de" versionDate="2017-06-25">
+  </exemplum>
+  <exemplum xml:lang="de" versionDate="2017-06-25">
     <p>Der Textkörper kann durch eine Gruppierung von verschachtelten Texten ersetzt werden, wie das folgende Beispiel zeigt:</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible" source="#UND">
       <text>
         <front>
           <!-- Vorspann für die gesamte Gruppierung -->
@@ -8400,26 +8569,32 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
         </group>
       </text>
     </egXML>
-  </exemplum><remarks versionDate="2007-03-30" xml:lang="en">
+  </exemplum>
+  <remarks versionDate="2007-03-30" xml:lang="en">
     <p>This element should not be used to represent a text which is inserted at an arbitrary point
       within the structure of another, for example as in an embedded or quoted narrative; the
         <gi>floatingText</gi> is provided for this purpose.</p>
-  </remarks><remarks xml:lang="fr" versionDate="2007-06-12">
+  </remarks>
+  <remarks xml:lang="fr" versionDate="2007-06-12">
     <p>Cet élément ne devrait pas être utilisé pour encoder un texte inséré à un endroit non
       prévisible à l'intérieur de la structure d'un autre texte, comme par exemple dans un récit qui est enchâssé 
     ou cité dans un autre ; c'est l'élément <gi>floatingText</gi> qui doit être utilisé à
       cet effet.</p>
-  </remarks><remarks xml:lang="ja" versionDate="2008-04-05">
+  </remarks>
+  <remarks xml:lang="ja" versionDate="2008-04-05">
     <p> 当該要素は，別の構造中，例えば引用された語りの任意の場所に挿入され るテキストを示すためには使うべきではない．この場合は，要素 <gi>floatingText</gi>が使われる．
     </p>
-  </remarks><remarks versionDate="2017-06-25" xml:lang="de">
+  </remarks>
+  <remarks versionDate="2017-06-25" xml:lang="de">
     <p>Dieses Element sollte nicht benutzt werden, um einen Text wiederzugeben, der an irgendeiner
       Stelle in einer anderen Struktur eingefügt ist, wie z. B. eine eingebettete oder zitierte
       Erzählung. Für diesen Zweck wird das Element <gi>floatingText</gi> benutzt.</p>
-  </remarks><listRef>
+  </remarks>
+  <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DS">4. Default Text Structure</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCDEF">15.1. Varieties of Composite Text</ref>
-  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="textstructure" ident="body">
+  </listRef>
+</elementSpec><elementSpec module="textstructure" ident="body">
   <gloss versionDate="2005-01-14" xml:lang="en">text body</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">텍스트 본문</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">正文</gloss>
@@ -8586,7 +8761,7 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DS">4. Default Text Structure</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="textstructure" ident="div"><gloss versionDate="2005-01-14" xml:lang="en">text division</gloss><gloss versionDate="2007-12-20" xml:lang="ko">텍스트 구역</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">文本區段</gloss><gloss versionDate="2007-06-12" xml:lang="fr">division du texte</gloss><gloss versionDate="2017-06-13" xml:lang="de">Textabschnitt</gloss><gloss versionDate="2007-05-04" xml:lang="es">división de texto</gloss><gloss versionDate="2007-01-21" xml:lang="it">partizione testuale</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a subdivision of the front, body, or back of a text.</desc><desc versionDate="2007-12-20" xml:lang="ko">텍스트의 전면부, 본문, 후면부의 하위 구역을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">文本的正文前資訊、正文、及正文後資訊的分段。</desc><desc versionDate="2008-04-05" xml:lang="ja">前付，本文，後付中のテキスト部分を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient une subdivision dans le texte préliminaire, dans le
+</elementSpec><elementSpec rend="change" module="textstructure" ident="div"><gloss versionDate="2005-01-14" xml:lang="en">text division</gloss><gloss versionDate="2007-12-20" xml:lang="ko">텍스트 구역</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">文本區段</gloss><gloss versionDate="2007-06-12" xml:lang="fr">division du texte</gloss><gloss versionDate="2017-06-13" xml:lang="de">Textabschnitt</gloss><gloss versionDate="2007-05-04" xml:lang="es">división de texto</gloss><gloss versionDate="2007-01-21" xml:lang="it">partizione testuale</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a subdivision of the front, body, or back of a text.</desc><desc versionDate="2007-12-20" xml:lang="ko">텍스트의 전면부, 본문, 후면부의 하위 구역을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">文本的正文前資訊、正文、及正文後資訊的分段。</desc><desc versionDate="2008-04-05" xml:lang="ja">前付，本文，後付中のテキスト部分を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient une subdivision dans le texte préliminaire, dans le
     corps d’un texte ou dans le texte postliminaire.</desc><desc versionDate="2017-06-13" xml:lang="de">enthält einen Unterabschnitt in Vorspann (front), Textkörper oder Nachspann (back) eines Textes.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una subdivisión del paratexto inicial, del
     cuerpo del texto o del paratexto final.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene una suddivisione del peritesto iniziale, del
     corpo del testo, o del peritesto finale</desc><classes><memberOf key="att.global"/><memberOf key="att.typed"/><memberOf key="model.divLike"/></classes><content><sequence minOccurs="1" maxOccurs="1"><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.divTop"/><classRef key="model.global"/></alternate><sequence minOccurs="0" maxOccurs="1"><alternate minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><alternate minOccurs="1" maxOccurs="1"><classRef key="model.divLike"/><classRef key="model.divGenLike"/></alternate><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence><sequence minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.common"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence><sequence minOccurs="0" maxOccurs="unbounded"><alternate minOccurs="1" maxOccurs="1"><classRef key="model.divLike"/><classRef key="model.divGenLike"/></alternate><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence></alternate><sequence minOccurs="0" maxOccurs="unbounded"><classRef key="model.divBottom"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence></sequence></content><constraintSpec ident="abstractModel-structure-l" scheme="schematron">
@@ -8693,7 +8868,7 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
     </egXML>
   </exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDIV">4.1. Divisions of the Body</ref>
-  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="textstructure" ident="trailer"><desc versionDate="2005-01-14" xml:lang="en">contains a closing title or footer appearing at the end of a division of a text.</desc><desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역의 종료부에 나타나는 마지막 제목 또는 꼬리말을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含文本中一個區段結束時的結尾題名或尾錄。</desc><desc versionDate="2008-04-05" xml:lang="ja">テキスト部分の最後にある，結びのタイトルや脚注を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient un titre de fin ou de bas de page à la fin d’une
+  </listRef></elementSpec><elementSpec rend="change" module="textstructure" ident="trailer"><desc versionDate="2005-01-14" xml:lang="en">contains a closing title or footer appearing at the end of a division of a text.</desc><desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역의 종료부에 나타나는 마지막 제목 또는 꼬리말을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含文本中一個區段結束時的結尾題名或尾錄。</desc><desc versionDate="2008-04-05" xml:lang="ja">テキスト部分の最後にある，結びのタイトルや脚注を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient un titre de fin ou de bas de page à la fin d’une
     division du texte.</desc><desc versionDate="2017-06-25" xml:lang="de">enthält einen abschließenden Nachsatz oder eine Fußzeile am Ende eines Textabschnitts.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una fórmula de clausura o un elemento a pie de
     página que aparece al final de una sección de texto</desc><desc versionDate="2007-01-21" xml:lang="it">contiene una formula di chiusura o un elemento a piè di
     pagina che compare alla fine di una sezione di testo</desc><classes><memberOf key="att.global"/><memberOf key="att.typed"/><memberOf key="model.divBottomPart"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="lg"/><classRef key="model.gLike"/><classRef key="model.phrase"/><classRef key="model.inter"/><classRef key="model.lLike"/><classRef key="model.global"/></alternate></content><attList/><exemplum>
@@ -8711,7 +8886,7 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
                         </exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSCO">4.2.4. Content of Textual Divisions</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDTB">4.2. Elements Common to All Divisions</ref>
-  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="textstructure" ident="front">
+  </listRef></elementSpec><elementSpec module="textstructure" ident="front">
   <gloss versionDate="2005-01-14" xml:lang="en">front matter</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">전면부 내용</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">正文前資訊</gloss>
@@ -8957,7 +9132,7 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSTITL">4.6. Title Pages</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DS">4. Default Text Structure</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="textstructure" ident="back">
+</elementSpec><elementSpec module="textstructure" ident="back">
   <gloss versionDate="2005-01-14" xml:lang="en">back matter</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">후면부 내용</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">正文後資訊</gloss>
@@ -9450,8 +9625,8 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
   <desc versionDate="2007-12-20" xml:lang="ko">저작의 제목 그리고 지적 내용에 대한 책임에 관한 정보를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集關於作品標題與作品智慧內容責任歸屬的資訊。</desc>
   <desc versionDate="2008-04-05" xml:lang="ja">作品や知的内容に責任のあるもののタイトルに関する情報をまとめる．</desc>
-  <desc versionDate="2006-10-18" xml:lang="de">umfasst Angaben zum Titel eines Werks und zu den für
-    seinen Inhalt Verantwortlichen</desc>
+  <desc versionDate="2018-07-18" xml:lang="de">umfasst Angaben zum Titel eines Werks und zu den für
+    seinen Inhalt Verantwortlichen.</desc>
   <desc versionDate="2007-05-04" xml:lang="es">agrupa la información referente al título de una obra y a
     los responsables de su contenido intelectual.</desc>
   <desc versionDate="2007-01-21" xml:lang="it">raggruppa le informazioni sul titolo di un'opera e sulle
@@ -9701,7 +9876,7 @@ material</measure>
         <valItem ident="URI"><desc versionDate="2016-07-02" xml:lang="en">Uniform Resource Identifier: a string of characters to uniquely identify a resource which usually contains indication of the means of accessing that resource, the name of its host, and its filepath.</desc></valItem>
         <valItem ident="VIAF"><desc versionDate="2016-07-02" xml:lang="en">A data number in the Virtual Internet Authority File assigned to link different names in catalogs around the world for the same entity.</desc></valItem>
         <valItem ident="ESTC"><desc versionDate="2016-07-02" xml:lang="en">English Short-Title Catalogue number: an identifying number assigned to a document in English printed in the British Isles or North America before 1801.</desc></valItem>
-        <valItem ident="OCLC"><desc versionDate="2016-07-02" xml:lang="en">union catalog number in WorldCat representing a resource held by one or more of the member libraries in the global cooperative Online Computer Library Center.</desc></valItem>  
+        <valItem ident="OCLC"><desc versionDate="2016-07-02" xml:lang="en">OCLC control number (record number) for the union catalog record in WorldCat, a union catalog for member libraries in the Online Computer Library Center global cooperative.</desc></valItem>  
       </valList>
     </attDef></attList><exemplum xml:lang="und">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -10399,7 +10574,7 @@ supplied to printer.</change>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD6">2.6. The Revision Description</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD4C">2.4.1. Creation</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PH-changes">11.7. Identifying Changes and Revisions</ref>
-  </listRef></elementSpec><classSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" predeclare="true" module="namesdates" xml:id="PERSPART" type="model" ident="model.persNamePart">
+  </listRef></elementSpec><classSpec predeclare="true" module="namesdates" xml:id="PERSPART" type="model" ident="model.persNamePart">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements which form part of a personal name.</desc>
   <desc versionDate="2009-05-27" xml:lang="fr">regroupe des éléments qui font partie d'un nom de
         personne</desc>
@@ -10416,7 +10591,7 @@ supplied to printer.</change>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPER">13.2.1. Personal Names</ref>
   </listRef>
-</classSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="namesdates" ident="persName">
+</classSpec><elementSpec module="namesdates" ident="persName">
   <gloss versionDate="2005-01-14" xml:lang="en">personal name</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">개인 이름</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">個人名稱</gloss>
@@ -10485,7 +10660,7 @@ supplied to printer.</change>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPER">13.2.1. Personal Names</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="namesdates" ident="surname">
+</elementSpec><elementSpec module="namesdates" ident="surname">
   <gloss versionDate="2009-03-19" xml:lang="fr">nom de famille</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">contains a family (inherited) name, as opposed to a given, baptismal, or nick name.</desc>
   <desc versionDate="2009-01-05" xml:lang="fr">contient un nom de famille (hérité) par opposition à un nom donné, nom de baptême ou surnom.</desc>
@@ -10523,7 +10698,7 @@ supplied to printer.</change>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPER">13.2.1. Personal Names</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="namesdates" ident="forename">
+</elementSpec><elementSpec module="namesdates" ident="forename">
   <gloss versionDate="2008-12-09" xml:lang="fr">prénom</gloss>
   <desc versionDate="2005-10-16" xml:lang="en">contains a forename, given or baptismal name.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">이름 또는 세례명을 포함한다.</desc>
@@ -10571,7 +10746,7 @@ supplied to printer.</change>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPER">13.2.1. Personal Names</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="namesdates" ident="affiliation">
+</elementSpec><elementSpec module="namesdates" ident="affiliation">
   <gloss versionDate="2008-12-09" xml:lang="fr">affiliation</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">contains an informal description of a person's present or past affiliation with some
         organization, for example an employer or sponsor.</desc>
@@ -10613,7 +10788,7 @@ supplied to printer.</change>
     </attDef>
   </attList>
   <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#NONE">
       <affiliation>Junior project officer for the US <name type="org">National Endowment for
                     the Humanities</name>
             </affiliation>
@@ -10622,7 +10797,7 @@ supplied to printer.</change>
   <exemplum xml:lang="en">
     <p>This example indicates that the person was affiliated with the Australian Journalists Association
       at some point between the date ranges listed.</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#NONE">
       <affiliation notAfter="1960-01-01" notBefore="1957-02-28">Paid up member of the
                     <orgName>Australian Journalists Association</orgName>
             </affiliation>
@@ -10630,12 +10805,12 @@ supplied to printer.</change>
   </exemplum>
   <exemplum xml:lang="en">
     <p>This example indicates that the person was affiliated with Mount Holyoke College throughout the entire span of the date ranges listed.</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#NONE">
       <affiliation from="1902-01-01" to="1906-01-01">Was an assistant professor at Mount Holyoke College.</affiliation>
     </egXML>
   </exemplum>
   <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#NONE">
       <affiliation>associé étranger de <name type="org">l'Académie des Inscriptions et
             Belles-Lettres</name>
         </affiliation>
@@ -10645,7 +10820,7 @@ supplied to printer.</change>
     </egXML>
   </exemplum>
   <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#NONE">
       <affiliation><name type="org">國際獅子會</name>台灣區理監事
       </affiliation>
       <affiliation notAfter="1960-01-01" notBefore="1957-02-28"><orgName>澳洲記者協會</orgName>的付費會員</affiliation>
@@ -10666,10 +10841,10 @@ supplied to printer.</change>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHPA">15.2.2. The Participant Description</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="corpus" ident="textDesc"><gloss versionDate="2005-01-14" xml:lang="en">text description</gloss><gloss versionDate="2007-12-20" xml:lang="ko">텍스트 기술</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">文本描述</gloss><gloss versionDate="2007-06-12" xml:lang="fr">description de texte</gloss><gloss versionDate="2007-05-04" xml:lang="es">descripción del texto</gloss><gloss versionDate="2007-01-21" xml:lang="it">descrizione del testo</gloss><desc versionDate="2005-01-14" xml:lang="en">provides a description of a text in terms of its
+</elementSpec><elementSpec rend="change" module="corpus" ident="textDesc"><gloss versionDate="2005-01-14" xml:lang="en">text description</gloss><gloss versionDate="2007-12-20" xml:lang="ko">텍스트 기술</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">文本描述</gloss><gloss versionDate="2007-06-12" xml:lang="fr">description de texte</gloss><gloss versionDate="2007-05-04" xml:lang="es">descripción del texto</gloss><gloss versionDate="2007-01-21" xml:lang="it">descrizione del testo</gloss><desc versionDate="2005-01-14" xml:lang="en">provides a description of a text in terms of its
 situational parameters.</desc><desc versionDate="2007-12-20" xml:lang="ko">장면적 매개변수를 통해 텍스트에 대해 기술한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供文本在情境特徵方面的相關描述。</desc><desc versionDate="2008-04-05" xml:lang="ja">状況パラメータにより，テキストの情報を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">fournit la description d'un texte sous l'angle du
       contexte situationnel</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona una descripción de un texto en términos de sus parámetros situacionales</desc><desc versionDate="2007-01-21" xml:lang="it">fornisce la descrizione di un testo in termini di paramentri situazionali</desc><classes><memberOf key="att.global"/><memberOf key="model.profileDescPart"/></classes><content><classRef key="model.textDescPart" expand="sequence"/></content><attList/><exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <textDesc n="Informal domestic conversation">
         <channel mode="s">  </channel>
         <constitution type="single">  </constitution>
@@ -10683,7 +10858,7 @@ situational parameters.</desc><desc versionDate="2007-12-20" xml:lang="ko">장�
       </textDesc>
     </egXML>
   </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <textDesc n="Informal domestic conversation">
         <channel mode="s"> </channel>
         <constitution type="single"> </constitution>
@@ -10697,7 +10872,7 @@ situational parameters.</desc><desc versionDate="2007-12-20" xml:lang="ko">장�
       </textDesc>
     </egXML>
   </exemplum><exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
       <textDesc n="非正式的家常談天">
         <channel mode="s"> </channel>
         <constitution type="single"> </constitution>
@@ -10769,17 +10944,22 @@ situational parameters.</desc><desc versionDate="2007-12-20" xml:lang="ko">장�
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="high">
-                                        <desc>text has been reprinted more than once outside its original
-                                        time slot</desc>
+                                        <desc>text has been republished very frequently since its original
+                                        appearance</desc>
+                                    </valItem>
+                                    <valItem ident="high">
+                                        <desc>text has been republished occasionally since its original
+                                            appearance</desc>
                                     </valItem>
                                     <valItem ident="low">
-                                        <desc>text has not been reprinted after its original time
-                                            slot</desc>
+                                        <desc>text has not been reprinted since its original appearance</desc>
                                     </valItem>
                                 </valList>
                                 <remarks>
-                                    <p>A work which has been republished several times over a
-                                        reasonably long time since its first appearance is
+                                    <p>Frequency of publication is assessed with reference to
+                                        20 year time periods. A work which has been republished in more
+                                        than four such periods, i.e. over a
+                                        reasonably long time since its first appearance, is
                                         considered highly canonical.</p>
                                 </remarks>
                             </attDef></attList></elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="timeSlot" mode="add" ns="http://distantreading.net/eltec/ns"><desc>specifies the time period during which the work was first published </desc><classes>
@@ -10804,7 +10984,7 @@ situational parameters.</desc><desc versionDate="2007-12-20" xml:lang="ko">장�
                                         <desc>work first published between 1900 and 1919</desc>
                                     </valItem>
                                 </valList>
-                            </attDef></attList></elementSpec><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ST" xml:id="DSTTEI2" ident="tei" type="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="CO" xml:id="DCO" ident="core"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="DS" xml:id="DDS" ident="textstructure"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="HD" xml:id="DHD" ident="header"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="ND" xml:id="DND" ident="namesdates"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="CC" xml:id="DCCHDR" ident="corpus"/></schemaSpec>
+                            </attDef></attList></elementSpec><moduleSpec n="ST" xml:id="DSTTEI2" ident="tei" type="core"/><moduleSpec n="CO" xml:id="DCO" ident="core"/><moduleSpec n="DS" xml:id="DDS" ident="textstructure"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="HD" xml:id="DHD" ident="header"/><moduleSpec n="ND" xml:id="DND" ident="namesdates"/><moduleSpec n="CC" xml:id="DCCHDR" ident="corpus"/></schemaSpec>
             </div>
 
         </back>
