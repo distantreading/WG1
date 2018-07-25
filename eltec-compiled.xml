@@ -6645,8 +6645,8 @@ Elements</ref>
                             </egXML>
                         </exemplum><exemplum>
 
-                            <ab>If a page break interrupts a word the word fragments may be
-                                reassembled following it. <graphic url="media/inWordpb.png"/></ab>
+                            <p>If a page break interrupts a word the word fragments may be
+                                reassembled following it. <graphic url="media/inWordpb.png"/></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <p>My own relations too were nobly generous and by their kindness I
                                     have been <pb n="100"/> established in this shop, and for thre
@@ -6672,72 +6672,27 @@ Elements</ref>
     responsabilità primaria di ciascuna unità bibliografica.</desc><desc versionDate="2017-06-04" xml:lang="de">enthält in einer bibliografischen Referenz den oder die Namen eines Autors eines Werks
     (oder einer für das Werk verantwortlichen Körperschaft); zum Beispiel in der Form, wie sie eine
     anerkannte bibliografische Instanz anbietet.</desc><classes><memberOf key="att.global"/><memberOf key="model.respLike"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="date"/><elementRef key="idno"/></alternate></content><attList/><exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#COBICOR-eg-251">
-      <author>British Broadcasting Corporation</author>
-      <author>La Fayette, Marie Madeleine Pioche de la Vergne, comtesse de (1634–1693)</author>
-      <author>Anonymous</author>
-      <author>Bill and Melinda Gates Foundation</author>
-      <author><persName>Beaumont, Francis</persName> and
-      <persName>John Fletcher</persName>
-         </author>
-      <author><orgName key="BBC">British Broadcasting
-      Corporation</orgName>: Radio 3 Network</author>
-    </egXML>
-  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <author>La Fayette, Marie Madeleine Pioche de la Vergne, comtesse de (1634–1693)</author>
-      <author>Anonyme</author>
-      <author> Erckmann-Chatrian</author>
-      <author>
-        <orgName key="ARTE">Association relative à la télévision européenne</orgName>
-      </author>
-    </egXML>
-  </exemplum><exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <author>中央日報</author>
-      <author>中央通訊社董事長馬星野</author>
-    </egXML>
-  </exemplum><remarks versionDate="2009-03-18" xml:lang="en">
-    <p>Particularly where cataloguing is likely to be based on the
-    content of the header, it is advisable to use a generally recognized
-    name authority file to supply the content for this element.  The
-    attributes <att>key</att> or <att>ref</att> may also be used to
-    reference canonical information about the author(s) intended from any
-    appropriate authority, such as a library catalogue or online
-    resource. </p>
-    <p>In the case of a broadcast, use this element for the name of
-    the company or network responsible for making the broadcast.</p>
-    <p>Where an author is unknown or unspecified, this element may contain
-text such as <mentioned>Unknown</mentioned> or
-<mentioned>Anonymous</mentioned>. When the appropriate TEI modules are
-in use, it may also contain detailed tagging of the names used for people, organizations or
-places, in particular where  multiple names are given.</p>
-  </remarks><remarks xml:lang="fr" versionDate="2007-06-12">
-    <p>Il est conseillé d'utiliser des listes d'autorité reconnues
-    pour trouver la forme exacte des noms de personnes, en particulier
-    lorsque le catalogage repose sur le contenu de l'en-tête TEI. Les
-    attributs <att>key</att> ou <att>ref</att> seront aussi employés
-    pour donner une référence canonique documentant l'auteur concerné
-    grâce à une autorité appropriée, comme le catalogue d'une
-    bibliothèque ou une ressource en ligne. </p>
-    <p>Dans le cas d'une émission, cet élément sert à encoder le nom de la société ou du
-      réseau qui diffuse le programme.</p>
-  </remarks><remarks xml:lang="ja" versionDate="2008-04-05">
-    <p> 書誌情報を当該ヘダーに収録する場合，個人名の正確な記述を，一般に理 解可能な著者リストとして使用した方がよい． </p>
-    <p> 放送の場合，当該要素は会社や放送局の名前として使用される． </p>
-  </remarks><remarks versionDate="2017-06-04" xml:lang="de">
-    <p>Insbesondere wenn eine Katalogisierung auf Basis des TEI-Headers erfolgen soll, ist es ratsam
-      einen Namen aus einer annerkannten Normdatei zu verwenden. Die Attribute <att>key</att> und
-      <att>ref</att> können außerdem benutzt werden, um auf kanonische Informationen über
-      einen Autor zu verweisen, etwa in einem Bibliothekskatalog oder einer Online-Ressource.</p>
-    <p>Im Fall von Rundfunksendungen sollte dies Element benutzt werden, um den Namen der Firma oder
-      der Sendergruppe zu notieren, welche diese Rundfunksendung verantwortet.</p>
-    <p>Wo ein Autor unbekannt oder nicht angegeben ist, kann dieses Element Text wie z. B.
-      <mentioned>Unbekannt</mentioned> oder <mentioned>Nicht angegeben</mentioned> beinhalten.
-      Wenn die entsprechenden TEI-Module benutzt werden, kann das Element auch detaillierte
-      Auszeichnungen für Namen von Personen, Organisationen oder Orten beinhalten - insbesondere
-      wenn mehrere Namen vorhanden sind.</p>
-  </remarks><listRef>
+        <p>When used within a <gi>titleStmt</gi>, an author's name is given in a standardized
+        format (surname, forename/s, dates) as shown in this example.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+            <author>Forster, Edward Morgan (1879-1970)</author>
+        </egXML>
+    </exemplum><exemplum xml:lang="en">
+        <p>When used within the <gi>sourceDesc</gi>, an author's name is given in the format
+            used by the source in question, as shown in this example.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+            <author>E.M. Forster</author>
+        </egXML>
+    </exemplum><exemplum><p>In cases of multiple authorship, the <gi>author</gi> element within <gi>titleStmt</gi>
+  should be repeated</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+          <titleStmt> <title>The Diary of a Nobody : ELTeC edition </title> 
+             <author>Grossmith, George (1847-1912)</author>
+            <author>Grossmith, Walter Weedon (1854-1919)</author>
+     </titleStmt>   </egXML>
+    </exemplum><remarks><p>One or more <gi>idno</gi> elements may be included to supply
+    externally defined identifiers for the author, for example by referring to an
+    authority file such as VIAF.</p></remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBICOR">3.11.2.2. Titles, Authors, and Editors</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD21">2.2.1. The Title Statement</ref>
   </listRef></elementSpec><elementSpec module="core" ident="respStmt">

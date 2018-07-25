@@ -479,7 +479,33 @@
                         </exemplum>
                     </elementSpec>
                 
-
+<elementSpec ident="author" mode="change">
+    <exemplum xml:lang="en">
+        <p>When used within a <gi>titleStmt</gi>, an author's name is given in a standardized
+        format (surname, forename/s, dates) as shown in this example.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+            <author>Forster, Edward Morgan (1879-1970)</author>
+        </egXML>
+    </exemplum>
+    <exemplum xml:lang="en">
+        <p>When used within the <gi>sourceDesc</gi>, an author's name is given in the format
+            used by the source in question, as shown in this example.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+            <author>E.M. Forster</author>
+        </egXML>
+    </exemplum>
+    <exemplum><p>In cases of multiple authorship, the <gi>author</gi> element within <gi>titleStmt</gi>
+  should be repeated</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+          <titleStmt> <title>The Diary of a Nobody : ELTeC edition </title> 
+             <author>Grossmith, George (1847-1912)</author>
+            <author>Grossmith, Walter Weedon (1854-1919)</author>
+     </titleStmt>   </egXML>
+    </exemplum>
+    <remarks><p>One or more <gi>idno</gi> elements may be included to supply
+    externally defined identifiers for the author, for example by referring to an
+    authority file such as VIAF.</p></remarks>
+</elementSpec>
                     <elementSpec ident="pb" mode="change">
                         <exemplum xml:lang="en">
                             <p>A page break may be associated with a facsimile image of the page it
@@ -503,8 +529,8 @@
 
                         <exemplum>
 
-                            <ab>If a page break interrupts a word the word fragments may be
-                                reassembled following it. <graphic url="media/inWordpb.png"/></ab>
+                            <p>If a page break interrupts a word the word fragments may be
+                                reassembled following it. <graphic url="media/inWordpb.png"/></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <p>My own relations too were nobly generous and by their kindness I
                                     have been <pb n="100"/> established in this shop, and for thre
