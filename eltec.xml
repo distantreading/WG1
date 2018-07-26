@@ -242,10 +242,10 @@
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="long">
-                                        <desc>more than 200,000 words</desc>
+                                        <desc>more than 150,000 words</desc>
                                     </valItem>
                                     <valItem ident="medium">
-                                        <desc>50,000 to 200,000 words</desc>
+                                        <desc>50,000 to 150,000 words</desc>
                                     </valItem>
                                     <valItem ident="short">
                                         <desc>10,000 to 50,000 words</desc>
@@ -286,11 +286,12 @@
                                     </valItem>
                                 </valList>
                                 <remarks>
-                                    <p>Frequency of publication is assessed with reference to 20
-                                        year time periods. A work which has been republished in more
+                                    <p>Frequency of publication is assessed with reference to
+                                        time periods of twenty years. A work which has been republished in more
                                         than four such periods, i.e. over a reasonably long time
                                         since its first appearance, is considered highly
-                                        canonical.</p>
+                                        canonical. A work which appears to have been published only in a single
+                                    such period is considered of low canonicity. </p>
                                 </remarks>
                             </attDef>
                         </attList>

@@ -15,22 +15,24 @@
                 </xsl:variable>
                 <xsl:message><xsl:value-of select="$textCount"/> texts found </xsl:message>
 
+
+
+
                 <table class="catalogue">
                     <tr class="label">
-                        <td>Language</td>
-                        <td>Actual wordcount</td>
-                        <td>Actual date</td>
+                        <td>Identifier</td>
+                        <td>Word count</td>
+                        <td>Date</td>
                         <td>Title</td>
                         <td>Author</td>
                         <td>AuthorGender code</td>
-                        <td>Size code</td>
                         <td>Canonicity code</td>
                         <td>Time slot code</td>
                     </tr>
                     <xsl:for-each select="t:teiCorpus/t:TEI/t:text">
                         <tr>
                             <xsl:variable name="wc">
-                                <xsl:value-of select="e:word-count(.)"/>
+                                <xsl:value-of select="../t:teiHeader/t:fileDesc/t:extent/t:measure[@unit='words']"/>
                             </xsl:variable>
                             <xsl:variable name="size">
                                 <xsl:choose>
@@ -41,7 +43,8 @@
                             </xsl:variable>
                             <xsl:variable name="date">
                                 <xsl:value-of select="../t:teiHeader/t:fileDesc/t:sourceDesc/t:bibl/t:relatedItem[1]/t:bibl/t:date"/>
-                          </xsl:variable><xsl:variable name="timeSlot">
+                          </xsl:variable>
+                            <xsl:variable name="timeSlot">
                             <xsl:choose>
                                 <xsl:when test="$date le '1859'">T1</xsl:when>
                                 <xsl:when test="$date le '1879'">T2</xsl:when>
@@ -52,13 +55,13 @@
                             
                             
                             <td>
-                                <xsl:value-of select="ancestor::TEI/@xml:id"/>
+                                <xsl:value-of select="ancestor::t:TEI/@xml:id"/>
                             </td>
                             <td>
-                                <xsl:value-of select="concat($size, concat(' (', $wc), ')')"/>
+                                <xsl:value-of select="$wc"/>
                             </td>
                             <td>
-                                <xsl:value-of select="concat($timeSlot, concat(' (', $date), ')')"/>
+                                <xsl:value-of select="$date"/>
                             </td>
                             
                             <td>
@@ -75,17 +78,7 @@
                                     select="../t:teiHeader/t:profileDesc/t:textDesc/e:authorGender/@key"
                                 />
                             </td>
-                            <td>
-                                <xsl:variable name="claimedWcn">
-                                    <xsl:value-of
-                                        select="../t:teiHeader/t:profileDesc/t:textDesc/e:size/@key"
-                                    />
-                                </xsl:variable>
-                                <xsl:if test="not($timeSlot = $claimedWcn)">
-                                    <xsl:attribute name="class">dodgy</xsl:attribute>
-                                </xsl:if>
-                                <xsl:value-of select="$claimedWcn"/>
-                            </td>
+                           
                             <td>
                                 <xsl:value-of
                                     select="../t:teiHeader/t:profileDesc/t:textDesc/e:canonicity/@key"
@@ -140,7 +133,7 @@
                         </xsl:for-each> </tr>
                     <tr><xsl:variable name="canons" select="//e:canonicity"/>
                         <td>Canonicity</td>
-                        <xsl:variable name="canonVals">low,high,unknown</xsl:variable>
+                        <xsl:variable name="canonVals">low,medium,high</xsl:variable>
                         <xsl:for-each select="tokenize($canonVals, ',')">
                             <xsl:variable name="val">
                                 <xsl:value-of select="."/>
