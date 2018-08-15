@@ -1,7 +1,7 @@
 ECHO=
 LOCAL=/home/lou/Public/WG1
 SCHEMA=$(LOCAL)/distantreading.github.io/Schema/eltec-1.rng
-CORPUS=$(LOCAL)/Sampler/Test
+CORPUS=$(LOCAL)/ELTEC-EN
 CORPUSHDR=corpHeaderStart.txt
 REPORTER=$(LOCAL)/Sampler/reporter.xsl
 CURRENT=`pwd`
@@ -30,4 +30,4 @@ schema:
 	cd $(CURRENT)
 report:
 	echo report on corpus balance
-	saxon $(CORPUS)_driver.tei $(REPORTER) 
+	saxon -xi $(CORPUS)_driver.tei $(REPORTER) >balance_report.html

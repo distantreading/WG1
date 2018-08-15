@@ -30,7 +30,7 @@
 </title><author>Skene, Felicia, 1821-1899</author><publisher>Digital Library Program, Indiana University</publisher><pubPlace>Bloomington, IN</pubPlace><idno>VAB7183</idno><relatedItem><bibl><title>The Tutor’s Ward</title><author>Skene, Felicia, 1821-1899</author><publisher>Colburn and Co. </publisher><pubPlace>London </pubPlace><date when="1851">1851</date></bibl></relatedItem></bibl></sourceDesc>
         </fileDesc>
         <encodingDesc n="eltec-1"><p/></encodingDesc>
-        <profileDesc><langUsage><language ident="eng">English</language></langUsage><textDesc><authorGender xmlns="http://distantreading.net/eltec/ns" key="F"/><size xmlns="http://distantreading.net/eltec/ns" key="medium"/><canonicity xmlns="http://distantreading.net/eltec/ns" key="medium"/><timeSlot xmlns="http://distantreading.net/eltec/ns" key="T1"/></textDesc></profileDesc>
+        <profileDesc><langUsage><language ident="eng">English</language></langUsage><textDesc><authorGender xmlns="http://distantreading.net/eltec/ns" key="F"/><size xmlns="http://distantreading.net/eltec/ns" key="medium"/><canonicity xmlns="http://distantreading.net/eltec/ns" key="low"/><timeSlot xmlns="http://distantreading.net/eltec/ns" key="T1"/></textDesc></profileDesc>
         <revisionDesc><change when="2018-07-23">LB convert to ELTeC-1</change><change when="2010-09-03">elizabethmunson: Added genre term</change><change when="2010-08-04">elizabethmunson: Removed date and "a machine
             readable transcription" from fileDesc title</change><change when="2010-08-04">elizabethmunson: Normalized "volume" in fileDesc title</change><change when="2010-08-04">elizabethmunson: Added filing title</change><change when="2010-08-04">elizabethmunson: Added LCNAF form of author name to sourceDesc (hyphen 
             adjusted for both sourceDesc and fileDesc)</change><change when="2010-08-04">elizabethmunson: Normalized date in biblFull/publicationStmt</change><change when="2009-10-27">#bn: Normalized id scheme and encoding</change><change when="2009-05-10">#bn: Coverted from P4 to P5</change></revisionDesc>
@@ -4109,12 +4109,10 @@
     of affection, you hope to find that helpless child, compelled to seek a refuge
     by your side!</p>
             </div>
-            <p>END OF VOL. I.</p>
+            <trailer>END OF VOL. I.</trailer>
             <trailer>PRINTED BY HARRISON AND SON, London Gazette Office, St. Martin’s Lane;
 &amp; Orchard Street, Westminster.</trailer>
 	  </div>
-
-
 
 
 <div type="part">

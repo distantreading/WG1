@@ -11,3 +11,18 @@ It contains several subdirectories, each named for a different language. Within 
 
 The ELTeC file is validated against the schema file indicated  by an `xml-model` PI at the start of each file. At present, only the initial `encoding_proposal.rnc` schema has been used for this purpose.
 
+These are the input formats handled :
+----|------------------------
+CH | Simple XML (from OCR)
+CS | epub
+DE | TEI XML (DTA)
+DU | epub
+EN | gutenberg
+FR | TEI XML (CLIGS)
+HR | epub
+IT | TEI XML (CLIGS)
+LV | basic HTML
+PL | wikisource HTML
+SP | TEI P3+ 
+SR | docx
+

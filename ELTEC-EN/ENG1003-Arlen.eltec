@@ -15,7 +15,9 @@
         </publicationStmt>
         <sourceDesc>
             <bibl><title>The London venture</title><author>Arlen, Michael (Dikran Kouyoumdjian)
-                    (1857-1924).</author><idno/><relatedItem>
+                    (1857-1924).</author><idno/>
+<ref target="https://archive.org/details/londonventure00sevigoog.pdf"/>
+<relatedItem>
                     <bibl><title>The London venture</title><author>Arlen, Michael (Dikran
                             Kouyoumdjian) (1857-1924).</author><publisher> London: W
                             Heinemann</publisher><date>1920</date></bibl>
@@ -41,7 +43,6 @@
     </revisionDesc>
 </teiHeader>
   
-<ref target="https://archive.org/details/londonventure00sevigoog.pdf"/>
 
 <!-- page numbers here are from US edition, not first -->
 <text>

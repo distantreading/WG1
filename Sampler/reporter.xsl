@@ -25,34 +25,19 @@
                         <td>Date</td>
                         <td>Title</td>
                         <td>Author</td>
-                        <td>AuthorGender code</td>
-                        <td>Canonicity code</td>
-                        <td>Time slot code</td>
+                        <td>Sex</td>
+                        <td>Length</td>
+                        <td>Reprints</td>
+                        <td>Time slot</td>
                     </tr>
                     <xsl:for-each select="t:teiCorpus/t:TEI/t:text">
                         <tr>
                             <xsl:variable name="wc">
                                 <xsl:value-of select="../t:teiHeader/t:fileDesc/t:extent/t:measure[@unit='words']"/>
                             </xsl:variable>
-                            <xsl:variable name="size">
-                                <xsl:choose>
-                                    <xsl:when test="$wc &lt; 50000">short</xsl:when>
-                                    <xsl:when test="$wc &lt; 200000">medium</xsl:when>
-                                    <xsl:when test="$wc &gt; 200000">long</xsl:when>
-                                </xsl:choose>
-                            </xsl:variable>
                             <xsl:variable name="date">
                                 <xsl:value-of select="../t:teiHeader/t:fileDesc/t:sourceDesc/t:bibl/t:relatedItem[1]/t:bibl/t:date"/>
                           </xsl:variable>
-                            <xsl:variable name="timeSlot">
-                            <xsl:choose>
-                                <xsl:when test="$date le '1859'">T1</xsl:when>
-                                <xsl:when test="$date le '1879'">T2</xsl:when>
-                                <xsl:when test="$date le '1899'">T3</xsl:when>
-                                <xsl:when test="$date le '1919'">T4</xsl:when>
-                                
-                            </xsl:choose></xsl:variable>
-                            
                             
                             <td>
                                 <xsl:value-of select="ancestor::t:TEI/@xml:id"/>
@@ -78,7 +63,11 @@
                                     select="../t:teiHeader/t:profileDesc/t:textDesc/e:authorGender/@key"
                                 />
                             </td>
-                           
+                            <td>
+                                <xsl:value-of
+                                    select="../t:teiHeader/t:profileDesc/t:textDesc/e:size/@key"
+                                />
+                            </td>
                             <td>
                                 <xsl:value-of
                                     select="../t:teiHeader/t:profileDesc/t:textDesc/e:canonicity/@key"

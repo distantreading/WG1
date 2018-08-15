@@ -37,7 +37,7 @@ when="1884">1884</date></bibl></relatedItem></bibl></sourceDesc>
 ident="eng">English</language></langUsage><textDesc><authorGender
 xmlns="http://distantreading.net/eltec/ns" key="F"/><size
 xmlns="http://distantreading.net/eltec/ns" key="long"/><canonicity
-xmlns="http://distantreading.net/eltec/ns" key="medium"/><timeSlot
+xmlns="http://distantreading.net/eltec/ns" key="low"/><timeSlot
 xmlns="http://distantreading.net/eltec/ns"
 key="T3"/></textDesc></profileDesc> <revisionDesc><change
 when="2018-07-23">LB convert to ELTeC-1</change><change

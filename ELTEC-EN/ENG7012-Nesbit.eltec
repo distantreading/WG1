@@ -13,13 +13,13 @@
                     <resp>Encoded and edited by </resp>
                     <name>Perry Willett</name>
                 </respStmt>
-                <respStmt xml:id="bn">
+                <respStmt >
                     <resp>E-text Editor</resp>
                     <name>Brian Norberg</name>
                 </respStmt>
                 <respStmt>
                     <resp>Corrected By</resp>
-                    <name xml:id="elizabethmunson">Elizabeth Munson</name>
+                    <name >Elizabeth Munson</name>
                 </respStmt>
             </titleStmt>
             <extent><measure unit="words">72286</measure><measure unit="pages">368</measure></extent>
@@ -28,7 +28,7 @@
 </title><author>Nesbit, E. (Edith), 1858-1924</author><publisher>Digital Library Program, Indiana University</publisher><pubPlace>Bloomington, IN</pubPlace><idno>VAB7012</idno><relatedItem><bibl><title>The Story of the Amulet</title><author>Nesbit, E. (Edith), 1858-1924</author><publisher>T. Fisher Unwin </publisher><pubPlace>London </pubPlace><date when="1906">1906</date></bibl></relatedItem></bibl></sourceDesc>
         </fileDesc>
         <encodingDesc n="eltec-1"><p/></encodingDesc>
-        <profileDesc><langUsage><language ident="eng">English</language></langUsage><textDesc><authorGender xmlns="http://distantreading.net/eltec/ns" key="F"/><size xmlns="http://distantreading.net/eltec/ns" key="medium"/><canonicity xmlns="http://distantreading.net/eltec/ns" key="medium"/><timeSlot xmlns="http://distantreading.net/eltec/ns" key="T4"/></textDesc></profileDesc>
+        <profileDesc><langUsage><language ident="eng">English</language></langUsage><textDesc><authorGender xmlns="http://distantreading.net/eltec/ns" key="F"/><size xmlns="http://distantreading.net/eltec/ns" key="medium"/><canonicity xmlns="http://distantreading.net/eltec/ns" key="high"/><timeSlot xmlns="http://distantreading.net/eltec/ns" key="T4"/></textDesc></profileDesc>
         <revisionDesc><change when="2018-07-23">LB convert to ELTeC-1</change><change when="2010-08-05">elizabethmunson: Added genre term(s)</change><change when="2010-07-27">elizabethmunson: Removed date and "a machine readable transcription"
             from fileDesc title</change><change when="2010-07-27">elizabethmunson: Added filing title</change><change when="2010-07-27">elizabethmunson: Added LCNAF form of author name to sourceDesc</change><change when="2010-07-27">elizabethmunson: Corrected fileDesc author</change><change when="2010-07-27">elizabethmunson: Normalized date in biblFull/publicationStmt</change><change when="2010-07-27">elizabethmunson: Replaced bibl in body with bibl/title</change><change when="2009-11-02">#bn: Added Library of Congress subject headings</change><change when="2009-10-27">#bn: Normalized id scheme and encoding</change><change when="2009-05-10">#bn: Coverted from P4 to P5</change></revisionDesc>
     </teiHeader>
