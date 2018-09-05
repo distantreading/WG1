@@ -3,8 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Working paper on canonicity and corpus design parameters in the context for
-                    the ELTeC</title>
+                <title>Working paper on canonicity and corpus design parameters in the ELTeC context  </title>
                 <author>COST Action CA16204 – WG1 </author>
             </titleStmt>
             <editionStmt>
@@ -18,7 +17,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-            <change> @CarolinOdebrecht CarolinOdebrecht split up sampling proposal into two documents, add WG3 comments </change>
+            <change> CarolinOdebrecht split up sampling proposal into two documents, add WG3 comments </change>
         </revisionDesc>
     </teiHeader>
     <text>
