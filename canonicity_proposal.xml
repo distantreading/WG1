@@ -18,7 +18,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-            <change/>
+            <change> @CarolinOdebrecht CarolinOdebrecht split up sampling proposal into two documents, add WG3 comments </change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -40,7 +40,7 @@
                     for corpus design, basic annotation and metadata schemes and workflow. This
                     discussion paper focuses on corpus design and metadata because both tasks
                     interplay with each other.</p>
-                <p>The task for WG3 is to exploretheoretical concerns that stem from the application
+                <p>The task for WG3 is to explore theoretical concerns that stem from the application
                     of Distant Reading methods to literary history. WG1's task of designing the
                     corpus guidelines needs to be closely communicated and coordinated with the WG3
                     in order apply the relevant textual, paratextual, and contextual genre markers
