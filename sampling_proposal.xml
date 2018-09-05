@@ -4,7 +4,7 @@
         <fileDesc>
             <titleStmt>
                 <title>Sampling criteria for the ELTeC</title>
-                <author>Cost Action CA16204 – WG1 </author>
+                <author>COST Action CA16204 – WG1 </author>
             </titleStmt>
             <editionStmt>
                 <edition><date>2018-01</date></edition>
@@ -17,12 +17,14 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-                <change><date>2018-01-30</date> LB revised table; added some discussion to criteria;
-                    tarted up bibliog </change>
-                <change><date>2018-01-27</date> LB converted to XML</change>
-                <change><date>2018-01-27</date> CO Final draft</change>
-                <change><date>2018-03-8</date> CO Add first use cases, add findings of the WG1
-                    meeting in Prague: refine selection criteria and balancing criteria</change>
+            <change><date>2018-01-30</date> LB revised table; added some discussion to criteria;
+                tarted up bibliog </change>
+            <change><date>2018-01-27</date> LB converted to XML</change>
+            <change><date>2018-01-27</date> CO Final draft</change>
+            <change><date>2018-03-8</date> CO Add first use cases, add findings of the WG1 meeting
+                in Prague: refine selection criteria and balancing criteria</change>
+            <change><date>2018-09-05</date>CO divided the document into two documents: one for
+                sampling criteria, one for discussion about canonicity and corpus design.</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -33,7 +35,6 @@
                 <list type="ordered">
                     <item>Task</item>
                     <item>Method</item>
-                    <item>Representativeness</item>
                     <item>Requirements of sampling criteria</item>
                     <item>Sampling criteria</item>
                     <item>Metadata for texts in ELTeC</item>
@@ -65,173 +66,23 @@
             </div>
             <div>
                 <head>Method</head>
-                <p>First, we would like to discuss whether the task of corpus building requires
-                    normative selection criteria (canon) or methodical selection criteria (corpus
-                    sampling). The first and foremost important difference between the approaches is
-                    the motivation of criteria. A canon is the portrait of someone’s prestigious
-                    social, cultural, economic status and it reflects normative self-promotional
-                    legitimating and rating decisions. In contrast, corpus design follows a research
-                    question or context and is therefore more research goal oriented. A second
-                    important aspect is the way of considering the actual texts. As Moisl (2009:
-                    876) puts it ‘Data is ontologically different from the world.’ So there is a
-                    difference between texts in the world and data we create. By texts, we may
-                    consider the manifestation or the extension or the work of a text (cf. IFLA
-                    2009). A canon can contain an extension of a certain text which is available in
-                    different languages and prints. Ontologically, these different levels of text
-                    are different from what a text in a corpus might be (cf. van Zundert and Andrews
-                    2017). This means, that digitization is a kind of annotation, hence
-                    interpretation (Odebrecht et al 2017). A representation of a text in a corpus
-                    (e.g. transcription, OCR) is the result of interpretation. A corpus design needs
-                    to consider this for sampling and digitization issues. </p>
-                <p>At the end of the Action, ELTeC should contain literary texts (novels) from a
-                    distinct period and in several languages. For each language (and thus for each
-                    cultural context) there exists a diversity of canons which reflect different
-                    prestigious groups such as publishers, authors and readers. These actors and
-                    their possible influence on canon building is multi-relational. Each canon is a
-                    result of rating texts from different perspectives. The assessment can reflect
-                    intellectual rating (a text is a representative of a certain literature period,
-                    is influential, is important), economical rating (a text is published in more
-                    than one print run), or readers rating (a text is most popular within a certain
-                    reader group) (cf. Hermann 2011 or Winko 1996). All these ratings can change
-                    over time and may also interplay which each other. A canon can therefore reflect
-                    different interpretation of ‘famous’, ‘important’ or ‘influential’ texts. These
-                    criteria are not overall comparable. For example, texts from a smaller language
-                    community such as Czech are less likely to be frequently reprinted than English
-                    texts of the same period and genre. Additionally, the awareness level of texts
-                    depends on the influence of the country and their publishing houses.</p>
-                <p>The criteria derived from a canon are not completely comparable and categorical.
-                    Which prestigious group’s canon should be considered, which should be excluded,
-                    and why? Are there comparable canons for novels in all countries of the language
-                    in question? Algee-Hewitt and McGurl (2015) show an approach to corpus design
-                    based on several canons and which kind of problems occur. Each analysis of the
-                    corpus than only shows the different effects of the decisions made by the
-                    normative group. Considering national canons is also very difficult and somewhat
-                    problematic. An example is the German National Canon of literature which was
-                    developed in the 18th century and was promoted by the national educational
-                    system until the 1990. Since German reunification, the educational system has
-                    not promoted a strict canon and does not recommend a list of books to be read in
-                    school or at university (cf. Winko 1996). Thus, taking such types of canons as
-                    part of a sampling base of ELTeC would mean reflecting a political and social
-                    past of German education and politics. Choosing between canons can then mean
-                    choosing between tastes of (current) literature (in past and present) and tastes
-                    of past literature when the canon builder rates historical texts. Finally, these
-                    canons are not built to be the sampling guidelines for a corpus which we would
-                    like to build in the Action.</p>
-                <p>The MoU of CA16204 formulates the goal as follows: “The main aim and objective of
-                    the Action is to This Action will develop the resources and methods necessary to
-                    change the way European literary history is written.” This goal requires a new
-                    approach to corpus design, metadata design and annotation models. As Fowler
-                    (2002, 214) puts it: ‘The current canon sets limits to our understanding of
-                    literature, in several ways’. Relying on canons will obstruct the Action’s goal
-                    in a fundamental way. Canons provide traditional and normative access to the
-                    history of literature. In contrast, the Action focuses on new approaches to tell
-                    another story. Instead, we might decide that our collection should contain a
-                    mixture of works that have never been reprinted since their first appearance,
-                    works that have been reprinted a small number of times within one or two decades
-                    of their first appearance, and works that have been reprinted in almost every
-                    decade since their first appearance. </p>
-                <p>Therefore, we argue for a non-normative but metadata-based approach of sampling
-                    criteria which will follow a corpus design approach. Corpus sampling criteria
-                    are mostly oriented/developed by the research question or/and contexts of the
-                    corpus creators group. In CA16204, we have neither a distinct research question
-                    nor a fixed and previously known corpus creator group. The research context of
-                    the Action is more interested in knowledge production in a methodological sense
-                    and does not prefer a single method, model or theory. Furthermore, the member
-                    group of the Action will fluctuate and consist of researches from different
+                <p>We follow a non-normative but metadata-based approach of sampling criteria which
+                    will follow a corpus design approach. Corpus sampling criteria are mostly
+                    oriented/developed by the research question or/and contexts of the corpus
+                    creators group. In CA16204, we have neither a distinct research question nor a
+                    fixed and previously known corpus creator group. The research context of the
+                    Action is more interested in knowledge production in a methodological sense and
+                    does not prefer a single method, model or theory. Furthermore, the member group
+                    of the Action will fluctuate and consist of researches from different
                     disciplines with different theoretical and cultural contexts. Thus, we need to
                     build the corpus design on a methodical basis. With this method, we will also be
                     able to select canonical texts as well but not exclusively. </p>
-            </div>
-            <div>
-                <head>Representativeness and balance</head>
-                <p>Additional to the aspect of ‘prestige’ (canon), the aspect of representativeness
-                    is problematic for corpus design. Developing criteria for corpus design means to
-                    decide which kind of sample of the world shall be included in the data base.
-                    Obviously, including the whole population of 19th century literature in several
-                    languages is impossible. So we need to make a compromise between what we would
-                    like to have in the corpus (all literature) and what we can put in the corpus
-                    (sample). </p>
-                <p>It is a truism that there is no such thing as a ‘good’ or a ‘bad’ corpus, because
-                    how a corpus is designed depends on what kind of corpus it is and how it is
-                    going to be used. (Hunston 2008, 155)</p>
-                <p>Following Hunston (2008), a corpus design needs to follow the research goal. For
-                    the Action, representativeness may be the relationship between the corpus and
-                    the body of literature in question. ‘Representativeness refers to the extent to
-                    which a sample includes the full range of variability in a population’ (Biber
-                    1993, 243). To say something about the representativeness of a corpus requires
-                    knowledge about the whole population of literature (in the period in question).
-                    Actually, we don’t know every book of every language published/read/discussed in
-                    Europe in the period in question. It is further ‘impossible to identify a
-                    complete list of ‘categories’ that would exhaustively account for all texts
-                    produced in a given language’, (Hunston 2008, 161) or context. Such categories
-                    can refer to various factors such as characteristics of authors, e.g., gender or
-                    place of birth, publishers, topics of the texts, readership etc. Against the
-                    background of canon building, there is also ‘no true measure of the
-                    ‘significance’ of a type of discourse to a community’. The chance, that a corpus
-                    represents the whole population of something increases with the size of a
-                    corpus. In this way, size and representativeness are connected. <note
-                        place="foot" xml:id="ftn1" n="1"><p rend="footnote text"> See Biber (1993)
-                            and Hunston (2008) for a detailed discussion.</p></note>
-                    Representativeness is therefore a kind of ideal which we would like to pursue
-                    but which cannot be achieved as whole. In line with the MoU, the ELTeC can be
-                    designed as a monitor corpus where texts (from different languages and periods)
-                    can be added over time. </p>
-                <p>Balance refers to the internal proportion of the corpus. Note that a fully
-                    balanced corpus is an ideal which we only can try to achieve next to the ideal
-                    of representativeness (Hunston 2008, 163). According the MoU, the corpus shall
-                    contain 2,500 full-texts novels at least in 10 different languages:</p>
-                <list type="unordered">
-                    <item>Languages: Dutch, English, French, German, Greek, Italian, Polish,
-                        Portuguese, Russian, Spanish (ELTeC core)</item>
-                    <item>first iteration: 6 subcollections (100 novels per language) 1840 to 1920
-                        starting with British, French, Spanish, German, Greek, Polish</item>
-                    <item>second iteration: 4 subcollections (100 novels per language) 1840 to
-                        1920</item>
-                    <item>third iteration: 6 subcollections in additional languages and
-                        subcollections for all 16 languages 1780-1839, </item>
-                    <item>We will also try to include additional languages such as Hungarian,
-                        Serbian, Swiss , Romanian, Czech, Latvian, Norwegian.</item>
-                </list>
-                <p>In this way, ELTeC is balanced with respect to language. With respect to genre,
-                    the corpus is not balanced but homogenous; all texts in the corpus shall be full
-                    novels. With respect to time, the corpus design shall focus on the period 1840
-                    to 1920.</p>
-                <p>Before discussing the criteria in more detail, we would like to ask another
-                    methodical question concerning corpus sampling: would we like to use each
-                    criterion, with the intention to represent the variety of possible values, or
-                    should the sample represent the distribution of those values across the
-                    population? </p>
-                <p>Let’s say we wish to select 100 texts from a population of texts published over a
-                    period of (say) 20 decades. We might select five texts from the first decade,
-                    five from the second, and so on, making up our 100 titles, evenly spread across
-                    the possible decades. The probability that a text in our corpus will come from
-                    any given decade will always be the same: 1 in 5. This selection represents the
-                        <emph>variety</emph> of possible values for the criterion. Suppose now that
-                    we look more closely at the number of titles from each decade actually available
-                    in the population we are sampling. It’s more than likely that this number will
-                    vary significantly: for example, we might notice that there are 2000 titles
-                    published in decade x, and only 100 in decade y. To represent this population
-                        <emph>statistically </emph>we should therefore make it 20 times more
-                    probable that a randomly chosen title will come from decade x than from decade
-                    y. Since the total number of titles we can choose is quite small relative to the
-                    total number available in the population, strict application of this principle
-                    may mean that we cannot choose any titles at all from some decades. This is one
-                    reason for preferring to make our sampling represent variety rather than
-                    frequency; another is that we cannot choose fractional numbers of titles. When
-                    we start considering more than one criterion, the task of ensuring that the
-                    numbers in our sample accurately reflect the distribution of all values across
-                    the population becomes prohibitively complex. </p>
-                <p>Following the approach of representing the variety of a population, we then need
-                    to decide which criterion is balanced in which way and interplays with other
-                    criteria. For example, we may want to choose novels from male and female authors
-                    in a balanced way. This may mean that in the total of all novels one half will
-                    be from female authors. Without any further regulation, we might have more
-                    female authors in one decade than in other decades. If we would like to have an
-                    equal number of male and female authors in every decade, we need to link the
-                    criterion of the author’s gender with the criterion of time. Doing this, might
-                    complicate the selection process (cf. finding novels for this proportion in
-                    every decade of the period in question). So we have to decide which categories
-                    shall be present in a balanced way in the corpus. </p>
+                <p> Representativeness is a kind of ideal which we would like to pursue but which
+                    cannot be achieved as whole. We will therefore aim to represent the variety of a
+                    population. In line with the MoU, the ELTeC will be designed as a monitor corpus
+                    where texts (from different languages and periods) can be added over time. We
+                    then need to decide which criterion is balanced in which way and interplays with
+                    other criteria.</p>
             </div>
             <div>
                 <head>Requirements of sampling criteria</head>
@@ -241,8 +92,9 @@
                     each year of the period in question. The main sampling criterion ‘language’ will
                     require not to include translations at all. We will take the first edition of a
                     novel or editions of these novels. By a novel, we mean the edition of the book,
-                    hence excluding novels only printed in journals. If we consider editions of a
-                    novel, these editions should be freely available (free licences for reusing
+                    hence excluding novels only printed in journals, unless a particular literary
+                    tradition only features novels printed in serial format. If we consider editions
+                    of a novel, these editions should be freely available (free licences for reusing
                     them. The first edition is more interesting from a philological point of view.
                     It represents the authentic texts of the authors. Dealing with historical texts
                     might require some cleaning up or normalizations. We will merge all word forms
@@ -260,7 +112,11 @@
                     because it is not digitized, but it should be excluded if the text cannot be
                     made freely available in ELTeC. If we only use availability as a selecting
                     criterion, we are at risk of copying projects such as ‘Gutenberg’ for example.
-                    We then need additional criteria which can be applied without having to know
+                    The issue remains of finding additional funds to digitise non-canonical books.
+                    Un til that moment, the solution would be to create pilot corpora (that can
+                    later be supplemented or substituted by an alterna tive) for literatures that do
+                    not have a significant number of digitized texts. </p>
+                <p> We then need additional criteria which can be applied without having to know
                     (read) the texts in question. The criteria should be checked without a deep
                     knowledge about the texts. Otherwise, this will oppose the goal of the whole
                     Action and the methodical approach of distant reading. The criteria should be
@@ -268,7 +124,9 @@
                     metadata in a wider scope than only the classical bibliographical metadata. In
                     this way corpus design interacts with metadata. Some of the text’s metadata can
                     be used a sampling criteria. These criteria are text-external and -internal
-                    criteria (cf. Hunston 2008) on which we then need to rely. </p>
+                    criteria (cf. Hunston 2008) on which we then need to rely. The selection
+                    criteria may be assisted by bibliographical overviews (wherever availabl e) for
+                    each language in order to avoid possible canon-derived bias. </p>
                 <p>We suggest using an online table as a means of collecting nominations for
                     inclusion in the ELTeC but other methods are feasible. </p>
             </div>
@@ -291,8 +149,9 @@
                 </list>
                 <p>Organization</p>
                 <list>
-                    <item>Please note: Contact the sampling support Team: Carolin, Lou, Pieter and Diana!
-                        Task: To control the corpus sampling according to the selection criteria. </item>
+                    <item>Please note: Contact the sampling support Team: Carolin, Lou, Pieter and
+                        Diana! Task: To control the corpus sampling according to the selection
+                        criteria. </item>
                 </list>
                 <p>Criteria: Eligibility. </p>
                 <p> In order to be included, a text must... </p>
@@ -347,9 +206,12 @@
                     <label>Reprint count</label>
                     <item><p>We propose to use the number of times a work is reprinted as an
                             objective measure of its reception, using categories like the following: </p><list>
-                                <item>low: no reprints at all, or one reprint (30% of all novels in a language collection)</item>
-                            <item>high: reprinted more than once (30% of all novels in a language collection)</item> 
-                                <item>We will not include digitizations of texts in the reprint count.</item>
+                            <item>low: no reprints at all, or one reprint (30% of all novels in a
+                                language collection)</item>
+                            <item>high: reprinted more than once (30% of all novels in a language
+                                collection)</item>
+                            <item>We will not include digitizations of texts in the reprint
+                                count.</item>
                         </list></item>
                     <label>Author gender</label>
                     <item>
@@ -364,7 +226,7 @@
                     <item>
                         <p>We should try to include a variety of lengths</p>
                         <list>
-                            <item>short (10-50k word tokens) </item>
+                            <item>short (10k-50k word tokens) </item>
                             <item>medium (50k-200k word tokens)</item>
                             <item>long (>200k word tokens)</item>
                         </list></item>
@@ -372,17 +234,18 @@
                     <label>Kind of novel</label>
                     <item>
                         <p>It is an open issue how to classify novels by topic. We are not sure how
-                            to use this as a sampling criterion. </p>
+                            to use this as a sampling criterion. Instead we add metadata about their
+                            subgenre.</p>
                         <list>
                             <item>Main theme </item>
                         </list></item>
                 </list>
                 <p>The following table suggests minimum and maximum numbers of titles to be selected
-                    for each criterion. For each language collection we collect 100 different novels. In each date group, we will have 
-                    25 novels. In a language collection, we will have at least 30 novels for the category high reprints and 
-                    30 for the category low reprints. In a language collection, we will have at least 10 novels from female authors
-                    and 20 novels per length category (long, medium short). 
-                </p>
+                    for each criterion. For each language collection we collect 100 different
+                    novels. In each date group, we will have 25 novels. In a language collection, we
+                    will have at least 30 novels for the category high reprints and 30 for the
+                    category low reprints. In a language collection, we will have at least 10 novels
+                    from female authors and 20 novels per length category (long, medium short). </p>
                 <table rend="rules">
                     <row role="label">
                         <cell>Language</cell>
@@ -428,15 +291,16 @@
                     <item>pages</item>
                     <item>topics (cf. Falkentheorie)<list type="unordered">
                             <item>politics, crime, espionage, provincial, school, adventure, war,
-                                faith, domestic, nature, factory </item>
+                                faith, domestic, nature, factory, love, family, history, mystery,
+                                urban life, art, rural life</item>
                         </list></item>
                     <item>subgenre<list type="unordered">
                             <item>work-in-progress novel</item>
                         </list></item>
-                    <item>Narrator<list type="unordered">
+                    <item>Narrator(s)<list type="unordered">
                             <item>first person</item>
                             <item>third person</item>
-                            <item>authorial narrator</item>
+                            <item>authorial/omniscient narrator</item>
                         </list></item>
                     <item>canonicity/reception<list type="unordered">
                             <item>rated by a canon: y/n</item>
