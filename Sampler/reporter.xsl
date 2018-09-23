@@ -13,22 +13,20 @@
                 <xsl:variable name="textCount">
                     <xsl:value-of select="count(//t:text)"/>
                 </xsl:variable>
-                <xsl:message><xsl:value-of select="$textCount"/> texts found </xsl:message>
-
+                <xsl:message><xsl:value-of select="$textCount"/> texts found !</xsl:message>
 
 
 
                 <table class="catalogue">
                     <tr class="label">
                         <td>Identifier</td>
-                        <td>Word count</td>
-                        <td>Date</td>
+                        <td>Encoding</td>
+                        <td>Word count (Size)</td>
+                        <td>Date (Slot)</td>
                         <td>Title</td>
                         <td>Author</td>
                         <td>Sex</td>
-                        <td>Length</td>
-                        <td>Reprints</td>
-                        <td>Time slot</td>
+                         <td>Reprints</td>
                     </tr>
                     <xsl:for-each select="t:teiCorpus/t:TEI/t:text">
                         <tr>
@@ -36,17 +34,24 @@
                                 <xsl:value-of select="../t:teiHeader/t:fileDesc/t:extent/t:measure[@unit='words']"/>
                             </xsl:variable>
                             <xsl:variable name="date">
-                                <xsl:value-of select="../t:teiHeader/t:fileDesc/t:sourceDesc/t:bibl/t:relatedItem[1]/t:bibl/t:date"/>
+                                <xsl:value-of select="../t:teiHeader/t:fileDesc/t:sourceDesc/t:bibl/t:relatedItem[@type='copyText']/t:bibl/t:date"/>
                           </xsl:variable>
-                            
+                            i
                             <td>
                                 <xsl:value-of select="ancestor::t:TEI/@xml:id"/>
                             </td>
                             <td>
-                                <xsl:value-of select="$wc"/>
+                                <xsl:value-of select="../t:teiHeader/t:encodingDesc/@n"/>
                             </td>
                             <td>
-                                <xsl:value-of select="$date"/>
+                                <xsl:value-of select="$wc"/> (<xsl:value-of
+                                    select="../t:teiHeader/t:profileDesc/t:textDesc/e:size/@key"
+                                />)
+                            </td>
+                            <td>
+                                <xsl:value-of select="$date"/> ( <xsl:value-of
+                                    select="../t:teiHeader/t:profileDesc/t:textDesc/e:timeSlot/@key"
+                                />)
                             </td>
                             
                             <td>
@@ -63,21 +68,21 @@
                                     select="../t:teiHeader/t:profileDesc/t:textDesc/e:authorGender/@key"
                                 />
                             </td>
-                            <td>
+                           <!-- <td>
                                 <xsl:value-of
                                     select="../t:teiHeader/t:profileDesc/t:textDesc/e:size/@key"
                                 />
-                            </td>
+                            </td>-->
                             <td>
                                 <xsl:value-of
                                     select="../t:teiHeader/t:profileDesc/t:textDesc/e:canonicity/@key"
                                 />
                             </td>
-                            <td>
+                            <!--<td>
                                 <xsl:value-of
                                     select="../t:teiHeader/t:profileDesc/t:textDesc/e:timeSlot/@key"
                                 />
-                            </td>
+                            </td>-->
 
 
                         </tr>

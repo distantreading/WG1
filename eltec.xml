@@ -321,7 +321,7 @@
                                         <desc>work first published between 1880 and 1899</desc>
                                     </valItem>
                                     <valItem ident="T4">
-                                        <desc>work first published between 1900 and 1919</desc>
+                                        <desc>work first published between 1900 and 1920</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -565,6 +565,15 @@
                         </exemplum>
                     </elementSpec>
 
+<elementSpec ident="label" mode="change">
+    <exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples"><p><label>April 5.</label>-Two shoulders of mutton arrived, Carrie having arranged with
+            another butcher without consulting me. Gowing called, and fell over scraper coming in.
+            <hi>Must</hi> get that scraper removed.</p>
+        <p><label>April 6.</label>-Eggs for breakfast simply shocking; sent them back to Borset with
+            my compliments, and he needn't call any more for orders. </p></egXML></exemplum>
+
+</elementSpec>
                 </schemaSpec>
             </div>
 

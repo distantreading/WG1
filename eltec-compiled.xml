@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:e="http://distantreading.net/eltec/ns" xml:base="file:/home/lou/Public/WG1/eltec.xml"><?TEIVERSION Version 3.5.0a. Last updated on
-	23rd July 2018, revision 206c146?>
+	12th September 2018, revision e9a818e?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -234,6 +234,9 @@
             <label>
                <gi>title</gi></label>
             <item>the title of a book, piece of music, etc.</item>
+            <label>
+               <gi>label</gi></label>
+            <item>any form of heading or label found within a paragraph of text</item>
             <label><gi>emph</gi></label>
             <item>a word or phrase being linguistically emphasized e.g. by being shouted</item>
          </list> The <gi>hi</gi> is also sometimes used for indications of superscript characters
@@ -356,7 +359,8 @@
             <row>
                <cell>Font change</cell>
                <cell>Mark with <gi>hi</gi> (no attributes)</cell>
-               <cell>Replace with <gi>foreign</gi>, <gi>title</gi>, <gi>emph</gi> where
+               <cell>Replace with <gi>foreign</gi>, <gi>title</gi>, 
+                  <gi>label</gi>, <gi>emph</gi> as
                   appropriate</cell>
 
                <cell>Level 1 may use <att>rend</att> attribute with values ul ro sc it ? </cell>
@@ -525,7 +529,7 @@
                            roman parisien (édition numerisée) </ref>
                         <publisher> gallica.bnf.fr / Bibliothèque nationale de France </publisher>
                         <idno type="ARK">12148/bpt6k931128v</idno>
-                        <relatedItem type="printSource">
+                        <relatedItem type="copyText">
                            <bibl><title>Tatiana Leïlof , roman parisien, par Édouard Rod</title>
                               <publisher>E. Plon, Nourrit et Cie</publisher>
                               <pubPlace>Paris</pubPlace>
@@ -5792,344 +5796,19 @@ Measures</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COLI">3.7. Lists</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD6">2.6. The Revision Description</ref>
   </listRef>
-</elementSpec><elementSpec module="core" ident="label">
-  <gloss versionDate="2009-01-06" xml:lang="fr">étiquette</gloss>
-  <gloss versionDate="2017-06-25" xml:lang="de">Label</gloss>
-  <desc versionDate="2011-11-05" xml:lang="en">contains any label or heading used to identify part of a text,
-  typically but not exclusively in a list or glossary.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">목록의 항목과 관련된 표지를 포함한다; 용어집에서는 정의되고 있는 용어를 표지한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">包含和列表中某項目相關聯的標號；在詞彙表中則用來標記被定義的字詞。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">リスト中の項目に関連するラベルを示す．用語集においては，定義される用 語を示す．</desc>
-  <desc versionDate="2009-01-06" xml:lang="fr">contient l'étiquette attachée à un item dans une liste ;
-    dans les glossaires, il marque le terme qui est défini.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">contiene un concepto o enunciado asociado con un ítem en
-    una lista; en un glosario marca el término que se define.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">contiene l'etichetta associata ad una voce in una lista;
-    nei glossari indica il dermine che viene definito</desc>
-  <desc versionDate="2017-06-25" xml:lang="de">enthält ein Label oder eine Überschrift zur 
-    Identifikation eines Textteils, insbesondere in einer Liste oder einem Glossar.</desc>
-  <classes>
-    <memberOf key="att.global"/>
-    <memberOf key="att.typed"/>
-    
-    
-    <memberOf key="model.labelLike"/>
-  </classes>
-  <content>
-    <macroRef key="macro.phraseSeq"/>
-  </content>
-  <exemplum xml:lang="en">
-    <p>Labels are commonly used for the headwords in glossary
-    lists; note the use of the global <att>xml:lang</att> attribute to
-    set the default language of the glossary list to Middle English,
-    and identify the glosses and headings as modern English or
-    Latin:</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <list type="gloss" xml:lang="enm">
-        <head xml:lang="en">Vocabulary</head>
-        <headLabel xml:lang="en">Middle English</headLabel>
-        <headItem xml:lang="en">New English</headItem>
-        <label>nu</label>
-        <item xml:lang="en">now</item>
-        <label>lhude</label>
-        <item xml:lang="en">loudly</item>
-        <label>bloweth</label>
-        <item xml:lang="en">blooms</item>
-        <label>med</label>
-        <item xml:lang="en">meadow</item>
-        <label>wude</label>
-        <item xml:lang="en">wood</item>
-        <label>awe</label>
-        <item xml:lang="en">ewe</item>
-        <label>lhouth</label>
-        <item xml:lang="en">lows</item>
-        <label>sterteth</label>
-        <item xml:lang="en">bounds, frisks (cf. <cit><ref>Chaucer, K.T.644</ref><quote>a courser, <term>sterting</term>as the fyr</quote></cit>
-            </item>
-        <label>verteth</label>
-        <item xml:lang="la">pedit</item>
-        <label>murie</label>
-        <item xml:lang="en">merrily</item>
-        <label>swik</label>
-        <item xml:lang="en">cease</item>
-        <label>naver</label>
-        <item xml:lang="en">never</item>
-      </list>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="de" versionDate="2017-06-25">
-    <p>Labels werden häufig für Schlagwörter in Glossaren verwendet; Beachten Sie die Verwendung des
-      globalen <att>xml:lang</att>-Attributs, um die Standardsprache des Glossars auf Mittelenglisch
-      zu setzen sowie die Glossen und Überschriften als modernes Englisch oder Latein zu
-      identifizieren:</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <list type="gloss" xml:lang="enm">
-        <head xml:lang="en">Vocabulary</head>
-        <headLabel xml:lang="en">Middle English</headLabel>
-        <headItem xml:lang="en">New English</headItem>
-        <label>nu</label>
-        <item xml:lang="en">now</item>
-        <label>lhude</label>
-        <item xml:lang="en">loudly</item>
-        <label>bloweth</label>
-        <item xml:lang="en">blooms</item>
-        <label>med</label>
-        <item xml:lang="en">meadow</item>
-        <label>wude</label>
-        <item xml:lang="en">wood</item>
-        <label>awe</label>
-        <item xml:lang="en">ewe</item>
-        <label>lhouth</label>
-        <item xml:lang="en">lows</item>
-        <label>sterteth</label>
-        <item xml:lang="en">bounds, frisks (cf. <cit><ref>Chaucer, K.T.644</ref><quote>a courser, <term>sterting</term>as the fyr</quote></cit>
-        </item>
-        <label>verteth</label>
-        <item xml:lang="la">pedit</item>
-        <label>murie</label>
-        <item xml:lang="en">merrily</item>
-        <label>swik</label>
-        <item xml:lang="en">cease</item>
-        <label>naver</label>
-        <item xml:lang="en">never</item>
-      </list>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <p><gi>label</gi> est souvent employé pour identifier les mots dans des listes de glossaire ;
-        on note l'utilisation de l’attribut global <att>xml:lang</att> : l'ancien français est la
-        langue par défaut du glossaire</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Godefroy">
-      <list type="gloss" xml:lang="fro">
-        <head xml:lang="en">Vocabulaire</head>
-        <headLabel xml:lang="fr">Ancien français</headLabel>
-        <headItem xml:lang="fr">Français moderne</headItem>
-        <label>amerté</label>
-        <item xml:lang="fr">amertume</item>
-        <label>barquer</label>
-        <item xml:lang="fr">conduire une barque</item>
-        <label>biberon</label>
-        <item xml:lang="fr">goulot d'un vase.</item>
-        <label>bugle</label>
-        <item xml:lang="fr">jeune boeuf</item>
-        <label>cestui</label>
-        <item xml:lang="fr">celui-ci</item>
-        <label>chaitiveté</label>
-        <item xml:lang="fr">captivité</item>
-        <label>duire</label>
-        <item xml:lang="fr">conduire</item>
-        <label>dangier</label>
-        <item xml:lang="fr">puissance, pouvoir</item>
-        <label>sangler</label>
-        <item xml:lang="la">singularis</item>
-        <label>vespre </label>
-        <item xml:lang="fr">tombée du jour (cf. <cit><ref>Lexique de Godefroy</ref><quote>de hautes vespres : tard dans la soirée.</quote></cit>)</item>
-      </list>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <p>On emploie aussi <gi>label</gi> pour enregistrer le classement alphanumérique d'items dans
-        des listes ordonnées.</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-ATILF"> L’unité mixte de
-        recherche ATILF (Analyse et Traitement Informatique de la Langue Française) propose 3 types
-        de ressources : <list rend="runon" type="ordered"><label>(1)</label><item>Des ressources linguistiques publiées.</item><label>(2) </label><item>Des ressources linguistiques informatisées.</item><label>(3) </label><item>Des ressources linguistiques logicielles.</item></list>
-      </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <p>On emploie aussi <gi>label</gi> dans d'autres listes structurées, comme dans cet extrait du
-        journal de Jules Renard.</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Renard_Journal">
-      <list type="gloss">
-        <label>1er janvier..</label>
-        <item> L'esprit inquiet mais clairvoyant, c'est-à-dire actif et sain, de l'homme qui ne
-            travaille pas.</item>
-        <label>7 janvier. </label>
-        <item>On parle de Syveton. Elle aussi se rappelle avoir été, petite fille, poursuivie par
-            un homme tout décolleté du bas et qu'on appelait l'homme au nez rouge. </item>
-        <label>9 janvier. </label>
-        <item>Jaurès dit que Syveton n'avait aucun intérêt à se tuer mais, à y regarder de près,
-            oui, en cherchant bien, on trouve que nous avons tous un intérêt quelconque à nous tuer. </item>
-        <label>13 janvier. </label>
-        <item>Dans mon coeur froid, quelques rares jolis sentiments, comme des oiseaux aux petites
-            pattes sur de la neige.</item>
-      </list>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <list type="gloss" xml:lang="zh">
-        <head xml:lang="zh">字彙</head>
-        <headLabel xml:lang="zh-CN">簡體中文</headLabel>
-        <headItem xml:lang="zh-TW">繁體中文</headItem>
-        <label>尘</label>
-        <item xml:lang="zh-TW">塵</item>
-        <label>业</label>
-        <item xml:lang="zh-TW">業</item>
-        <label>处</label>
-        <item xml:lang="zh-TW">處</item>
-        <label>个</label>
-        <item xml:lang="zh-TW">個</item>
-        <label>与</label>
-        <item xml:lang="zh-TW">與</item>
-        <label>军队</label>
-        <item xml:lang="zh-TW">軍隊</item>
-        <label>疏远</label>
-        <item xml:lang="zh-TW">疏遠</item>
-        <label>后汉</label>
-        <item xml:lang="zh-TW">後漢<cit><ref>出師表</ref><quote>亲近小人，疏远贤臣，这是<term>后汉</term>所以倾覆衰败的原因</quote></cit>
-            </item>
-        <label>叹息</label>
-        <item xml:lang="zh-TW">嘆息</item>
-        <label>认为</label>
-        <item xml:lang="zh-TW">認為</item>
-        <label>诚实</label>
-        <item xml:lang="zh-TW">誠實</item>
-        <label>获得</label>
-        <item xml:lang="zh-TW">獲得</item>
-      </list>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples"> 有關本書的版權問題，我做出以下兩點聲明。<list rend="runon" type="ordered"><label>(1)</label><item>未經授權許可，請勿擅自複印。</item><label>(2) </label><item>歡迎學術引用本文，然請詳細標明出處。</item></list>
-      </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#biblzh-tw_n9">
-      <list type="gloss">
-        <label>一</label>
-        <item>今天晚上，很好的月光。 我不見他，已是三十多年；今天見了，精神分外爽快。...</item>
-        <label>二</label>
-        <item>今天全沒月光，我知道不妙。早上小心出門，趙貴翁的眼色便怪：似乎怕我，似乎想害我。還有七八個人，交頭接耳的議論我，...</item>
-        <label>三</label>
-        <item>...我翻開歷史一查，這歷史沒有年代，歪歪斜斜的每葉上都寫著“仁義道德”几個字。我橫豎睡不著，仔細看了半夜，才從字縫里看出字來，滿本都寫著兩個字是<q xml:lang="och">喫人</q>！書上寫著這許多字，佃戶說了這許多話，卻都笑吟吟的睜著怪眼看我。我也是人，他們想要吃我了！ </item>
-        <label>六</label>
-        <item>黑漆漆的，不知是日是夜。趙家的狗又叫起來了。 獅子似的凶心，兔子的怯弱，狐狸的狡猾，…… </item>
-      </list>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <p>Labels may also be used to record explicitly the numbers or letters which mark list items in
-      ordered lists, as in this extract from Gibbon's <title>Autobiography</title>. In this usage
-      the <gi>label</gi> element is synonymous with the <att>n</att> attribute on the <gi>item</gi>
-      element:</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#GibAut">I will add two facts, which have seldom occurred
-      in the composition of six, or at least of five quartos. <list rend="runon" type="ordered"><label>(1)</label><item>My first rough manuscript, without any intermediate copy, has been sent to the press.</item><label>(2) </label><item>Not a sheet has been seen by any human eyes, excepting those of the author and the
-          printer: the faults and the merits are exclusively my own.</item></list>
-      </egXML>
-  </exemplum>
-  <exemplum xml:lang="de" versionDate="2017-06-25">
-    <p>Labels können auch verwendet werden, um die Zahlen oder Buchstaben explizit zu erfassen, die
-      Listenelemente in geordneten Listen markieren – wie in diesem Auszug aus Gibbons
-      <title>Autobiographie</title>. In diesem Fall ist das <gi>label</gi>-Element gleichbedeutend
-      mit dem <att>n</att>-Attribut des <gi>item</gi>-Elements:</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#GibAut">I will add two facts, which have seldom occurred
-      in the composition of six, or at least of five quartos. <list rend="runon" type="ordered"><label>(1)</label><item>My first rough manuscript, without any intermediate copy, has been sent to the press.</item><label>(2) </label><item>Not a sheet has been seen by any human eyes, excepting those of the author and the
-        printer: the faults and the merits are exclusively my own.</item></list>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <p>Labels may also be used for other structured list items, as in this extract from the journal
-      of Edward Gibbon:</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#GibAut">
-      <list type="gloss">
-        <label>March 1757.</label>
-        <item>I wrote some critical observations upon Plautus.</item>
-        <label>March 8th.</label>
-        <item>I wrote a long dissertation upon some lines of Virgil.</item>
-        <label>June.</label>
-        <item>I saw Mademoiselle Curchod — <quote xml:lang="la">Omnia vincit amor, et nos cedamus
-          amori.</quote>
-            </item>
-        <label>August.</label>
-        <item>I went to Crassy, and staid two days.</item>
-      </list>
-    </egXML>
-    <p>Note that the <gi>label</gi> might also appear within the
-<gi>item</gi> rather than as its sibling. Though syntactically valid,
-this usage is not recommended TEI practice.</p>
-  </exemplum>
-  <exemplum xml:lang="de" versionDate="2017-06-25">
-    <p>Labels können auch für andere strukturierte Listenelemente verwendet werden, wie in diesem Auszug
-      aus der Zeitschrift von Edward Gibbon:</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#GibAut">
-      <list type="gloss">
-        <label>March 1757.</label>
-        <item>I wrote some critical observations upon Plautus.</item>
-        <label>March 8th.</label>
-        <item>I wrote a long dissertation upon some lines of Virgil.</item>
-        <label>June.</label>
-        <item>I saw Mademoiselle Curchod — <quote xml:lang="la">Omnia vincit amor, et nos cedamus
-          amori.</quote>
-        </item>
-        <label>August.</label>
-        <item>I went to Crassy, and staid two days.</item>
-      </list>
-    </egXML>
-    <p>Das <gi>label</gi>-Element kann auch innerhalb des <gi>item</gi>-Elements, anstatt als sein
-      Geschwisterelement, vorkommen. Obwohl syntaktisch gültig, wird diese Verwendung von der TEI
-      nicht empfohlen.</p>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <p>Labels may also be used to represent a label or heading attached to
-a paragraph or sequence of paragraphs not treated as a structural
-division, or to a group of verse lines. Note that, in this case, the
-<gi>label</gi> element appears <emph>within</emph> the <gi>p</gi> or
-<gi>lg</gi> element, rather than as a preceding sibling of it.</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#CholNup">
-      <p>[...]
-<lb/>&amp; n’entrer en mauuais &amp; mal-heu-
-<lb/>ré meſnage. Or des que le conſente-
-<lb/>ment des parties y eſt le mariage eſt
-<lb/> arreſté, quoy que de faict il ne ſoit
-<label place="margin">Puiſſance maritale 
-entre les Romains.</label>
-            <lb/> conſommé. Depuis la conſomma-
-<lb/>tion du mariage la femme eſt ſoubs
-<lb/> la puiſſance du mary, s’il n’eſt eſcla-
-<lb/>ue ou enfant de famille : car en ce
-<lb/> cas, la femme, qui a eſpouſé vn en-
-<lb/>fant de famille, eſt ſous la puiſſance
-[...]</p>
-    </egXML>
-    <p>In this example the text of the label appears in the right hand
-    margin of the original source, next to the paragraph it describes, but
-    approximately in the middle of it. 
-    <!-- graphic url="Images/marginal-label.png"/--></p>
-    <p>If so desired the <att>type</att> attribute may be used to
-    distinguish different categories of label.</p>
-  </exemplum>
-  <exemplum xml:lang="de" versionDate="2017-06-25">
-    <p>Das <gi>label</gi>-Element kann auch verwendet werden, um ein Label oder eine Überschrift zu
-      kennzeichnen, die an einen Absatz oder eine Abfolge von Absätzen gebunden sind, die nicht als
-      struktureller Abschnitt oder Gruppe von Verszeilen behandelt werden. Beachten Sie, dass in
-      diesem Fall das <gi>label</gi>-Element <emph>innerhalb</emph> des <gi>p</gi> oder
-      <gi>lg</gi>-Elements erscheint und nicht als deren Geschwisterelement.</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#CholNup">
-      <p>[...]
-        <lb/>&amp; n’entrer en mauuais &amp; mal-heu-
-        <lb/>ré meſnage. Or des que le conſente-
-        <lb/>ment des parties y eſt le mariage eſt
-        <lb/> arreſté, quoy que de faict il ne ſoit
-        <label place="margin">Puiſſance maritale 
-          entre les Romains.</label>
-        <lb/> conſommé. Depuis la conſomma-
-        <lb/>tion du mariage la femme eſt ſoubs
-        <lb/> la puiſſance du mary, s’il n’eſt eſcla-
-        <lb/>ue ou enfant de famille : car en ce
-        <lb/> cas, la femme, qui a eſpouſé vn en-
-        <lb/>fant de famille, eſt ſous la puiſſance
-        [...]</p>
-    </egXML>
-    <p>In diesem Beispiel erscheint der Text des Labels im rechten Randbereich der Vorlage, neben dem
-      Absatz, den er beschreibt, ungefähr auf mittlerer Höhe. 
-      <!-- graphic url="Images/marginal-label.png"/--></p>
-    <p>Zusätzlich kann das <att>type</att>-Attribut verwendet werden, um verschiedene Kategorien von
-      Labels zu unterscheiden.</p>
-  </exemplum>
-  <listRef>
+</elementSpec><elementSpec rend="change" module="core" ident="label"><gloss versionDate="2009-01-06" xml:lang="fr">étiquette</gloss><gloss versionDate="2017-06-25" xml:lang="de">Label</gloss><desc versionDate="2011-11-05" xml:lang="en">contains any label or heading used to identify part of a text,
+  typically but not exclusively in a list or glossary.</desc><desc versionDate="2007-12-20" xml:lang="ko">목록의 항목과 관련된 표지를 포함한다; 용어집에서는 정의되고 있는 용어를 표지한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含和列表中某項目相關聯的標號；在詞彙表中則用來標記被定義的字詞。</desc><desc versionDate="2008-04-05" xml:lang="ja">リスト中の項目に関連するラベルを示す．用語集においては，定義される用 語を示す．</desc><desc versionDate="2009-01-06" xml:lang="fr">contient l'étiquette attachée à un item dans une liste ;
+    dans les glossaires, il marque le terme qui est défini.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene un concepto o enunciado asociado con un ítem en
+    una lista; en un glosario marca el término que se define.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene l'etichetta associata ad una voce in una lista;
+    nei glossari indica il dermine che viene definito</desc><desc versionDate="2017-06-25" xml:lang="de">enthält ein Label oder eine Überschrift zur 
+    Identifikation eines Textteils, insbesondere in einer Liste oder einem Glossar.</desc><classes><memberOf key="att.global"/><memberOf key="att.typed"/><memberOf key="model.labelLike"/></classes><content><macroRef key="macro.phraseSeq"/></content><attList/><exemplum>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples"><p><label>April 5.</label>-Two shoulders of mutton arrived, Carrie having arranged with
+            another butcher without consulting me. Gowing called, and fell over scraper coming in.
+            <hi>Must</hi> get that scraper removed.</p>
+        <p><label>April 6.</label>-Eggs for breakfast simply shocking; sent them back to Borset with
+            my compliments, and he needn't call any more for orders. </p></egXML></exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COLI">3.7. Lists</ref>
-  </listRef>
-</elementSpec><elementSpec module="core" ident="head">
+  </listRef></elementSpec><elementSpec module="core" ident="head">
   <gloss versionDate="2005-01-14" xml:lang="en">heading</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">표제부</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">標題</gloss>
@@ -10887,7 +10566,7 @@ situational parameters.</desc><desc versionDate="2007-12-20" xml:lang="ko">장�
                                         <desc>work first published between 1880 and 1899</desc>
                                     </valItem>
                                     <valItem ident="T4">
-                                        <desc>work first published between 1900 and 1919</desc>
+                                        <desc>work first published between 1900 and 1920</desc>
                                     </valItem>
                                 </valList>
                             </attDef></attList></elementSpec><moduleSpec n="ST" xml:id="DSTTEI2" ident="tei" type="core"/><moduleSpec n="CO" xml:id="DCO" ident="core"/><moduleSpec n="DS" xml:id="DDS" ident="textstructure"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="HD" xml:id="DHD" ident="header"/><moduleSpec n="ND" xml:id="DND" ident="namesdates"/><moduleSpec n="CC" xml:id="DCCHDR" ident="corpus"/></schemaSpec>
