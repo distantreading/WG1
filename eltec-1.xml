@@ -50,6 +50,7 @@
         <elementRef key="head"/>
         <elementRef key="hi"/> <!--*--> 
         <elementRef key="l"/>
+        <elementRef key="label"/> <!--*--> 
         <elementRef key="milestone"/> <!--*-->
         <elementRef key="note"/> <!--*-->
         <elementRef key="p"/>

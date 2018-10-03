@@ -208,6 +208,9 @@
             <label>
                <gi>title</gi></label>
             <item>the title of a book, piece of music, etc.</item>
+            <label>
+               <gi>label</gi></label>
+            <item>any form of heading or label found within a paragraph of text</item>
             <label><gi>emph</gi></label>
             <item>a word or phrase being linguistically emphasized e.g. by being shouted</item>
          </list> The <gi>hi</gi> is also sometimes used for indications of superscript characters
@@ -332,7 +335,8 @@
             <row>
                <cell>Font change</cell>
                <cell>Mark with <gi>hi</gi> (no attributes)</cell>
-               <cell>Replace with <gi>foreign</gi>, <gi>title</gi>, <gi>emph</gi> where
+               <cell>Replace with <gi>foreign</gi>, <gi>title</gi>, 
+                  <gi>label</gi>, <gi>emph</gi> as
                   appropriate</cell>
 
                <cell>Level 1 may use <att>rend</att> attribute with values ul ro sc it ? </cell>
@@ -504,7 +508,7 @@
                            roman parisien (édition numerisée) </ref>
                         <publisher> gallica.bnf.fr / Bibliothèque nationale de France </publisher>
                         <idno type="ARK">12148/bpt6k931128v</idno>
-                        <relatedItem type="printSource">
+                        <relatedItem type="copyText">
                            <bibl><title>Tatiana Leïlof , roman parisien, par Édouard Rod</title>
                               <publisher>E. Plon, Nourrit et Cie</publisher>
                               <pubPlace>Paris</pubPlace>
