@@ -192,7 +192,7 @@
          available to provide a slightly reacher encoded version, a novel may be encoded at ELTeC
          level 1, using additional elements discussed in this section. Note that a level one text
          can always automatically be converted to a level zero text, if this is necessary for
-         compatibility or for some other reason. (An script to do this is available <ref
+         compatibility or for some other reason. (A script to do this is available <ref
             target="https://distantreading.github.io/Scripts/detagger.xsl">on the project
             website</ref>) The reverse conversion, from level zero to level one, requires human
          intervention. </p>
@@ -222,8 +222,9 @@
          schema.</p>
       <p>It is not unusual to find special devices such as a row of stars or a rule in the middle of
          a chapter, usually indicating a discontinuity in the narrative timeline, or structural
-         shift. Such indications are simply ignored in an ELTeC level zero text. At level one the
-         special purpose <gi>milestone</gi> element may be used to mark their presence.</p>
+         shift. Such indications may be simply ignored in an ELTeC level zero text, or the
+         special purpose <gi>milestone</gi> element may be used to mark their presence; at level 1
+         they should be retained.</p>
       <p>Level 1 texts may also represent authorial notes, if these are present, using the element
             <gi>note</gi> to contain the body of the note, and the element <gi>ref</gi> to represent
          the point of attachment for the note. Wherever they appear in the text, notes are always
@@ -249,12 +250,12 @@
          <row>
             <cell>Page break</cell>
             <cell><tag>pb/</tag></cell>
-            <cell><att>n</att> attribute gives attested number of page</cell>
+            <cell><att>n</att> attribute gives attested number of page; optional at level 0</cell>
          </row>
          <row>
             <cell>Title page</cell>
-            <cell>silently omitted</cell>
-            <cell/>
+            <cell><tag>div type="liminal"</tag> within <gi>front</gi></cell>
+            <cell>Optional at level 0</cell>
          </row>
          <row>
             <cell>Authorial preface, foreword, appendix, etc</cell>
@@ -275,8 +276,14 @@
          </row>
          <row>
             <cell>Running title/page footer </cell>
-            <cell>omitted</cell>
+            <cell>Omitted</cell>
             <cell>Page number only may be included in <gi>pb</gi></cell>
+         </row>
+         <row>
+            <cell>Mid-chapter structural marker</cell>
+             <cell><tag>milestone/</tag></cell>
+            <cell>use <att>type</att> to indicate type of structural marker; optional at level
+               0</cell>
          </row>
          <row>
             <cell>Prose paragraph or list item</cell>
@@ -310,14 +317,9 @@
                <cell>Table of contents, errata list, other liminal matter</cell>
                <cell>omitted</cell>
                <cell><gi>gap</gi></cell>
-               <cell>use <att>type</att> to specify what has been omitted</cell>
+               <cell>use <att>unit</att> and <att>quantity</att> to specify what has been omitted</cell>
             </row>
-            <row>
-               <cell>Mid-chapter structural marker</cell>
-               <cell>ignored</cell>
-               <cell><tag>milestone/</tag></cell>
-               <cell>May use <att>unit</att> and <att>rend</att> to describe format</cell>
-            </row>
+           
 
             <row>
                <cell>Authorial footnote</cell>
@@ -339,8 +341,8 @@
             <row>
                <cell>Graphic or illustration</cell>
                <cell>omitted</cell>
-               <cell><tag>gap type="graphic"</tag></cell>
-               <cell>May use <att>desc</att> to describe the content of the graphic</cell>
+               <cell><tag>gap unit="graphic"</tag></cell>
+               <cell><!--May use <att>desc</att> to describe the content of the graphic--></cell>
             </row>
             <row>
                <cell>Quotation or display block</cell>
@@ -352,7 +354,7 @@
                <cell>Editorial correction</cell>
                <cell>unmarked</cell>
                <cell><gi>corr</gi></cell>
-               <cell>Used wherever encoded text differs from printed original</cell>
+               <cell>Use when encoded text differs from printed original</cell>
             </row>
          </table>
       </p>

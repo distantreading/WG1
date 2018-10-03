@@ -49,6 +49,8 @@
         <elementRef key="head"/>
        <elementRef key="hi"/>
         <elementRef key="l"/>
+       <elementRef key="milestone"/>
+       
         <elementRef key="p"/>
         <elementRef key="pb"/>
         <elementRef key="text"/>

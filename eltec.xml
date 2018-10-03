@@ -328,7 +328,6 @@
                         </attList>
                     </elementSpec>
 
-
                     <!-- require one of each profileDesc component in a specific order -->
                     <elementSpec ident="profileDesc" mode="change">
                         <content>
@@ -547,8 +546,39 @@
                                 itself. </p>
                         </remarks>
                     </elementSpec>
-
-
+<elementSpec ident="milestone" mode="change">
+    <exemplum>   
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div type="group">
+                <head>BOOK THE FIRST</head>
+                <head>THE DAYS BEFORE TONO-BUNGAY WAS INVENTED</head>               
+                <div type="chapter">
+                    <head>CHAPTER THE FIRST</head>
+                    <milestone type="subChapter" n="I"/>
+                    <p>Most people in this world seem to live "in character" ...
+                    </p><!-- ... -->
+                </div></div></egXML></exemplum>
+</elementSpec>
+               
+               <elementSpec ident="gap" mode="change">
+                   <attList>
+                       <attDef ident="reason" mode="delete"/>
+                       <attDef ident="agent" mode="delete"/>
+                   </attList>
+                    <exemplum>   
+                        <p>Two consecutive graphic components omitted from transcription: </p>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <gap unit="graphic" quantity="2"/>   
+                        </egXML></exemplum>
+                   
+                   <exemplum>   
+                       <p>Table of contents omitted from transcription: </p>
+                       <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           <gap unit="toc" />   
+                       </egXML></exemplum>
+                                 </elementSpec>
+                    
+                    
                     <elementSpec ident="trailer" mode="change">
                         <exemplum>
                             <ab><graphic url="media/trailer.png"/></ab>
