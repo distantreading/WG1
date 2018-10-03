@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:e="http://distantreading.net/eltec/ns" xml:base="file:/home/lou/Public/WG1/eltec.xml"><?TEIVERSION Version 3.5.0a. Last updated on
-	23rd July 2018, revision 206c146?>
+<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:e="http://distantreading.net/eltec/ns" xml:base="file:/home/lou/Public/WG1/eltec.xml"><?TEIVERSION Version 3.3.1a. Last updated on
+	22nd May 2018, revision b25ef6976?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -219,7 +219,7 @@
          available to provide a slightly reacher encoded version, a novel may be encoded at ELTeC
          level 1, using additional elements discussed in this section. Note that a level one text
          can always automatically be converted to a level zero text, if this is necessary for
-         compatibility or for some other reason. (An script to do this is available <ref target="https://distantreading.github.io/Scripts/detagger.xsl">on the project
+         compatibility or for some other reason. (A script to do this is available <ref target="https://distantreading.github.io/Scripts/detagger.xsl">on the project
             website</ref>) The reverse conversion, from level zero to level one, requires human
          intervention. </p>
       <p>At level 1, the element <gi>gap</gi> should be used to indicate when something has been
@@ -248,8 +248,9 @@
          schema.</p>
       <p>It is not unusual to find special devices such as a row of stars or a rule in the middle of
          a chapter, usually indicating a discontinuity in the narrative timeline, or structural
-         shift. Such indications are simply ignored in an ELTeC level zero text. At level one the
-         special purpose <gi>milestone</gi> element may be used to mark their presence.</p>
+         shift. Such indications may be simply ignored in an ELTeC level zero text, or the
+         special purpose <gi>milestone</gi> element may be used to mark their presence; at level 1
+         they should be retained.</p>
       <p>Level 1 texts may also represent authorial notes, if these are present, using the element
             <gi>note</gi> to contain the body of the note, and the element <gi>ref</gi> to represent
          the point of attachment for the note. Wherever they appear in the text, notes are always
@@ -275,12 +276,12 @@
          <row>
             <cell>Page break</cell>
             <cell><tag>pb/</tag></cell>
-            <cell><att>n</att> attribute gives attested number of page</cell>
+            <cell><att>n</att> attribute gives attested number of page; optional at level 0</cell>
          </row>
          <row>
             <cell>Title page</cell>
-            <cell>silently omitted</cell>
-            <cell/>
+            <cell><tag>div type="liminal"</tag> within <gi>front</gi></cell>
+            <cell>Optional at level 0</cell>
          </row>
          <row>
             <cell>Authorial preface, foreword, appendix, etc</cell>
@@ -301,8 +302,14 @@
          </row>
          <row>
             <cell>Running title/page footer </cell>
-            <cell>omitted</cell>
+            <cell>Omitted</cell>
             <cell>Page number only may be included in <gi>pb</gi></cell>
+         </row>
+         <row>
+            <cell>Mid-chapter structural marker</cell>
+             <cell><tag>milestone/</tag></cell>
+            <cell>use <att>type</att> to indicate type of structural marker; optional at level
+               0</cell>
          </row>
          <row>
             <cell>Prose paragraph or list item</cell>
@@ -336,14 +343,9 @@
                <cell>Table of contents, errata list, other liminal matter</cell>
                <cell>omitted</cell>
                <cell><gi>gap</gi></cell>
-               <cell>use <att>type</att> to specify what has been omitted</cell>
+               <cell>use <att>unit</att> and <att>quantity</att> to specify what has been omitted</cell>
             </row>
-            <row>
-               <cell>Mid-chapter structural marker</cell>
-               <cell>ignored</cell>
-               <cell><tag>milestone/</tag></cell>
-               <cell>May use <att>unit</att> and <att>rend</att> to describe format</cell>
-            </row>
+           
 
             <row>
                <cell>Authorial footnote</cell>
@@ -365,8 +367,8 @@
             <row>
                <cell>Graphic or illustration</cell>
                <cell>omitted</cell>
-               <cell><tag>gap type="graphic"</tag></cell>
-               <cell>May use <att>desc</att> to describe the content of the graphic</cell>
+               <cell><tag>gap unit="graphic"</tag></cell>
+               <cell><!--May use <att>desc</att> to describe the content of the graphic--></cell>
             </row>
             <row>
                <cell>Quotation or display block</cell>
@@ -378,7 +380,7 @@
                <cell>Editorial correction</cell>
                <cell>unmarked</cell>
                <cell><gi>corr</gi></cell>
-               <cell>Used wherever encoded text differs from printed original</cell>
+               <cell>Use when encoded text differs from printed original</cell>
             </row>
          </table>
       </p>
@@ -624,54 +626,7 @@
                     teitoodd to produce the compiled ODD eltec-compiled.xml which is used as a basis
                     for the others. </p>
 
-                <schemaSpec xmlns:teix="http://www.tei-c.org/ns/Examples" ident="ELTeC" start="TEI" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML" source="/home/lou/Public/TEI/P5/p5subset.xml"><classSpec module="tei" type="atts" ident="att.ascribed.directed">
-    <desc versionDate="2018-07-19" xml:lang="en">provides attributes for elements representing speech or action that can be directed at a
-        group or individual.</desc>
-    <classes>
-        
-    </classes>
-    <attList>
-        <attDef ident="toWhom">
-            <desc versionDate="2018-07-19" xml:lang="en">indicates the person, or group of people, to whom a speech act or action is directed.</desc>
-            
-            <datatype maxOccurs="unbounded"><dataRef key="teidata.pointer"/></datatype>
-            <exemplum xml:lang="en">
-                <p>In the following example from Mary Pix's The False Friend, speeches (<gi>sp</gi>) in the body of the play 
-                    are linked to <gi>castItem</gi> elements in the <gi>castList</gi> using the <att>toWhom</att>
-                    attribute, which is used to specify who the speech is directed to. Additionally, the <gi>stage</gi>
-                    includes <att>toWhom</att> to indicate the directionality of the action. 
-                </p>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="en" valid="feasible" source="#toWhom-eg-1">
-                    <castItem type="role">
-                        <role xml:id="emil">Emilius.</role>
-                    </castItem>
-                    <castItem type="role">
-                        <role xml:id="lov">Lovisa</role>
-                    </castItem>
-                    <castItem type="role">
-                        <role xml:id="serv">A servant</role>
-                    </castItem>
-                    <!-- ... -->
-                    <sp who="#emil" toWhom="#lov">
-                        <speaker>Emil.</speaker>
-                        <l n="1">My love!</l>
-                    </sp>
-                    <sp who="#lov" toWhom="#emil">
-                        <speaker>Lov.</speaker>
-                        <l n="2">I have no Witness of my Noble Birth</l>
-                        <stage who="emil" toWhom="#serv">Pointing to her Woman.</stage>
-                        <l>But that poor helpless wretch——</l>
-                    </sp>
-                </egXML>
-            </exemplum>
-            <remarks versionDate="2013-11-22" xml:lang="en"><p>To indicate the recipient of written correspondence, use the elements used in section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD44CD">2.4.6. Correspondence Description</ref>, rather than a <att>toWhom</att> attribute.</p></remarks>
-        </attDef>
-    </attList>
-    <listRef>
-        <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQQ">3.3.3. Quotation</ref>
-        <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TS.html#TSBA">8.3. Elements Unique to Spoken Texts</ref>
-    </listRef>
-</classSpec><classSpec rend="change" module="tei" type="atts" ident="att.dimensions"><desc versionDate="2007-08-05" xml:lang="en">provides attributes for describing the size of physical objects.</desc><desc versionDate="2007-12-20" xml:lang="ko">물리적 대상의 크기를 기술하는 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供符合某種度量值的屬性值。</desc><desc versionDate="2008-04-05" xml:lang="ja">物理的対象の大きさを表す属性を示す． </desc><desc versionDate="2009-05-25" xml:lang="fr">fournit des attributs
+                <schemaSpec xmlns:teix="http://www.tei-c.org/ns/Examples" ident="ELTeC" start="TEI" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML" source="/home/lou/Public/TEI/P5/p5subset.xml"><classSpec rend="change" module="tei" type="atts" ident="att.dimensions"><desc versionDate="2007-08-05" xml:lang="en">provides attributes for describing the size of physical objects.</desc><desc versionDate="2007-12-20" xml:lang="ko">물리적 대상의 크기를 기술하는 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供符合某種度量值的屬性值。</desc><desc versionDate="2008-04-05" xml:lang="ja">物理的対象の大きさを表す属性を示す． </desc><desc versionDate="2009-05-25" xml:lang="fr">fournit des attributs
   pour décrire la taille des objets    physiques</desc><desc versionDate="2007-11-06" xml:lang="it">assegna degli attributi che descrivono la grandezza di
     oggetti fisici</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona atributos que califican una determinata
     medición.</desc><classes/><attList><attDef ident="unit" usage="opt">
@@ -2619,7 +2574,7 @@ fin d'une division de texte.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko"><gi>sourceDesc</gi> 내부에 사용되어 여러 번 출현할 수 있는 요소들을 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集可在<gi>sourceDesc</gi>中使用並且可多次出現的元素</desc>
   <desc versionDate="2008-04-05" xml:lang="ja">要素<gi>sourceDesc</gi>内で，複数回出現可能な要素をまとめる．</desc>
-  <desc versionDate="2018-07-18" xml:lang="de"> umfasst Elemente, die innerhalb des <gi>sourceDesc</gi>-Elements
+  <desc versionDate="2006-10-18" xml:lang="de"> umfasst Elemente, die innerhalb von <gi>sourceDesc</gi>
     verwendet werden und mehrfach auftreten können.</desc>
   <desc versionDate="2007-05-04" xml:lang="es">agrupa los elementos que pueden usarse al interno de
       <gi>sourceDesc</gi> (descripción de la fuente) y que aparecen en diversas ocasiones.</desc>
@@ -2632,7 +2587,7 @@ and appear multiple times.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko"><gi>profileDesc</gi> 내부에 사용되어 여러 번 출현할 수 있는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集可用於元素<gi>profileDesc</gi>內，且多次出現的元素</desc>
   <desc versionDate="2008-04-05" xml:lang="ja">要素<gi>profileDesc</gi>内で使われ，複数回出現可能な要素をまとめる．</desc>
-  <desc versionDate="2018-07-18" xml:lang="de">umfasst Elemente, die innerhalb des <gi>profileDesc</gi>-Elements genutzt werden und mehrfach auftreten
+  <desc versionDate="2006-10-18" xml:lang="de">umfasst Elemente die in der<gi>profileDesc</gi> genutzt werden und mehrfach auftreten
   können.</desc>
   <desc versionDate="2007-05-04" xml:lang="es">agrupa los elementos que pueden ser usados al interno de <gi>profileDesc</gi> y que aparecen en diversas ocasiones.</desc>
   <desc versionDate="2007-01-21" xml:lang="it">raggruppa gli elementi utilizzati all'interno di <gi>profileDesc</gi> e che appaiono più volte.</desc>
@@ -2688,7 +2643,6 @@ and appear multiple times.</desc>
       <alternate minOccurs="0" maxOccurs="unbounded">
         <textNode/>
         <classRef key="model.gLike"/>
-        <classRef key="model.qLike"/>
         <classRef key="model.phrase"/>
         <classRef key="model.global"/>
       </alternate>
@@ -4727,205 +4681,28 @@ Ce ne seroyt que bon que nous rendissiez noz cloches...</egXML>
 Normalization</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html#TC">12. Critical Apparatus</ref>
   </listRef>
-</elementSpec><elementSpec module="core" ident="gap">
-  <gloss versionDate="2008-12-09" xml:lang="fr">omission</gloss>
-  <gloss versionDate="2016-11-25" xml:lang="de">Auslassung</gloss>
-  <desc versionDate="2008-01-24" xml:lang="en">indicates a point where material has been omitted in a transcription, whether for editorial
+</elementSpec><elementSpec rend="change" module="core" ident="gap"><gloss versionDate="2008-12-09" xml:lang="fr">omission</gloss><gloss versionDate="2016-11-25" xml:lang="de">Auslassung</gloss><desc versionDate="2008-01-24" xml:lang="en">indicates a point where material has been omitted in a transcription, whether for editorial
     reasons described in the TEI header, as part of sampling practice, or because the material is
-    illegible, invisible, or inaudible.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">텍스트 선정 시 TEI 헤더에 기술된 편집 기준 때문에, 또는 읽고 듣기 어렵기 때문에 사본에서 누락된
-    지점을 가리킨다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">指出轉錄時被省略部分的位置，省略也許是出於
-    TEI標頭裡描述的編輯上的理由、也許是因為抽樣轉錄而省略、或是因為資料不明難以辨認或聽懂。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">TEIヘダーにある編集上の理由，または当該資料が判読できない・聞こえな
-    いことを理由に，転記の際に省略された部分の場所を示す．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">indique une omission dans une transcription, soit pour
+    illegible, invisible, or inaudible.</desc><desc versionDate="2007-12-20" xml:lang="ko">텍스트 선정 시 TEI 헤더에 기술된 편집 기준 때문에, 또는 읽고 듣기 어렵기 때문에 사본에서 누락된
+    지점을 가리킨다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">指出轉錄時被省略部分的位置，省略也許是出於
+    TEI標頭裡描述的編輯上的理由、也許是因為抽樣轉錄而省略、或是因為資料不明難以辨認或聽懂。</desc><desc versionDate="2008-04-05" xml:lang="ja">TEIヘダーにある編集上の理由，または当該資料が判読できない・聞こえな
+    いことを理由に，転記の際に省略された部分の場所を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">indique une omission dans une transcription, soit pour
     des raisons éditoriales décrites dans l'en-tête TEI au cours d’un échantillonnage, soit parce
-    que le matériau est illisible ou inaudible.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">indicada un punto donde algún material ha sido omitido en
+    que le matériau est illisible ou inaudible.</desc><desc versionDate="2007-05-04" xml:lang="es">indicada un punto donde algún material ha sido omitido en
     una transcripción, bien por criterios de edición descritos en el cabezado TEI, bien como parte
-    de una práctica habitual, o bien porqué el material es ilegible o incomprensible.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">indica un punto in cui del materiale è stato omesso dalla
+    de una práctica habitual, o bien porqué el material es ilegible o incomprensible.</desc><desc versionDate="2007-01-21" xml:lang="it">indica un punto in cui del materiale è stato omesso dalla
     trascrizione, sia per ragioni editoriali descritte nell'intestazione TEI, come pratica di
-    campionatura, sia perché il materiale è illegibile o incomprensibile.</desc>
-  <desc versionDate="2016-11-25" xml:lang="de">weist in einer Transkription auf eine Stelle hin, 
+    campionatura, sia perché il materiale è illegibile o incomprensibile.</desc><desc versionDate="2016-11-25" xml:lang="de">weist in einer Transkription auf eine Stelle hin, 
     in der Text aus der Vorlage ausgelassen worden ist, sei es aus editorischen Gründen, die im TEI-Header beschrieben werden, 
-    sei es auf Grund der Auswahlpraxis, sei es weil das Material nicht lesbar, nicht sichtbar oder nicht hörbar ist.</desc>
-  <classes>
-    <memberOf key="att.global"/>
-    <memberOf key="model.global.edit"/>
-    
-    
-    <memberOf key="att.dimensions"/>
-  </classes>
-  <content>
-        <alternate minOccurs="0" maxOccurs="unbounded">
-        <classRef key="model.descLike"/>
-        <classRef key="model.certLike"/>
-      </alternate>
-  </content>
-  <attList>
-    <attDef ident="reason" usage="opt">
-      <gloss versionDate="2016-11-25" xml:lang="de">Grund</gloss>
-      <desc versionDate="2017-02-06" xml:lang="en">gives the reason for omission</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">누락의 이유를 제시한다. 그 값의 예들은 다음과 같다: <val>sampling</val>,
-          <val>illegible</val>, <val>inaudible</val>, <val>irrelevant</val>, <val>cancelled</val>,
-          <val>cancelled and illegible</val></desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">說明省略的原因。屬性值的例子有<val>sampling</val>、、<val>inaudible</val>、<val>irrelevant</val>、<val>cancelled</val>、<val>cancelled
-          and illegible</val>。</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">省略の理由を示す．例えば， <val>見本</val>, <val>聞こえない</val>,
-          <val>無関係</val>, <val>取り消し</val>, <val>取り消しがありかつ判読できない</val>，など．</desc>
-      <desc versionDate="2017-02-06" xml:lang="fr">donne la raison de l'omission</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">declara la causa de la omisión</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">indica il motivo dell'omisione</desc>
-      <desc versionDate="2017-02-07" xml:lang="de">gibt den Grund für die Auslassung an</desc>
-      <datatype maxOccurs="unbounded">
-	<dataRef key="teidata.enumerated"/>
-      </datatype>
-      <valList type="semi">
-	<valItem ident="cancelled">
-	  <gloss versionDate="2017-02-06" xml:lang="de">abgebrochen</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="it">cancellato</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="es">cancelado</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="fr">biffé</gloss>
-	</valItem>
-	<valItem ident="deleted">
-	  <gloss versionDate="2017-02-07" xml:lang="de">getilgt</gloss>
-	</valItem>
-	<valItem ident="editorial">
-	  <desc versionDate="2017-02-06" xml:lang="en">for features omitted from
-	  transcription due to editorial policy</desc>
-	  <desc versionDate="2017-02-07" xml:lang="de">für Bestandteile, 
-	  die aus editorischen Gründen nicht übertragen wurden</desc>
-	</valItem>
-	<valItem ident="illegible">
-	  <gloss versionDate="2017-02-07" xml:lang="de">unleserlich</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="it">illegibile</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="es">ilegible</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="fr">illisible</gloss>
-	</valItem>
-	<valItem ident="inaudible">
-	  <gloss versionDate="2017-02-06" xml:lang="de">nicht hörbar</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="it">incomprensibile</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="es">inaudible</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="fr">inaudible</gloss>
-	</valItem>
-	<valItem ident="irrelevant">
-	  <gloss versionDate="2017-02-06" xml:lang="de">irrelevant</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="it">irrilevante</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="es">irrelevante</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="fr">non pertinent</gloss>
-	</valItem>
-	<valItem ident="sampling">
-	  <gloss versionDate="2017-02-06" xml:lang="de">Auswahl</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="it">campionatura</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="es">ejemplificación</gloss>
-	  <gloss versionDate="2017-02-06" xml:lang="fr">échantillonnage</gloss>
-	</valItem>
-      </valList>
-    </attDef>
-    <attDef ident="agent" usage="opt">
-      <gloss versionDate="2016-11-25" xml:lang="de">Ursache</gloss>
-      <desc versionDate="2005-08-03" xml:lang="en">in the case of text omitted because of damage, categorizes the cause of the damage, if
-        it can be identified.</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">훼손으로 인해 누락된 텍스트의 경우, 확인이 가능하다면 그 훼손 원인을 분류하여 기술한다.</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">若省略是由於內容遭受損毀，且可識別損毀原因，則針對損毀原因加以分類。</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">損傷が原因のテキスト省略の場合，特定可能であれば当該損傷を分類する．</desc>
-      <desc versionDate="2007-06-12" xml:lang="fr">lorsque du texte est omis de la transcription en
-        raison d'un dommage, catégorise la cause du dommage, si celle-ci peut être identifiée.</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">En el caso de texto omitido a causa de algún daño,
-        identifica (si es posible) la causa de tal daño.</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">nel caso in cui il testo sia stato omesse a causa di
-        danneggiamento, indica la causa del danno qualora possa essere identificata.</desc>
-      <desc versionDate="2016-11-25" xml:lang="de">bestimmt im Falle von Text, der wegen Beschädigung weggelassen wird, 
-        die Ursache für den Schaden, sofern er ermittelt werden kann.</desc>
-      <datatype><dataRef key="teidata.enumerated"/></datatype>
-      <valList type="open">
-        <valItem ident="rubbing">
-          <gloss versionDate="2016-11-25" xml:lang="de">Abrieb</gloss>
-          <desc versionDate="2007-06-27" xml:lang="en">damage results from rubbing of the leaf edges</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">책장 모서리 마모로 인한 훼손</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">損毀起因於書頁邊緣摩擦受損</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">daños resultantes del frotamiento de los bordes
-            de la hoja</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">葉のこすれによる損傷．</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">dégâts provoqués par le frottement des bords de
-            la feuille.</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">il danno è causato da segni di strofinamento sui
-            bordi del foglio</desc>
-          <desc versionDate="2016-11-25" xml:lang="de">Schaden, verursacht durch Abrieb an den Blatträndern</desc>
-        </valItem>
-        <valItem ident="mildew">
-          <gloss versionDate="2016-11-25" xml:lang="de">Schimmel</gloss>
-          <desc versionDate="2007-06-27" xml:lang="en">damage results from mildew on the leaf surface</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">곰팡이로 인한 책장 표면의 훼손</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">損毀起因於書頁表面發霉</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">daños resultantes de la acción del moho en la
-            superficie de la hoja</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">葉の表面に付いた白カビによる損傷．</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">dégâts provoqués par de la moisissure sur la
-            surface de feuille.</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">il danno è causato da macchie di umido sulla
-            superficie del foglio</desc>
-          <desc versionDate="2016-11-25" xml:lang="de">Schaden, verursacht durch Schimmelbefall</desc>
-        </valItem>
-        <valItem ident="smoke">
-          <gloss versionDate="2016-11-25" xml:lang="de">Ruß/Rauch</gloss>
-          <desc versionDate="2007-06-27" xml:lang="en">damage results from smoke</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">연기로 그을린 훼손</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">損毀起因於煙燻</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">daños provocados porl humo</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">煙による損傷．</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">dégâts provoqués par de la fumée.</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">il danno è causato dal fumo</desc>
-          <desc versionDate="2016-11-25" xml:lang="de">Schaden, verursacht durch Ruß/Rauch</desc>
-        </valItem>
-      </valList>
-    </attDef>
-  </attList>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-      <gap quantity="4" unit="chars" reason="illegible"/>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-      <gap quantity="4" unit="chars" reason="illegible"/>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-      <gap quantity="1" unit="essay" reason="sampling"/>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-      <gap quantity="4" unit="字" reason="無法識讀"/>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-      <gap quantity="1" unit="文章" reason="抽樣"/>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-      <gap quantity="1" unit="essay" reason="sampling"/>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-      <del>
-        <gap atLeast="4" atMost="8" unit="chars" reason="illegible"/>
-      </del>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-      <gap extent="several lines" reason="lost"/>
-    </egXML>
-  </exemplum>
-  <remarks versionDate="2011-12-09" xml:lang="en">
+    sei es auf Grund der Auswahlpraxis, sei es weil das Material nicht lesbar, nicht sichtbar oder nicht hörbar ist.</desc><classes><memberOf key="att.global"/><memberOf key="model.global.edit"/><memberOf key="att.dimensions"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.descLike"/><classRef key="model.certLike"/></alternate></content><attList><attDef ident="reason" mode="delete"/><attDef ident="agent" mode="delete"/></attList><exemplum>   
+                        <p>Two consecutive graphic components omitted from transcription: </p>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <gap unit="graphic" quantity="2"/>   
+                        </egXML></exemplum><exemplum>   
+                       <p>Table of contents omitted from transcription: </p>
+                       <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           <gap unit="toc"/>   
+                       </egXML></exemplum><remarks versionDate="2011-12-09" xml:lang="en">
     <p>The <gi>gap</gi>, <gi>unclear</gi>, and <gi>del</gi> core tag elements may be closely allied
       in use with the <gi>damage</gi> and <gi>supplied</gi> elements, available when using the
       additional tagset for transcription of primary sources. See section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHCOMB">11.3.3.2. Use of the gap, del, damage, unclear, and
@@ -4934,29 +4711,25 @@ Normalization</ref>
     <p>The <gi>gap</gi> tag simply signals the editors decision to omit or inability to transcribe a span of
     text. Other information, such as the interpretation that text was deliberately erased or covered, should be
     indicated using the relevant tags, such as <gi>del</gi> in the case of deliberate deletion.</p>
-  </remarks>
-  <remarks versionDate="2008-12-09" xml:lang="fr">
+  </remarks><remarks versionDate="2008-12-09" xml:lang="fr">
     <p>Les éléments du jeu de balises de base <gi>gap</gi>, <gi>unclear</gi>, et <gi>del</gi>
       peuvent être étroitement associés avec l'utilisation des éléments <gi>damage</gi> et
         <gi>supplied</gi> qui sont disponibles si l'on utilise le jeu de balises additionnel pour la
       transcription des sources primaires. Voir la section <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHCOMB">11.3.3.2. Use of the gap, del, damage, unclear, and
                   supplied Elements in Combination</ref> pour plus de
       détails sur l'élément le plus pertinent suivant les circonstances.</p>
-  </remarks>
-  <remarks xml:lang="es" versionDate="2008-04-06">
+  </remarks><remarks xml:lang="es" versionDate="2008-04-06">
     <p> El <gi>gap</gi>, <gi>unclear</gi>, y los elementos de la etiqueta base pueden funcionar
       con los elementos de <gi>daño</gi> y elementos de <gi>supresión</gi>, disponibles al usar el
       conjunto de etiquetas adicional para la transcripción de las fuentes primarias. Ver la sección
         <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHCOMB">11.3.3.2. Use of the gap, del, damage, unclear, and
                   supplied Elements in Combination</ref> para la discusión cuyo el elemento es apropiado para qué
       circunstancia.</p>
-  </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  </remarks><remarks xml:lang="ja" versionDate="2008-04-05">
     <p> コアモジュールの要素<gi>gap</gi>, <gi>unclear</gi>, <gi>del</gi>は， 転記モジュールの要素<gi>damage</gi>,
         <gi>supplied</gi>と連携するこ とができる．どのタグを使用すべきかについては，詳細については， <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHCOMB">11.3.3.2. Use of the gap, del, damage, unclear, and
                   supplied Elements in Combination</ref>を参照のこと． </p>
-  </remarks>
-  <remarks versionDate="2016-11-25" xml:lang="de">
+  </remarks><remarks versionDate="2016-11-25" xml:lang="de">
     <p>Die Elemente <gi>gap</gi>, <gi>unclear</gi> und <gi>del</gi> aus dem Core-Modul sind eng verwandt mit den 
       Elementen <gi>damage</gi> und <gi>supplied</gi>, die mit dem <ident type="module">transcr</ident> zur Verfügung 
       gestellt werden. Die Unterschiede im Gebrauch dieser Elemente werden in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHCOMB">11.3.3.2. Use of the gap, del, damage, unclear, and
@@ -4965,11 +4738,9 @@ Normalization</ref>
       eine Textpassage auszulassen oder sie nicht transkribieren konnten. 
       Ergänzende Informationen, wie die Interpretation, dass der Text absichtlich unlesbar gemacht wurde, 
       sollten über die einschlägigen Elemente, wie z. B. <gi>del</gi> im Fall einer bewussten Tilgung ausgezeichnet werden.</p>
-  </remarks>
-  <listRef>
+  </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COEDADD">3.4.3. Additions, Deletions, and Omissions</ref>
-  </listRef>
-</elementSpec><elementSpec module="core" ident="name">
+  </listRef></elementSpec><elementSpec module="core" ident="name">
   <gloss versionDate="2005-01-14" xml:lang="en">name, proper noun</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">이름, 고유명사</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">名稱，特定名稱</gloss>
@@ -6536,54 +6307,30 @@ psychological significance.
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBICON">3.11.2.8. Notes and Statement of Language</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html#DITPNO">9.3.5.4. Notes within Entries</ref>
   </listRef>
-</elementSpec><elementSpec module="core" ident="milestone">
-  <gloss versionDate="2009-01-06" xml:lang="fr">borne</gloss>
-  <gloss versionDate="2016-11-29" xml:lang="de">Grenzpunkt</gloss>
-  <desc versionDate="2008-06-21" xml:lang="en">marks a boundary point separating any kind of section of a text, typically but not
+</elementSpec><elementSpec rend="change" module="core" ident="milestone"><gloss versionDate="2009-01-06" xml:lang="fr">borne</gloss><gloss versionDate="2016-11-29" xml:lang="de">Grenzpunkt</gloss><desc versionDate="2008-06-21" xml:lang="en">marks a boundary point separating any kind of section of a text, typically but not
     necessarily indicating a point at which some part of a standard reference system changes, where
-    the change is not represented by a structural element.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">텍스트의 절을 분할하는 경계점을 표지한다. 이는 표준 참조 시스템에서의 변화로 표시되며, 구조적 요소에
-    의해서는 표시되지 않는다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">標明文本中由標準參照系統變更所指示的任何區塊分界點，並且該章節未以任何結構性元素標記。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">当該セクションが，構造要素により表現することができない場合に，標準的
-    な参照機能により，テキストの各種セクション間にある境界点を示す．</desc>
-  <desc versionDate="2009-01-06" xml:lang="fr">marque un point
+    the change is not represented by a structural element.</desc><desc versionDate="2007-12-20" xml:lang="ko">텍스트의 절을 분할하는 경계점을 표지한다. 이는 표준 참조 시스템에서의 변화로 표시되며, 구조적 요소에
+    의해서는 표시되지 않는다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">標明文本中由標準參照系統變更所指示的任何區塊分界點，並且該章節未以任何結構性元素標記。</desc><desc versionDate="2008-04-05" xml:lang="ja">当該セクションが，構造要素により表現することができない場合に，標準的
+    な参照機能により，テキストの各種セクション間にある境界点を示す．</desc><desc versionDate="2009-01-06" xml:lang="fr">marque un point
   permettant de délimiter les sections d'un
     texte selon un autre systeme que les éléments de structure ; une
-    balise de ce type marque une frontière.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">marca un punto de frontera que separa cada tipo de
+    balise de ce type marque une frontière.</desc><desc versionDate="2007-05-04" xml:lang="es">marca un punto de frontera que separa cada tipo de
     sección de un texto, indicado por cambios en el sistema de referencia estándard, donde la
-    sección no es representada por un elemento estructural.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">segnala il limite che separa ogni tipo di sezione di un
+    sección no es representada por un elemento estructural.</desc><desc versionDate="2007-01-21" xml:lang="it">segnala il limite che separa ogni tipo di sezione di un
     testo, come indicato da cambiamenti nel sistema di riferimento standard, qualora la sezione non
-    sia rappresentata da un elemento strutturale.</desc>
-  <desc versionDate="2016-11-29" xml:lang="de">markiert einen Grenzpunkt, der Abschnitte eines Textes trennen kann, 
+    sia rappresentata da un elemento strutturale.</desc><desc versionDate="2016-11-29" xml:lang="de">markiert einen Grenzpunkt, der Abschnitte eines Textes trennen kann, 
     typischerweise (aber nicht notwendigerweise) den Wechsel eines Bezugssystems, 
-    der nicht durch ein strukturelles Markup beschrieben werden kann.</desc>
-  <classes>
-    <memberOf key="att.global"/>
-    <memberOf key="model.milestoneLike"/>
-    <memberOf key="att.milestoneUnit"/>
-    <memberOf key="att.typed"/>
-    
-    
-    
-  </classes>
-  <content><empty/></content>
-  
-  <exemplum xml:lang="mul">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples"><milestone n="23" ed="La" unit="Dreissiger"/>
-      ... <milestone n="24" ed="AV" unit="verse"/> ...</egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples"><milestone n="23" ed="La" unit="Dreissiger"/> ... <milestone n="24" ed="AV" unit="verse"/>
-        ...</egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples"><milestone n="23" ed="拉丁文版本" unit="三十"/> ...
-        <milestone n="24" ed="聖經欽定版本" unit="韻文"/> ...</egXML>
-  </exemplum>
-  <remarks versionDate="2016-11-04" xml:lang="en">
+    der nicht durch ein strukturelles Markup beschrieben werden kann.</desc><classes><memberOf key="att.global"/><memberOf key="model.milestoneLike"/><memberOf key="att.milestoneUnit"/><memberOf key="att.typed"/></classes><content><empty/></content><attList/><exemplum>   
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div type="group">
+                <head>BOOK THE FIRST</head>
+                <head>THE DAYS BEFORE TONO-BUNGAY WAS INVENTED</head>               
+                <div type="chapter">
+                    <head>CHAPTER THE FIRST</head>
+                    <milestone type="subChapter" n="I"/>
+                    <p>Most people in this world seem to live "in character" ...
+                    </p><!-- ... -->
+                </div></div></egXML></exemplum><remarks versionDate="2016-11-04" xml:lang="en">
     <p>For this element, the global <att>n</att> attribute indicates the new number or other value
       for the unit which changes at this milestone. The special value
       <mentioned>unnumbered</mentioned> should be used in passages which fall outside the normal
@@ -6591,8 +6338,7 @@ psychological significance.
     <p>The order in which <gi>milestone</gi> elements are given at a given point is not normally significant.
       
     </p>
-  </remarks>
-  <remarks xml:lang="fr" versionDate="2007-06-12">
+  </remarks><remarks xml:lang="fr" versionDate="2007-06-12">
     <p>Pour cet élément, l'attribut global <att>n</att> affecte un nouveau numéro ou une autre
       valeur à l'unité qui change à partir de l'élément <gi>milestone</gi>. La valeur
         <mentioned>unnumbered</mentioned> doit être utilisée pour les passages qui sortent du
@@ -6600,15 +6346,13 @@ psychological significance.
       noms des personnages qui prennent la parole dans une pièce de théâtre).</p>
     <p>L'ordre dans lequel apparaissent les éléments <gi>milestone</gi> à un endroit donné n'est en
       principe pas signifiant.</p>
-  </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  </remarks><remarks xml:lang="ja" versionDate="2008-04-05">
     <p> 当該要素にあるグローバル属性<att>n</att>は，当該標石要素が示す変化 の単位の，他の値を示す．特別な値<mentioned>unnumbered</mentioned>
       は，一般的な番号付けスキームから外れている一節中で使用されるべきで ある(例えば，章見出し，詩の番号やタイトル，詩劇における話し手の属 性など)． </p>
     <p> 標石要素の順番は，一般には重要ではない．
       
     </p>
-  </remarks>
-  <remarks versionDate="2016-11-29" xml:lang="de">
+  </remarks><remarks versionDate="2016-11-29" xml:lang="de">
     <p>Das globale <att>n</att>-Attribut gibt für dieses Element die neue Zahl 
       (oder einen anderen Wert) der Einheit an, die an diesem Grenzpunkt wechselt. 
       Der besondere Wert <val>unnumbered</val> (ungezählt) sollte für Abschnitte gewählt werden, 
@@ -6616,12 +6360,10 @@ psychological significance.
       oder andere Überschriften, Gedichtnummern oder -titel etc.</p>
     <p>Die Reihenfolge des Auftretens von mehreren <gi>milestone</gi>-Elementen 
       an einem gegebenen Punkt ist normalerweise nicht signifikant.</p>
-  </remarks>
-  <listRef>
+  </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CORS5">3.10.3. Milestone
 Elements</ref>
-  </listRef>
-</elementSpec><elementSpec rend="change" module="core" ident="pb"><gloss versionDate="2017-06-14" xml:lang="en">page beginning</gloss><gloss versionDate="2007-12-20" xml:lang="ko">페이지 바꿈</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">分頁</gloss><gloss versionDate="2009-01-06" xml:lang="fr">saut de page</gloss><gloss versionDate="2007-05-04" xml:lang="es">cambio de página</gloss><gloss versionDate="2007-01-21" xml:lang="it">interruzione di pagina</gloss><gloss versionDate="2017-06-25" xml:lang="de">Seitenanfang</gloss><desc versionDate="2017-06-14" xml:lang="en">marks the beginning of a new page in a paginated document.</desc><desc versionDate="2007-12-20" xml:lang="ko">표준 참조 시스템에서 텍스트 페이지와 다음 페이지 사이의 경계를 표지한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">以標準參照系統來標記頁與頁之間的分界線。</desc><desc versionDate="2008-04-05" xml:lang="ja">テキストのページ境界を，標準的な参照システム示す．</desc><desc xml:lang="fr" versionDate="2007-06-12">marque le début d'une
+  </listRef></elementSpec><elementSpec rend="change" module="core" ident="pb"><gloss versionDate="2017-06-14" xml:lang="en">page beginning</gloss><gloss versionDate="2007-12-20" xml:lang="ko">페이지 바꿈</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">分頁</gloss><gloss versionDate="2009-01-06" xml:lang="fr">saut de page</gloss><gloss versionDate="2007-05-04" xml:lang="es">cambio de página</gloss><gloss versionDate="2007-01-21" xml:lang="it">interruzione di pagina</gloss><gloss versionDate="2017-06-25" xml:lang="de">Seitenanfang</gloss><desc versionDate="2017-06-14" xml:lang="en">marks the beginning of a new page in a paginated document.</desc><desc versionDate="2007-12-20" xml:lang="ko">표준 참조 시스템에서 텍스트 페이지와 다음 페이지 사이의 경계를 표지한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">以標準參照系統來標記頁與頁之間的分界線。</desc><desc versionDate="2008-04-05" xml:lang="ja">テキストのページ境界を，標準的な参照システム示す．</desc><desc xml:lang="fr" versionDate="2007-06-12">marque le début d'une
   page de texte dans un document paginé.</desc><desc versionDate="2007-05-04" xml:lang="es">marca la frontera entre una página de un texto y la
     siguiente en un sistema de referencia estándard.</desc><desc versionDate="2007-01-21" xml:lang="it">indica il limite tra una pagina di un testo e la
     successiva in un sistema di riferimento standard</desc><desc versionDate="2017-06-25" xml:lang="de">markiert den Anfang 
@@ -7349,7 +7091,6 @@ epistemology, methodology and history of
     bibliografischen Objekts verantwortlich ist.</desc>
   <classes>
     <memberOf key="att.global"/>
-    
     <memberOf key="model.imprintPart"/>
     
   </classes>
@@ -7904,7 +7645,7 @@ relatedItem element must be empty</sch:report>
   <classes>
     <memberOf key="att.global"/>
     <memberOf key="model.divPart"/>
-    <memberOf key="att.ascribed.directed"/>
+    
   </classes>
   <content>
     <sequence>
@@ -8025,7 +7766,7 @@ relatedItem element must be empty</sch:report>
         scena all'interno di un testo o di un frammento di testo drammatico.</desc>
   <desc versionDate="2017-06-13" xml:lang="de">enthält jegliche Regieanweisung in einem Dramentext oder -fragment.</desc>
   <classes>
-    <memberOf key="att.ascribed.directed"/>
+    
     <memberOf key="att.global"/>
     
     <memberOf key="model.stageLike"/>
@@ -9524,8 +9265,8 @@ TEI namespace <code>http://www.tei-c.org/ns/1.0</code> on it, using
   <desc versionDate="2007-12-20" xml:lang="ko">저작의 제목 그리고 지적 내용에 대한 책임에 관한 정보를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集關於作品標題與作品智慧內容責任歸屬的資訊。</desc>
   <desc versionDate="2008-04-05" xml:lang="ja">作品や知的内容に責任のあるもののタイトルに関する情報をまとめる．</desc>
-  <desc versionDate="2018-07-18" xml:lang="de">umfasst Angaben zum Titel eines Werks und zu den für
-    seinen Inhalt Verantwortlichen.</desc>
+  <desc versionDate="2006-10-18" xml:lang="de">umfasst Angaben zum Titel eines Werks und zu den für
+    seinen Inhalt Verantwortlichen</desc>
   <desc versionDate="2007-05-04" xml:lang="es">agrupa la información referente al título de una obra y a
     los responsables de su contenido intelectual.</desc>
   <desc versionDate="2007-01-21" xml:lang="it">raggruppa le informazioni sul titolo di un'opera e sulle
