@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-0.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xmlns="http://www.tei-c.org/ns/1.0" xml:lang="sr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"  xml:lang="sr" xml:id="SR0001">
+    <teiHeader xmlns="http://www.tei-c.org/ns/1.0">
         <fileDesc>
             <titleStmt>
                 <title>Швабица: ELTeC издање</title>
@@ -65,7 +65,7 @@
             <change when="20180501">Incorporate information from Cvetana; make eltec-0 conformant</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:lang="sr" xml:id="SR0001">
+    <text>
         <body >
             <p><hi rend="Drop_slovo_Char">К</hi>ад сам се полани
                 вратио из Италије, дошао ми је до руку овај рукопис. Читао сам га под утисцима који

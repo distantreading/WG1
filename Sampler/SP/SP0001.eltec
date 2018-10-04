@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://distantreading.github.io/Schema/eltec-0.rnc" type="application/relax-ng-compact-syntax"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="SP0001" xml:lang="sp">
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
@@ -127,7 +127,7 @@
 			<change when="2015-12-18" who="#jct" status="draft">New metadata.</change>
 		</revisionDesc>
 	</teiHeader>
-	<text xml:id="SP0001" xml:lang="sp">
+	<text>
 		<front>
 			<div type="liminal">
 				<head>AL LECTOR</head>

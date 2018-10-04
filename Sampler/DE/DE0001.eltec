@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"  xml:id="DE0001" xml:lang="de">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -44,6 +44,7 @@
             <extent>
                 <!--Suppressed measure unit-type images: 438-->
                 <measure unit="words">89009</measure>
+                <measure unit="pages">422</measure>
                 <!--Suppressed measure unit-type types: 12327-->
                 <!--Suppressed measure unit-type characters: 613637-->
             </extent>
@@ -141,7 +142,7 @@ border-bottom:double 3px #000
             <change when="2018-07-17">LB check conformance</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:id="DE0001" xml:lang="de">
+    <text>
         <!--Suppressed front: 
 
 

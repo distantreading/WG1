@@ -1,7 +1,7 @@
 ECHO=
 LOCAL=/home/lou/Public/WG1
 SCHEMA=$(LOCAL)/distantreading.github.io/Schema/eltec-1.rng
-CORPUS=$(LOCAL)/ELTEC-EN
+CORPUS=$(LOCAL)/Sampler/Test
 CORPUSHDR=corpHeaderStart.txt
 REPORTER=$(LOCAL)/Sampler/reporter.xsl
 CURRENT=`pwd`

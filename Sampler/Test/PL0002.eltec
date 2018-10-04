@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://distantreading.github.io/Schema/eltec-0.rng"?>
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"  xml:id="PL0002" xml:lang="pl">
 
    <teiHeader>
       <fileDesc>
@@ -14,7 +14,7 @@
             </respStmt>
          </titleStmt>
          <extent>
-            <measure unit="words">849</measure>
+            <measure unit="words">32615</measure>
          </extent>
          <publicationStmt>
             <p>Incorporated into the ELTeC <date>2018-06-17</date>
@@ -52,7 +52,7 @@
          <change when="2018-06-17">Header created</change>
       </revisionDesc>
    </teiHeader>
-   <text xml:id="PL0002" xml:lang="pl">
+   <text>
       <body>
          <div type="chapter" n="1" xml:lang="pl">
             <head>CO NIECO O SAMEJ PIPIDÓWCE</head>
