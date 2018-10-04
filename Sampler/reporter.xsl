@@ -21,6 +21,7 @@
                     <tr class="label">
                         <td>Identifier</td>
                         <td>Encoding</td>
+                        <td>Page count</td>
                         <td>Word count (Size)</td>
                         <td>Date (Slot)</td>
                         <td>Title</td>
@@ -33,10 +34,14 @@
                             <xsl:variable name="wc">
                                 <xsl:value-of select="../t:teiHeader/t:fileDesc/t:extent/t:measure[@unit='words']"/>
                             </xsl:variable>
+                            <xsl:variable name="pc">
+                                <xsl:value-of select="../t:teiHeader/t:fileDesc/t:extent/t:measure[@unit='pages']"/>
+                            </xsl:variable>
+                            
                             <xsl:variable name="date">
                                 <xsl:value-of select="../t:teiHeader/t:fileDesc/t:sourceDesc/t:bibl/t:relatedItem[@type='copyText']/t:bibl/t:date"/>
                           </xsl:variable>
-                            i
+                     
                             <td>
                                 <xsl:value-of select="ancestor::t:TEI/@xml:id"/>
                             </td>
@@ -44,6 +49,8 @@
                                 <xsl:value-of select="../t:teiHeader/t:encodingDesc/@n"/>
                             </td>
                             <td>
+                                <xsl:value-of select="$pc"/> 
+                            </td><td>
                                 <xsl:value-of select="$wc"/> (<xsl:value-of
                                     select="../t:teiHeader/t:profileDesc/t:textDesc/e:size/@key"
                                 />)
