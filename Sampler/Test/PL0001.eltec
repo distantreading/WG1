@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PL001" xml:lang="pl">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PL0001" xml:lang="pl">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -22,7 +22,7 @@
                         target="https://pl.wikisource.org/wiki/Ogniem_i_mieczem/"/></p>
                 <p>This is a transcript of the edition of Sienkiewicz's collected works published by
                     Gebethner i Wolff, Warszawa and Kraków in 1902. The novel was first published in
-                    1884. </p>
+                    <bibl type="copyText"><date>1884</date></bibl>. </p>
             </sourceDesc>
         </fileDesc><encodingDesc n="eltec-1">
             <p></p>

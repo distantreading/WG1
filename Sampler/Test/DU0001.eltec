@@ -14,9 +14,9 @@
     <p>Demonstration file prepared for the ELTeC Sampler</p>
    </publicationStmt>
    <sourceDesc>
-    <bibl> gebaseerd op een bestand van de Digitale Bibliotheek voor de Nederlandse Letteren
+    <bibl type="copyText"> gebaseerd op een bestand van de Digitale Bibliotheek voor de Nederlandse Letteren
      (www.dbnl.org). © 2009 Digitale Bibliotheek voor de Nederlandse Letteren, Leiden Cornélie
-     Huygens, Barthold Meryan. P.N. van Kampen &amp; Zoon, Amsterdam z.j. [1897]
+     Huygens, Barthold Meryan. P.N. van Kampen &amp; Zoon, Amsterdam z.j. [<date>1897</date>]
       <ref>http://www.dbnl.org/tekst/huyg004bart01_01/ebook/huyg004bart01_01.epub </ref> Voor de
      verantwoording en oorspronkelijke paginanummering zie het <ref
       target="http://www.dbnl.org/tekst/huyg004bart01_01">bronbestand</ref>. </bibl>
@@ -31,7 +31,7 @@
    </langUsage>
    <textDesc>
     <authorGender xmlns="http://distantreading.net/eltec/ns" key="M"></authorGender>
-    <size xmlns="http://distantreading.net/eltec/ns" key="short"></size>
+    <size xmlns="http://distantreading.net/eltec/ns" key="long"></size>
     <canonicity xmlns="http://distantreading.net/eltec/ns" key="high"></canonicity>
     <timeSlot xmlns="http://distantreading.net/eltec/ns" key="T3"></timeSlot>
    </textDesc>

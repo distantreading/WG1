@@ -35,10 +35,8 @@
             <sourceDesc>
                 <bibl type="digital-source" >Ebooks libres et gratuits, <date/>,
                     <idno/>, <ref target="#"/>.</bibl>
-           <!--     <bibl type="print-source" status="draft"><date/>, <idno/>, <ref target="#"/>.</bibl>
-                <bibl type="edition-first" status="draft"><date>1862</date>, <idno/>, <ref
-                        target="#"/>.</bibl>
-  -->          </sourceDesc>
+                <bibl type="copyText"><date>1862</date>, <idno/>, .</bibl>
+</sourceDesc>
         </fileDesc>
         <encodingDesc n="eltec-1">
             <p/>

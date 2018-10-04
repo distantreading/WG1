@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Auf zwei Planeten</title>
+                <title>Auf zwei Planeten </title>
                 <title>Roman in zwei Büchern</title>
                 <title>1. Band</title>
                 <author>Laßwitz, Kurd(?-?)</author>
@@ -53,7 +53,7 @@
                 <p>Demonstration file prepared for the ELTeC Sampler</p>
             </publicationStmt>
             <sourceDesc>
-                <bibl>Laßwitz, Kurd: Auf zwei Planeten. Bd. 1. Weimar, 1897.</bibl>
+                <bibl type="copyText">Laßwitz, Kurd: Auf zwei Planeten. Bd. 1. Weimar, <date>1897</date>.</bibl>
                 <!--Suppressed biblFull: 
 
 Auf zwei Planeten

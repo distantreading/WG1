@@ -27,7 +27,7 @@
                 </p>
             </publicationStmt>
             <sourceDesc>
-                <bibl>
+                <bibl type="copyText">
                     <author>Лаза К. Лазаревић`</author>
                     <title>Приповетке, свеска 1</title>
                     <pubPlace>popuniti</pubPlace> <!-- needs to be supplied! -->

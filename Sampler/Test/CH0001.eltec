@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"  xml:id="CH001" xml:lang="fr-ch">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"  xml:id="CH0001" xml:lang="fr-ch">
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
@@ -19,7 +19,7 @@
 					<ref target="http://gallica.bnf.fr/ark:/12148/bpt6k931128v"> Tatiana Leïlof ,
 						roman parisien (édition numerisée) </ref>
 					<publisher> gallica.bnf.fr / Bibliothèque nationale de France </publisher>
-					<relatedItem type="printSource">
+					<relatedItem type="copyText">
 						<bibl><title>Tatiana Leïlof, roman parisien, par Édouard Rod</title>
 							<publisher>E. Plon, Nourrit et Cie</publisher>
 							<pubPlace>Paris</pubPlace>

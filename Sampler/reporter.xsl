@@ -39,7 +39,16 @@
                             </xsl:variable>
                             
                             <xsl:variable name="date">
-                                <xsl:value-of select="../t:teiHeader/t:fileDesc/t:sourceDesc/t:bibl/t:relatedItem[@type='copyText']/t:bibl/t:date"/>
+                                <xsl:choose>
+                                    <xsl:when test="../t:teiHeader//t:relatedItem[@type='copyText']">
+                                        <xsl:value-of select="../t:teiHeader//t:sourceDesc/t:bibl/t:relatedItem[@type='copyText']/t:bibl/t:date"/>
+                                    </xsl:when><xsl:when test="../t:teiHeader//t:sourceDesc/t:bibl[@type='copyText']"> 
+                                        <xsl:value-of select="../t:teiHeader//t:sourceDesc/t:bibl[@type='copyText']/t:date"/> </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:text>???? </xsl:text>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                              
                           </xsl:variable>
                      
                             <td>
