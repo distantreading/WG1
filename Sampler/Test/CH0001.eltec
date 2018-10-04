@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"  xml:id="CH001" xml:lang="fr-ch">
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
 				<title>Tatiana Leïlof, roman parisien: édition ELTeC</title>
 				<author>Rod, Édouard (1857-1910)</author>
 			</titleStmt>
+			<extent>
+				<measure unit="words">53354</measure>
+				<measure unit="pages">286</measure></extent>
 			<publicationStmt>
 				<p>Accedé a ELTeC <date>?</date> </p>
 			</publicationStmt>
@@ -45,7 +48,7 @@
 				Transkribus</change>
 		</revisionDesc>
 	</teiHeader>
-	<text xml:id="CH001" xml:lang="fr-ch">
+	<text>
 		<front>
 			<pb xml:id="CH001_015.jpg"/>
 			<div type="liminal">

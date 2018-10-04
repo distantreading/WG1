@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-0.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"  xml:id="CS0001" xml:lang="cs">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title>Vdavky Nanynky Kulichovy : ELTeC edition</title>
                 <author>Herrmann, Ignát (1854-1935)</author>
             </titleStmt>
+            <extent>
+                <measure unit="words">61236</measure>
+            </extent>
             <publicationStmt>
                 <p>Demonstration file prepared for the ELTeC Sampler</p>
             </publicationStmt>
@@ -34,7 +37,7 @@
             <change when="2018-07-17">LB check conformance</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:id="CS0001" xml:lang="cs">
+    <text>
 
         <front>
             <div type="liminal">

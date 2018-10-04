@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-0.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DU0001" xml:lang="du">
  <teiHeader>
   <fileDesc>
    <titleStmt>
     <title>Barthold Meryan : ELTeC edition</title>
     <author>Huygens, Cornélie (1848-1902)</author>
    </titleStmt>
+   <extent>
+    <measure unit="words">174653</measure>
+   </extent>
    <publicationStmt>
     <p>Demonstration file prepared for the ELTeC Sampler</p>
    </publicationStmt>
@@ -38,7 +41,7 @@
    <change when="2018-07-17">LB check conformance</change>
   </revisionDesc>
  </teiHeader>
- <text xml:id="DU0001" xml:lang="du">
+ <text >
   <body>
    <!--
  

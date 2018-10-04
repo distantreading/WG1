@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PL001" xml:lang="pl">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -9,6 +9,11 @@
                 <title xml:lang="en">With Fire and Sword</title>
                 <author>Sienkiewicz, Henryk (1846-1916)</author>
             </titleStmt>
+            <extent>
+                <measure unit="words">242325</measure>
+                <measure unit="page">1082</measure>
+                
+            </extent>
             <publicationStmt>
                 <p>Demonstration file prepared for the ELTeC Sampler</p>
             </publicationStmt>
@@ -35,7 +40,7 @@
             <change when="2018-02-24">LB: Initial header creation and text conversion</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:id="PL001" xml:lang="pl">
+    <text >
         <body>
             <div type="part">
                 <head>Tom I</head>

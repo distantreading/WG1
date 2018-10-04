@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../distantreading.github.io/Schema/eltec-1.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="FR0001" xml:lang="fr">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -58,7 +58,7 @@
             <change when="2015-08-12" >CF Initial TEI version.</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:id="FR0001" xml:lang="fr">
+    <text >
 
         <body>
             <div type="part">
