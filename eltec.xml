@@ -507,6 +507,12 @@
     authority file such as VIAF.</p></remarks>
 </elementSpec>
                     <elementSpec ident="pb" mode="change">
+                        <attList>
+                            <attDef ident="facs">
+                                <desc>link to a graphic image of the page beginning here</desc>
+                                <datatype><dataRef name="anyURI"></dataRef></datatype>
+                            </attDef>
+                        </attList>
                         <exemplum xml:lang="en">
                             <p>A page break may be associated with a facsimile image of the page it
                                 introduces by means of the <att>facs</att> attribute</p>
