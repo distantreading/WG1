@@ -52,6 +52,7 @@
         <elementRef key="l"/>
         <elementRef key="label"/> <!--*--> 
         <elementRef key="milestone"/> <!--*-->
+       <classRef key="att.milestoneUnit"/>
         <elementRef key="note"/> <!--*-->
         <elementRef key="p"/>
         <elementRef key="pb"/>

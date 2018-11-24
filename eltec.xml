@@ -31,19 +31,16 @@
     </teiHeader>
     <text>
         <xi:include href="eltec-body.xml"/>
-
         <back>
             <div>
                 <head>Full formal specifications</head>
                 <p>The ELTeC encoding scheme defined by this document is a TEI-conformant
                     customization, from which user documentation, and formal RELAXNG or DTD
                     specifications can be generated automatically. </p>
-
                 <p> This section contains the full schema specification from which other
                     level-specific versions are subsequently derived. It must be converted using
                     teitoodd to produce the compiled ODD eltec-compiled.xml which is used as a basis
                     for the others. </p>
-
                 <schemaSpec ident="ELTeC" start="TEI">
                     <moduleRef key="tei"/>
                     <moduleRef key="core"
@@ -52,17 +49,17 @@
                     <moduleRef key="textstructure" include="TEI text div body front back trailer"/>
                     <moduleRef key="header"
                         include="change  encodingDesc 
-                        extent fileDesc idno keywords langUsage language  
+    extent fileDesc idno keywords langUsage language  
             profileDesc publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
                     <moduleRef key="namesdates" include="affiliation forename  persName  surname"/>
                     <moduleRef key="corpus" include="textDesc"/>
-
                     <!--Class modifications to reduce attribute clutter -->
                     <!-- first remove classes which provide attributes we dont want -->
                     <classSpec ident="att.ascribed" type="atts" mode="delete"/>
                     <classSpec ident="att.breaking" type="atts" mode="delete"/>
                     <classSpec ident="att.cReferencing" type="atts" mode="delete"/>
-                    <classSpec ident="att.canonical" type="atts" mode="delete"/>
+                    <!--<classSpec ident="att.canonical" type="atts" mode="delete"/>
+-->
                     <classSpec ident="att.datable.iso" type="atts" mode="delete"/>
                     <classSpec ident="att.datable.custom" type="atts" mode="delete"/>
                     <classSpec ident="att.declarable" type="atts" mode="delete"/>
@@ -75,7 +72,6 @@
                     <classSpec ident="att.global.responsibility" type="atts" mode="delete"/>
                     <classSpec ident="att.global.source" type="atts" mode="delete"/>
                     <classSpec ident="att.internetMedia" type="atts" mode="delete"/>
-
                     <classSpec ident="att.measurement" type="atts" mode="delete"/>
                     <classSpec ident="att.naming" type="atts" mode="delete"/>
                     <classSpec ident="att.personal" type="atts" mode="delete"/>
@@ -114,16 +110,18 @@
                             <attDef ident="evaluate" mode="delete"/>
                         </attList>
                     </classSpec>
-
+                    <classSpec type="atts" ident="att.canonical" mode="change">
+                        <attList>
+                            <attDef ident="key" mode="delete"/>
+                        </attList>
+                    </classSpec>
                     <!-- tweaks for individual elements -->
-
                     <!-- remove @version from TEI : it doesnt mean what you think -->
                     <elementSpec ident="TEI" mode="change">
                         <attList>
                             <attDef ident="version" mode="delete"/>
                         </attList>
                     </elementSpec>
-
                     <elementSpec ident="title" mode="change">
                         <constraintSpec mode="add" ident="noEmptyTitle" scheme="schematron">
                             <constraint>
@@ -133,15 +131,12 @@
                             </constraint>
                         </constraintSpec>
                     </elementSpec>
-
-
                     <!-- simplify publicationStmt  -->
                     <elementSpec ident="publicationStmt" mode="change">
                         <content>
                             <elementRef key="p"/>
                         </content>
                     </elementSpec>
-
                     <!-- simplify encodingDesc; require and constrain @n  -->
                     <elementSpec ident="encodingDesc" mode="change">
                         <content>
@@ -166,7 +161,6 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-
                     <!-- make xml:id and xml:lang compulsory for TEI -->
                     <elementSpec ident="TEI" mode="change">
                         <attList>
@@ -174,7 +168,6 @@
                             <attDef ident="xml:lang" mode="change" usage="req"/>
                         </attList>
                     </elementSpec>
-
                     <!-- make various elements compulsory in the header -->
                     <elementSpec ident="teiHeader" mode="change">
                         <content>
@@ -187,8 +180,6 @@
                             </sequence>
                         </content>
                     </elementSpec>
-
-
                     <!-- define new elements for selection criteria -->
                     <elementSpec ident="authorGender" mode="add"
                         ns="http://distantreading.net/eltec/ns">
@@ -234,7 +225,6 @@
                         <content>
                             <empty/>
                         </content>
-
                         <attList>
                             <attDef ident="key" mode="add" usage="req">
                                 <datatype>
@@ -254,7 +244,6 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-
                     <elementSpec ident="canonicity" mode="add"
                         ns="http://distantreading.net/eltec/ns">
                         <desc>indicates the degree to which the text has become part of a literary
@@ -265,7 +254,6 @@
                         <content>
                             <empty/>
                         </content>
-
                         <attList>
                             <attDef ident="key" mode="add" usage="req">
                                 <datatype>
@@ -286,17 +274,17 @@
                                     </valItem>
                                 </valList>
                                 <remarks>
-                                    <p>Frequency of publication is assessed with reference to
-                                        time periods of twenty years. A work which has been republished in more
-                                        than four such periods, i.e. over a reasonably long time
-                                        since its first appearance, is considered highly
-                                        canonical. A work which appears to have been published only in a single
-                                    such period is considered of low canonicity. </p>
+                                    <p>Frequency of publication is assessed with reference to time
+                                        periods of twenty years. A work which has been republished
+                                        in more than four such periods, i.e. over a reasonably long
+                                        time since its first appearance, is considered highly
+                                        canonical. A work which appears to have been published only
+                                        in a single such period is considered of low canonicity.
+                                    </p>
                                 </remarks>
                             </attDef>
                         </attList>
                     </elementSpec>
-
                     <elementSpec ident="timeSlot" mode="add" ns="http://distantreading.net/eltec/ns">
                         <desc>specifies the time period during which the work was first published </desc>
                         <classes>
@@ -327,7 +315,6 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-
                     <!-- require one of each profileDesc component in a specific order -->
                     <elementSpec ident="profileDesc" mode="change">
                         <content>
@@ -340,9 +327,11 @@
                             <classRef key="model.textDescPart" expand="sequence"/>
                         </content>
                     </elementSpec>
-
                     <!-- restrict content for author -->
                     <elementSpec ident="author" mode="change">
+                        <classes mode="replace">
+                            <memberOf key="att.canonical"/>
+                        <memberOf key="att.global"/><memberOf key="model.respLike"/></classes>
                         <content>
                             <alternate maxOccurs="unbounded" minOccurs="0">
                                 <textNode/>
@@ -351,12 +340,10 @@
                                 <!-- idno is used to indicate VIAF or other external id for an author -->
                             </alternate>
                         </content>
+                        
                         <!-- a constraintSpec might be useful to check form of author name  -->
                     </elementSpec>
-
-
                     <!-- remove  measure and idno from classes which allow them outside header -->
-
                     <elementSpec ident="idno" mode="change">
                         <classes mode="replace">
                             <memberOf key="att.typed"/>
@@ -364,14 +351,12 @@
                             <memberOf key="model.publicationStmtPart.detail"/>
                         </classes>
                     </elementSpec>
-
                     <!-- constrain extent and its components -->
                     <elementSpec ident="extent" mode="change">
                         <content>
                             <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                     </elementSpec>
-
                     <elementSpec ident="measure" mode="change">
                         <classes mode="change">
                             <memberOf key="att.measurement" mode="delete"/>
@@ -392,23 +377,16 @@
                                     <valItem ident="vols">
                                         <desc>number of volumes for original source text </desc>
                                     </valItem>
-
                                 </valList>
-
                             </attDef>
                         </attList>
                     </elementSpec>
-
                     <!-- require a date on change -->
-
                     <elementSpec ident="change" mode="change">
                         <attList>
                             <attDef ident="when" mode="change" usage="req"/>
                         </attList>
                     </elementSpec>
-
-
-
                     <elementSpec ident="div" mode="change">
                         <attList>
                             <attDef ident="type" mode="change">
@@ -419,7 +397,6 @@
                                     <valItem ident="notes">
                                         <desc>collects authorial notes (level 1 only)</desc>
                                     </valItem>
-
                                     <valItem ident="liminal">
                                         <desc>authorial preface, foreword, back matter etc.</desc>
                                     </valItem>
@@ -434,83 +411,90 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-
                     <!-- adding better examples -->
-
                     <elementSpec ident="TEI" mode="change">
-                        <exemplum  xml:lang="en">
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples">       <TEI xml:id="ENG0001" xml:lang="ENG">
-                                <teiHeader>
-                                    <fileDesc>
-                                        <titleStmt>
-                                            <title><!-- title of work --></title>
-                                            <author><!-- information about the author --></author>
-                                            <respStmt>
-                                                <resp>encoder</resp>
-                                                <name><!-- information about the encoder --></name>
-                                            </respStmt>
-                                        </titleStmt>
-                                        <extent>
-                                            <!-- size of the text, in pages and words -->
-                                        </extent>
-                                        <publicationStmt>
-                                            <p><!-- standard text about status as part of ELTeC --></p>
-                                        </publicationStmt>
-                                        <sourceDesc>
-                                            <bibl>
-                                                <!-- bibliographic description of the source -->
-                                            </bibl>
-                                        </sourceDesc>
-                                    </fileDesc>
-                                    <profileDesc>
-                                        <!-- additional descriptive information -->
-                                    </profileDesc>
-                                    <revisionDesc>
-                                        <change when="2017-07-27"
-                                            ><!-- revision information --></change>
-                                    </revisionDesc>
-                                </teiHeader>
-                                <text>
-                                    <body>
-                                        <!-- transcription of text here -->
-                                    </body>
-                                </text>
-                            </TEI></egXML>
+                        <exemplum xml:lang="en">
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <TEI xml:id="ENG0001" xml:lang="ENG">
+                                    <teiHeader>
+                                        <fileDesc>
+                                            <titleStmt>
+                                                <title><!-- title of work --></title>
+                                                <author><!-- information about the author --></author>
+                                                <respStmt>
+                                                  <resp>encoder</resp>
+                                                  <name><!-- information about the encoder --></name>
+                                                </respStmt>
+                                            </titleStmt>
+                                            <extent>
+                                                <!-- size of the text, in pages and words -->
+                                            </extent>
+                                            <publicationStmt>
+                                                <p><!-- standard text about status as part of ELTeC --></p>
+                                            </publicationStmt>
+                                            <sourceDesc>
+                                                <bibl>
+                                                  <!-- bibliographic description of the source -->
+                                                </bibl>
+                                            </sourceDesc>
+                                        </fileDesc>
+                                        <profileDesc>
+                                            <!-- additional descriptive information -->
+                                        </profileDesc>
+                                        <revisionDesc>
+                                            <change when="2017-07-27"
+                                                ><!-- revision information --></change>
+                                        </revisionDesc>
+                                    </teiHeader>
+                                    <text>
+                                        <body>
+                                            <!-- transcription of text here -->
+                                        </body>
+                                    </text>
+                                </TEI></egXML>
                         </exemplum>
                     </elementSpec>
-                
-<elementSpec ident="author" mode="change">
-    <exemplum xml:lang="en">
-        <p>When used within a <gi>titleStmt</gi>, an author's name is given in a standardized
-        format (surname, forename/s, dates) as shown in this example.</p>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-            <author>Forster, Edward Morgan (1879-1970)</author>
-        </egXML>
-    </exemplum>
-    <exemplum xml:lang="en">
-        <p>When used within the <gi>sourceDesc</gi>, an author's name is given in the format
-            used by the source in question, as shown in this example.</p>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-            <author>E.M. Forster</author>
-        </egXML>
-    </exemplum>
-    <exemplum><p>In cases of multiple authorship, the <gi>author</gi> element within <gi>titleStmt</gi>
-  should be repeated</p>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-          <titleStmt> <title>The Diary of a Nobody : ELTeC edition </title> 
-             <author>Grossmith, George (1847-1912)</author>
-            <author>Grossmith, Walter Weedon (1854-1919)</author>
-     </titleStmt>   </egXML>
-    </exemplum>
-    <remarks><p>One or more <gi>idno</gi> elements may be included to supply
-    externally defined identifiers for the author, for example by referring to an
-    authority file such as VIAF.</p></remarks>
-</elementSpec>
+                    <elementSpec ident="author" mode="change">
+                        <exemplum xml:lang="en">
+                            <p>When used within a <gi>titleStmt</gi>, an author's name is given in a
+                                standardized format (surname, forename/s, dates) as shown in this
+                                example.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+                                <author>Forster, Edward Morgan (1879-1970)</author>
+                            </egXML>
+                        </exemplum>
+                        <exemplum xml:lang="en">
+                            <p>When used within the <gi>sourceDesc</gi>, an author's name is given
+                                in the format used by the source in question, as shown in this
+                                example.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+                                <author>E.M. Forster</author>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>In cases of multiple authorship, the <gi>author</gi> element within
+                                    <gi>titleStmt</gi> should be repeated</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
+                                <titleStmt>
+                                    <title>The Diary of a Nobody : ELTeC edition </title>
+                                    <author>Grossmith, George (1847-1912)</author>
+                                    <author>Grossmith, Walter Weedon (1854-1919)</author>
+                                </titleStmt>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p>One or more <gi>idno</gi> elements may be included to supply
+                                externally defined identifiers for the author, for example by
+                                referring to an authority file such as VIAF.</p>
+                        </remarks>
+                    </elementSpec>
                     <elementSpec ident="pb" mode="change">
                         <attList>
                             <attDef ident="facs">
                                 <desc>link to a graphic image of the page beginning here</desc>
-                                <datatype><dataRef name="anyURI"></dataRef></datatype>
+                                <datatype>
+                                    <dataRef name="anyURI"/>
+                                </datatype>
                             </attDef>
                         </attList>
                         <exemplum xml:lang="en">
@@ -520,7 +504,7 @@
                                 <body>
                                     <pb n="1" facs="page1.png"/>
                                     <!-- page1.png contains an image of the page;
-                        the text it contains is encoded here -->
+    the text it contains is encoded here -->
                                     <p>
                                         <!-- ... -->
                                     </p>
@@ -532,9 +516,7 @@
                                 </body>
                             </egXML>
                         </exemplum>
-
                         <exemplum>
-
                             <p>If a page break interrupts a word the word fragments may be
                                 reassembled following it. <graphic url="media/inWordpb.png"/></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -552,39 +534,43 @@
                                 itself. </p>
                         </remarks>
                     </elementSpec>
-<elementSpec ident="milestone" mode="change">
-    <exemplum>   
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <div type="group">
-                <head>BOOK THE FIRST</head>
-                <head>THE DAYS BEFORE TONO-BUNGAY WAS INVENTED</head>               
-                <div type="chapter">
-                    <head>CHAPTER THE FIRST</head>
-                    <milestone type="subChapter" n="I"/>
-                    <p>Most people in this world seem to live "in character" ...
-                    </p><!-- ... -->
-                </div></div></egXML></exemplum>
-</elementSpec>
-               
-               <elementSpec ident="gap" mode="change">
-                   <attList>
-                       <attDef ident="reason" mode="delete"/>
-                       <attDef ident="agent" mode="delete"/>
-                   </attList>
-                    <exemplum>   
-                        <p>Two consecutive graphic components omitted from transcription: </p>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <gap unit="graphic" quantity="2"/>   
-                        </egXML></exemplum>
-                   
-                   <exemplum>   
-                       <p>Table of contents omitted from transcription: </p>
-                       <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                           <gap unit="toc" />   
-                       </egXML></exemplum>
-                                 </elementSpec>
-                    
-                    
+                    <elementSpec ident="milestone" mode="change">
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <div type="group">
+                                    <head>BOOK THE FIRST</head>
+                                    <head>THE DAYS BEFORE TONO-BUNGAY WAS INVENTED</head>
+                                    <div type="chapter">
+                                        <head>CHAPTER THE FIRST</head>
+                                        <milestone unit="section" n="I"/>
+                                        <p>Most people in this world seem to live "in character" ... </p>
+                                        <!-- ... -->
+                                        <p>....of an altogether different sort from that of
+                                            Tono-Bungay.</p>
+                                        <milestone unit="section" n="II"/>
+                                        <p>I write that much and look at it, and wonder ... </p>
+                                    </div>
+                                </div></egXML>
+                        </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="gap" mode="change">
+                        <attList>
+                            <attDef ident="reason" mode="delete"/>
+                            <attDef ident="agent" mode="delete"/>
+                        </attList>
+                        <exemplum>
+                            <p>Two consecutive graphic components omitted from transcription: </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <gap unit="graphic" quantity="2"/>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>Table of contents omitted from transcription: </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <gap unit="toc"/>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="trailer" mode="change">
                         <exemplum>
                             <ab><graphic url="media/trailer.png"/></ab>
@@ -600,20 +586,20 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-
-<elementSpec ident="label" mode="change">
-    <exemplum>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples"><p><label>April 5.</label>-Two shoulders of mutton arrived, Carrie having arranged with
-            another butcher without consulting me. Gowing called, and fell over scraper coming in.
-            <hi>Must</hi> get that scraper removed.</p>
-        <p><label>April 6.</label>-Eggs for breakfast simply shocking; sent them back to Borset with
-            my compliments, and he needn't call any more for orders. </p></egXML></exemplum>
-
-</elementSpec>
+                    <elementSpec ident="label" mode="change">
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><p><label>April
+                                        5.</label>-Two shoulders of mutton arrived, Carrie having
+                                    arranged with another butcher without consulting me. Gowing
+                                    called, and fell over scraper coming in. <hi>Must</hi> get that
+                                    scraper removed.</p>
+                                <p><label>April 6.</label>-Eggs for breakfast simply shocking; sent
+                                    them back to Borset with my compliments, and he needn't call any
+                                    more for orders. </p></egXML>
+                        </exemplum>
+                    </elementSpec>
                 </schemaSpec>
             </div>
-
         </back>
-
     </text>
 </TEI>
