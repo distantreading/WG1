@@ -87,6 +87,7 @@
              <memberOf key="att.global"/>
              <memberOf key="model.biblPart"/>
              <memberOf key="model.emphLike"/>
+             <memberOf key="att.canonical"/>
           </classes>
        </elementSpec>
        

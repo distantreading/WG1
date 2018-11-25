@@ -85,6 +85,7 @@
           <classes mode="replace">
              <memberOf key="att.global"/>
              <memberOf key="model.biblPart"/>
+             <memberOf key="att.canonical"/>
           </classes>
        </elementSpec>
        
