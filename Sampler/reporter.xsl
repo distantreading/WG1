@@ -14,7 +14,7 @@
                     <xsl:value-of select="count(//t:text)"/>
                 </xsl:variable>
                 <xsl:variable name="wordCount">
-                    <xsl:value-of select="xs:integer(sum(//t:measure[@unit='words']))"/>
+                    <xsl:value-of select="sum(xs:integer(//t:measure[@unit='words']))"/>
                 </xsl:variable>
                 <xsl:message><xsl:value-of select="$textCount"/><xsl:text> texts found containing </xsl:text>
                     <xsl:value-of select="$wordCount"/> 
@@ -47,8 +47,13 @@
                                 <xsl:choose>
                                     <xsl:when test="../t:teiHeader//t:relatedItem[@type='copyText']">
                                         <xsl:value-of select="../t:teiHeader//t:sourceDesc/t:bibl/t:relatedItem[@type='copyText']/t:bibl/t:date"/>
-                                    </xsl:when><xsl:when test="../t:teiHeader//t:sourceDesc/t:bibl[@type='copyText']"> 
+                                    </xsl:when>
+                                    <xsl:when test="../t:teiHeader//t:sourceDesc/t:bibl[@type='copyText']"> 
                                         <xsl:value-of select="../t:teiHeader//t:sourceDesc/t:bibl[@type='copyText']/t:date"/> </xsl:when>
+                                    <xsl:when test="../t:teiHeader//t:sourceDesc/t:bibl/t:bibl[@type='edition-first']"> 
+                                        <xsl:value-of select="../t:teiHeader//t:sourceDesc/t:bibl/t:bibl[@type='edition-first']/t:date"/> </xsl:when>
+                                    
+                                    
                                     <xsl:otherwise>
                                         <xsl:text>???? </xsl:text>
                                     </xsl:otherwise>

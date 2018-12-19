@@ -66,7 +66,7 @@
          across line or page breaks should be silently reassembled. </p>
       <!-- page breaks-->
       <p>To facilitate checking of a transcription against its source during production, the
-            <gi>pb</gi> element must be provided to mark the point in a transcription where a new
+            <gi>pb</gi> element may be provided to mark the point in a transcription where a new
          page begins in the source. An identifier for each <gi>pb</gi> element may be provided in a
          level 1 text to facilitate linkage to a page image of the corresponding source page, but is
          not required in a level 0 text. </p>
@@ -76,7 +76,7 @@
          number as specified by the source. If no page number is given, the value should be enclosed
          in brackets. </p>
       <p> If a page begins with the second part of a hyphenated word, the <gi>pb</gi> tag may appear
-         after that in order to simplify lexical processing. Otherwise its position should be the
+         after that word in order to simplify lexical processing. Otherwise its position should be the
          same in transcription and source. </p>
       <!-- liminal material -->
       <p>As well as a titlepage or a table of contents, a published novel often includes material
@@ -100,8 +100,22 @@
          follow TEI in using a single element (<gi>div</gi>) for every hierarchical structural
          division, down to the level of <q>chapter</q>.</p>
       <p>The <att>type</att> attribute is used to indicate the function of a structural division. It
-         must have one of the following values:
-         <!--  <valList type="semi">
+         should have one of the following values:
+        <list type="gloss">
+           <label>liminal</label><item>authorial preface, foreword, back matter, etc.</item>
+           <label>titlepage</label><item>(within front or back) contains title page text: level 1 only</item>
+           <label>notes</label><item>(within front or back) contains authorial notes : level 1 only</item>
+           <label>part</label><item>any structural subdivision of a text larger than a chapter e.g. part, volume etc.</item>
+           <label>chapter</label><item>smallest structural subdivision of the body of a text</item>
+        </list></p> 
+         <p>A short novel may have no subdivision at all, in which case the <gi>div</gi> element should not be used.
+            No further subdivisions within a <tag>div type='chapter'</tag> are permitted. If the text of a chapter is subdivided
+            in some way, for example by means of a number, a row of stars, a horizontal rule, or similar
+            device, this should be indicated in the markup by means of a <gi>milestone</gi> element. If a chapter
+            contains an embedded text of some kind, for example a quoted letter or other narrative, this should be
+            marked using the <gi>quote</gi> element. 
+            </p>
+      <!--  <valList type="semi">
                      <valItem ident="liminal">
                     <desc>authorial preface, foreword, back matter etc.</desc>
                  </valItem>
@@ -118,7 +132,7 @@
                     <desc>authorial notes, collected within back  (level 1 only)</desc>
                  </valItem>
         
-              </valList>--></p>
+              </valList>-->
       <p>The (human) language in which a text is expressed is indicated explicitly by the
             <att>xml:lang</att> attribute which supplies the ISO 641-2 letter code for the language
          concerned. This attribute will always be supplied on the <gi>text</gi> element to specify a
@@ -127,9 +141,9 @@
          metadata (see <gi>langUsage</gi> element in the header). </p>
       <p>A single reference scheme will be defined for the whole corpus, with the following
          components: <list>
-            <item>text identifier : every text will have an identifier consisting of its two letter
-               language code in upper case and a three digit serial number, for example
-                  <code>FR042</code></item>
+            <item>text identifier : every text will have an identifier consisting of its three letter
+               language code in upper case and a five digit serial number, for example
+                  <code>FRA00042</code></item>
             <item>chapter identifier: each chapter or equivalent will have an identifier
                concatenating the text identifier and a three digit serial number, for example
                   <code>FR042012</code> is the twelfth chapter of the 42nd French novel. </item>
@@ -179,7 +193,7 @@
          use of superscript, for example) usually signal something, which an analysis should take
          into account. However, determining the function of such typographic variation is not always
          straightforward. ELTeC texts (at level 0) therefore simply indicate the presence of
-         typographic salience, using the<gi> hi</gi> element.</p>
+         typographic salience, using the <gi>hi</gi> element.</p>
    </div>
    <div>
       <head>Transcription Guidelines (level 1)</head>
@@ -198,7 +212,7 @@
          intervention. </p>
       <p>At level 1, the element <gi>gap</gi> should be used to indicate when something has been
          omitted from the encoding. For example, a suppressed graphic, or foreword, which at level
-         zero are silently omitted, should be represented by an explicit <gi>gap</gi> element, with
+         zero are silently omitted, should be represented at level 1 by an explicit <gi>gap</gi> element, with
          attributes indicating what has been omitted from the encoding.</p>
       <p>At level 1, the following additional elements can be used to mark up the significance of
          some stretch of text which would otherwise simply be marked as typographically salient
@@ -269,7 +283,7 @@
          <row>
             <cell>volume, chapter etc.</cell>
             <cell><gi>div</gi> nested as necessary within <gi>body</gi></cell>
-            <cell><att>type</att> may be chapter, vol, or group (for anything else); <att>n</att>
+            <cell><att>type</att> may be chapter, or group (for anything else); <att>n</att>
                may indicate original numbering</cell>
          </row>
          <row>
@@ -471,6 +485,9 @@
                   <measure unit="words">12 000</measure>
                   <measure unit="pages">256</measure>
                </extent></egXML>
+         <p>The page count may be derived from an external bibliographic source, and may not therefore
+         correspond with the actual number of <gi>pb</gi> elements in the transcription. If no page count
+         is available, no <tag>measure unit="pages"</tag> should be supplied. </p>
          </div>
          <div>
             <head>The publication statement (<gi>publicationStmt</gi>)</head>
@@ -521,6 +538,7 @@
             <p>This encoding shows that the source of the ELTeC text is the digital facsimile
                provided under the title and ARK identifier indicated, and that that digital
                facsimile is itself related to a print edition, published in Paris in 1886. </p>
+         <p></p>
          </div>
       </div>
       <div>

@@ -1,0 +1,2 @@
+curl "https://copac.jisc.ac.uk/search?ti=$1&au=$2&format=XML+-+MODS" >$1_$2.xml
+saxon $1_$2.xml mods.xsl | perl copac_counts.prl

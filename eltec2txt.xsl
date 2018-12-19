@@ -20,26 +20,30 @@
         <xsl:text>}
 </xsl:text> 
     </xsl:template>
-
+    
+    <xsl:template match="t:p">
+        <xsl:value-of select="concat(normalize-space(translate(., $nl, ' ')), $nl)"/>
+    </xsl:template>
+<!--
     <xsl:template match="t:p">
         <xsl:variable name="string">
             <xsl:value-of select="translate(normalize-space(replace(translate(., $punx, '               '), '—',' — ')),'?.', concat($nl,$nl))"/>
         </xsl:variable>
-        <!--<xsl:text>|</xsl:text><xsl:value-of select="$string"/>
+        <!-\-<xsl:text>|</xsl:text><xsl:value-of select="$string"/>
         <xsl:text>|
-</xsl:text>-->
+</xsl:text>-\->
       <xsl:for-each select="tokenize($string, ' ')">
             <xsl:value-of select="."/>
-     <!--       <xsl:text> </xsl:text>
+     <!-\-       <xsl:text> </xsl:text>
           <xsl:if test="(position() mod 10 eq 0)">
-   -->             <xsl:text>
+   -\->             <xsl:text>
 </xsl:text>
-            <!--</xsl:if>-->
+            <!-\-</xsl:if>-\->
         </xsl:for-each>
-  <!--      <xsl:value-of select="$string"/>
+  <!-\-      <xsl:value-of select="$string"/>
        <xsl:value-of select="replace($string, concat($nl,' '), $nl )"/>
     </xsl:template>
---></xsl:template>
-
+-\-></xsl:template>
+-->
 
 </xsl:stylesheet>

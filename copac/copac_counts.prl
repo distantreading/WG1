@@ -1,0 +1,6 @@
+while (<>) {
+$counts{$1}++ if (/(1[89]\d)\d/) ;
+}
+foreach $k (sort keys %counts) {
+print "$k"; print "x $counts{$k} \n";
+}

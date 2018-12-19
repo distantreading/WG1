@@ -232,10 +232,10 @@
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="long">
-                                        <desc>more than 150,000 words</desc>
+                                        <desc>more than 100,000 words</desc>
                                     </valItem>
                                     <valItem ident="medium">
-                                        <desc>50,000 to 150,000 words</desc>
+                                        <desc>50,001 to 100,000 words</desc>
                                     </valItem>
                                     <valItem ident="short">
                                         <desc>10,000 to 50,000 words</desc>
