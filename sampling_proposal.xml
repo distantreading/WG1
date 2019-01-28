@@ -17,6 +17,8 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
+            <change><date>2019-01-28</date> CO revised the criteria; removed outdated use
+                cases.</change>
             <change><date>2018-01-30</date> LB revised table; added some discussion to criteria;
                 tarted up bibliog </change>
             <change><date>2018-01-27</date> LB converted to XML</change>
@@ -38,7 +40,6 @@
                     <item>Requirements of sampling criteria</item>
                     <item>Sampling criteria</item>
                     <item>Metadata for texts in ELTeC</item>
-                    <item>First use cases (WG 1 meeting Prague)</item>
                     <item>Literature</item>
                 </list>
             </div>
@@ -63,18 +64,19 @@
                     and motivated selection criteria for the corpus.</p>
                 <p>It is important to stress that we do not intend to define what a novel is by
                     defining what kind of selection criteria we will use for ELTeC. The category
-                    novel may be divided into three groups where at least one of the following core criteria is met: 
-                    a) textual: length (>10.000 words), prose, fiction, narrative structure
-                    b) peritextual (the term ‘novel’ (or its equivalent) in the title or subtitle of the text ) and 
-                    c) contextual: the text is bibliographically listed with the UDC: 82-31  Novels. Full-length stories.</p>
+                    novel may be divided into three groups where at least one of the following core
+                    criteria is met: a) textual: length (>10.000 words), prose, fiction, narrative
+                    structure b) peritextual (the term ‘novel’ (or its equivalent) in the title or
+                    subtitle of the text ) and c) contextual: the text is bibliographically listed
+                    with the UDC: 82-31 Novels. Full-length stories.</p>
             </div>
             <div>
                 <head>Method</head>
                 <p>We follow a non-normative but metadata-based approach of sampling criteria which
                     will follow a corpus design approach. Corpus sampling criteria are mostly
                     oriented/developed by the research question or/and contexts of the corpus
-                    creators group. In CA16204, we have neither a distinct research question nor a
-                    fixed and previously known corpus creator group. The research context of the
+                    creators group. In CA16204, we have neither only a single research question nor
+                    a fixed and previously known corpus creator group. The research context of the
                     Action is more interested in knowledge production in a methodological sense and
                     does not prefer a single method, model or theory. Furthermore, the member group
                     of the Action will fluctuate and consist of researches from different
@@ -94,18 +96,19 @@
                     language and publication date of the texts. This means that the corpus should
                     not be based solely on chronological criteria, meaning that we need a text from
                     each year of the period in question. The main sampling criterion ‘language’ will
-                    require not to include translations at all. We will take the first edition of a
-                    novel or editions of these novels. By a novel, we mean the edition of the book,
-                    hence excluding novels only printed in journals, unless a particular literary
-                    tradition only features novels printed in serial format. If we consider editions
-                    of a novel, these editions should be freely available (free licences for reusing
-                    them. The first edition is more interesting from a philological point of view.
-                    It represents the authentic texts of the authors. Dealing with historical texts
-                    might require some cleaning up or normalizations. We will merge all word forms
-                    which are seperated by line breaks. At the moment, we must assume that there are
-                    no (sufficiently good) normalization tools for every language. Later editions of
-                    a novel may be already normalized in some way. This might lead to different text
-                    representations in ELTeC which should be indicated in the metadata. </p>
+                    require not to include translations at all. We will prefer to take the first
+                    edition of a novel or editions of these novels. By a novel, we prefer to take
+                    the edition of the book, hence we don't prefer novels only printed in journals,
+                    unless a particular literary tradition only features novels printed in serial
+                    format. If we consider editions of a novel, these editions should be freely
+                    available (free licences for reusing them. The first edition is more interesting
+                    from a philological point of view. It represents the authentic texts of the
+                    authors. Dealing with historical texts might require some cleaning up or
+                    normalizations. We will merge all word forms which are seperated by line breaks.
+                    At the moment, we must assume that there are no (sufficiently good)
+                    normalization tools for every language. Later editions of a novel may be already
+                    normalized in some way. This might lead to different text representations in
+                    ELTeC which should be indicated in the metadata. </p>
                 <p>Considering also later freely available editions of a novel has two advantages:
                     First, members of the Action already can provide machine-readable text documents
                     (html, TEI etc.) of later editions and second, in some languages it might be
@@ -136,12 +139,16 @@
             </div>
             <div>
                 <head> Sampling criteria </head>
+                <p>For creating a langauge collection two steps have to be done: First step is
+                    selection: identifying text candidates. Second step is balancing: proportion
+                    within the corpus. Both steps are defined in this document.</p>
                 <p>Principles:</p>
                 <list type="unordered">
-                    <item>We will represent the variation of production and aim to maximize the
+                    <item>We will represent the variety of production and aim to maximize the
                         variety within each time period.</item>
-                    <item>We will consider novels published as a book in first as well as later
-                        editions.</item>
+                    <item>We will prefer to collect novels published as a book in first as well as
+                        later editions over novels published in serial publications
+                        (journals).</item>
                     <item>We will not include translations.</item>
                     <item>We will consider only freely available texts and trying to reuse already
                         digitized texts.</item>
@@ -149,7 +156,9 @@
                         canonical novels and non-canonical novels.</item>
                     <item>Metadata should indicate the type of text representation (normalized or
                         non-normalized, first or later editions etc.). </item>
-                    <item>Open Question: do we allow for normalization, if available? (WG2)</item>
+                    <item>We will strictly follow the selection and balancing criteria and we prefer
+                        80 novels meeting these criteria over 100 novels which do not meet the
+                        criteria.</item>
                 </list>
                 <p>Organization</p>
                 <list>
@@ -158,15 +167,16 @@
                         criteria. </item>
                 </list>
                 <p>Criteria: Eligibility. </p>
-                <p> In order to be included, a text must... </p>
+                <p> In order to be included (selection), a text must... </p>
                 <list>
-                    <item>have been first published as a book between 1840 and 1920, sub-grouped and
-                        equally split by decades. </item>
+                    <item>have been first published as a book (or or in case of need as series
+                        publication) between 1840 and 1920, sub-grouped and equally split by
+                        decades, </item>
                     <item>have first been published in a European country. [maybe not "first":
-                        within that decade]</item>
-                    <item>be a novel, i.e. a fictional prose narrative.</item>
+                        within that decade],</item>
+                    <item>be a novel, i.e. a fictional prose narrative,</item>
                     <item>have originally been written in the language of the given
-                        subcollection</item>
+                        subcollection.</item>
                 </list>
                 <p>Criteria: Composition. </p>
                 <p>Among the novels in each language the subcollection must contain... </p>
@@ -175,8 +185,8 @@
                         subcollection.</item>
                     <item>at least 10 authors are represented with three novels.</item>
                     <item>at least 30% are highly canonized novels, at least 30% should be
-                        non-canonized novels, based on reprints two groups: 1 Group: canon.
-                        reprinted more than once 2. Group: non-canon. not or once reprinted, period:
+                        non-canonized novels, based on the following reprint groups: reprinted not
+                        at all, reprinted once, reprinted more than once within the period
                         1980-2000</item>
                     <item>at least 20% are short novels (10-50k word tokens), at least 20% are long
                         novels (>200k word tokens).</item>
@@ -187,33 +197,38 @@
                     <item>
                         <p>We will divide into four groups</p>
                         <list type="unordered">
-                            <item>group A(1840-1859)</item>
-                            <item>group B (1860-1879)</item>
-                            <item>group C (1880-1899)</item>
-                            <item>group D (1900-1919) </item>
+                            <item>group A (1840-1859): code T1</item>
+                            <item>group B (1860-1879): code T2</item>
+                            <item>group C (1880-1899): code T3</item>
+                            <item>group D (1900-1920): code T4</item>
                         </list>
                     </item>
 
                     <label>Language of the text</label>
                     <item><p>The MoU defines the languages to be sampled. It does not propose
                             distinguishing regional variation (e.g. in German), nor geographical
-                            variation (e.g. the French spoken in Belgium, France, or Switzerland). It
-                            assumes only European varieties, so English excludes US English; French
-                            excludes Quebecois. </p><list>
+                            variation (e.g. the French spoken in Belgium, France, or Switzerland).
+                            It assumes only European varieties, so English excludes US English;
+                            French excludes Quebecois. </p>
+                        <p> We follow a language-based approach (not country-based). This means for
+                            example that we include Swiss German texts in the German language
+                            collection. We prefer standard varieties over dialect varieties if
+                            sampling criteria for text candidates are met. </p>
+                        <list>
                             <item>Open Question: Maybe some Exceptions: - Publication place is a
-                                sometimes a problem: e.g. for Portuguese Novels published in as
+                                sometimes a problem: e.g. for Portuguese novels published in as
                                 Brazilian publications or Croatian authors published in Germany. </item>
                             <item>Possible Languages for the first iteration: Dutch, English,
                                 French, German, Greek, Italian, Polish, Portuguese, Russian,
-                                Spanish, Hungarian</item>
+                                Spanish, Hungarian.</item>
                         </list></item>
                     <label>Reprint count</label>
                     <item><p>We propose to use the number of times a work is reprinted as an
-                            objective measure of its reception, using categories like the following: </p><list>
-                            <item>low: no reprints at all, or one reprint (30% of all novels in a
-                                language collection)</item>
-                            <item>high: reprinted more than once (30% of all novels in a language
-                                collection)</item>
+                            objective measure of its reception from 1980-2000, using categories like
+                            the following: </p><list>
+                            <item>low: no reprints at all,</item>
+                            <item>medium: reprinted once,</item>
+                            <item>high: reprinted more than once,</item>
                             <item>We will not include digitizations of texts in the reprint
                                 count.</item>
                         </list></item>
@@ -231,8 +246,8 @@
                         <p>We should try to include a variety of lengths</p>
                         <list>
                             <item>short (10k-50k word tokens) </item>
-                            <item>medium (50k-200k word tokens)</item>
-                            <item>long (>200k word tokens)</item>
+                            <item>medium (50k-100k word tokens)</item>
+                            <item>long (>100k word tokens)</item>
                         </list></item>
 
                     <label>Kind of novel</label>
@@ -240,34 +255,36 @@
                         <p>It is an open issue how to classify novels by topic. We are not sure how
                             to use this as a sampling criterion. Instead we add metadata about their
                             subgenre.</p>
-                        <list>
-                            <item>Main theme </item>
-                        </list></item>
+                    </item>
+                    <label>Example</label>
+                    <item>
+                        <p>The following table suggests minimum and maximum numbers of titles to be
+                            selected for each criterion. For each language collection we collect 100
+                            different novels. In each date group, we will have 25 novels. In a
+                            language collection, we will have at least 30 novels for the category
+                            high reprints and 30 for the category low reprints. In a language
+                            collection, we will have at least 10 novels from female authors and 20
+                            novels per length category (long, medium short). </p>
+                        <table rend="rules">
+                            <row role="label">
+                                <cell>Language</cell>
+                                <cell>Date Group</cell>
+                                <cell>Reprint Category</cell>
+                                <cell>Author Category</cell>
+                                <cell>Length Category</cell>
+                            </row>
+                            <row>
+                                <cell>100</cell>
+                                <cell>25</cell>
+                                <cell>30</cell>
+                                <cell>10</cell>
+                                <cell>20</cell>
+                            </row>
+                        </table>
+                    </item>
                 </list>
-                <p>The following table suggests minimum and maximum numbers of titles to be selected
-                    for each criterion. For each language collection we collect 100 different
-                    novels. In each date group, we will have 25 novels. In a language collection, we
-                    will have at least 30 novels for the category high reprints and 30 for the
-                    category low reprints. In a language collection, we will have at least 10 novels
-                    from female authors and 20 novels per length category (long, medium short). </p>
-                <table rend="rules">
-                    <row role="label">
-                        <cell>Language</cell>
-                        <cell>Date Group</cell>
-                        <cell>Reprint Category</cell>
-                        <cell>Author Category</cell>
-                        <cell>Length Category</cell>
-                    </row>
-                    <row>
-                        <cell>100</cell>
-                        <cell>25</cell>
-                        <cell>30</cell>
-                        <cell>10</cell>
-                        <cell>20</cell>
-                    </row>
-                </table>
-
             </div>
+
             <div>
                 <head> Metadata for texts in ELTeC </head>
                 <p>We list here the metadata items to be collected for each text. These will be
@@ -320,43 +337,6 @@
                     <item>Source reference (if available)<list type="unordered">
                             <item>e.g. DTA, textgrid etc.</item>
                         </list></item>
-                </list>
-            </div>
-            <div>
-                <head>6. First use cases (WG 1)</head>
-                <list>
-                    <item>DS: intertextuality : how literary works are mentioned </item>
-                    <item>FJ: character constellations : network measures </item>
-                    <item>CS: MoU says "authorship attribution, topic modelling, character network
-                        analysis, stylistic analysis" </item>
-                    <item>DS: What kinds of places/names of places are described in different
-                        novels</item>
-                    <item>LB: structural properties, formal organization</item>
-                    <item>DS: description of characters; types of characters; readers as
-                        characters</item>
-                    <item>JR: do stylometric authorship attribution methods work in all languages in
-                        same way</item>
-                    <item>?: what do people eat</item>
-                    <item>B: location, places where stories take part. morpho-syntax, readability;
-                        e.g. words/sentence</item>
-                    <item>BN: how about metaphors</item>
-                    <item>FJ: narratalogical features direct speech</item>
-                    <item>DS: presentation of other European cultures</item>
-                    <item>BN: sentiment analysis</item>
-                    <item>LB: bibliometric aspects: book history</item>
-                    <item>CO: diachronic development; publication place; gender</item>
-                    <item>DS: addressing forms</item>
-                    <item>G: Evolution and validation of literary movements; empirical
-                        definition</item>
-                    <item>BN: temporal expressions</item>
-                    <item>FJ: all of the above in a comparative perspective varying by e.g.
-                        male/female, date, place</item>
-                    <item>CS: subgenres?</item>
-                    <item>P: Rate and measurability of change; how innovation spreads; both in topic
-                        and mode of expression </item>
-                    <item>JS: Character idiolects ; places</item>
-                    <item>evolution of wordsenses over time</item>
-                    <item>local coherence; cohesiveness; evolution of realism into modernism</item>
                 </list>
             </div>
             <div>
