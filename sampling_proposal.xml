@@ -139,7 +139,7 @@
             </div>
             <div>
                 <head> Sampling criteria </head>
-                <p>For creating a langauge collection two steps have to be done: First step is
+                <p>For creating a language collection two steps have to be done: First step is
                     selection: identifying text candidates. Second step is balancing: proportion
                     within the corpus. Both steps are defined in this document.</p>
                 <p>Principles:</p>
@@ -183,7 +183,7 @@
                 <list>
                     <item>at least 10%-50% have been written by female authors for the language
                         subcollection.</item>
-                    <item>at least 10 authors are represented with three novels.</item>
+                    <item>9 to 11 authors are represented with exact three novels.</item>
                     <item>at least 30% are highly canonized novels, at least 30% should be
                         non-canonized novels, based on the following reprint groups: reprinted not
                         at all, reprinted once, reprinted more than once within the period
