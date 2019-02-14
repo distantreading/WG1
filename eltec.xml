@@ -45,7 +45,7 @@
                     <moduleRef key="tei"/>
                     <moduleRef key="core"
                         include="author bibl choice corr orig date emph foreign gap head hi item l label lg list measure
-            milestone name note p pb publisher pubPlace quote ref relatedItem resp respStmt sp stage hi term title "/>
+            milestone name note p pb publisher pubPlace quote ref relatedItem resp respStmt rs sp stage hi term title "/>
                     <moduleRef key="textstructure" include="TEI text div body front back trailer"/>
                     <moduleRef key="header"
                         include="change  encodingDesc 
@@ -53,6 +53,7 @@
             profileDesc publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
                     <moduleRef key="namesdates" include="affiliation forename  persName  surname"/>
                     <moduleRef key="corpus" include="textDesc"/>
+                    <moduleRef key="analysis" include="s w"/>
                     <!--Class modifications to reduce attribute clutter -->
                     <!-- first remove classes which provide attributes we dont want -->
                     <classSpec ident="att.ascribed" type="atts" mode="delete"/>
@@ -517,11 +518,11 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>If a page break interrupts a word the word fragments may be
+                            <p>If a page break interrupts a word the word fragments should be
                                 reassembled following it. <graphic url="media/inWordpb.png"/></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <p>My own relations too were nobly generous and by their kindness I
-                                    have been <pb n="100"/> established in this shop, and for thre
+                                    have been <pb n="100"/> established in this shop, and for the
                                     last year have carried on this little business.... </p>
                             </egXML>
                         </exemplum>
