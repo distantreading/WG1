@@ -236,7 +236,7 @@
                                         <desc>more than 100,000 words</desc>
                                     </valItem>
                                     <valItem ident="medium">
-                                        <desc>50,001 to 100,000 words</desc>
+                                        <desc>50,000 to 100,000 words</desc>
                                     </valItem>
                                     <valItem ident="short">
                                         <desc>10,000 to 50,000 words</desc>
@@ -338,7 +338,7 @@
                                 <textNode/>
                                 <elementRef key="date"/>
                                 <elementRef key="idno"/>
-                                <!-- idno is used to indicate VIAF or other external id for an author -->
+                              <!--   idno is used to indicate VIAF or other external id for an author -->
                             </alternate>
                         </content>
                         
@@ -461,7 +461,7 @@
                                 standardized format (surname, forename/s, dates) as shown in this
                                 example.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
-                                <author>Forster, Edward Morgan (1879-1970)</author>
+                                <author ref="viaf:31996364">Forster, Edward Morgan (1879-1970)</author>
                             </egXML>
                         </exemplum>
                         <exemplum xml:lang="en">
@@ -484,9 +484,9 @@
                             </egXML>
                         </exemplum>
                         <remarks>
-                            <p>One or more <gi>idno</gi> elements may be included to supply
-                                externally defined identifiers for the author, for example by
-                                referring to an authority file such as VIAF.</p>
+                            <p>The <att>ref</att> attribute should be used to reference one or more
+                                externally defined identifiers for the author, as defined by an
+                                authority file such as VIAF.</p>
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="pb" mode="change">
