@@ -49,8 +49,8 @@
             milestone name note p pb publisher pubPlace quote ref relatedItem resp respStmt rs sp stage hi term title "/>
                     <moduleRef key="textstructure" include="TEI text div body front back trailer"/>
                     <moduleRef key="header"
-                        include="availability change  encodingDesc 
-    extent fileDesc idno keywords langUsage language licence  
+                        include="change  encodingDesc 
+    extent fileDesc idno keywords langUsage language  
             profileDesc publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
                     <moduleRef key="namesdates" include="affiliation forename  persName  surname"/>
                     <moduleRef key="corpus" include="textDesc"/>
@@ -473,9 +473,9 @@
                             <classRef key="model.profileDescPart" expand="sequence"/>
                         </content>
                         <exemplum>
-                            <p>describes the profil of the French novel including the language and the
-                                balancing criteria gender of the author, size, lenght and reprint
-                                count</p>
+                            <p>describes the profil of the French novel including the language and
+                                the balancing criteria gender of the author, size, lenght and
+                                reprint count</p>
                             <!-- CO ex added -->
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
@@ -492,9 +492,9 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>describes the profil of the German novel including the language and the
-                                balancing criteria gender of the author, size, lenght and reprint
-                                count</p>
+                            <p>describes the profil of the German novel including the language and
+                                the balancing criteria gender of the author, size, lenght and
+                                reprint count</p>
                             <!-- CO ex added -->
 
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -525,9 +525,9 @@
                     <elementSpec ident="titleStmt" mode="change">
                         <exemplum>
                             <!-- CO ex added -->
-                            <!-- LB these are examples for titleStmt, not for author -->
-                            <p>English Example for titleStmt including <gi>title</gi> and
-                                <gi>author</gi>. <gi>auhtor</gi> got a viaf reference.</p>
+                            <p>describes an English example for titleStmt including <gi>title</gi>
+                                and <gi>author</gi>, <gi>author</gi> gets an optinal viaf
+                                reference</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title>Silas Marner: The Weaver of Raveloe : ELTec
@@ -541,9 +541,9 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <!-- CO ex and remarks added -->
-                            <p>Spanish Example for titleStmt including <gi>title</gi> and
-                                <gi>author</gi> both having viaf references.</p>
+                            <!-- CO ex added -->
+                            <p>describes a Spanish example for titleStmt including <gi>title</gi>
+                                and <gi>author</gi> both having optional viaf references.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title ref="viaf:194763311">El Señor de Bembibre : edición
@@ -570,7 +570,15 @@
                         <content>
                             <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
-
+                        <exemplum>
+                            <p>provides different measurements for lenght </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <extent>
+                                    <measure unit="words"><!-- ... --></measure>
+                                    <measure unit="pages"><!-- ... --></measure>
+                                </extent>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="measure" mode="change">
                         <classes mode="change">
@@ -597,8 +605,8 @@
                         </attList>
                         <exemplum>
                             <!-- CO ex added  -->
-                            <p>This example shows two measurements for <gi>extent</gi>: the number
-                                of words and the number of pages.</p>
+                            <p>describes two measurements for <gi>extent</gi>: the number of words
+                                and the number of pages</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <extent>
                                     <measure unit="words">71043</measure>
@@ -606,16 +614,11 @@
                                 </extent>
                             </egXML>
                         </exemplum>
-                        <!-- <remarks><p>If you do not have any information about the number of volumes or
-         pages, omit this information completely. The words are
-         mandatory.</p>-->
-                        <!-- not clear which words! -->
                         <remarks>
                             <p>An indication of the number of words is mandatory. Indicating the
                                 number of pages is optional: if this figure is not available do not
                                 provide any <tag>measure unit='pages'</tag> element. </p>
                         </remarks>
-                        <!--</remarks>-->
                     </elementSpec>
                     <!-- require a date on change -->
                     <elementSpec ident="change" mode="change">
@@ -650,8 +653,8 @@
                     </elementSpec>
                     <!-- adding better examples -->
                     <!-- CO changed example -->
-                    <!--   <p>A French example of how to fill in the necessary metadata in the
-         <gi>teiHeader</gi>.</p>-->
+                    <p>provides a French example of how to fill in the necessary metadata in the
+                            <gi>teiHeader</gi></p>
                     <elementSpec ident="TEI" mode="change">
                         <exemplum xml:lang="en">
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
