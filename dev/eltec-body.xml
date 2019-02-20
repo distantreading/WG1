@@ -1,7 +1,7 @@
 
 <body xmlns="http://www.tei-c.org/ns/1.0" xmlns:e="http://distantreading.net/eltec/ns">
    <p>This reference document describes the European Literary Text
-      Collection (ELTeC) which will be a major deliverable of COST Action 16204, <title>Distant
+      Collection (ELTeC), a major deliverable of COST Action 16204, <title>Distant
          Reading</title>. The ELTeC is a principled collection of literary text corpora, uniformly
       encoded in TEI XML, and representing
       the production of novels in different European languages for the period 1840 to 1920. The
@@ -12,8 +12,8 @@
       metadata of the
       collection.  All texts included in the ELTeC conform to the schema
       described by this document. </p>
-  <div>
-         <head>Task</head>
+ <div><head>Corpus Design</head> <div>
+         <head>Principles and sampling method</head>
          <p>The task for WG1 is to develop guidelines for data and metadata for the creation of the
             ELTeC. This task can be split up into several distinct tasks: Guidelines for corpus
             design, basic annotation and metadata schemes and workflow. This discussion paper
@@ -37,10 +37,9 @@
             ‘novel’ (or its equivalent) in the title or subtitle of the text ) and c) contextual:
             the text is bibliographically listed with the UDC: 82-31 Novels. Full-length
             stories.</p>
-      </div>
-      <div>
-         <head>Method</head>
-         <p>We follow a non-normative but metadata-based approach of sampling criteria which will
+     
+   <!--      <head>Method</head>
+   -->      <p>We follow a non-normative but metadata-based approach of sampling criteria which will
             follow a corpus design approach. Corpus sampling criteria are mostly oriented/developed
             by the research question or/and contexts of the corpus creators group. In CA16204, we
             have neither only a single research question nor a fixed and previously known corpus
@@ -198,7 +197,8 @@
                   <item>long (>100k word tokens)</item>
                </list></item>
          </list>
-      </div>
+      </div></div>
+   <div><head>Corpus Encoding</head>
    <div>
       <head>Encoding Principles</head>
       <p>The MoU for the project notes that <q>Distant Reading methods cover a wide range of
@@ -452,7 +452,8 @@
          the transcription. Where however the original itself is faulty, however, and the
          transcriber (or a textual editor) has corrected it, the correction should be signalled by
          using the <gi>corr</gi> element available at level one. </p>
-   </div>
+   </div><div><head>Transcription Guidelines (level 2)</head>
+   <p>In preparation</p></div>
    <div>
 
       <head>TEI Elements and textual features</head>
@@ -580,7 +581,7 @@
 
    </div>
 
-
+</div><div><head>Corpus Metadata</head>
 
    <div xml:id="hdr">
       <head>Metadata in the TEI Header</head>
@@ -812,5 +813,6 @@
             </egXML></p>
       </div>
    </div>
+</div>
 
 </body>

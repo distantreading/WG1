@@ -31,7 +31,7 @@
         </revisionDesc>
     </teiHeader>
     <text>
-        <xi:include href="../eltec-body.xml"/>
+        <xi:include href="eltec-body.xml"/>
         <back>
             <div>
                 <head>Full formal specifications</head>
@@ -653,9 +653,9 @@
                     </elementSpec>
                     <!-- adding better examples -->
                     <!-- CO changed example -->
-                    <p>provides a French example of how to fill in the necessary metadata in the
+                  <!--  <p>provides a French example of how to fill in the necessary metadata in the
                             <gi>teiHeader</gi></p>
-                    <elementSpec ident="TEI" mode="change">
+                -->    <elementSpec ident="TEI" mode="change">
                         <exemplum xml:lang="en">
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <TEI xml:id="FR0570" xml:lang="fr">
