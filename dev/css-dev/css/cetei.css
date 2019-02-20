@@ -32,10 +32,10 @@ tei-filedesc>tei-publicationstmt {
   font-size: 11pt;
 }
 tei-teiheader tei-sourcedesc {
-  display: none;
+  display: block;
 }
 tei-teiheader>tei-revisiondesc {
-  display: none;
+  display: block;
 }
 tei-body {
   display: block;
