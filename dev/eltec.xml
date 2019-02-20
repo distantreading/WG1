@@ -52,7 +52,7 @@
                         include="change  encodingDesc 
     extent fileDesc idno keywords langUsage language  
             profileDesc publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
-                    <moduleRef key="namesdates" include="affiliation forename  persName  surname"/>
+                    <moduleRef key="namesdates" include="forename  persName  surname"/>
                     <moduleRef key="corpus" include="textDesc"/>
                     <moduleRef key="analysis" include="s w"/>
                     <!--Class modifications to reduce attribute clutter -->
@@ -223,7 +223,28 @@
                             </attDef>
                         </attList>
                         <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples"> ....tba </egXML>
+                            <p>shows a full source description with a digital source which
+                                represents the first edition</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <sourceDesc>
+                                    <bibl type="digitalSource">
+                                        <title>Wuthering Heights (1st edition) : wikisource
+                                            edition</title>
+                                        <ref
+                                            target="https://en.wikisource.org/wiki/Wuthering_Heights_(1st_edition)"/>
+
+                                        <relatedItem type="firstEdition">
+                                            <bibl>
+                                                <title>Wuthering Heights</title>
+                                                <title>A novel by</title>
+                                                <author>Ellis Bell</author>
+                                                <publisher>London: T. C. Newby</publisher>
+                                                <date>1847</date>
+                                            </bibl>
+                                        </relatedItem>
+                                    </bibl>
+                                </sourceDesc>
+                            </egXML>
                         </exemplum>
                     </elementSpec>
 
@@ -653,9 +674,10 @@
                     </elementSpec>
                     <!-- adding better examples -->
                     <!-- CO changed example -->
-                  <!--  <p>provides a French example of how to fill in the necessary metadata in the
+                    <!--  <p>provides a French example of how to fill in the necessary metadata in the
                             <gi>teiHeader</gi></p>
-                -->    <elementSpec ident="TEI" mode="change">
+                -->
+                    <elementSpec ident="TEI" mode="change">
                         <exemplum xml:lang="en">
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <TEI xml:id="FR0570" xml:lang="fr">
