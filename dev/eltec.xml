@@ -31,7 +31,13 @@
         </revisionDesc>
     </teiHeader>
     <text>
-        <xi:include href="eltec-body.xml"/>
+  <!--      <xi:include href="eltec-body.xml"/>-->
+        <body><p>Template document for creating the ELTeC Library</p></body>
+        <!-- transform this document using  the stylesheet in 
+            ${frameworks}/tei/xml/tei/stylesheet/odds/odd2odd.xsl
+            with parameter defaultSource set to  ${frameworks}/tei/xml/tei/odd/p5subset.xml
+            and send output to eltec-library.xml 
+            -->
         <back>
             <div>
                 <head>Full formal specifications</head>
