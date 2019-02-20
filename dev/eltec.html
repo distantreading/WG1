@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Encoding Guidelines for the ELTeC (all levels)</title><meta name="author" content="Cost Action CA16204 – WG1" /><meta name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets" /><meta name="DC.Title" content="Encoding Guidelines for the ELTeC (all levels)" /><meta name="DC.Type" content="Text" /><meta name="DC.Format" content="text/html" /><link href="http://www.tei-c.org/release/xml/tei/stylesheet/tei.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" media="print" type="text/css" href="http://www.tei-c.org/release/xml/tei/stylesheet/tei-print.css" /></head><body class="simple" id="TOP"><div class="stdheader"><h2 class="institution">A TEI Project</h2><h1 class="maintitle">Encoding Guidelines for the ELTeC (all levels)</h1></div><h2>Table of contents</h2><ul class="toc toc_body"><li class="toc"><span class="headingNumber">1. </span><a href="#index.xml-body.1_div.1" class="toc toc_0">Principles</a></li><li class="toc"><span class="headingNumber">2. </span><a href="#index.xml-body.1_div.2" class="toc toc_0">Basic Transcription Guidelines (all levels) </a></li><li class="toc"><span class="headingNumber">3. </span><a href="#index.xml-body.1_div.3" class="toc toc_0">Transcription Guidelines (level 1)</a></li><li class="toc"><span class="headingNumber">4. </span><a href="#index.xml-body.1_div.4" class="toc toc_0">TEI Elements and textual features</a></li><li class="toc"><span class="headingNumber">5. </span><a href="#hdr" class="toc toc_0" title="Metadata in the TEI Header">Metadata in the TEI Header</a><ul class="toc"><li class="toc"><span class="headingNumber">5.1. </span><a href="#index.xml-body.1_div.5_div.1" class="toc toc_1">The file description (fileDesc) </a><ul class="toc"><li class="toc"><span class="headingNumber">5.1.1. </span><a href="#index.xml-body.1_div.5_div.1_div.1" class="toc toc_2">The title statement (titleStmt)</a></li><li class="toc"><span class="headingNumber">5.1.2. </span><a href="#index.xml-body.1_div.5_div.1_div.2" class="toc toc_2">The extent statement (extent)</a></li><li class="toc"><span class="headingNumber">5.1.3. </span><a href="#index.xml-body.1_div.5_div.1_div.3" class="toc toc_2">The publication statement (publicationStmt)</a></li><li class="toc"><span class="headingNumber">5.1.4. </span><a href="#index.xml-body.1_div.5_div.1_div.4" class="toc toc_2">The source description (sourceDesc)</a></li></ul></li><li class="toc"><span class="headingNumber">5.2. </span><a href="#index.xml-body.1_div.5_div.2" class="toc toc_1">The profile description (profileDesc)</a></li><li class="toc"><span class="headingNumber">5.3. </span><a href="#index.xml-body.1_div.5_div.3" class="toc toc_1">The revision description (revisionDesc) </a></li></ul></li></ul><ul class="toc toc_back"><li class="toc"><a href="#index.xml-back.1_div.1" class="toc toc_0">Full formal specifications</a></li></ul>
+   <p>This reference document defines the encoding scheme to be used for the European Literary Text
+      Collection (ELTeC) which will be a major deliverable of COST Action 16204, <span class="titlem">Distant
+         Reading</span>. All texts included in the ELTeC should be conformant to the schema
+      described by this document. </p>
+   <div class="teidiv0" id="index.xml-body.1_div.1"><h2><span class="headingNumber">1. </span><span class="head">Principles</span></h2>
+      
+      <div class="p">The MoU for the project notes that ‘Distant Reading methods cover a wide range of
+            computational methods for literary text analysis, such as authorship attribution, topic
+            modelling, character network analysis, or stylistic analysis.’ The focus of the ELTeC
+         encoding scheme is therefore not to represent texts in all their original complexity of
+         structure or appearance, but rather to facilitate a richer and better-informed distant
+         reading than a transcription of lexical content alone would permit. In designing this
+         encoding scheme, we have applied the following principles: <ul><li class="item">There should be a guaranteed minimum level of encoding for all texts in the
+               ELTeC.</li><li class="item">The encoding should reflect the analytic needs of ‘distant
+                  reading’, rather than those of the digital editor.</li><li class="item">At the same time, the encoding should not misrepresent the text as originally
+               created and received.</li><li class="item">The encoding must be easy to apply in a consistent way, starting from both basic
+               OCR and pre-existing digital versions.</li></ul> The goal is not to duplicate the work of scholarly editors or to produce (yet
+         another) digital edition of a specific source document. Rather it is to ensure that the
+         ELTeC texts can be processed satisfactorily, even by simple minded (but XML-aware) systems
+         primarily concerned with lexis, and to make life easier for the developers of such systems. </div>
+
+      <p>In selecting features for inclusion in the markup scheme, we have been guided, but not
+         limited, by existing practice as far as possible. Our main goal has been to identify a
+         small core set of textual features which can be readily (preferably automatically)
+         identified in existing digital transcriptions, or easily and consistently provided by new
+         transcriptions. </p>
+
+      <p>We distinguish three ‘levels’ of encoding, referred to below as level
+         zero, level one and level two. All ELTeC texts are made available at level zero, the basic
+         encoding format. Some texts may additionally be made available at levels one or two, which
+         provide a richer set of encoded features. For example: a level one text will include
+         semantic information missing from a level zero text; a level two text will include
+         tokenization information missing from a level one text. As far as possible conversion
+         between levels will be automatically scripted, but this is not possible in the general
+         case. </p>
+      <p>This document lists all the textual features which are to be distinguished in an ELTeC
+         conformant transcription at one of these three levels. Whenever a given feature exists in a
+         text, it will be marked up as indicated here. No other features will be captured by the
+         markup: if some textual feature not provided for here is identified by a marked up source
+         text, that markup will be removed (though it may be retained in a version of the text
+         encoded at a different level). </p>
+
+      <p>All ELTeC documents are TEI conformant, and therefore include a TEI Header, as discussed in
+         section <a href="#hdr" class="link_ptr" title="Metadata in the TEI Header"><span class="headingNumber">5. </span>Metadata in the TEI Header</a> below.</p>
+
+
+   </div>
+   <div class="teidiv0" id="index.xml-body.1_div.2"><h2><span class="headingNumber">2. </span><span class="head">Basic Transcription Guidelines (all levels) </span></h2>
+      
+      <p>The basic unit of the ELTeC collection is a single novel, represented by a single
+            <span class="gi">&lt;TEI&gt;</span> element, consisting of a <span class="gi">&lt;teiHeader&gt;</span> element containing metadata
+         specific to that novel and a <span class="gi">&lt;text&gt;</span> element containing a normalised transcription of
+         the text itself. We propose no mechanism (other than metadata) to encode units larger than
+         a single novel, such as multipart novel series like Proust's <span class="titlem">A la recherche du temps
+            perdu</span> or Balzac's <span class="titlem">Les Rougon-Macquart</span>. Each text should be
+         transcribed in full from a specific identifiable edition, typically the first, and the
+         source documented in the TEI Header. The original spelling and punctuation of the source
+         should be retained, but details of typography are not required: hence words hyphenated
+         across line or page breaks should be silently reassembled. </p>
+      
+      <p>To facilitate checking of a transcription against its source during production, the
+            <span class="gi">&lt;pb&gt;</span> element may be provided to mark the point in a transcription where a new
+         page begins in the source. An identifier for each <span class="gi">&lt;pb&gt;</span> element may be provided in a
+         level 1 text to facilitate linkage to a page image of the corresponding source page, but is
+         not required in a level 0 text. </p>
+      <p>Running titles, page footers, catchwords and other forms of printed paratext are all
+         omitted from an ELTeC transcription, with the exception of a page number, which should be
+         supplied as value of the <span class="gi"><b>@n</b></span> attribute. Note that this attribute supplies the page
+         number as specified by the source. If no page number is given, the value should be enclosed
+         in brackets. </p>
+      <p> If a page begins with the second part of a hyphenated word, the <span class="gi">&lt;pb&gt;</span> tag may appear
+         after that word in order to simplify lexical processing. Otherwise its position should be the
+         same in transcription and source. </p>
+      
+      <p>As well as a titlepage or a table of contents, a published novel often includes material
+         such as forewords or appendixes additional to the text of the novel itself. This
+            <span class="term">liminal</span> matter is included in an ELTeC text only if it is believed to be
+         authorial. Material before the body of the text begins is collected within a <span class="gi">&lt;front&gt;</span>
+         element, and material following the body in a <span class="gi">&lt;back&gt;</span> element. In either case,
+         distinct sections of the material, if encoded, are represented by a <span class="gi">&lt;div&gt;</span> with its
+            <span class="gi"><b>@type</b></span> attribute set to <code class="code">liminal</code>.</p>
+      <p>At level zero, titlepages and tables of contents are omitted. At level one, they are
+         replaced by a <span class="gi">&lt;gap&gt;</span> element. Non-authorial liminal material is silently omitted at
+         all levels. </p>
+      
+      <p>Within the body of a text, major structural divisions (parts, sections, chapters etc.) will
+         be captured using the generic <span class="gi">&lt;div&gt;</span> element, with attributes <span class="gi"><b>@type</b></span>,
+            <span class="gi"><b>@xml:lang</b></span>, <span class="gi"><b>@xml:id</b></span> and <span class="gi"><b>@n</b></span> used as further detailed
+         below.</p>
+      <p>The names used for hierarchic structural divisions of a novel above the chapter are
+         arbitrary, culture-specific, and often inconsistent : in some novels things called
+            ‘part’ contain things called ‘book’ and in others the reverse. We propose to
+         follow TEI in using a single element (<span class="gi">&lt;div&gt;</span>) for every hierarchical structural
+         division, down to the level of ‘chapter’.</p>
+      <div class="p">The <span class="gi"><b>@type</b></span> attribute is used to indicate the function of a structural division. It
+         should have one of the following values:
+        <dl><dt id="index.xml-item-d26e237"><span id="index.xml-label-d26e235">liminal</span></dt><dd>authorial preface, foreword, back matter, etc.</dd><dt id="index.xml-item-d26e242"><span id="index.xml-label-d26e240">titlepage</span></dt><dd>(within front or back) contains title page text: level 1 only</dd><dt id="index.xml-item-d26e247"><span id="index.xml-label-d26e245">notes</span></dt><dd>(within front or back) contains authorial notes : level 1 only</dd><dt id="index.xml-item-d26e253"><span id="index.xml-label-d26e250">part</span></dt><dd>any structural subdivision of a text larger than a chapter e.g. part, volume etc.</dd><dt id="index.xml-item-d26e258"><span id="index.xml-label-d26e256">chapter</span></dt><dd>smallest structural subdivision of the body of a text</dd></dl></div> 
+         <p>A short novel may have no subdivision at all, in which case the <span class="gi">&lt;div&gt;</span> element should not be used.
+            No further subdivisions within a div type='chapter' are permitted. If the text of a chapter is subdivided
+            in some way, for example by means of a number, a row of stars, a horizontal rule, or similar
+            device, this should be indicated in the markup by means of a <span class="gi">&lt;milestone&gt;</span> element. If a chapter
+            contains an embedded text of some kind, for example a quoted letter or other narrative, this should be
+            marked using the <span class="gi">&lt;quote&gt;</span> element. 
+            </p>
+      
+      <p>The (human) language in which a text is expressed is indicated explicitly by the
+            <span class="gi"><b>@xml:lang</b></span> attribute which supplies the ISO 641-2 letter code for the language
+         concerned. This attribute will always be supplied on the <span class="gi">&lt;text&gt;</span> element to specify a
+         default, and may also appear on other elements to indicate passages where the language
+         changes. The various different languages used in a given text will be itemized in its
+         metadata (see <span class="gi">&lt;langUsage&gt;</span> element in the header). </p>
+      <div class="p">A single reference scheme will be defined for the whole corpus, with the following
+         components: <ul><li class="item">text identifier : every text will have an identifier consisting of its three letter
+               language code in upper case and a five digit serial number, for example
+                  <code class="code">FRA00042</code></li><li class="item">chapter identifier: each chapter or equivalent will have an identifier
+               concatenating the text identifier and a three digit serial number, for example
+                  <code class="code">FR042012</code> is the twelfth chapter of the 42nd French novel. </li><li class="item">If sub-chapter segmentation is implemented, then the segments will append a
+               further four digit serial number.</li><li class="item">liminal divisions are not identified; the front element has an identifier
+               concatenating the text identifier and the value 000; the back element has an
+               identifier concatenating the text identifier and the value 999.</li></ul>The identifier will be supplied as the value of an <span class="gi"><b>@xml:id</b></span> attribute on
+         each <span class="gi">&lt;text&gt;</span>, <span class="gi">&lt;div&gt;</span>, front, back, or <span class="gi">&lt;s&gt;</span> element as appropriate. Adding
+         this identifier is an easily automated task built into the workflow for accession to the
+         ELTeC.</div>
+      <p>Note that these identifiers will not necessarily correspond with the numbering used in a
+         particular source text. In a work where the first twelve chapters are considered to form
+         part one, and the next twelve constitute part two, the first chapter of the second part
+         will have an identifier ending <code class="code">013</code>, even though it may be numbered
+            <code class="code">1</code> in a source text.</p>
+      <p>We do not preserve the lineation of running prose in our source texts, since this is always
+         purely an artefact of the source edition. For the same reason we reassemble words broken
+         across a line break, silently removing any hyphen present. (This will make it impossible to
+         use our texts for hyphenation studies. So be it.) </p>
+      <p>The title of a chapter, or of any other subdivision, as given in the source should be
+         encoded using the TEI <span class="gi">&lt;head&gt;</span> element. There may be more than one such element at the
+         start of a <span class="gi">&lt;div&gt;</span> element. Novels occasionally include other initial matter, such as
+         a quotation, or a summary of the content of the chapter; these are not specially treated in
+         ELTeC texts. </p>
+      <p>The chapters of a novel mostly consist of prose, arranged in paragraphs. It is not unusual
+         to find other structures however, specifically verse, or passages of dialogue presented as
+         if in a play, with speaker labels and even stage directions. Less frequently, novels may
+         contain material presented in list or tabular formats. Graphics with their own associated
+         heading or other text are also frequent. </p>
+      <p>Novels are also full of direct speech, represented using various different conventions, but
+         almost always distinguished from the narrative voice. The first person narrative is also
+         common, but may be regarded as a special case. How exactly different narrative strands are
+         articulated in a novel, and the extent to which they may be characterised by their lexis
+         has been a preoccupation of many ‘distant reading’ style analyses. Although it might
+         be helpful to distinguish material purporting to be direct speech from material purporting
+         to be narrative in our basic encoding, doing so consistently and accurately would be
+         problematic. ELTeC texts therefore do no more than preserve existing punctuation. The
+            <span class="gi">&lt;p&gt;</span> element is used for everything which is typeset as a separate block on the
+         page, including both paragraphs and list items; the <span class="gi">&lt;l &gt;</span>element is used for verse
+         lines or similar, typically set off from the rest of the text. Illustrations and any
+         associated text such as a title or heading are excluded. Passages set as if in drama are
+         not specially treated. </p>
+      <p>Printed texts typically deploy a number of conventions which can cause problems for
+         linguistic analyses of even the most basic kind. Changes of font or style (italicization or
+         use of superscript, for example) usually signal something, which an analysis should take
+         into account. However, determining the function of such typographic variation is not always
+         straightforward. ELTeC texts (at level 0) therefore simply indicate the presence of
+         typographic salience, using the <span class="gi">&lt;hi&gt;</span> element.</p>
+   </div>
+   <div class="teidiv0" id="index.xml-body.1_div.3"><h2><span class="headingNumber">3. </span><span class="head">Transcription Guidelines (level 1)</span></h2>
+      
+      <p>ELTeC encoding at level zero aims above all for consistency and transparency in what is
+         reliably achievable, leaving most problematic issues to be addressed by linguistic
+         annotation. </p>
+      <p>If however a text has been derived from a digital version in which a more ambitious range
+         of textual features has already been captured, whether by means of TEI-style markup or
+         styling information such as that provided by Word, or if there are sufficient resources
+         available to provide a slightly reacher encoded version, a novel may be encoded at ELTeC
+         level 1, using additional elements discussed in this section. Note that a level one text
+         can always automatically be converted to a level zero text, if this is necessary for
+         compatibility or for some other reason. (A script to do this is available <a class="link_ref" href="https://distantreading.github.io/Scripts/detagger.xsl">on the project
+            website</a>) The reverse conversion, from level zero to level one, requires human
+         intervention. </p>
+      <p>At level 1, the element <span class="gi">&lt;gap&gt;</span> should be used to indicate when something has been
+         omitted from the encoding. For example, a suppressed graphic, or foreword, which at level
+         zero are silently omitted, should be represented at level 1 by an explicit <span class="gi">&lt;gap&gt;</span> element, with
+         attributes indicating what has been omitted from the encoding.</p>
+      <div class="p">At level 1, the following additional elements can be used to mark up the significance of
+         some stretch of text which would otherwise simply be marked as typographically salient
+         using <span class="gi">&lt;hi&gt;</span>: <dl><dt id="index.xml-item-d26e404"><span id="index.xml-label-d26e400"><span class="gi">&lt;foreign&gt;</span></span></dt><dd>a word or phrase in a foreign language</dd><dt id="index.xml-item-d26e412"><span id="index.xml-label-d26e407">
+               <span class="gi">&lt;title&gt;</span></span></dt><dd>the title of a book, piece of music, etc.</dd><dt id="index.xml-item-d26e421"><span id="index.xml-label-d26e415">
+               <span class="gi">&lt;label&gt;</span></span></dt><dd>any form of heading or label found within a paragraph of text</dd><dt id="index.xml-item-d26e428"><span id="index.xml-label-d26e424"><span class="gi">&lt;emph&gt;</span></span></dt><dd>a word or phrase being linguistically emphasized e.g. by being shouted</dd></dl> The <span class="gi">&lt;hi&gt;</span> is also sometimes used for indications of superscript characters
+         (such as French ‘14ᵉ’); these should simply be removed.
+         
+      </div>
+      <p>When a sequence of verse lines, or a passage from some other narrative level such as a
+         letter is quoted within a text, the <span class="gi">&lt;l&gt;</span> or <span class="gi">&lt;p&gt;</span> elements representing it
+         should be wrapped in the <span class="gi">&lt;quote&gt;</span> element made available by the ELTeC level one
+         schema.</p>
+      <p>It is not unusual to find special devices such as a row of stars or a rule in the middle of
+         a chapter, usually indicating a discontinuity in the narrative timeline, or structural
+         shift. Such indications may be simply ignored in an ELTeC level zero text, or the
+         special purpose <span class="gi">&lt;milestone&gt;</span> element may be used to mark their presence; at level 1
+         they should be retained.</p>
+      <p>Level 1 texts may also represent authorial notes, if these are present, using the element
+            <span class="gi">&lt;note&gt;</span> to contain the body of the note, and the element <span class="gi">&lt;ref&gt;</span> to represent
+         the point of attachment for the note. Wherever they appear in the text, notes are always
+         separated from it and encoded in a separate <span class="gi">&lt;div&gt;</span> element within the <span class="gi">&lt;back&gt;</span>
+         element. See examples. </p>
+      <p>Occasionally, the text being transcribed contains self-evident errors. Where these are
+         caused by the encoding process (e.g. an OCR error), these are always silently corrected in
+         the transcription. Where however the original itself is faulty, however, and the
+         transcriber (or a textual editor) has corrected it, the correction should be signalled by
+         using the <span class="gi">&lt;corr&gt;</span> element available at level one. </p>
+   </div>
+   <div class="teidiv0" id="index.xml-body.1_div.4"><h2><span class="headingNumber">4. </span><span class="head">TEI Elements and textual features</span></h2>
+
+      
+      <div class="p">The following summary table lists the textual features which every ELTeC text must capture,
+         together with an indication of how that feature should be represented. 
+      <div class="table"><table class="table"><tr class="label">
+            <td valign="top">Textual Feature</td>
+            <td valign="top">Encoding</td>
+            <td valign="top">Note</td>
+         </tr><tr>
+            <td valign="top">Page break</td>
+            <td valign="top">pb/</td>
+            <td valign="top"><span class="gi"><b>@n</b></span> attribute gives attested number of page; optional at level 0</td>
+         </tr><tr>
+            <td valign="top">Title page</td>
+            <td valign="top">div type="liminal" within <span class="gi">&lt;front&gt;</span></td>
+            <td valign="top">Optional at level 0</td>
+         </tr><tr>
+            <td valign="top">Authorial preface, foreword, appendix, etc</td>
+            <td valign="top">div type="liminal" within <span class="gi">&lt;front&gt;</span> or <span class="gi">&lt;back&gt;</span> as
+               appropriate</td>
+            <td valign="top">Non-authorial matter is silently omitted</td>
+         </tr><tr>
+            <td valign="top">volume, chapter etc.</td>
+            <td valign="top"><span class="gi">&lt;div&gt;</span> nested as necessary within <span class="gi">&lt;body&gt;</span></td>
+            <td valign="top"><span class="gi"><b>@type</b></span> may be chapter, or group (for anything else); <span class="gi"><b>@n</b></span>
+               may indicate original numbering</td>
+         </tr><tr>
+            <td valign="top">Heading or title</td>
+            <td valign="top"><span class="gi">&lt;head&gt;</span> at start of <span class="gi">&lt;div&gt;</span>; <span class="gi">&lt;trailer&gt;</span> at end</td>
+            <td valign="top"></td>
+         </tr><tr>
+            <td valign="top">Running title/page footer </td>
+            <td valign="top">Omitted</td>
+            <td valign="top">Page number only may be included in <span class="gi">&lt;pb&gt;</span></td>
+         </tr><tr>
+            <td valign="top">Mid-chapter structural marker</td>
+             <td valign="top">milestone/</td>
+            <td valign="top">use <span class="gi"><b>@type</b></span> to indicate type of structural marker; optional at level
+               0</td>
+         </tr><tr>
+            <td valign="top">Prose paragraph or list item</td>
+            <td valign="top"><span class="gi">&lt;p&gt;</span></td>
+            <td valign="top">Discard any formatting information</td>
+         </tr><tr>
+            <td valign="top">Verse line</td>
+            <td valign="top"><span class="gi">&lt;l&gt;</span>?</td>
+            <td valign="top">Use only for verse lines in display blocks</td>
+         </tr></table></div></div>
+      <div class="p">Other textual features are treated differently at different encoding levels. They are listed
+         in the following table: <div class="table"><table class="table"><tr class="label">
+               <td valign="top">Textual Feature</td>
+               <td valign="top">Level 0 Encoding</td>
+               <td valign="top">Level 1 Encoding</td>
+               <td valign="top">Note</td>
+            </tr><tr>
+               <td valign="top">Table of contents, errata list, other liminal matter</td>
+               <td valign="top">omitted</td>
+               <td valign="top"><span class="gi">&lt;gap&gt;</span></td>
+               <td valign="top">use <span class="gi"><b>@unit</b></span> and <span class="gi"><b>@quantity</b></span> to specify what has been omitted</td>
+            </tr><tr>
+               <td valign="top">Authorial footnote</td>
+               <td valign="top">omitted</td>
+               <td valign="top">transcribe text of note text within a <span class="gi">&lt;note&gt;</span> within div
+                     type="notes" inside <span class="gi">&lt;back&gt;</span>; mark point of attachment with a
+                     <span class="gi">&lt;ref&gt;</span></td>
+               <td valign="top">use <span class="gi"><b>@target</b></span> on <span class="gi">&lt;ref&gt;</span> to point to <span class="gi">&lt;note&gt;</span></td>
+            </tr><tr>
+               <td valign="top">Font change</td>
+               <td valign="top">Mark with <span class="gi">&lt;hi&gt;</span> (no attributes)</td>
+               <td valign="top">Replace with <span class="gi">&lt;foreign&gt;</span>, <span class="gi">&lt;title&gt;</span>, 
+                  <span class="gi">&lt;label&gt;</span>, <span class="gi">&lt;emph&gt;</span> as
+                  appropriate</td>
+
+               <td valign="top">Level 1 may use <span class="gi"><b>@rend</b></span> attribute with values ul ro sc it ? </td>
+            </tr><tr>
+               <td valign="top">Graphic or illustration</td>
+               <td valign="top">omitted</td>
+               <td valign="top">gap unit="graphic"</td>
+               <td valign="top"></td>
+            </tr><tr>
+               <td valign="top">Quotation or display block</td>
+               <td valign="top"><span class="gi">&lt;p&gt;</span> (or series of <span class="gi">&lt;l&gt;</span>)</td>
+               <td valign="top"><span class="gi">&lt;quote&gt;</span> containing one or more <span class="gi">&lt;p&gt;</span> or <span class="gi">&lt;l&gt;</span></td>
+               <td valign="top">?</td>
+            </tr><tr>
+               <td valign="top">Editorial correction</td>
+               <td valign="top">unmarked</td>
+               <td valign="top"><span class="gi">&lt;corr&gt;</span></td>
+               <td valign="top">Use when encoded text differs from printed original</td>
+            </tr></table></div>
+      </div>
+
+
+   </div>
+
+
+
+   <div class="teidiv0" id="hdr"><h2><span class="headingNumber">5. </span><span class="head">Metadata in the TEI Header</span></h2>
+      
+
+      <p>This section describes the metadata associated with each text (title, authorship, date
+         etc.) and with the collection as a whole. The intention is to provide this in a
+         standardised way to facilitate subsetting of the collection, using (for example) coded
+         values for the descriptive selection criteria associated with the text. As far as possible,
+         our text should represent the first complete printed edition of each novel selected. </p>
+      <p>The TEI Header provides a very large number of possibilities for encoding such metadata. We
+         will provide a checklist of the TEI Header elements which are always to be provided for
+         each text, possibly in the form of a template. As in the body of the text, the intention is
+         to provide a guaranteed minimal level of information, consistent across all parts of the
+         ELTeC. </p>
+      <p>Note that metadata may be supplied at (at least) two levels: the level of the ELTeC as a
+         whole, and that of individual texts within it. Information which applies uniformly to all
+         parts of the collection should be supplied in the ELTeC header; information specific to a
+         particular document in the text header. </p>
+
+      <p>Every ELTeC text includes a TEI Header supplying metadata to describe it. There is also a
+         TEI Header for the whole collection, which has additional information common to all the
+         texts. This section lists the header components which should be supplied for every text,
+         indicating briefly specific usage rules. </p>
+
+      <div class="p">Here is the basic template for an individual ELTeC header: <div id="index.xml-egXML-d26e847" class="pre egXML_valid"><span class="element">&lt;teiHeader type="<span class="attributevalue">novelHeader</span>"&gt;</span>
+ <span class="element">&lt;fileDesc&gt;</span>
+  <span class="element">&lt;titleStmt&gt;</span>
+   <span class="element">&lt;title&gt;</span>
+<span class="comment">&lt;!-- title of work --&gt;</span>
+   <span class="element">&lt;/title&gt;</span>
+   <span class="element">&lt;author&gt;</span>
+<span class="comment">&lt;!-- information about the author --&gt;</span>
+   <span class="element">&lt;/author&gt;</span>
+   <span class="element">&lt;respStmt&gt;</span>
+<span class="comment">&lt;!-- information about the encoder --&gt;</span>
+   <span class="element">&lt;/respStmt&gt;</span>
+  <span class="element">&lt;/titleStmt&gt;</span>
+  <span class="element">&lt;extent&gt;</span>
+<span class="comment">&lt;!-- size of the text, in pages and words --&gt;</span>
+  <span class="element">&lt;/extent&gt;</span>
+  <span class="element">&lt;publicationStmt&gt;</span>
+<span class="comment">&lt;!-- standard text about status as part of ELTeC --&gt;</span>
+  <span class="element">&lt;/publicationStmt&gt;</span>
+  <span class="element">&lt;sourceDesc&gt;</span>
+   <span class="element">&lt;bibl&gt;</span>
+<span class="comment">&lt;!-- bibliographic description of the printed source --&gt;</span>
+   <span class="element">&lt;/bibl&gt;</span>
+  <span class="element">&lt;/sourceDesc&gt;</span>
+ <span class="element">&lt;/fileDesc&gt;</span>
+ <span class="element">&lt;profileDesc&gt;</span>
+<span class="comment">&lt;!-- additional descriptive information, selection criteria, etc. --&gt;</span>
+ <span class="element">&lt;/profileDesc&gt;</span>
+ <span class="element">&lt;revisionDesc&gt;</span>
+<span class="comment">&lt;!-- revision information --&gt;</span>
+ <span class="element">&lt;/revisionDesc&gt;</span>
+<span class="element">&lt;/teiHeader&gt;</span></div></div>
+      <p> Each of the TEI elements shown above must be provided and used as described below. The
+         ELTeC schemas will reject as invalid a document in which these conventions are not
+         followed. </p>
+      <p> The natural language used for text in the Header should be that of the language collection
+         to which the text belongs, e.g. French if the text is in French. The attribute @xml:lang
+         may be supplied on any element to indicate its content is in some other language where
+         necessary. </p>
+      <div class="teidiv1" id="index.xml-body.1_div.5_div.1"><h3><span class="headingNumber">5.1. </span><span class="head">The file description (<span class="gi">&lt;fileDesc&gt;</span>) </span></h3>
+         
+         <div class="teidiv2" id="index.xml-body.1_div.5_div.1_div.1"><h4><span class="headingNumber">5.1.1. </span><span class="head">The title statement (<span class="gi">&lt;titleStmt&gt;</span>)</span></h4>
+            
+
+            <div class="p">This must supply : <ul><li class="item">at least one <span class="gi">&lt;title&gt;</span> element containing the standard title of the
+                     work, followed by the phrase "ELTeC edition" (or its equivalent in the
+                     appropriate language). Multiple title elements should be supplied only if the
+                     title has been translated into some other language. </li><li class="item">at least one <span class="gi">&lt;author&gt;</span> element containing the standard name of the
+                     author, in the form SURNAME, FORENAMES (BIRTHYEAR - DEATHYEAR). If either date
+                     is unknown, it should be replaced by a question-mark. The author name should be
+                     that under which the author is conventionally catalogued, not necessarily that
+                     found on the title page. </li><li class="item">at least one <span class="gi">&lt;respStmt&gt;</span> element containing one or more <span class="gi">&lt;name&gt;</span>
+                     elements and one or more <span class="gi">&lt;resp&gt;</span> elements indicating the person/s
+                     responsible for producing the ELTeC edition, and the nature of their
+                     responsibility respectively.</li></ul>
+            </div>
+            <div class="p">Here is a simple example, for a German text : <div id="index.xml-egXML-d26e923" class="pre egXML_valid"><span class="element">&lt;titleStmt&gt;</span>
+ <span class="element">&lt;title&gt;</span>Auf zwei Planeten : edizion ELTeC<span class="element">&lt;/title&gt;</span>
+ <span class="element">&lt;title xml:lang="<span class="attributevalue">en</span>"&gt;</span>Two planets<span class="element">&lt;/title&gt;</span>
+ <span class="element">&lt;author&gt;</span>Laßwitz, Kurd(1848-1910)<span class="element">&lt;/author&gt;</span>
+ <span class="element">&lt;respStmt&gt;</span>
+  <span class="element">&lt;resp&gt;</span>editor<span class="element">&lt;/resp&gt;</span>
+  <span class="element">&lt;name&gt;</span>Alexander Geyken<span class="element">&lt;/name&gt;</span>
+ <span class="element">&lt;/respStmt&gt;</span>
+<span class="element">&lt;/titleStmt&gt;</span></div>
+            </div>
+         </div>
+         <div class="teidiv2" id="index.xml-body.1_div.5_div.1_div.2"><h4><span class="headingNumber">5.1.2. </span><span class="head">The extent statement (<span class="gi">&lt;extent&gt;</span>)</span></h4>
+            
+
+            <div class="p">This must supply : <ul><li class="item">one or more <span class="gi">&lt;measure&gt;</span> elements, indicating the size of the text. The
+                     size must be given as numeric content, and the type of measurement must be
+                     either words or pages, as indicated by the @unit attribute. </li></ul> Here is a simple example, for a French text : </div>
+            <div id="index.xml-egXML-d26e959" class="pre egXML_valid"><span class="element">&lt;extent&gt;</span>
+ <span class="element">&lt;measure unit="<span class="attributevalue">words</span>"&gt;</span>12 000<span class="element">&lt;/measure&gt;</span>
+ <span class="element">&lt;measure unit="<span class="attributevalue">pages</span>"&gt;</span>256<span class="element">&lt;/measure&gt;</span>
+<span class="element">&lt;/extent&gt;</span></div>
+         <p>The page count may be derived from an external bibliographic source, and may not therefore
+         correspond with the actual number of <span class="gi">&lt;pb&gt;</span> elements in the transcription. If no page count
+         is available, no measure unit="pages" should be supplied. </p>
+         </div>
+         <div class="teidiv2" id="index.xml-body.1_div.5_div.1_div.3"><h4><span class="headingNumber">5.1.3. </span><span class="head">The publication statement (<span class="gi">&lt;publicationStmt&gt;</span>)</span></h4>
+            
+
+            <p>This must contain a single <span class="gi">&lt;p&gt;</span> element containing a fixed phrase such as
+                  ‘Incorporated into the ELTeC release 1.0’ (or its equivalent in the
+               appropriate language), followed by a date, tagged with the <span class="gi">&lt;date&gt;</span> element. </p>
+            <div class="p"> Here is a simple example, for an English text : <div id="index.xml-egXML-d26e998" class="pre egXML_valid"><span class="element">&lt;publicationStmt&gt;</span>
+ <span class="element">&lt;p&gt;</span>Incorporated into the ELTeC release 1.0 <span class="element">&lt;date&gt;</span>2018-02-12<span class="element">&lt;/date&gt;</span>
+ <span class="element">&lt;/p&gt;</span>
+<span class="element">&lt;/publicationStmt&gt;</span></div>
+            </div>
+         </div>
+         <div class="teidiv2" id="index.xml-body.1_div.5_div.1_div.4"><h4><span class="headingNumber">5.1.4. </span><span class="head">The source description (<span class="gi">&lt;sourceDesc&gt;</span>)</span></h4>
+            
+
+            <div class="p">This must contain at least one <span class="gi">&lt;bibl&gt;</span> element containing a bibliographic
+               description of the source text from which the ELTeC version has been derived. This
+               description might include any or all of the following standard TEI bibliographic
+               elements: <ul><li class="item"><span class="gi">&lt;author&gt;</span>, <span class="gi">&lt;title&gt;</span>, <span class="gi">&lt;pubPlace&gt;</span>, <span class="gi">&lt;publisher&gt;</span>,
+                        <span class="gi">&lt;date&gt;</span></li><li class="item">
+                     <span class="gi">&lt;idno&gt;</span> may be used if the source text has a standard identifier such as
+                     an ISBN or a library shelf mark</li><li class="item">
+                     <span class="gi">&lt;relatedItem&gt;</span> may be used to provide a bibliographic description of an
+                     intermediate source</li><li class="item">
+                     <span class="gi">&lt;ref&gt;</span> may be used to supply a URI if the source used is online </li></ul></div>
+            <div class="p">Here is a French example: <div id="index.xml-egXML-d26e1059" class="pre egXML_valid"><span class="element">&lt;sourceDesc&gt;</span>
+ <span class="element">&lt;bibl&gt;</span>
+  <span class="element">&lt;ref
+    target="<span class="attributevalue">http://gallica.bnf.fr/ark:/12148/bpt6k931128v</span>"&gt;</span> Tatiana Leïlof
+     roman parisien (édition numerisée) <span class="element">&lt;/ref&gt;</span>
+  <span class="element">&lt;publisher&gt;</span> gallica.bnf.fr / Bibliothèque nationale de France <span class="element">&lt;/publisher&gt;</span>
+  <span class="element">&lt;idno type="<span class="attributevalue">ARK</span>"&gt;</span>12148/bpt6k931128v<span class="element">&lt;/idno&gt;</span>
+  <span class="element">&lt;relatedItem type="<span class="attributevalue">copyText</span>"&gt;</span>
+   <span class="element">&lt;bibl&gt;</span>
+    <span class="element">&lt;title&gt;</span>Tatiana Leïlof , roman parisien, par Édouard Rod<span class="element">&lt;/title&gt;</span>
+    <span class="element">&lt;publisher&gt;</span>E. Plon, Nourrit et Cie<span class="element">&lt;/publisher&gt;</span>
+    <span class="element">&lt;pubPlace&gt;</span>Paris<span class="element">&lt;/pubPlace&gt;</span>
+    <span class="element">&lt;date&gt;</span>1886<span class="element">&lt;/date&gt;</span>
+   <span class="element">&lt;/bibl&gt;</span>
+  <span class="element">&lt;/relatedItem&gt;</span>
+ <span class="element">&lt;/bibl&gt;</span>
+<span class="element">&lt;/sourceDesc&gt;</span></div>
+            </div>
+            <p>This encoding shows that the source of the ELTeC text is the digital facsimile
+               provided under the title and ARK identifier indicated, and that that digital
+               facsimile is itself related to a print edition, published in Paris in 1886. </p>
+         <p></p>
+         </div>
+      </div>
+      <div class="teidiv1" id="index.xml-body.1_div.5_div.2"><h3><span class="headingNumber">5.2. </span><span class="head">The profile description (<span class="gi">&lt;profileDesc&gt;</span>)</span></h3>
+         
+
+         <p>This must contain a <span class="gi">&lt;langUsage&gt;</span> element detailing the language or languages used in the text, 
+            followed by a <span class="gi">&lt;textDesc&gt;</span> element providing information about
+            the classification of this text. </p>
+         <div class="p">The <span class="gi">&lt;textDesc&gt;</span> element contains one of each of the following elements from the <span class="ident">model.textDescPart</span> class
+            in the order indicated:
+         
+            
+         
+         These elements are used to represent the selection criteria applicable to the current text. They are specific to the ELTeC
+         project, and are therefore taken from the ELTeC namespace (<span class="ident">http://distantreading.net/eltec/ns</span>) rather than
+            the TEI namespace. 
+         </div>
+       
+         <p> The <span class="gi">&lt;langUsage&gt;</span> element should contain one or more <span class="gi">&lt;language&gt;</span>
+            element, one for each of the human languages used in the text. The @ident attribute of
+            this element identifies the language using the ISO 639-2 code in the same way as the
+            @xml:lang attribute. The @usage attribute may be used to indicate approximately what
+            percentage of the text uses this language, or otherwise qualify it by means of a brief description. </p>
+         <p>The <span class="gi">&lt;textDesc&gt;</span> element contains four  elements defining the selection criteria applicable to
+         this text. These are specific to ELTeC and are therefore defined in the ELTeC namespace.</p>
+         <div class="p"> Here is an imaginary Italian example: <div id="index.xml-egXML-d26e1141" class="pre egXML_valid"><span class="element">&lt;profileDesc
+   xmlns:e="http://distantreading.net/eltec/ns"&gt;</span>
+ <span class="element">&lt;langUsage&gt;</span>
+  <span class="element">&lt;language ident="<span class="attributevalue">it</span>" usage="<span class="attributevalue">80</span>"/&gt;</span>
+  <span class="element">&lt;language ident="<span class="attributevalue">en</span>" usage="<span class="attributevalue">10</span>"&gt;</span>citazioni inglesi<span class="element">&lt;/language&gt;</span>
+  <span class="element">&lt;language ident="<span class="attributevalue">de</span>" usage="<span class="attributevalue">10</span>"&gt;</span>citazioni tedeschi<span class="element">&lt;/language&gt;</span>
+ <span class="element">&lt;/langUsage&gt;</span>
+ <span class="element">&lt;textDesc&gt;</span>
+  <span class="element">&lt;e:authorGender key="<span class="attributevalue">M</span>"/&gt;</span>
+  <span class="element">&lt;e:canonicity key="<span class="attributevalue">low</span>"/&gt;</span>
+  <span class="element">&lt;e:size key="<span class="attributevalue">large</span>"/&gt;</span>
+  <span class="element">&lt;e:timeSlot key="<span class="attributevalue">T3</span>"/&gt;</span>
+ <span class="element">&lt;/textDesc&gt;</span>
+<span class="element">&lt;/profileDesc&gt;</span></div>
+     This text is mostly in Italian, but approximately a tenth of it is taken up with quotations in English, and another tenth with quotations
+     in German. Its description indicates that it has a male author, is of low canonicity (i.e. has not been republished after
+         its original publication time slot), contains more than 200,000 words, and was first published between 1880 and 1899. </div>
+      </div>
+      <div class="teidiv1" id="index.xml-body.1_div.5_div.3"><h3><span class="headingNumber">5.3. </span><span class="head">The revision description (<span class="gi">&lt;revisionDesc&gt;</span>) </span></h3>
+
+         
+         <p>This contains at least one <span class="gi">&lt;change&gt;</span> element, documenting significant revisions or
+            versions of the asspociated text. Each change element has a @when attribute which gives
+            the date of the change in W3C format (YYYY-MM-DD) and the change elements are given in
+            chronological order, most recent first. The content of the element should be a brief
+            sentence indicating what was done and who was responsible for doing it, using the
+            language of the text. </p>
+         <div class="p"> Here is an example from a Spanish text: <div id="index.xml-egXML-d26e1173" class="pre egXML_valid"><span class="element">&lt;revisionDesc&gt;</span>
+ <span class="element">&lt;change when="<span class="attributevalue">20180427</span>"&gt;</span>Revisión en formato ELTeC: Lou Burnard<span class="element">&lt;/change&gt;</span>
+ <span class="element">&lt;change when="<span class="attributevalue">20011004</span>"&gt;</span>Supervisión del texto : Marisa Payá (Supervisora)<span class="element">&lt;/change&gt;</span>
+ <span class="element">&lt;change when="<span class="attributevalue">20011004</span>"&gt;</span>Revisión del formato : Josefina Carrión
+   (Supervisora)<span class="element">&lt;/change&gt;</span>
+ <span class="element">&lt;change when="<span class="attributevalue">20011127</span>"&gt;</span>Etiquetado del texto en XML-TEI : Ana López Díaz
+   (Correctora)<span class="element">&lt;/change&gt;</span>
+ <span class="element">&lt;change when="<span class="attributevalue">20040630</span>"&gt;</span>Revisión del etiquetado : Mari
+   Carmen Jerez Gaona (Correctora)<span class="element">&lt;/change&gt;</span>
+<span class="element">&lt;/revisionDesc&gt;</span></div></div>
+      </div>
+   </div>
+
+
+            <div class="teidiv0" id="index.xml-back.1_div.1"><h2><span class="head">Full formal specifications</span></h2>
+                
+                <p>The ELTeC encoding scheme defined by this document is a TEI-conformant
+                    customization, from which user documentation, and formal RELAXNG or DTD
+                    specifications can be generated automatically. </p>
+                <p> This section contains the full schema specification from which other
+                    level-specific versions are subsequently derived. It must be converted using
+                    teitoodd to produce the compiled ODD eltec-compiled.xml which is used as a basis
+                    for the others. </p>
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        
+                            
+                                
+                                    <div id="index.xml-egXML-d26e1238" class="pre egXML_valid"><span class="element">&lt;author ref="<span class="attributevalue">viaf:1234</span>"&gt;</span>Some Geyser<span class="element">&lt;/author&gt;</span></div>
+                                
+                            
+                        
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                    
+                        
+                            
+                        
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                    
+                        
+                            
+                        
+                    
+                    
+                    
+                    
+                        
+                            
+                        
+                    
+                    
+                        
+                            
+                                You must provide a title for the text followed by the phrase
+                                    "ELTeC edition" (or a similar expression in the language of the
+                                    text)
+                            
+                        
+                        
+                            <p>Example of a title of an English novel.</p>
+                            
+                            <div id="index.xml-egXML-d26e1380" class="pre egXML_valid"><span class="element">&lt;titleStmt&gt;</span>
+ <span class="element">&lt;title&gt;</span>Wuthering Heights : ELTeC edition<span class="element">&lt;/title&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+<span class="element">&lt;/titleStmt&gt;</span></div>
+                        
+                        
+                            <p>Example of a title of a Spanish novel. The <span class="gi"><b>@ref</b></span> attribute
+                                can be used to reference an authority file entry for the title; in
+                                this case in VIAF. </p>
+                            <div id="index.xml-egXML-d26e1395" class="pre egXML_valid"><span class="element">&lt;titleStmt&gt;</span>
+ <span class="element">&lt;title ref="<span class="attributevalue">viaf:194763311</span>"&gt;</span>El Señor de Bembibre : edición
+   ELTeC<span class="element">&lt;/title&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+<span class="element">&lt;/titleStmt&gt;</span></div>
+                        
+                    
+                    
+                    
+                        
+                            
+                        
+
+                        
+                            
+                            <div id="index.xml-egXML-d26e1416" class="pre egXML_valid"><span class="element">&lt;publicationStmt&gt;</span>
+ <span class="element">&lt;p&gt;</span>Published as part of ELTeC <span class="element">&lt;date&gt;</span>2019-01-04<span class="element">&lt;/date&gt;</span>
+ <span class="element">&lt;/p&gt;</span>
+<span class="element">&lt;/publicationStmt&gt;</span></div>
+                        
+                        
+                            <div id="index.xml-egXML-d26e1426" class="pre egXML_valid"><span class="element">&lt;publicationStmt&gt;</span>
+ <span class="element">&lt;p&gt;</span>Incorporado a ELTeC el <span class="element">&lt;date&gt;</span>2019-01-5<span class="element">&lt;/date&gt;</span>
+ <span class="element">&lt;/p&gt;</span>
+<span class="element">&lt;/publicationStmt&gt;</span></div>
+                        
+                    
+
+                    
+
+
+
+                    
+                    
+                        
+                            
+                        
+                        
+                            
+                                
+                                    
+                                
+                                
+                                    
+                                    
+                                    
+                                
+                            
+                        
+                        
+                            <div id="index.xml-egXML-d26e1469" class="pre egXML_valid"><span class="element">&lt;encodingDesc n="<span class="attributevalue">eltec-0</span>"&gt;</span>
+ <span class="element">&lt;p&gt;</span>Encoded to ELTeC level
+   zero<span class="element">&lt;/p&gt;</span>
+<span class="element">&lt;/encodingDesc&gt;</span></div>
+                        
+                    
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                    
+                    
+                        
+                            
+                                
+                                
+                                
+                                
+                                
+                            
+                        
+                    
+                    
+                    
+                        specifies the sex of the author where this is known
+                        
+                            
+                        
+                        
+                            
+                        
+                        
+                            
+                                
+                                    
+                                
+                                
+                                    
+                                        male author
+                                    
+                                    
+                                        female author
+                                    
+                                    
+                                        author sex unknown
+                                    
+                                    
+                                        author sex mixed
+                                    
+                                
+                                
+                                    <div class="p">This attribute should indicate the biological sex of the
+                                        author, not the sex claimed or implied by the author's
+                                        name</div>
+                                
+                            
+                        
+                        
+                            
+                            <div id="index.xml-egXML-d26e1575" class="pre egXML_valid"><span class="element">&lt;profileDesc
+   xmlns:e="http://distantreading.net/eltec/ns"&gt;</span>
+ <span class="element">&lt;textDesc&gt;</span>
+  <span class="element">&lt;e:authorGender key="<span class="attributevalue">M</span>"/&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+ <span class="element">&lt;/textDesc&gt;</span>
+<span class="element">&lt;/profileDesc&gt;</span></div>
+                        
+                        
+                            <div id="index.xml-egXML-d26e1585" class="pre egXML_valid"><span class="element">&lt;profileDesc
+   xmlns:e="http://distantreading.net/eltec/ns"&gt;</span>
+ <span class="element">&lt;textDesc&gt;</span>
+  <span class="element">&lt;e:authorGender key="<span class="attributevalue">U</span>"/&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+ <span class="element">&lt;/textDesc&gt;</span>
+<span class="element">&lt;/profileDesc&gt;</span></div>
+                        
+                    
+                    
+                        indicates the size group to which the text belongs
+                        
+                            
+                        
+                        
+                            
+                        
+                        
+                            
+                                
+                                    
+                                
+                                
+                                    
+                                        more than 100,000 words
+                                    
+                                    
+                                        50,000 to 100,000 words
+                                    
+                                    
+                                        10,000 to 50,000 words
+                                    
+                                
+                            
+                        
+                        
+                            
+                            <div id="index.xml-egXML-d26e1644" class="pre egXML_valid"><span class="element">&lt;textDesc
+   xmlns:e="http://distantreading.net/eltec/ns"&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+ <span class="element">&lt;e:size key="<span class="attributevalue">long</span>"/&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+<span class="element">&lt;/textDesc&gt;</span></div>
+                        
+                    
+                    
+                        indicates the degree to which the text has become part of a literary
+                            canon
+                        
+                            
+                        
+                        
+                            
+                        
+                        
+                            
+                                
+                                    
+                                
+                                
+                                    
+                                        text has been republished very frequently since its
+                                            original appearance
+                                    
+                                    
+                                        text has been republished occasionally since its
+                                            original appearance
+                                    
+                                    
+                                        text has not been reprinted since its original
+                                            appearance
+                                    
+                                
+                                
+                                    <div class="p">Frequency of publication is assessed with reference to time
+                                        periods of twenty years. A work which has been republished
+                                        in more than four such periods, i.e. over a reasonably long
+                                        time since its first appearance, is considered highly
+                                        canonical. A work which appears to have been published only
+                                        in a single such period is considered of low canonicity.
+                                    </div>
+                                
+                            
+                        
+                        
+                            
+                            <div id="index.xml-egXML-d26e1709" class="pre egXML_valid"><span class="element">&lt;textDesc
+   xmlns:e="http://distantreading.net/eltec/ns"&gt;</span>
+<span class="comment">&lt;!-- ...  --&gt;</span>
+ <span class="element">&lt;e:canonicity key="<span class="attributevalue">medium</span>"/&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+<span class="element">&lt;/textDesc&gt;</span></div>
+                        
+                    
+                    
+                        specifies the time period during which the work was first published 
+                        
+                            
+                        
+                        
+                            
+                        
+                        
+                            
+                                
+                                    
+                                
+                                
+                                    
+                                        work first published between 1840 and 1859
+                                    
+                                    
+                                        work first published between 1860 and 1879
+                                    
+                                    
+                                        work first published between 1880 and 1899
+                                    
+                                    
+                                        work first published between 1900 and 1920
+                                    
+                                
+                            
+                        
+                        
+                            
+                            <div id="index.xml-egXML-d26e1774" class="pre egXML_valid"><span class="element">&lt;textDesc
+   xmlns:e="http://distantreading.net/eltec/ns"&gt;</span>
+<span class="comment">&lt;!-- ...  --&gt;</span>
+ <span class="element">&lt;e:timeSlot key="<span class="attributevalue">T1</span>"/&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+<span class="element">&lt;/textDesc&gt;</span></div>
+                        
+                    
+                    
+                    
+                        
+                            
+                        
+                        
+                            
+                            <div id="index.xml-egXML-d26e1795" class="pre egXML_valid"><span class="element">&lt;profileDesc
+   xmlns:e="http://distantreading.net/eltec/ns"&gt;</span>
+ <span class="element">&lt;langUsage&gt;</span>
+  <span class="element">&lt;language ident="<span class="attributevalue">fra</span>"&gt;</span>French<span class="element">&lt;/language&gt;</span>
+ <span class="element">&lt;/langUsage&gt;</span>
+ <span class="element">&lt;textDesc&gt;</span>
+  <span class="element">&lt;e:authorGender key="<span class="attributevalue">M</span>"/&gt;</span>
+  <span class="element">&lt;e:size key="<span class="attributevalue">long</span>"/&gt;</span>
+  <span class="element">&lt;e:canonicity key="<span class="attributevalue">medium</span>"/&gt;</span>
+  <span class="element">&lt;e:timeSlot key="<span class="attributevalue">T1</span>"/&gt;</span>
+ <span class="element">&lt;/textDesc&gt;</span>
+<span class="element">&lt;/profileDesc&gt;</span></div>
+                        
+                        
+                            
+                            <div id="index.xml-egXML-d26e1811" class="pre egXML_valid"><span class="element">&lt;profileDesc
+   xmlns:e="http://distantreading.net/eltec/ns"&gt;</span>
+ <span class="element">&lt;langUsage&gt;</span>
+  <span class="element">&lt;language ident="<span class="attributevalue">de</span>"&gt;</span>German<span class="element">&lt;/language&gt;</span>
+ <span class="element">&lt;/langUsage&gt;</span>
+ <span class="element">&lt;textDesc&gt;</span>
+  <span class="element">&lt;e:authorGender key="<span class="attributevalue">F</span>"/&gt;</span>
+  <span class="element">&lt;e:size key="<span class="attributevalue">medium</span>"/&gt;</span>
+  <span class="element">&lt;e:canonicity key="<span class="attributevalue">low</span>"/&gt;</span>
+  <span class="element">&lt;e:timeSlot key="<span class="attributevalue">T1</span>"/&gt;</span>
+ <span class="element">&lt;/textDesc&gt;</span>
+<span class="element">&lt;/profileDesc&gt;</span></div>
+                        
+                    
+                    
+                    
+                        
+                            
+                        
+                    
+                    
+                    
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                            
+                                
+                                
+                                
+                                
+                            
+                        
+
+                        
+                        
+                            
+                            
+                            <p>English Example for titleStmt including <span class="gi">&lt;title&gt;</span> and
+                                    <span class="gi">&lt;author&gt;</span>. <span class="gi">&lt;auhtor&gt;</span> got a viaf reference.</p>
+                            <div id="index.xml-egXML-d26e1884" class="pre egXML_valid"><span class="element">&lt;titleStmt&gt;</span>
+ <span class="element">&lt;title&gt;</span>Silas Marner: The Weaver of Raveloe : ELTec
+   edition<span class="element">&lt;/title&gt;</span>
+ <span class="element">&lt;author ref="<span class="attributevalue">viaf:89000553</span>"&gt;</span>Eliot, George (pseud.)
+   (1819-1880)<span class="element">&lt;/author&gt;</span>
+ <span class="element">&lt;respStmt&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+ <span class="element">&lt;/respStmt&gt;</span>
+<span class="element">&lt;/titleStmt&gt;</span></div>
+                        
+                        
+                            
+                            <p>Spanish Example for titleStmt including <span class="gi">&lt;title&gt;</span> and
+                                    <span class="gi">&lt;author&gt;</span> both having viaf references.</p>
+                            <div id="index.xml-egXML-d26e1908" class="pre egXML_valid"><span class="element">&lt;titleStmt&gt;</span>
+ <span class="element">&lt;title ref="<span class="attributevalue">viaf:194763311</span>"&gt;</span>El Señor de Bembibre : edición
+   ELTeC<span class="element">&lt;/title&gt;</span>
+ <span class="element">&lt;author ref="<span class="attributevalue">viaf:27087132</span>"&gt;</span>Gil y Carrasco, Enrique
+   (1815-1846)<span class="element">&lt;/author&gt;</span>
+ <span class="element">&lt;respStmt&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+ <span class="element">&lt;/respStmt&gt;</span>
+<span class="element">&lt;/titleStmt&gt;</span></div>
+                        
+                        
+                            <div class="p">Please note that the ref attribute is only mandatory for
+                                    <span class="gi">&lt;author&gt;</span> element.</div>
+                        
+                        
+                    
+                    
+                    
+                        
+                            
+                            
+                            
+                        
+                    
+                    
+                    
+                        
+                            
+                        
+
+                    
+                    
+                        
+                            
+                        
+                        
+                            
+                                
+                                    
+                                
+                                
+                                    
+                                        pages in the source text
+                                    
+                                    
+                                        approximate number of space delimited tokens in source
+                                        
+                                    
+                                    
+                                        number of volumes for original source text 
+                                    
+                                
+                            
+                        
+                        
+                            
+                            <p>This example shows two measurements for <span class="gi">&lt;extent&gt;</span>: the number
+                                of words and the number of pages.</p>
+                            <div id="index.xml-egXML-d26e2004" class="pre egXML_valid"><span class="element">&lt;extent&gt;</span>
+ <span class="element">&lt;measure unit="<span class="attributevalue">words</span>"&gt;</span>71043<span class="element">&lt;/measure&gt;</span>
+ <span class="element">&lt;measure unit="<span class="attributevalue">pages</span>"&gt;</span>364<span class="element">&lt;/measure&gt;</span>
+<span class="element">&lt;/extent&gt;</span></div>
+                        
+                        
+                        
+                        
+                            <div class="p">An indication of the number of words is mandatory. Indicating the
+                                number of pages is optional: if this figure is not available do not
+                                provide any measure unit='pages' element. </div>
+                        
+                        
+                    
+                    
+                    
+                        
+                            
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                        title page transcription (level 1 only)
+                                    
+
+                                    
+                                        collects authorial notes (level 1 only)
+                                    
+                                    
+                                        authorial preface, foreword, back matter etc.
+                                    
+                                    
+                                        chapter not further divided
+                                    
+                                    
+                                        any grouping of chapters or groups, e.g. part, volume,
+                                            etc.
+                                    
+                                
+                            
+                        
+                    
+                    
+                    
+                    
+                    
+                        
+                            <div id="index.xml-egXML-d26e2092" class="pre egXML_valid"><span class="element">&lt;TEI xml:id="<span class="attributevalue">FR0570</span>" xml:lang="<span class="attributevalue">fr</span>"
+   xmlns:e="http://distantreading.net/eltec/ns"&gt;</span>
+ <span class="element">&lt;teiHeader&gt;</span>
+  <span class="element">&lt;fileDesc&gt;</span>
+   <span class="element">&lt;titleStmt&gt;</span>
+    <span class="element">&lt;title ref="<span class="attributevalue">viaf:174988989</span>"&gt;</span>Le cousin Pons : ELTeC
+         edition<span class="element">&lt;/title&gt;</span>
+    <span class="element">&lt;author ref="<span class="attributevalue">viaf:29529595</span>"&gt;</span>Balzac, Honoré de
+         (1799-1850)<span class="element">&lt;/author&gt;</span>
+    <span class="element">&lt;respStmt&gt;</span>
+     <span class="element">&lt;resp&gt;</span>principal<span class="element">&lt;/resp&gt;</span>
+     <span class="element">&lt;name&gt;</span>Christof Schöch<span class="element">&lt;/name&gt;</span>
+    <span class="element">&lt;/respStmt&gt;</span>
+   <span class="element">&lt;/titleStmt&gt;</span>
+   <span class="element">&lt;extent&gt;</span>
+    <span class="element">&lt;measure unit="<span class="attributevalue">words</span>"&gt;</span>111047<span class="element">&lt;/measure&gt;</span>
+    <span class="element">&lt;measure unit="<span class="attributevalue">pages</span>"&gt;</span>0<span class="element">&lt;/measure&gt;</span>
+   <span class="element">&lt;/extent&gt;</span>
+   <span class="element">&lt;publicationStmt&gt;</span>
+    <span class="element">&lt;p&gt;</span> Published as part of ELTeC
+    <span class="element">&lt;date&gt;</span>2018-11-01<span class="element">&lt;/date&gt;</span>
+    <span class="element">&lt;/p&gt;</span>
+   <span class="element">&lt;/publicationStmt&gt;</span>
+   <span class="element">&lt;sourceDesc&gt;</span>
+<span class="comment">&lt;!-- CO: adjust new decisions on attribute, relatedItem? / bibliographic description of the source --&gt;</span>
+    <span class="element">&lt;bibl type="<span class="attributevalue">digitalSource</span>"&gt;</span> Éfélé, <span class="element">&lt;date&gt;</span>2014<span class="element">&lt;/date&gt;</span>
+     <span class="element">&lt;ref
+       target="<span class="attributevalue">http://efele.net/ebooks/livres/000067</span>"/&gt;</span>
+     <span class="element">&lt;relatedItem type="<span class="attributevalue">source</span>"&gt;</span>
+      <span class="element">&lt;bibl type="<span class="attributevalue">firstEdition</span>"&gt;</span> Paris: Furne, J.-J.
+             Dubochet et Cie, J. Hetzel et Paulin, <span class="element">&lt;date notAfter="<span class="attributevalue">1848</span>"&gt;</span>1842 -1848<span class="element">&lt;/date&gt;</span>.
+      <span class="element">&lt;/bibl&gt;</span>
+     <span class="element">&lt;/relatedItem&gt;</span>
+    <span class="element">&lt;/bibl&gt;</span>
+   <span class="element">&lt;/sourceDesc&gt;</span>
+  <span class="element">&lt;/fileDesc&gt;</span>
+  <span class="element">&lt;encodingDesc n="<span class="attributevalue">eltec-1</span>"&gt;</span>
+   <span class="element">&lt;p/&gt;</span>
+  <span class="element">&lt;/encodingDesc&gt;</span>
+  <span class="element">&lt;profileDesc&gt;</span>
+   <span class="element">&lt;langUsage&gt;</span>
+    <span class="element">&lt;language ident="<span class="attributevalue">fra</span>"&gt;</span>French<span class="element">&lt;/language&gt;</span>
+   <span class="element">&lt;/langUsage&gt;</span>
+   <span class="element">&lt;textDesc&gt;</span>
+    <span class="element">&lt;e:authorGender key="<span class="attributevalue">M</span>"/&gt;</span>
+    <span class="element">&lt;e:size key="<span class="attributevalue">long</span>"/&gt;</span>
+    <span class="element">&lt;e:canonicity key="<span class="attributevalue">medium</span>"/&gt;</span>
+    <span class="element">&lt;e:timeSlot key="<span class="attributevalue">T1</span>"/&gt;</span>
+   <span class="element">&lt;/textDesc&gt;</span>
+  <span class="element">&lt;/profileDesc&gt;</span>
+  <span class="element">&lt;revisionDesc&gt;</span>
+   <span class="element">&lt;change when="<span class="attributevalue">2018-11-01</span>"&gt;</span>Conversion with CLIGStoELTeC
+       stylesheet for ELTeC-1<span class="element">&lt;/change&gt;</span>
+   <span class="element">&lt;change when="<span class="attributevalue">2015-08-07</span>"&gt;</span>Initial TEI version.<span class="element">&lt;/change&gt;</span>
+  <span class="element">&lt;/revisionDesc&gt;</span>
+ <span class="element">&lt;/teiHeader&gt;</span>
+ <span class="element">&lt;text&gt;</span>
+  <span class="element">&lt;body&gt;</span>
+<span class="comment">&lt;!-- transcription of text here --&gt;</span>
+  <span class="element">&lt;/body&gt;</span>
+ <span class="element">&lt;/text&gt;</span>
+<span class="element">&lt;/TEI&gt;</span></div>
+                        
+                    
+
+                    
+                        
+                        
+                        
+                            <p>When used within a <span class="gi">&lt;titleStmt&gt;</span>, an author's name is given in a
+                                standardized format (surname, forename/s, dates) as shown in this
+                                example.</p>
+                            <div id="index.xml-egXML-d26e2165" class="pre egXML_valid"><span class="element">&lt;author ref="<span class="attributevalue">viaf:31996364</span>"&gt;</span>Forster, Edward Morgan
+ (1879-1970)<span class="element">&lt;/author&gt;</span></div>
+                        
+                        
+                            <p>When used within the <span class="gi">&lt;sourceDesc&gt;</span>, an author's name is given
+                                in the format used by the source in question, as shown in this
+                                example.</p>
+                            <div id="index.xml-egXML-d26e2178" class="pre egXML_valid"><span class="element">&lt;author&gt;</span>E.M. Forster<span class="element">&lt;/author&gt;</span></div>
+                        
+                        
+                            <p>In cases of multiple authorship, the <span class="gi">&lt;author&gt;</span> element within
+                                    <span class="gi">&lt;titleStmt&gt;</span> should be repeated</p>
+                            <div id="index.xml-egXML-d26e2194" class="pre egXML_valid"><span class="element">&lt;titleStmt&gt;</span>
+ <span class="element">&lt;title&gt;</span>The Diary of a Nobody : ELTeC edition <span class="element">&lt;/title&gt;</span>
+ <span class="element">&lt;author&gt;</span>Grossmith, George (1847-1912)<span class="element">&lt;/author&gt;</span>
+ <span class="element">&lt;author&gt;</span>Grossmith, Walter Weedon (1854-1919)<span class="element">&lt;/author&gt;</span>
+<span class="element">&lt;/titleStmt&gt;</span></div>
+                        
+                        
+                            <div class="p">The <span class="gi"><b>@ref</b></span> attribute should be used to reference one or more
+                                externally defined identifiers for the author, as defined by an
+                                authority file such as VIAF.</div>
+                        
+                    
+                    
+                        
+                            
+                                link to a graphic image of the page beginning here
+                                
+                                    
+                                
+                            
+                        
+                        
+                            <p>A page break may be associated with a facsimile image of the page it
+                                introduces by means of the <span class="gi"><b>@facs</b></span> attribute</p>
+                            <div id="index.xml-egXML-d26e2239" class="pre egXML_valid"><span class="element">&lt;body&gt;</span>
+ <span class="element">&lt;pb n="<span class="attributevalue">1</span>" facs="<span class="attributevalue">page1.png</span>"/&gt;</span>
+<span class="comment">&lt;!-- page1.png contains an image of the page;
+    the text it contains is encoded here --&gt;</span>
+ <span class="element">&lt;p&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+ <span class="element">&lt;/p&gt;</span>
+ <span class="element">&lt;pb n="<span class="attributevalue">2</span>" facs="<span class="attributevalue">page2.png</span>"/&gt;</span>
+<span class="comment">&lt;!-- similarly, for page 2 --&gt;</span>
+ <span class="element">&lt;p&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+ <span class="element">&lt;/p&gt;</span>
+<span class="element">&lt;/body&gt;</span></div>
+                        
+                        
+                            <p>If a page break interrupts a word the word fragments should be
+                                reassembled following it. <img src="media/inWordpb.png" alt="" class="graphic" /></p>
+                            <div id="index.xml-egXML-d26e2257" class="pre egXML_valid"><span class="element">&lt;p&gt;</span>My own relations too were nobly generous and by their kindness I
+ have been <span class="element">&lt;pb n="<span class="attributevalue">100</span>"/&gt;</span> established in this shop, and for the
+ last year have carried on this little business.... <span class="element">&lt;/p&gt;</span></div>
+                        
+                        
+                            <div class="p">A <span class="gi">&lt;pb&gt;</span> element should appear at the start of the page which it
+                                identifies. The global <span class="gi"><b>@n</b></span> attribute indicates the number
+                                or other value associated with this page. This will normally be the
+                                page number or signature printed on it, since the physical sequence
+                                number is implicit in the presence of the <span class="gi">&lt;pb&gt;</span> element
+                                itself. </div>
+                        
+                    
+                    
+                        
+                            <div id="index.xml-egXML-d26e2284" class="pre egXML_valid"><span class="element">&lt;div type="<span class="attributevalue">group</span>"&gt;</span>
+ <span class="element">&lt;head&gt;</span>BOOK THE FIRST<span class="element">&lt;/head&gt;</span>
+ <span class="element">&lt;head&gt;</span>THE DAYS BEFORE TONO-BUNGAY WAS INVENTED<span class="element">&lt;/head&gt;</span>
+ <span class="element">&lt;div type="<span class="attributevalue">chapter</span>"&gt;</span>
+  <span class="element">&lt;head&gt;</span>CHAPTER THE FIRST<span class="element">&lt;/head&gt;</span>
+  <span class="element">&lt;milestone unit="<span class="attributevalue">section</span>" n="<span class="attributevalue">I</span>"/&gt;</span>
+  <span class="element">&lt;p&gt;</span>Most people in this world seem to live "in character" ... <span class="element">&lt;/p&gt;</span>
+<span class="comment">&lt;!-- ... --&gt;</span>
+  <span class="element">&lt;p&gt;</span>....of an altogether different sort from that of
+     Tono-Bungay.<span class="element">&lt;/p&gt;</span>
+  <span class="element">&lt;milestone unit="<span class="attributevalue">section</span>" n="<span class="attributevalue">II</span>"/&gt;</span>
+  <span class="element">&lt;p&gt;</span>I write that much and look at it, and wonder ... <span class="element">&lt;/p&gt;</span>
+ <span class="element">&lt;/div&gt;</span>
+<span class="element">&lt;/div&gt;</span></div>
+                        
+                    
+                    
+                        
+                            
+                            
+                        
+                        
+                            <p>Two consecutive graphic components omitted from transcription: </p>
+                            <div id="index.xml-egXML-d26e2319" class="pre egXML_valid"><span class="element">&lt;gap unit="<span class="attributevalue">graphic</span>" quantity="<span class="attributevalue">2</span>"/&gt;</span></div>
+                        
+                        
+                            <p>Table of contents omitted from transcription: </p>
+                            <div id="index.xml-egXML-d26e2328" class="pre egXML_valid"><span class="element">&lt;gap unit="<span class="attributevalue">toc</span>"/&gt;</span></div>
+                        
+                    
+                    
+                        
+                            <div class="ab"><img src="media/trailer.png" alt="" class="graphic" /></div>
+                            <div id="index.xml-egXML-d26e2340" class="pre egXML_valid"><span class="element">&lt;div type="<span class="attributevalue">volume</span>" n="<span class="attributevalue">1</span>"&gt;</span>
+<span class="comment">&lt;!-- more chapters here --&gt;</span>
+ <span class="element">&lt;div type="<span class="attributevalue">chapter</span>" n="<span class="attributevalue">23</span>"&gt;</span>
+<span class="comment">&lt;!-- more paragraphs here --&gt;</span>
+  <span class="element">&lt;p&gt;</span>.... and to think of the money it cost!<span class="element">&lt;/p&gt;</span>
+ <span class="element">&lt;/div&gt;</span>
+ <span class="element">&lt;trailer&gt;</span>End of the first volume.<span class="element">&lt;/trailer&gt;</span>
+<span class="element">&lt;/div&gt;</span></div>
+                        
+                    
+                    
+                        
+                            <div id="index.xml-egXML-d26e2357" class="pre egXML_valid"><span class="element">&lt;p&gt;</span>
+ <span class="element">&lt;label&gt;</span>April
+   5.<span class="element">&lt;/label&gt;</span>-Two shoulders of mutton arrived, Carrie having
+ arranged with another butcher without consulting me. Gowing
+ called, and fell over scraper coming in. <span class="element">&lt;hi&gt;</span>Must<span class="element">&lt;/hi&gt;</span> get that
+ scraper removed.
+<span class="element">&lt;/p&gt;</span>
+<span class="element">&lt;p&gt;</span>
+ <span class="element">&lt;label&gt;</span>April 6.<span class="element">&lt;/label&gt;</span>-Eggs for breakfast simply shocking; sent
+ them back to Borset with my compliments, and he needn't call any
+ more for orders. 
+<span class="element">&lt;/p&gt;</span></div>
+                        
+                    
+                
+            </div>
+        <div class="stdfooter"><div class="footer"><a class="plain" href="http://www.tei-c.org/">Parent Institution</a> | <a class="plain" href="http://www.tei-c.org/">TEI</a>| <a class="plain" href="http://www.google.com">Search</a> | <a class="plain" href="mailto:feedback">Feedback</a></div><address> Cost Action CA16204 – WG1.
+      Date: 2019-02-18<br />This page is copyrighted<!--
+	  Generated from index.xml using an XSLT version 2.0 stylesheet
+	  based on http://www.tei-c.org/Stylesheets/
+	  processed using SAXON 9.3.0.5 from Saxonica
+	  on 2019-02-20T10:28:48Z--></address></div></body></html>
