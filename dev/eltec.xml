@@ -49,8 +49,8 @@
             milestone name note p pb publisher pubPlace quote ref relatedItem resp respStmt rs sp stage hi term title "/>
                     <moduleRef key="textstructure" include="TEI text div body front back trailer"/>
                     <moduleRef key="header"
-                        include="change  encodingDesc 
-    extent fileDesc idno keywords langUsage language  
+                        include="availability change  encodingDesc 
+    extent fileDesc idno keywords langUsage language licence  
             profileDesc publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
                     <moduleRef key="namesdates" include="affiliation forename  persName  surname"/>
                     <moduleRef key="corpus" include="textDesc"/>
@@ -64,6 +64,8 @@
                         <attList>
                             <attDef ident="ref" mode="change">
                                 <exemplum>
+                                    <p>adds a reference for a standard authority database, e.g.
+                                        viaf</p>
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <author ref="viaf:1234">Some Geyser</author>
                                     </egXML>
@@ -139,13 +141,14 @@
                             <constraint><!-- CO added information -->
                                 <assert xmlns="http://purl.oclc.org/dsdl/schematron"
                                     test="child::* or child::text()[normalize-space()]" role="ERROR"
-                                    >You must provide a title for the text followed by the phrase
-                                    "ELTeC edition" (or a similar expression in the language of the
+                                    >provide a title for each novel followed by the phrase "ELTeC
+                                    edition" (or a similar expression in the language of the
                                     text)</assert>
                             </constraint>
                         </constraintSpec>
                         <exemplum>
-                            <p>Example of a title of an English novel.</p>
+                            <p>describes the a title of an English novel and the edition in which it
+                                is included</p>
                             <!-- CO add ex -->
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
@@ -155,9 +158,9 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Example of a title of a Spanish novel. The <att>ref</att> attribute
-                                can be used to reference an authority file entry for the title; in
-                                this case in VIAF. </p>
+                            <p>specifies the title of a Spanish novel using <att>ref</att> attribute
+                                to reference an authority file entry for the title; in this case in
+                                VIAF</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title ref="viaf:194763311">El Señor de Bembibre : edición
@@ -176,6 +179,8 @@
                         <exemplum>
                             <!-- CO added ex -->
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>describes the publication date for a novel to be integrated in
+                                    ELTeC</p>
                                 <publicationStmt>
                                     <p>Published as part of ELTeC <date>2019-01-04</date></p>
                                 </publicationStmt>
@@ -183,6 +188,9 @@
                         </exemplum>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>describes the publication date for a novel to be integrated in
+                                    ELTeC in Spanish, chosing the language of the novel being
+                                    described</p>
                                 <publicationStmt>
                                     <p>Incorporado a ELTeC el <date>2019-01-5</date></p>
                                 </publicationStmt>
@@ -190,39 +198,34 @@
                         </exemplum>
                     </elementSpec>
 
-                    <!-- CO first proposal 
-               <elementSpec ident="bibl" mode="change">
-     <attList>
-         <attDef ident="type" mode="change" usage="req">
-             <datatype>
-                 <dataRef key="teidata.enumerated"/>
-             </datatype>
-             <valList type="closed" mode="replace">
-                 <valItem ident="firstEdition">
-  <desc>First edition of the novel. The item described is the
-   first complete print source edition published in the
-   author's lifetime.</desc>
-                 </valItem>
-                 <valItem ident="printEdition">
-  <desc>A printed edition which is not the first edition. The
-   item described is the print source edition
-   which the encoding is intended to represent</desc>
-                 </valItem>
-                 <valItem ident="digitalSource">
-  <desc> Digital surrogate of either the first edition of the
-   another printed edition of the novel (transcribed and
-   tagged e.g. in HTML or Word or TEI or whatever).</desc>
-                 </valItem>
-             </valList>
-         </attDef>
-     </attList>
-     <exemplum>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-             ....tba
-         </egXML>
-     </exemplum>
- </elementSpec> -->
-
+                    <elementSpec ident="bibl" mode="change">
+                        <attList>
+                            <attDef ident="type" mode="change" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed" mode="replace">
+                                    <valItem ident="firstEdition">
+                                        <desc>describes the first complete print source edition
+                                            published in the author's lifetime</desc>
+                                    </valItem>
+                                    <valItem ident="printEdition">
+                                        <desc>describe the print source edition which the encoding
+                                            is intended to represent and which is not the first
+                                            edition</desc>
+                                    </valItem>
+                                    <valItem ident="digitalSource">
+                                        <desc> describes the digital surrogate of either the first
+                                            edition of the another printed edition of the
+                                            novel</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"> ....tba </egXML>
+                        </exemplum>
+                    </elementSpec>
 
 
                     <!-- simplify encodingDesc; require and constrain @n  -->
@@ -243,6 +246,8 @@
                             </attDef>
                         </attList>
                         <exemplum>
+                            <p>describes the level of encoding of the TEI document, either level 0,
+                                1 or 2</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <encodingDesc n="eltec-0"><p>Encoded to ELTeC level
                                     zero</p></encodingDesc>
@@ -298,14 +303,15 @@
                                     </valItem>
                                 </valList>
                                 <remarks>
-                                    <p>This attribute should indicate the biological sex of the
-                                        author, not the sex claimed or implied by the author's
-                                        name</p>
+                                    <p>indicates the biological sex of the author, not the sex
+                                        claimed or implied by the author's name</p>
                                 </remarks>
                             </attDef>
                         </attList>
                         <exemplum>
                             <!-- CO ex added -->
+                            <p>indicates that the author of the novel to be described is male
+                                (M)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
                                     <textDesc>
@@ -317,6 +323,8 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
+                            <p>indicates that the gender of author of the novel to be described
+                                cannot be specified (U)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
                                     <textDesc>
@@ -448,6 +456,8 @@
                         </attList>
                         <exemplum>
                             <!-- CO ex added -->
+                            <p>indicates that the novel to be described is published for the first
+                                between 1840 and 1859 (T1)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
                                     <!-- ...  -->
@@ -463,6 +473,9 @@
                             <classRef key="model.profileDescPart" expand="sequence"/>
                         </content>
                         <exemplum>
+                            <p>describes the profil of the French novel including the language and the
+                                balancing criteria gender of the author, size, lenght and reprint
+                                count</p>
                             <!-- CO ex added -->
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
@@ -479,7 +492,11 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
+                            <p>describes the profil of the German novel including the language and the
+                                balancing criteria gender of the author, size, lenght and reprint
+                                count</p>
                             <!-- CO ex added -->
+
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
                                     <langUsage>
@@ -505,29 +522,12 @@
                             <classRef key="model.textDescPart" expand="sequence"/>
                         </content>
                     </elementSpec>
-                    <!-- restrict content for author -->
-                    <elementSpec ident="author" mode="change">
-                        <!-- CO propose to merge the two elementSpec for author in line 463 and 677 -->
-                        <classes mode="replace">
-                            <memberOf key="att.canonical"/>
-                            <memberOf key="att.global"/>
-                            <memberOf key="model.respLike"/>
-                        </classes>
-                        <content>
-                            <alternate maxOccurs="unbounded" minOccurs="0">
-                                <textNode/>
-                                <elementRef key="date"/>
-                                <elementRef key="idno"/>
-                                <!--   idno is used to indicate VIAF or other external id for an author -->
-                            </alternate>
-                        </content>
-
-                        <!-- a constraintSpec might be useful to check form of author name  -->
+                    <elementSpec ident="titleStmt" mode="change">
                         <exemplum>
                             <!-- CO ex added -->
                             <!-- LB these are examples for titleStmt, not for author -->
                             <p>English Example for titleStmt including <gi>title</gi> and
-                                    <gi>author</gi>. <gi>auhtor</gi> got a viaf reference.</p>
+                                <gi>author</gi>. <gi>auhtor</gi> got a viaf reference.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title>Silas Marner: The Weaver of Raveloe : ELTec
@@ -543,7 +543,7 @@
                         <exemplum>
                             <!-- CO ex and remarks added -->
                             <p>Spanish Example for titleStmt including <gi>title</gi> and
-                                    <gi>author</gi> both having viaf references.</p>
+                                <gi>author</gi> both having viaf references.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title ref="viaf:194763311">El Señor de Bembibre : edición
@@ -556,11 +556,6 @@
                                 </titleStmt>
                             </egXML>
                         </exemplum>
-                        <remarks>
-                            <p>Please note that the ref attribute is only mandatory for
-                                    <gi>author</gi> element.</p>
-                        </remarks>
-                        <!-- please don't say please -->
                     </elementSpec>
                     <!-- remove  measure and idno from classes which allow them outside header -->
                     <elementSpec ident="idno" mode="change">
@@ -732,6 +727,19 @@
                     <elementSpec ident="author" mode="change">
                         <!-- CO question:  why two elementSpec for author? maybe merge with line 463?-->
                         <!-- no particular reason! -->
+                        <classes mode="replace">
+                            <memberOf key="att.canonical"/>
+                            <memberOf key="att.global"/>
+                            <memberOf key="model.respLike"/>
+                        </classes>
+                        <content>
+                            <alternate maxOccurs="unbounded" minOccurs="0">
+                                <textNode/>
+                                <elementRef key="date"/>
+                                <elementRef key="idno"/>
+                                <!--   idno is used to indicate VIAF or other external id for an author -->
+                            </alternate>
+                        </content>
                         <exemplum xml:lang="en">
                             <p>When used within a <gi>titleStmt</gi>, an author's name is given in a
                                 standardized format (surname, forename/s, dates) as shown in this
