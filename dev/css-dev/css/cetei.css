@@ -1,0 +1,210 @@
+/* general styles */
+
+body {
+color: #000000;
+font-family: "Noto Sans", Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+font-size: 0.8em;
+line-height: 1.6em;
+margin:1em;
+}
+tei-teiheader {
+  display: block;
+}
+tei-teiheader tei-titlestmt>tei-title {
+  display: block;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #00487D;
+  background-color: #FFFFFF;
+  margin-bottom: .5em;
+}
+tei-filedesc>tei-titlestmt {
+  font-size: 11pt;
+}
+tei-filedesc>tei-titlestmt>tei-author:after {
+  content: ', ';
+}
+tei-filedesc>tei-titlestmt>tei-author:last-child:after {
+  content: '.';
+}
+tei-filedesc>tei-publicationstmt {
+  display: block;
+  font-size: 11pt;
+}
+tei-teiheader tei-sourcedesc {
+  display: block;
+}
+tei-teiheader>tei-revisiondesc {
+  display: block;
+}
+tei-body {
+  display: block;
+  margin: 1em;
+}
+tei-div {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+tei-head {
+  display: block;
+}
+/* h1 */
+tei-div>tei-head {
+  font-size: 11pt;
+  font-weight: bold;
+  color: #00487D;
+  background-color: #FFFFFF;
+}
+tei-p {
+  display:block;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+tei-p[rend=red] {
+   border: 2px solid red ; 
+}
+tei-list {
+  display: block;
+  margin-left: 30px;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  padding-left: 0;
+}
+tei-list>tei-head {
+  font-weight: bold;
+  margin-left: -20px;
+  counter-reset: teilist;
+}
+tei-list[type=bulleted] {
+  list-style-type: disc;
+}
+tei-list[type=ordered]>tei-item {
+  list-style-type: none;
+  list-style-position: outside;
+  counter-increment: teilist;
+  margin-left: 30px;
+}
+tei-list[type=ordered]>tei-item:before {
+  content: counter(teilist, decimal)'. ';
+  display: inline-block;
+  width: 20px;
+  text-align: right;
+  margin-left: -30px;
+  float: left;
+}
+tei-item {
+  display: list-item;
+}
+tei-listbibl {
+  display: block;
+  margin-left: 30px;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  padding-left: 0;
+}
+tei-listbibl>tei-bibl {
+  display: list-item;
+  list-style-type: none;
+}
+tei-figure {
+  display: block;
+  text-align: center;
+}
+tei-code {
+  font-family: "Noto Mono", Monaco, "Courier New", Courier, monospace;
+  background-color: #EEE;
+}
+tei-ident {
+  font-family: "Noto Mono", Monaco, "Courier New", Courier, monospace;
+  background-color: #EEE;
+}
+
+tei-att,tei-gi {
+  font-family: "Noto Mono", Monaco, "Courier New", Courier, monospace;
+  background-color: #EEF;
+}
+
+tei-gi::before {
+    content: "<";
+  }
+tei-gi::after {  
+  content: ">";
+}
+
+tei-att::before {
+  content: '@';
+}
+tei-lb::before {
+  content: '\a';
+  white-space: pre;
+}
+tei-hi[rend=bold] {
+  font-weight: bold;
+}
+tei-hi {
+  font-style: italic;
+}
+tei-foreign {
+  font-style: italic;
+}
+tei-emph {
+  font-weight: bold;
+}
+tei-term {
+    font-weight: bold;
+    font-style: italic;
+}
+
+tei-label {
+    font-weight: bold;
+    font-style: italic;
+}
+
+tei-label::after {
+    content: ' : ';
+}
+
+tei-title {
+      font-style: italic; 
+}
+
+tei-q::before {
+    content: "“";
+}
+
+tei-q::after {
+    content: "”";
+}
+
+
+
+/* Tables */
+tei-table {
+  /* replaced by table */
+}
+tei-row {
+  /* replaced by tr */
+}
+tei-cell {
+  /* replaced by td */
+}
+/* HTML */
+dt {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  margin: 1em;
+}
+td {
+  padding: 1em 1.5em 1em 1em;
+  border: thin solid gray;
+}
+tr[role="label"] {
+  font-weight: bold;
+}
+td[role="label"] {
+  font-weight: bold;
+}

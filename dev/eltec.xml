@@ -720,13 +720,25 @@
                         </attList>
                         <exemplum>
                             <p>provides information about the changes in the document, showing an
-                                examples of the revision description of a French novel</p>
+                                examples of the revision description (<gi>revisonDesc</gi>) of a
+                                French novel</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <revisionDesc>
                                     <change when="2018-11-01">Conversion with CLIGStoELTeC
                                         stylesheet for ELTeC-1</change>
                                     <change when="2015-07-14">cf Revised teiHeader.</change>
                                     <change when="2014-04-29">cf Initial TEI version.</change>
+                                </revisionDesc>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="revisionDesc">
+                        <exemplum>
+                            <p>contains the information about changes (<gi>change</gi> in a
+                                document</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <revisionDesc>
+                                    <change when="YYYY-MM-DD"><!--  --></change>
                                 </revisionDesc>
                             </egXML>
                         </exemplum>
@@ -787,7 +799,6 @@
                                                 </p>
                                             </publicationStmt>
                                             <sourceDesc>
-                                                <!-- CO: adjust new decisions on attribute, relatedItem? / bibliographic description of the source -->
                                                 <bibl type="digitalSource"> Éfélé, <date>2014</date>
                                                   <ref
                                                   target="http://efele.net/ebooks/livres/000067"/>
@@ -1005,6 +1016,17 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
+                    <elementSpec ident="licence" mode="change">
+                        <exemplum>
+                            <p>provide the reference to the licence used for all novels in ELTeC,
+                                which is CC-BY 4.0</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <licence target="https://creativecommons.org/licenses/by/4.0/">
+                                    <p><!-- description --></p>
+                                </licence>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="date" mode="change">
                         <exemplum>
                             <p>indicating the date of the publication of a novel in ELTeC within
@@ -1033,6 +1055,98 @@
                                     <gi>bibl</gi>.</p>
                         </remarks>
                     </elementSpec>
+                    <elementSpec ident="trailer" mode="change">
+                        <exemplum>
+                            <p>provides a nested bibliographic description of an intermediate source
+                                within <gi>bibl</gi>, if necessary</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <bibl type="digitalSource">
+                                    <title>Wuthering Heights (1st edition) : wikisource
+                                        edition</title>
+                                    <ref
+                                        target="https://en.wikisource.org/wiki/Wuthering_Heights_(1st_edition)"/>
+                                    <relatedItem type="firstEdition">
+                                        <bibl>
+                                            <title>Wuthering Heights</title>
+                                            <title>A novel by</title>
+                                            <author>Ellis Bell</author>
+                                            <publisher>London: T. C. Newby</publisher>
+                                            <date>1847</date>
+                                        </bibl>
+                                    </relatedItem>
+                                </bibl>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="respStmt" mode="change">
+                        <exemplum>
+                            <p>describes the person responsible for the ELTeC edition of a novel
+                                which will be stated within <gi>titleStmt</gi></p>
+
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <respStmt>
+                                    <resp>principal</resp>
+                                    <name>Christof Schöch</name>
+                                </respStmt>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="sourceDesc" mode="change">
+                        <exemplum>
+                            <p>contains information about every source of the novel in the ELTeC
+                                edition</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <sourceDesc>
+                                    <bibl type="digitalSource"> Éfélé, <date>2014</date>
+                                        <ref target="http://efele.net/ebooks/livres/000067"/>
+                                        <relatedItem type="source">
+                                            <bibl type="firstEdition"> Paris: Furne, J.-J. Dubochet
+                                                et Cie, J. Hetzel et Paulin, <date notAfter="1848"
+                                                  >1842 -1848</date>. </bibl></relatedItem>
+                                    </bibl>
+                                </sourceDesc>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="langUsage" mode="change">
+                        <exemplum>
+                            <p>provide information about the language of the novel, using
+                                    <gi>language</gi></p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <langUsage>
+                                    <language ident="fra">French</language>
+                                </langUsage>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="name" mode="change">
+                        <exemplum>
+                            <p>probides the name of a person which is neither an author nor a
+                                publisher</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <name>Christof Schöch</name>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="pubPlace" mode="change">
+                        <exemplum>
+                            <p>provides information about a publication place of a novel within all
+                                    <att>type</att><gi>bibl</gi> if available</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <pubPlace>Berlin</pubPlace>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="publisher" mode="change">
+                        <exemplum>
+                            <p>provides information about a publisher of a novel within all
+                                    <att>type</att><gi>bibl</gi> if available</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <publisher>London: T. C. Newby</publisher>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+
                 </schemaSpec>
 
             </div>
