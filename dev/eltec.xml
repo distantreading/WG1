@@ -54,6 +54,7 @@
             profileDesc publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
                     <!-- CO: included availability and licence -->
                     <moduleRef key="namesdates" include="forename  persName  surname"/>
+                    <!-- CO do we need namesdates? -->
                     <moduleRef key="corpus" include="textDesc"/>
                     <moduleRef key="analysis" include="s w"/>
                     <!--Class modifications to reduce attribute clutter -->
