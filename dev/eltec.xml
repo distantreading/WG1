@@ -49,9 +49,10 @@
             milestone name note p pb publisher pubPlace quote ref relatedItem resp respStmt rs sp stage hi term title "/>
                     <moduleRef key="textstructure" include="TEI text div body front back trailer"/>
                     <moduleRef key="header"
-                        include="change  encodingDesc 
-    extent fileDesc idno keywords langUsage language  
+                        include="availability change  encodingDesc 
+    extent fileDesc idno keywords langUsage language licence 
             profileDesc publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
+                    <!-- CO: included availability and licence -->
                     <moduleRef key="namesdates" include="forename  persName  surname"/>
                     <moduleRef key="corpus" include="textDesc"/>
                     <moduleRef key="analysis" include="s w"/>
@@ -281,6 +282,15 @@
                             <attDef ident="xml:id" mode="change" usage="req"/>
                             <attDef ident="xml:lang" mode="change" usage="req"/>
                         </attList>
+                        <exemplum>
+                            <p>indicates tha ID and the language of a Spanish novel (ns still need
+                                to be provided xmlns="http://www.tei-c.org/ns/1.0)</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <TEI xml:id="SPA2001" xml:lang="SPA">
+                                    <!--  -->
+                                </TEI>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <!-- make various elements compulsory in the header -->
                     <elementSpec ident="teiHeader" mode="change">
@@ -293,6 +303,42 @@
                                 <elementRef key="revisionDesc"/>
                             </sequence>
                         </content>
+                        <exemplum>
+                            <p>provides a basis header structure for metadata of each novel in
+                                ELTeC</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <teiHeader>
+                                    <fileDesc>
+                                        <titleStmt>
+                                            <!-- information of the author and the title -->
+                                        </titleStmt>
+                                        <extent>
+                                            <!-- documentation of the length-->
+                                        </extent>
+                                        <publicationStmt>
+                                            <!-- publication in the ELTeC edition -->
+                                        </publicationStmt>
+                                        <sourceDesc>
+                                            <!-- documentation of the source(s) for ELTeC -->
+                                        </sourceDesc>
+                                    </fileDesc>
+                                    <encodingDesc n="eltec-1">
+                                        <!-- indication of the encoding level -->
+                                    </encodingDesc>
+                                    <profileDesc>
+                                        <langUsage>
+                                            <!-- indication of the language -->
+                                        </langUsage>
+                                        <textDesc>
+                                            <!-- list of sampling criteria -->
+                                        </textDesc>
+                                    </profileDesc>
+                                    <revisionDesc>
+                                        <!-- documentation of changes -->
+                                    </revisionDesc>
+                                </teiHeader>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <!-- define new elements for selection criteria -->
                     <elementSpec ident="authorGender" mode="add"
@@ -385,6 +431,7 @@
                         </attList>
                         <exemplum>
                             <!-- CO ex added -->
+                            <p>inidcates that a novel contains more than 100,00 words (long)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
                                     <!-- ... -->
@@ -542,6 +589,24 @@
                         <content>
                             <classRef key="model.textDescPart" expand="sequence"/>
                         </content>
+                        <exemplum>
+                            <p>provides information about the four balancing criteria, this example
+                                shows a novel written by a female author (<gi>authorGender</gi> with
+                                    <att>key</att> = F), first published in the first time slot
+                                    (<gi>timeslot</gi> with <att>key</att> = T1), which is
+                                classified as a long novel (<gi>size</gi> with <att>key</att> =
+                                long) and as a highly reprinted novel (<gi>canoncity</gi> with
+                                    <att>key</att> = high)</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <textDesc>
+                                    <authorGender xmlns="http://distantreading.net/eltec/ns" key="F"/>
+                                    <size xmlns="http://distantreading.net/eltec/ns" key="long"/>
+                                    <canonicity xmlns="http://distantreading.net/eltec/ns"
+                                        key="high"/>
+                                    <timeSlot xmlns="http://distantreading.net/eltec/ns" key="T1"/>
+                                </textDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="titleStmt" mode="change">
                         <exemplum>
@@ -646,6 +711,18 @@
                         <attList>
                             <attDef ident="when" mode="change" usage="req"/>
                         </attList>
+                        <exemplum>
+                            <p>provides information about the changes in the document, showing an
+                                examples of the revision description of a French novel</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <revisionDesc>
+                                    <change when="2018-11-01">Conversion with CLIGStoELTeC
+                                        stylesheet for ELTeC-1</change>
+                                    <change when="2015-07-14">cf Revised teiHeader.</change>
+                                    <change when="2014-04-29">cf Initial TEI version.</change>
+                                </revisionDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="div" mode="change">
                         <attList>
@@ -909,7 +986,48 @@
                                     more for orders. </p></egXML>
                         </exemplum>
                     </elementSpec>
+                    <elementSpec ident="availability" mode="change">
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <availability>
+                                    <licence target="https://creativecommons.org/licenses/by/4.0/">
+                                        <p>The TEI mark up is licenced with Creative Commons
+                                            Attribution (CC-BY 4.0).</p>
+                                    </licence>
+                                </availability>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="date" mode="change">
+                        <exemplum>
+                            <p>indicating the date of the publication of a novel in ELTeC within
+                                    <gi>publicationStmt</gi></p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <publicationStmt>
+                                    <p> Published as part of ELTeC <date>2018-11-01</date>
+                                    </p>
+                                </publicationStmt>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>indication the date of the first edition of a novel within
+                                    <gi>bibl</gi></p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <bibl type="firstEdition">
+                                    <!--  -->
+                                    <date>1871</date>
+                                    <!--  -->
+                                </bibl>
+                            </egXML>
+
+                        </exemplum>
+                        <remarks>
+                            <p><gi>date</gi> is used within <gi>pubicationStmt</gi> and within
+                                    <gi>bibl</gi>.</p>
+                        </remarks>
+                    </elementSpec>
                 </schemaSpec>
+
             </div>
         </back>
     </text>
