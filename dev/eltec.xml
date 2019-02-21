@@ -711,8 +711,8 @@
                     <elementSpec ident="change" mode="change">
                         <attList>
                             <attDef ident="when" mode="change" usage="req"/>
-                        </attList>
-                        <exemplum>
+                         </attList>
+                        <exemplum >
                             <p>provides information about the changes in the document, showing an
                                 examples of the revision description of a French novel</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
