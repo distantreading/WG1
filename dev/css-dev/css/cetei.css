@@ -9,15 +9,25 @@ body {
 }
 
 
+tei-filedesc > tei-titlestmt:before {
+    content: 'COST ACTION Distant Reading (https://www.distant-reading.net/)';
+    font-size: 10pt;
+    color: #00487D;
+    margin-bottom: 50px;
+}
 
-/* displays metadata as a block */
+head{
+    background-image: url("distantreading_logo-high-300x138.png");
+    /* background-color: green */}
+
+
 tei-teiheader {
     display: block;
     width: 600px;
     padding: 30px;
     border: 5px solid gray;
     margin: 0;
-    
+
 }
 
 tei-teiheader tei-titlestmt > tei-title {
@@ -27,44 +37,35 @@ tei-teiheader tei-titlestmt > tei-title {
     color: #00487D;
     background-color: #FFFFFF;
     margin-bottom: .5em;
-
-
 }
-img[src="https://github.com/distantreading/WG1/blob/master/dev/css-dev/media/distantreading_logo-high-300x138.png"]
 
 tei-filedesc > tei-titlestmt {
     font-size: 10pt;
 }
 
 
-tei-filedesc > tei-titlestmt > tei-author:after {
-    content: ', ';
 
-}
-
-tei-filedesc > tei-titlestmt > tei-author:last-child:after {
-    content: '.';
-}
-
-tei-measure{
-    display:block;
+tei-measure {
+    display: block;
 }
 
 
-tei-measure:first-child:before{
-    content:'Words: ';
+tei-measure:first-child:before {
+    content: 'Words: ';
+    font-weight: bold;
 }
 
-tei-measure:last-child:before{
-    content:'Pages: ';
+tei-measure:last-child:before {
+    content: 'Pages: ';
+    font-weight: bold;
 }
 
-tei-respStmt{
-    display:block;
+tei-respStmt {
+    display: block;
 }
-tei-respStmt:before{
-    content:'Responsability for ELTeC Edition:';
-        font-weight: bold;
+tei-respStmt:before {
+    content: 'Responsability for ELTeC Edition:';
+    font-weight: bold;
 }
 
 
@@ -75,24 +76,20 @@ tei-filedesc > tei-publicationstmt {
 tei-teiheader tei-sourcedesc {
     display: block;
 }
-tei-teiheader  tei-sourcedesc:before{
-    content:'Source(s):';
-    font-weight: bold;  
+tei-teiheader tei-sourcedesc:before {
+    content: 'Source(s):';
+    font-weight: bold;
 }
 tei-header tei-langUsage {
-    display:block;
+    display: block;
 }
-tei-teiheader tei-langUsage:before{
-    content:'Language(s):';
+tei-teiheader tei-langUsage:before {
+    content: 'Language(s):';
     font-weight: bold;
 }
 
 tei-teiheader > tei-revisiondesc {
-    display: block;
-}
-tei-teiheader tei-revisiondesc:before{
-    content:'Revision(s):';
-    font-weight: bold;   
+    display: none;
 }
 
 tei-body {
