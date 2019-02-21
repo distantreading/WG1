@@ -1,0 +1,204 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="stylesheet" type="text/css" href="https://distantreading.github.io/css/eltec-styler.css">
+      <title>Contents of ELTeC-spa</title>
+   </head>
+   <body>
+      <h4>On 2019-02-17 spa has 5 texts containing 296903 words</h4>
+      <p>Click on a column heading to sort. Click on a text identifier to read the text (may
+         not work in older browsers).
+      </p>
+      <table class="catalogue" id="theTable">
+         <tr class="label">
+            <th onclick="sortTable(0)">Identifier</th>
+            <th onclick="sortTable(1)">Encoding</th>
+            <th onclick="sortTableNumerically(2)">Pages</th>
+            <th onclick="sortTableNumerically(3)">Words</th>
+            <th onclick="sortTable(4)">(Size)</th>
+            <th onclick="sortTable(5)">Date (Slot)</th>
+            <th onclick="sortTable(6)">Title</th>
+            <th onclick="sortTable(7)">Author</th>
+            <th onclick="sortTable(8)">Sex</th>
+            <th onclick="sortTable(9)">Reprints</th>
+         </tr>
+         <tr>
+            <td><a href="SPA1001.html">SPA1001</a></td>
+            <td>eltec-1</td>
+            <td>424</td>
+            <td>111968</td>
+            <td>(long) </td>
+            <td>1844 (T1) </td>
+            <td>El Señor de Bembibre : edición ELTeC</td>
+            <td>Gil y Carrasco, Enrique (1815-1846)</td>
+            <td>M</td>
+            <td>high</td>
+         </tr>
+         <tr>
+            <td><a href="SPA1021.html">SPA1021</a></td>
+            <td>eltec-1</td>
+            <td>345</td>
+            <td>54338</td>
+            <td>(medium) </td>
+            <td>????  (T1) </td>
+            <td>Sab. Novela original : edición ELTeC</td>
+            <td>Gómez de Avellaneda, Gertrudis (1814-1873)</td>
+            <td>F</td>
+            <td>high</td>
+         </tr>
+         <tr>
+            <td><a href="SPA2001.html">SPA2001</a></td>
+            <td>eltec-1</td>
+            <td>267</td>
+            <td>51135</td>
+            <td>(medium) </td>
+            <td>1882 (T2) </td>
+            <td>Trafalgar :  edición ELTeC</td>
+            <td>Galdós, Benito Pérez (1843-1920)</td>
+            <td>M</td>
+            <td>high</td>
+         </tr>
+         <tr>
+            <td><a href="SPA2008.html">SPA2008</a></td>
+            <td>eltec-1</td>
+            <td>247</td>
+            <td>22719</td>
+            <td>(short) </td>
+            <td>1863 (T2) </td>
+            <td>Un servilón y un liberalito, ó Tres almas de Dios : Edición ELTeC </td>
+            <td>Caballero, Fernán (1796-1877)</td>
+            <td>F</td>
+            <td>high</td>
+         </tr>
+         <tr>
+            <td><a href="SPA2017.html">SPA2017</a></td>
+            <td>eltec-1</td>
+            <td></td>
+            <td>56743</td>
+            <td>(medium) </td>
+            <td>1874 (T2) </td>
+            <td>Pepita Jiménez : edición ELTeC</td>
+            <td>Valera y Alcalá-Galiano, Juan (1824-1905)</td>
+            <td>M</td>
+            <td>high</td>
+         </tr>
+      </table><script>
+                    function sortTable(n) {
+                    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                    table = document.getElementById("theTable");
+                    switching = true;
+                    //Set the sorting direction to ascending:
+                    dir = "asc"; 
+                    /*Make a loop that will continue until
+                    no switching has been done:*/
+                    while (switching) {
+                    //start by saying: no switching is done:
+                    switching = false;
+                    rows = table.rows;
+                    /*Loop through all table rows (except the
+                    first, which contains table headers):*/
+                    for (i = 1; i < (rows.length - 1); i++) {
+                    //start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /*Get the two elements you want to compare,
+                    one from current row and one from the next:*/
+                    x = rows[i].getElementsByTagName("td")[n];
+                    y = rows[i + 1].getElementsByTagName("td")[n];
+                    /*check if the two rows should switch place,
+                    based on the direction, asc or desc:*/
+                    
+                    //if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                    //shouldSwitch = true;
+                    //break;
+                    //}
+                    
+                    
+                    if (dir == "asc") {
+                    
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    //if so, mark as a switch and break the loop:
+                    shouldSwitch= true;
+                    break;
+                    }
+                    } else if (dir == "desc") {
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    //if so, mark as a switch and break the loop:
+                    shouldSwitch = true;
+                    break;
+                    }
+                    }
+                    }
+                    if (shouldSwitch) {
+                    /*If a switch has been marked, make the switch
+                    and mark that a switch has been done:*/
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    //Each time a switch is done, increase this count by 1:
+                    switchcount ++;      
+                    } else {
+                    /*If no switching has been done AND the direction is "asc",
+                    set the direction to "desc" and run the while loop again.*/
+                    if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                    }
+                    }
+                    }
+                    }
+                    function sortTableNumerically(n) {
+                    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                    table = document.getElementById("theTable");
+                    switching = true;
+                    //Set the sorting direction to ascending:
+                    dir = "asc"; 
+                    /*Make a loop that will continue until
+                    no switching has been done:*/
+                    while (switching) {
+                    //start by saying: no switching is done:
+                    switching = false;
+                    rows = table.rows;
+                    /*Loop through all table rows (except the
+                    first, which contains table headers):*/
+                    for (i = 1; i < (rows.length - 1); i++) {
+                    //start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /*Get the two elements you want to compare,
+                    one from current row and one from the next:*/
+                    x = rows[i].getElementsByTagName("td")[n];
+                    y = rows[i + 1].getElementsByTagName("td")[n];
+                    /*check if the two rows should switch place,
+                    based on the direction, asc or desc:*/
+                        if (dir == "asc") {
+                    
+                    if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                    //if so, mark as a switch and break the loop:
+                    shouldSwitch= true;
+                    break;
+                    }
+                    } else if (dir == "desc") {
+                    if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                    //if so, mark as a switch and break the loop:
+                    shouldSwitch = true;
+                    break;
+                    }
+                    }
+                    }
+                    if (shouldSwitch) {
+                    /*If a switch has been marked, make the switch
+                    and mark that a switch has been done:*/
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    //Each time a switch is done, increase this count by 1:
+                    switchcount ++;      
+                    } else {
+                    /*If no switching has been done AND the direction is "asc",
+                    set the direction to "desc" and run the while loop again.*/
+                    if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                    }
+                    }
+                    }
+                    }
+                </script></body>
+</html>

@@ -1,0 +1,51 @@
+         
+* {    box-sizing: border-box; }
+
+body {
+    margin: 0;
+}
+
+/* Create two unequal columns that floats next to each other */
+.col {
+    float: left;
+    padding: 10px;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.frame:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+         
+
+div.egXML, div.egXML_valid {
+    clear:both;
+    margin-top:1em;
+    margin-bottom:1em;
+    border-top-width:4px;
+    border-bottom-width:4px;
+    border-left-width:2px;
+    border-right-width:2px;
+    border-style:solid;
+    padding-top:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    margin-left: 0;
+    color:#000000;
+    line-height:1.1em;
+    font-family:monospace;
+    font-size:16pt;
+    white-space:pre;
+     background-color:#f7f9f6;
+    border-color:#c5d8bb;
+}
