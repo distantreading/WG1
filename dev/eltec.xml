@@ -56,10 +56,10 @@
                     <moduleRef key="textstructure" include="TEI text div body front back trailer"/>
                     <moduleRef key="header"
                         include="availability change  encodingDesc 
-    extent fileDesc idno keywords langUsage language licence 
+                   extent fileDesc idno keywords langUsage language licence 
             profileDesc publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
                     <!-- CO: included availability and licence -->
-                    <moduleRef key="namesdates" include="forename  persName  surname"/>
+                    <!-- moduleRef key="namesdates" include="forename  persName  surname"/-->
                     <!-- CO do we need namesdates? -->
                     <moduleRef key="corpus" include="textDesc"/>
                     <moduleRef key="analysis" include="s w"/>
@@ -181,6 +181,7 @@
                     <!-- simplify publicationStmt  -->
                     <elementSpec ident="publicationStmt" mode="change">
                         <content>
+                            <elementRef key="availability"/>
                             <elementRef key="p"/>
                         </content>
 
@@ -190,6 +191,9 @@
                                 <p>describes the publication date for a novel to be integrated in
                                     ELTeC</p>
                                 <publicationStmt>
+                                    <availability>
+                                        <licence target="http://whatever"/>
+                                    </availability>
                                     <p>Published as part of ELTeC <date>2019-01-04</date></p>
                                 </publicationStmt>
                             </egXML>
@@ -218,14 +222,14 @@
                                             published in the author's lifetime</desc>
                                     </valItem>
                                     <valItem ident="printEdition">
-                                        <desc>describe the print source edition which the encoding
-                                            is intended to represent and which is not the first
+                                        <desc>describes a print source edition used as the source of the 
+                                            encoding which is not the first
                                             edition</desc>
                                     </valItem>
                                     <valItem ident="digitalSource">
-                                        <desc> describes the digital surrogate of either the first
-                                            edition of the another printed edition of the
-                                            novel</desc>
+                                        <desc>describes a digital edition used as the source of the encoding,
+                                            which may be derived from the first or another print edition
+                                            </desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -241,8 +245,8 @@
                                         <ref
                                             target="https://en.wikisource.org/wiki/Wuthering_Heights_(1st_edition)"/>
 
-                                        <relatedItem type="firstEdition">
-                                            <bibl>
+                                        <relatedItem>
+                                            <bibl type="firstEdition">
                                                 <title>Wuthering Heights</title>
                                                 <title>A novel by</title>
                                                 <author>Ellis Bell</author>
@@ -253,6 +257,31 @@
                                     </bibl>
                                 </sourceDesc>
                             </egXML>
+                        </exemplum><exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                       
+                                <sourceDesc>           
+                                    <bibl type="printEdition">
+                                        <title>Opera omnia</title>
+                                        <title>Romanzi</title>
+                                        <author>Svevo, Italo</author>
+                                        <respStmt>
+                                            <resp>editor</resp>
+                                            <name>Maier, Bruno</name>
+                                        </respStmt>
+                                        <publisher>dall'Oglio</publisher>
+                                        <pubPlace>Milano</pubPlace>
+                                        <date>1969</date>
+                                        <note>Contiene: Una vita ; Senilita ; La coscienza di Zeno</note>
+                                    </bibl>
+                                    <bibl type="firstEdition"><date>1892</date></bibl>
+                                </sourceDesc>
+                            
+                            </egXML>
+                        <p>The ELTeC text derives from a print edition published in 1969. The first edition of
+                        the work concerned was published in 1892. We do not know whether or not the print edition
+                        used the first edition as a source, and therefore we do not provide an explicit 
+                            <gi>relatedItem</gi>. </p>
                         </exemplum>
                     </elementSpec>
 
@@ -597,12 +626,12 @@
                             <classRef key="model.textDescPart" expand="sequence"/>
                         </content>
                         <exemplum>
-                            <p>provides information about the four balancing criteria, this example
-                                shows a novel written by a female author (<gi>authorGender</gi> with
+                            <p>provides information about the four balancing criteria: for example
+                                a novel written by a female author (<gi>authorGender</gi> with
                                     <att>key</att> = F), first published in the first time slot
                                     (<gi>timeslot</gi> with <att>key</att> = T1), which is
-                                classified as a long novel (<gi>size</gi> with <att>key</att> =
-                                long) and as a highly reprinted novel (<gi>canoncity</gi> with
+                                classified as long  (<gi>size</gi> with <att>key</att> =
+                                long) and as frequently reprinted (<gi>canonicity</gi> with
                                     <att>key</att> = high)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
@@ -618,8 +647,8 @@
                     <elementSpec ident="titleStmt" mode="change">
                         <exemplum>
                             <!-- CO ex added -->
-                            <p>describes an English example for titleStmt including <gi>title</gi>
-                                and <gi>author</gi>, <gi>author</gi> gets an optinal viaf
+                            <p>describes an English example for <gi>titleStmt</gi> including <gi>title</gi>
+                                and <gi>author</gi>, <gi>author</gi> gets an optional viaf
                                 reference</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
@@ -664,7 +693,7 @@
                             <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                         <exemplum>
-                            <p>provides different measurements for lenght </p>
+                            <p>provides different measurements for length </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <extent>
                                     <measure unit="words"><!-- ... --></measure>
@@ -847,6 +876,7 @@
                     <elementSpec ident="author" mode="change">
                         <!-- CO question:  why two elementSpec for author? maybe merge with line 463?-->
                         <!-- no particular reason! -->
+                        <!-- add constraintspec to validate content of author: surname,forenames dates) -->
                         <classes mode="replace">
                             <memberOf key="att.canonical"/>
                             <memberOf key="att.global"/>
@@ -1022,12 +1052,18 @@
                                 which is CC-BY 4.0</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <licence target="https://creativecommons.org/licenses/by/4.0/">
-                                    <p><!-- description --></p>
+                                    <p>Creative Commons Licence with Attribution, version 4</p>
                                 </licence>
                             </egXML>
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="date" mode="change">
+                        
+                        <!-- Add constraintSpec only when inside bibl[@type='firstedition'] 
+                            <attList>
+                            <attDef ident="when" mode="change" usage="req"/>
+                        </attList>
+                        -->
                         <exemplum>
                             <p>indicating the date of the publication of a novel in ELTeC within
                                     <gi>publicationStmt</gi></p>
