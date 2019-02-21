@@ -1,5 +1,5 @@
 ### MDViz ELTeC
-mdtest<-read.table("metadata.txt",header = T, sep = ",", fileEncoding = "UTF-8")
+mdtest<-read.table("eng-metadata.txt",header = T, sep = ",", fileEncoding = "UTF-8")
 head(mdtest)
 table(mdtest$year.cat,mdtest$gender.cat)
 plot(mdtest)
