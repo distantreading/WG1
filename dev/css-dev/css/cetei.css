@@ -8,17 +8,16 @@ body {
     margin: 1em;
 }
 
+img {
+    display: block;
 
-tei-filedesc > tei-titlestmt:before {
-    content: 'COST ACTION Distant Reading (https://www.distant-reading.net/)';
-    font-size: 10pt;
-    color: #00487D;
-    margin-bottom: 50px;
 }
 
-head{
-    background-image: url("distantreading_logo-high-300x138.png");
-    /* background-color: green */}
+tei-publicationStmt:after {
+    content: 'ELTeC is a scholary ressource created in the context of COST ACTION Distant Reading (https://www.distant-reading.net/)';
+    font-size: 10pt;
+    margin-bottom: 50px;
+}
 
 
 tei-teiheader {
@@ -33,6 +32,7 @@ tei-teiheader {
 tei-teiheader tei-titlestmt > tei-title {
     display: block;
     font-size: 16pt;
+    font-style:italic; 
     font-weight: bold;
     color: #00487D;
     background-color: #FFFFFF;
@@ -64,7 +64,7 @@ tei-respStmt {
     display: block;
 }
 tei-respStmt:before {
-    content: 'Responsability for ELTeC Edition:';
+    content: 'Responsibility for ELTeC Edition:';
     font-weight: bold;
 }
 
@@ -101,6 +101,22 @@ tei-div {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+tei-title{
+ font-style:italic;   
+}
+
+tei-bibl > tei-author:before{
+    content:', by ';
+}
+tei-bibl > tei-date:before{
+    content:'(';
+}
+
+tei-bibl > tei-date:after{
+    content:') ';
+}
+
 tei-head {
     display: block;
 }
