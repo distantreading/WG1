@@ -1,35 +1,7 @@
-﻿id,year,year-cat,canon-cat,gender-cat,length,length-cat,counter
-BI000910,1919,T4,high,M,46288,short,1
-BI001508,1886,T3,high,M,84116,medium,1
-ITBI0087,1898,T1,high,M,66501,medium,1
-ITBI0123,1892,T3,high,M,114202,long,1
-ITBI0139,1883,T3,high,M,41286,short,1
-ITBI0184,1901,T4,medium,M,90004,medium,1
-ITBI0511,????,T3,medium,M,32828,short,1
-ITBI0666,1842,T1,high,M,215495,long,1
-ITBI0726,1920,T4,high,M,28390,short,1
-ITBI1225,1852,T1,high,M,46720,short,1
-ITBI1373,1885,T3,high,M,93715,medium,1
-ITBI1569,1923,T4,high,M,141904,long,1
-ITBI1623,1883,T3,high,M,11483,short,1
-ITBI1625,1912,T4,high,M,27440,short,1
-li0166,1870(1870),T2,medium,M,48977,short,1
-li0202,1975(1859),T1,medium,M,420104,long,1
-li0211,1870(1870),T2,medium,M,74110,medium,1
-li0368,1975(1876),T2,medium,M,41194,short,1
-li0477,1971(1869),T2,medium,M,57440,medium,1
-li0566,1883(1860),T2,medium,M,202286,long,1
-li0614,1862(1862),T2,medium,M,44091,short,1
-li0644,1995(1894),T3,medium,M,209250,long,1
-li0735,unav.(1875),T2,medium,M,46863,short,1
-li0770,1989(1889),T3,medium,F,104718,long,1
-li1026,1917(1913),T4,medium,M,58498,medium,1
-li1050,1912(1912),T4,medium,F,108691,long,1
-li1099,1988(1861),T2,medium,M,65883,medium,1
-li1152,1964(1867),T2,medium,M,338962,long,1
-li1236,2005(1853),T1,medium,M,126277,long,1
-li1442,1890(1890),T3,medium,M,70467,medium,1
-li1445,1883(1867),T2,medium,M,142255,long,1
-li1489,1996(1892),T3,medium,M,59185,medium,1
-li1693,1996(1875),T2,medium,M,31508,short,1
-li1749,1995(1866),T2,medium,M,37113,short,1
+id,author-name,book-title,subgenre,year,year-cat,canon-cat,gender-cat,length,length-cat,counter
+SPA1001,Gil y Carrasco,ElSeñordeBembibre,foo,1844,T1,high,M,111968,long,1
+SPA1021,Gómez de Avellaneda,Sab.Novelaoriginal,foo,????,T1,high,F,54338,medium,1
+SPA2001,Galdós,Trafalgar,foo,1882,T2,high,M,51135,medium,1
+SPA2008,Caballero,UnservilónyunliberalitoóTresalmasdeDios,foo,1863,T2,high,F,22719,short,1
+SPA2016,Valera y Alcalá-Galiano,DoñaLuz,foo,1879,T2,high,M,59 554,medium,1
+SPA2017,Valera y Alcalá-Galiano,PepitaJiménez,foo,1874,T2,high,M,56743,medium,1

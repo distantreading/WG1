@@ -7,6 +7,18 @@
 ## composition plots
   library(ggplot2)
 
+### mosaic plot
+install.packages(vcd)
+library(vcd)
+
+mosaic(~ length.cat + year.cat + gender.cat, data=md,
+       highlighting = "gender.cat", highlighting_fill=c("lightblue", "pink"),
+       direction=c("v","h","h"),
+       labeling = labeling_values,
+       main="Current composition of the language collection",
+       sub="Amount of texts with balancing categories (year, length, gender)")
+
+
 ### plot between fem/male per year, y length
 ggplot(md, aes(x=year, y=length, color=gender.cat, shape=gender.cat))+
   geom_vline(xintercept = c(1860,1880,1900), color="darkgray")+
@@ -21,13 +33,4 @@ ggplot(md, aes(x=year, y=length, color=gender.cat, shape=canon.cat))+
   facet_grid(~gender.cat)+
   theme_minimal()+
   ggtitle("composition depending on gender, year, length, and reprint")
-  ggsave("com.png")
-
-### mosaic plot
-install.packages(vcd)
-library(vcd)
-mosaic(~ length.cat + year.cat + gender.cat, data=md,
-       highlighting = "gender.cat", highlighting_fill=c("lightblue", "pink"),
-       direction=c("v","h","h"),
-       labeling = labeling_values,)
-
+ggsave("com.png")

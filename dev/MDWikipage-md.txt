@@ -1,7 +1,3 @@
-
-
-
-
 # The ELTeC Header
 
 Every ELTeC text includes a TEI Header supplying metadata to describe it. There is also a TEI Header for the whole collection, which has additional information common to all the texts. Each encoding level has the same TEI header structure. 
@@ -280,48 +276,6 @@ The `@when` attribute must be supplied and may contain a date in any of the W3C 
 The content of the &lt;change> element may be given in any form considered appropriate. Proper
 mes may optionally be tagged using the &lt;name> element, but this is not currently mandatory.
 
-&lt;change> elements should be supplied in reverse date order, i.e. most recent first.
+`<change>` elements should be supplied in reverse date order, i.e. most recent first.
 
-## Changes from version to version
-This section summarizes the necessary changes of the ELTeC header from the old to the new version of the ODD.
-
-### Adding `<availabilty>` in `<publicationStmt>`
-The `<availabilty>` and <licence> must be added in the <publicationStmt>:
-
-`<publicationStmt>` previous version:
-```
-<publicationStmt>
-    <p>Published as part of ELTeC <date>2019-01-04</date></p>
-</publicationStmt>
-```
-
-`<publicationStmt>` new version:
-```
-<publicationStmt>
-    <availability>
-        <licence
-            target="https://creativecommons.org/licenses/by/4.0/">
-            <p>The TEI mark up is licenced with Creative Commons
-                Attribution (CC-BY 4.0).</p>
-        </licence>
-    </availability>
-    <p>Published as part of ELTeC <date>2019-01-04</date></p>
-</publicationStmt>
-
-```
-
-### Schema for author names
-In order to get consistent information about the author within `titleStmt` we introduced a value validation which follows the following schema which focuses on th exact sequence of characters:
-
-```
-<author>Last name, first name (YYYY-YYYY)</author>
-```
-
-
-Example:
-```
-<author>Forster, Edward Morgan (1879-1970)</author>
-```
-
-### 
 
