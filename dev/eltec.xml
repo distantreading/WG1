@@ -148,7 +148,7 @@
                     </elementSpec>
                     <elementSpec ident="title" mode="change">
                         <constraintSpec mode="add" ident="noEmptyTitle" scheme="schematron">
-                            <constraint><!-- CO added information -->
+                            <constraint>
                                 <assert xmlns="http://purl.oclc.org/dsdl/schematron"
                                     test="child::* or child::text()[normalize-space()]" role="ERROR"
                                     >provide a title for each novel followed by the phrase "ELTeC
@@ -157,9 +157,8 @@
                             </constraint>
                         </constraintSpec>
                         <exemplum>
-                            <p>describes the a title of an English novel and the edition in which it
-                                is included</p>
-                            <!-- CO add ex -->
+                            <p>describes the a title of a novel and the edition in which it is
+                                included</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title>Wuthering Heights : ELTeC edition</title>
@@ -168,8 +167,8 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>specifies the title of a Spanish novel using <att>ref</att> attribute
-                                to reference an authority file entry for the title; in this case in
+                            <p>specifies the title of novel using <att>ref</att> attribute to
+                                reference an authority file entry for the title; in this case in
                                 VIAF</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
@@ -430,7 +429,6 @@
                             </attDef>
                         </attList>
                         <exemplum>
-                            <!-- CO ex added -->
                             <p>indicates that the author of the novel to be described is male
                                 (M)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -484,7 +482,6 @@
                             </attDef>
                         </attList>
                         <exemplum>
-                            <!-- CO ex added -->
                             <p>inidcates that a novel contains more than 100,00 words (long)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
@@ -536,7 +533,6 @@
                             </attDef>
                         </attList>
                         <exemplum>
-                            <!-- CO ex added -->
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
                                     <!-- ...  -->
@@ -577,7 +573,6 @@
                             </attDef>
                         </attList>
                         <exemplum>
-                            <!-- CO ex added -->
                             <p>indicates that the novel to be described is published for the first
                                 between 1840 and 1859 (T1)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -595,30 +590,31 @@
                             <classRef key="model.profileDescPart" expand="sequence"/>
                         </content>
                         <exemplum>
-                            <p>describes the profil of the French novel including the language and
-                                the balancing criteria gender of the author, lenght and
-                                reprint count and the time slot</p>
-                            <!-- CO ex added -->
+                            <p>describes the profil of a novel including the language and the
+                                balancing criteria gender of the author, lenght and reprint count
+                                and the time slot</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
                                     <langUsage>
                                         <language ident="fra">French</language>
                                     </langUsage>
                                     <textDesc>
-                                        <authorGender xmlns="http://distantreading.net/eltec/ns" key="M"></authorGender>
-                                        <size xmlns="http://distantreading.net/eltec/ns" key="medium"></size>
-                                        <canonicity xmlns="http://distantreading.net/eltec/ns" key="medium"></canonicity>
-                                        <timeSlot xmlns="http://distantreading.net/eltec/ns" key="T1"></timeSlot>
+                                        <authorGender xmlns="http://distantreading.net/eltec/ns"
+                                            key="M"/>
+                                        <size xmlns="http://distantreading.net/eltec/ns"
+                                            key="medium"/>
+                                        <canonicity xmlns="http://distantreading.net/eltec/ns"
+                                            key="medium"/>
+                                        <timeSlot xmlns="http://distantreading.net/eltec/ns"
+                                            key="T1"/>
                                     </textDesc>
                                 </profileDesc>
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>describes the profil of the German novel including the language and
-                                the balancing criteria gender of the author, size, lenght and
-                                reprint count</p>
-                            <!-- CO ex added -->
-
+                            <p>describes the profil of a novel including the language and the
+                                balancing criteria gender of the author, size, lenght and reprint
+                                count</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
                                     <langUsage>
@@ -664,10 +660,9 @@
                     </elementSpec>
                     <elementSpec ident="titleStmt" mode="change">
                         <exemplum>
-                            <!-- CO ex added -->
-                            <p>describes an English example for <gi>titleStmt</gi> including
-                                    <gi>title</gi> and <gi>author</gi>, <gi>author</gi> gets an
-                                optional viaf reference</p>
+                            <p>describes an example for <gi>titleStmt</gi> including <gi>title</gi>
+                                and <gi>author</gi>, <gi>author</gi> gets an optional viaf
+                                reference</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title>Silas Marner: The Weaver of Raveloe : ELTec
@@ -681,9 +676,9 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <!-- CO ex added -->
-                            <p>describes a Spanish example for titleStmt including <gi>title</gi>
-                                and <gi>author</gi> both having optional viaf references.</p>
+                            <p>describes a Spanish example for <gi>titleStmt</gi> including
+                                    <gi>title</gi> and <gi>author</gi> both having optional viaf
+                                references provided by <att>ref</att>.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title ref="viaf:194763311">El Señor de Bembibre : edición
@@ -711,11 +706,13 @@
                             <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                         <exemplum>
-                            <p>provides different measurements for length </p>
+                            <p>provides different measurements for length</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <extent>
-                                    <measure unit="words"><!-- ... --></measure>
-                                    <measure unit="pages"><!-- ... --></measure>
+                                    <measure unit="words"
+                                        ><!-- ... insert number of ... --></measure>
+                                    <measure unit="pages"
+                                        ><!-- ... insert number of ... --></measure>
                                 </extent>
                             </egXML>
                         </exemplum>
@@ -731,20 +728,20 @@
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="pages">
-                                        <desc>pages in the source text</desc>
+                                        <desc>refers to pages in the source text</desc>
                                     </valItem>
                                     <valItem ident="words">
-                                        <desc>approximate number of space delimited tokens in source
-                                        </desc>
+                                        <desc>approximates the number of space delimited tokens in
+                                            source text</desc>
                                     </valItem>
                                     <valItem ident="vols">
-                                        <desc>number of volumes for original source text </desc>
+                                        <desc>refers to the number of volumes for original source
+                                            text </desc>
                                     </valItem>
                                 </valList>
                             </attDef>
                         </attList>
                         <exemplum>
-                            <!-- CO ex added  -->
                             <p>describes two measurements for <gi>extent</gi>: the number of words
                                 and the number of pages</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -756,8 +753,9 @@
                         </exemplum>
                         <remarks>
                             <p>An indication of the number of words is mandatory. Indicating the
-                                number of pages is optional: if this figure is not available do not
-                                provide any <tag>measure unit='pages'</tag> element. </p>
+                                number of pages is optional: If information for page or volume count
+                                is not available the relevant <gi>measure</gi> element should be
+                                absent. </p>
                         </remarks>
                     </elementSpec>
                     <!-- require a date on change -->
@@ -767,8 +765,7 @@
                         </attList>
                         <exemplum>
                             <p>provides information about the changes in the document, showing an
-                                examples of the revision description (<gi>revisonDesc</gi>) of a
-                                French novel</p>
+                                example of the revision description (<gi>revisonDesc</gi>)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <revisionDesc>
                                     <change when="2018-11-01">Conversion with CLIGStoELTeC
@@ -781,7 +778,7 @@
                     </elementSpec>
                     <elementSpec ident="revisionDesc">
                         <exemplum>
-                            <p>contains the information about changes (<gi>change</gi> in a
+                            <p>provides the information about changes (<gi>change</gi> in a
                                 document</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <revisionDesc>
@@ -815,11 +812,6 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    <!-- adding better examples -->
-                    <!-- CO changed example -->
-                    <!--  <p>provides a French example of how to fill in the necessary metadata in the
-                            <gi>teiHeader</gi></p>
-                -->
                     <elementSpec ident="TEI" mode="change">
                         <exemplum xml:lang="en">
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -897,10 +889,7 @@
                                 </TEI></egXML>
                         </exemplum>
                     </elementSpec>
-
                     <elementSpec ident="author" mode="change">
-                        <!-- CO question:  why two elementSpec for author? maybe merge with line 463?-->
-                        <!-- no particular reason! -->
                         <!-- add constraintspec to validate content of author: surname,forenames dates) -->
                         <classes mode="replace">
                             <memberOf key="att.canonical"/>
@@ -913,11 +902,12 @@
                                 <elementRef key="date"/>
                                 <elementRef key="idno"/>
                                 <!--   idno is used to indicate VIAF or other external id for an author -->
+                                <!-- CO we decided to remove these elements from author -->
                             </alternate>
                         </content>
                         <exemplum xml:lang="en">
                             <p>When used within a <gi>titleStmt</gi>, an author's name is given in a
-                                standardized format (surname, forename/s, dates) as shown in this
+                                standardized format (surname, forename/s, (YYYY-YYYY)) as shown in this
                                 example.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#UND">
                                 <author ref="viaf:31996364">Forster, Edward Morgan
@@ -1149,7 +1139,7 @@
                     <elementSpec ident="respStmt" mode="change">
                         <exemplum>
                             <p>describes the person responsible for the ELTeC edition of a novel
-                                which will be stated within <gi>titleStmt</gi></p>
+                                which will be stated in <gi>titleStmt</gi></p>
 
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <respStmt>
@@ -1169,8 +1159,10 @@
                                         <ref target="http://efele.net/ebooks/livres/000067"/>
                                         <relatedItem type="source">
                                             <bibl type="firstEdition"> Paris: Furne, J.-J. Dubochet
-                                                et Cie, J. Hetzel et Paulin, <date notAfter="1848"
-                                                  >1842 -1848</date>. </bibl></relatedItem>
+                                                et Cie, J. Hetzel et Paulin, 
+                                                <date notAfter="1848">1842 -1848</date>. 
+                                            </bibl>
+                                        </relatedItem>
                                     </bibl>
                                 </sourceDesc>
                             </egXML>
@@ -1178,7 +1170,7 @@
                     </elementSpec>
                     <elementSpec ident="langUsage" mode="change">
                         <exemplum>
-                            <p>provide information about the language of the novel, using
+                            <p>provides information about the language of the novel, using
                                     <gi>language</gi></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <langUsage>
@@ -1189,7 +1181,7 @@
                     </elementSpec>
                     <elementSpec ident="name" mode="change">
                         <exemplum>
-                            <p>probides the name of a person which is neither an author nor a
+                            <p>provides the name of a person which is neither an author nor a
                                 publisher</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <name>Christof Schöch</name>
@@ -1199,7 +1191,7 @@
                     <elementSpec ident="pubPlace" mode="change">
                         <exemplum>
                             <p>provides information about a publication place of a novel within all
-                                    <att>type</att><gi>bibl</gi> if available</p>
+                                    <att>type</att> of <gi>bibl</gi> if available</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <pubPlace>Berlin</pubPlace>
                             </egXML>
@@ -1208,15 +1200,13 @@
                     <elementSpec ident="publisher" mode="change">
                         <exemplum>
                             <p>provides information about a publisher of a novel within all
-                                    <att>type</att><gi>bibl</gi> if available</p>
+                                    <att>type</att> of <gi>bibl</gi> if available</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publisher>London: T. C. Newby</publisher>
                             </egXML>
                         </exemplum>
                     </elementSpec>
-
                 </schemaSpec>
-
             </div>
         </back>
     </text>
