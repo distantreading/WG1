@@ -31,8 +31,10 @@
         </revisionDesc>
     </teiHeader>
     <text>
-  <!--      <xi:include href="eltec-body.xml"/>-->
-        <body><p>Template document for creating the ELTeC Library</p></body>
+        <!--      <xi:include href="eltec-body.xml"/>-->
+        <body>
+            <p>Template document for creating the ELTeC Library</p>
+        </body>
         <!-- transform this document using  the stylesheet in 
             ${frameworks}/tei/xml/tei/stylesheet/odds/odd2odd.xsl
             with parameter defaultSource set to  ${frameworks}/tei/xml/tei/odd/p5subset.xml
@@ -192,7 +194,11 @@
                                     ELTeC</p>
                                 <publicationStmt>
                                     <availability>
-                                        <licence target="http://whatever"/>
+                                        <licence
+                                            target="https://creativecommons.org/licenses/by/4.0/">
+                                            <p>The TEI mark up is licenced with Creative Commons
+                                                Attribution (CC-BY 4.0).</p>
+                                        </licence>
                                     </availability>
                                     <p>Published as part of ELTeC <date>2019-01-04</date></p>
                                 </publicationStmt>
@@ -204,6 +210,13 @@
                                     ELTeC in Spanish, chosing the language of the novel being
                                     described</p>
                                 <publicationStmt>
+                                    <availability>
+                                        <licence
+                                            target="https://creativecommons.org/licenses/by/4.0/">
+                                            <p>El documento TEI está licenciado con Creative Commons
+                                                Attribution (CC-BY 4.0).</p>
+                                        </licence>
+                                    </availability>
                                     <p>Incorporado a ELTeC el <date>2019-01-5</date></p>
                                 </publicationStmt>
                             </egXML>
@@ -222,14 +235,13 @@
                                             published in the author's lifetime</desc>
                                     </valItem>
                                     <valItem ident="printEdition">
-                                        <desc>describes a print source edition used as the source of the 
-                                            encoding which is not the first
-                                            edition</desc>
+                                        <desc>describes a print source edition used as the source of
+                                            the encoding which is not the first edition</desc>
                                     </valItem>
                                     <valItem ident="digitalSource">
-                                        <desc>describes a digital edition used as the source of the encoding,
-                                            which may be derived from the first or another print edition
-                                            </desc>
+                                        <desc>describes a digital edition used as the source of the
+                                            encoding, which may be derived from the first or another
+                                            print edition </desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -257,10 +269,10 @@
                                     </bibl>
                                 </sourceDesc>
                             </egXML>
-                        </exemplum><exemplum>
+                        </exemplum>
+                        <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                       
-                                <sourceDesc>           
+                                <sourceDesc>
                                     <bibl type="printEdition">
                                         <title>Opera omnia</title>
                                         <title>Romanzi</title>
@@ -272,16 +284,19 @@
                                         <publisher>dall'Oglio</publisher>
                                         <pubPlace>Milano</pubPlace>
                                         <date>1969</date>
-                                        <note>Contiene: Una vita ; Senilita ; La coscienza di Zeno</note>
+                                        <note>Contiene: Una vita ; Senilita ; La coscienza di
+                                            Zeno</note>
                                     </bibl>
-                                    <bibl type="firstEdition"><date>1892</date></bibl>
+                                    <bibl type="firstEdition">
+                                        <date>1892</date>
+                                    </bibl>
                                 </sourceDesc>
-                            
                             </egXML>
-                        <p>The ELTeC text derives from a print edition published in 1969. The first edition of
-                        the work concerned was published in 1892. We do not know whether or not the print edition
-                        used the first edition as a source, and therefore we do not provide an explicit 
-                            <gi>relatedItem</gi>. </p>
+                            <p>The ELTeC text derives from a print edition published in 1969. The
+                                first edition of the work concerned was published in 1892. We do not
+                                know whether or not the print edition used the first edition as a
+                                source, and therefore we do not provide an explicit
+                                    <gi>relatedItem</gi>. </p>
                         </exemplum>
                     </elementSpec>
 
@@ -352,6 +367,9 @@
                                             <!-- documentation of the length-->
                                         </extent>
                                         <publicationStmt>
+                                            <availability>
+                                                <!-- licence information -->
+                                            </availability>
                                             <!-- publication in the ELTeC edition -->
                                         </publicationStmt>
                                         <sourceDesc>
@@ -578,19 +596,19 @@
                         </content>
                         <exemplum>
                             <p>describes the profil of the French novel including the language and
-                                the balancing criteria gender of the author, size, lenght and
-                                reprint count</p>
+                                the balancing criteria gender of the author, lenght and
+                                reprint count and the time slot</p>
                             <!-- CO ex added -->
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
                                     <langUsage>
                                         <language ident="fra">French</language>
                                     </langUsage>
-                                    <textDesc xmlns:e="http://distantreading.net/eltec/ns">
-                                        <e:authorGender key="M"/>
-                                        <e:size key="long"/>
-                                        <e:canonicity key="medium"/>
-                                        <e:timeSlot key="T1"/>
+                                    <textDesc>
+                                        <authorGender xmlns="http://distantreading.net/eltec/ns" key="M"></authorGender>
+                                        <size xmlns="http://distantreading.net/eltec/ns" key="medium"></size>
+                                        <canonicity xmlns="http://distantreading.net/eltec/ns" key="medium"></canonicity>
+                                        <timeSlot xmlns="http://distantreading.net/eltec/ns" key="T1"></timeSlot>
                                     </textDesc>
                                 </profileDesc>
                             </egXML>
@@ -626,13 +644,13 @@
                             <classRef key="model.textDescPart" expand="sequence"/>
                         </content>
                         <exemplum>
-                            <p>provides information about the four balancing criteria: for example
-                                a novel written by a female author (<gi>authorGender</gi> with
+                            <p>provides information about the four balancing criteria: for example a
+                                novel written by a female author (<gi>authorGender</gi> with
                                     <att>key</att> = F), first published in the first time slot
                                     (<gi>timeslot</gi> with <att>key</att> = T1), which is
-                                classified as long  (<gi>size</gi> with <att>key</att> =
-                                long) and as frequently reprinted (<gi>canonicity</gi> with
-                                    <att>key</att> = high)</p>
+                                classified as long (<gi>size</gi> with <att>key</att> = long) and as
+                                frequently reprinted (<gi>canonicity</gi> with <att>key</att> =
+                                high)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
                                     <authorGender xmlns="http://distantreading.net/eltec/ns" key="F"/>
@@ -647,9 +665,9 @@
                     <elementSpec ident="titleStmt" mode="change">
                         <exemplum>
                             <!-- CO ex added -->
-                            <p>describes an English example for <gi>titleStmt</gi> including <gi>title</gi>
-                                and <gi>author</gi>, <gi>author</gi> gets an optional viaf
-                                reference</p>
+                            <p>describes an English example for <gi>titleStmt</gi> including
+                                    <gi>title</gi> and <gi>author</gi>, <gi>author</gi> gets an
+                                optional viaf reference</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title>Silas Marner: The Weaver of Raveloe : ELTec
@@ -746,8 +764,8 @@
                     <elementSpec ident="change" mode="change">
                         <attList>
                             <attDef ident="when" mode="change" usage="req"/>
-                         </attList>
-                        <exemplum >
+                        </attList>
+                        <exemplum>
                             <p>provides information about the changes in the document, showing an
                                 examples of the revision description (<gi>revisonDesc</gi>) of a
                                 French novel</p>
@@ -823,6 +841,13 @@
                                                 <measure unit="pages">0</measure>
                                             </extent>
                                             <publicationStmt>
+                                                <availability>
+                                                  <licence
+                                                  target="https://creativecommons.org/licenses/by/4.0/">
+                                                  <p>The TEI mark up is licenced with Creative
+                                                  Commons Attribution (CC-BY 4.0).</p>
+                                                  </licence>
+                                                </availability>
                                                 <p> Published as part of ELTeC
                                                   <date>2018-11-01</date>
                                                 </p>
@@ -1048,17 +1073,18 @@
                     </elementSpec>
                     <elementSpec ident="licence" mode="change">
                         <exemplum>
-                            <p>provide the reference to the licence used for all novels in ELTeC,
+                            <p>provides the reference to the licence used for all novels in ELTeC,
                                 which is CC-BY 4.0</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <licence target="https://creativecommons.org/licenses/by/4.0/">
-                                    <p>Creative Commons Licence with Attribution, version 4</p>
+                                    <p>The TEI mark up is licenced with Creative Commons Attribution
+                                        (CC-BY 4.0).</p>
                                 </licence>
                             </egXML>
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="date" mode="change">
-                        
+
                         <!-- Add constraintSpec only when inside bibl[@type='firstedition'] 
                             <attList>
                             <attDef ident="when" mode="change" usage="req"/>
@@ -1069,6 +1095,12 @@
                                     <gi>publicationStmt</gi></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
+                                    <availability>
+                                        <licence
+                                            target="https://creativecommons.org/licenses/by/4.0/">
+                                            <p><!-- description --></p>
+                                        </licence>
+                                    </availability>
                                     <p> Published as part of ELTeC <date>2018-11-01</date>
                                     </p>
                                 </publicationStmt>

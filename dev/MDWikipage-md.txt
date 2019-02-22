@@ -1,0 +1,327 @@
+
+
+
+
+# The ELTeC Header
+
+Every ELTeC text includes a TEI Header supplying metadata to describe it. There is also a TEI Header for the whole collection, which has additional information common to all the texts. Each encoding level has the same TEI header structure. 
+
+
+
+## Introduction to the new ODD version
+
+The new version of the ODD includes changes in the teiHeader and it not downwards compatible. This means that all TEI document might get invalid with the introduction of this new version. 
+
+The changes only affect the metadata part of the TEI document and were necessary to to implement the decision we took in Lisbon This wikipage will be explain all changes in detail.  
+
+## Explanation and examples - This is a discussion draft! It may change!
+
+Here is the basic template for an individual ELTeC header:
+
+```
+<teiHeader>
+  <fileDesc>
+    <titleStmt>
+        <title><!-- title of work --></title>
+        <author><!-- information about the author --></author>
+        <respStmt><!-- information about the encoder --></respStmt>        
+    </titleStmt>
+    <extent>
+             <!-- size of the text, in pages and words -->
+     </extent>
+     <publicationStmt>
+         <availability>
+         <!-- standard text about the licence -->     
+         </availability>
+         <!-- standard text about status as part of ELTeC -->
+    </publicationStmt>
+    <sourceDesc>
+     <bibl>
+        <!-- bibliographic description of the source from which it was derived -->
+     </bibl>
+    </sourceDesc>
+</fileDesc>
+<profileDesc>
+      <!-- additional descriptive information -->
+</profileDesc>
+<revisionDesc>
+     <!-- revision information -->
+</revisionDesc>
+</teiHeader>
+```
+
+Each of the TEI elements shown above must be provided and used as described below.  The ELTeC schemas will reject as invalid a document in which these conventions are not followed. 
+
+The natural language used for text in the Header should be that of the language collection to which the text belongs, e.g. French if the text is in French. The attribute @xml:lang may be supplied on any element to indicate its content is in some other language where necessary.
+
+### The file description (&lt;fileDesc>)
+
+#### The title statement (&lt;titleStmt>)
+
+This must supply :
+
+- at least one &lt;title> element containing the standard title of the work, followed
+by the phrase "ELTeC edition" (or its equivalent in the appropriate language). Multiple title
+elements should be supplied only if the title has been translated into some other language.
+
+- at least one &lt;author> element containing the standard name of the author, in the form SURNAME,
+FORENAMES (BIRTHYEAR - DEATHYEAR). If either date is unknown, it may be replaced by a question-mark.
+The author name should be that under which the author is conventionally catalogued, not necessarily
+that found on the title page. 
+
+- at least one &lt;respStmt> element containing one or more &lt;name> elements and one or more
+&lt;resp> elements indicating the person/s responsible for producing the ELTeC edition, and the nature of their responsibility respectively. If needed add more than one &lt;respStmt>.
+
+Here is a simple example, for a Portuguese text :
+
+```
+     <titleStmt>
+        <title>Sacrificada</title>
+        <author>Castro Osório, Ana de (1839-1871)</author>
+        <respStmt>
+           <resp>Original HTML capture</resp>
+       <name>Pedro Saborano</name>
+       </respStmt>
+       <respStmt>
+         <resp>ELTeC encoding</resp>
+         <name>Diana Santos</name>
+      </respStmt>
+   </titleStmt>
+
+```
+
+                                 
+
+
+The &lt;title> and &lt;author> elements may also supply a link to a standard authority file such as VIAF, using the @ref attribute, as in the following (French) example.
+
+```
+<titleStmt>
+        <title ref="viaf:287900644">Numa Roumestan : Mœurs Parisiennes : édition ELTeC</title>
+        <author ref="viaf:4928621">Daudet, Alphonse (1840-1897)</author>
+        <respStmt>
+          <resp>principal</resp>
+          <name>Christof Schöch</name>
+        </respStmt>
+</titleStmt>
+```
+
+The details of element content (form of author name etc.) specified here are not yet validated by 
+the ELTeC schemas, but will be in a future release.
+
+#### The extent statement (&lt;extent>)
+
+This must supply :
+
+- one or more &lt;measure> elements, indicating the size of the text. The size must be given as
+numeric content, and the type of measurement must be one of words, pages, or
+vols as indicated by the
+@unit attribute.
+
+Here is a simple example, for a French text :
+
+```
+<extent>
+<measure unit="words">12000</measure>
+<measure unit="pages">256</measure>
+<measure unit="vols">3</measure>
+</extent>
+```
+
+A word count is mandatory. It should give the number of space-delimited tokens within the &lt;text> 
+element, excluding comments and other tagging. If information for page or volume count is not available
+the relevant &lt;measure> element should be absent.  
+
+#### The publication statement (&lt;publicationStmt>)
+
+This should contain a single &lt;p> element containing a fixed phrase such as "Incorporated into the ELTeC on " (or its equivalent in the appropriate language), followed by a date, tagged with the &lt;date> element. The publication statement includes the element &lt;availability>. &lt;availability> provides the reference to the licence used for all novels in ELTeC, which is CC-BY 4. 
+
+Here is a simple example, for an English text :
+
+```
+<publicationStmt>
+    <availability>
+        <licence
+            target="https://creativecommons.org/licenses/by/4.0/">
+            <p>The TEI mark up is licenced with Creative Commons
+                Attribution (CC-BY 4.0).</p>
+        </licence>
+    </availability>
+    <p>Published as part of ELTeC <date>2019-01-04</date></p>
+</publicationStmt>
+```
+
+#### The source description (&lt;sourceDesc>)
+
+This must contain at least one &lt;bibl> element containing a bibliographic description of first edition of a text from which the ELTeC version has been derived. This description might include any or all of the following standard TEI bibliographic elements:
+
+- &lt;author>, &lt;title>, &lt;pubPlace>, &lt;publisher>, &lt;date>
+- &lt;idno> may be used if the source text has a standard identifier such as an ISBN or library shelf mark
+- &lt;relatedItem> may be used to provide a nested bibliographic description of an intermediate source
+- &lt;ref> may be used to supply a URI if the source used is online
+
+Here is a French example:
+
+```
+<sourceDesc>
+<bibl type="source">
+<ref target="http://gallica.bnf.fr/ark:/12148/bpt6k931128v"> Tatiana Leïlof roman parisien (édition numerisée) </ref>
+<publisher> gallica.bnf.fr / Bibliothèque nationale de France </publisher>
+<idno type="ARK">12148/bpt6k931128v</idno>
+<relatedItem>
+  <bibl type="copyText"><title>Tatiana Leïlof , roman parisien, par Édouard Rod</title>
+  <publisher>E. Plon, Nourrit et Cie</publisher>
+  <pubPlace>Paris</pubPlace>
+  <date>1886</date>
+</bibl>
+</relatedItem>
+</bibl>
+</sourceDesc>
+```
+This encoding shows that the immediate source of the ELTeC text is the digital facsimile provided  under the title and ARK identifier indicated, and that that digital text is itself related  to a print edition, published in Paris in 1886.
+
+The @type attribute indicates the status of the item described by each &lt;bibl>. The following values are envisaged:
+
+- `firstEdition`: describes the first complete print source edition published in the author's lifetime
+- `printEdition`: describes a print source edition used as the source of the encoding which is not the first edition
+- `digitalSource`: describes a digital edition used as the source of the encoding, which may be derived from the first or another print edition
+
+At least one `<bibl type="firstEdition">` must be present, and it must contain a 
+&lt;date> element.
+
+
+#### The profile description (&lt;profileDesc>)
+
+This must contain a &lt;langUsage> element detailing the language or languages used in the text, 
+followed by a <textDesc> element providing information about the classification of this text.
+
+The &lt;textDesc> element contains one of each of the following elements in the order indicated:
+
+- `<authorGender>`	specifies the sex of the author where this is known
+- `<canonicity>`	indicates the degree to which the text has become part of a literary canon
+- `<size>`	indicates the size group to which the text belongs
+- `<timeSlot>`	specifies the time period during which the work was first published
+
+These elements are used to encode the selection criteria applicable to the current text. They are specific to the ELTeC project, and are therefore taken from the ELTeC namespace (http://distant-reading.net/eltec/ns) 
+rather than the TEI namespace.
+
+The &lt;langUsage> element should contain one or more &lt;language> element, one for each of the human languages used in the text. The @ident attribute of this element identifies the language using the ISO 639-2 code in the same way as the @xml:lang attribute. The @usage attribute may be used to indicate approximately what percentage of the text uses this language, or otherwise qualify it by means of a brief description.
+
+The &lt;textDesc> element contains four elements defining the selection criteria applicable to this text. These are specific to ELTeC and are therefore defined in the ELTeC namespace.
+
+The following table shows the possible values for the `<authorGender>`
+
+|cat|description|
+|--|--|
+|F|female|
+|M|male|
+|U|author sex unknown|
+|X|author sex mixed|
+
+The following table shows the mapping between word count and values for the `<size>` @key:
+
+|word count|code|
+|--|--|
+|10,000 - 50,000| short|
+|50,001 - 100,000| medium|
+|over 100,000|long|
+
+The following table shows the mapping between date of first publication and times slot 
+as given by the `<timeSlot>` @key: 
+
+|Year first published|code|
+|--|--|
+|1840-1859|T1|
+|1860-1879|T2|
+|1880-1899|T3|
+|1900-1920|T4|
+
+Note that we have one extra year in slot T4. 
+
+The codes for `<canonicity>` are high, medium, low; their 
+correspondence with other metadata has yet to be decided.
+
+Here is an French example:
+
+```
+    <profileDesc>
+      <langUsage>
+        <language ident="fra">French</language>
+      </langUsage>
+      <textDesc>
+        <authorGender xmlns="http://distantreading.net/eltec/ns" key="M"></authorGender>
+        <size xmlns="http://distantreading.net/eltec/ns" key="medium"></size>
+        <canonicity xmlns="http://distantreading.net/eltec/ns" key="medium"></canonicity>
+        <timeSlot xmlns="http://distantreading.net/eltec/ns" key="T1"></timeSlot>
+      </textDesc>
+    </profileDesc>
+```
+
+This example describes the profil of the French novel including the language and                                 the balancing criteria gender of the author (M for male), size (medium for containing 50,001 - 100,000 words), time solt (T1 for first published between 1840-1859) and reprint count (tba)
+
+#### The revision description (&lt;revisionDesc>)
+
+This contains at least one &lt;change> element, documenting significant revisions or versions of the associated text. Each change element has a @when attribute which gives the date of the change in  W3C format (YYYY-MM-DD) and the change elements are given in chronological order, most recent first. The content of the element should be a brief sentence indicating what was done and who was responsible for doing it, using the language of the text.
+
+ 
+Here is an example from a Spanish text:
+```
+<revisionDesc> 
+  <change when="2018-04-27">Revisión en formato ELTeC: Lou Burnard</change> 
+  <change when="2001-10-04">Supervisión del texto : Marisa Payá (Supervisora)</change> 
+  <change when="2001-10-04">Revisión del formato : Josefina Carrión (Supervisora)</change> 
+  <change when="2001-11-27">Etiquetado del texto en XML-TEI : Ana López Díaz (Correctora)</change><change when="2004-06-30">Revisión del etiquetado : Mari Carmen Jerez Gaona (Correctora)</change> 
+</revisionDesc> 
+
+```
+The `@when` attribute must be supplied and may contain a date in any of the W3C approved date formats, e.g.
+`YYYY-MM-DD`, `YYYYMMDD`, `YYYY` etc. For consistency, the first is recommended.
+
+The content of the &lt;change> element may be given in any form considered appropriate. Proper
+mes may optionally be tagged using the &lt;name> element, but this is not currently mandatory.
+
+&lt;change> elements should be supplied in reverse date order, i.e. most recent first.
+
+## Changes from version to version
+This section summarizes the necessary changes of the ELTeC header from the old to the new version of the ODD.
+
+### Adding `<availabilty>` in `<publicationStmt>`
+The `<availabilty>` and <licence> must be added in the <publicationStmt>:
+
+`<publicationStmt>` previous version:
+```
+<publicationStmt>
+    <p>Published as part of ELTeC <date>2019-01-04</date></p>
+</publicationStmt>
+```
+
+`<publicationStmt>` new version:
+```
+<publicationStmt>
+    <availability>
+        <licence
+            target="https://creativecommons.org/licenses/by/4.0/">
+            <p>The TEI mark up is licenced with Creative Commons
+                Attribution (CC-BY 4.0).</p>
+        </licence>
+    </availability>
+    <p>Published as part of ELTeC <date>2019-01-04</date></p>
+</publicationStmt>
+
+```
+
+### Schema for author names
+In order to get consistent information about the author within `titleStmt` we introduced a value validation which follows the following schema which focuses on th exact sequence of characters:
+
+```
+<author>Last name, first name (YYYY-YYYY)</author>
+```
+
+
+Example:
+```
+<author>Forster, Edward Morgan (1879-1970)</author>
+```
+
+### 
+
