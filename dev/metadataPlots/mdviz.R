@@ -1,0 +1,33 @@
+### MDViz ELTeC
+  md<-read.table("metadata.txt",header = T, sep = ",", fileEncoding = "UTF-8")
+  head(md)
+  table(md$year.cat,md$gender.cat)
+  plot(md)
+  str(md)
+## composition plots
+  library(ggplot2)
+
+### plot between fem/male per year, y length
+ggplot(md, aes(x=year, y=length, color=gender.cat, shape=gender.cat))+
+  geom_vline(xintercept = c(1860,1880,1900), color="darkgray")+
+  geom_point(size=3, alpha=0.8)+
+  facet_grid(~gender.cat)+
+  theme_minimal()
+
+### plot between fem/male per year, y length, shape canon cat
+ggplot(md, aes(x=year, y=length, color=gender.cat, shape=canon.cat))+
+  geom_vline(xintercept = c(1860,1880,1900), color="darkgray")+
+  geom_point(size=3, alpha=0.8)+
+  facet_grid(~gender.cat)+
+  theme_minimal()+
+  ggtitle("composition depending on gender, year, length, and reprint")
+  ggsave("com.png")
+
+### mosaic plot
+install.packages(vcd)
+library(vcd)
+mosaic(~ length.cat + year.cat + gender.cat, data=md,
+       highlighting = "gender.cat", highlighting_fill=c("lightblue", "pink"),
+       direction=c("v","h","h"),
+       labeling = labeling_values,)
+
