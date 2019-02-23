@@ -36,7 +36,7 @@
                generated automatically. 
             </p>
           
-    <schemaSpec ident="eltec-0" source="eltec-compiled.xml">
+    <schemaSpec ident="eltec-0" source="eltec-library.xml">
         <moduleRef key="tei"/>
         <moduleRef key="header"
             include="change  encodingDesc extent fileDesc idno  keywords langUsage language  
