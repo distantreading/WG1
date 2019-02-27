@@ -18,6 +18,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
+            <change when="2019-02-24">add more examples; start work post CO</change>
             <change when="2019-02-18">add examples</change>
             <change when="2018-07-25">require xml:id on TEI, not text</change>
             <change when="2018-07-04">Experiment with textDesc instead of catRef; tighten up header
@@ -960,13 +961,13 @@
                             <memberOf key="model.respLike"/>
                         </classes>
                         <content>
-                            <alternate maxOccurs="unbounded" minOccurs="0">
-                                <textNode/>
-                                <elementRef key="date"/>
-                                <elementRef key="idno"/>
+                            <!--<alternate maxOccurs="unbounded" minOccurs="0">
+                            -->    <textNode/>
+                               <!-- <elementRef key="date"/>
+                                <elementRef key="idno"/>-->
                                 <!--   idno is used to indicate VIAF or other external id for an author -->
                                 <!-- CO we decided to remove these elements from author -->
-                            </alternate>
+                            <!--</alternate>-->
                         </content>
                         <exemplum xml:lang="en">
                             <p>When used within a <gi>titleStmt</gi>, an author's name is given in a
@@ -1358,20 +1359,43 @@
                     </elementSpec>
                     
                     <elementSpec ident="hi" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
-                        </exemplum>
+                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <p>Ha önök ismernék a <hi>Spleen</hi>-t, a <hi>Végtelenség
+                            </hi> prométheüszi gőgjét, a <hi>Rejtelmek</hi> fásultságát és magas
+                                röptét, szóval, ha önök ismernék <hi>Icarus</hi>t, alkalmasint
+                                ilyenformán méltóztatnának okos­kodni...</p>
+                        </egXML>
+                        </exemplum><!-- HU 14537 -->
+                        <remarks><p>This element is used at level0 for any kind of typographic salience recorded by the encoder. At level1 
+                        a semantic interpretation (for example using <gi>emph</gi>, <gi>foreign</gi> etc. replaces it.</p> </remarks>
                     </elementSpec>
                     
-                    <!-- idno? keywords ? language ? name ? ref? resp ? att.docstatus ? term ? -->
-                    
+                  
                     <elementSpec ident="l" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
-                        </exemplum>
+                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <p>Mimi chante avec un sourire gracieux et un désintéressement tout particulier 
+                                des couplets dont voici le refrain:
+                            <quote>
+                            <l>Notre bonheur est accompli</l>
+                            <l>Voilà le culte rétabli.</l>
+                            </quote></p> 
+                        </egXML>
+                        </exemplum><!-- FR0726_Gay_Elleonore -->
                     </elementSpec>
                     
                     <elementSpec ident="p" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
-                        </exemplum>
+                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <div type="chapter">
+                                <head> 1</head>
+                                <p>Fräulein Lotti war soeben erwacht. ....</p>
+                                <p>Frau Katze schüttelt den Kopf, schließt die Augen, leckt die
+                                fadendünnen Lippen und gähnt wie ein Tiger.</p>
+                            <p>Ihre Gebieterin hakt den Fensterflügel ein, damit die
+                                Spaziergängerin bequem eintreten könne, wenn es ihr genehm sein
+                                würde heimzukehren....</p>
+                                <!-- ... --></div>
+                        </egXML>
+                        </exemplum><!-- deu022 -->
                     </elementSpec>
                     
                     <elementSpec ident="term" mode="change">
@@ -1380,10 +1404,40 @@
                     </elementSpec>
                     
                     <elementSpec ident="text" mode="change">
+                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <text>
+                                <front><!-- front matter e.g. titlepage  --></front>
+                                <body><!-- body of the text --></body>
+                                <back><!-- back matter e.g. notes--> </back>
+                            </text>
+                        </egXML>
+                        </exemplum>
+                    </elementSpec>
+                    
+                    <elementSpec ident="corr" mode="change">
                         <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
                         </exemplum>
                     </elementSpec>
                     
+                    <elementSpec ident="emph" mode="change">
+                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
+                        </exemplum>
+                    </elementSpec>
+                    
+                    <elementSpec ident="foreign" mode="change">
+                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
+                        </exemplum>
+                    </elementSpec>
+                    
+                    <elementSpec ident="note" mode="change">
+                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
+                        </exemplum>
+                    </elementSpec>
+                    
+                    <elementSpec ident="quote" mode="change">
+                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
+                        </exemplum>
+                    </elementSpec>
                 </schemaSpec>
             </div>
         </back>

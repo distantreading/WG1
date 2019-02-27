@@ -8,7 +8,7 @@
   library(ggplot2)
 
 ### mosaic plot
-install.packages(vcd)
+install.packages("vcd")
 library(vcd)
 
 mosaic(~ length.cat + year.cat + gender.cat, data=md,
