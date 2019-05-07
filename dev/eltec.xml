@@ -3,7 +3,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
-    xmlns:e="http://distantreading.net/eltec/ns">
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:e="http://distantreading.net/eltec/ns">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -155,8 +155,7 @@
                             </constraint>
                         </constraintSpec>
                         <exemplum>
-                            <p>describes the a title of a novel and the edition in which it is
-                                included</p>
+                           
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title>Wuthering Heights : ELTeC edition</title>
@@ -185,9 +184,7 @@
                         </content>
                         <exemplum>
                             <!-- CO added ex -->
-                      
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                               
                                 <publicationStmt>
                                     <availability>
                                         <licence
@@ -202,12 +199,11 @@
                             <p>In an ELTeC text, the publication statement always contains a
                                 statement concerning its licence, and is always followed by
                                 statement of the date the text was added to the Collection. These
-                            statements are always given in the language of the text itself; in this
-                            case, English.</p>
+                                statements are always given in the language of the text itself; in
+                                this case, English.</p>
                         </exemplum>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                             
                                 <publicationStmt>
                                     <availability>
                                         <licence
@@ -233,7 +229,7 @@
                                         <desc>describes the first complete print source edition
                                             published in the author's lifetime</desc>
                                     </valItem>
-                                    <valItem ident="printEdition">
+                                    <valItem ident="printSource">
                                         <desc>describes a print source edition used as the source of
                                             the encoding which is not the first edition</desc>
                                     </valItem>
@@ -271,7 +267,7 @@
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <sourceDesc>
-                                    <bibl type="printEdition">
+                                    <bibl type="printSource">
                                         <title>Opera omnia</title>
                                         <title>Romanzi</title>
                                         <author>Svevo, Italo</author>
@@ -357,7 +353,7 @@
                             </sequence>
                         </content>
                         <exemplum>
-                         <!--   <p>provides a basis header structure for metadata of each novel in
+                            <!--   <p>provides a basis header structure for metadata of each novel in
                                 ELTeC</p>-->
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <teiHeader>
@@ -373,7 +369,6 @@
                                                 <!-- information about licensing and
                                                     publication of the ELTeC text-->
                                             </availability>
-                                         
                                         </publicationStmt>
                                         <sourceDesc>
                                             <!-- information about the source(s) from which the 
@@ -399,7 +394,6 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    
                     <elementSpec ident="fileDesc" mode="change">
                         <!-- constrain content and add example -->
                         <content>
@@ -407,30 +401,32 @@
                                 <elementRef key="titleStmt"/>
                                 <elementRef key="extent"/>
                                 <elementRef key="publicationStmt"/>
-                                <elementRef key="sourceDesc" />
+                                <elementRef key="sourceDesc"/>
                             </sequence>
                         </content>
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <fileDesc>
-                                <titleStmt>
-                                    <!-- information about the title of the work -->
-                                </titleStmt>
-                                <extent>
-                                    <!-- information about the size of the work -->
-                                </extent>
-                                <publicationStmt>
-                                    <p>Adicionado à coleção ELTeC <date>20 de novembro de 2018</date>. </p>
-                                </publicationStmt>                               
-                                <sourceDesc>
-                                    <bibl>
-                                       <!-- bibliographic description of the source/s of the work
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <fileDesc>
+                                    <titleStmt>
+                                        <!-- information about the title of the work -->
+                                    </titleStmt>
+                                    <extent>
+                                        <!-- information about the size of the work -->
+                                    </extent>
+                                    <publicationStmt>
+                                        <p>Adicionado à coleção ELTeC <date>20 de novembro de
+                                                2018</date>. </p>
+                                    </publicationStmt>
+                                    <sourceDesc>
+                                        <bibl>
+                                            <!-- bibliographic description of the source/s of the work
                                        -->
-                                    </bibl>
-                                </sourceDesc>
-                            </fileDesc>
-                        </egXML></exemplum>
+                                        </bibl>
+                                    </sourceDesc>
+                                </fileDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
-                    
                     <!-- define new elements for selection criteria -->
                     <elementSpec ident="authorGender" mode="add"
                         ns="http://distantreading.net/eltec/ns">
@@ -520,7 +516,7 @@
                             </attDef>
                         </attList>
                         <exemplum>
-                            <p>indicates that a novel contains more than 100,00 words (long)</p>
+                            <p>indicates that a novel contains more than 100,000 words (long)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
                                     <!-- ... -->
@@ -530,7 +526,7 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="canonicity" mode="add"
+                  <!--  <elementSpec ident="canonicity" mode="add"
                         ns="http://distantreading.net/eltec/ns">
                         <desc>indicates the degree to which the text has become part of a literary
                             canon</desc>
@@ -573,9 +569,56 @@
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
-                                    <!-- ...  -->
+                                    <!-\- ...  -\->
                                     <canonicity xmlns="http://distantreading.net/eltec/ns"
                                         key="medium"/>
+                                    <!-\- ... -\->
+                                </textDesc>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>-->
+                    <elementSpec ident="canonicity" mode="add"
+                        ns="http://distantreading.net/eltec/ns">
+                        <desc>indicates whether or not the text is considered to be a part of
+                            the literary canon associated with a specific period</desc>
+                        <classes>
+                            <memberOf key="model.textDescPart"/>
+                        </classes>
+                        <content>
+                            <empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="key" mode="add" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="high">
+                                        <desc>text has been republished very frequently  during the
+                                            period concerned</desc>
+                                    </valItem>
+                                 <!--   <valItem ident="medium">
+                                        <desc>text has been republished occasionally since its
+                                            original appearance</desc>
+                                    </valItem>-->
+                                    <valItem ident="low">
+                                        <desc>text has been reprinted only occasionally during
+                                            the period concerned</desc>
+                                    </valItem>
+                                </valList>
+                                <remarks>
+                                    <p>Canonicity is assessed by counting reprints of the title
+                                        concerned during a specific period (1970 - 2009).
+                                    </p>
+                                </remarks>
+                            </attDef>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <textDesc>
+                                    <!-- ...  -->
+                                    <canonicity xmlns="http://distantreading.net/eltec/ns"
+                                        key="high"/>
                                     <!-- ... -->
                                 </textDesc>
                             </egXML>
@@ -583,7 +626,7 @@
                     </elementSpec>
                     <elementSpec ident="timeSlot" mode="add" ns="http://distantreading.net/eltec/ns">
                         <desc>specifies the time period during which the work was first published as
-                        a single volume</desc>
+                            a single volume</desc>
                         <classes>
                             <memberOf key="model.textDescPart"/>
                         </classes>
@@ -612,8 +655,8 @@
                             </attDef>
                         </attList>
                         <exemplum>
-                            <p>indicates that the novel to be described was published for the first
-                                between 1840 and 1859 (T1)</p>
+                            <p>indicates that the novel described was first published between 1840
+                                and 1859 (T1)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
                                     <!-- ...  -->
@@ -629,7 +672,6 @@
                             <classRef key="model.profileDescPart" expand="sequence"/>
                         </content>
                         <exemplum>
-                          
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
                                     <langUsage>
@@ -638,17 +680,16 @@
                                     <textDesc xmlns:e="http://distantreading.net/eltec/ns">
                                         <e:authorGender key="M"/>
                                         <e:size key="long"/>
-                                        <e:canonicity key="medium"/>
+                                        <e:canonicity key="high"/>
                                         <e:timeSlot key="T1"/>
                                     </textDesc>
                                 </profileDesc>
                             </egXML>
                             <p>Profile for a French text, with a male author, containing more than
-                                100,000 words, of medium canonicity, first published between 1840
-                                and 1859. </p>
+                                100,000 words, of high canonicity, first published between 1840 and
+                                1859. </p>
                         </exemplum>
                         <exemplum>
-                           
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
                                     <langUsage>
@@ -657,8 +698,7 @@
                                     <textDesc>
                                         <authorGender xmlns="http://distantreading.net/eltec/ns"
                                             key="F"/>
-                                        <size xmlns="http://distantreading.net/eltec/ns"
-                                            key="medium"/>
+                                        <size xmlns="http://distantreading.net/eltec/ns" key="long"/>
                                         <canonicity xmlns="http://distantreading.net/eltec/ns"
                                             key="low"/>
                                         <timeSlot xmlns="http://distantreading.net/eltec/ns"
@@ -666,9 +706,8 @@
                                     </textDesc>
                                 </profileDesc>
                             </egXML>
-                            <p>Profile for a German text, with a female author, containing
-                                between 10 and 50,000 words, of medium canonicity, first published
-                                between 1900
+                            <p>Profile for a German text, with a female author, containing between
+                                10 and 50,000 words, of low canonicity, first published between 1900
                                 and 1920. </p>
                         </exemplum>
                     </elementSpec>
@@ -678,7 +717,6 @@
                             <classRef key="model.textDescPart" expand="sequence"/>
                         </content>
                         <exemplum>
-                           
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
                                     <authorGender xmlns="http://distantreading.net/eltec/ns" key="F"/>
@@ -688,25 +726,23 @@
                                     <timeSlot xmlns="http://distantreading.net/eltec/ns" key="T2"/>
                                 </textDesc>
                             </egXML>
-                            <p>Profile for a text with a female author, containing
-                                between over 100,000 words, of high canonicity, first published
-                                between 1860
-                                and 1879. </p>
+                            <p>Profile for a text with a female author, containing between over
+                                100,000 words, of high canonicity, first published between 1860 and
+                                1879. </p>
                         </exemplum>
-                        <remarks><p>The elements
-                            <gi>authorGender</gi>, <gi>size</gi>, <gi>canonicity</gi>, and
-                            <gi>timeSlot</gi> are not TEI elements, and do not belong to the TEI
-                            namespace. Their namespace must be specified, either in full as in
-                            this example, or by means of a namespace prefix defined on some
-                            hierarchically superior
-                            element. </p><p>Each of these
-                                four elements must be supplied exactly once, and in the order specified.</p></remarks>
+                        <remarks>
+                            <p>The elements <gi>authorGender</gi>, <gi>size</gi>,
+                                    <gi>canonicity</gi>, and <gi>timeSlot</gi> are not TEI elements,
+                                and do not belong to the TEI namespace. Their namespace must be
+                                specified, either in full as in this example, or by means of a
+                                namespace prefix defined on some hierarchically superior element. </p>
+                            <p>Each of these four elements must be supplied exactly once, and in the
+                                order specified.</p>
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="titleStmt" mode="change">
                         <exemplum>
-                            <p>describes an example for <gi>titleStmt</gi> including <gi>title</gi>
-                                and <gi>author</gi>, <gi>author</gi> gets an optional viaf
-                                reference</p>
+                            
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title>Silas Marner: The Weaver of Raveloe : ELTec
@@ -720,9 +756,7 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>describes a Spanish example for <gi>titleStmt</gi> including
-                                    <gi>title</gi> and <gi>author</gi> both having optional viaf
-                                references provided by <att>ref</att>.</p>
+                           
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title ref="viaf:194763311">El Señor de Bembibre : edición
@@ -749,24 +783,33 @@
                         <content>
                             <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
+                        <constraintSpec ident="wordCountMandatory" scheme="schematron">
+                            <desc>require a word count</desc>
+                            <constraint><sch:assert test="child::tei:measure[@unit eq 'words']">You must
+                                    provide a word count</sch:assert></constraint>
+                        </constraintSpec>
                         <exemplum>
-                            <p>provides different measurements for length</p>
+                            <p>A book of 2325 pages, containing 102,345 words</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <extent>
-                                    <measure unit="words"
-                                        ><!-- ... insert number of ... --></measure>
-                                    <measure unit="pages"
-                                        ><!-- ... insert number of ... --></measure>
+                                    <measure unit="words">102345</measure>
+                                    <measure unit="pages">235</measure>
                                 </extent>
                             </egXML>
                         </exemplum>
+                        <remarks>
+                            <p>Must contain at least one <gi>measure</gi> element, indicating the
+                                word count. Other indications of size are optional.</p>
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="measure" mode="change">
                         <classes mode="change">
                             <memberOf key="att.measurement" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
-                        <content><textNode/></content>
+                        <content>
+                            <dataRef key="teidata.numeric"/>
+                        </content>
                         <attList>
                             <attDef ident="unit" usage="req">
                                 <datatype>
@@ -774,15 +817,14 @@
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="pages">
-                                        <desc>refers to pages in the source text</desc>
+                                        <desc>number of pages in the whole of the source text</desc>
                                     </valItem>
                                     <valItem ident="words">
-                                        <desc>approximates the number of space delimited tokens in
-                                            source text</desc>
+                                        <desc>number of space delimited tokens in the transcribed
+                                            source text, excluding the header</desc>
                                     </valItem>
                                     <valItem ident="vols">
-                                        <desc>refers to the number of volumes for original source
-                                            text </desc>
+                                        <desc>number of volumes in the original source text </desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -801,8 +843,9 @@
                             <p>An indication of the number of words is mandatory. Indicating the
                                 number of pages is optional. If information for page or volume count
                                 is not available the relevant <gi>measure</gi> element should be
-                                absent. </p><p>Spaces and other punctuation marks are not permitted
-                                    as content of the <gi>measure</gi> element.</p>
+                                absent. </p>
+                            <p>Spaces and other punctuation marks are not permitted as content of
+                                the <gi>measure</gi> element.</p>
                         </remarks>
                     </elementSpec>
                     <!-- require a date on change -->
@@ -811,33 +854,43 @@
                             <attDef ident="when" mode="change" usage="req"/>
                         </attList>
                         <exemplum>
-                            <p>provides information about the changes in the document, showing an
-                                example of the revision description (<gi>revisonDesc</gi>)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <revisionDesc>
-                                    <change when="2018-11-01">Conversion with CLIGStoELTeC
-                                        stylesheet for ELTeC-1</change>
-                                    <change when="2015-07-14">cf Revised teiHeader.</change>
-                                    <change when="2014-04-29">cf Initial TEI version.</change>
-                                </revisionDesc>
+                                <change when="2018-11-01">Conversion with CLIGStoELTeC stylesheet
+                                    for ELTeC-1</change>
                             </egXML>
                         </exemplum>
+                        <remarks><p>The <att>when</att> attribute must be supplied and should
+                            indicate a date in the format YYY-MM-DD. </p></remarks>
                     </elementSpec>
-                    <elementSpec ident="revisionDesc">
+                    <elementSpec ident="revisionDesc" mode="change">
                         <exemplum>
-                            <p>provides the information about changes (<gi>change</gi> in a
-                                document</p>
+                            <p>When several significant changes are recorded, each should be
+                                documented using a separate <gi>change</gi> element, given in
+                                reverse chronological order i.e. most recent first, as shown here: </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <revisionDesc>
-                                    <change when="YYYY-MM-DD"><!--  --></change>
+                                    <change when="2018-12-12">Spell check completed</change>
+                                    <change when="2018-11-01">Initial conversion to ELTeC-1 using
+                                        CLIGStoELTeC stylesheet </change>
                                 </revisionDesc>
                             </egXML>
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="div" mode="change">
+                        <constraintSpec ident="chapterStructure" scheme="schematron">
+                            <desc>div of type chapter should not be further subdivided</desc>
+                            <constraint>
+                               <sch:report test="@type='chapter' and child::tei:div">
+                                   A div of type 'chapter' may not be further subdivided (except by
+                                   milestones)
+                               </sch:report> 
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <attDef ident="type" mode="change">
-                                <datatype><dataRef key="teidata.enumerated"></dataRef></datatype>
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
                                 <valList type="semi">
                                     <valItem ident="titlepage">
                                         <desc>title page transcription (level 1 only)</desc>
@@ -854,9 +907,9 @@
                                             more paragraphs</desc>
                                     </valItem>
                                     <valItem ident="letter">
-                                        <desc>a textual division containing one or
-                                            more paragraphs  and not further sub-divided
-                                            except by milestone markers which is presented as a letter</desc>
+                                        <desc>a textual division containing one or more paragraphs
+                                            and not further sub-divided except by milestone markers
+                                            which is presented as a letter</desc>
                                     </valItem>
                                     <valItem ident="group">
                                         <desc>any grouping of chapters or groups, e.g. part, volume,
@@ -867,22 +920,24 @@
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                               <body> 
-                                   <div type="chapter">
-                                    <head>III</head>
-                                    <p>Em casa do dr. Carvalho, Claudio pouco fallou com Emilia, elle
-                                     prezo a uma meza do "whist", para ser agradavel ao juiz que sem isso 
-                                     se aborrecia, ella dansando sempre. ...</p>
-                                    <!-- more paragraphs here -->
-                                </div>
-                               </body>
+                                <body>
+                                    <div type="chapter">
+                                        <head>III</head>
+                                        <p>Em casa do dr. Carvalho, Claudio pouco fallou com Emilia,
+                                            elle prezo a uma meza do "whist", para ser agradavel ao
+                                            juiz que sem isso se aborrecia, ella dansando sempre.
+                                            ...</p>
+                                        <!-- more paragraphs here -->
+                                    </div>
+                                </body>
                             </egXML>
                         </exemplum>
-                        <remarks><p>A division of <att>type</att>=<code>letter</code> should only be
-                            used if the entire novel is composed of a sequence of letters. When a 
-                            letter is quoted within a chapter containing other material, the letter 
-                            should be marked using the <gi>quote</gi> element. </p></remarks>
-                        
+                        <remarks>
+                            <p>A division of <att>type</att>=<code>letter</code> should only be used
+                                if the entire novel is composed of a sequence of letters. When a
+                                letter is quoted within a chapter containing other material, the
+                                letter should be marked using the <gi>quote</gi> element. </p>
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="TEI" mode="change">
                         <exemplum xml:lang="fr">
@@ -946,9 +1001,7 @@
                                         </revisionDesc>
                                     </teiHeader>
                                     <text>
-                                      
-                                            <!-- transcription of text here -->
-                                        
+                                        <!-- transcription of text here -->
                                     </text>
                                 </TEI></egXML>
                         </exemplum>
@@ -962,11 +1015,12 @@
                         </classes>
                         <content>
                             <!--<alternate maxOccurs="unbounded" minOccurs="0">
-                            -->    <textNode/>
-                               <!-- <elementRef key="date"/>
+                            -->
+                            <textNode/>
+                            <!-- <elementRef key="date"/>
                                 <elementRef key="idno"/>-->
-                                <!--   idno is used to indicate VIAF or other external id for an author -->
-                                <!-- CO we decided to remove these elements from author -->
+                            <!--   idno is used to indicate VIAF or other external id for an author -->
+                            <!-- CO we decided to remove these elements from author -->
                             <!--</alternate>-->
                         </content>
                         <exemplum xml:lang="en">
@@ -1196,15 +1250,14 @@
                                         </bibl>
                                     </relatedItem>
                                 </bibl>
-                                
                             </egXML>
                             <p>indicates that the digital source described by the outer
-                                <gi>bibl</gi> element is related to the first edition
-                                described by the inner <gi>bibl</gi> element. </p>
+                                    <gi>bibl</gi> element is related to the first edition described
+                                by the inner <gi>bibl</gi> element. </p>
                         </exemplum>
                         <remarks>
                             <p>In ELTeC this element is used only as a child element of
-                                <gi>bibl</gi>, as shown in this example.  </p>
+                                    <gi>bibl</gi>, as shown in this example. </p>
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="respStmt" mode="change">
@@ -1229,7 +1282,8 @@
                                         <ref target="http://efele.net/ebooks/livres/000067"/>
                                         <relatedItem type="source">
                                             <bibl type="firstEdition"> Paris: Furne, J.-J. Dubochet
-                                                et Cie, J. Hetzel et Paulin, <date>1848</date>. </bibl>
+                                                et Cie, J. Hetzel et Paulin, <date>1848</date>.
+                                            </bibl>
                                         </relatedItem>
                                     </bibl>
                                 </sourceDesc>
@@ -1255,7 +1309,9 @@
                                 <name>Christof Schöch</name>
                             </egXML>
                         </exemplum>
-                        <remarks><p>Not permitted outside the header</p></remarks>
+                        <remarks>
+                            <p>Not permitted outside the header</p>
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="pubPlace" mode="change">
                         <exemplum>
@@ -1274,29 +1330,48 @@
                                 <publisher>London: T. C. Newby</publisher>
                             </egXML>
                         </exemplum>
-                   </elementSpec>
+                    </elementSpec>
                     <elementSpec ident="back" mode="change">
-                       <exemplum>
-                              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <back>
-                                <div type="liminal">
-                                    <head>Appendix</head>
-                                    <p><!-- additional text here -->
-                                    </p>
-                                </div>
-                                <div type="notes">
-                                    <head>Authorial Notes</head>
-                                    <note xml:id="ENG18700_N23"><!-- text of footnote here --></note>
-                                </div>
-                            </back>
-                           </egXML>
-                       </exemplum></elementSpec>
+                       
+                            <constraintSpec mode="add" ident="backDivTypes" scheme="schematron">
+                                <constraint>
+                                    <sch:assert 
+                                        test="child::tei:div[@type='notes'] or child::tei:div[@type='liminal']" role="ERROR"
+                                        >The back matter of a text must contain either liminal or
+                                        notes divisions</sch:assert>
+                                </constraint>
+                            </constraintSpec><exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <back>
+                                    <div type="liminal">
+                                        <head>Appendix</head>
+                                        <p><!-- additional text here -->
+                                        </p>
+                                    </div>
+                                    <div type="notes">
+                                        <head>Authorial Notes</head>
+                                        <note xml:id="ENG18700_N23"
+                                            ><!-- text of footnote here --></note>
+                                    </div>
+                                </back>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="body" mode="change">
+                        <constraintSpec mode="add" ident="chaptersRequired" scheme="schematron">
+                            <constraint>
+                                <sch:assert 
+                                    test="descendant::tei:div[@type='chapter']" role="ERROR"
+                                    >The body of a text must contain at least one chapter</sch:assert>
+                            </constraint>
+                        </constraintSpec>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <body>
-                                    <div type="chapter"><head>I.</head>
-                                        <p>Utanfor, i Vest, bryt Have paa mot ei sju Milir lang laag Sandstrand.</p>
+                                    <div type="chapter">
+                                        <head>I.</head>
+                                        <p>Utanfor, i Vest, bryt Have paa mot ei sju Milir lang laag
+                                            Sandstrand.</p>
                                         <p>Det er sjølve Have. Nordhave breidt og fritt, ukløyvt og
                                             utøymt, endelaust....</p>
                                         <!-- ... -->
@@ -1305,9 +1380,17 @@
                                     <trailer>Slutten</trailer>
                                 </body>
                             </egXML>
-                        </exemplum></elementSpec>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="front" mode="change">
-                        <exemplum>
+                        <constraintSpec mode="add" ident="frontDivTypes" scheme="schematron">
+                            <constraint>
+                                <sch:assert 
+                                    test="child::tei:div[@type='titlepage'] or child::tei:div[@type='liminal']" role="ERROR"
+                                    >The front matter of a text must contain either liminal or
+                                    titlepage divisions</sch:assert>
+                            </constraint>
+                        </constraintSpec><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <front>
                                     <div type="titlePage">
@@ -1325,117 +1408,141 @@
                                     <div type="liminal">
                                         <head>PREFAȚĂ LA EDȚIA ÎNTÂIA</head>
                                         <p>Isvoarele, de cari m'am slujit la studiul vieții lin
-                                            Iancu Jianu și a timpului său, sunt cele următoare...</p>
-                                            <p>BUCURA DUMBRAVĂ.</p>
+                                            Iancu Jianu și a timpului său, sunt cele
+                                            următoare...</p>
+                                        <p>BUCURA DUMBRAVĂ.</p>
                                         <p>București, 1911.</p>
                                     </div>
                                 </front>
                             </egXML>
-                        </exemplum></elementSpec>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="head" mode="change">
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <div type="part">
-                                <head>BOOK I.</head>                                
-                                <head>MISS BROOKE.</head>
-                                <div type="chapter">
-                                    <head>CHAPTER I.</head>
-                                    <quote> Since I can do no good because a woman, Reach constantly at something that is near it. —The
-                                        Maid's Tragedy: BEAUMONT AND FLETCHER. </quote>
-                                    <p>Miss Brooke had that kind of beauty which seems to be thrown
-                                        into relief by poor dress....
-                                    </p>
-                                    <!-- ... -->
-                                </div>
+                                    <head>BOOK I.</head>
+                                    <head>MISS BROOKE.</head>
+                                    <div type="chapter">
+                                        <head>CHAPTER I.</head>
+                                        <quote> Since I can do no good because a woman, Reach
+                                            constantly at something that is near it. —The Maid's
+                                            Tragedy: BEAUMONT AND FLETCHER. </quote>
+                                        <p>Miss Brooke had that kind of beauty which seems to be
+                                            thrown into relief by poor dress.... </p>
+                                        <!-- ... -->
+                                    </div>
                                     <!-- ... -->
                                 </div>
                             </egXML>
-                            <p>A heading of any kind at the start of a division of any kind may be marked using
-                                <gi>head</gi>. In this example, there are two headings at the start
-                                of the first part, and one at the start of the first chapter. The
-                                epigraph at the start of the first chapter is marked up as a
-                                quotation and is not a heading. </p>
+                            <p>A heading of any kind at the start of a division of any kind may be
+                                marked using <gi>head</gi>. In this example, there are two headings
+                                at the start of the first part, and one at the start of the first
+                                chapter. The epigraph at the start of the first chapter is marked up
+                                as a quotation and is not a heading. </p>
                         </exemplum>
                     </elementSpec>
-                    
                     <elementSpec ident="hi" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <p>Ha önök ismernék a <hi>Spleen</hi>-t, a <hi>Végtelenség
-                            </hi> prométheüszi gőgjét, a <hi>Rejtelmek</hi> fásultságát és magas
-                                röptét, szóval, ha önök ismernék <hi>Icarus</hi>t, alkalmasint
-                                ilyenformán méltóztatnának okos­kodni...</p>
-                        </egXML>
-                        </exemplum><!-- HU 14537 -->
-                        <remarks><p>This element is used at level0 for any kind of typographic salience recorded by the encoder. At level1 
-                        a semantic interpretation (for example using <gi>emph</gi>, <gi>foreign</gi> etc. replaces it.</p> </remarks>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>Ha önök ismernék a <hi>Spleen</hi>-t, a <hi>Végtelenség </hi>
+                                    prométheüszi gőgjét, a <hi>Rejtelmek</hi> fásultságát és magas
+                                    röptét, szóval, ha önök ismernék <hi>Icarus</hi>t, alkalmasint
+                                    ilyenformán méltóztatnának okos­kodni...</p>
+                            </egXML>
+                        </exemplum>
+                        <!-- HU 14537 -->
+                        <remarks>
+                            <p>This element is used at level0 for any kind of typographic salience
+                                recorded by the encoder. At level1 a semantic interpretation (for
+                                example using <gi>emph</gi>, <gi>foreign</gi> etc.) replaces it.</p>
+                        </remarks>
                     </elementSpec>
-                    
-                  
                     <elementSpec ident="l" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <p>Mimi chante avec un sourire gracieux et un désintéressement tout particulier 
-                                des couplets dont voici le refrain:
-                            <quote>
-                            <l>Notre bonheur est accompli</l>
-                            <l>Voilà le culte rétabli.</l>
-                            </quote></p> 
-                        </egXML>
-                        </exemplum><!-- FR0726_Gay_Elleonore -->
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>Mimi chante avec un sourire gracieux et un désintéressement tout
+                                    particulier des couplets dont voici le refrain: <quote>
+                                        <l>Notre bonheur est accompli</l>
+                                        <l>Voilà le culte rétabli.</l>
+                                    </quote></p>
+                            </egXML>
+                        </exemplum>
+                        <!-- FR0726_Gay_Elleonore -->
                     </elementSpec>
-                    
                     <elementSpec ident="p" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <div type="chapter">
-                                <head> 1</head>
-                                <p>Fräulein Lotti war soeben erwacht. ....</p>
-                                <p>Frau Katze schüttelt den Kopf, schließt die Augen, leckt die
-                                fadendünnen Lippen und gähnt wie ein Tiger.</p>
-                            <p>Ihre Gebieterin hakt den Fensterflügel ein, damit die
-                                Spaziergängerin bequem eintreten könne, wenn es ihr genehm sein
-                                würde heimzukehren....</p>
-                                <!-- ... --></div>
-                        </egXML>
-                        </exemplum><!-- deu022 -->
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <div type="chapter">
+                                    <head> 1</head>
+                                    <p>Fräulein Lotti war soeben erwacht. ....</p>
+                                    <p>Frau Katze schüttelt den Kopf, schließt die Augen, leckt die
+                                        fadendünnen Lippen und gähnt wie ein Tiger.</p>
+                                    <p>Ihre Gebieterin hakt den Fensterflügel ein, damit die
+                                        Spaziergängerin bequem eintreten könne, wenn es ihr genehm
+                                        sein würde heimzukehren....</p>
+                                    <!-- ... -->
+                                </div>
+                            </egXML>
+                        </exemplum>
+                        <!-- deu022 -->
                     </elementSpec>
-                    
                     <elementSpec ident="term" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum>
                     </elementSpec>
-                    
                     <elementSpec ident="text" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <text>
-                                <front><!-- front matter e.g. titlepage  --></front>
-                                <body><!-- body of the text --></body>
-                                <back><!-- back matter e.g. notes--> </back>
-                            </text>
-                        </egXML>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <text>
+                                    <front><!-- front matter e.g. titlepage  --></front>
+                                    <body><!-- body of the text --></body>
+                                    <back><!-- back matter e.g. notes-->
+                                    </back>
+                                </text>
+                            </egXML>
                         </exemplum>
                     </elementSpec>
-                    
                     <elementSpec ident="corr" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            </egXML>
                         </exemplum>
                     </elementSpec>
-                    
                     <elementSpec ident="emph" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum>
                     </elementSpec>
-                    
                     <elementSpec ident="foreign" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum>
                     </elementSpec>
-                    
                     <elementSpec ident="note" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
+                        <constraintSpec mode="add" ident="notePlacement" scheme="schematron">
+                            <constraint>
+                                <sch:assert 
+                                    test="parent::tei:div[@type='notes']" role="ERROR"
+                                    >Notes must be given out of line and inside a div of type
+                                    'notes'</sch:assert>
+                            </constraint>
+                        </constraintSpec>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <back>
+                                    <div type="notes">
+                                        <note xml:id="N11">[Note 1: Elle a épousé depuis M. O'Connor.]</note>
+                                        <note xml:id="N12">[Note 2: Sorte de bonnet négligé, qui était à la mode en ce temps.]</note>
+                                    </div>
+                                </back>
+                            </egXML>
                         </exemplum>
                     </elementSpec>
-                    
                     <elementSpec ident="quote" mode="change">
-                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"></egXML>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum>
                     </elementSpec>
                 </schemaSpec>
