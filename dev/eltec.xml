@@ -1488,9 +1488,23 @@
                         <!-- deu022 -->
                     </elementSpec>
                     <elementSpec ident="term" mode="change">
+                        <classes>
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                            <memberOf key="att.canonical"/>
+                        </classes>
+                            
+                        
                         <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <keywords xml:lang="en">
+                                    <term>silver fork</term>
+                                    <term>society</term>
+                                </keywords>
+                            </egXML>
                         </exemplum>
+                        <remarks><p>In ELTeC this element is used only in the header, to specify a
+                            descriptive keyword for the text being documented.</p></remarks>
                     </elementSpec>
                     <elementSpec ident="text" mode="change">
                         <exemplum>
@@ -1553,7 +1567,7 @@
                                        <!-- ... etc. -->                                     
                                     </quote></egXML></exemplum>
                     </elementSpec>
-                    <elementSpec ident="note" mode="change">
+                    <elementSpec ident="note" mode="change">                       
                         <constraintSpec mode="add" ident="notePlacement" scheme="schematron">
                             <constraint>
                                 <sch:assert 
@@ -1562,6 +1576,10 @@
                                     'notes'</sch:assert>
                             </constraint>
                         </constraintSpec>
+                        <attList>
+                            <attDef ident="anchored" mode="delete"/>
+                            <attDef ident="targetEnd" mode="delete"/>                           
+                        </attList>
                         <exemplum>
                             <p>In this example, two authorial footnotes have been encoded. Each note
                                 is encoded with a <gi>note</gi> element, and carries a unique identifier
