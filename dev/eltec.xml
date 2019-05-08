@@ -1505,20 +1505,53 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="corr" mode="change">
+                        
                         <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <p>In this text, the words "al" and "hombre" were not present in the original source, but
+                            have been added by the editor/transcriber: </p>    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>... me había presentado aún ocasión de asombrar <corr>al</corr> 
+                                    mundo con ningún hecho heroico; pero <corr>el</corr> oírme
+                                        llamar <emph>hombre</emph> me llenó de orgul...</p>                               
                             </egXML>
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="emph" mode="change">
                         <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                            <!-- ENG19060 -->
+                            <p>The editor/transcriber wishes to show that the word "my" is emphasized
+                                in the original source:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">Oh—don’t mind <emph>my</emph> feelings—call me a
+                                mangy monkey—I’ve tried hard enough to look like one! </egXML>
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="foreign" mode="change">
                         <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                            <p>The Latin phrase "Ab urbe condita" is not in the same language
+                                (Portuguese) as the rest of the paragraph </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>E calcando a espada debaixo do pé esquerdo, curvou-a: <foreign>Ab urbe condita</foreign>, da fundação de Roma, no ano seiscentos e três. </p></egXML>
                         </exemplum>
+                        <exemplum><!-- POR0031-->
+                            <p>In this example, the whole quotation is given in a different
+                            language (Spanish). The <gi>foreign</gi> element can only be used to
+                            enclose words and phrases directly, rather than to enclose <gi>l</gi> or
+                            <gi>quote</gi> elements, and must therefore be repeated for the content
+                            of each line.
+                      </p><egXML xmlns="http://www.tei-c.org/ns/Examples"><p>E cá fóra veriamos o velho mendigo no mesmo lugar ainda, cantando ao som da sanfona:</p>
+                            <quote>
+                                <l><foreign xml:lang="es">«Rosa fresca, rosa fresca,</foreign></l>
+                                <l><foreign xml:lang="es">tan garrida y con amor;</foreign></l>
+                                <l><foreign xml:lang="es">quando vos tuve em mis braços,</foreign></l>
+                                <l><foreign xml:lang="es">no vos supe servir, no,</foreign></l>
+                                <l><foreign xml:lang="es">y agora que os serviria</foreign></l>
+                                <l><foreign xml:lang="es">no vos puedo aver no.</foreign> <ref target="#note2"/> </l>
+                            </quote></egXML></exemplum>
+                        <exemplum><p>An alternative and more economical encoding for the
+                                foregoing example: </p> <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>E cá fóra veriamos o velho mendigo no mesmo lugar ainda, cantando ao som da sanfona:</p>
+                                    <quote xml:lang="es">
+                                        <l>«Rosa fresca, rosa fresca,</l>
+                                        <l>tan garrida y con amor;</l>
+                                       <!-- ... etc. -->                                     
+                                    </quote></egXML></exemplum>
                     </elementSpec>
                     <elementSpec ident="note" mode="change">
                         <constraintSpec mode="add" ident="notePlacement" scheme="schematron">
@@ -1530,11 +1563,30 @@
                             </constraint>
                         </constraintSpec>
                         <exemplum>
+                            <p>In this example, two authorial footnotes have been encoded. Each note
+                                is encoded with a <gi>note</gi> element, and carries a unique identifier
+                                on its <att>xml:id</att> attribute. A <gi>ref</gi> element
+                                replaces the siglum in the running text indicating the point where the note is
+                                attached. 
+                         </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <back>
+                                <body>
+                                    <!-- ... -->
+                                    <p>Au milieu de ces spirituels convives on remarquait une figure angélique, c'était celle de
+                                        la fille de madame de Condorcet, de cette ravissante Eliza  <ref target="#FR0726_N1">[1]</ref>
+                                        qui, à peine dans l'âge de l'adolescence, avait déjà la taille et les traits réguliers d'une statue grecque.</p>
+                                    
+                                    <!-- ... -->
+                                    <p>—Je ne sortirai point aujourd'hui, j'ai mal à la tête, une
+                                        longue coiffure me fatiguerait; Ellénore arrangera mes
+                                        cheveux, et me mettra ma baigneuse <ref
+                                            target="#FR0726_N2">[2]</ref>.</p>
+                                    
+                                </body>
+                                 <back>
                                     <div type="notes">
-                                        <note xml:id="N11">[Note 1: Elle a épousé depuis M. O'Connor.]</note>
-                                        <note xml:id="N12">[Note 2: Sorte de bonnet négligé, qui était à la mode en ce temps.]</note>
+                                        <note xml:id="FR0726_N1">[Note 1: Elle a épousé depuis M. O'Connor.]</note>
+                                        <note xml:id="FR0726_N2">[Note 2: Sorte de bonnet négligé, qui était à la mode en ce temps.]</note>
                                     </div>
                                 </back>
                             </egXML>
@@ -1542,7 +1594,13 @@
                     </elementSpec>
                     <elementSpec ident="quote" mode="change">
                         <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                            <p>In this example, the two lines of verse are quoted and do not form
+                                part of the narrative:  </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">   <p>О, многозначајне ли су речи покојног Његуша II:</p>
+                                <quote>
+                                    <l>„Благо томе ко довијек живи,</l>
+                                    <l>имао се рашта и родити!...</l>
+                                </quote></egXML>
                         </exemplum>
                     </elementSpec>
                 </schemaSpec>

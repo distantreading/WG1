@@ -3496,17 +3496,19 @@ Elements</ref>
         Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab.
       </report>
     </constraint>
-  </constraintSpec><attList/><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <div type="chapter">
-                                <head> 1</head>
-                                <p>Fräulein Lotti war soeben erwacht. ....</p>
-                                <p>Frau Katze schüttelt den Kopf, schließt die Augen, leckt die
-                                fadendünnen Lippen und gähnt wie ein Tiger.</p>
-                            <p>Ihre Gebieterin hakt den Fensterflügel ein, damit die
-                                Spaziergängerin bequem eintreten könne, wenn es ihr genehm sein
-                                würde heimzukehren....</p>
-                                <!-- ... --></div>
-                        </egXML>
+  </constraintSpec><attList/><exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <div type="chapter">
+                                    <head> 1</head>
+                                    <p>Fräulein Lotti war soeben erwacht. ....</p>
+                                    <p>Frau Katze schüttelt den Kopf, schließt die Augen, leckt die
+                                        fadendünnen Lippen und gähnt wie ein Tiger.</p>
+                                    <p>Ihre Gebieterin hakt den Fensterflügel ein, damit die
+                                        Spaziergängerin bequem eintreten könne, wenn es ihr genehm
+                                        sein würde heimzukehren....</p>
+                                    <!-- ... -->
+                                </div>
+                            </egXML>
                         </exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COPA">3.1. Paragraphs</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DRPAL">7.2.5. Speech Contents</ref>
@@ -3514,8 +3516,31 @@ Elements</ref>
                 surrounding text.</desc><desc versionDate="2007-12-20" xml:lang="ko">주변 텍스트와 다른 언어로 사용된 단어나 구를 표시한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">標明所屬語言不同於週遭文字的字詞。</desc><desc versionDate="2008-04-05" xml:lang="ja">記述のベースで使われている言語と異なる言語による語句を定義する．</desc><desc versionDate="2009-01-06" xml:lang="fr">reconnaît un mot ou une expression comme
                 appartenant à une langue différente de celle du contexte.</desc><desc versionDate="2007-05-04" xml:lang="es">identidica una palabra o frase perteneciente a otra
                 lengua distinta de la del resto del texto en que se incluye.</desc><desc versionDate="2007-01-21" xml:lang="it">identifica una parola o un sintagma appartenente ad
-                una lingua diversa da quella del testo circostante.</desc><desc versionDate="2017-06-04" xml:lang="de">identifiziert ein Wort oder eine Phrase, die zu einer anderen Sprache gehört, als der umgebende Text.</desc><classes><memberOf key="att.global"/><memberOf key="model.emphLike"/></classes><content><macroRef key="macro.phraseSeq"/></content><attList/><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"/>
-                        </exemplum><remarks versionDate="2008-02-01" xml:lang="en">
+                una lingua diversa da quella del testo circostante.</desc><desc versionDate="2017-06-04" xml:lang="de">identifiziert ein Wort oder eine Phrase, die zu einer anderen Sprache gehört, als der umgebende Text.</desc><classes><memberOf key="att.global"/><memberOf key="model.emphLike"/></classes><content><macroRef key="macro.phraseSeq"/></content><attList/><exemplum>
+                            <p>The Latin phrase "Ab urbe condita" is not in the same language
+                                (Portuguese) as the rest of the paragraph </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>E calcando a espada debaixo do pé esquerdo, curvou-a: <foreign>Ab urbe condita</foreign>, da fundação de Roma, no ano seiscentos e três. </p></egXML>
+                        </exemplum><exemplum>
+                            <p>In this example, the whole quotation is given in a different
+                            language (Spanish). The <gi>foreign</gi> element can only be used to
+                            enclose words and phrases directly, rather than to enclose <gi>l</gi> or
+                            <gi>quote</gi> elements, and must therefore be repeated for the content
+                            of each line.
+                      </p><egXML xmlns="http://www.tei-c.org/ns/Examples"><p>E cá fóra veriamos o velho mendigo no mesmo lugar ainda, cantando ao som da sanfona:</p>
+                            <quote>
+                                <l><foreign xml:lang="es">«Rosa fresca, rosa fresca,</foreign></l>
+                                <l><foreign xml:lang="es">tan garrida y con amor;</foreign></l>
+                                <l><foreign xml:lang="es">quando vos tuve em mis braços,</foreign></l>
+                                <l><foreign xml:lang="es">no vos supe servir, no,</foreign></l>
+                                <l><foreign xml:lang="es">y agora que os serviria</foreign></l>
+                                <l><foreign xml:lang="es">no vos puedo aver no.</foreign> <ref target="#note2"/> </l>
+                            </quote></egXML></exemplum><exemplum><p>An alternative and more economical encoding for the
+                                foregoing example: </p> <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>E cá fóra veriamos o velho mendigo no mesmo lugar ainda, cantando ao som da sanfona:</p>
+                                    <quote xml:lang="es">
+                                        <l>«Rosa fresca, rosa fresca,</l>
+                                        <l>tan garrida y con amor;</l>
+                                       <!-- ... etc. -->                                     
+                                    </quote></egXML></exemplum><remarks versionDate="2008-02-01" xml:lang="en">
     <p>The global <att>xml:lang</att> attribute should be supplied for this element to
                         identify the language of the word or phrase marked. As elsewhere, its value
                         should be a language tag as defined in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CH.html#CHSH">6.1. Language Identification</ref>.</p>
@@ -3569,7 +3594,12 @@ Elements</ref>
   </listRef></elementSpec><elementSpec rend="change" module="core" ident="emph"><gloss versionDate="2005-01-14" xml:lang="en">emphasized</gloss><gloss versionDate="2007-12-20" xml:lang="ko">강조</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">強調</gloss><gloss versionDate="2009-01-06" xml:lang="fr">mis en valeur</gloss><gloss versionDate="2007-05-04" xml:lang="es">enfatizado</gloss><gloss versionDate="2007-01-21" xml:lang="it">enfatizzato</gloss><desc versionDate="2005-01-14" xml:lang="en">marks words or phrases which are stressed or emphasized for
         linguistic or rhetorical effect.</desc><desc versionDate="2007-12-20" xml:lang="ko">언어적 또는 수사적 효과를 위해 강세가 붙거나 강조된 단어 또는 구를 표시한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">為了語言上或修辭上的效果而加重語氣或特別強調的字句。</desc><desc versionDate="2008-04-05" xml:lang="ja">
         言語学的，修辞学的に強調されるべき語句を示す．</desc><desc versionDate="2009-01-06" xml:lang="fr">marque des mots ou des expressions qui sont
-        accentués ou mis en valeur pour un motif linguistique ou rhétorique.</desc><desc versionDate="2007-05-04" xml:lang="es">marca palabras o frases que se destacan o enfatizan por causas lingüísticas o retóricas.</desc><desc versionDate="2007-01-21" xml:lang="it">codifica parole o sintagmi che sono messe in risalto o enfatizzate per un effetto linguistico o retorico.</desc><classes><memberOf key="att.global"/><memberOf key="model.emphLike"/></classes><content><macroRef key="macro.paraContent"/></content><attList/><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+        accentués ou mis en valeur pour un motif linguistique ou rhétorique.</desc><desc versionDate="2007-05-04" xml:lang="es">marca palabras o frases que se destacan o enfatizan por causas lingüísticas o retóricas.</desc><desc versionDate="2007-01-21" xml:lang="it">codifica parole o sintagmi che sono messe in risalto o enfatizzate per un effetto linguistico o retorico.</desc><classes><memberOf key="att.global"/><memberOf key="model.emphLike"/></classes><content><macroRef key="macro.paraContent"/></content><attList/><exemplum>
+                            
+                            <p>The editor/transcriber wishes to show that the word "my" is emphasized
+                                in the original source:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">Oh—don’t mind <emph>my</emph> feelings—call me a
+                                mangy monkey—I’ve tried hard enough to look like one! </egXML>
                         </exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQHE">3.3.2.2. Emphatic Words and Phrases</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQH">3.3.2. Emphasis, Foreign Words, and Unusual Language</ref>
@@ -3577,14 +3607,18 @@ Elements</ref>
         surrounding text, for reasons concerning which no claim is
         made.</desc><desc versionDate="2007-12-20" xml:lang="ko">어떤 이유인지는 명세하지 않고, 주변 텍스트와 시각적으로 구별된 단어나 구를 표시한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">標誌其字型外觀上和週遭文字有所區別的字詞，但不指出顯目原因。</desc><desc versionDate="2008-04-05" xml:lang="ja">
         周囲のテキストとは見た目が異なっている語句を示す．</desc><desc versionDate="2009-01-06" xml:lang="fr">distingue un mot ou une expression comme
-        graphiquement distincte du texte environnant, sans en donner la raison.</desc><desc versionDate="2007-05-04" xml:lang="es">marca una palabra o frase gráficamente diferente del resto del texto que la circunda, por causas sobre las que no se hace ninguna declaracion.</desc><desc versionDate="2007-01-21" xml:lang="it">codifica una parola o sintagma in quanto graficamente distinta dal testo circostante, senza che vengano specificate le ragioni dell'evidenziazione.</desc><desc versionDate="2016-11-24" xml:lang="de">markiert ein Wort oder eine Textpassage, das/die sich grafisch vom umgebenden Text abhebt, ohne dass ein inhaltlicher Grund dafür angegeben wird.</desc><classes><memberOf key="att.global"/><memberOf key="model.hiLike"/></classes><content><macroRef key="macro.paraContent"/></content><attList/><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <p>Ha önök ismernék a <hi>Spleen</hi>-t, a <hi>Végtelenség
-                            </hi> prométheüszi gőgjét, a <hi>Rejtelmek</hi> fásultságát és magas
-                                röptét, szóval, ha önök ismernék <hi>Icarus</hi>t, alkalmasint
-                                ilyenformán méltóztatnának okos­kodni...</p>
-                        </egXML>
-                        </exemplum><remarks><p>This element is used at level0 for any kind of typographic salience recorded by the encoder. At level1 
-                        a semantic interpretation (for example using <gi>emph</gi>, <gi>foreign</gi> etc. replaces it.</p> </remarks><listRef>
+        graphiquement distincte du texte environnant, sans en donner la raison.</desc><desc versionDate="2007-05-04" xml:lang="es">marca una palabra o frase gráficamente diferente del resto del texto que la circunda, por causas sobre las que no se hace ninguna declaracion.</desc><desc versionDate="2007-01-21" xml:lang="it">codifica una parola o sintagma in quanto graficamente distinta dal testo circostante, senza che vengano specificate le ragioni dell'evidenziazione.</desc><desc versionDate="2016-11-24" xml:lang="de">markiert ein Wort oder eine Textpassage, das/die sich grafisch vom umgebenden Text abhebt, ohne dass ein inhaltlicher Grund dafür angegeben wird.</desc><classes><memberOf key="att.global"/><memberOf key="model.hiLike"/></classes><content><macroRef key="macro.paraContent"/></content><attList/><exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>Ha önök ismernék a <hi>Spleen</hi>-t, a <hi>Végtelenség </hi>
+                                    prométheüszi gőgjét, a <hi>Rejtelmek</hi> fásultságát és magas
+                                    röptét, szóval, ha önök ismernék <hi>Icarus</hi>t, alkalmasint
+                                    ilyenformán méltóztatnának okos­kodni...</p>
+                            </egXML>
+                        </exemplum><remarks>
+                            <p>This element is used at level0 for any kind of typographic salience
+                                recorded by the encoder. At level1 a semantic interpretation (for
+                                example using <gi>emph</gi>, <gi>foreign</gi> etc.) replaces it.</p>
+                        </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQHE">3.3.2.2. Emphatic Words and Phrases</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQH">3.3.2. Emphasis, Foreign Words, and Unusual Language</ref>
   </listRef></elementSpec><elementSpec rend="change" module="core" ident="quote"><gloss versionDate="2005-01-14" xml:lang="en">quotation</gloss><gloss versionDate="2007-12-20" xml:lang="ko">인용</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">引文</gloss><gloss versionDate="2009-01-06" xml:lang="fr">citation</gloss><gloss versionDate="2007-05-04" xml:lang="es">cita</gloss><gloss versionDate="2007-01-21" xml:lang="it">citazione</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a phrase or passage attributed by the narrator or author to some agency external
@@ -3592,7 +3626,14 @@ Elements</ref>
         포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含敘述者或作者引用自文本以外來源的字 (句) 詞或段落。</desc><desc versionDate="2008-04-05" xml:lang="ja">語り手や著者が，当該テキスト外にあるものに向けた，一節を示す．</desc><desc versionDate="2009-01-06" xml:lang="fr">contient une expression ou un passage que le
         narrateur ou l'auteur attribue à une origine extérieure au texte.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una frase o pasaje atribuido por el narrador o
         autor a un agente externo al texto.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene una frase o un brano attribuito dall'autore o
-        dal narratore a soggetti esterni al testo</desc><classes><memberOf key="att.global"/><memberOf key="model.quoteLike"/><memberOf key="att.typed"/><memberOf key="att.notated"/></classes><content><macroRef key="macro.specialPara"/></content><attList/><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+        dal narratore a soggetti esterni al testo</desc><classes><memberOf key="att.global"/><memberOf key="model.quoteLike"/><memberOf key="att.typed"/><memberOf key="att.notated"/></classes><content><macroRef key="macro.specialPara"/></content><attList/><exemplum>
+                            <p>In this example, the two lines of verse are quoted and do not form
+                                part of the narrative:  </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">   <p>О, многозначајне ли су речи покојног Његуша II:</p>
+                                <quote>
+                                    <l>„Благо томе ко довијек живи,</l>
+                                    <l>имао се рашта и родити!...</l>
+                                </quote></egXML>
                         </exemplum><remarks versionDate="2005-01-14" xml:lang="en">
     <p>If a bibliographic citation is supplied for the source of a quotation, the two may be
             grouped using the <gi>cit</gi> element.</p>
@@ -3613,7 +3654,8 @@ Elements</ref>
     qui est considéré comme un terme technique.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una palabra simple, multipalabra o
     designación simbólica que se considera como un término técnico.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene una parola singola, un'unità formata da più
     parole, o una designazione simbolica che è considerata come un termine tecnico</desc><desc versionDate="2016-11-24" xml:lang="de">enthält ein einzelnes Wort, Mehrworttermini 
-        oder symbolische Bezeichnungen, die als Fachbegriffe verstanden werden</desc><classes><memberOf key="att.global"/><memberOf key="model.emphLike"/><memberOf key="att.pointing"/><memberOf key="att.typed"/><memberOf key="att.canonical"/><memberOf key="att.sortable"/></classes><content><macroRef key="macro.phraseSeq"/></content><attList/><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+        oder symbolische Bezeichnungen, die als Fachbegriffe verstanden werden</desc><classes><memberOf key="att.global"/><memberOf key="model.emphLike"/><memberOf key="att.pointing"/><memberOf key="att.typed"/><memberOf key="att.canonical"/><memberOf key="att.sortable"/></classes><content><macroRef key="macro.phraseSeq"/></content><attList/><exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum><remarks versionDate="2009-01-23" xml:lang="en">
     <p>When this element appears within an <gi>index</gi> element, it is understood to supply the
       form under which an index entry is to be made for that location. Elsewhere, it is understood
@@ -3654,9 +3696,13 @@ Elements</ref>
   </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQU">3.3.4. Terms, Glosses, Equivalents, and Descriptions</ref>
   </listRef></elementSpec><elementSpec rend="change" module="core" ident="corr"><gloss versionDate="2006-03-20" xml:lang="en">correction</gloss><gloss versionDate="2007-12-20" xml:lang="ko">정정</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">更正</gloss><gloss versionDate="2007-05-04" xml:lang="es">corrección</gloss><gloss versionDate="2007-01-21" xml:lang="it">correzione</gloss><gloss versionDate="2016-11-24" xml:lang="de">Korrektur</gloss><desc versionDate="2006-03-20" xml:lang="en">contains the correct form of a passage apparently erroneous in the copy text.</desc><desc versionDate="2007-12-20" xml:lang="ko">복사된 텍스트에서 오류로 보이는 단락의 정정 형식을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含文本中看似錯誤並加以更正過後的文字。</desc><desc versionDate="2008-04-05" xml:lang="ja">元資料中の明らかな間違いを正したものを示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient la forme correcte d'un passage
-    qui est considéré erroné dans la copie du texte.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene la forma correcta de un pasaje aparentemente erróneo en el texto de copia.</desc><desc versionDate="2016-11-24" xml:lang="de">enthält die korrekte Form einer offenbar fehlerhaften Textstelle in der Vorlage.</desc><classes><memberOf key="att.global"/><memberOf key="model.pPart.transcriptional"/><memberOf key="model.choicePart"/><memberOf key="att.typed"/></classes><content><macroRef key="macro.paraContent"/></content><attList/><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            
-                        </egXML>
+    qui est considéré erroné dans la copie du texte.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene la forma correcta de un pasaje aparentemente erróneo en el texto de copia.</desc><desc versionDate="2016-11-24" xml:lang="de">enthält die korrekte Form einer offenbar fehlerhaften Textstelle in der Vorlage.</desc><classes><memberOf key="att.global"/><memberOf key="model.pPart.transcriptional"/><memberOf key="model.choicePart"/><memberOf key="att.typed"/></classes><content><macroRef key="macro.paraContent"/></content><attList/><exemplum>
+                        <p>In this text, the words "al" and "hombre" were not present in the original source, but
+                            have been added by the editor/transcriber: </p>    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>... me había presentado aún ocasión de asombrar <corr>al</corr> 
+                                    mundo con ningún hecho heroico; pero <corr>el</corr> oírme
+                                        llamar <emph>hombre</emph> me llenó de orgul...</p>                               
+                            </egXML>
                         </exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COEDCOR">3.4.1. Apparent Errors</ref>
   </listRef></elementSpec><elementSpec module="core" ident="choice">
@@ -3946,7 +3992,9 @@ Normalization</ref>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <name>Christof Schöch</name>
                             </egXML>
-                        </exemplum><remarks><p>Not permitted outside the header</p></remarks><listRef>
+                        </exemplum><remarks>
+                            <p>Not permitted outside the header</p>
+                        </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONARS">3.5.1. Referring Strings</ref>
   </listRef></elementSpec><elementSpec module="core" ident="rs">
   <gloss versionDate="2005-01-14" xml:lang="en">referencing string</gloss>
@@ -4013,12 +4061,11 @@ Normalization</ref>
                                         <desc>number of pages in the whole of the source text</desc>
                                     </valItem>
                                     <valItem ident="words">
-                                        <desc>number of space delimited tokens in
-                                            the transcribed source text, excluding the header</desc>
+                                        <desc>number of space delimited tokens in the transcribed
+                                            source text, excluding the header</desc>
                                     </valItem>
                                     <valItem ident="vols">
-                                        <desc>number of volumes in the original source
-                                            text </desc>
+                                        <desc>number of volumes in the original source text </desc>
                                     </valItem>
                                 </valList>
                             </attDef><attDef ident="type" usage="opt">
@@ -4046,8 +4093,9 @@ Normalization</ref>
                             <p>An indication of the number of words is mandatory. Indicating the
                                 number of pages is optional. If information for page or volume count
                                 is not available the relevant <gi>measure</gi> element should be
-                                absent. </p><p>Spaces and other punctuation marks are not permitted
-                                as content of the <gi>measure</gi> element.</p>
+                                absent. </p>
+                            <p>Spaces and other punctuation marks are not permitted as content of
+                                the <gi>measure</gi> element.</p>
                         </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONANU">3.5.3. Numbers and
 Measures</ref>
@@ -4702,25 +4750,25 @@ Measures</ref>
     z. B. eines Kapitels, einer Liste, eines Glossars oder einer Handschriftenbeschreibung.</desc><classes><memberOf key="att.global"/><memberOf key="att.typed"/><memberOf key="model.headLike"/><memberOf key="model.pLike.front"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="lg"/><classRef key="model.gLike"/><classRef key="model.phrase"/><classRef key="model.inter"/><classRef key="model.lLike"/><classRef key="model.global"/></alternate></content><attList/><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <div type="part">
-                                <head>BOOK I.</head>                                
-                                <head>MISS BROOKE.</head>
-                                <div type="chapter">
-                                    <head>CHAPTER I.</head>
-                                    <quote> Since I can do no good because a woman, Reach constantly at something that is near it. —The
-                                        Maid's Tragedy: BEAUMONT AND FLETCHER. </quote>
-                                    <p>Miss Brooke had that kind of beauty which seems to be thrown
-                                        into relief by poor dress....
-                                    </p>
-                                    <!-- ... -->
-                                </div>
+                                    <head>BOOK I.</head>
+                                    <head>MISS BROOKE.</head>
+                                    <div type="chapter">
+                                        <head>CHAPTER I.</head>
+                                        <quote> Since I can do no good because a woman, Reach
+                                            constantly at something that is near it. —The Maid's
+                                            Tragedy: BEAUMONT AND FLETCHER. </quote>
+                                        <p>Miss Brooke had that kind of beauty which seems to be
+                                            thrown into relief by poor dress.... </p>
+                                        <!-- ... -->
+                                    </div>
                                     <!-- ... -->
                                 </div>
                             </egXML>
-                            <p>A heading of any kind at the start of a division of any kind may be marked using
-                                <gi>head</gi>. In this example, there are two headings at the start
-                                of the first part, and one at the start of the first chapter. The
-                                epigraph at the start of the first chapter is marked up as a
-                                quotation and is not a heading. </p>
+                            <p>A heading of any kind at the start of a division of any kind may be
+                                marked using <gi>head</gi>. In this example, there are two headings
+                                at the start of the first part, and one at the start of the first
+                                chapter. The epigraph at the start of the first chapter is marked up
+                                as a quotation and is not a heading. </p>
                         </exemplum><remarks versionDate="2005-12-13" xml:lang="en">
     <p>The <gi>head</gi> element is used for headings at all levels; software which treats (e.g.)
       chapter headings, section headings, and list titles differently must determine the proper
@@ -4749,7 +4797,12 @@ Measures</ref>
   </remarks><listRef>
     
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSHD">4.2.1. Headings and Trailers</ref>
-  </listRef></elementSpec><elementSpec rend="change" module="core" ident="note"><gloss versionDate="2017-06-25" xml:lang="de">Anmerkung</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a note or annotation.</desc><desc versionDate="2009-01-06" xml:lang="fr">contient une note ou une annotation</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una nota o aclaración</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含附註或註釋。</desc><desc versionDate="2007-01-21" xml:lang="it">contiene una nota o un'annotazione</desc><desc versionDate="2006-10-28" xml:lang="ja">注釈・コメント．</desc><desc versionDate="2017-06-25" xml:lang="de">enthält eine Anmerkung oder Annotation.</desc><classes><memberOf key="att.global"/><memberOf key="model.noteLike"/><memberOf key="att.pointing"/><memberOf key="att.typed"/></classes><content><macroRef key="macro.specialPara"/></content><attList><attDef ident="anchored" usage="opt">
+  </listRef></elementSpec><elementSpec rend="change" module="core" ident="note"><gloss versionDate="2017-06-25" xml:lang="de">Anmerkung</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a note or annotation.</desc><desc versionDate="2009-01-06" xml:lang="fr">contient une note ou une annotation</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una nota o aclaración</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含附註或註釋。</desc><desc versionDate="2007-01-21" xml:lang="it">contiene una nota o un'annotazione</desc><desc versionDate="2006-10-28" xml:lang="ja">注釈・コメント．</desc><desc versionDate="2017-06-25" xml:lang="de">enthält eine Anmerkung oder Annotation.</desc><classes><memberOf key="att.global"/><memberOf key="model.noteLike"/><memberOf key="att.pointing"/><memberOf key="att.typed"/></classes><content><macroRef key="macro.specialPara"/></content><constraintSpec mode="add" ident="notePlacement" scheme="schematron">
+                            <constraint>
+                                <sch:assert test="parent::tei:div[@type='notes']" role="ERROR">Notes must be given out of line and inside a div of type
+                                    'notes'</sch:assert>
+                            </constraint>
+                        </constraintSpec><attList><attDef ident="anchored" usage="opt">
       <gloss versionDate="2017-06-25" xml:lang="de">verankert</gloss>
       <desc versionDate="2005-01-14" xml:lang="en">indicates whether the copy text shows the exact place of reference for the note.</desc>
       <desc versionDate="2009-01-06" xml:lang="fr">indique si l'exemplaire du texte montre l'emplacement
@@ -4826,7 +4879,33 @@ Measures</ref>
           Bereich zu verweisen, ist die Verwendung der <ident>range</ident>-Funktion von XPointer, wie in
           <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SATSRN">16.2.4.6. range()</ref> beschrieben.</p>
       </remarks>
-    </attDef></attList><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+    </attDef></attList><exemplum>
+                            <p>In this example, two authorial footnotes have been encoded. Each note
+                                is encoded with a <gi>note</gi> element, and carries a unique identifier
+                                on its <att>xml:id</att> attribute. A <gi>ref</gi> element
+                                replaces the siglum in the running text indicating the point where the note is
+                                attached. 
+                         </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <body>
+                                    <!-- ... -->
+                                    <p>Au milieu de ces spirituels convives on remarquait une figure angélique, c'était celle de
+                                        la fille de madame de Condorcet, de cette ravissante Eliza  <ref target="#FR0726_N1">[1]</ref>
+                                        qui, à peine dans l'âge de l'adolescence, avait déjà la taille et les traits réguliers d'une statue grecque.</p>
+                                    
+                                    <!-- ... -->
+                                    <p>—Je ne sortirai point aujourd'hui, j'ai mal à la tête, une
+                                        longue coiffure me fatiguerait; Ellénore arrangera mes
+                                        cheveux, et me mettra ma baigneuse <ref target="#FR0726_N2">[2]</ref>.</p>
+                                    
+                                </body>
+                                 <back>
+                                    <div type="notes">
+                                        <note xml:id="FR0726_N1">[Note 1: Elle a épousé depuis M. O'Connor.]</note>
+                                        <note xml:id="FR0726_N2">[Note 2: Sorte de bonnet négligé, qui était à la mode en ce temps.]</note>
+                                    </div>
+                                </back>
+                            </egXML>
                         </exemplum><remarks xml:lang="fr" versionDate="2007-06-12">
     <p>L'attribut global<att>n</att> indique le
     symbole ou le nombre utilisé pour marquer le point d'insertion
@@ -5467,8 +5546,7 @@ inclus, peuvent être encodés dans un élément
           ausgezeichnet werden.</p>
       </remarks>
     </attDef></attList><exemplum>
-                            <p>describes the a title of a novel and the edition in which it is
-                                included</p>
+                           
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title>Wuthering Heights : ELTeC edition</title>
@@ -5559,7 +5637,7 @@ inclus, peuvent être encodés dans un élément
                                         <desc>describes the first complete print source edition
                                             published in the author's lifetime</desc>
                                     </valItem>
-                                    <valItem ident="printEdition">
+                                    <valItem ident="printSource">
                                         <desc>describes a print source edition used as the source of
                                             the encoding which is not the first edition</desc>
                                     </valItem>
@@ -5593,7 +5671,7 @@ inclus, peuvent être encodés dans un élément
                         </exemplum><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <sourceDesc>
-                                    <bibl type="printEdition">
+                                    <bibl type="printSource">
                                         <title>Opera omnia</title>
                                         <title>Romanzi</title>
                                         <author>Svevo, Italo</author>
@@ -5664,14 +5742,13 @@ relatedItem element must be empty</sch:report>
                                         </bibl>
                                     </relatedItem>
                                 </bibl>
-                                
                             </egXML>
                             <p>indicates that the digital source described by the outer
-                                <gi>bibl</gi> element is related to the first edition
-                                described by the inner <gi>bibl</gi> element. </p>
+                                    <gi>bibl</gi> element is related to the first edition described
+                                by the inner <gi>bibl</gi> element. </p>
                         </exemplum><remarks>
                             <p>In ELTeC this element is used only as a child element of
-                                <gi>bibl</gi>, as shown in this example.  </p>
+                                    <gi>bibl</gi>, as shown in this example. </p>
                         </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBIRI">3.11.2.7. Related Items</ref>
   </listRef></elementSpec><elementSpec rend="change" module="core" ident="l"><gloss versionDate="2005-01-14" xml:lang="en">verse line</gloss><gloss versionDate="2007-12-20" xml:lang="ko">운문 시행</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">詩行</gloss><gloss versionDate="2009-01-06" xml:lang="fr">vers</gloss><gloss versionDate="2007-05-04" xml:lang="es">verso</gloss><gloss versionDate="2007-01-21" xml:lang="it">verso</gloss><gloss versionDate="2017-06-13" xml:lang="de">Vers(zeile)</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a single, possibly incomplete, line of verse.</desc><desc versionDate="2007-12-20" xml:lang="ko">미완성일 수도 있지만 운문의 하나의 시행을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含詩文的一行，也許是不完整的詩行。</desc><desc versionDate="2008-04-05" xml:lang="ja">韻文中の1行を示す．行として完全でない場合もある．</desc><desc versionDate="2009-01-06" xml:lang="fr">contient un seul vers, éventuellement incomplet.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene un único verso, posiblemente incompleto.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene un singolo verso, anche incompleto.</desc><desc versionDate="2017-06-13" xml:lang="de">enthält eine einzelne, möglicherweise unvollständige, Verszeile.</desc><classes><memberOf key="att.global"/><memberOf key="model.lLike"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><classRef key="model.gLike"/><classRef key="model.phrase"/><classRef key="model.inter"/><classRef key="model.global"/></alternate></content><constraintSpec ident="abstractModel-structure-l" scheme="schematron">
@@ -5680,14 +5757,14 @@ relatedItem element must be empty</sch:report>
         Abstract model violation: Lines may not contain lines or lg elements.
       </report>
     </constraint>
-  </constraintSpec><attList/><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <p>Mimi chante avec un sourire gracieux et un désintéressement tout particulier 
-                                des couplets dont voici le refrain:
-                            <quote>
-                            <l>Notre bonheur est accompli</l>
-                            <l>Voilà le culte rétabli.</l>
-                            </quote></p> 
-                        </egXML>
+  </constraintSpec><attList/><exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>Mimi chante avec un sourire gracieux et un désintéressement tout
+                                    particulier des couplets dont voici le refrain: <quote>
+                                        <l>Notre bonheur est accompli</l>
+                                        <l>Voilà le culte rétabli.</l>
+                                    </quote></p>
+                            </egXML>
                         </exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COVE">3.12.1. Core Tags for Verse</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CODV">3.12. Passages of Verse or Drama</ref>
@@ -6267,9 +6344,7 @@ by the stage direction.</p>
                                         </revisionDesc>
                                     </teiHeader>
                                     <text>
-                                      
-                                            <!-- transcription of text here -->
-                                        
+                                        <!-- transcription of text here -->
                                     </text>
                                 </TEI></egXML>
                         </exemplum><remarks>
@@ -6289,13 +6364,15 @@ by the stage direction.</p>
     unitario o combinado, p.ej. un texto en verso o teatral, una recopilación de ensayos, una
     novela, un diccionario, o una fragmento de corpus.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene un unico testo di qualsiasi tipo, sia esso
     unitario o composito, per esempio un testo in versi o teatrale, una raccolta di saggi, un
-    romanzo, un dizionario, o una porzione di corpus</desc><classes><memberOf key="att.global"/><memberOf key="att.typed"/><memberOf key="model.resourceLike"/></classes><content><sequence minOccurs="1" maxOccurs="1"><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/><sequence minOccurs="0" maxOccurs="1"><elementRef key="front"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence><alternate minOccurs="1" maxOccurs="1"><elementRef key="body"/><elementRef key="group"/></alternate><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/><sequence minOccurs="0" maxOccurs="1"><elementRef key="back"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence></content><attList/><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <text>
-                                <front><!-- front matter e.g. titlepage  --></front>
-                                <body><!-- body of the text --></body>
-                                <back><!-- back matter e.g. notes--> </back>
-                            </text>
-                        </egXML>
+    romanzo, un dizionario, o una porzione di corpus</desc><classes><memberOf key="att.global"/><memberOf key="att.typed"/><memberOf key="model.resourceLike"/></classes><content><sequence minOccurs="1" maxOccurs="1"><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/><sequence minOccurs="0" maxOccurs="1"><elementRef key="front"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence><alternate minOccurs="1" maxOccurs="1"><elementRef key="body"/><elementRef key="group"/></alternate><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/><sequence minOccurs="0" maxOccurs="1"><elementRef key="back"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence></content><attList/><exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <text>
+                                    <front><!-- front matter e.g. titlepage  --></front>
+                                    <body><!-- body of the text --></body>
+                                    <back><!-- back matter e.g. notes-->
+                                    </back>
+                                </text>
+                            </egXML>
                         </exemplum><remarks versionDate="2007-03-30" xml:lang="en">
     <p>This element should not be used to represent a text which is inserted at an arbitrary point
       within the structure of another, for example as in an embedded or quoted narrative; the
@@ -6319,11 +6396,17 @@ by the stage direction.</p>
     l’exclusion de toute partie pré- ou post-liminaire.</desc><desc versionDate="2017-06-13" xml:lang="de">enthält den gesamten Textkörper eines eigenständigen Textes, außer den Vorspann (front) und Nachspann (back).</desc><desc versionDate="2007-05-04" xml:lang="es">contiene el cuerpo completo de un texto unitario,
     excluyendo los eventuales añadidos paratextuales (prólogos, dedicatorias, apéndices, etc.) al
     inicio o fin de un texto.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene l'intero corpo di un testo unitario, esclusi
-    eventuale peritesto iniziale e finale</desc><classes><memberOf key="att.global"/></classes><content><sequence minOccurs="1" maxOccurs="1"><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/><sequence minOccurs="0" maxOccurs="1"><classRef key="model.divTop"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divTop"/></alternate></sequence><sequence minOccurs="0" maxOccurs="1"><classRef key="model.divGenLike"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divGenLike"/></alternate></sequence><alternate minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.divLike"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divGenLike"/></alternate></sequence><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.div1Like"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divGenLike"/></alternate></sequence><sequence minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.common"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence><alternate minOccurs="0" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.divLike"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divGenLike"/></alternate></sequence><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.div1Like"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divGenLike"/></alternate></sequence></alternate></sequence></alternate><sequence minOccurs="0" maxOccurs="unbounded"><classRef key="model.divBottom"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence></content><attList/><exemplum>
+    eventuale peritesto iniziale e finale</desc><classes><memberOf key="att.global"/></classes><content><sequence minOccurs="1" maxOccurs="1"><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/><sequence minOccurs="0" maxOccurs="1"><classRef key="model.divTop"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divTop"/></alternate></sequence><sequence minOccurs="0" maxOccurs="1"><classRef key="model.divGenLike"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divGenLike"/></alternate></sequence><alternate minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.divLike"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divGenLike"/></alternate></sequence><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.div1Like"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divGenLike"/></alternate></sequence><sequence minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.common"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence><alternate minOccurs="0" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.divLike"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divGenLike"/></alternate></sequence><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.div1Like"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.global"/><classRef key="model.divGenLike"/></alternate></sequence></alternate></sequence></alternate><sequence minOccurs="0" maxOccurs="unbounded"><classRef key="model.divBottom"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence></content><constraintSpec mode="add" ident="chaptersRequired" scheme="schematron">
+                            <constraint>
+                                <sch:assert test="descendant::tei:div[@type='chapter']" role="ERROR">The body of a text must contain at least one chapter</sch:assert>
+                            </constraint>
+                        </constraintSpec><attList/><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <body>
-                                    <div type="chapter"><head>I.</head>
-                                        <p>Utanfor, i Vest, bryt Have paa mot ei sju Milir lang laag Sandstrand.</p>
+                                    <div type="chapter">
+                                        <head>I.</head>
+                                        <p>Utanfor, i Vest, bryt Have paa mot ei sju Milir lang laag
+                                            Sandstrand.</p>
                                         <p>Det er sjølve Have. Nordhave breidt og fritt, ukløyvt og
                                             utøymt, endelaust....</p>
                                         <!-- ... -->
@@ -6337,7 +6420,15 @@ by the stage direction.</p>
   </listRef></elementSpec><elementSpec rend="change" module="textstructure" ident="div"><gloss versionDate="2005-01-14" xml:lang="en">text division</gloss><gloss versionDate="2007-12-20" xml:lang="ko">텍스트 구역</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">文本區段</gloss><gloss versionDate="2007-06-12" xml:lang="fr">division du texte</gloss><gloss versionDate="2017-06-13" xml:lang="de">Textabschnitt</gloss><gloss versionDate="2007-05-04" xml:lang="es">división de texto</gloss><gloss versionDate="2007-01-21" xml:lang="it">partizione testuale</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a subdivision of the front, body, or back of a text.</desc><desc versionDate="2007-12-20" xml:lang="ko">텍스트의 전면부, 본문, 후면부의 하위 구역을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">文本的正文前資訊、正文、及正文後資訊的分段。</desc><desc versionDate="2008-04-05" xml:lang="ja">前付，本文，後付中のテキスト部分を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient une subdivision dans le texte préliminaire, dans le
     corps d’un texte ou dans le texte postliminaire.</desc><desc versionDate="2017-06-13" xml:lang="de">enthält einen Unterabschnitt in Vorspann (front), Textkörper oder Nachspann (back) eines Textes.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una subdivisión del paratexto inicial, del
     cuerpo del texto o del paratexto final.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene una suddivisione del peritesto iniziale, del
-    corpo del testo, o del peritesto finale</desc><classes><memberOf key="att.global"/><memberOf key="att.typed"/><memberOf key="model.divLike"/></classes><content><sequence minOccurs="1" maxOccurs="1"><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.divTop"/><classRef key="model.global"/></alternate><sequence minOccurs="0" maxOccurs="1"><alternate minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><alternate minOccurs="1" maxOccurs="1"><classRef key="model.divLike"/><classRef key="model.divGenLike"/></alternate><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence><sequence minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.common"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence><sequence minOccurs="0" maxOccurs="unbounded"><alternate minOccurs="1" maxOccurs="1"><classRef key="model.divLike"/><classRef key="model.divGenLike"/></alternate><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence></alternate><sequence minOccurs="0" maxOccurs="unbounded"><classRef key="model.divBottom"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence></sequence></content><constraintSpec ident="abstractModel-structure-l" scheme="schematron">
+    corpo del testo, o del peritesto finale</desc><classes><memberOf key="att.global"/><memberOf key="att.typed"/><memberOf key="model.divLike"/></classes><content><sequence minOccurs="1" maxOccurs="1"><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.divTop"/><classRef key="model.global"/></alternate><sequence minOccurs="0" maxOccurs="1"><alternate minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><alternate minOccurs="1" maxOccurs="1"><classRef key="model.divLike"/><classRef key="model.divGenLike"/></alternate><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence><sequence minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="unbounded"><classRef key="model.common"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence><sequence minOccurs="0" maxOccurs="unbounded"><alternate minOccurs="1" maxOccurs="1"><classRef key="model.divLike"/><classRef key="model.divGenLike"/></alternate><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence></alternate><sequence minOccurs="0" maxOccurs="unbounded"><classRef key="model.divBottom"/><classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/></sequence></sequence></sequence></content><constraintSpec ident="chapterStructure" scheme="schematron">
+                            <desc>div of type chapter should not be further subdivided</desc>
+                            <constraint>
+                               <sch:report test="@type='chapter' and child::tei:div">
+                                   A div of type 'chapter' may not be further subdivided (except by
+                                   milestones)
+                               </sch:report> 
+                            </constraint>
+                        </constraintSpec><constraintSpec ident="abstractModel-structure-l" scheme="schematron">
     <constraint>
       <report xmlns="http://purl.oclc.org/dsdl/schematron" test="ancestor::tei:l">
         Abstract model violation: Lines may not contain higher-level structural elements such as div.
@@ -6350,7 +6441,9 @@ by the stage direction.</p>
       </report>
     </constraint>
   </constraintSpec><attList><attDef ident="type" mode="change">
-                                <datatype><dataRef key="teidata.enumerated"/></datatype>
+                                <datatype>
+                                    <dataRef key="teidata.enumerated"/>
+                                </datatype>
                                 <valList type="semi">
                                     <valItem ident="titlepage">
                                         <desc>title page transcription (level 1 only)</desc>
@@ -6367,9 +6460,9 @@ by the stage direction.</p>
                                             more paragraphs</desc>
                                     </valItem>
                                     <valItem ident="letter">
-                                        <desc>a textual division containing one or
-                                            more paragraphs  and not further sub-divided
-                                            except by milestone markers which is presented as a letter</desc>
+                                        <desc>a textual division containing one or more paragraphs
+                                            and not further sub-divided except by milestone markers
+                                            which is presented as a letter</desc>
                                     </valItem>
                                     <valItem ident="group">
                                         <desc>any grouping of chapters or groups, e.g. part, volume,
@@ -6378,20 +6471,23 @@ by the stage direction.</p>
                                 </valList>
                             </attDef></attList><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                               <body> 
-                                   <div type="chapter">
-                                    <head>III</head>
-                                    <p>Em casa do dr. Carvalho, Claudio pouco fallou com Emilia, elle
-                                     prezo a uma meza do "whist", para ser agradavel ao juiz que sem isso 
-                                     se aborrecia, ella dansando sempre. ...</p>
-                                    <!-- more paragraphs here -->
-                                </div>
-                               </body>
+                                <body>
+                                    <div type="chapter">
+                                        <head>III</head>
+                                        <p>Em casa do dr. Carvalho, Claudio pouco fallou com Emilia,
+                                            elle prezo a uma meza do "whist", para ser agradavel ao
+                                            juiz que sem isso se aborrecia, ella dansando sempre.
+                                            ...</p>
+                                        <!-- more paragraphs here -->
+                                    </div>
+                                </body>
                             </egXML>
-                        </exemplum><remarks><p>A division of <att>type</att>=<code>letter</code> should only be
-                            used if the entire novel is composed of a sequence of letters. When a 
-                            letter is quoted within a chapter containing other material, the letter 
-                            should be marked using the <gi>quote</gi> element. </p></remarks><listRef>
+                        </exemplum><remarks>
+                            <p>A division of <att>type</att>=<code>letter</code> should only be used
+                                if the entire novel is composed of a sequence of letters. When a
+                                letter is quoted within a chapter containing other material, the
+                                letter should be marked using the <gi>quote</gi> element. </p>
+                        </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSDIV">4.1. Divisions of the Body</ref>
   </listRef></elementSpec><elementSpec rend="change" module="textstructure" ident="trailer"><desc versionDate="2005-01-14" xml:lang="en">contains a closing title or footer appearing at the end of a division of a text.</desc><desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역의 종료부에 나타나는 마지막 제목 또는 꼬리말을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含文本中一個區段結束時的結尾題名或尾錄。</desc><desc versionDate="2008-04-05" xml:lang="ja">テキスト部分の最後にある，結びのタイトルや脚注を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient un titre de fin ou de bas de page à la fin d’une
     division du texte.</desc><desc versionDate="2017-06-25" xml:lang="de">enthält einen abschließenden Nachsatz oder eine Fußzeile am Ende eines Textabschnitts.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una fórmula de clausura o un elemento a pie de
@@ -6422,7 +6518,12 @@ by the stage direction.</p>
     paratextual (encabezamiento, frontispicio, prefacio, dedicatoria, etc.) que
     aparece delante del inicio del texto.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene qualsiasi materiale
     peritestuale (intestazioni, frontespizio, prefazioni, dediche, etc.) che si
-    trovi prima dell'inizio del testo vero e proprio</desc><classes><memberOf key="att.global"/></classes><content><sequence minOccurs="1" maxOccurs="1"><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.frontPart"/><classRef key="model.pLike"/><classRef key="model.pLike.front"/><classRef key="model.global"/></alternate><sequence minOccurs="0" maxOccurs="1"><alternate minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="1"><classRef key="model.div1Like"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.div1Like"/><classRef key="model.frontPart"/><classRef key="model.global"/></alternate></sequence><sequence minOccurs="1" maxOccurs="1"><classRef key="model.divLike"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.divLike"/><classRef key="model.frontPart"/><classRef key="model.global"/></alternate></sequence></alternate><sequence minOccurs="0" maxOccurs="1"><classRef key="model.divBottom"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.divBottom"/><classRef key="model.global"/></alternate></sequence></sequence></sequence></content><attList/><exemplum>
+    trovi prima dell'inizio del testo vero e proprio</desc><classes><memberOf key="att.global"/></classes><content><sequence minOccurs="1" maxOccurs="1"><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.frontPart"/><classRef key="model.pLike"/><classRef key="model.pLike.front"/><classRef key="model.global"/></alternate><sequence minOccurs="0" maxOccurs="1"><alternate minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="1"><classRef key="model.div1Like"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.div1Like"/><classRef key="model.frontPart"/><classRef key="model.global"/></alternate></sequence><sequence minOccurs="1" maxOccurs="1"><classRef key="model.divLike"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.divLike"/><classRef key="model.frontPart"/><classRef key="model.global"/></alternate></sequence></alternate><sequence minOccurs="0" maxOccurs="1"><classRef key="model.divBottom"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.divBottom"/><classRef key="model.global"/></alternate></sequence></sequence></sequence></content><constraintSpec mode="add" ident="frontDivTypes" scheme="schematron">
+                            <constraint>
+                                <sch:assert test="child::tei:div[@type='titlepage'] or child::tei:div[@type='liminal']" role="ERROR">The front matter of a text must contain either liminal or
+                                    titlepage divisions</sch:assert>
+                            </constraint>
+                        </constraintSpec><attList/><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <front>
                                     <div type="titlePage">
@@ -6440,8 +6541,9 @@ by the stage direction.</p>
                                     <div type="liminal">
                                         <head>PREFAȚĂ LA EDȚIA ÎNTÂIA</head>
                                         <p>Isvoarele, de cari m'am slujit la studiul vieții lin
-                                            Iancu Jianu și a timpului său, sunt cele următoare...</p>
-                                            <p>BUCURA DUMBRAVĂ.</p>
+                                            Iancu Jianu și a timpului său, sunt cele
+                                            următoare...</p>
+                                        <p>BUCURA DUMBRAVĂ.</p>
                                         <p>București, 1911.</p>
                                     </div>
                                 </front>
@@ -6462,21 +6564,26 @@ by the stage direction.</p>
     principale d'un texte : appendice, etc.</desc><desc versionDate="2006-10-18" xml:lang="de">enthält Anhänge jeglicher Art, die auf den Hauptteil
     eines Textes folgen.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene cualquier tipo de apéndice, etc. que aparece
     detrás del texto.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene qualsiasi appendice che segua il testo vero
-    e proprio</desc><classes><memberOf key="att.global"/></classes><content><sequence minOccurs="1" maxOccurs="1"><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.frontPart"/><classRef key="model.pLike.front"/><classRef key="model.pLike"/><classRef key="model.listLike"/><classRef key="model.global"/></alternate><alternate minOccurs="0" maxOccurs="1"><sequence minOccurs="1" maxOccurs="1"><classRef key="model.div1Like"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.frontPart"/><classRef key="model.div1Like"/><classRef key="model.global"/></alternate></sequence><sequence minOccurs="1" maxOccurs="1"><classRef key="model.divLike"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.frontPart"/><classRef key="model.divLike"/><classRef key="model.global"/></alternate></sequence></alternate><sequence minOccurs="0" maxOccurs="1"><classRef key="model.divBottomPart"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.divBottomPart"/><classRef key="model.global"/></alternate></sequence></sequence></content><attList/><exemplum>
-                              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <back>
-                                <div type="liminal">
-                                    <head>Appendix</head>
-                                    <p><!-- additional text here -->
-                                    </p>
-                                </div>
-                                <div type="notes">
-                                    <head>Authorial Notes</head>
-                                    <note xml:id="ENG18700_N23"><!-- text of footnote here --></note>
-                                </div>
-                            </back>
-                           </egXML>
-                       </exemplum><remarks versionDate="2015-01-30" xml:lang="en">
+    e proprio</desc><classes><memberOf key="att.global"/></classes><content><sequence minOccurs="1" maxOccurs="1"><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.frontPart"/><classRef key="model.pLike.front"/><classRef key="model.pLike"/><classRef key="model.listLike"/><classRef key="model.global"/></alternate><alternate minOccurs="0" maxOccurs="1"><sequence minOccurs="1" maxOccurs="1"><classRef key="model.div1Like"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.frontPart"/><classRef key="model.div1Like"/><classRef key="model.global"/></alternate></sequence><sequence minOccurs="1" maxOccurs="1"><classRef key="model.divLike"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.frontPart"/><classRef key="model.divLike"/><classRef key="model.global"/></alternate></sequence></alternate><sequence minOccurs="0" maxOccurs="1"><classRef key="model.divBottomPart"/><alternate minOccurs="0" maxOccurs="unbounded"><classRef key="model.divBottomPart"/><classRef key="model.global"/></alternate></sequence></sequence></content><constraintSpec mode="add" ident="backDivTypes" scheme="schematron">
+                                <constraint>
+                                    <sch:assert test="child::tei:div[@type='notes'] or child::tei:div[@type='liminal']" role="ERROR">The back matter of a text must contain either liminal or
+                                        notes divisions</sch:assert>
+                                </constraint>
+                            </constraintSpec><attList/><exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <back>
+                                    <div type="liminal">
+                                        <head>Appendix</head>
+                                        <p><!-- additional text here -->
+                                        </p>
+                                    </div>
+                                    <div type="notes">
+                                        <head>Authorial Notes</head>
+                                        <note xml:id="ENG18700_N23"><!-- text of footnote here --></note>
+                                    </div>
+                                </back>
+                            </egXML>
+                        </exemplum><remarks versionDate="2015-01-30" xml:lang="en">
     <p>Because cultural conventions differ as to which elements are grouped as back matter and which
       as front matter, the content models for the <gi>back</gi> and <gi>front</gi> elements are
       identical.</p>
@@ -6500,7 +6607,7 @@ by the stage direction.</p>
     제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">在所有符合TEI標準的文本起始的電子題名頁當中提供敘述性以及宣告性的資訊。</desc><desc versionDate="2008-04-05" xml:lang="ja">全てのTEI準拠テキストが伴う，電子版のタイトルページを構成する，記述 的・宣言的情報を示す．</desc><desc versionDate="2016-11-25" xml:lang="de">beinhaltet beschreibende und erklärende Metadaten, die einer digitalen Ressource oder einer Sammlung von Ressourcen vorangestellt sind.</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona información descriptiva y declarativa de una
     página de título electrónico prefijada como un texto conforme a TEI.</desc><desc versionDate="2007-01-21" xml:lang="it">fornisce informazioni descrittive e dichiarative che
     costituiscono un frontespizio elettronico che precede qualsiasi testo TEI-conforme.</desc><classes><memberOf key="att.global"/></classes><content><sequence minOccurs="1" maxOccurs="1"><elementRef key="fileDesc"/><elementRef key="encodingDesc"/><elementRef key="profileDesc"/><elementRef key="revisionDesc"/></sequence></content><attList/><exemplum>
-                         
+                            
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <teiHeader>
                                     <fileDesc>
@@ -6515,7 +6622,6 @@ by the stage direction.</p>
                                                 <!-- information about licensing and
                                                     publication of the ELTeC text-->
                                             </availability>
-                                         
                                         </publicationStmt>
                                         <sourceDesc>
                                             <!-- information about the source(s) from which the 
@@ -6558,25 +6664,28 @@ by the stage direction.</p>
   </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="header" ident="fileDesc"><gloss versionDate="2007-07-05" xml:lang="en">file description</gloss><gloss versionDate="2009-01-05" xml:lang="fr">description bibliographique du fichier</gloss><gloss versionDate="2007-12-20" xml:lang="ko">파일 기술</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">檔案描述</gloss><gloss versionDate="2006-10-18" xml:lang="de">Dateibeschreibung</gloss><gloss versionDate="2007-05-04" xml:lang="es">Descripción del archivo.</gloss><gloss versionDate="2007-01-21" xml:lang="it">descrizione del file</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a full bibliographic description of an electronic file.</desc><desc versionDate="2009-01-05" xml:lang="fr">contient une description bibliographique complète du
     fichier électronique.</desc><desc versionDate="2007-12-20" xml:lang="ko">전자 파일에 관한 완전한 서지 정보의 기술을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含對電子檔案的完整書目敘述。</desc><desc versionDate="2008-04-05" xml:lang="ja">電子ファイルに関する完全な書誌情報を示す．</desc><desc versionDate="2016-11-17" xml:lang="de">enthält die vollständige bibliografische Beschreibung einer elektronischen Datei.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una descripción bibliográfica completa del
     archivo electrónico.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene una descrizione bibliografica completa di un
-    file elettronico.</desc><classes><memberOf key="att.global"/></classes><content><sequence minOccurs="1" maxOccurs="1"><elementRef key="titleStmt"/><elementRef key="extent"/><elementRef key="publicationStmt"/><elementRef key="sourceDesc"/></sequence></content><attList/><exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <fileDesc>
-                                <titleStmt>
-                                    <!-- information about the title of the work -->
-                                </titleStmt>
-                                <extent>
-                                    <!-- information about the size of the work -->
-                                </extent>
-                                <publicationStmt>
-                                    <p>Adicionado à coleção ELTeC <date>20 de novembro de 2018</date>. </p>
-                                </publicationStmt>                               
-                                <sourceDesc>
-                                    <bibl>
-                                       <!-- bibliographic description of the source/s of the work
+    file elettronico.</desc><classes><memberOf key="att.global"/></classes><content><sequence minOccurs="1" maxOccurs="1"><elementRef key="titleStmt"/><elementRef key="extent"/><elementRef key="publicationStmt"/><elementRef key="sourceDesc"/></sequence></content><attList/><exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <fileDesc>
+                                    <titleStmt>
+                                        <!-- information about the title of the work -->
+                                    </titleStmt>
+                                    <extent>
+                                        <!-- information about the size of the work -->
+                                    </extent>
+                                    <publicationStmt>
+                                        <p>Adicionado à coleção ELTeC <date>20 de novembro de
+                                                2018</date>. </p>
+                                    </publicationStmt>
+                                    <sourceDesc>
+                                        <bibl>
+                                            <!-- bibliographic description of the source/s of the work
                                        -->
-                                    </bibl>
-                                </sourceDesc>
-                            </fileDesc>
-                        </egXML></exemplum><remarks versionDate="2008-02-01" xml:lang="en">
+                                        </bibl>
+                                    </sourceDesc>
+                                </fileDesc>
+                            </egXML>
+                        </exemplum><remarks versionDate="2008-02-01" xml:lang="en">
     <p>The major source of information for those seeking to create a catalogue entry or
       bibliographic citation for an electronic file. As such, it provides a title and statements of
       responsibility together with details of the publication or distribution of the file, of any
@@ -6615,9 +6724,7 @@ by the stage direction.</p>
     seinen Inhalt Verantwortlichen.</desc><desc versionDate="2007-05-04" xml:lang="es">agrupa la información referente al título de una obra y a
     los responsables de su contenido intelectual.</desc><desc versionDate="2007-01-21" xml:lang="it">raggruppa le informazioni sul titolo di un'opera e sulle
     responsabilità del suo contenuto intellettuale.</desc><classes><memberOf key="att.global"/></classes><content><sequence minOccurs="1" maxOccurs="1"><elementRef key="title" minOccurs="1" maxOccurs="unbounded"/><classRef key="model.respLike" minOccurs="0" maxOccurs="unbounded"/></sequence></content><attList/><exemplum>
-                            <p>describes an example for <gi>titleStmt</gi> including <gi>title</gi>
-                                and <gi>author</gi>, <gi>author</gi> gets an optional viaf
-                                reference</p>
+                            
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title>Silas Marner: The Weaver of Raveloe : ELTec
@@ -6630,9 +6737,7 @@ by the stage direction.</p>
                                 </titleStmt>
                             </egXML>
                         </exemplum><exemplum>
-                            <p>describes a Spanish example for <gi>titleStmt</gi> including
-                                    <gi>title</gi> and <gi>author</gi> both having optional viaf
-                                references provided by <att>ref</att>.</p>
+                           
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <titleStmt>
                                     <title ref="viaf:194763311">El Señor de Bembibre : edición
@@ -6652,10 +6757,10 @@ by the stage direction.</p>
     기술한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">描述電子文件儲存在某一承載媒介時的約略大小，標以任何適用的單位。</desc><desc versionDate="2008-04-05" xml:lang="ja">電子・非電子テキストのおよその大きさを任意の単位で示す．</desc><desc versionDate="2016-11-25" xml:lang="de">beschreibt die ungefähre Größe des elektronischen Textes, die er auf einem Datenträger einnimmt; 
     kann auch für andere digitale oder nicht digitale Objekte verwendet werden; die Angabe erfolgt in entsprechenden Maßeinheiten.</desc><desc versionDate="2007-05-04" xml:lang="es">describe el tamaño aproximado de un texto almacenado en
     algún medio, digital o no, especificándolo en alguna unidad funcional.</desc><desc versionDate="2007-01-21" xml:lang="it">descrive la grandezza approssimativa di un documento
-    elettronico così come immagazzinata su supporto, secondo una qualsiasi unità funzionale.</desc><classes><memberOf key="att.global"/><memberOf key="model.biblPart"/></classes><content><elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/></content><constraintSpec ident="pageCountMandatory" scheme="schematron">
-                            <desc>require a page count</desc>
-                            <constraint><sch:assert test="tei:measure[@type eq 'pages']">You
-                                must provide a page count</sch:assert></constraint>
+    elettronico così come immagazzinata su supporto, secondo una qualsiasi unità funzionale.</desc><classes><memberOf key="att.global"/><memberOf key="model.biblPart"/></classes><content><elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/></content><constraintSpec ident="wordCountMandatory" scheme="schematron">
+                            <desc>require a word count</desc>
+                            <constraint><sch:assert test="child::tei:measure[@unit eq 'words']">You must
+                                    provide a word count</sch:assert></constraint>
                         </constraintSpec><attList/><exemplum>
                             <p>A book of 2325 pages, containing 102,345 words</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -6664,8 +6769,10 @@ by the stage direction.</p>
                                     <measure unit="pages">235</measure>
                                 </extent>
                             </egXML>
-                        </exemplum><remarks><p>Must contain at least one <gi>measure</gi> element, indicating
-                            the word count. Other indications of size are optional.</p></remarks><listRef>
+                        </exemplum><remarks>
+                            <p>Must contain at least one <gi>measure</gi> element, indicating the
+                                word count. Other indications of size are optional.</p>
+                        </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD23">2.2.3. Type and Extent of File</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD2">2.2. The File Description</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBICOI">3.11.2.4. Imprint, Size of a Document, and Reprint Information</ref>
@@ -6675,9 +6782,7 @@ by the stage direction.</p>
     distribución de un texto electrónico u otro texto.</desc><desc versionDate="2007-01-21" xml:lang="it">raggruppa le informazioni riguardo la pubblicazione o la
     distribuzione di un documento elettronico o di altra natua.</desc><classes><memberOf key="att.global"/></classes><content><elementRef key="availability"/><elementRef key="p"/></content><attList/><exemplum>
                             
-                      
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                               
                                 <publicationStmt>
                                     <availability>
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">
@@ -6691,11 +6796,10 @@ by the stage direction.</p>
                             <p>In an ELTeC text, the publication statement always contains a
                                 statement concerning its licence, and is always followed by
                                 statement of the date the text was added to the Collection. These
-                            statements are always given in the language of the text itself; in this
-                            case, English.</p>
+                                statements are always given in the language of the text itself; in
+                                this case, English.</p>
                         </exemplum><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                             
                                 <publicationStmt>
                                     <availability>
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">
@@ -6946,7 +7050,8 @@ définissant les droits d'utilisation.</desc><desc xml:lang="de" versionDate="20
                                         <ref target="http://efele.net/ebooks/livres/000067"/>
                                         <relatedItem type="source">
                                             <bibl type="firstEdition"> Paris: Furne, J.-J. Dubochet
-                                                et Cie, J. Hetzel et Paulin, <date>1848</date>. </bibl>
+                                                et Cie, J. Hetzel et Paulin, <date>1848</date>.
+                                            </bibl>
                                         </relatedItem>
                                     </bibl>
                                 </sourceDesc>
@@ -6984,7 +7089,6 @@ source or sources from which it was derived.</desc><desc versionDate="2009-01-05
     aparecen, los participantes que intervienen, etc.</desc><desc versionDate="2007-01-21" xml:lang="it">fornisce una descrizione dettagliata degli aspetti non
     bibliografici di un testo, in modo particolare le lingue e i linguaggi secondari utilizzati, la
     situazione in cui è stato prodotto il testo, i partecipanti e la relativa ambientazione</desc><classes><memberOf key="att.global"/></classes><content><classRef key="model.profileDescPart" expand="sequence"/></content><attList/><exemplum>
-                          
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
                                     <langUsage>
@@ -6999,10 +7103,9 @@ source or sources from which it was derived.</desc><desc versionDate="2009-01-05
                                 </profileDesc>
                             </egXML>
                             <p>Profile for a French text, with a male author, containing more than
-                                100,000 words, of high canonicity, first published between 1840
-                                and 1859. </p>
+                                100,000 words, of high canonicity, first published between 1840 and
+                                1859. </p>
                         </exemplum><exemplum>
-                           
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
                                     <langUsage>
@@ -7016,9 +7119,8 @@ source or sources from which it was derived.</desc><desc versionDate="2009-01-05
                                     </textDesc>
                                 </profileDesc>
                             </egXML>
-                            <p>Profile for a German text, with a female author, containing
-                                between 10 and 50,000 words, of low canonicity, first published
-                                between 1900
+                            <p>Profile for a German text, with a female author, containing between
+                                10 and 50,000 words, of low canonicity, first published between 1900
                                 and 1920. </p>
                         </exemplum><remarks versionDate="2017-06-25" xml:lang="en">
     <p>Although the content model permits it, it is rarely
@@ -7263,88 +7365,40 @@ should be supplied for the <att>scheme</att> attribute.</p>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD43">2.4.3. The Text Classification</ref>
   </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="header" ident="revisionDesc">
-  <gloss versionDate="2005-01-14" xml:lang="en">revision description</gloss>
-  <gloss versionDate="2009-01-05" xml:lang="fr">descriptif des révisions</gloss>
-  <gloss versionDate="2007-12-20" xml:lang="ko">수정 기술</gloss>
-  <gloss versionDate="2007-05-02" xml:lang="zh-TW">修訂描述</gloss>
-  <gloss versionDate="2016-11-25" xml:lang="de">Beschreibung der Dateihistorie</gloss>
-  <gloss versionDate="2007-05-04" xml:lang="es">descripción de la revisión</gloss>
-  <gloss versionDate="2007-01-21" xml:lang="it">descirzione della revisione</gloss>
-  <desc versionDate="2005-01-14" xml:lang="en">summarizes the revision history for a file.</desc>
-  <desc versionDate="2009-01-05" xml:lang="fr"> fournit un résumé de l’historique des révisions d’un
-    fichier.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">하나의 파일에 대한 수정 이력을 요약한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">概述檔案的修訂歷史。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">ファイルの改訂履歴を示す．</desc>
-  <desc versionDate="2016-11-25" xml:lang="de">dokumentiert die Änderungen, die an der Datei vorgenommen wurden.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">resume el historial de la revisión de un archivo.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">sintetizza la storia delle revisioni di un file</desc>
-  <classes>
-    <memberOf key="att.global"/>
-    
-  </classes>
-  <content>
-    <alternate>
-      <elementRef key="list"/>
-      <elementRef key="listChange"/>
-      
-        <elementRef key="change" minOccurs="1" maxOccurs="unbounded"/>
-      
-    </alternate>
-  </content>
-  <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <revisionDesc status="embargoed">
-        <change when="1991-11-11" who="#LB"> deleted chapter 10 </change>
-      </revisionDesc>
-    </egXML>
-  </exemplum>
-  <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <revisionDesc>
-        <list>
-          <item><date when="2003-04-12">12 avril 03</date>Dernière révision par F. B.</item>
-          <item><date when="2003-03-01">1 mars 03</date> F.B a fait le nouveau fichier.</item>
-        </list>
-      </revisionDesc>
-    </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <revisionDesc status="embargoed">
-        <change when="1991-11-11"> 王大明刪除第十章</change>
-      </revisionDesc>
-    </egXML>
-  </exemplum>
-  <remarks versionDate="2016-11-04" xml:lang="en">
+</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="header" ident="revisionDesc"><gloss versionDate="2005-01-14" xml:lang="en">revision description</gloss><gloss versionDate="2009-01-05" xml:lang="fr">descriptif des révisions</gloss><gloss versionDate="2007-12-20" xml:lang="ko">수정 기술</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">修訂描述</gloss><gloss versionDate="2016-11-25" xml:lang="de">Beschreibung der Dateihistorie</gloss><gloss versionDate="2007-05-04" xml:lang="es">descripción de la revisión</gloss><gloss versionDate="2007-01-21" xml:lang="it">descirzione della revisione</gloss><desc versionDate="2005-01-14" xml:lang="en">summarizes the revision history for a file.</desc><desc versionDate="2009-01-05" xml:lang="fr"> fournit un résumé de l’historique des révisions d’un
+    fichier.</desc><desc versionDate="2007-12-20" xml:lang="ko">하나의 파일에 대한 수정 이력을 요약한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">概述檔案的修訂歷史。</desc><desc versionDate="2008-04-05" xml:lang="ja">ファイルの改訂履歴を示す．</desc><desc versionDate="2016-11-25" xml:lang="de">dokumentiert die Änderungen, die an der Datei vorgenommen wurden.</desc><desc versionDate="2007-05-04" xml:lang="es">resume el historial de la revisión de un archivo.</desc><desc versionDate="2007-01-21" xml:lang="it">sintetizza la storia delle revisioni di un file</desc><classes><memberOf key="att.global"/></classes><content><alternate minOccurs="1" maxOccurs="1"><elementRef key="list"/><elementRef key="listChange"/><elementRef key="change" minOccurs="1" maxOccurs="unbounded"/></alternate></content><attList/><exemplum>
+                            <p>When several significant changes are recorded, each should be
+                                documented using a separate <gi>change</gi> element, given in
+                                reverse chronological order i.e. most recent first, as shown here: </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <revisionDesc>
+                                    <change when="2018-12-12">Spell check completed</change>
+                                    <change when="2018-11-01">Initial conversion to ELTeC-1 using
+                                        CLIGStoELTeC stylesheet </change>
+                                </revisionDesc>
+                            </egXML>
+                        </exemplum><remarks versionDate="2016-11-04" xml:lang="en">
     <p>If present on this element, the <att>status</att> attribute
     should indicate the current status of the document. The same
     attribute may appear on any <gi>change</gi> to record the status
     at the time of that change. Conventionally <gi>change</gi> elements should
     be given in reverse date order, with the most recent change at the
     start of the list.</p>
-  </remarks>
-  <remarks xml:lang="fr" versionDate="2007-06-12">
+  </remarks><remarks xml:lang="fr" versionDate="2007-06-12">
     <p>Les changements les plus récents apparaissent en début de liste</p>
-  </remarks>
-  <remarks xml:lang="es" versionDate="2008-04-06">
+  </remarks><remarks xml:lang="es" versionDate="2008-04-06">
     <p>Registran los cambios más recientes en el top de la lista.</p>
-  </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  </remarks><remarks xml:lang="ja" versionDate="2008-04-05">
     <p> 直近の変更をリストの先頭に記録する． </p>
-  </remarks>
-  <remarks xml:lang="de" versionDate="2016-11-25">
+  </remarks><remarks xml:lang="de" versionDate="2016-11-25">
       <p>Wenn an diesem Element gesetzt, sollte das <att>status</att>-Attribut den aktuellen 
           Status des Dokuments widerspiegeln. An jedem <gi>change</gi>-Kindelement gibt das selbe 
           Attribut den jeweiligen Status zum Zeitpunkt der Änderung an. Die <gi>change</gi>-Elemente 
           werden der Konvention nach so angeordnet, dass die letzte Änderung am Anfang steht und die erste zum Schluss. </p>
-  </remarks>
-  <listRef>
+  </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD6">2.6. The Revision Description</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD11">2.1.1. The TEI Header and Its Components</ref>
-  </listRef>
-</elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="header" ident="change"><gloss versionDate="2016-11-25" xml:lang="de">Änderung</gloss><desc versionDate="2011-10-31" xml:lang="en">documents a change or set of changes made during the production
+  </listRef></elementSpec><elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" rend="change" module="header" ident="change"><gloss versionDate="2016-11-25" xml:lang="de">Änderung</gloss><desc versionDate="2011-10-31" xml:lang="en">documents a change or set of changes made during the production
     of a source document, or during the revision of an electronic file.</desc><desc versionDate="2009-01-05" xml:lang="fr">résume une modification ou une correction apportée à une
     version particulière d’un texte électronique partagé entre plusieurs chercheurs.</desc><desc versionDate="2007-12-20" xml:lang="ko">몇몇 연구자들 사이에 공유된 전자 텍스트의 특정 버전에 대한 특정 변경 또는 수정 사항을 요약한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">概述多位研究者共享的某版本電子文本當中，某特定的內容變更或修正。</desc><desc versionDate="2008-04-05" xml:lang="ja">研究者間で共有されている電子テキストの特定の版に対して施された変更や 修正を示す．</desc><desc versionDate="2016-11-25" xml:lang="de">verzeichnet Änderungen oder Korrekturen während der Erstellung eines 
     Basisdokuments oder während der Überarbeitung einer elektronischen Datei.</desc><desc versionDate="2007-05-04" xml:lang="es">resume un cambio o corrección determinada llevada a cabo
@@ -7356,50 +7410,18 @@ should be supplied for the <att>scheme</att> attribute.</p>
       <desc versionDate="2016-11-25" xml:lang="de">verweist auf ein oder mehrere Elemente, die zu dieser Änderung gehören.  </desc>
       <datatype minOccurs="1" maxOccurs="unbounded"><dataRef key="teidata.pointer"/></datatype>
     </attDef></attList><exemplum>
-                            <p>provides information about the changes in the document, showing an
-                                example of the revision description (<gi>revisonDesc</gi>)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <revisionDesc>
-                                    <change when="2018-11-01">Conversion with CLIGStoELTeC
-                                        stylesheet for ELTeC-1</change>
-                                    <change when="2015-07-14">cf Revised teiHeader.</change>
-                                    <change when="2014-04-29">cf Initial TEI version.</change>
-                                </revisionDesc>
+                                <change when="2018-11-01">Conversion with CLIGStoELTeC stylesheet
+                                    for ELTeC-1</change>
                             </egXML>
-                        </exemplum><remarks versionDate="2010-05-06" xml:lang="en">
-    <p>The <att>who</att> attribute may be used to point to any other element, but will typically
-      specify a <gi>respStmt</gi> or <gi>person</gi> element elsewhere in the header, identifying
-      the person responsible for the change and their role in making it.</p>
-    <p>It is recommended that changes be recorded with the most recent
-    first. The <att>status</att> attribute may be used to indicate the
-    status of a document following the change documented.  </p>
-  </remarks><remarks xml:lang="fr" versionDate="2007-06-12">
-    <p>Les modifications doivent être enregistrées dans l'ordre, par exemple la plus récente en
-      premier.</p>
-  </remarks><remarks xml:lang="es" versionDate="2008-04-06">
-    <p>El atributo <att>quién</att> (who) se puede utilizar para señalar a cualquier otro elemento,
-      pero especificará típicamente a <gi>respStmt</gi> o al elemento <gi>persona</gi> de cualquier
-      parte del encabezado, identificando a la persona responsable del cambio y de su papel en la
-      producciónl.</p>
-    <p>Se recomienda que los cambios se registren con el primero más reciente.</p>
-  </remarks><remarks xml:lang="ja" versionDate="2008-04-05">
-    <p>修正は一貫した並びで記録されるべきである．例えば，最新のものが 最初に書かれる，など． </p>
-  </remarks><remarks versionDate="2016-11-25" xml:lang="de">
-    <p>Das <att>who</att>-Attribut kann dafür verwendet werden, um zu einem beliebigen anderen 
-      Element zu verweisen, sollte aber typischerweise auf ein <gi>respStmt</gi>- oder 
-      <gi>person</gi>-Element innerhalb des TEI-Headers zeigen, um die für die Änderungen 
-      Verantwortlichen und deren Rolle zu identifizieren.</p>
-    <p>Es wird empfohlen, Änderungen so aufzuzeichnen, dass die neuesten am Anfang eingetragen werden. 
-      Das <att>status</att>-Attribut kann dafür verwendet werden, 
-      um den Zustand des Dokuments nach erfolgter Änderung zu beschreiben.</p>
-  </remarks><listRef>
+                        </exemplum><remarks><p>The <att>when</att> attribute must be supplied and should
+                            indicate a date in the format YYY-MM-DD. </p></remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD6">2.6. The Revision Description</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD4C">2.4.1. Creation</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PH-changes">11.7. Identifying Changes and Revisions</ref>
   </listRef></elementSpec><elementSpec rend="change" module="corpus" ident="textDesc"><gloss versionDate="2005-01-14" xml:lang="en">text description</gloss><gloss versionDate="2007-12-20" xml:lang="ko">텍스트 기술</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">文本描述</gloss><gloss versionDate="2007-06-12" xml:lang="fr">description de texte</gloss><gloss versionDate="2007-05-04" xml:lang="es">descripción del texto</gloss><gloss versionDate="2007-01-21" xml:lang="it">descrizione del testo</gloss><desc versionDate="2005-01-14" xml:lang="en">provides a description of a text in terms of its
 situational parameters.</desc><desc versionDate="2007-12-20" xml:lang="ko">장면적 매개변수를 통해 텍스트에 대해 기술한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供文本在情境特徵方面的相關描述。</desc><desc versionDate="2008-04-05" xml:lang="ja">状況パラメータにより，テキストの情報を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">fournit la description d'un texte sous l'angle du
       contexte situationnel</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona una descripción de un texto en términos de sus parámetros situacionales</desc><desc versionDate="2007-01-21" xml:lang="it">fornisce la descrizione di un testo in termini di paramentri situazionali</desc><classes><memberOf key="att.global"/><memberOf key="model.profileDescPart"/></classes><content><classRef key="model.textDescPart" expand="sequence"/></content><attList/><exemplum>
-                           
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
                                     <authorGender xmlns="http://distantreading.net/eltec/ns" key="F"/>
@@ -7408,18 +7430,18 @@ situational parameters.</desc><desc versionDate="2007-12-20" xml:lang="ko">장�
                                     <timeSlot xmlns="http://distantreading.net/eltec/ns" key="T2"/>
                                 </textDesc>
                             </egXML>
-                            <p>Profile for a text with a female author, containing
-                                between over 100,000 words, of high canonicity, first published
-                                between 1860
-                                and 1879. </p>
-                        </exemplum><remarks><p>The elements
-                            <gi>authorGender</gi>, <gi>size</gi>, <gi>canonicity</gi>, and
-                            <gi>timeSlot</gi> are not TEI elements, and do not belong to the TEI
-                            namespace. Their namespace must be specified, either in full as in
-                            this example, or by means of a namespace prefix defined on some
-                            hierarchically superior
-                            element. </p><p>Each of these
-                                four elements must be supplied exactly once, and in the order specified.</p></remarks><listRef>
+                            <p>Profile for a text with a female author, containing between over
+                                100,000 words, of high canonicity, first published between 1860 and
+                                1879. </p>
+                        </exemplum><remarks>
+                            <p>The elements <gi>authorGender</gi>, <gi>size</gi>,
+                                    <gi>canonicity</gi>, and <gi>timeSlot</gi> are not TEI elements,
+                                and do not belong to the TEI namespace. Their namespace must be
+                                specified, either in full as in this example, or by means of a
+                                namespace prefix defined on some hierarchically superior element. </p>
+                            <p>Each of these four elements must be supplied exactly once, and in the
+                                order specified.</p>
+                        </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD">15.2.1. The Text Description</ref>
   </listRef></elementSpec><classSpec module="analysis" xml:id="ATTLING" type="atts" ident="att.linguistic">
   <desc versionDate="2017-03-24" xml:lang="en">provides a set of attributes concerning linguistic features of tokens, for usage within token-level elements, specifically <gi>w</gi> and <gi>pc</gi> in the analysis module.</desc>
@@ -7894,7 +7916,7 @@ contexts.</p>
                                     </valItem>
                                 </valList>
                             </attDef></attList><exemplum>
-                            <p>indicates that a novel contains more than 100,00 words (long)</p>
+                            <p>indicates that a novel contains more than 100,000 words (long)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
                                     <!-- ... -->
@@ -7902,8 +7924,8 @@ contexts.</p>
                                     <!-- ... -->
                                 </textDesc>
                             </egXML>
-                        </exemplum></elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="canonicity" mode="add" ns="http://distantreading.net/eltec/ns"><desc>indicates the degree to which the text has become part of a literary
-                            canon</desc><classes>
+                        </exemplum></elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="canonicity" mode="add" ns="http://distantreading.net/eltec/ns"><desc>indicates whether or not the text is considered to be a part of
+                            the literary canon associated with a specific period</desc><classes>
                             <memberOf key="model.textDescPart"/>
                         </classes><content>
                             <empty/>
@@ -7913,37 +7935,30 @@ contexts.</p>
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="high">
-                                        <desc>text has been republished very frequently since its
-                                            original appearance</desc>
+                                        <desc>text has been republished very frequently  during the
+                                            period concerned</desc>
                                     </valItem>
-                                    <valItem ident="medium">
-                                        <desc>text has been republished occasionally since its
-                                            original appearance</desc>
-                                    </valItem>
+                                 
                                     <valItem ident="low">
-                                        <desc>text has not been reprinted since its original
-                                            appearance</desc>
+                                        <desc>text has been reprinted only occasionally during
+                                            the period concerned</desc>
                                     </valItem>
                                 </valList>
                                 <remarks>
-                                    <p>Frequency of publication is assessed with reference to time
-                                        periods of twenty years. A work which has been republished
-                                        in more than four such periods, i.e. over a reasonably long
-                                        time since its first appearance, is considered highly
-                                        canonical. A work which appears to have been published only
-                                        in a single such period is considered of low canonicity.
+                                    <p>Canonicity is assessed by counting reprints of the title
+                                        concerned during a specific period (1970 - 2009).
                                     </p>
                                 </remarks>
                             </attDef></attList><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
                                     <!-- ...  -->
-                                    <canonicity xmlns="http://distantreading.net/eltec/ns" key="medium"/>
+                                    <canonicity xmlns="http://distantreading.net/eltec/ns" key="high"/>
                                     <!-- ... -->
                                 </textDesc>
                             </egXML>
                         </exemplum></elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="timeSlot" mode="add" ns="http://distantreading.net/eltec/ns"><desc>specifies the time period during which the work was first published as
-                        a single volume</desc><classes>
+                            a single volume</desc><classes>
                             <memberOf key="model.textDescPart"/>
                         </classes><content>
                             <empty/>
@@ -7966,22 +7981,14 @@ contexts.</p>
                                     </valItem>
                                 </valList>
                             </attDef></attList><exemplum>
-                            <p>indicates that the novel described was first published
-                                between 1840 and 1859 (T1)</p>
+                            <p>indicates that the novel described was first published between 1840
+                                and 1859 (T1)</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textDesc>
                                     <!-- ...  -->
                                     <timeSlot xmlns="http://distantreading.net/eltec/ns" key="T1"/>
                                     <!-- ... -->
                                 </textDesc>
-                            </egXML>
-                        </exemplum></elementSpec><elementSpec rend="add" module="derived-module-ELTeC" ident="revisionDesc"><exemplum>
-                            <p>provides the information about changes (<gi>change</gi> in a
-                                document</p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <revisionDesc>
-                                    <change when="YYYY-MM-DD"><!--  --></change>
-                                </revisionDesc>
                             </egXML>
                         </exemplum></elementSpec><moduleSpec n="ST" xml:id="DSTTEI2" ident="tei" type="core"/><moduleSpec n="CO" xml:id="DCO" ident="core"/><moduleSpec n="DS" xml:id="DDS" ident="textstructure"/><moduleSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" n="HD" xml:id="DHD" ident="header"/><moduleSpec n="CC" xml:id="DCCHDR" ident="corpus"/><moduleSpec n="AI" xml:id="DAI" ident="analysis"/></schemaSpec>
             </div>
