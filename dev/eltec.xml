@@ -145,6 +145,11 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="title" mode="change">
+                        <classes>
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                            <memberOf key="att.canonical"/>
+                        </classes>
                         <constraintSpec mode="add" ident="noEmptyTitle" scheme="schematron">
                             <constraint>
                                 <assert xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -164,7 +169,7 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>specifies the title of novel using <att>ref</att> attribute to
+                            <p>The  <att>ref</att> attribute may optionally be used to
                                 reference an authority file entry for the title; in this case in
                                 VIAF</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -175,12 +180,14 @@
                                 </titleStmt>
                             </egXML>
                         </exemplum>
+                        <remarks><p>In ELTeC, this element is available only as metadata within the
+                            TEI header. </p></remarks>
                     </elementSpec>
                     <!-- simplify publicationStmt  -->
                     <elementSpec ident="publicationStmt" mode="change">
                         <content>
-                            <elementRef key="availability"/>
-                            <elementRef key="p"/>
+                        <elementRef key="availability"/>
+                        <elementRef key="p"/>
                         </content>
                         <exemplum>
                             <!-- CO added ex -->
@@ -189,11 +196,11 @@
                                     <availability>
                                         <licence
                                             target="https://creativecommons.org/licenses/by/4.0/">
-                                            <p>The TEI mark up is licenced with Creative Commons
-                                                Attribution (CC-BY 4.0).</p>
+                                            Licenced under CC-BY 4.0
                                         </licence>
-                                    </availability>
+                                     </availability>
                                     <p>Published as part of ELTeC <date>2018-11-23</date></p>
+                                    
                                 </publicationStmt>
                             </egXML>
                             <p>In an ELTeC text, the publication statement always contains a
@@ -863,10 +870,7 @@
                             indicate a date in the format YYY-MM-DD. </p></remarks>
                     </elementSpec>
                     <elementSpec ident="revisionDesc" mode="change">
-                        <exemplum>
-                            <p>When several significant changes are recorded, each should be
-                                documented using a separate <gi>change</gi> element, given in
-                                reverse chronological order i.e. most recent first, as shown here: </p>
+                            <exemplum>                          
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <revisionDesc>
                                     <change when="2018-12-12">Spell check completed</change>
@@ -875,6 +879,10 @@
                                 </revisionDesc>
                             </egXML>
                         </exemplum>
+                        <remarks>  <p>When several significant changes are recorded, each should be
+                            documented using a separate <gi>change</gi> element, given in
+                            reverse chronological order i.e. most recent first. </p></remarks> 
+                        
                     </elementSpec>
                     <elementSpec ident="div" mode="change">
                         <constraintSpec ident="chapterStructure" scheme="schematron">
@@ -1229,7 +1237,21 @@
                                     <gi>bibl</gi>.</p>
                         </remarks>
                     </elementSpec>
+                    <elementSpec ident="ref" mode="change">                  
+                        <constraintSpec scheme="schematron" ident="refAtts" mode="delete"/>
+                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <p>"May happen <ref target="#ENG18482_N21">[21]</ref> yo'd better take
+                                him, Alice;...</p>
+                        </egXML></exemplum>
+                        
+                      <remarks><p>In ELTeC the <gi>ref</gi> element is used only to provide a link
+                          from the body of a text to an associated authorial note. Its content is conventionalised as
+                          shown and may be removed in a level2 version of the text.</p></remarks>
+                    </elementSpec>    
                     <elementSpec ident="relatedItem" mode="change">
+                        
+                        <constraintSpec mode="delete" ident="targetorcontent1" scheme="schematron"/> 
+                            
                         <attList>
                             <attDef ident="target" mode="delete"/>
                         </attList>
@@ -1262,26 +1284,42 @@
                     </elementSpec>
                     <elementSpec ident="respStmt" mode="change">
                         <exemplum>
-                            <p>describes the person responsible for the ELTeC edition of a novel
-                                which will be stated in <gi>titleStmt</gi></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <respStmt>
-                                    <resp>principal</resp>
-                                    <name>Christof Schöch</name>
+                                    <resp>ELTeC conversion</resp>
+                                    <name>Leonard Konle</name>
                                 </respStmt>
                             </egXML>
                         </exemplum>
+                        <exemplum><p>When several names are associated with the same
+                            responsibility, they may be grouped within a single <gi>respStmt</gi> 
+                            as in the following example: </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><respStmt>
+                            <resp>Original data capture</resp>
+                            <name>Meredith Bach</name>
+                            <name>Mary Meehan</name>
+                            <name>Online Distributed Proofreading Team</name>
+                        </respStmt></egXML></exemplum>
+                        <remarks><p>In ELTeC this element is used either within the
+                            <gi>titleStmt</gi>, where it documents responsibility
+                            for some aspect of the ELTeC text's creation, or within a <gi>bibl</gi>
+                            where it documents responsibity  for the bibliographic item
+                            concerned (other than authorship)</p></remarks>
                     </elementSpec>
                     <elementSpec ident="sourceDesc" mode="change">
                         <exemplum>
-                            <p>contains information about every source of the novel in the ELTeC
-                                edition</p>
+                            <p>In ELTeC, the source or sources of a text are documented using one or
+                            more <gi>bibl</gi> elements of appropriate types. In this case, the
+                                ELTeC text derives from a digital version published by  Éfélé in
+                                2014 which
+                            is believed to be derived from a first edition published in Paris in
+                            1848. </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <sourceDesc>
-                                    <bibl type="digitalSource"> Éfélé, <date>2014</date>
+                                    <bibl type="digitalSource"><publisher> Éfélé</publisher>, <date>2014</date>
                                         <ref target="http://efele.net/ebooks/livres/000067"/>
                                         <relatedItem type="source">
-                                            <bibl type="firstEdition"> Paris: Furne, J.-J. Dubochet
+                                            <bibl type="firstEdition">Paris: Furne, J.-J. Dubochet
                                                 et Cie, J. Hetzel et Paulin, <date>1848</date>.
                                             </bibl>
                                         </relatedItem>
@@ -1315,21 +1353,29 @@
                     </elementSpec>
                     <elementSpec ident="pubPlace" mode="change">
                         <exemplum>
-                            <p>provides information about a publication place of a novel within all
-                                    <att>type</att> of <gi>bibl</gi> if available</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <pubPlace>Berlin</pubPlace>
-                            </egXML>
+                               <bibl type="firstEdition">
+                                <title>Herança de lágrimas</title>
+                                <author>Lopo de Souza</author>
+                                <publisher>Redação do Vimaranense-Editora</publisher>
+                                <pubPlace>Guimarães</pubPlace>
+                                <date>1871</date>
+                                </bibl>              </egXML>
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="publisher" mode="change">
                         <exemplum>
-                            <p>provides information about a publisher of a novel within all
-                                    <att>type</att> of <gi>bibl</gi> if available</p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publisher>London: T. C. Newby</publisher>
-                            </egXML>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <bibl type="firstEdition">
+                                    <title>La baronne trépassée</title>
+                                    <publisher>Baudry</publisher>
+                                    <pubPlace>Paris</pubPlace>
+                                    <date>1852</date>
+                                </bibl>             </egXML>
                         </exemplum>
+                        <remarks>
+                            <p>Not permitted outside the header</p>
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="back" mode="change">
                        
@@ -1471,6 +1517,11 @@
                         <!-- FR0726_Gay_Elleonore -->
                     </elementSpec>
                     <elementSpec ident="p" mode="change">
+                        <constraintSpec ident="abstractModel-structure-p" scheme="schematron"
+                            mode="delete"/>
+                        <constraintSpec ident="abstractModel-structure-l" scheme="schematron"
+                            mode="delete"/>
+                        
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <div type="chapter">
@@ -1517,6 +1568,7 @@
                                 </text>
                             </egXML>
                         </exemplum>
+                        <remarks><p></p></remarks>
                     </elementSpec>
                     <elementSpec ident="corr" mode="change">
                         
@@ -1620,6 +1672,9 @@
                                     <l>имао се рашта и родити!...</l>
                                 </quote></egXML>
                         </exemplum>
+                        <remarks><p>In ELTeC this element is used for any kind of quotation or
+                            pseudo quotation
+                            appearing in the body of a text, including epigraphs, citations, etc.</p></remarks>
                     </elementSpec>
                 </schemaSpec>
             </div>
