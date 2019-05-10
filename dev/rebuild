@@ -1,0 +1,6 @@
+teitoodd --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec.xml eltec-library.xml
+teitohtml --odd --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec-0.xml eltec-0.html
+teitohtml --odd --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec-1.xml eltec-1.html
+teitorelaxng  --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec-0.xml eltec-0.rng
+teitorelaxng  --localsource=/home/lou/Public/TEI/P5/p5subset.xml eltec-1.xml eltec-1.rng
+
