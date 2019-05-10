@@ -37,7 +37,7 @@
         <moduleRef key="tei"/>
         <moduleRef key="header"
             include="availability change encodingDesc extent fileDesc idno  keywords langUsage language  
-            licence profileDesc publicationStmt revisionDesc sourceDesc taxonomy teiHeader  titleStmt"/>
+            licence profileDesc publicationStmt revisionDesc sourceDesc taxonomy teiHeader textClass titleStmt"/>
         <elementRef key="TEI"/>
         <elementRef key="back"/>
         <elementRef key="body"/>
