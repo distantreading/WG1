@@ -203,7 +203,7 @@
 
                                 </publicationStmt>
                             </egXML>
-                           </exemplum>
+                        </exemplum>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
@@ -217,11 +217,13 @@
                                     <p>Incorporado a ELTeC el <date>2019-01-05</date></p>
                                 </publicationStmt>
                             </egXML>
-                         </exemplum>
-                        <remarks>  <p>In an ELTeC text, the publication statement always contains a
-                            statement concerning its licence, and is always followed by
-                            statement of the date the text was added to the Collection. These
-                            statements are always given in the language of the text itself</p></remarks>
+                        </exemplum>
+                        <remarks>
+                            <p>In an ELTeC text, the publication statement always contains a
+                                statement concerning its licence, and is always followed by
+                                statement of the date the text was added to the Collection. These
+                                statements are always given in the language of the text itself</p>
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="bibl" mode="change">
                         <attList>
@@ -714,6 +716,30 @@
                                 10 and 50,000 words, of low canonicity, first published between 1900
                                 and 1920. </p>
                         </exemplum>
+                        <exemplum>
+                            <p>If descriptive keywords are available for a text, these may be
+                                included within a <gi>textClass</gi> element prefixed to the
+                                    <gi>textDesc</gi>, as in this example: </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <profileDesc>
+                                    <langUsage>
+                                        <language ident="de">German</language>
+                                    </langUsage>
+                                    <textClass>
+                                        <keywords><term>bildungsroman</term></keywords>
+                                    </textClass>
+                                    <textDesc>
+                                        <authorGender xmlns="http://distantreading.net/eltec/ns"
+                                            key="F"/>
+                                        <size xmlns="http://distantreading.net/eltec/ns" key="long"/>
+                                        <canonicity xmlns="http://distantreading.net/eltec/ns"
+                                            key="low"/>
+                                        <timeSlot xmlns="http://distantreading.net/eltec/ns"
+                                            key="T4"/>
+                                    </textDesc>
+                                </profileDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <!-- require one of each textDesc component in a specific order -->
                     <elementSpec ident="textDesc" mode="change">
@@ -815,7 +841,7 @@
                         </content>
                         <attList>
                             <attDef ident="type" mode="delete"/>
-                                
+
                             <attDef ident="unit" usage="req" mode="change">
                                 <datatype>
                                     <dataRef key="teidata.enumerated"/>
@@ -857,6 +883,7 @@
                     <elementSpec ident="change" mode="change">
                         <attList>
                             <attDef ident="when" mode="change" usage="req"/>
+                            <attDef ident="target" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -865,8 +892,8 @@
                             </egXML>
                         </exemplum>
                         <remarks>
-                            <p>The <att>when</att> attribute must be supplied and should indicate a
-                                date in the format YYY-MM-DD. </p>
+                            <p>In ELTeC texts, the <att>when</att> attribute must be supplied and
+                                should indicate a date in the format YYY-MM-DD. </p>
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="revisionDesc" mode="change">
@@ -1206,15 +1233,16 @@
                         <classes>
                             <memberOf key="att.global"/>
                             <memberOf key="att.pointing"/>
-                        </classes><content>
+                        </classes>
+                        <content>
                             <elementRef key="p" minOccurs="0"/>
                         </content>
-                        
+
                         <attList>
                             <attDef ident="target" usage="req" mode="change"/>
                         </attList>
                         <exemplum>
-                           
+
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <licence target="https://creativecommons.org/licenses/by/4.0/">
                                     <p>The TEI mark up is licenced with Creative Commons Attribution
@@ -1222,9 +1250,11 @@
                                 </licence>
                             </egXML>
                         </exemplum>
-                        <remarks><p>The TEI XML markup added to all components of ELTeC is made available
-                            under a CC-BY licence. The textual content is in the public domain.
-                        </p></remarks>
+                        <remarks>
+                            <p>The TEI XML markup added to all components of ELTeC is made available
+                                under a CC-BY licence. The textual content is in the public domain.
+                            </p>
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="date" mode="change">
                         <!-- Add constraintSpec only when inside bibl[@type='firstedition'] 
@@ -1249,14 +1279,16 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>indication the date of the first edition of a novel within
-                                    <gi>bibl</gi></p>
+                            <p>indicating the date of the first edition of a novel within
+                                    <gi>sourceDesc</gi></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <bibl type="firstEdition">
-                                    <!--  -->
-                                    <date>1871</date>
-                                    <!--  -->
-                                </bibl>
+                                <sourceDesc>
+                                    <bibl type="firstEdition">
+                                        <!--  -->
+                                        <date>1871</date>
+                                        <!--  -->
+                                    </bibl>
+                                </sourceDesc>
                             </egXML>
                         </exemplum>
                         <remarks>
@@ -1691,7 +1723,25 @@
                                 </textClass>
                             </egXML>
                         </exemplum>
+                        <remarks>
+                            <p>In ELTeC texts, this element may only be used within a
+                                    <gi>textClass</gi> element, and may contain only a sequence of
+                                    <gi>term</gi> elements. Its usage is optional.</p>
+                        </remarks>
                     </elementSpec>
+                    <elementSpec ident="textClass" mode="change">
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <textClass>
+                                    <keywords>
+                                        <term xml:lang="eng">juvenile literature</term>
+                                        <term xml:lang="deu">bildungsroman</term>
+                                    </keywords>
+                                </textClass>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+
                     <elementSpec ident="note" mode="change">
                         <constraintSpec mode="add" ident="notePlacement" scheme="schematron">
                             <constraint>
