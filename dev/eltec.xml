@@ -1112,6 +1112,9 @@
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="milestone" mode="change">
+                        <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <milestone unit="subSection" type="asterisk"/>                         
+                        </egXML> </exemplum>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <div type="group">
@@ -1119,16 +1122,24 @@
                                     <head>THE DAYS BEFORE TONO-BUNGAY WAS INVENTED</head>
                                     <div type="chapter">
                                         <head>CHAPTER THE FIRST</head>
-                                        <milestone unit="section" n="I"/>
+                                        <milestone unit="subSection"  n="I"/>
                                         <p>Most people in this world seem to live "in character" ... </p>
                                         <!-- ... -->
                                         <p>....of an altogether different sort from that of
                                             Tono-Bungay.</p>
-                                        <milestone unit="section" n="II"/>
+                                        <milestone unit="subSection" n="II"/>
                                         <p>I write that much and look at it, and wonder ... </p>
                                     </div>
                                 </div></egXML>
-                        </exemplum>
+                       </exemplum>
+                        <remarks><p>The <att>unit</att> attribute should describe the kind of unit
+                            delimited by the tag, for example "subSection"; it is mandatory. If the
+                            milestone numbers or labels the unit in question, the <att>n</att>
+                            attribute may be used to carry the name or number given.  The
+                            <att>type</att> attribute should describe the kind of milestone
+                            indication found in the source, for example "stars", "line",
+                            "numbering", etc.; it is optional.</p> 
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="gap" mode="change">
                         <attList>
