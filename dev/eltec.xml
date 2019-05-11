@@ -55,7 +55,7 @@
                     <moduleRef key="tei"/>
                     <moduleRef key="core"
                         include="author bibl choice corr orig date emph foreign gap head hi item l label lg list measure
-            milestone name note p pb publisher pubPlace quote ref relatedItem resp respStmt rs sp stage hi term title "/>
+            milestone name note p pb publisher pubPlace quote ref resp respStmt rs sp stage hi term title "/>
                     <moduleRef key="textstructure" include="TEI text div body front back trailer"/>
                     <moduleRef key="header"
                         include="availability change  encodingDesc 
@@ -187,26 +187,33 @@
                     <!-- simplify publicationStmt  -->
                     <elementSpec ident="publicationStmt" mode="change">
                         <content>
+                            <elementRef key="distributor"/>
+                            <elementRef key="date"/>
                             <elementRef key="availability"/>
-                            <elementRef key="p"/>
+                            <elementRef key="ref" maxOccurs="unbounded" minOccurs="0"/>
                         </content>
                         <exemplum>
                             <!-- CO added ex -->
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
-                                    <availability>
+                                    <distributor>COST Action ELTeC</distributor>
+                                    <date when="2018-11-23"/>
+                                    <availability>                                       
                                         <licence
                                             target="https://creativecommons.org/licenses/by/4.0/">
                                             Licenced under CC-BY 4.0 </licence>
                                     </availability>
-                                    <p>Published as part of ELTeC <date>2018-11-23</date></p>
-
+                                    <ref type="doi" target="10.5281/zenodo.8468"/>                                  
+                                    <ref type="raw"
+                                        target="https://raw.githubusercontent.com/COST-ELTeC/ELTeC-eng/master/level1/ENG18440_Disraeli.xml"/>
                                 </publicationStmt>
                             </egXML>
                         </exemplum>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
+                                    <distributor>COST Action ELTeC</distributor>
+                                    <date when="2019-01-05"/>
                                     <availability>
                                         <licence
                                             target="https://creativecommons.org/licenses/by/4.0/">
@@ -214,15 +221,18 @@
                                                 Attribution (CC-BY 4.0).</p>
                                         </licence>
                                     </availability>
-                                    <p>Incorporado a ELTeC el <date>2019-01-05</date></p>
-                                </publicationStmt>
+                                    <ref type="gitview"
+                                        target="https://github.com/COST-ELTeC/ELTeC-spa/blob/master/level1/SPA1023_GomezDeAvellaneda_LaVeladaDelHelecho.xml"/>
+                             </publicationStmt>
                             </egXML>
                         </exemplum>
                         <remarks>
-                            <p>In an ELTeC text, the publication statement always contains a
-                                statement concerning its licence, and is always followed by
-                                statement of the date the text was added to the Collection. These
-                                statements are always given in the language of the text itself</p>
+                            <p>In an ELTeC text, the publication statement always has components as
+                                shown above: a <gi>distributor</gi> naming the project itself, a
+                                <gi>date</gi> showing the text was added to the Collection, and an <gi>availability</gi>
+                                element containing a standardised statement concerning its licence.
+                                One or more <gi>ref</gi> elements may also follow specifying a URL from
+                                which the text may be downloaded.</p>
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="bibl" mode="change">
@@ -258,16 +268,15 @@
                                             edition</title>
                                         <ref
                                             target="https://en.wikisource.org/wiki/Wuthering_Heights_(1st_edition)"/>
-                                        <relatedItem>
-                                            <bibl type="firstEdition">
+                                            </bibl>
+                                    <bibl type="firstEdition">
                                                 <title>Wuthering Heights</title>
                                                 <title>A novel by</title>
                                                 <author>Ellis Bell</author>
                                                 <publisher>London: T. C. Newby</publisher>
                                                 <date>1847</date>
                                             </bibl>
-                                        </relatedItem>
-                                    </bibl>
+                                   
                                 </sourceDesc>
                             </egXML>
                         </exemplum>
@@ -296,8 +305,8 @@
                             <p>The ELTeC text derives from a print edition published in 1969. The
                                 first edition of the work concerned was published in 1892. We do not
                                 know whether or not the print edition used the first edition as a
-                                source, and therefore we do not provide an explicit
-                                    <gi>relatedItem</gi>. </p>
+                                source<!--, and therefore we do not provide an explicit
+                                    <gi>relatedItem</gi>-->. </p>
                         </exemplum>
                     </elementSpec>
                     <!-- simplify encodingDesc; require and constrain @n  -->
@@ -814,12 +823,11 @@
                             <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                         <constraintSpec ident="wordCountMandatory" scheme="schematron">
-                            <desc>require a word count</desc>
                             <constraint><sch:assert test="child::tei:measure[@unit eq 'words']">You
                                     must provide a word count</sch:assert></constraint>
                         </constraintSpec>
                         <exemplum>
-                            <p>A book of 2325 pages, containing 102,345 words</p>
+                            <p>A book of 235 pages, containing 102,345 words</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <extent>
                                     <measure unit="words">102345</measure>
@@ -1009,11 +1017,11 @@
                                                 <bibl type="digitalSource"> Éfélé, <date>2014</date>
                                                   <ref
                                                   target="http://efele.net/ebooks/livres/000067"/>
-                                                  <relatedItem type="source">
+                                            </bibl>    
                                                   <bibl type="firstEdition"> Paris: Furne, J.-J.
                                                   Dubochet et Cie, J. Hetzel et Paulin,
-                                                  <date>1848</date>. </bibl></relatedItem>
-                                                </bibl>
+                                                  <date>1848</date>. </bibl>
+                                              
                                             </sourceDesc>
                                         </fileDesc>
                                         <encodingDesc n="eltec-1">
@@ -1218,6 +1226,16 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="availability" mode="change">
+		      <classes>
+			<memberOf key="att.global"/>
+		      </classes>
+		  
+                        <content>
+                            <elementRef key="licence"/>
+                        </content>
+                        <attList>
+                            <attDef ident="status" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <availability>
@@ -1228,6 +1246,7 @@
                                 </availability>
                             </egXML>
                         </exemplum>
+			<remarks><p>All ELTeC texts comprise a text which is in the public domain and markup which is licenced under the Creative Commons Attribution licence indicated (CC-BY 4.0). </p></remarks>
                     </elementSpec>
                     <elementSpec ident="licence" mode="change">
                         <classes>
@@ -1312,7 +1331,7 @@
                                 the text.</p>
                         </remarks>
                     </elementSpec>
-                    <elementSpec ident="relatedItem" mode="change">
+              <!--      <elementSpec ident="relatedItem" mode="change">
 
                         <constraintSpec mode="delete" ident="targetorcontent1" scheme="schematron"/>
 
@@ -1345,7 +1364,7 @@
                             <p>In ELTeC this element is used only as a child element of
                                     <gi>bibl</gi>, as shown in this example. </p>
                         </remarks>
-                    </elementSpec>
+                    </elementSpec>-->
                     <elementSpec ident="respStmt" mode="change">
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1385,13 +1404,11 @@
                                 <sourceDesc>
                                     <bibl type="digitalSource"><publisher> Éfélé</publisher>,
                                             <date>2014</date>
-                                        <ref target="http://efele.net/ebooks/livres/000067"/>
-                                        <relatedItem type="source">
-                                            <bibl type="firstEdition">Paris: Furne, J.-J. Dubochet
+                                        <ref target="http://efele.net/ebooks/livres/000067"/></bibl>
+                                             <bibl type="firstEdition">Paris: Furne, J.-J. Dubochet
                                                 et Cie, J. Hetzel et Paulin, <date>1848</date>.
                                             </bibl>
-                                        </relatedItem>
-                                    </bibl>
+                                    
                                 </sourceDesc>
                             </egXML>
                         </exemplum>

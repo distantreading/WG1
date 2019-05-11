@@ -14,27 +14,28 @@
       described by this document. </p>
  <div><head>Corpus Design</head> <div>
          <head>Principles and sampling method</head>
-         <p>The task for WG1 is to develop guidelines for data and metadata for the creation of the
+        <!-- <p>The task for WG1 is to develop guidelines for data and metadata for the creation of the
             ELTeC. This task can be split up into several distinct tasks: Guidelines for corpus
             design, basic annotation and metadata schemes and workflow. This discussion paper
-            focuses on corpus design and metadata because both tasks interplay with each other.</p>
-         <p>The goal of CA16204 is to create a big benchmark corpus of literature from 1840-1920
-            (first period) for different computational distant reading methods for corpus annotation
-            and analysis. The task of creating annotation guidelines of WG1 needs to be closely
+            focuses on corpus design and metadata because both tasks interplay with each other.</p>-->
+         <p>The goal of CA16204 is to create a <!--big--> benchmark corpus of literature from 1840-1920
+            <!--(first period) --> adequate to the needs of many different computational distant reading methods for corpus annotation
+            and analysis. <!--The task of creating annotation guidelines of WG1 needs to be closely
             communicated and coordinated with WG2 in order to know which methods and tools needs
             which kind(s) of annotation model and format. The same holds for the development of the
-            metadata scheme. </p>
-         <p>For creating such a benchmark corpus, we need a corpus design which allows for a
-            comparability of texts and individual sub-collections according to different metadata
-            set(s). It should be possible for every COST Action member to sample sub-collections
+            metadata scheme.--> <!--</p>
+         <p>For creating such a benchmark corpus, we need a--> The corpus design should support
+            comparison of texts and individual sub-collections selected according to the metadata
+            associated with each text.  
+         It should be possible to sample sub-collections
             from the ELTeC for specific tasks and research questions. In a first step, we focus on
             the development of clear, operationalized, transparent and motivated selection criteria
             for the corpus.</p>
          <p>It is important to stress that we do not intend to define what a novel is by defining
             what kind of selection criteria we will use for ELTeC. The category novel may be divided
             into three groups where at least one of the following core criteria is met: a) textual:
-            length (>10.000 words), prose, fiction, narrative structure b) peritextual (the term
-            ‘novel’ (or its equivalent) in the title or subtitle of the text ) and c) contextual:
+            length (>10.000 words), prose, fiction, narrative structure b) paratextual (the term
+            ‘novel’ or  equivalent appears in the title or subtitle of the text) and c) contextual:
             the text is bibliographically listed with the UDC: 82-31 Novels. Full-length
             stories.</p>
      
@@ -63,7 +64,7 @@
             question. The main sampling criterion ‘language’ will require not to include
             translations at all. We will prefer to take the first edition of a novel or editions of
             these novels. By a novel, we prefer to take the edition of the book, hence we don't
-            prefer novels only printed in journals, unless a particular literary tradition only
+            prefer novels only printed in periodicals, unless a particular literary tradition only
             features novels printed in serial format. If we consider editions of a novel, these
             editions should be freely available (free licences for reusing them. The first edition
             is more interesting from a philological point of view. It represents the authentic texts
@@ -261,12 +262,13 @@
          across line or page breaks should be silently reassembled. </p>
       <!-- page breaks-->
       <p>To facilitate checking of a transcription against its source during production, the
-            <gi>pb</gi> element may be provided to mark the point in a transcription where a new
+            <gi>pb</gi> element may be used to mark the point in a transcription where a new
          page begins in the source. An identifier for each <gi>pb</gi> element may be provided in a
-         level 1 text to facilitate linkage to a page image of the corresponding source page, but is
+         level 1 text to facilitate linkage to a page image of the corresponding source page. This
+         element is
          not required in a level 0 text. </p>
       <p>Running titles, page footers, catchwords and other forms of printed paratext are all
-         omitted from an ELTeC transcription, with the exception of a page number, which should be
+         omitted from an ELTeC transcription, with the exception of a page number, which may be
          supplied as value of the <att>n</att> attribute. Note that this attribute supplies the page
          number as specified by the source. If no page number is given, the value should be enclosed
          in brackets. </p>
@@ -439,9 +441,8 @@
          schema.</p>
       <p>It is not unusual to find special devices such as a row of stars or a rule in the middle of
          a chapter, usually indicating a discontinuity in the narrative timeline, or structural
-         shift. Such indications may be simply ignored in an ELTeC level zero text, or the special
-         purpose <gi>milestone</gi> element may be used to mark their presence; at level 1 they
-         should be retained.</p>
+         shift. Such indications may be simply ignored in an ELTeC level zero text; at level 1, the special
+         purpose <gi>milestone</gi> element may be used to mark their presence.</p>
       <p>Level 1 texts may also represent authorial notes, if these are present, using the element
             <gi>note</gi> to contain the body of the note, and the element <gi>ref</gi> to represent
          the point of attachment for the note. Wherever they appear in the text, notes are always
@@ -497,12 +498,7 @@
                <cell>Omitted</cell>
                <cell>Page number only may be included in <gi>pb</gi></cell>
             </row>
-            <row>
-               <cell>Mid-chapter structural marker</cell>
-               <cell><tag>milestone/</tag></cell>
-               <cell>use <att>type</att> to indicate type of structural marker; optional at level
-                  0</cell>
-            </row>
+           
             <row>
                <cell>Prose paragraph or list item</cell>
                <cell><gi>p</gi></cell>
@@ -539,7 +535,13 @@
                   omitted</cell>
             </row>
 
-
+            <row>
+               <cell>Mid-chapter structural marker</cell>
+               <cell>omitted</cell>
+               <cell><tag>milestone/</tag></cell>
+               <cell>use <att>unit</att>  and <att>type</att> to specify further detail</cell>
+            </row>
+            
             <row>
                <cell>Authorial footnote</cell>
                <cell>omitted</cell>
@@ -683,7 +685,7 @@
                      either words or pages, as indicated by the @unit attribute. </item>
                </list> Here is a simple example, for a French text : </p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><extent>
-                  <measure unit="words">12 000</measure>
+                  <measure unit="words">12000</measure>
                   <measure unit="pages">256</measure>
                </extent></egXML>
             <p>The page count may be derived from an external bibliographic source, and may not
@@ -693,15 +695,37 @@
          </div>
          <div>
             <head>The publication statement (<gi>publicationStmt</gi>)</head>
+            <p>This must contain  a <gi>distributor</gi> element naming the project itself, a
+               <gi>date</gi> element showing the text was added to the Collection, and an <gi>availability</gi>
+               element containing a standardised statement concerning its licence.
+               One or more <gi>ref</gi> elements may also follow specifying a URL from
+               which the text may be downloaded. These elements must be given in the order
+               specified, as shown in this example:
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <publicationStmt>
+                     <distributor>COST Action ELTeC</distributor>
+                     <date when="2018-11-23"/>
+                     <availability>                                       
+                        <licence
+                           target="https://creativecommons.org/licenses/by/4.0/">
+                           Licenced under CC-BY 4.0 </licence>
+                     </availability>
+                     <ref type="doi" target="10.5281/zenodo.8468"/>                                  
+                      </publicationStmt>
+               </egXML>
+               
+                  
+            
+            </p>
 
-            <p>This must contain a single <gi>p</gi> element containing a fixed phrase such as
+            <!--<p>This must contain a single <gi>p</gi> element containing a fixed phrase such as
                   <q>Incorporated into the ELTeC release 1.0</q> (or its equivalent in the
                appropriate language), followed by a date, tagged with the <gi>date</gi> element. </p>
             <p> Here is a simple example, for an English text : <egXML
                   xmlns="http://www.tei-c.org/ns/Examples"><publicationStmt>
                      <p>Incorporated into the ELTeC release 1.0 <date>2018-02-12</date></p>
                   </publicationStmt></egXML>
-            </p>
+            </p>-->
          </div>
          <div>
             <head>The source description (<gi>sourceDesc</gi>)</head>
@@ -715,31 +739,30 @@
                   <item>
                      <gi>idno</gi> may be used if the source text has a standard identifier such as
                      an ISBN or a library shelf mark</item>
-                  <item>
-                     <gi>relatedItem</gi> may be used to provide a bibliographic description of an
-                     intermediate source</item>
+                 <!-- <item>
+                     <gi>relatedItem</gi> may be used to provide a description of a
+                     different but related bibliographic item 
+                    </item>-->
                   <item>
                      <gi>ref</gi> may be used to supply a URI if the source used is online </item>
                </list></p>
             <p>Here is a French example: <egXML xmlns="http://www.tei-c.org/ns/Examples"><sourceDesc>
-                     <bibl>
+                     <bibl type="digitalSource">
                         <ref target="http://gallica.bnf.fr/ark:/12148/bpt6k931128v"> Tatiana Leïlof
                            roman parisien (édition numerisée) </ref>
                         <publisher> gallica.bnf.fr / Bibliothèque nationale de France </publisher>
                         <idno type="ARK">12148/bpt6k931128v</idno>
-                        <relatedItem type="copyText">
-                           <bibl><title>Tatiana Leïlof , roman parisien, par Édouard Rod</title>
+                   </bibl>
+               <bibl type="firstEdition"><title>Tatiana Leïlof , roman parisien, par Édouard Rod</title>
                               <publisher>E. Plon, Nourrit et Cie</publisher>
                               <pubPlace>Paris</pubPlace>
-                              <date>1886</date>
-                           </bibl>
-                        </relatedItem>
+                              <date>1886</date>                          
                      </bibl>
                   </sourceDesc></egXML>
             </p>
             <p>This encoding shows that the source of the ELTeC text is the digital facsimile
-               provided under the title and ARK identifier indicated, and that that digital
-               facsimile is itself related to a print edition, published in Paris in 1886. </p>
+               provided under the title and ARK identifier indicated, and that the first edition of
+               this work was published in Paris in 1886. </p>
             <p/>
          </div>
       </div>
@@ -747,33 +770,32 @@
          <head>The profile description (<gi>profileDesc</gi>)</head>
 
          <p>This must contain a <gi>langUsage</gi> element detailing the language or languages used
-            in the text, followed by a <gi>textDesc</gi> element providing information about the
-            classification of this text. </p>
+            in the text, followed optionally by a <gi>textClass</gi> element providing descriptive
+            keywords, and by a mandatory <gi>textDesc</gi> element providing the sampling criteria
+            applicable to this text. </p>
          <p>The <gi>textDesc</gi> element contains one of each of the following elements from the
                <ident>model.textDescPart</ident> class in the order indicated: <specList>
                <specDesc key="model.textDescPart"/>
-            </specList> These elements are used to represent the selection criteria applicable to
+            </specList> These elements are used to represent the sampling criteria applicable to
             the current text. They are specific to the ELTeC project, and are therefore taken from
             the ELTeC namespace (<ident>http://distantreading.net/eltec/ns</ident>) rather than the
             TEI namespace. </p>
-         <!--  <p> The <gi>textClass</gi> element should contain one <gi>catRef</gi> element, and may also
-            contain one or more <gi>keywords</gi> element. The <gi>catRef</gi> element must have a
+     <p> The optional <gi>textClass</gi> element may
+            contain one or more <gi>keywords</gi> elements. <!--The <gi>catRef</gi> element must have a
                <att>target</att> attribute specifying a series of classificatory codes. These codes
-            are derived from the ELTeC selection criteria, and are listed here. Each
+            are derived from the ELTeC selection criteria, and are listed here.--> Each
                <gi>keywords</gi> element may contain one or more <gi>term</gi> element describing
             some aspect of the text. At present the descriptive keywords may be freely chosen. All
             the terms in a given <gi>keywords</gi> list should use the same language, which should
             be that of the text itself, unless otherwise specified by means of an @xml:lang
-            attribute. </p>-->
+            attribute. </p>
          <p> The <gi>langUsage</gi> element should contain one or more <gi>language</gi> element,
             one for each of the human languages used in the text. The @ident attribute of this
             element identifies the language using the ISO 639-2 code in the same way as the
             @xml:lang attribute. The @usage attribute may be used to indicate approximately what
             percentage of the text uses this language, or otherwise qualify it by means of a brief
             description. </p>
-         <p>The <gi>textDesc</gi> element contains four elements defining the selection criteria
-            applicable to this text. These are specific to ELTeC and are therefore defined in the
-            ELTeC namespace.</p>
+        
          <p> Here is an imaginary Italian example: <egXML xmlns="http://www.tei-c.org/ns/Examples"><profileDesc>
                   <langUsage>
                      <language ident="it" usage="80"/>
@@ -789,7 +811,7 @@
                </profileDesc></egXML> This text is mostly in Italian, but approximately a tenth of
             it is taken up with quotations in English, and another tenth with quotations in German.
             Its description indicates that it has a male author, is of low canonicity (i.e. has not
-            been republished after its original publication time slot), contains more than 200,000
+            been republished after its original publication time slot), contains more than 100,000
             words, and was first published between 1880 and 1899. </p>
       </div>
       <div>

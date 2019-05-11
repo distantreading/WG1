@@ -66,8 +66,8 @@
        <elementRef key="pubPlace"/>
        <elementRef key="publisher"/>
        <elementRef key="ref"/>
-       <elementRef key="relatedItem"/>
-       <elementRef key="resp"/>
+   <!--    <elementRef key="relatedItem"/>
+  -->     <elementRef key="resp"/>
        <elementRef key="respStmt"/>
        <elementRef key="term"/>
       <elementRef key="title"/>
