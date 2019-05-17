@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/lou/Public/TEIslides/teislides.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>TEI4ELTEC : what and why </title>
+                <author>Lou Burnard Consulting</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>For Wurzburg</p>
+            </publicationStmt>
+            <sourceDesc>
+                <ab>Original XML available from <ptr
+                        target="http://github.com/distantreading/WG1/Training"/></ab>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2018-03-22">Create header</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="slide">
+                <head>What is the TEI?</head>
+                <p>
+                    <graphic url="../media/whatistei.png" height="75%"/></p>
+                <cb/>
+                <p>According to Wikipedia, the Text Encoding Initiative (TEI) is <hi>a text-centric
+                        community of practice in the academic field of digital humanities, operating
+                        continuously since the 1980s</hi>. </p>
+                <list rend="left">
+                    <item>An organisation, or an institution ?</item>
+                    <item>A <soCalled>club</soCalled>, a fashion, a religion ?</item>
+                    <item>A detailed technical specification ?</item>
+                    <item>... or a means of constructing such specifications ?</item>
+                </list>
+                <p rend="box">See http://books.openedition.org/oep/426/;
+                    http://books.openedition.org/oep/1237 (en francais)</p>
+            </div>
+            <div type="slide">
+                <head>More concretely, the Text Encoding Initiative is ... </head>
+                <list>
+                    <item>a set of <soCalled>Guidelines</soCalled> for the encoding of digital
+                        resources, currently using XML</item>
+                    <item>an international infrastructure responsible for the maintenance,
+                        development, and distribution of those Guidelines</item>
+                    <item>an international research community of users of those Guidelines </item>
+                </list>
+                <p rend="box">The TEI provides a standard framework within which different views of
+                    a text can be articulated rather than a single perspective. </p>
+            </div>
+            <div type="slide">
+                <head>"TEI" is also short for "Text Encoding for Interchange"</head>
+                <p>The TEI was created (before the Web!) to make possible <list>
+                        <item>The <hi>creation</hi>, <hi>exchange</hi>, and <hi>integration</hi> of
+                            digital textual data <list>
+                                <item>any kind of text </item>
+                                <item>in any language</item>
+                                <item>from any culture or epoch</item>
+                            </list></item>
+                        <item>The TEI was developed by and for researchers and technicians working
+                            in the academic community. It was intended to be useful <list>
+                                <item>for beginners, needing to learn well-established and agreed
+                                    solutions </item>
+                                <item>for experts, hoping to create new solutions</item>
+                            </list></item>
+                    </list></p>
+                <p rend="box">Consequently, the TEI provides both general and specific solutions,
+                    and its architecture is intended to permit customisation</p>
+            </div>
+
+            <div type="slide">
+                <head>Where did the TEI come from (and why is it still here)? </head>
+                <list type="unordered">
+                    <item>The TEI foundation myth goes back to 1987, when the US National Endowment
+                        for the Humanities financed an international workshop on the possibility of
+                        defining <soCalled>text encoding guidelines</soCalled></item>
+                    <item>This was an early example of what is now commonplace: informal voluntary
+                        co-operation between researchers at many different institutions mediated by
+                        the internet and by three learned societies (ALLC, ACL, ACH) </item>
+                    <item>Major influences (in both directions) <list type="unordered">
+                            <item>libraries and digital archives</item>
+                            <item>language engineering</item>
+                            <item>editors of literary and historical sources</item>
+                        </list></item>
+                </list>
+                <!--  <figure>
+                    <graphic height="55%" url="../media/1987-11-vassar.png"/>
+                    <head>Vassar College, Poughkeepsie</head>
+                </figure>-->
+            </div>
+            <div type="slide">
+                <head>The TEI's original design goals</head>
+                <list>
+                    <item>provide <hi>recommendations</hi> derived from the existing consensus,
+                        where this could be determined </item>
+                    <item>prefer <hi>general solutions</hi> to discipline-specific ones</item>
+                    <item>supporting both <hi>specialization</hi> and <hi>extension</hi></item>
+                </list>
+                <p rend="box">The TEI was not designed to provide a complete answer <soCalled>out of
+                        the box</soCalled></p>
+            </div>
+
+
+
+            <div type="slide">
+                <head>Why was this considered necessary ?</head>
+                <figure>
+                    <graphic url="../media/babel.jpg" height="65%"/>
+                </figure>
+                <cb/>
+                <list>
+                    <item>The rise and rise of mutually incompatible data formats, hand in hand with
+                        the evolution of new technologies !</item>
+                    <item>And also perhaps a desire to bring traditional philology up to date
+                    </item>
+                </list>
+            </div>
+
+
+            <div type="slide">
+                <head>A TEI time line</head>
+
+                <list type="gloss">
+                    <label>1988 - 1994</label>
+                    <item>Development undertaken by international research project, with funding
+                        from US and EU: versions TEI P1 (1990), P2 (1992), P3 (1994)</item>
+                    <label>1995 - 1999</label>
+                    <item>Promotion and take-up of TEI (unfunded)</item>
+                    <label>2000 </label>
+                    <item>Establishment of TEI Consortium, incorporated 30 Dec</item>
+                    <label>2001 - 2003</label>
+                    <item>XML conversion of P3 as TEI P4; Council oversees production of complete
+                        revision as TEI P5</item>
+                    <label>2003 - </label>
+                    <item>Regularly updated releases of TEI P5 at least twice a year since 2005;
+                        latest version 3.3.0 January 2018 </item>
+                </list>
+            </div>
+
+            <div type="slide">
+                <head>Why is the TEI still here?</head>
+                <list>
+                    <item>it codifies the set of concepts of importance to text-focussed scholarly
+                        communities -- and reflects their evolution </item>
+                    <item>conceived independently of particular technologies, its expression has
+                        already migrated from SGML to XML </item>
+                    <item>it is owned and maintained by its users</item>
+                    <item>it has no obvious competitor (beyond chaos) </item>
+                </list>
+            </div>
+            <div type="slide">
+                <head>The TEI menu</head>
+                <list>
+                    <item>The TEI defines several hundred concepts or features (<q>significant
+                            particularities</q>) identifiable when reading a text, for example <list>
+                            <item>basic structural features such as chapters or paragraphs</item>
+                            <item>visually salient features concerned with layout and
+                                appearance</item>
+                            <item>semantically charged features such as names, dates,
+                                measurements</item>
+                            <item>paratextual features such as correction, normalisation, deletion
+                            </item>
+                        </list>
+                    </item>
+                    <item>a vocabulary and a set of techniques for documenting textual
+                            <soCalled>metadata</soCalled>, analogous to library cataloguing </item>
+                    <item>several proposals for representing, embedding or associating different
+                        kinds of linguistic analysis</item>
+                </list>
+            </div>
+
+
+
+            <div type="slide">
+                <head>What's <hi rend="italic">not</hi> on the TEI menu?</head>
+                <p>Originally, the TEI ruled out of consideration...<list>
+                        <item>the web (it didn't yet exist)</item>
+                        <item>text formatting or processing (tex, scribe...)</item>
+                        <item>digital images (without transcription) </item>
+                        <item>encoding of facts or objects (database country)</item>
+                        <item>software</item>
+                    </list></p>
+                <p rend="box">its original focus (metadata, text, textual and linguistic analysis)
+                    has now expanded to include all of the above, and more besides. </p>
+            </div>
+            
+            <div type="slide">
+                <head>The TEI Architecture</head>
+                <list type="unordered">
+                    <item> TEI is a <emph>modular</emph> system. You use it to create an encoding
+                        system that reflects your own needs, by choosing from the TEI's pre-defined
+                        <term>modules</term>
+                    </item>
+                    <item>Each module defines a set of elements and their attributes</item>
+                    <item>you can choose just the elements you want, and also (within limits) change
+                        their properties </item>
+                    <item>you can add in non-TEI elements, either from other standards or completely
+                        new </item>
+                </list>
+              
+                <p rend="box">An online tool at http://www.tei-c.org/Roma/ helps with this task, but
+                is not essential. </p>
+            </div>
+            
+            
+            <div type="slide">
+                <head> TEI modules (1)</head>
+                <p>Your project will almost certainly need some elements from the following modules
+                    : </p>
+                <table rend="rules">
+                    <row role="label">
+                        <cell>module</cell>
+                        <cell>contents</cell>
+                        <cell>P5</cell>
+                        <cell>P3</cell>
+                    </row>
+                    <row>
+                        <cell>core </cell>
+                        <cell>textual features common to almost every kind of document</cell>
+                        <cell>82</cell>
+                        <cell>71</cell>
+                    </row>
+                    <row>
+                        <cell>figures</cell>
+                        <cell>tables, formulas, figures</cell>
+                        <cell>7</cell>
+                        <cell>6</cell>
+                    </row>
+                    <row>
+                        <cell>header </cell>
+                        <cell>bibliographic and other metadata </cell>
+                        <cell>69</cell>
+                        <cell>57</cell>
+                    </row>
+                    <row>
+                        <cell> tei </cell>
+                        <cell>infrastructural module defining datatypes, classes, and macros used by
+                            every TEI module</cell>
+
+                        <cell>0</cell>
+                        <cell>0</cell>
+                    </row>
+                    <row>
+                        <cell>textstructure </cell>
+                        <cell>basic structural elements</cell>
+                        <cell>33</cell>
+                        <cell>31</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="slide">
+                <head>TEI Modules (2)</head>
+                <p>If you work with manuscripts you will probably need some of the following
+                    modules: </p>
+                <table rend="rules">
+                    <row role="label">
+                        <cell>module</cell>
+                        <cell>contents</cell>
+                        <cell>P5</cell>
+                        <cell>P3</cell>
+                    </row>
+                    <row>
+                        <cell>gaiji</cell>
+                        <cell>non-Unicode characters and glyphs </cell>
+                        <cell>11</cell>
+                        <cell>15</cell>
+                    </row>
+                    <row>
+                        <cell>msdescription</cell>
+                        <cell>cataloguing and description of manuscripts, incunabula, and other 
+                            <soCalled>text-bearing objects</soCalled> </cell>
+                        <cell>69</cell>
+                        <cell>0</cell>
+                    </row>
+                    <row>
+                        <cell>textcrit</cell>
+                        <cell>traditional critical apparatus</cell>
+                        <cell>14</cell>
+                        <cell>12</cell>
+                    </row>
+                    <row>
+                        <cell>transcr</cell>
+                        <cell>diplomatic or genetic transcription of primary sources</cell>
+                        <cell>29</cell>
+                        <cell>10</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="slide">
+                <head>TEI Modules (3)</head>
+                <p>Other types of document are also supported ... </p>
+                <table rend="rules">
+                    <row role="label">
+                        <cell>module</cell>
+                        <cell>contents</cell>
+                        <cell>P5</cell>
+                        <cell>P3</cell>
+                    </row>
+                    <row>
+                        <cell>dictionaries</cell>
+                        <cell>print dictionaries</cell>
+                        <cell>35</cell>
+                        <cell>37</cell>
+                    </row>
+                    <row>
+                        <cell>drama</cell>
+                        <cell>performance texts (play scripts, cinema scripts)</cell>
+                        <cell>17</cell>
+                        <cell>16</cell>
+                    </row>
+                    <row>
+                        <cell>spoken</cell>
+                        <cell>transcribed speech</cell>
+                        <cell>14</cell>
+                        <cell>7</cell>
+                    </row>
+                    <row>
+                        <cell>tagdocs</cell>
+                        <cell>markup documentation (ODD)</cell>
+                        <cell>54</cell>
+                        <cell>31</cell>
+                    </row>
+                    <row>
+                        <cell>verse</cell>
+                        <cell>poetic texts</cell>
+                        <cell>4</cell>
+                        <cell>6</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="slide">
+                <head>TEI Modules (4)</head>
+                <p>If you intend to add analytic encodings of some kind, you may need some of the
+                    following : </p>
+                <table rend="rules">
+                    <row role="label">
+                        <cell>module</cell>
+                        <cell>contents</cell>
+                        <cell>P5</cell>
+                        <cell>P3</cell>
+                    </row>
+                    <row>
+                        <cell>analysis</cell>
+                        <cell>basic mechanisms for analysis and interpretation</cell>
+                        <cell>11</cell>
+                        <cell>10</cell>
+                    </row>
+                    <row>
+                        <cell>certainty</cell>
+                        <cell>indications of uncertainty and probability</cell>
+                        <cell>3</cell>
+                        <cell>2</cell>
+                    </row>
+                    <row>
+                        <cell>corpus</cell>
+                        <cell>language corpus metadata</cell>
+                        <cell>14</cell>
+                        <cell>26</cell>
+                    </row>
+                    <row>
+                        <cell>iso-fs</cell>
+                        <cell>feature structure based analysis</cell>
+                        <cell>28</cell>
+                        <cell>32</cell>
+                    </row>
+                    <row>
+                        <cell>linking</cell>
+                        <cell>linking, segmentation, and alignment </cell>
+                        <cell>11</cell>
+                        <cell>12</cell>
+                    </row>
+                    <row>
+                        <cell>namesdates</cell>
+                        <cell>names, dates, and named entities</cell>
+                        <cell>52</cell>
+                        <cell>30</cell>
+                    </row>
+                    <row>
+                        <cell>nets</cell>
+                        <cell>graphs, networks, and trees</cell>
+                        <cell>12</cell>
+                        <cell>12</cell>
+                    </row>
+                </table>
+            </div>
+
+
+            <!--<div type="slide">
+                <head>The current TEI landscape </head>
+                <list>
+                    <item>Basic organization of continuous texts</item>
+                    <item>Diplomatic transcriptions, images, multimedia, annotations...</item>
+                    <item>Formal data : dates, names and named entities (people, places,
+                        organizations, objects)</item>
+                    <item>Paratextual data, documentary evidence, textual transmission</item>
+                    <item>Linguistic analyses of all kinds (including speech and music)</item>
+                    <item>Documentation and generation of encoding systems</item>
+                    <item>Et cetera: see <ptr target="http://www.tei-c.org/P5/Guidelines/"/></item>
+                </list>
+                <p>... in short, a new kind of Encyclopaedia!</p>
+            </div>-->
+
+
+
+            
+            <div type="slide">
+                <head>How do you choose?</head>
+                <list>
+                    <item>Take the lot ! (not a very smart choice)</item>
+                    <item>Use a predefined selection (TEI Lite,  simplePrint, EpiDoc ...) </item>
+                    <item>Roll your own -- according to your specific project needs</item>
+                </list>
+                <p>Yes, this means that you have to know about all the possibilities ... but fortunately
+                    the TEI community is full of people just like you!                </p>
+
+            </div>
+<!--
+            <div type="slide">
+                <head>... leading to the many flavours of TEI</head>
+                <p>Suppose you want to encode a bibliographic description. The TEI makes you choose
+                    between :<list>
+                        <item><gi>bibl</gi> (contains any combination of bibliographic elements and
+                            text, or just text)</item>
+                        <item><gi>biblStruct</gi> (contains a specific set of bibliographic elements
+                            in a specific order and no text)</item>
+                        <item><gi>biblFull</gi> (contains a specific set of bibliographic elements
+                            in a different specific order and no text)</item>
+                    </list>
+                </p>
+            </div>
+-->
+            <div type="slide">
+                <head>Is the TEI a standard ?</head>
+                <figure>
+                    <graphic url="../media/1991-TEI-commandments.png" height="80%"/>
+                </figure>
+                <cb/>
+                <list>
+                    <item>The TEI is not TEI All, or TEI Lite, or TEI simplePrint, or Epidoc, or CES,
+                        or... </item>
+                    <item>So what is it?</item>
+                </list>
+            </div>
+
+
+
+
+            <div type="slide">
+                <head>The TEI was designed to support many approaches</head>
+                <p><graphic url="../media/oddFlavours.png" width="80%"/></p>
+                <cb/>
+                <p>Each box here represents .. <list>
+                        <item>a set of elements, their attributes, and constraints about their
+                            usage;</item>
+                        <item>the set of documents which match those constraints.</item>
+                    </list></p>
+                <p>
+                    <list>
+                        <item><hi rend="it">TEI All</hi> is the set of all TEI
+                            definitions/documents;</item>
+                        <item>A <term>TEI subset</term> is a selection from TEI All;</item>
+                        <item>A <term>TEI extension</term> permits definitions/documents beyond TEI
+                            All.</item>
+                    </list></p>
+            </div>
+            <div type="slide">
+                <head>The TEI spirit</head>
+                <p>A delicate tight rope... or just common sense </p>
+                <list>
+                    <item>tagging by consensus</item>
+                    <item>using a defined lexicon </item>
+                    <item>respect for diversity</item>
+                </list>
+                <p>Standardization should not mean «do what I do» but rather «explain your decisions
+                    in terms I can understand »</p>
+            </div>
+
+            <div type="slide">
+                <head>What does it mean to be <soCalled>TEI Conformant</soCalled>?</head>
+                <list>
+                    <item><label>be honest</label>: every XML element claiming to belong to the TEI
+                        namespace should respect the semantics of its TEI definition.
+                        <!-- eg l vs line --></item>
+                    <item><label>be explicit</label>: the formal documentation provided by a TEI ODD
+                        makes explicit how you have chosen to use the TEI.</item>
+                    <item>The TEI elements in a conformant TEI document must be valid with respect
+                        to the TEI All schema.</item>
+                </list>
+                <p rend="box">The purpose of these rules is to make <soCalled>blind
+                        interchange</soCalled> easier... though they cannot guarantee it</p>
+            </div>
+
+            <div type="slide">
+                <head>Why bother with the TEI ?</head>
+                <list>
+                    <item>you could markup your text in HTML 5 or design your own tagging
+                        system</item>
+                    <item>(but what a waste of time that would be); </item>
+                    <item>you could use a database system</item>
+                    <item>(but you would need some nontrivial technical support). </item>
+                </list>
+                <p rend="box">Understanding the TEI requires you to master a <soCalled>sweet
+                        spot</soCalled>, midway between technology and the humanities.</p>
+            </div>
+
+
+            <div type="slide">
+                <head>What does it offer ELTeC?</head>
+                <list>
+                    <item>a well-understood conceptual model which is common across the (digital)
+                        humanities</item>
+                    <item>access to plenty of free tools and experience</item>
+                    <item>the ability to share and straightforwardly enrich data for multiple
+                        uses</item>
+                </list>
+            </div>
+
+
+            <div type="slide">
+                <head>And, in practice... </head>
+                <p>As noted above, every TEI application begins by deciding on the TEI subset (or
+                    extension) it needs to use. For ELTeC, WG1 has identified three customizations: <list>
+                        <item>level zero: a minimal set of structural features</item>
+                        <item>level one : a slightly richer set of features likely to be
+                            automatically detectable in existing digital texts</item>
+                        <item>level two : a set of features useful for linguistic analysis,
+                            including tokenisation and segmentation. </item>
+                    </list></p>
+                <p rend="box">The goal is to define a guaranteed minimum : if feature x is present
+                    in a document, it will always be marked up and in the same way. No optional
+                    markup!</p>
+            </div>
+
+            <div type="slide">
+                <head>For more information</head>
+                <p> About TEI: <list>
+                        <item><ptr target="http://www.tei-c.org"/></item>
+                        <item><ptr target="http://github.com/TEIC/TEI"/></item>
+                        <item><ptr
+                                target="http://listserv.brown.edu/archives/cgi-bin/wa?SUBED1=tei-l&amp;A=1"
+                            /></item>
+                    </list></p>
+                <p> About ELTeC <list>
+                        <item><ptr target="https://distantreading.github.io"/></item>
+
+                    </list></p>
+            </div>
+
+        </body>
+    </text>
+</TEI>

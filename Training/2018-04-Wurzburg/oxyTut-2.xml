@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_bare.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Creating an ELTeC level zero document</title>
+            <author>Lou Burnard Consulting</author>
+         </titleStmt>
+         <publicationStmt>
+            <p>For distribution at ELTeC Training Session, 2018-04-17</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Expanded from other oXygen Tutorials</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2018-04-14">split into three; provide header</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+                 <p>This second tutorial walks you through the process of creating an ELTeC document. In the
+               first part, you will create the first page by transcribing it from a page image, and
+               then add the rest of the first chapter from some plain text OCR output. In the second
+               part you will work on a version of the same text which has been saved in Word DOCX
+               format. In the third part, you will combine the two.</p>
+
+            <div>
+               <head>Creating a document</head>
+               <list>
+                  <item>Open oXygen and click on the New icon (first left on the toolbar); or select
+                     File->New from the menu; or type CTRL-N</item>
+                  <item>The New File dialogue appears. Select XML Document from the New Document
+                     menu, and enter an output filename at the bottom (I suggest your name). Now
+                     click the Customize button at the bottom of the dialog in order to specify the
+                     kind of XML document you want to create.</item>
+                  <item>If this is the first time you've done this, oXygen needs to be told where to
+                     find the definition for the XML customization we want to use. This is provided
+                     by a file called a <term>schema</term>, and this dialogue would like you to
+                     specify where to find it in the box labelled <ident>URL of schema</ident>. The
+                     file you need is called <ident>eltec-0.rnc</ident> and you can get a local copy
+                     from your Work directory (it's in the folder Schema); alternatively you can
+                     find the same file online at
+                     http://distantreading.github.com/Schema/eltec-0.rnc. Use the arrow to the right
+                     of the window to navigate to the schema file and open it. Then press the Create
+                     button.</item>
+                  <item>The main oXygen editing window opens, with the beginnings of an ELTeC XML
+                     file in it. Note the following: <list>
+                        <item>At the top of the file there are two purple lines beginning
+                              <code>&lt;?xml</code>.</item>
+                        <item>The file contains tags (in blue) and attribute names (in orange) but
+                           no text as yet.</item>
+                        <item>To the right of the main window there is a status bar with an angry
+                           red square at the top and some red error flags. These correspond with
+                           parts of the text display underlined in red.</item>
+                        <item>Underneath the editing window there is an error message corresponding
+                           with the first error flag: <code>element "sourceDesc" incomplete;
+                              expected element "bibl" or "p"</code></item>
+                     </list></item>
+                  <item>The red flags tell us that although oXygen has done its best some additional
+                     information is needed to create a document which is valid according to the
+                     rules specified in the schema we have named. Let's fix up the errors! <list>
+                        <item>We need to add something inside the element sourceDesc. Put the cursor
+                           between the start and end tags for this element, i.e. after
+                              <tag>sourceDesc</tag> and before <tag>/sourceDesc</tag>. Now type a
+                           &lt; </item>
+                        <item>Scan the menu of possibilities which opens: you can insert an element
+                           called bibl or p, a comment, or a few other oddities. Choose p and press
+                           RETURN.</item>
+                        <item>The first red error flag disappears, and the error message at the
+                           bottom of the screen changes to <code>value of attribute xml:id is
+                              invalid</code>. This is because our schema requires an identifier for
+                           every text and we have not yet supplied one. Put the cursor between the
+                           quote marks and type in the identifier for our sample novel which is
+                           (shall we say) <code>EN042</code>. The second error message disappears!
+                           To celebrate, add a value (<code>en</code>) for the attribute
+                              <att>xml:lang</att>: this specifies the language code for the
+                           document. </item>
+                        <item>The third error is like the first: <code>element "body"
+                              incomplete...</code> so fix it in the same way. Put the cursor inside
+                           the <gi>body</gi> element and type a &lt; to see what's legal here. We
+                           suggest you add a <tag>div type="chapter"</tag>. Phew! no red marks
+                           anywhere! Your document is valid: click the disk icon (or type CTRL-S, or
+                           choose File-Save from the menu) to save it for further work.</item>
+                     </list></item>
+               </list>
+               <p>Valid as it is, this document is not much use to anyone without some content. We
+                  need to start adding text, both in the header (where the metadata describing it
+                  will be held) and in the body (where the transcribed text itself will reside). For
+                  this exercise we will work on just the first chapter of a deservedly forgotten
+                  English novel: Mrs Grey's <title>Passages in the life of a fast young lady</title>
+                  (1862).</p>
+               <p> In your folder Work/Pages you will find page images of the chapter concerned.
+                  Take a look at the titlepage which is in file <ident>Work/Pages/006.png</ident>
+                  and browse a few of the other pages to get a taste for the kind of document you
+                  are dealing with. </p>
+               <p>oXygen is just like any other editor: you can type in text, correct, cut and
+                  paste, and so on. Let's begin by typing some minimal metadata into the TEI Header.
+                  (We'll return to this topic later) <list>
+                     <item>First enter the title of the digital text we are creating. For ELTeC,
+                        this should be the original main title (Passages in the life of a fast young
+                        lady), followed by the phrase <code>: ELTeC edition</code>. </item>
+                     <item>The <gi>author</gi> element should contain the author's name in a
+                        standardised format, with the surname first, and the author's dates in
+                        parentheses at the end: like this <code>Grey, Catherine Maria
+                           (1798-1870).</code>
+                     </item>
+                     <item>You should also take credit for your encoding by adding a
+                           <gi>respStmt</gi> element after the <gi>author</gi>. This element should
+                        contain a <gi>resp</gi> with the content <code>ELTeC encoding</code> and a
+                           <gi>name</gi> containing your name.</item>
+                     <item>We will look more closely at the other header elements later. For the
+                        moment, we suggest you just add <gi>p</gi> elements containing a few words
+                        for the publication statement and the source description
+                           (<gi>sourceDesc</gi>). If you feel ambitious, you could also add a
+                           <gi>revisionDesc</gi> containing a <gi>change</gi> element at the end.
+                     </item>
+                  </list></p>
+               <p>All being well, your header should look like something like this when you've
+                  finished: </p>
+               <p>
+                  <figure>
+                     <graphic url="media/tuto-10.png" width="75%"/>
+                  </figure>
+               </p>
+               <p>Now we'll proceed to transcribe and tag the text itself. </p>
+               <p>First, open the page image for the beginning of the chapter in file
+                     <ident>Work/Pages/0008.png</ident>. You can do this directly within oXygen, or
+                  by clicking on it in the File Explorer. Look at the page, and you will see that it
+                  contains a centered heading for the whole text (the title <hi>Passages ...
+                     Lady</hi>), followed by a heading for the first chapter (<hi>Chapter I.</hi>).
+                  There is then a paragraph of text <hi>A yellow fog... on the heart</hi>, and the
+                  first line of a second paragraph, <hi>It was on a morning when our
+                  metropolis</hi>. Finally there is a page footer containing the text <hi>Vol I</hi>
+                  and a signature <hi>B.</hi>. The words <hi>yellow fog</hi> are in small caps, but
+                  otherwise there is nothing particularly remarkable in the typography. </p>
+               <p>For ELTeC purposes, we do not care about line breaks or other purely typographic
+                  features, such as the centralised line between the two headings, or the page
+                  footer. But we need to show that there are two headings and place them correctly
+                  in the document structure. We don't need to capture line breaks explicitly, but we
+                  need to show the boundaries of the page, and of each paragraph. </p>
+               <list>
+                  <item>Insert a <gi>pb</gi> element as the first thing inside the <gi>body</gi>
+                     element. Give its <att>n</att> attribute the value <code>1</code>. </item>
+                  <item>Insert a <gi>head</gi> element after the <gi>pb</gi>, but before the
+                        <gi>div</gi> you inserted to make the file valid. Then type the title of the
+                     whole work as content of this <gi>head</gi> element. No need to worry about the
+                     linebreaks or font changes. </item>
+                  <item>Now insert a second <gi>head</gi> element <emph>inside</emph> the
+                        <gi>div</gi> and type in its content <q>Chapter I</q>. </item>
+                  <item>Finally insert a <gi>p</gi> element and start typing the first paragraph
+                     into it. As before, no need to worry about typographic variation or linebreaks,
+                     but you should respect the spelling and capitalisation of the original. If you
+                     make a mistake, use CTRL-Z to undo your last action. </item>
+               </list>
+               <p>When you've finished your first page, it should look something like this: </p>
+               <p>
+                  <graphic url="media/tuto-11.png" width="70%"/>
+               </p>
+               <p>Are you ready for the next page? Open the appropriate graphic file in
+                     <ident>Work/Pages/0008.png</ident> and take a look. Note the following: <list>
+                     <item>there is a running page header which repeats the title, as well as giving
+                        the page number; your transcription should include the latter (in a
+                           <gi>pb</gi>), but not the former.</item>
+                     <item>The text contains some long dashes — e.g. between <q>garb</q> and <q>that
+                        </q> in the first line — which should be distinguished from hyphens: use the
+                        Insert Special Character command on the Edit menu to open a menu from which
+                        you can select the correct Unicode character.</item>
+                     <item>Some hyphens are simply typographic effects which can be ignored or
+                        discarded (for example the one at the end of the third line) ; others
+                        however should be retained. For example, starting on the 7th line but
+                        continuing to the 8th is a sequence which looks like
+                        <q>orange-co-loured</q>, but which should probably be transcribed as
+                           <q>orange-coloured</q>. </item>
+                  </list></p>
+               <p>If you're happy typing, please continue! Take care that you insert the second
+                     <gi>pb</gi> and the whole of the text of this second page <emph>within</emph>
+                  the paragraph you began at the foot of the first page... and it continues on to
+                  the third page. </p>
+               <p>If on the other hand you'd rather not have to do quite so much typing, there is a
+                  (more or less) tidied transcription of the next few pages of this chapter in the
+                  file <ident>EN042/pp2-8.txt</ident>. We'll use that in the next few steps.</p>
+               <list>
+                  <item>With the cursor inside the last <gi>p</gi> on page one, i.e. immediately
+                     after the word <q>metropolis</q>, Select Document -> File -> Insert File from
+                     the menu. Navigate to the file <ident>pp2-8.txt</ident> in your Work folder and
+                     click Open. The content of this file is inserted into your document, ready for
+                     you to edit it.</item>
+               </list>
+               <p>The text you've just added needs at least two things done to it. Firstly we need
+                  to change the page numbers (which appear as single digits on a line of their own)
+                  into <gi>pb</gi> elements, like the one you typed in earlier. Secondly we need to
+                  divide the text up into paragraphs with proper <gi>p</gi> tags rather than blank
+                  lines. Now, of course, we could do this by hand for a few pages, but that's not
+                  really a scalable solution. And a computer is not just a glorified typewriter!
+                  Let's use some of the special power of the digital to make our editing task
+                  easier. </p>
+               <p>oXygen includes a powerful Search and Replace facility, which you can use to
+                  tackle the first problem. </p>
+               <list>
+                  <item>With the cursor still immediately after the word <q>metropolis</q>, select
+                     Find -> Find/Replace, or type CTRL-F.</item>
+                  <item>In the dialog box that opens, first check that the option <code>Regular
+                        expression</code> is selected. </item>
+                  <item>Type the following incantation into the <ident>Find</ident> box:
+                        <code>\n(\d)[\s\n]+</code>. This is a regular expression: it means <q>find a
+                        newline, followed by a single digit, followed by a sequence of one or more
+                        spaces and newlines</q>. </item>
+                  <item>Type the following incantation into the <ident>Replace with</ident> box:
+                        <code>&lt;pb n="\1"/>\n</code>. This is what will be used to replace the
+                     part of the input text matched by the regular expression. The <code>\1</code>
+                     part refers to that part of the regexp which was parenthesized, i.e. the page
+                     number.</item>
+                  <item>Double check you typed the incantations correctly, take a deep breath, and
+                     press the Replace All button. Did it work? If not, press CTRL-Z, and try
+                     again!</item>
+               </list>
+               <p>The same technique could be used to solve the other problem: you can probably work
+                  out how to define a regular expression for two consecutive newlines and replace it
+                  by the sequence <tag>/p>&lt;p</tag>. But instead I suggest you use a slightly
+                  slower but more accurate technique, relying on one of oXygen's built in XML
+                  manipulation facilities. As you can see if you look at the Outline view, or switch
+                  the display to Author mode, oXygen currently thinks that the whole of the text you
+                  just inserted is one big paragraph. Do you remember how to split that up?</p>
+               <list>
+                  <item>In Text Mode, scroll the text to the end of that interminable paragraph on
+                     page 2, i.e. between the words <q>occupants of the cab.</q> and before <q>Along
+                        dirty streets</q>. </item>
+                  <item>With the cursor at that point between the two paragraphs, press ALT-SHIFT-D,
+                     or select Document -> Markup -> Split Element from the menu. </item>
+                  <item>oXygen closes the current paragraph and opens a new one. Scroll down to the
+                     end of this new paragraph (after <q>and that quickly."</q> at the top of page
+                     4), and repeat the manipulation.</item>
+                  <item>Proceed in this way to the end of the file. Do you still have a jolly green
+                     square? You now have a valid ELTeC document, containing the first chapter of
+                     the novel. Well done! Save it in a safe place on your Desktop, and we will try
+                     to complete it in the next part of the exercise. </item>
+               </list>
+            </div>
+            <div xml:id="workingA">
+               <head>Working with Abbyy output</head>
+               <p>The text file you used in the preceding exercise was extracted from the file
+                  called <ident>Abbyy-output.txt</ident> in your <ident>Work directory</ident>. As
+                  the name suggests, this file was created by Abbyy Finereader in text format. As
+                  you saw yesterday, this OCR software can produce output in several other formats
+                  as well, including <code>docx</code>, the format used by Microsoft Word. Maybe
+                  you'd prefer to work on correcting OCR errors in this format, but will oXygen be
+                  able to add TEI tags to a Word file when you've finished? Of course it can!</p>
+               <list>
+                  <item>Open the file <ident>Abbyy-output.docx</ident> with oXygen.</item>
+                  <item>A docx file is actually an archive containing several files, so oXygen opens
+                     the <term>archive browser</term> window for you to select which one you want to
+                     edit.</item>
+               </list>
+               <p>
+                  <figure>
+                     <graphic url="media/tuto-12.png" width="60%"/>
+                  </figure>
+               </p>
+               <list>
+                  <item>In the archive browser, click the blue circle to the left of the folder
+                     labelled <ident>word</ident> to open it up: it contains a file called
+                        <ident>document.xml</ident> which contains the text we want. Double-click to
+                     open it.</item>
+                  <item>This is an XML file we can edit it in oXygen, even though its schema is a
+                     bit far removed from TEI. Scroll down to reassure yourself that there is
+                     actually some useful content here. </item>
+                  <item> oXygen comes with some built in transformation tools, including one for
+                     converting this flavour of XML to TEI. With the <ident>document.xml</ident>
+                     file open in your main editing window, select <ident>Document -> Transformation
+                        -> Configure Transformation Scenario(s)</ident> from the
+                        <ident>Document</ident> menu. Or type <code>CTRL-SHIFT-C</code>. Or click
+                     the little spanner icon.</item>
+                  <item>The Configure Transformation Scenario appears, suggesting some relevant
+                     transformations for this file. Check the little box next to DOCX TEI P5 and
+                     press the <ident>Apply Associated</ident> button. </item>
+                  <item>The Word document in the main window is replaced by a valid TEI document.
+                     You may want to use the Format and Indent button (CTRL+SHIFT+P) button to make
+                     it a bit easier to see what's going on. You can also close the <ident>Archive
+                        Browser</ident> window now. Scroll through your new file to get a quick
+                     impression of the tags that have been introduced. </item>
+               </list>
+
+
+               <p><figure><graphic url="media/tuto-13.png" width="70%"/></figure> The text has
+                  been split up into paragraphs, each tagged <gi>p</gi>, and each carrying an
+                  attribute <att>rend</att> with a coded value indicating something about the format
+                  of that paragraph in the original Word document, for example <code>Style
+                  44</code>, <code>Style 50</code> etc. It looks as if <code>Style 50</code>
+                  paragraphs are text, <code>Style 44</code> paragraphs are chapter headings, and
+                     <code>Style 25</code> paragraphs are page footers, but there may be exceptions
+                  or inconsistencies.</p>
+
+               <p>We could use this information to improve the tagging, if it is reasonably
+                  consistent. Let's start by investigating the paragraphs tagged as <code>Style
+                     44</code>: are they in fact all chapter headings? And are all chapter headings
+                  tagged with this code? </p>
+               <p>
+                  <list>
+                     <item>At top left of the oXygen main screen, under the button bar, there is a
+                        box labelled <ident>XPath 2.0</ident> which you can use to navigate the XML
+                        structure of your document. XPath is a standard language for describing and
+                        locating subtrees within an XML document.</item>
+                     <item>Type the following code into the box <code>//p[@rend="Style 44"]</code>
+                        and press RETURN. (The effect of this code is to locate any <gi>p</gi>
+                        element which has a <att>rend</att> attribute with the value <code>Style
+                           44</code>). </item>
+                     <item>A window opens at the foot of the screen, with the heading
+                           <code>Description - 21 items</code>. In the window there are 21 rows,
+                        each indicating where a matching <gi>p</gi> element is to be found in the
+                        document (the XPath location) and also displaying its content (e.g.
+                           <code>CHAPTER I.</code>). </item>
+                     <item>Look closely at the list and you will see that there are some chapters
+                        missing; nevertheless this is still a useful way of finding quickly where we
+                        should divide the text up into into chapters.</item>
+                  </list>
+               </p>
+               <p>To divide the text up into chapters, we suggest you use the same method as before.
+                  (You will find it easier to see what you are doing if you open the
+                     <ident>Outline</ident> view first). <list><item>First surround the whole text
+                        with one <gi>div</gi> as follows. Scroll up to the top of the document, and
+                        insert a <tag>div type="chapter"</tag> tag after the <gi>body</gi>
+                        start-tag.</item>
+                     <item>As usual, oXygen will helpfully insert a <tag>/div</tag> close tag:
+                        delete it.</item>
+                     <item>Scroll down to the end of the document, put the cursor in front of the
+                        end-tag for the <gi>body</gi>, and type <code>&lt;/</code> to close the
+                           <gi>div</gi> you just opened.</item>
+                  </list></p>
+               <p>In the Outline box, you should now see something like this: <figure><graphic
+                        url="media/tuto-14.png" width="70%"/></figure></p>
+               <p>We now have a single <gi>div</gi> containing the whole text. We just need to
+                  locate the start of each chapter, and press ALT-SHIFT-D to divide it up. </p>
+               <list>
+                  <item> Click on the line in the window at the bottom of your screen which begins
+                        <code>CHAPTER I</code>.</item>
+                  <item>The cursor jumps to the paragraph containing this text. Press ALT-SHIFT-D
+                     and check to see what happens in the Outline window. </item>
+                  <item>Repeat with the next line in the lower window. You can move to it by just
+                     pressing the down-arrow key if your cursor is still in that window. </item>
+                  <item>Repeat to the end of the list of chapter headings. The Outline view should
+                     show that you have now divided the body of the text into 21 chapters.</item>
+               </list>
+               <p>Now that we have chapters, we need to transform the <code>style 44</code>
+                  paragraphs into headings. You can probably think of some ways of doing this for
+                  youself; here's a suggestion, which also introduces you to another feature of
+                  oXygen: the ability to <emph>remove</emph> tagging you don't want. </p>
+               <list>
+                  <item>Scroll to the top of the document, and repeat the XPath search for
+                        <code>//p[@rend='Style 44']</code></item>
+                  <item>Click on the line starting <code>CHAPTER I.</code> in the bottom window, as
+                     before.</item>
+                  <item>The paragraph containing this text is highlighted. Carefully type
+                     ALT-SHIFT-X once to remove the tags around it. Type ALT-SHIFT-X again to remove
+                     the <gi>anchor</gi> element.</item>
+                  <item>Type CTRL-E and select or enter <gi>head</gi> to add that tag around the
+                     phrase <code>CHAPTER I.</code>.</item>
+                  <item>Repeat for the remaining chapters! If something goes wrong, press CTRL-Z to
+                     rewind and try again.</item>
+               </list>
+               <p>As we already noted, most paragraphs are coded <code>Style 50</code>. This is
+                  redundant information, especially since we are not interested in the formatting of
+                  the text. Use Find and Replace (CTRL-F) to remove the string <code> rend="Style
+                     50"</code> (note the leading space). Then do another XPath search, this time
+                  for <code>//p[@rend]</code>. This will show all remaining styled paragraphs, the
+                  majority of which contain things you don't want such as page footers or
+                  signatures. Scroll the list to check, and see how many you can remove, or replace
+                  with a <gi>pb</gi> element. (Unfortunately, Word has not retained the pagination
+                  in a way that we can reuse it) </p>
+            </div>
+            <div>
+               <head>The real work starts here</head>
+               <p>You've now seen a few of the techniques oXygen offers to make the task of editing
+                  your XML document easier: <list>
+                     <item>You can use Validate (CTRL-SHIFT-V) to check that your document conforms
+                        to a schema, and thus detect any unexpected tags.</item>
+                     <item>You can use Find and Replace to search for strings or patterns in the
+                        text and replace them with other strings.</item>
+                     <item>You can type XPath expressions to locate parts of the XML structure of
+                        the document.</item>
+                     <item>You can use shortcuts like ALT-SHIFT-X to remove the tags of the adjacent
+                        element, CTRL-E to add tags to a selected string, or ALT-SHIFT-D to divide
+                        an XML element in two.</item>
+                     <item>You can use the Outline view to get an overview of the structure of your
+                        document and the Format and Indent button to reformat the editing window.
+                        You can also see your document in a styled format by clicking the Author
+                        tag. </item>
+                  </list></p>
+               <p>In addition, of course, oXygen offers the usual range of facilities you'd expect
+                  in an editor such as cut and paste. It even has a spellchecker, which is also very useful
+                  for detecting OCR errors. (Try it out by selecting Edit->Check Spelling on the
+                  menu, or press F7). And oXygen allows you to operate on several files at the same
+                  time, which is particularly useful, as we shall see in the last part of this
+                  tutorial.</p>
+               <list>
+                  <item>Select File->Open, or CTRL-O and navigate to the Desktop or wherever you
+                     saved your ELTeC version of chapter 1. Click Open.</item>
+                  <item>A new editing window opens, containing the document you prepared earlier.
+                     Scroll down to the end of the file and put the cursor after the <tag>/div</tag>
+                     tag at the end of the chapter.</item>
+                  <item>Click the tab above the edit window containing the name of the file you
+                     produced from word (it should be called <ident>Abbyy-output-TEI-P5.xml</ident>)
+                     to return to that file.</item>
+                  <item>Go to the Outline window and click on the div tag containing chapter 2. </item>
+                  <item>The corresponding text is highlighted in the edit window; type CTRL-C to
+                     copy it to the clipboard.</item>
+                  <item>Click on the tab corresponding with the edit window containing your ELTeC
+                     version of chapter 1.</item>
+                  <item>Click CTRL-V to paste the second chapter into your file.</item>
+                  <item>Click the Validate button (or type CTRL-SHIFT-V) to check that you have not
+                     introduced any validation errors : correct them, if you have!</item>
+                  <item>Continue in this way, pasting in chapters one at a time. When you get bored,
+                     try running the spell checker or reading the text for other errors...</item>
+               </list>
+
+            </div>
+         
+      </body>
+   </text>
+</TEI>
