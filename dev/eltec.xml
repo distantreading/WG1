@@ -94,8 +94,8 @@
                     <classSpec ident="att.global.responsibility" type="atts" mode="delete"/>
                     <classSpec ident="att.global.source" type="atts" mode="delete"/>
                     <classSpec ident="att.internetMedia" type="atts" mode="delete"/>
-                    <classSpec ident="att.measurement" type="atts" mode="delete"/>
-                    <classSpec ident="att.naming" type="atts" mode="delete"/>
+                 <!--   <classSpec ident="att.measurement" type="atts" mode="delete"/>
+                -->    <classSpec ident="att.naming" type="atts" mode="delete"/>
                     <classSpec ident="att.personal" type="atts" mode="delete"/>
                     <classSpec ident="att.placement" type="atts" mode="delete"/>
                     <classSpec ident="att.ranging" type="atts" mode="delete"/>
@@ -684,8 +684,13 @@
                     <!-- require one of each profileDesc component in a specific order -->
                     <elementSpec ident="profileDesc" mode="change">
                         <content>
-                            <classRef key="model.profileDescPart" expand="sequence"/>
+                            <classRef key="model.profileDescPart" expand="sequenceOptional"/>
                         </content>
+                        <constraintSpec ident="textDescMandatory" scheme="schematron">
+                            <constraint><sch:assert test="child::tei:textDesc">You
+                                must provide a text description</sch:assert></constraint>
+                        </constraintSpec>
+                        
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
@@ -841,10 +846,10 @@
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="measure" mode="change">
-                        <classes mode="change">
+                    <!--    <classes mode="change">
                             <memberOf key="att.measurement" mode="delete"/>
                         </classes>
-                        <content>
+                   -->     <content>
                             <dataRef key="teidata.numeric"/>
                         </content>
                         <attList>
@@ -1747,6 +1752,9 @@
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="textClass" mode="change">
+                        <content>
+                            <elementRef key="keywords"/>
+                        </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <textClass>
