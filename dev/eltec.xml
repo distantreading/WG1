@@ -58,7 +58,7 @@
             milestone name note p pb publisher pubPlace quote ref resp respStmt rs sp stage hi term title "/>
                     <moduleRef key="textstructure" include="TEI text div body front back trailer"/>
                     <moduleRef key="header"
-                        include="availability change  encodingDesc 
+                        include="availability change  distributor encodingDesc 
                    extent fileDesc idno keywords langUsage language licence 
             profileDesc publicationStmt revisionDesc sourceDesc teiHeader textClass titleStmt"/>
                     <!-- CO: included availability and licence -->
@@ -1639,7 +1639,13 @@
                             <memberOf key="att.canonical"/>
                         </classes>
 
-
+                        <constraintSpec mode="add" ident="noEmptyTerm" scheme="schematron">
+                            <constraint>
+                                <assert xmlns="http://purl.oclc.org/dsdl/schematron"
+                                    test="child::* or child::text()[normalize-space()]" role="ERROR"
+                                    >A &lt;term&gt; must contain some text!</assert>
+                            </constraint>
+                        </constraintSpec>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <keywords xml:lang="en">
