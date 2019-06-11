@@ -1,0 +1,293 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.4 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{nyt}{nyt}
+    \entry{AlgeeHewittMcGurl2018}{misc}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=6a8e538dbe4eab62b20c4976cea58228}{Algee-Hewitt}{A\bibinithyphendelim H\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fd4edb561ac24dae71ba47d8b0ce2a05}{McGurl}{M\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=6a8e538dbe4eab62b20c4976cea58228}{Algee-Hewitt}{A\bibinithyphendelim H\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fd4edb561ac24dae71ba47d8b0ce2a05}{McGurl}{M\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{3c243708e2469c40c87cba0674e81c91}
+      \strng{fullhash}{3c243708e2469c40c87cba0674e81c91}
+      \field{sortinit}{A}
+      \field{sortinithash}{c8a29dea43e9d2645817723335a4dbe8}
+      \field{labelyear}{2018}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Between canon and corpus: six perspectives on 20th-century novels}
+      \field{booktitle}{Stanford Literary Lab: Pamphlets ; 8}
+      \field{issn}{2164-1757}
+      \field{number}{8}
+      \field{series}{Pamphlets of the Stanford Literary Lab}
+      \field{title}{Between canon and corpus: six perspectives on 20th-century novels}
+      \field{year}{2018}
+      \field{pages}{29}
+      \verb{url}
+      \verb https://litlab.stanford.edu/LiteraryLabPamphlet8.pdf
+      \endverb
+    \endentry
+    \entry{Biber1993}{article}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=f646ef9768ee4e31e9af07e57bf14842}{Biber}{B\bibinitperiod}{Douglas}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f646ef9768ee4e31e9af07e57bf14842}{Biber}{B\bibinitperiod}{Douglas}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{f646ef9768ee4e31e9af07e57bf14842}
+      \strng{fullhash}{f646ef9768ee4e31e9af07e57bf14842}
+      \field{sortinit}{B}
+      \field{sortinithash}{1a3a21dbed09540af12d49a0b14f4751}
+      \field{labelyear}{1993}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{Representativeness in Corpus Design}}
+      \field{issue}{8}
+      \field{journaltitle}{{Literary and Linguistic Computing}}
+      \field{pagination}{page}
+      \field{title}{{Representativeness in Corpus Design}}
+      \field{year}{1993}
+      \field{pages}{243\bibrangedash 257}
+    \endentry
+    \entry{BodeKatherine2018AWoF}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=626133c5d671181928dbc6cfa93a2590}{Bode}{B\bibinitperiod}{Katherine}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=626133c5d671181928dbc6cfa93a2590}{Bode}{B\bibinitperiod}{Katherine}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{publisher}{1}{%
+        {University of Michigan Press}%
+      }
+      \strng{namehash}{626133c5d671181928dbc6cfa93a2590}
+      \strng{fullhash}{626133c5d671181928dbc6cfa93a2590}
+      \field{sortinit}{B}
+      \field{sortinithash}{1a3a21dbed09540af12d49a0b14f4751}
+      \field{labelyear}{2018}
+      \field{datelabelsource}{}
+      \field{labeltitle}{A World of Fiction - Digital Collections and the Future of Literary History}
+      \field{abstract}{During the 19th century, throughout the Anglophone world, most fiction was first published in periodicals. In Australia, newspapers were not only the main source of periodical fiction, but the main source of fiction in general. Because of their importance as fiction publishers, and because they provided Australian readers with access to stories from around the world-from Britain, America and Australia, as well as Austria, Canada, France, Germany, New Zealand, Russia, South Africa, and beyond-Australian newspapers represent an important record of the transnational circulation and reception of fiction in this period. Investigating almost 10,000 works of fiction in the world's largest collection of mass-digitized historical newspapers (the National Library of Australia's Trove database), A World of Fiction reconceptualizes how fiction traveled globally, and was received and understood locally, in the 19th century. Katherine Bode's innovative approach to the new digital collections that are transforming research in the humanities are a model of how digital tools can transform how we understand digital collections and interpret literatures in the past.}
+      \field{booktitle}{A World of Fiction}
+      \field{isbn}{9780472130856}
+      \field{title}{A World of Fiction - Digital Collections and the Future of Literary History}
+      \field{year}{2018}
+      \keyw{Language & Literature Technology History}
+    \endentry
+    \entry{BurnardRahtz2004}{online}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=277f5a773aab2b436af3bd283c432331}{Burnard}{B\bibinitperiod}{Lou}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=22439d3b66be376e3f27270d8d300c89}{Rahtz}{R\bibinitperiod}{Sebastian}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=277f5a773aab2b436af3bd283c432331}{Burnard}{B\bibinitperiod}{Lou}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=22439d3b66be376e3f27270d8d300c89}{Rahtz}{R\bibinitperiod}{Sebastian}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Montr{é}al}%
+      }
+      \list{organization}{1}{%
+        {Extreme Markup Languages}%
+      }
+      \strng{namehash}{2148d32911b0dcc049520434b217e401}
+      \strng{fullhash}{2148d32911b0dcc049520434b217e401}
+      \field{sortinit}{B}
+      \field{sortinithash}{1a3a21dbed09540af12d49a0b14f4751}
+      \field{labelyear}{2004}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{RelaxNG with Son of ODD}}
+      \field{abstract}{The Text Encoding Initiative is using literate schema design, as instantiated in the completely redesigned ODD system, for production of the next edition of the TEI Guidelines. Key new aspects of the system include support of multiple schema languages; facilities for interoperability with other ontologies and vocabularies; and facilities for user customization and modularization (including a new web-based tool for schema generation). In this paper, we try to explain the rationale behind the ongoing revision of the TEI Guidelines and how the new tools developed to go with it are taking shape. We describe the mechanics by which the new ODD system delivers its promised goals of customizability and extensibility, while still being a good citizen of a highly inter-operable digital world.}
+      \field{title}{{RelaxNG with Son of ODD}}
+      \field{urlday}{08}
+      \field{urlmonth}{01}
+      \field{urlyear}{2017}
+      \field{year}{2004}
+      \verb{file}
+      \verb BurnardRahtz2012-RelaxNG:C\:\\Users\\Flöckchen\\Documents\\Citavi 4\\Dissertation\\CitaviFiles\\BurnardRahtz2012-RelaxNG.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://www.tei-c.org/cms/Talks/extreme2004/paper.html
+      \endverb
+    \endentry
+    \entry{Herrmann2011}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=05900bf38a52d04df56c134f5be11703}{Herrmann}{H\bibinitperiod}{Leonhard}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=05900bf38a52d04df56c134f5be11703}{Herrmann}{H\bibinitperiod}{Leonhard}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=c8cd953356420cd9ee3213957c218b67}{Matthias\bibnamedelima Beilein}{M\bibinitperiod\bibinitdelim B\bibinitperiod}{Claudia\bibnamedelima Stockinger}{C\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=ddfb6ff62ff5d8012123090fd52ac4ba}{Winko}{W\bibinitperiod}{Simone}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {De Gruyter}%
+      }
+      \strng{namehash}{05900bf38a52d04df56c134f5be11703}
+      \strng{fullhash}{05900bf38a52d04df56c134f5be11703}
+      \field{sortinit}{H}
+      \field{sortinithash}{95b2cb08933fe649b7e9f8beee2132b4}
+      \field{labelyear}{2011}
+      \field{datelabelsource}{}
+      \field{labeltitle}{System? Kanon? Epoche?}
+      \field{booktitle}{Kanon, Wertung und Vermittlung. Literatur in der Wissensgesellschaft}
+      \field{title}{System? Kanon? Epoche?}
+      \field{year}{2011}
+      \field{pages}{59\bibrangedash 75}
+    \endentry
+    \entry{Hunston2008}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=b6a4bda5a992896b2bd549abd6fee980}{Hunston}{H\bibinitperiod}{Susan}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b6a4bda5a992896b2bd549abd6fee980}{Hunston}{H\bibinitperiod}{Susan}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=3b008b2d2c0d62dcce61c169f87af6bb}{L{ü}deling}{L\bibinitperiod}{Anke}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=a868bb2e04b8b1fbba34811dd20aed66}{Kyt{ö}}{K\bibinitperiod}{Merja}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {De Gruyter}%
+      }
+      \strng{namehash}{b6a4bda5a992896b2bd549abd6fee980}
+      \strng{fullhash}{b6a4bda5a992896b2bd549abd6fee980}
+      \field{sortinit}{H}
+      \field{sortinithash}{95b2cb08933fe649b7e9f8beee2132b4}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{Collection strategies and design decisions}}
+      \field{bookpagination}{page}
+      \field{booksubtitle}{An International Handbook}
+      \field{booktitle}{{Corpus Linguistics}}
+      \field{number}{1}
+      \field{title}{{Collection strategies and design decisions}}
+      \field{volume}{1}
+      \field{volumes}{2}
+      \field{year}{2008}
+      \field{pages}{154\bibrangedash 168}
+      \verb{file}
+      \verb Hunston 2008 - Collection strategies and design decisions:C\:\\Users\\Flöckchen\\Documents\\Citavi 4\\Dissertation\\CitaviFiles\\Hunston 2008 - Collection strategies and design decisions.pdf:pdf
+      \endverb
+    \endentry
+    \entry{IFLA2009}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=00e3b94cecc5ecb56866adf922f8b5c5}{IFLA}{I\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=00e3b94cecc5ecb56866adf922f8b5c5}{IFLA}{I\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{00e3b94cecc5ecb56866adf922f8b5c5}
+      \strng{fullhash}{00e3b94cecc5ecb56866adf922f8b5c5}
+      \field{sortinit}{I}
+      \field{sortinithash}{b2e302e575c74beffcc96ef7059003aa}
+      \field{labelyear}{2009}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{Functional Requirements for Bibliographic Records}}
+      \field{series}{{Technical Report}}
+      \field{title}{{Functional Requirements for Bibliographic Records}}
+      \field{urlday}{23}
+      \field{urlmonth}{12}
+      \field{urlyear}{2016}
+      \field{year}{2009}
+      \verb{url}
+      \verb http://www.ifla.org/publications/functional-requirements-for-bibliographic-records
+      \endverb
+    \endentry
+    \entry{LudelingRitzStedeEtAl2016}{incollection}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=69306f0c253bf228338588fdb90c004b}{L{ü}{deli}ng}{L\bibinitperiod}{Anke}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=143c0baf1080a1a712a229d88ccd5117}{Ritz}{R\bibinitperiod}{Julia}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7f828a6fcd93a49e661f891a647db505}{Stede}{S\bibinitperiod}{Manfred}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d79625218ebb3eb43e78f4a763ac518c}{Zeldes}{Z\bibinitperiod}{Amir}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=69306f0c253bf228338588fdb90c004b}{L{ü}{deli}ng}{L\bibinitperiod}{Anke}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=143c0baf1080a1a712a229d88ccd5117}{Ritz}{R\bibinitperiod}{Julia}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7f828a6fcd93a49e661f891a647db505}{Stede}{S\bibinitperiod}{Manfred}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d79625218ebb3eb43e78f4a763ac518c}{Zeldes}{Z\bibinitperiod}{Amir}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=756022d00cc13c98a5eec99746951b03}{Fery}{F\bibinitperiod}{Caroline}{C\bibinitperiod}{}{}{}{}}%
+        {{hash=2453987c3017f979cd670b02dc8b6149}{Ishihara}{I\bibinitperiod}{Shinishiro}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{cf578cdd74f031a89bcaa2b278388d7a}
+      \strng{fullhash}{2deab3e6b1c0348fbad515e1a35f4491}
+      \field{sortinit}{L}
+      \field{sortinithash}{c41a2b5886eeae464e75d1a9df4cd13e}
+      \field{labelyear}{2016}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{Corpus Linguistics}}
+      \field{bookpagination}{page}
+      \field{booktitle}{{OUP Handbook of Information Structure}}
+      \field{title}{{Corpus Linguistics}}
+      \field{year}{2016}
+      \field{pages}{599\bibrangedash 617}
+      \verb{file}
+      \verb LudelingRitzStedeEtAl2016-Corpus:C\:\\Users\\Flöckchen\\Documents\\Citavi 4\\Dissertation\\CitaviFiles\\LudelingRitzStedeEtAl2016-Corpus.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Winko1996}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=ddfb6ff62ff5d8012123090fd52ac4ba}{Winko}{W\bibinitperiod}{Simone}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=ddfb6ff62ff5d8012123090fd52ac4ba}{Winko}{W\bibinitperiod}{Simone}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=2123a644d0590bca4896847d6d3132ed}{Arnold}{A\bibinitperiod}{Heinz\bibnamedelima Ludwig}{H\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{hash=42a51d261569cd17ad44f67ebf836b57}{Detering}{D\bibinitperiod}{Heinrich}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Deutscher Taschenbuch Verlag}%
+      }
+      \strng{namehash}{ddfb6ff62ff5d8012123090fd52ac4ba}
+      \strng{fullhash}{ddfb6ff62ff5d8012123090fd52ac4ba}
+      \field{sortinit}{W}
+      \field{sortinithash}{e560dae78a85a037c3da51c61467873a}
+      \field{labelyear}{1996}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Literarische Wertung und Kanonbildung}
+      \field{booktitle}{Grundzüge der Literaturwissenschaft}
+      \field{title}{Literarische Wertung und Kanonbildung}
+      \field{year}{1996}
+      \field{pages}{585\bibrangedash 600}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
