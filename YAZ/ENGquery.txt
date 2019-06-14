@@ -1,0 +1,364 @@
+find @and @attr 1=1003 disraeli @attr 1=4 "sybil"   
+set_marcdump ENG18450.usmarc
+show all
+
+find @and @attr 1=1003 dickens @attr 1=4 "dombey son "   
+set_marcdump ENG18481.usmarc
+show all
+
+find @and @attr 1=1003 trollope @attr 1=4 " warden "   
+set_marcdump ENG18551.usmarc
+show all
+
+find @and @attr 1=1003 eliot @attr 1=4 "silas marner "   
+set_marcdump ENG18610.usmarc
+show all
+
+find @and @attr 1=1003 wood @attr 1=4 "east lynne "   
+set_marcdump ENG18611.usmarc
+show all
+
+find @and @attr 1=1003 braddon @attr 1=4 "lady audley's secret "   
+set_marcdump ENG18621.usmarc
+show all
+
+find @and @attr 1=1003 craik @attr 1=4 "mistress maid "   
+set_marcdump ENG18630.usmarc
+show all
+
+find @and @attr 1=1003 ouida @attr 1=4 "two little wooden shoes "   
+set_marcdump ENG18740.usmarc
+show all
+
+find @and @attr 1=1003 trollope @attr 1=4 " way we live now "   
+set_marcdump ENG18750.usmarc
+show all
+
+find @and @attr 1=1003 disraeli @attr 1=4 "endymion "   
+set_marcdump ENG18800.usmarc
+show all
+
+find @and @attr 1=1003 nesbit @attr 1=4 " prophet's mantle "   
+set_marcdump ENG18890.usmarc
+show all
+
+find @and @attr 1=1003 doyle @attr 1=4 " sign of four "   
+set_marcdump ENG18900.usmarc
+show all
+
+find @and @attr 1=1003 griffiths @attr 1=4 " rome express "   
+set_marcdump ENG18961.usmarc
+show all
+
+find @and @attr 1=1003 conrad @attr 1=4 "lord jim "   
+set_marcdump ENG19000.usmarc
+show all
+
+find @and @attr 1=1003 wells @attr 1=4 "tono-bungay "   
+set_marcdump ENG19090.usmarc
+show all
+
+find @and @attr 1=1003 conrad @attr 1=4 "under western eyes "   
+set_marcdump ENG19110.usmarc
+show all
+
+find @and @attr 1=1003 buchan @attr 1=4 " thirty-nine steps "   
+set_marcdump ENG19150.usmarc
+show all
+
+find @and @attr 1=1003 conrad @attr 1=4 "victory "   
+set_marcdump ENG19151.usmarc
+show all
+
+find @and @attr 1=1003 lawrence @attr 1=4 "women in love "   
+set_marcdump ENG19200.usmarc
+show all
+
+find @and @attr 1=1003 trollope @attr 1=4 "michael armstrong "   
+set_marcdump ENG18400.usmarc
+show all
+
+find @and @attr 1=1003 sinclair @attr 1=4 "modern flirtations "   
+set_marcdump ENG18410.usmarc
+show all
+
+find @and @attr 1=1003 tupper @attr 1=4 " twins "   
+set_marcdump ENG18411.usmarc
+show all
+
+find @and @attr 1=1003 disraeli @attr 1=4 "coningsby"   
+set_marcdump ENG18440.usmarc
+show all
+
+find @and @attr 1=1003 reynolds @attr 1=4 " mysteries "   
+set_marcdump ENG18460.usmarc
+show all
+
+find @and @attr 1=1003 aguilar @attr 1=4 "home influence "   
+set_marcdump ENG18470.usmarc
+show all
+
+find @and @attr 1=1003 brontë @attr 1=4 "wuthering heights "   
+set_marcdump ENG18471.usmarc
+show all
+
+find @and @attr 1=1003 thackeray @attr 1=4 "vanity fair "   
+set_marcdump ENG18480.usmarc
+show all
+
+find @and @attr 1=1003 gaskell @attr 1=4 "mary barton"   
+set_marcdump ENG18482.usmarc
+show all
+
+find @and @attr 1=1003 skene @attr 1=4 " inheritance of evil "   
+set_marcdump ENG18490.usmarc
+show all
+
+find @and @attr 1=1003 ainsworth @attr 1=4 "auriol"   
+set_marcdump ENG18500.usmarc
+show all
+
+find @and @attr 1=1003 kingsley @attr 1=4 "yeast "   
+set_marcdump ENG18510.usmarc
+show all
+
+find @attr 1=4 "the tutor’s ward "   
+set_marcdump ENG18511.usmarc
+show all
+
+find @and @attr 1=1003 dickens @attr 1=4 "bleak house "   
+set_marcdump ENG18530.usmarc
+show all
+
+find @and @attr 1=1003 yonge @attr 1=4 " heir of redclyffe "   
+set_marcdump ENG18531.usmarc
+show all
+
+find @and @attr 1=1003 dickens @attr 1=4 "hard times"   
+set_marcdump ENG18540.usmarc
+show all
+
+find @and @attr 1=1003 yonge @attr 1=4 " daisy chain "   
+set_marcdump ENG18560.usmarc
+show all
+
+find @and @attr 1=1003 clive @attr 1=4 "why paul ferroll killed his wife "   
+set_marcdump ENG18600.usmarc
+show all
+
+find @and @attr 1=1003 wood @attr 1=4 " channings "   
+set_marcdump ENG18620.usmarc
+show all
+
+find @and @attr 1=1003 blackmore @attr 1=4 "clara vaughan "   
+set_marcdump ENG18640.usmarc
+show all
+
+find @and @attr 1=1003 trollope @attr 1=4 "can you forgive her"   
+set_marcdump ENG18650.usmarc
+show all
+
+find @and @attr 1=1003 yonge @attr 1=4 " clever woman  "   
+set_marcdump ENG18651.usmarc
+show all
+
+find @and @attr 1=1003 carroll @attr 1=4 "alice's adventures in wonderland "   
+set_marcdump ENG18652.usmarc
+show all
+
+find @and @attr 1=1003 eliot @attr 1=4 "felix holt  radical "   
+set_marcdump ENG18660.usmarc
+show all
+
+find @and @attr 1=1003 ouida @attr 1=4 "under two flags "   
+set_marcdump ENG18670.usmarc
+show all
+
+find @and @attr 1=1003 oliphant @attr 1=4 "piccadilly "   
+set_marcdump ENG18700.usmarc
+show all
+
+find @and @attr 1=1003 craig @attr 1=4 "esther west a story "   
+set_marcdump ENG18701.usmarc
+show all
+
+find @and @attr 1=1003 linton @attr 1=4 "joshua davidson "   
+set_marcdump ENG18720.usmarc
+show all
+
+find @and @attr 1=1003 eliot @attr 1=4 "middlemarch "   
+set_marcdump ENG18721.usmarc
+show all
+
+find @and @attr 1=1003 lytton @attr 1=4 " parisians "   
+set_marcdump ENG18741.usmarc
+show all
+
+find @and @attr 1=1003 collins @attr 1=4 " two destinies"   
+set_marcdump ENG18760.usmarc
+show all
+
+find @and @attr 1=1003 mallock @attr 1=4 " new republic "   
+set_marcdump ENG18770.usmarc
+show all
+
+find @and @attr 1=1003 anstey @attr 1=4 "vice versa  "   
+set_marcdump ENG18820.usmarc
+show all
+
+find @and @attr 1=1003 broughton @attr 1=4 "belinda  "   
+set_marcdump ENG18830.usmarc
+show all
+
+find @and @attr 1=1003 ouida @attr 1=4 "folle-farine "   
+set_marcdump ENG18831.usmarc
+show all
+
+find @and @attr 1=1003 lee @attr 1=4 "miss brown "   
+set_marcdump ENG18840.usmarc
+show all
+
+find @and @attr 1=1003 hardy @attr 1=4 " mayor of casterbridge"   
+set_marcdump ENG18860.usmarc
+show all
+
+find @and @attr 1=1003 barry @attr 1=4 " new antigone "   
+set_marcdump ENG18870.usmarc
+show all
+
+find @and @attr 1=1003 broughton @attr 1=4 "red as a rose is she "   
+set_marcdump ENG18871.usmarc
+show all
+
+find @and @attr 1=1003 lyall @attr 1=4 " autobiography slander "   
+set_marcdump ENG18872.usmarc
+show all
+
+find @and @attr 1=1003 broughton @attr 1=4 "alas! a novel "   
+set_marcdump ENG18901.usmarc
+show all
+
+find @and @attr 1=1003 yeats @attr 1=4 "john sherman dhoya "   
+set_marcdump ENG18910.usmarc
+show all
+
+find @and @attr 1=1003 gissing @attr 1=4 "new grub street  "   
+set_marcdump ENG18911.usmarc
+show all
+
+find @and @attr 1=1003 grossmith @attr 1=4 " diary of a nobody "   
+set_marcdump ENG18920.usmarc
+show all
+
+find @and @attr 1=1003 benson @attr 1=4 "dodo  "   
+set_marcdump ENG18930.usmarc
+show all
+
+find @and @attr 1=1003 dixon @attr 1=4 " story of a modern woman "   
+set_marcdump ENG18940.usmarc
+show all
+
+find @and @attr 1=1003 caird @attr 1=4 " daughters of danaus "   
+set_marcdump ENG18941.usmarc
+show all
+
+find @and @attr 1=1003 cross @attr 1=4 " woman who didn't "   
+set_marcdump ENG18950.usmarc
+show all
+
+find @and @attr 1=1003 ward @attr 1=4 " bessie costrell "   
+set_marcdump ENG18951.usmarc
+show all
+
+find @and @attr 1=1003 wells @attr 1=4 " time machine "   
+set_marcdump ENG18952.usmarc
+show all
+
+find @and @attr 1=1003 malet @attr 1=4 " carissima "   
+set_marcdump ENG18960.usmarc
+show all
+
+find @and @attr 1=1003 phillpotts @attr 1=4 "lying prophets "   
+set_marcdump ENG18970.usmarc
+show all
+
+find @and @attr 1=1003 cholmondeley @attr 1=4 "devotee  "   
+set_marcdump ENG18971.usmarc
+show all
+
+find @and @attr 1=1003 baring-gould @attr 1=4 "domitia "   
+set_marcdump ENG18980.usmarc
+show all
+
+find @and @attr 1=1003 glyn @attr 1=4 " visits of elizabeth "   
+set_marcdump ENG19001.usmarc
+show all
+
+find @and @attr 1=1003 fowler @attr 1=4 " farringdons "   
+set_marcdump ENG19004.usmarc
+show all
+
+find @and @attr 1=1003 steel @attr 1=4 " hosts of  lord "   
+set_marcdump ENG19005.usmarc
+show all
+
+find @and @attr 1=1003 mason @attr 1=4 "clementina "   
+set_marcdump ENG19010.usmarc
+show all
+
+find @and @attr 1=1003 shiel @attr 1=4 " purple cloud "   
+set_marcdump ENG19011.usmarc
+show all
+
+find @and @attr 1=1003 nesbit @attr 1=4 " red house "   
+set_marcdump ENG19020.usmarc
+show all
+
+find @and @attr 1=1003 nesbit @attr 1=4 " amulet "   
+set_marcdump ENG19060.usmarc
+show all
+
+find @and @attr 1=1003 machen @attr 1=4 " hill of dreams "   
+set_marcdump ENG19070.usmarc
+show all
+
+find @and @attr 1=1003 silberrad @attr 1=4 " good comrade "   
+set_marcdump ENG19071.usmarc
+show all
+
+find @and @attr 1=1003 chesterton @attr 1=4 " man who was thursday "   
+set_marcdump ENG19080.usmarc
+show all
+
+find @and @attr 1=1003 ward @attr 1=4 "daphne  "   
+set_marcdump ENG19091.usmarc
+show all
+
+find @and @attr 1=1003 forster @attr 1=4 "howards end "   
+set_marcdump ENG19100.usmarc
+show all
+
+find @and @attr 1=1003 hornung @attr 1=4 " camera fiend "   
+set_marcdump ENG19111.usmarc
+show all
+
+find @and @attr 1=1003 wells @attr 1=4 "marriage "   
+set_marcdump ENG19120.usmarc
+show all
+
+find @and @attr 1=1003 lewis @attr 1=4 "tarr "   
+set_marcdump ENG19180.usmarc
+show all
+
+find @and @attr 1=1003 benson @attr 1=4 "living alone "   
+set_marcdump ENG19190.usmarc
+show all
+
+find @and @attr 1=1003 hamilton @attr 1=4 "william englishman "   
+set_marcdump ENG19191.usmarc
+show all
+
+find @and @attr 1=1003 arlen @attr 1=4 " london venture "   
+set_marcdump ENG19201.usmarc
+show all
+

@@ -1,0 +1,22 @@
+print "<rex>";
+while (<>) {
+s/&/&amp;/g;
+if (/LDR/) {
+     $rex+=1;
+     $Record .= "<\/F$fld>" if ($fld);
+     print "<record n=\"$rex\">$Record<\/record>\n" if ($Record);
+     $Record="";
+     $fld="";
+} elsif ( /^(\d+)( ...)_(.)(.*)/) {
+  $Record .= "<\/F$fld>" if ($fld);
+  $fld=$1;
+  $subfld=$3;
+  $val=$4;
+  $Record .= "<F$fld><f$subfld>$val<\/f$subfld>" ; 
+} elsif (/\s+_(.)(.*)/) {
+  $subfld=$1;
+  $val=$2;
+  $Record .= "<f$subfld>$val<\/f$subfld>" ; 
+}
+}
+print "<\/rex>";

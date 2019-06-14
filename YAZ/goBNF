@@ -1,0 +1,1 @@
+yaz-client -u Z3950/Z3950_BNF z3950.bnf.fr:2211/TOUT-UTF8
