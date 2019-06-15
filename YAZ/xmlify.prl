@@ -1,6 +1,7 @@
 print "<rex>";
 while (<>) {
 s/&/&amp;/g;
+s/</&lt;/g;
 if (/LDR/) {
      $rex+=1;
      $Record .= "<\/F$fld>" if ($fld);
