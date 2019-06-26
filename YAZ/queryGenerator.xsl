@@ -13,7 +13,7 @@
     <xsl:template match="t:titleStmt">
         
 <xsl:text>find @and @attr 1=1003 </xsl:text>
-        <xsl:value-of select="substring-before(t:sanitize(t:author),' ')"/>
+        <xsl:value-of select="substring-before(t:sanitize(t:author),',')"/>
         <xsl:text> @attr 1=4 "</xsl:text>        
         <xsl:value-of select="replace(replace(replace(substring-before(t:sanitize(t:title),'eltec'),'the ',' '),' or ',' '),' and ',' ')"/>
         <xsl:text>"   
@@ -29,7 +29,7 @@ show all
     <xsl:function name="t:sanitize" as="xs:string" >
         <xsl:param name="text"/>
         <xsl:variable name="alltext">
-            <xsl:value-of select="($text)" separator=" "/>
+            <xsl:value-of select="$text" separator=" "/>
         </xsl:variable>
         <xsl:variable name="result"
             select="
@@ -37,7 +37,7 @@ show all
         <xsl:value-of
             select="
             if (string-length($result) &gt; 127) then
-            concat(substring($result, 1, 127), '...')
+            substring($result, 1, 127)
             else
             $result"
         />

@@ -1,3 +1,5 @@
+format unimarc
+
 find @and @attr 1=1003 ponson @attr 1=4 "la baronne trépassée "   
 set_marcdump FR0010.usmarc
 show all
@@ -86,11 +88,11 @@ find @and @attr 1=1003 verne @attr 1=4 "le secret de wilhelm storitz "
 set_marcdump FR0175.usmarc
 show all
 
-find @and @attr 1=1003 aimard @attr 1=4 "les bandits d'arizona "   
+find @and @attr 1=1003 aimard @attr 1=4 "bandits arizona "   
 set_marcdump FR0301.usmarc
 show all
 
-find @and @attr 1=1003 aimard @attr 1=4 "les trappeurs d'arkansas "   
+find @and @attr 1=1003 aimard @attr 1=4 "trappeurs arkansas "   
 set_marcdump FR0302.usmarc
 show all
 
@@ -122,7 +124,7 @@ find @and @attr 1=1003 fleuriot @attr 1=4 "alberte "
 set_marcdump FR0350.usmarc
 show all
 
-find @and @attr 1=1003 gouraud @attr 1=4 "quand je serai grande "   
+find @and @attr 1=1003 gouraud @attr 1=4 "quand je serai grande"   
 set_marcdump FR0369.usmarc
 show all
 
