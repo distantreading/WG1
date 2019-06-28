@@ -684,14 +684,17 @@
                     <!-- require one of each profileDesc component in a specific order -->
                     <elementSpec ident="profileDesc" mode="change">
                         <content>
-                            <classRef key="model.profileDescPart" expand="sequenceOptional"/>
+         <!--                   <classRef key="model.profileDescPart" expand="sequenceOptional"/>
+        -->                 <elementRef key="langUsage" minOccurs="1" maxOccurs="1"/>
+                            <elementRef key="textClass" minOccurs="0" maxOccurs="1"/>
+                            <elementRef key="textDesc" minOccurs="1" maxOccurs="1"/>
                         </content>
-                        <constraintSpec ident="textDescMandatory" scheme="schematron">
+               <!--         <constraintSpec ident="textDescMandatory" scheme="schematron">
                             <constraint><sch:assert test="child::tei:textDesc">You
                                 must provide a text description</sch:assert></constraint>
                         </constraintSpec>
                         
-                        <exemplum>
+           -->             <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <profileDesc>
                                     <langUsage>
@@ -845,21 +848,31 @@
                                 word count. Other indications of size are optional.</p>
                         </remarks>
                     </elementSpec>
+                    <dataSpec ident="teidata.numeric" mode="change">
+                        <content>
+                                  <dataRef name="token"
+                                    restriction="([\d]+)"/>
+                         </content>
+           <remarks><p>We restrict all numeric data to positive 
+               integer values only</p></remarks>             
+                    </dataSpec>
                     <elementSpec ident="measure" mode="change">
-                    <!--    <classes mode="change">
+                 <!--  <classes mode="change">
                             <memberOf key="att.measurement" mode="delete"/>
-                        </classes>
-                   -->     <content>
+                        </classes>-->
+                    <content>
                             <dataRef key="teidata.numeric"/>
                         </content>
-                        <attList>
+                        <attList >
                             <attDef ident="type" mode="delete"/>
 
                             <attDef ident="unit" usage="req" mode="change">
+                                <desc>specifies the units used for this measurement
+                               </desc>
                                 <datatype>
                                     <dataRef key="teidata.enumerated"/>
                                 </datatype>
-                                <valList type="closed">
+                                <valList type="closed" mode="replace">
                                     <valItem ident="pages">
                                         <desc>number of pages in the whole of the source text</desc>
                                     </valItem>
@@ -940,7 +953,7 @@
                                 <datatype>
                                     <dataRef key="teidata.enumerated"/>
                                 </datatype>
-                                <valList type="semi">
+                                <valList type="semi" mode="replace">
                                     <valItem ident="titlepage">
                                         <desc>title page transcription (level 1 only)</desc>
                                     </valItem>

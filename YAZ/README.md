@@ -22,10 +22,13 @@ need the following software installed:
 
 - saxon
 - yaz-client
+- marcdump
 
 YAZ (which is presumably an acronym for Yet Another Z3950-client) is
 readily available for Windows, Linux, or Mac. On Linux you can install
-it by typing e.g. `sudo apt install yaz`
+it by typing e.g. `sudo apt install yaz` 
+
+marcdump is a perl module available in the usual way from CPAN
 
 Here's how to run the scripts:
  
@@ -109,16 +112,19 @@ these in a separate folder, called `FRArecords` in the example above.
 Once upon a time, the Library of Congress invented an XML format
 for MARC called marcxml. This was not the world's greatest success. Other
 XML formats (notably MODES) seem more popular in the library
-community. So I have invented my own breathtakingly naive XML
-format to make it possible to process the MARC dump records
-into something anyone can understand with tools that I understand. The
-script is in Perl and it's called `xmlify.prl` : you could
+community. There is a freely available utility called `marcdump` which does
+the heavy lifting in converting from MARC (a binary format)
+to something more easily processed. So I have invented my 
+own breathtakingly naive XML
+format and a teeny perl script called `xmlify.prl` to process the marcdump format
+into something anyone can understand with tools 
+that I understand. You could
 run it over all the records generated in the previous step
 like this
 
 ```
-for f in FRArecords/*.usmarc; do echo $f \
-   perl xmlify.prl $f > $.xml; done
+for f in *.usmarc; do echo $f; \
+   marcdump $f | perl xmlify.prl > $f.xml; done
 ```
 
 ### Extract useful data from the XMLified records    

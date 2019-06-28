@@ -12,9 +12,9 @@
     
     <xsl:template match="t:titleStmt">
         
-<xsl:text>find @and @attr 1=1003 </xsl:text>
-        <xsl:value-of select="substring-before(t:sanitize(t:author),',')"/>
-        <xsl:text> @attr 1=4 "</xsl:text>        
+<xsl:text>find @and @attr 1=1003 "</xsl:text>
+        <xsl:value-of select="t:sanitize(substring-before(t:author,','))"/>
+        <xsl:text>" @attr 1=4 "</xsl:text>        
         <xsl:value-of select="replace(replace(replace(substring-before(t:sanitize(t:title),'eltec'),'the ',' '),' or ',' '),' and ',' ')"/>
         <xsl:text>"   
 set_marcdump </xsl:text> <xsl:value-of select="ancestor::t:TEI/@xml:id"/>
