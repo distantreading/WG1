@@ -20,6 +20,7 @@
          <textClass>
             <keywords>
                <term>distant reading</term>
+               <term>ELTeC</term>               
                <term>ODD chaining</term>
                <term>corpus design</term>
                <term>the european novel</term>
@@ -28,7 +29,8 @@
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change when="2019-04-24" who="#LB42">Finalised abstract</change>
+         <change when="2019-07-01" who="#LB42">started first draft</change>
+         <change when="2019-04-24" who="#LB42">finalised abstract</change>
       </revisionDesc>
    </teiHeader>
    <text>

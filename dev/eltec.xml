@@ -187,11 +187,14 @@
                     <!-- simplify publicationStmt  -->
                     <elementSpec ident="publicationStmt" mode="change">
                         <content>
+                            <alternate>
+                                <elementRef key="p"/>
+                                <sequence>
                             <elementRef key="distributor"/>
                             <elementRef key="date"/>
                             <elementRef key="availability"/>
                             <elementRef key="ref" maxOccurs="unbounded" minOccurs="0"/>
-                        </content>
+                        </sequence></alternate></content>
                         <exemplum>
                             <!-- CO added ex -->
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
