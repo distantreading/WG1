@@ -168,19 +168,20 @@
          <div type="abstract">
             <head>Abstract</head>
             <p>Any expansion of the TEI beyond its traditional user-base involves a recognition of
-               differing views about "what text really is", and hence a rethinking of some aspects
-               of TEI praxis. We report on work carried out in the context of the COST Action
-               CA16204 "Distant Reading", in particular on the TEI-conformant schemas developed for
-               one of the Action's principal deliverables: the European Literary Text Collection
-               (ELTeC). </p>
+               differing answers to the traditional question <q>What is text, really?</q>
+                  [<ref>deRose et al 2002</ref>; <ref>Caton 2013</ref>; <ref>van Zundert and
+                  Andrews, 2017</ref>], and hence a rethinking of some aspects of TEI praxis. We
+               report on work carried out in the context of the COST Action CA16204 "Distant
+               Reading", in particular on the TEI-conformant schemas developed for one of the
+               Action's principal deliverables: the European Literary Text Collection (ELTeC). </p>
             <p>The ELTeC will contain comparable corpora for each of a dozen European languages,
                each being a balanced sample of 100 novels from the 19th century, together with
                metadata situating them in their contexts of production and of reception. We hope
                that it will become a reliable basis for comparative work in data-driven textual
-               analytics, enabling researchers to go beyond a simple "bag of words" approach, while
-               respecting views of "what text really is" currently dominant in such fields as
-               statistically-derived authorship attribution, topic modelling, character network
-               analysis, and stylistic analysis in general. </p>
+               analytics, enabling researchers to go beyond a simple <soCalled>bag of
+                  words</soCalled> approach, while respecting views of "what text really is"
+               currently dominant in such fields as statistically-derived authorship attribution,
+               topic modelling, character network analysis, and stylistic analysis in general. </p>
             <p>The focus of the ELTeC encoding scheme is not to represent texts in all their
                original complexity, nor to duplicate the work of scholarly editors. Instead, we aim
                to facilitate a richer and better-informed distant reading than a transcription of
@@ -213,25 +214,29 @@
             <p>Comity is a term from theology or political studies, where it is used to describe the
                formal recognition by different religions, nation states, or cultures that other such
                entities have as much right to existence as themselves. In applied linguistics, the
-               term has also been used by such writers as Widdowson or Aston seeking to demonstrate
-               how the establishment of comity can facilitate successful inter-cultural
-               communication, even in the absence of linguistic competence. We appropriate the term
-               here in this latter sense, as a means of re-asserting the inter-disciplinary roots of
-               the TEI. </p>
-            <p>Recent histories of the TEI (e.g. Gavin, 2019) have a tendency to under-emphasize the
-               multiplicity of disciplines gathered at its birth, preferring to focus on those
-               disciplines which can be plausibly framed as prefiguring our current configuration of
-               the "digital humanities" in some way. Yet the Poughkeepsie conference and the process
-               of designing the Guidelines which followed alike were kickstarted by input from
-               corpus linguists and computer scientists as well as traditional philologically-minded
-               editors and source-driven historians. The TEI belongs to a multiplicity of research
-               communities, dating as it does from a period when computational linguists and
-               traditional philogists alike were beginning to wake up to the implications of the
-               advent of massive amounts of digital text for their disciplines. The steering
-               committee which oversaw its development and the TEI editors alike conscientiously
-               attempted to ensure that the Guidelines should reflect a view of text which was
-               generally shared and generic, rather than specific to any discipline or to any
-               particular usage model. </p>
+               term has also been used by such writers as Widdowson or Aston [<ref>Aston 1988</ref>]
+               seeking to demonstrate how the establishment of comity can facilitate successful
+               inter-cultural communication, even in the absence of linguistic competence<note
+                  place="foot"><q>Those participating in conversational encounters have to have a
+                     care for the preservation of good relations by promoting the other's positive
+                     self-image, by avoiding offence, encouraging comity, and so on. The negotiation
+                     of meaning is also a negotiation of social relations.</q>
+                  <ref>Widdowson, 1990, p. 110</ref></note>. We appropriate the term here in this
+               latter sense, as a means of re-asserting the inter-disciplinary roots of the TEI. </p>
+            <p>Recent histories of the TEI (e.g. <ref>Gavin, 2019</ref>) have a tendency to
+               under-emphasize the multiplicity of disciplines gathered at its birth, preferring to
+               focus on those disciplines which can be plausibly framed as prefiguring our current
+               configuration of the "<soCalled>digital humanities</soCalled>" in some way. Yet the
+               Poughkeepsie conference and the process of designing the Guidelines which followed
+               alike were kickstarted by input from corpus linguists and computer scientists as well
+               as traditional philologically-minded editors and source-driven historians. The TEI
+               belongs to a multiplicity of research communities, dating as it does from a period
+               when computational linguists and traditional philogists alike were beginning to wake
+               up to the implications of the advent of massive amounts of digital text for their
+               disciplines. The steering committee which oversaw its development and the TEI editors
+               alike conscientiously attempted to ensure that the Guidelines should reflect a view
+               of text which was generally shared and generic, rather than specific to any
+               discipline or to any particular usage model. </p>
             <p>The TEI's radical proposition that there was such a thing as a single abstract model
                of textual components, which might usefully be considered independently of its
                expression in a particular source or output, or its use in any particular discipline,
@@ -245,12 +250,12 @@
                group of experts, but also in its chief outputs: a set of encoding Guidelines which
                while supporting specialization did not require any particular specialisation to
                prevail. </p>
-            <p>Old orthodoxies do not die easily, and it is interesting to hear some of the same arguments
-               played out in different language in the different context of today's DH theorizers.
-               But in our present paper, we simply want to explore the extent to which the TEI's
-               model of text can be adapted to conform to the model of text characterising such
-               fields as stylometry, stylistics, textual analytics, or (to use the current term)
-               "distant reading". We hope also to explore the claim that by so doing we may
+            <p>Old orthodoxies do not die easily, and it is interesting to hear some of the same
+               arguments played out in different language in the different context of today's DH
+               theorizers. But in our present paper, we simply want to explore the extent to which
+               the TEI's model of text can be adapted to conform to the model of text characterising
+               such fields as stylometry, stylistics, textual analytics, or (to use the current
+               term) "distant reading". We hope also to explore the claim that by so doing we may
                facilitate the enrichment of that model, and thus facilitate more sophisticated
                research into textual phenomena across different corpora. </p>
          </div>
@@ -594,11 +599,13 @@
                manner as possible, we have chosen to repurpose the little-used <gi>textDesc</gi>
                element, originally provided by the TEI as a wrapper for a set of so-called
                situational parameters proposed by corpus linguists as a way of objectively
-               characterizing linguistic production [ref]. In our case, we replace the TEI's
-               vocabulary for these parameters with a vocabulary representing our four criteria,
-               expressed as new non-TEI elements in the ELTeC namespace. These elements
+               characterizing linguistic production <note>The <gi>textDesc</gi> element is discussed
+                  in section 15.2.1 of the TEI <title>Guidelines</title>
+                  (<ref>https://tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD</ref>). </note>[ref]. In our case, we replace the TEI's
+               suggested vocabulary for these parameters with a vocabulary representing our four
+               criteria, expressed as new non-TEI elements in the ELTeC namespace. These elements
                   (<gi>eltec:sex</gi>, <gi>eltec:size</gi>, <gi>eltec:canonicity</gi>, and
-                  <gi>eltec:timeSlot</gi>) are required by the ELTeC schema and have an attribute
+                  <gi>eltec:timeSlot</gi>) are required by the ELTeC schemas and have an attribute
                   <att>key</att> which supplies a coded value for the criterion concerned taken from
                a predefined closed list. So, for example, a long (over 100k words) novel by a female
                author first published between 1881 and 1900, but only infrequently reprinted
@@ -612,8 +619,27 @@
                   </textDesc>
                </egXML>
             </p>
-            <p>The intention is to use this information can be used to select subcorpora from the
-               collection as a whole, and </p>
+            <p>When complete, this information can be used to select subcorpora from the collection
+               as a whole, thus permitting more delicate cross-linguistic comparisons: for example
+               between the lexis of male and female writers, or between the stylistic features
+               typically associated with long or short texts. During the construction phase, these
+               coded values make it easy to monitor the emerging composition of the corpus, for
+               example to detect whether or not the ratio of male to female writers is consistent
+               across different time periods, by means of a simple visualisation like the following <figure>
+                  <graphic url="https://distantreading.github.io/ELTeC/eng/mosaic.png"/>
+               </figure></p>
+            <p>This <soCalled>mosaic plot</soCalled> for the current state of the English corpus (90
+               texts) shows that there are roughly as many female (blue) as male (pink) writers
+               across the board, but that there is a preponderance of long texts and of titles
+               published in time slot 3. </p>
+            <p><figure>
+                  <graphic url="https://distantreading.github.io/ELTeC/hun/mosaic.png"/>
+               </figure></p>
+            <p>For comparison, the same plot for the current state of the Hungarian corpus (100
+               texts) shows significantly fewer female writers, and a higher proportion of short
+               texts. Whether these variations are an artefact of the sampling process or represent
+               differences in the underlying population is precisely one of the research questions
+               which our approach requires us to address. </p>
          </div>
          <div>
             <head>Chaining ODDs</head>
@@ -658,28 +684,40 @@
          <div>
             <head>State of play and future work</head>
             <p>The ELTeC is still very much a work in progress, and hence we cannot report with any
-               confidence that our design goals have been achieved. The first Zenodo release of the
-               corpus is due in September 2019, and we expect several future releases before the
-               target of 100 texts per language is achieved. As noted above, testing of the proposed
-               ELTeC level 2 encoding is needed, and may necessitate some changes in the existing
-               markup scheme.
-               <!--  • develop a composition plot including reprint criteria
-               • first corpus release in Sep 2019
-               • Creating novels in level 2 in cooperation with WG2
-               Improve documentation on GitHub and Distant reading homepage--></p>
+               plausibility that our design goals have been achieved. An initial release of the
+               collection is due on Zenodo in September 2019, and we expect several future releases
+               before the target of 100 texts per language is reached. The corpora are also
+               maintained as a collection of publicly visible Github repositories, as noted
+               above.</p>
+            <p>As well as continuing to expand the collection, and continuing to fine-tune its
+               composition, we hope to improve the consistency and reliability of the metadata
+               associated with each text, as far as possible automatically. For example, we have
+               developed two complementary methods of automatically counting the number of reprints
+               for each title, one by screen scraping from WorldCat, and the other by processing
+               data from a Z39.50 server where this is available. These methods should provide more
+               reliable data than has hitherto been available for the
+                  <soCalled>canonicity</soCalled> criterion mentioned above.</p>
+            <p>The main area of future work we anticipate is however in the testing of the proposed
+               ELTeC level 2 encoding and an evaluation of its usefulness. At a technical level,
+               this may necessitate some changes in the existing markup scheme, but of perhaps more
+               interest is the extent to which its availability will exemplify the virtue of
+               striving for comity amongst the many ways in which TEI XML markup can be applied.
+            </p>
          </div>
       </body>
       <back>
          <listBibl>
             <head>References</head>
-            <bibl>
-               <author>Gavin, Michael</author>
-            </bibl>
+            <bibl>Gavin, Michael (2019) “How to think about EEBO”. In: Textual Cultures Vol 11, no
+               1-2 (2017). https://doi.org/10.14434/textual.v11i1-2.23570 </bibl>
+            <bibl>Aston, Guy (1988) Learning Comity: An Approach to the Description and Pedagogy of
+               Interactional Speech (Testi e discorsi: Strumenti linguistici e letterari, vol 9)
+               Bologna: CLUEB</bibl>
+            <bibl>Widdowson, Henry (1990) Aspects of Language Teaching. OUP. </bibl>
             <bibl>Caton, Paul (2013). “On the term text in digital humanities”. In: Literary and
                Linguistic Computing 28.2, pp. 209–220. </bibl>
             <bibl> De Rose, Steven J., David G. Durand, Elli Mylonas, and Allen H. Renear (2002).
-               “What is Text, Really?” In: Journal of Computing in Higher Education I(2), pp. 3–26.
-               (Visited on 04/05/2016). </bibl>
+               “What is Text, Really?” In: Journal of Computing in Higher Education I(2), pp. 3–26. </bibl>
             <bibl>van Zundert, Joris and Tara L. Andrews (2017). “Qu’est-ce qu’un texte numérique? A
                new rationale for the digital representation of text”. In: Digital Scholarship in the
                Humanities 32, pp. 78–88. </bibl>
