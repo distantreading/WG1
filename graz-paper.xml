@@ -168,13 +168,13 @@
          <div type="abstract">
             <head>Abstract</head>
             <p>Any expansion of the TEI beyond its traditional user-base involves a recognition of
-               differing answers to the traditional question <q>What is text, really?</q>
-                  [<ref target="#B06">deRose et al 2002</ref>; <ref target="#B05">Caton 2013</ref>;
-               <ref target="#B10">van Zundert and
-                  Andrews, 2017</ref>], and hence a rethinking of some aspects of TEI praxis. We
-               report on work carried out in the context of the COST Action CA16204 "Distant
-               Reading", in particular on the TEI-conformant schemas developed for one of the
-               Action's principal deliverables: the European Literary Text Collection (ELTeC). </p>
+               differing answers to the traditional question <q>What is text, really?</q> [<ref
+                  target="#B06">deRose et al 2002</ref>; <ref target="#B05">Caton 2013</ref>; <ref
+                  target="#B10">van Zundert and Andrews, 2017</ref>], and hence a rethinking of some
+               aspects of TEI praxis. We report on work carried out in the context of the COST
+               Action CA16204 "Distant Reading", in particular on the TEI-conformant schemas
+               developed for one of the Action's principal deliverables: the European Literary Text
+               Collection (ELTeC). </p>
             <p>The ELTeC will contain comparable corpora for each of a dozen European languages,
                each being a balanced sample of 100 novels from the 19th century, together with
                metadata situating them in their contexts of production and of reception. We hope
@@ -215,29 +215,30 @@
             <p>Comity is a term from theology or political studies, where it is used to describe the
                formal recognition by different religions, nation states, or cultures that other such
                entities have as much right to existence as themselves. In applied linguistics, the
-               term has also been used by such writers as Widdowson or Aston [<ref target="#B01">Aston 1988</ref>]
-               seeking to demonstrate how the establishment of comity can facilitate successful
-               inter-cultural communication, even in the absence of linguistic competence<note
-                  place="foot"><q>Those participating in conversational encounters have to have a
-                     care for the preservation of good relations by promoting the other's positive
-                     self-image, by avoiding offence, encouraging comity, and so on. The negotiation
-                     of meaning is also a negotiation of social relations.</q>
-                  <ref target="#B11">Widdowson, 1990, p. 110</ref></note>. We appropriate the term here in this
-               latter sense, as a means of re-asserting the inter-disciplinary roots of the TEI. </p>
-            <p>Recent histories of the TEI (e.g. <ref target="#B00">Gavin, 2019</ref>) have a tendency to
-               under-emphasize the multiplicity of disciplines gathered at its birth, preferring to
-               focus on those disciplines which can be plausibly framed as prefiguring our current
-               configuration of the <soCalled>digital humanities</soCalled> in some way. Yet the
-               Poughkeepsie conference and the process of designing the Guidelines which followed
-               alike were kickstarted by input from corpus linguists and computer scientists as well
-               as traditional philologically-minded editors and source-driven historians. The TEI
-               belongs to a multiplicity of research communities, dating as it does from a period
-               when computational linguists and traditional philogists alike were beginning to wake
-               up to the implications of the advent of massive amounts of digital text for their
-               disciplines. The steering committee which oversaw its development and the TEI editors
-               alike conscientiously attempted to ensure that the Guidelines should reflect a view
-               of text which was generally shared and generic, rather than specific to any
-               discipline or to any particular usage model. </p>
+               term has also been used by such writers as Widdowson or Aston [<ref target="#B01"
+                  >Aston 1988</ref>] seeking to demonstrate how the establishment of comity can
+               facilitate successful inter-cultural communication, even in the absence of linguistic
+                  competence<note place="foot"><q>Those participating in conversational encounters
+                     have to have a care for the preservation of good relations by promoting the
+                     other's positive self-image, by avoiding offence, encouraging comity, and so
+                     on. The negotiation of meaning is also a negotiation of social relations.</q>
+                  <ref target="#B11">Widdowson, 1990, p. 110</ref></note>. We appropriate the term
+               here in this latter sense, as a means of re-asserting the inter-disciplinary roots of
+               the TEI. </p>
+            <p>Recent histories of the TEI (e.g. <ref target="#B00">Gavin, 2019</ref>) have a
+               tendency to under-emphasize the multiplicity of disciplines gathered at its birth,
+               preferring to focus on those disciplines which can be plausibly framed as prefiguring
+               our current configuration of the <soCalled>digital humanities</soCalled> in some way.
+               Yet the Poughkeepsie conference and the process of designing the Guidelines which
+               followed alike were kickstarted by input from corpus linguists and computer
+               scientists as well as traditional philologically-minded editors and source-driven
+               historians. The TEI belongs to a multiplicity of research communities, dating as it
+               does from a period when computational linguists and traditional philogists alike were
+               beginning to wake up to the implications of the advent of massive amounts of digital
+               text for their disciplines. The steering committee which oversaw its development and
+               the TEI editors alike conscientiously attempted to ensure that the Guidelines should
+               reflect a view of text which was generally shared and generic, rather than specific
+               to any discipline or to any particular usage model. </p>
             <p>The TEI's radical proposition that there was such a thing as a single abstract model
                of textual components, which might usefully be considered independently of its
                expression in a particular source or output, or its use in any particular discipline,
@@ -419,25 +420,34 @@
                ELTeC have been encoded at level 1 rather than level0, and also the speed with which
                the collection is growing.</p>
             <!-- example? -->
-            <p>ELTeC level 1 is intended to facilitate a richer and better-informed distant reading
-               than a transcription of verbal content alone would permit. ELTeC level 2 is intended
-               to provide a consistent and TEI-conformant way of representing the results of that
-               distant reading. Enrichment of each lexical token to indicate such features as its
-               morpho-syntactic category (POS) or lemma, and identification of tokens which refer to
-               named entities are both well within the scope of existing text processing techniques:
-               the challenge is that the input and the output formats typically used by such tools
+            <p>ELTeC level 1 is intended to facilitate a richer and better-informed reading of a
+               text than a transcription of its verbal content alone would permit. ELTeC level 2 is
+               partly intended to provide a consistent and TEI-conformant way of representing the
+               results of such readings, but its primary goal is to represent in a standard way
+               additional layers of annotation of particular importance to distant reading
+               applications such as stylometry or topic modelling. Enrichment of each lexical token
+               to indicate its morpho-syntactic category (POS) or its lemma, and identification of
+               tokens which refer to named entities are both well within the scope of existing text
+               processing techniques, and are also routinely used in distant reading applications.
+               The challenge is that the input and the output formats typically used by such tools
                are rarely XML-based, and seem superficially to have a model of text quite different
                from that of the <soCalled>ordered hierarchy of content objects</soCalled> in terms
                of which the TEI community traditionally operates. For many in the distant reading
-               community, a text is composed of a sequence of tokens, mostly corresponding with
-               orthographically-defined words, though there is some support for the notion of
-               "muli-word" tokens. Each token has a number of properties, which might include such
-               attributes as its part of speech, its lemma, or its position in the sequence of
-               tokens making up the document, but also information which in an XML model would be
-               properties of some higher level construct such as its status as dialogue, quoted
-               matter, emphasis, etc. If a community is defined by its tools, we should also note
-               that the distant reading community has not fully embraced the notion of XML as
-               anything other than a rather verbose archival format. </p>
+               community (it seems) a text is little more than a sequence of tokens, mostly
+               corresponding with orthographically-defined words, though there is some variability
+               in the principles underlying the process of tokenisation, for example in the
+               modelling of clitics, compound forms, etc. Each token has a number of properties,
+               which might include such attributes as its part of speech, its lemma, or its position
+               in the sequence of tokens making up the document. Information which in an XML model
+               would be properties of some higher level construct such as its status as dialogue,
+               quoted matter, emphasis, etc. is occasionally considered as well, but only as an
+               additional property of the token.</p>
+            <p> If a community is defined by its tools, it would appear therefore that the distant
+               reading community has not fully embraced the notion of XML as anything other than a
+               rather verbose archival format. However, communities are not defined solely by their
+               tools : by seeking a way of reconciling these differing views of what text really is
+               in a spirit of comity we hope to demonstrate that there are advantages both for the
+               distant reader or stylometrician and for the literary analyst or textual editor. </p>
             <p>At ELTeC level2, all existing elements are retained, but two new elements <gi>s</gi>
                and <gi>w</gi> are introduced, to support two levels of segmentation. Individual
                tokens are marked using the <gi>w</gi> element, and decorated with one or more of the
@@ -542,27 +552,27 @@
                terms. It is hoped that the ELTeC will provide data for an empirical discussion of
                such terms, feeding into the work of WG3 on literary theory and terminology. </p>
             <p> But we cannot make that claim without any data about the population we are claiming
-               to represent -- which is hard to come by for most if not all languages. We know about
-               the novels which we know about, which tend to be the ones that national libraries or
-               equivalent cultural heritage institutions have chosen to preserve, which publishers
-               over time have been able to sell, and which lecturers in English have chosen to
-               teach. More ephemeral titles may have been collected (for example by a copyright
-               library); but equally well may have been discarded or even suppressed as unworthy of
-               inclusion in the national patrimony. Titles and authors alike can go in and out of
-               fashion. But how can we express opinions about changes in the nature of the published
-               novel if the sample on which we base those opinions is wildly different in
-               composition from the actual population? If our data leads us to assert that novels in
-               a given language are never written by women, or are never of fewer than 100,000 words
-               is this simply because no female authors happen to have been preserved, or because
-               short novels were routinely discarded from the collection? Or, on the other hand,
-               does this actually indicate something fundamental, a characteristic of the population
-               we are investigating? This matters particularly for ELTeC, one of the goals of which
-               is precisely to facilitate cross-language comparisons.</p>
+               to represent -- which is hard to come by for many of the languages concerned. We know
+               about the novels which we know about, which tend to be the ones that national
+               libraries or equivalent cultural heritage institutions have chosen to preserve, which
+               publishers over time have been able to sell, and which lecturers in literary studies
+               have chosen to teach. More ephemeral titles may have been collected (for example by a
+               copyright library); but equally well may have been discarded or even suppressed as
+               unworthy of inclusion in the national patrimony. Titles and authors alike can go in
+               and out of fashion. But how can we express opinions about changes in the nature of
+               the published novel if the sample on which we base those opinions is wildly different
+               in composition from the actual population? If our data leads us to assert that novels
+               in a given language are never written by women, or are never of fewer than 100,000
+               words is this simply because no female authors happen to have been preserved, or
+               because short novels were routinely discarded from the collection? Or, on the other
+               hand, does this actually indicate something fundamental, a characteristic of the
+               population we are investigating? This matters particularly for ELTeC, one of the
+               goals of which is precisely to facilitate cross-language comparisons.</p>
             <p>This problem of representativeness is of course one which every corpus linguist has
                to face, and discussions of its implications are easy to find in the literature <note
-                  place="foot">Some notable examples include <ref target="#B02">Biber, 1993</ref>; 
-                  <ref target="#B12">Lüdeling,
-                     2011</ref>; <ref target="#B03">Bode, 2018</ref></note></p>
+                  place="foot">Some notable examples include <ref target="#B02">Biber, 1993</ref>;
+                     <ref target="#B12">Lüdeling, 2011</ref>; <ref target="#B03">Bode,
+                  2018</ref></note></p>
             <p>Our approach is to sidestep the impossibility of representing an unknown (and
                sometimes unknowable) population by attempting instead to represent the range of
                variation possible in the values for some specific categories applicable to all
@@ -573,9 +583,10 @@
                roughly a third of the titles are short, a third are long, and a third are medium
                will represent the variation possible for this category. If we apply this principle
                uniformly across all our corpora, we can reliably investigate (for example) cross
-               language variation in some other observable phenomenon (say fondness for embedded
-               sentences) with respect to length. But note that we have made absolutely no claim
-               about whether novel length in the underlying population is also divided in this way. </p>
+               language variation in some other observable phenomenon (say a fondness for
+               syntactically complex sentences) with respect to length. But note that we have made
+               absolutely no claim about whether novel length in the underlying population is also
+               divided in this way. </p>
             <p>The decade in which a novel first appears in book form is a similarly objectively
                characteristic, which in principle we can determine for every member of the
                population. We can also classify every title according to the actual sex of their
@@ -583,22 +594,23 @@
                classify a title in terms of its "staying power" or persistence by looking at the
                number of times it has been reprinted since its first appearance. We suggest that
                texts which have been frequently reprinted over a long period may reasonably be
-               considered "canonical" in some sense of that vexed term. The goal of our corpus
-               balancing exercise is to ensure more or less equal time for each possible value for
-               each of these four categories -- size, decade, authorSex, and canonicity. </p>
+               considered <soCalled>canonical</soCalled> in some sense of that vexed term. The goal
+               of our corpus balancing exercise is to ensure more or less equal time for each
+               possible value for each of these four categories -- size, decade, authorSex, and
+               canonicity. </p>
             <p>Ideally, each corpus should have equivalent numbers not just for each value, but for
                each combination of values: so, for example, looking at the third of all titles which
                are characterised as "short", there should be roughly equal numbers for each decade
                of first appearance, roughly equal numbers by male and female authors, and so on.
                This may however be a council of perfection. It is already apparent that for some
-               languages, it is vcery difficult to find any texts at all within some time periods,
+               languages, it is very difficult to find any texts at all within some time periods,
                or by female authors. Similarly, our definition of "short" (10-50 thousand words),
                "medium" (50-100 thousand words) and "long" (over 100 thousand words) though
                objective and easy to validate, assumes that there will be enough novels of a given
                length in the underlying population for us to extract a balanced sample; but in some
                languages it may be that the distribution of lengths across the population is
                entirely different. We cannot tell whether (for example) the absence of any "long"
-               novels at all in Czech, Serbian or Norwegian is characteristic of those languages, or
+               novels at all in Czech, Serbian, or Norwegian is characteristic of those languages, or
                an artefact of the selection process so far. Another difficulty is that our corpus
                design deliberately seeks to include some forgotten or marginal works along with
                well-known canonical texts: this is relatively easy for traditions such as English,
@@ -612,15 +624,16 @@
                element, originally provided by the TEI as a wrapper for a set of so-called
                situational parameters proposed by corpus linguists as a way of objectively
                characterizing linguistic production <note>The <gi>textDesc</gi> element is discussed
-                  in section 15.2.1 of the TEI <title>Guidelines</title>
-                  (<ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD">https://tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD</ref>).
+                  in section 15.2.1 of the TEI <title>Guidelines</title> (<ref
+                     target="https://tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD"
+                     >https://tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD</ref>).
                </note> In our case, we replace the TEI's suggested vocabulary for these parameters
                with a vocabulary representing our four criteria, expressed as new non-TEI elements
                in the ELTeC namespace. These elements (<gi>eltec:sex</gi>, <gi>eltec:size</gi>,
                   <gi>eltec:canonicity</gi>, and <gi>eltec:timeSlot</gi>) are required by the ELTeC
                schemas and have an attribute <att>key</att> which supplies a coded value for the
                criterion concerned taken from a predefined closed list. So, for example, a long
-               (over 100k words) novel by a female author first published between 1881 and 1900, but
+               (over 100,000 words) novel by a female author first published between 1881 and 1900 but
                only infrequently reprinted thereafter might have a text description like the
                following:
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -656,31 +669,32 @@
          </div>
          <div>
             <head>Chaining ODDs</head>
-            <p>The TEI's ODD (One Document Does it all) system [<ref target="#B09">Rahtz and Burnard, 2013</ref>]
-               is widely used as a means of customizing the TEI and documenting the customization in
-               a standard way . When only a single ODD customization is used across a project, there
-               is a natural tendency to produce broadly permissive schemas, to allow for the
-               inevitable variation of requirements when material of different kinds are to be
-               processed in an integrated collection. But this prevents the encoder from taking full
-               advantage of the ability of an XML schema to check that particular documents conform
-               to predefined rules, unless they are willing greatly to increase the complexity of
-               the workflow. A better approach, pioneered by the Deutsche Textarchiv <ref
-                  target="#B08"> [Haaf and
-                  Thomas 2016]</ref>, has been the use of a technique known as ODD chaining
-                  <ref target="#B04">[Burnard 2016]</ref> Here, a project first defines a base ODD which selects
-               all the TEI components considered to be useful anywhere and then uses this as the
-               basis for smaller, more constraining, ODDs which select from the base only the
-               components (or other rules) specific to a subset of the project's documentary
-               universe. For example, an archive may have identified both a common set of metadata
-               it wishes to document across all of its holdings and also different metadata
-               requirements for print and manuscript sources. Simply defining two different ODDs,
-               one for print and one for manuscript, when many other components apply to either kind
-               of source opens the door to redundant duplication and the risk of inconsistency. The
-               ODD chaining approach requires definition of a base ODD which contains the union of
-               the components needed for these two different ODDs, constructed as an appropriate
-               selection from the full range of TEI componentsen. The ODDs for print and manuscript
-               are then defined as further specialisations or customizations of the base, ensuring
-               thereby that the common components are used in a consistent manner. </p>
+            <p>The TEI's ODD (One Document Does it all) system [<ref target="#B09">Rahtz and
+                  Burnard, 2013</ref>] is widely used as a means of customizing the TEI and
+               documenting the customization in a standard way. When only a single ODD
+               customization is used across a project, there is a natural tendency to produce
+               broadly permissive schemas, to allow for the inevitable variation of requirements
+               when material of different kinds are to be processed in an integrated collection. But
+               this prevents the encoder from taking full advantage of the ability of an XML schema
+               to check that particular documents conform to predefined rules, unless they are
+               willing greatly to increase the complexity of their workflow. A better approach,
+               pioneered by the Deutsche Textarchiv <ref target="#B08"> [Haaf and Thomas
+               2016]</ref>, has been the use of a technique known as ODD chaining <ref target="#B04"
+                  >[Burnard 2016]</ref> Here, a project first defines a base ODD which selects all
+               the TEI components considered to be useful anywhere and then uses this as the basis
+               for smaller, more constraining, ODDs which select from the base only the components
+               (or other rules) specific to a subset of the project's documentary universe. For
+               example, an archive may have identified a common set of metadata it wishes to
+               document across all of its holdings and also specialised metadata requirements for
+               print and manuscript sources. Simply defining two different ODDs, one for print and
+               one for manuscript when many other components apply to either kind of source opens
+               the door to redundant duplication and the risk of inconsistency. The ODD chaining
+               approach requires definition of a base ODD which contains the union of the components
+               needed for these two different ODDs, constructed as an appropriate selection from the
+               full range of TEI components. The ODDs for print and manuscript are then defined as
+               further specialisations or customizations of the base, ensuring thereby that the
+               common components are used in a consistent manner, but preserving comity by allowing
+               equal status to the two specialised schemas. </p>
             <p>In the ELTeC project, we begin by defining an ODD which selects from the TEI all the
                components used by any ELTeC schema at any level. This ODD also contains
                documentation and specifies usage constraints applicable across every schema. This
@@ -726,38 +740,46 @@
       <back>
          <listBibl>
             <head>References</head>
-            <bibl xml:id="B01">Aston, Guy (1988) Learning Comity: An Approach to the Description and Pedagogy of
-               Interactional Speech (Testi e discorsi: Strumenti linguistici e letterari, vol 9)
-               Bologna: CLUEB</bibl>
-            <bibl xml:id="B02">Biber, Douglas (1993). “Representativeness in Corpus Design”. In: Literary and
-               Linguistic Computing (8), pp. 243–257.</bibl>
-            <bibl xml:id="B03">Bode, Katherine (2018). A World of Fiction - Digital Collections and the Future of
-               Literary History. eng. University of Michigan Press. </bibl>
-            <bibl xml:id="B04">Burnard, Lou (2016) ODD Chaining for Beginners. Available from
-               http://teic.github.io/PDF/howtoChain.pdf</bibl>
-            <bibl xml:id="B04">Burnard, Lou “What is TEI Conformance, and why should you care?”. In: Journal of
-               the Text Encoding Initiative, Issue 12.
-               <ref target="https://journals.openedition.org/jtei/1777">https://journals.openedition.org/jtei/1777</ref></bibl>
-            <bibl xml:id="B05">Caton, Paul (2013). “On the term text in digital humanities”. In: Literary and
-               Linguistic Computing 28.2, pp. 209–220. </bibl>
-            <bibl xml:id="B06"> De Rose, Steven J., David G. Durand, Elli Mylonas, and Allen H. Renear (2002).
-               “What is Text, Really?” In: Journal of Computing in Higher Education I(2), pp. 3–26. </bibl>
-            <bibl xml:id="B07">Gavin, Michael (2019) “How to think about EEBO”. In: Textual Cultures Vol 11, no
-               1-2 (2017). https://doi.org/10.14434/textual.v11i1-2.23570 </bibl>
-            <bibl xml:id="B08">Haaf, Susanne and Christian Thomas (2016) "Enabling the Encoding of Manuscripts
-               within the DTABf: Extension and Modularization of the Format" In: Journal of the Text
-               Encoding Initiative, Issue 10. https://journals.openedition.org/jtei/1650?lang=en </bibl>
-            <bibl xml:id="B09">Rahtz, Sebastian, and Lou Burnard (2013) “Reviewing the TEI ODD System”. In
-               Proceedings of the 2013 ACM Symposium on Document Engineering. DocEng ’13. ACM, 2013.
-                  <ref target="https://doi.acm.org/10.1145/2494266.2494321"
+            <bibl xml:id="B01">Aston, Guy (1988) Learning Comity: An Approach to the Description and
+               Pedagogy of Interactional Speech (Testi e discorsi: Strumenti linguistici e
+               letterari, vol 9) Bologna: CLUEB</bibl>
+            <bibl xml:id="B02">Biber, Douglas (1993). “Representativeness in Corpus Design”. In:
+               Literary and Linguistic Computing (8), pp. 243–257.</bibl>
+            <bibl xml:id="B03">Bode, Katherine (2018). A World of Fiction - Digital Collections and
+               the Future of Literary History. eng. University of Michigan Press. </bibl>
+            <bibl xml:id="B04">Burnard, Lou (2016) ODD Chaining for Beginners. Available from <ref
+                  target="http://teic.github.io/PDF/howtoChain.pdf"
+                  >http://teic.github.io/PDF/howtoChain.pdf</ref></bibl>
+            <bibl xml:id="B04">Burnard, Lou “What is TEI Conformance, and why should you care?”. In:
+               Journal of the Text Encoding Initiative, Issue 12. <ref
+                  target="https://journals.openedition.org/jtei/1777"
+                  >https://journals.openedition.org/jtei/1777</ref></bibl>
+            <bibl xml:id="B05">Caton, Paul (2013). “On the term text in digital humanities”. In:
+               Literary and Linguistic Computing 28.2, pp. 209–220. </bibl>
+            <bibl xml:id="B06"> De Rose, Steven J., David G. Durand, Elli Mylonas, and Allen H.
+               Renear (2002). “What is Text, Really?” In: Journal of Computing in Higher Education
+               I(2), pp. 3–26. </bibl>
+            <bibl xml:id="B07">Gavin, Michael (2019) “How to think about EEBO”. In: Textual Cultures
+               Vol 11, no 1-2 (2017). <ref target="https://doi.org/10.14434/textual.v11i1-2.23570"
+                  >https://doi.org/10.14434/textual.v11i1-2.23570</ref>
+            </bibl>
+            <bibl xml:id="B08">Haaf, Susanne and Christian Thomas (2016) "Enabling the Encoding of
+               Manuscripts within the DTABf: Extension and Modularization of the Format" In: Journal
+               of the Text Encoding Initiative, Issue 10. <ref
+                  target="https://journals.openedition.org/jtei/1650"
+                  >https://journals.openedition.org/jtei/1650</ref>
+            </bibl>
+            <bibl xml:id="B09">Rahtz, Sebastian, and Lou Burnard (2013) “Reviewing the TEI ODD
+               System”. In Proceedings of the 2013 ACM Symposium on Document Engineering. DocEng
+               ’13. ACM, 2013. <ref target="https://doi.acm.org/10.1145/2494266.2494321"
                   >http://doi.acm.org/10.1145/2494266.2494321</ref><!--;  <ptr target="https://ora.ox.ac.uk/objects/pubs:434097"/>--></bibl>
-            <bibl xml:id="B10">van Zundert, Joris and Tara L. Andrews (2017). “Qu’est-ce qu’un texte numérique? A
-               new rationale for the digital representation of text”. In: Digital Scholarship in the
-               Humanities 32, pp. 78–88. </bibl>
+            <bibl xml:id="B10">van Zundert, Joris and Tara L. Andrews (2017). “Qu’est-ce qu’un texte
+               numérique? A new rationale for the digital representation of text”. In: Digital
+               Scholarship in the Humanities 32, pp. 78–88. </bibl>
             <bibl xml:id="B11">Widdowson, Henry (1990) Aspects of Language Teaching. OUP. </bibl>
-            <bibl xml:id="B12">Lüdeling, Anke (2011). “Corpora in Linguistics. Sampling and Annotation”. In:
-               Going Digital. Evolutionary and Revolutionary Aspects of Digitization. Ed. by Karl
-               Grandin. Vol. 147. Nobel Symposium 147. New York:</bibl>
+            <bibl xml:id="B12">Lüdeling, Anke (2011). “Corpora in Linguistics. Sampling and
+               Annotation”. In: Going Digital. Evolutionary and Revolutionary Aspects of
+               Digitization. Ed. by Karl Grandin. Vol. 147. Nobel Symposium 147. New York:</bibl>
          </listBibl>
       </back>
    </text>
