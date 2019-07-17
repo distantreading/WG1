@@ -169,7 +169,8 @@
             <head>Abstract</head>
             <p>Any expansion of the TEI beyond its traditional user-base involves a recognition of
                differing answers to the traditional question <q>What is text, really?</q>
-                  [<ref>deRose et al 2002</ref>; <ref>Caton 2013</ref>; <ref>van Zundert and
+                  [<ref target="#B06">deRose et al 2002</ref>; <ref target="#B05">Caton 2013</ref>;
+               <ref target="#B10">van Zundert and
                   Andrews, 2017</ref>], and hence a rethinking of some aspects of TEI praxis. We
                report on work carried out in the context of the COST Action CA16204 "Distant
                Reading", in particular on the TEI-conformant schemas developed for one of the
@@ -214,19 +215,19 @@
             <p>Comity is a term from theology or political studies, where it is used to describe the
                formal recognition by different religions, nation states, or cultures that other such
                entities have as much right to existence as themselves. In applied linguistics, the
-               term has also been used by such writers as Widdowson or Aston [<ref>Aston 1988</ref>]
+               term has also been used by such writers as Widdowson or Aston [<ref target="#B01">Aston 1988</ref>]
                seeking to demonstrate how the establishment of comity can facilitate successful
                inter-cultural communication, even in the absence of linguistic competence<note
                   place="foot"><q>Those participating in conversational encounters have to have a
                      care for the preservation of good relations by promoting the other's positive
                      self-image, by avoiding offence, encouraging comity, and so on. The negotiation
                      of meaning is also a negotiation of social relations.</q>
-                  <ref>Widdowson, 1990, p. 110</ref></note>. We appropriate the term here in this
+                  <ref target="#B11">Widdowson, 1990, p. 110</ref></note>. We appropriate the term here in this
                latter sense, as a means of re-asserting the inter-disciplinary roots of the TEI. </p>
-            <p>Recent histories of the TEI (e.g. <ref>Gavin, 2019</ref>) have a tendency to
+            <p>Recent histories of the TEI (e.g. <ref target="#B00">Gavin, 2019</ref>) have a tendency to
                under-emphasize the multiplicity of disciplines gathered at its birth, preferring to
                focus on those disciplines which can be plausibly framed as prefiguring our current
-               configuration of the "<soCalled>digital humanities</soCalled>" in some way. Yet the
+               configuration of the <soCalled>digital humanities</soCalled> in some way. Yet the
                Poughkeepsie conference and the process of designing the Guidelines which followed
                alike were kickstarted by input from corpus linguists and computer scientists as well
                as traditional philologically-minded editors and source-driven historians. The TEI
@@ -339,7 +340,7 @@
                   conformance</soCalled> really guarantees is that the intended semantics of the
                markup used by the two projects should be recoverable by reference to a published
                standard, and are not entirely ad hoc or sui generis. (This may not seem much of an
-               advance, though it is: see further [<ref>Burnard 2019</ref>]). </p>
+               advance, though it is: see further [<ref target="#B04">Burnard 2019</ref>]). </p>
             <p>Following this "no surprises" principle, the simplest ELTeC schema (the
                   <soCalled>level zero </soCalled> schema) provides the bare minimum of tags needed
                to mark up the typical structure and content of a nineteenth century novel. All
@@ -559,8 +560,9 @@
                is precisely to facilitate cross-language comparisons.</p>
             <p>This problem of representativeness is of course one which every corpus linguist has
                to face, and discussions of its implications are easy to find in the literature <note
-                  place="foot">Some notable examples include <ref>Biber, 1993</ref>; <ref>Lüdeling,
-                     2011</ref>; <ref>Bode, 2018</ref></note></p>
+                  place="foot">Some notable examples include <ref target="#B02">Biber, 1993</ref>; 
+                  <ref target="#B12">Lüdeling,
+                     2011</ref>; <ref target="#B03">Bode, 2018</ref></note></p>
             <p>Our approach is to sidestep the impossibility of representing an unknown (and
                sometimes unknowable) population by attempting instead to represent the range of
                variation possible in the values for some specific categories applicable to all
@@ -611,7 +613,7 @@
                situational parameters proposed by corpus linguists as a way of objectively
                characterizing linguistic production <note>The <gi>textDesc</gi> element is discussed
                   in section 15.2.1 of the TEI <title>Guidelines</title>
-                     (<ref>https://tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD</ref>).
+                  (<ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD">https://tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD</ref>).
                </note> In our case, we replace the TEI's suggested vocabulary for these parameters
                with a vocabulary representing our four criteria, expressed as new non-TEI elements
                in the ELTeC namespace. These elements (<gi>eltec:sex</gi>, <gi>eltec:size</gi>,
@@ -654,7 +656,7 @@
          </div>
          <div>
             <head>Chaining ODDs</head>
-            <p>The TEI's ODD (One Document Does it all) system [<ref>Rahtz and Burnard, 2013</ref>]
+            <p>The TEI's ODD (One Document Does it all) system [<ref target="#B09">Rahtz and Burnard, 2013</ref>]
                is widely used as a means of customizing the TEI and documenting the customization in
                a standard way . When only a single ODD customization is used across a project, there
                is a natural tendency to produce broadly permissive schemas, to allow for the
@@ -662,9 +664,10 @@
                processed in an integrated collection. But this prevents the encoder from taking full
                advantage of the ability of an XML schema to check that particular documents conform
                to predefined rules, unless they are willing greatly to increase the complexity of
-               the workflow. A better approach, pioneered by the Deutsche Textarchiv <ref> [Haaf and
+               the workflow. A better approach, pioneered by the Deutsche Textarchiv <ref
+                  target="#B08"> [Haaf and
                   Thomas 2016]</ref>, has been the use of a technique known as ODD chaining
-                  <ref>[Burnard 2016]</ref> Here, a project first defines a base ODD which selects
+                  <ref target="#B04">[Burnard 2016]</ref> Here, a project first defines a base ODD which selects
                all the TEI components considered to be useful anywhere and then uses this as the
                basis for smaller, more constraining, ODDs which select from the base only the
                components (or other rules) specific to a subset of the project's documentary
@@ -723,36 +726,36 @@
       <back>
          <listBibl>
             <head>References</head>
-            <bibl>Aston, Guy (1988) Learning Comity: An Approach to the Description and Pedagogy of
+            <bibl xml:id="B01">Aston, Guy (1988) Learning Comity: An Approach to the Description and Pedagogy of
                Interactional Speech (Testi e discorsi: Strumenti linguistici e letterari, vol 9)
                Bologna: CLUEB</bibl>
-            <bibl>Biber, Douglas (1993). “Representativeness in Corpus Design”. In: Literary and
+            <bibl xml:id="B02">Biber, Douglas (1993). “Representativeness in Corpus Design”. In: Literary and
                Linguistic Computing (8), pp. 243–257.</bibl>
-            <bibl>Bode, Katherine (2018). A World of Fiction - Digital Collections and the Future of
+            <bibl xml:id="B03">Bode, Katherine (2018). A World of Fiction - Digital Collections and the Future of
                Literary History. eng. University of Michigan Press. </bibl>
-            <bibl>Burnard, Lou (2016) ODD Chaining for Beginners. Available from
+            <bibl xml:id="B04">Burnard, Lou (2016) ODD Chaining for Beginners. Available from
                http://teic.github.io/PDF/howtoChain.pdf</bibl>
-            <bibl>Burnard, Lou “What is TEI Conformance, and why should you care?”. In: Journal of
+            <bibl xml:id="B04">Burnard, Lou “What is TEI Conformance, and why should you care?”. In: Journal of
                the Text Encoding Initiative, Issue 12.
-               https://journals.openedition.org/jtei/1777</bibl>
-            <bibl>Caton, Paul (2013). “On the term text in digital humanities”. In: Literary and
+               <ref target="https://journals.openedition.org/jtei/1777">https://journals.openedition.org/jtei/1777</ref></bibl>
+            <bibl xml:id="B05">Caton, Paul (2013). “On the term text in digital humanities”. In: Literary and
                Linguistic Computing 28.2, pp. 209–220. </bibl>
-            <bibl> De Rose, Steven J., David G. Durand, Elli Mylonas, and Allen H. Renear (2002).
+            <bibl xml:id="B06"> De Rose, Steven J., David G. Durand, Elli Mylonas, and Allen H. Renear (2002).
                “What is Text, Really?” In: Journal of Computing in Higher Education I(2), pp. 3–26. </bibl>
-            <bibl>Gavin, Michael (2019) “How to think about EEBO”. In: Textual Cultures Vol 11, no
+            <bibl xml:id="B07">Gavin, Michael (2019) “How to think about EEBO”. In: Textual Cultures Vol 11, no
                1-2 (2017). https://doi.org/10.14434/textual.v11i1-2.23570 </bibl>
-            <bibl>Haaf, Susanne and Christian Thomas (2016) "Enabling the Encoding of Manuscripts
+            <bibl xml:id="B08">Haaf, Susanne and Christian Thomas (2016) "Enabling the Encoding of Manuscripts
                within the DTABf: Extension and Modularization of the Format" In: Journal of the Text
                Encoding Initiative, Issue 10. https://journals.openedition.org/jtei/1650?lang=en </bibl>
-            <bibl>Rahtz, Sebastian, and Lou Burnard (2013) “Reviewing the TEI ODD System”. In
+            <bibl xml:id="B09">Rahtz, Sebastian, and Lou Burnard (2013) “Reviewing the TEI ODD System”. In
                Proceedings of the 2013 ACM Symposium on Document Engineering. DocEng ’13. ACM, 2013.
-                  <ref target="http://doi.acm.org/10.1145/2494266.2494321"
+                  <ref target="https://doi.acm.org/10.1145/2494266.2494321"
                   >http://doi.acm.org/10.1145/2494266.2494321</ref><!--;  <ptr target="https://ora.ox.ac.uk/objects/pubs:434097"/>--></bibl>
-            <bibl>van Zundert, Joris and Tara L. Andrews (2017). “Qu’est-ce qu’un texte numérique? A
+            <bibl xml:id="B10">van Zundert, Joris and Tara L. Andrews (2017). “Qu’est-ce qu’un texte numérique? A
                new rationale for the digital representation of text”. In: Digital Scholarship in the
                Humanities 32, pp. 78–88. </bibl>
-            <bibl>Widdowson, Henry (1990) Aspects of Language Teaching. OUP. </bibl>
-            <bibl>Lüdeling, Anke (2011). “Corpora in Linguistics. Sampling and Annotation”. In:
+            <bibl xml:id="B11">Widdowson, Henry (1990) Aspects of Language Teaching. OUP. </bibl>
+            <bibl xml:id="B12">Lüdeling, Anke (2011). “Corpora in Linguistics. Sampling and Annotation”. In:
                Going Digital. Evolutionary and Revolutionary Aspects of Digitization. Ed. by Karl
                Grandin. Vol. 147. Nobel Symposium 147. New York:</bibl>
          </listBibl>
