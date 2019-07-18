@@ -9,7 +9,7 @@
             <author>Carolin Odebrecht</author>
          </titleStmt>
          <publicationStmt>
-            <p>Unpublished draft</p>
+            <p>Unpublished draft for presentation at TEI 2019 Conference</p>
          </publicationStmt>
          <sourceDesc>
             <p>Original source</p>
@@ -151,13 +151,13 @@
                <term>ELTeC</term>
                <term>ODD chaining</term>
                <term>corpus design</term>
-               <term>the european novel</term>
+               <term>the European novel</term>
                <term>literary studies</term>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change when="2019-07-15" who="#LB42">working through CO's comments</change>
+         <change when="2019-07-15" who="#LB42">working through CO and CS comments</change>
          <change when="2019-07-08" who="#LB42">circulated first draft to CO and CS</change>
          <change when="2019-07-01" who="#LB42">started first draft</change>
          <change when="2019-04-24" who="#LB42">finalised abstract</change>
@@ -169,7 +169,7 @@
             <head>Abstract</head>
             <p>Any expansion of the TEI beyond its traditional user-base involves a recognition of
                differing answers to the traditional question <q>What is text, really?</q> [<ref
-                  target="#B06">deRose et al 2002</ref>; <ref target="#B05">Caton 2013</ref>; <ref
+                  target="#B06">de Rose et al 2002</ref>; <ref target="#B05">Caton 2013</ref>; <ref
                   target="#B10">van Zundert and Andrews, 2017</ref>], and hence a rethinking of some
                aspects of TEI praxis. We report on work carried out in the context of the COST
                Action CA16204 "Distant Reading", in particular on the TEI-conformant schemas
@@ -200,7 +200,7 @@
                Director of Oxford University Computing Services, and was one of the original editors
                of the TEI. </p>
             <p>Christof Schöch is Professor of Digital Humanities at the University of Trier,
-               Germany, and Co-Director of the Trier Center for Digital Humanities (TCDH). He chairs
+               Germany, and Co-Director of the Trier Centre for Digital Humanities (TCDH). He chairs
                the COST Action "Distant Reading for European Literary History" (CA16204).
                <!--Find out
                more at http://www.christof-schoech.de/en . --></p>
@@ -233,7 +233,7 @@
                followed alike were kickstarted by input from corpus linguists and computer
                scientists as well as traditional philologically-minded editors and source-driven
                historians. The TEI belongs to a multiplicity of research communities, dating as it
-               does from a period when computational linguists and traditional philogists alike were
+               does from a period when computational linguists and traditional philologists alike were
                beginning to wake up to the implications of the advent of massive amounts of digital
                text for their disciplines. The steering committee which oversaw its development and
                the TEI editors alike conscientiously attempted to ensure that the Guidelines should
@@ -248,7 +248,7 @@
                properties alone; on the other hand, the view that a text is solely a linguistic
                phenomenon, comprising a bag of words, the statistical properties of which are
                adequate to describe it. But the TEI tried very hard to prefer comity over conflict,
-               not only in its organization, which brought together an extraordinarily heterogenous
+               not only in its organization, which brought together an extraordinarily heterogeneous
                group of experts, but also in its chief outputs: a set of encoding Guidelines which
                while supporting specialization did not require any particular specialisation to
                prevail. </p>
@@ -341,7 +341,7 @@
                project A will necessarily be marked up in the same way as the allegedly
                TEI-conformant deliverables from project B <note place="foot">A large-scale project
                   called MONK (Metadata Offer New Knowledge) demonstrated some of the technical
-                  consequences of this for integrated searching of TEI respources: see further
+                  consequences of this for integrated searching of TEI resources: see further
                   <ref target="http://monk.library.illinois.edu">http://monk.library.illinois.edu</ref></note>. On the contrary, all that <soCalled>TEI
                   conformance</soCalled> really guarantees is that the intended semantics of the
                markup used by the two projects should be recoverable by reference to a published
@@ -350,7 +350,7 @@
             <p>Following this No Surprises principle, the simplest ELTeC schema (the <soCalled>level
                   zero </soCalled> schema) provides the bare minimum of tags needed to mark up the
                typical structure and content of a nineteenth century novel. All preliminary matter
-               other than the titlepage and any authorial preface or introduction is discarded; the
+               other than the title-page and any authorial preface or introduction is discarded; the
                remainder is marked as a <gi>div</gi> of <att>type</att>
                <val>titlepage</val> or <val>liminal</val>, within a <gi>front</gi> element. Within
                the <gi>body</gi> of a text, the <gi>div</gi> element is also used to make explicit
@@ -623,7 +623,7 @@
                   target="http://distantreading.github.io/ELTeC/"
                   >https://distantreading.github.io/ELTeC/</ref>)</p>
             <p>To encode these balance criteria in the TEI Header in as direct and accessible a
-               manner as possible, we have chosen to repurpose the little-used <gi>textDesc</gi>
+               manner as possible, we have chosen to re-purpose the little-used <gi>textDesc</gi>
                element, originally provided by the TEI as a wrapper for a set of so-called
                situational parameters proposed by corpus linguists as a way of objectively
                characterizing linguistic production <note>The <gi>textDesc</gi> element is discussed
@@ -655,14 +655,14 @@
                coded values also make it easy to monitor the emerging composition of the corpus, for
                example to detect whether or not the ratio of male to female writers is consistent
                across different time periods, by means of a simple visualisation like the following <figure>
-                  <graphic url="https://distantreading.github.io/ELTeC/eng/mosaic.png"/>
+                  <graphic url="https://distantreading.github.io/ELTeC/eng/mosaic.jpg"/>
                </figure></p>
             <p>This <soCalled>mosaic plot</soCalled> for the current state of the English corpus (90
                texts) shows that there are roughly as many female (blue) as male (pink) writers
                across the board, but that there is a preponderance of long texts and of titles
                published in time slot 3. </p>
             <p><figure>
-                  <graphic url="https://distantreading.github.io/ELTeC/hun/mosaic.png"/>
+                  <graphic url="https://distantreading.github.io/ELTeC/hun/mosaic.jpg"/>
                </figure></p>
             <p>For comparison, the same plot for the current state of the Hungarian corpus (100
                texts) shows significantly fewer female writers, and a higher proportion of short
@@ -680,8 +680,8 @@
                different kinds are to be processed in an integrated collection. But this prevents
                the encoder from taking full advantage of the ability of an XML schema to check that
                particular documents conform to predefined rules, unless they are willing greatly to
-               increase the complexity of their workflow. A better approach, pioneered by the
-               Deutsche Textarchiv <ref target="#B08"> [Haaf and Thomas 2016]</ref>, has been the
+               increase the complexity of their work flow. A better approach, pioneered by the
+               Deutsch Textarchiv <ref target="#B08"> [Haaf and Thomas 2016]</ref>, has been the
                use of a technique known as ODD chaining <ref target="#B04">[Burnard 2016]</ref>
                Here, a project first defines a base ODD which selects all the TEI components
                considered to be useful anywhere and then uses this as the basis for smaller, more
@@ -722,7 +722,7 @@
                design goals have been achieved with any plausibility. An initial release of the
                collection is due on Zenodo in September 2019, and we expect several future releases
                before the target of 100 texts per language is reached. The corpora are also
-               maintained as a collection of publicly visible Github repositories, as noted
+               maintained as a collection of publicly visible GitHub repositories, as noted
                above.</p>
             <p>As well as continuing to expand the collection, and continuing to fine-tune its
                composition, we hope to improve the consistency and reliability of the metadata
@@ -753,7 +753,7 @@
             <bibl xml:id="B04">Burnard, Lou (2016) ODD Chaining for Beginners. Available from <ref
                   target="http://teic.github.io/PDF/howtoChain.pdf"
                   >http://teic.github.io/PDF/howtoChain.pdf</ref></bibl>
-            <bibl xml:id="B04">Burnard, Lou “What is TEI Conformance, and why should you care?”. In:
+            <bibl xml:id="B04">Burnard, Lou (2019) “What is TEI Conformance, and why should you care?”. In:
                Journal of the Text Encoding Initiative, Issue 12. <ref
                   target="https://journals.openedition.org/jtei/1777"
                   >https://journals.openedition.org/jtei/1777</ref></bibl>
@@ -766,12 +766,15 @@
                Vol 11, no 1-2 (2017). <ref target="https://doi.org/10.14434/textual.v11i1-2.23570"
                   >https://doi.org/10.14434/textual.v11i1-2.23570</ref>
             </bibl>
-            <bibl xml:id="B08">Haaf, Susanne and Christian Thomas (2016) "Enabling the Encoding of
-               Manuscripts within the DTABf: Extension and Modularization of the Format" In: Journal
+            <bibl xml:id="B08">Haaf, Susanne and Christian Thomas (2016) “Enabling the Encoding of
+               Manuscripts within the DTABf: Extension and Modularization of the Format” In: Journal
                of the Text Encoding Initiative, Issue 10. <ref
                   target="https://journals.openedition.org/jtei/1650"
                   >https://journals.openedition.org/jtei/1650</ref>
             </bibl>
+            <bibl xml:id="B12">Lüdeling, Anke (2011). “Corpora in Linguistics. Sampling and
+               Annotation”. In: Going Digital. Evolutionary and Revolutionary Aspects of
+               Digitization. Ed. by Karl Grandin. Vol. 147. Nobel Symposium 147. New York:</bibl>
             <bibl xml:id="B09">Rahtz, Sebastian, and Lou Burnard (2013) “Reviewing the TEI ODD
                System”. In Proceedings of the 2013 ACM Symposium on Document Engineering. DocEng
                ’13. ACM, 2013. <ref target="https://doi.acm.org/10.1145/2494266.2494321"
@@ -780,9 +783,7 @@
                numérique? A new rationale for the digital representation of text”. In: Digital
                Scholarship in the Humanities 32, pp. 78–88. </bibl>
             <bibl xml:id="B11">Widdowson, Henry (1990) Aspects of Language Teaching. OUP. </bibl>
-            <bibl xml:id="B12">Lüdeling, Anke (2011). “Corpora in Linguistics. Sampling and
-               Annotation”. In: Going Digital. Evolutionary and Revolutionary Aspects of
-               Digitization. Ed. by Karl Grandin. Vol. 147. Nobel Symposium 147. New York:</bibl>
+            
          </listBibl>
       </back>
    </text>
