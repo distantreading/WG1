@@ -45,7 +45,7 @@
                     <moduleRef key="tei"/>
                     <moduleRef key="core"
                         include="author bibl choice corr orig date emph foreign gap head hi item l label lg list measure
-            milestone name note p pb publisher pubPlace quote ref relatedItem resp respStmt rs sp stage hi term title "/>
+            milestone note p pb publisher pubPlace quote ref relatedItem resp respStmt rs sp stage hi term title "/>
                     <moduleRef key="textstructure" include="TEI text div body front back trailer"/>
                     <moduleRef key="header"
                         include="change  encodingDesc 
@@ -116,6 +116,7 @@
                             <attDef ident="key" mode="delete"/>
                         </attList>
                     </classSpec>
+                    
                     <!-- tweaks for individual elements -->
                     <!-- remove @version from TEI : it doesnt mean what you think -->
                     <elementSpec ident="TEI" mode="change">

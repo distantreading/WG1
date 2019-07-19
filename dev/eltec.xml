@@ -137,6 +137,25 @@
                             <attDef ident="key" mode="delete"/>
                         </attList>
                     </classSpec>
+                    
+                    
+                    <!-- content model changes : caution! -->
+                    
+                    <!-- removes model.biblLike from all classes so that
+                        it can only be used where explicitly referenced (in sourceDesc) -->
+                    
+                    <classSpec type="model" ident="model.biblLike" mode="change">
+                        <classes/>
+                    </classSpec>
+                   
+                    <!-- similarly remove model.nameLike.agent from all classes so that
+                        it can only be used where explicitly referenced (in respStmt) -->
+                                       
+                    <classSpec type="model" ident="model.nameLike.agent" mode="change">
+                        <classes/>
+                    </classSpec>                  
+                    
+                    
                     <!-- tweaks for individual elements -->
                     <!-- remove @version from TEI : it doesnt mean what you think -->
                     <elementSpec ident="TEI" mode="change">
@@ -828,6 +847,15 @@
                             <memberOf key="model.publicationStmtPart.detail"/>
                         </classes>
                     </elementSpec>
+                    
+                    <elementSpec ident="measure" mode="change">
+                        <classes mode="replace">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.measurement"/>
+                        </classes>
+                    </elementSpec>
+                        
+                    
                     <!-- constrain extent and its components -->
                     <elementSpec ident="extent" mode="change">
                         <content>
