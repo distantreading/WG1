@@ -1330,8 +1330,14 @@
                             <attDef ident="when" mode="change" usage="req"/>
                         </attList>
                         -->
-                        <exemplum>
-                            <p>indicating the date of the publication of a novel in ELTeC within
+                        <constraintSpec mode="add" ident="datePlacement" scheme="schematron">
+                            <constraint>
+                                <sch:assert test="ancestor::tei:teiHeader" role="ERROR">
+                                    The date element should not be used outside the TEI Header
+                                </sch:assert>
+                            </constraint>
+                        </constraintSpec><exemplum>
+                            <p>indicatesthe date of the publication of a novel in ELTeC within
                                     <gi>publicationStmt</gi></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
@@ -1720,12 +1726,15 @@
                     </elementSpec>
                     <elementSpec ident="corr" mode="change">
                         <exemplum>
-                            <p>In this text, the words "al" and "hombre" were not present in the
-                                original source, but have been added by the editor/transcriber: </p>
+                            <p>In this text, the words "al" and "hombre" have been added by the 
+                                editor/transcriber, to replace an original which omits
+                                 these words for some
+                                reason or represents them with a non-standard or erroneous 
+                                orthography. </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <p>... me había presentado aún ocasión de asombrar <corr>al</corr>
-                                    mundo con ningún hecho heroico; pero <corr>el</corr> oírme
-                                    llamar <emph>hombre</emph> me llenó de orgul...</p>
+                                    mundo con ningún hecho heroico; pero el oírme
+                                    llamar <corr>hombre</corr> me llenó de orgul...</p>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -1733,7 +1742,7 @@
                         <exemplum>
                             <!-- ENG19060 -->
                             <p>The editor/transcriber wishes to show that the word "my" is
-                                emphasized in the original source:</p>
+                                linguistically emphasized in the original source:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">Oh—don’t mind
                                     <emph>my</emph> feelings—call me a mangy monkey—I’ve tried hard
                                 enough to look like one! </egXML>
@@ -1751,7 +1760,8 @@
                         <exemplum>
                             <!-- POR0031-->
                             <p>In this example, the whole quotation is given in a different language
-                                (Spanish). The <gi>foreign</gi> element can only be used to enclose
+                                (Spanish). The foreign language concerned is specified by means of the
+                                <att>xml:lang</att> attribute. The <gi>foreign</gi> element can only be used to enclose
                                 words and phrases directly, rather than to enclose <gi>l</gi> or
                                     <gi>quote</gi> elements, and must therefore be repeated for the
                                 content of each line. </p>
