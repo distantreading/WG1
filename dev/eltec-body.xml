@@ -454,7 +454,41 @@
          transcriber (or a textual editor) has corrected it, the correction should be signalled by
          using the <gi>corr</gi> element available at level one. </p>
    </div><div><head>Transcription Guidelines (level 2)</head>
-   <p>In preparation</p></div>
+      <p>At ELTeC level2, all existing elements are retained, but two new elements <gi>s</gi>
+         and <gi>w</gi> are introduced, to support segmentation of running text into sentence-like
+         and word-like sequences respectively. Individual
+         tokens are marked using the <gi>w</gi> element, and decorated with one or more of the
+         TEI-defined linguistic attributes <att>pos</att>, <att>lemma</att>, and
+         <att>join</att>. Both words and punctuation marks are considered to be
+         <soCalled>tokens</soCalled> in this sense, although the TEI suggests
+         distinguishing the two cases using <gi>w</gi> and <gi>pc</gi> respectively.
+         The
+         <gi>s</gi> (segment) element is used to provide an end-to-end tessellating
+         segmentation of the whole sequence of <gi>w</gi> elements, based on orthographic
+         form. This provides a convenient extension of the existing text-body-div hierarchy
+         within which tokens are located. The elements <gi>p</gi>, <gi>head</gi>, and
+         <gi>l</gi> (which contain just text at levels 0 and 1) at level 2 can contain a
+         sequence of <gi>s</gi> elements. Empty elements <gi>gap</gi>, <gi>milestone</gi>,
+         <gi>pb</gi> or <gi>ref</gi> are also permitted within text content at any point,
+         but these are disregarded when segmentation is carried out. Each <gi>s</gi> element
+         can contain a sequence of <gi>w</gi> elements, either directly, or wrapped in one of
+         the sub-paragraph elements <gi>corr</gi>, <gi>emph</gi>, <gi>foreign</gi>,
+         <gi>hi</gi>, <gi>label</gi>, or <gi>title</gi>. To this list we  add the element
+         <gi>rs</gi> (referring string), provided by the TEI for the encoding of any form
+         of entity name, such as a Named Entity Recognition procedure might produce. </p>
+      <p> This approach implies that <gi>w</gi> elements may appear at two levels in the
+         hierarchy which may upset some software; it also implies that <gi>w</gi> elements
+         must be properly contained within one of these elements, without overlap. <!--If either
+         issue proves to be a major stumbling block, an alternative would be to remove the
+         tags demarcating these sub-paragraph elements, indicating their semantics instead by
+         additional attribute values on the <gi>w</gi> elements they contain.--> </p>
+      <p>This TEI XML format is equally applicable to the production of training data for
+         applications using machine learning techniques and to the outputs of such systems.
+         However, since such machine learning applications typically operate on text content
+         in a tabular format only, XSLT filters which transform (or generate) the XML markup
+         discussed here from such tabular formats without loss of information are envisaged.
+         At the time of writing, however, Working Group 2 has yet to put this proposed
+         architecture to the test. </p></div>
    <div>
 
       <head>TEI Elements and textual features</head>

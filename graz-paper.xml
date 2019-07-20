@@ -233,12 +233,12 @@
                followed alike were kickstarted by input from corpus linguists and computer
                scientists as well as traditional philologically-minded editors and source-driven
                historians. The TEI belongs to a multiplicity of research communities, dating as it
-               does from a period when computational linguists and traditional philologists alike were
-               beginning to wake up to the implications of the advent of massive amounts of digital
-               text for their disciplines. The steering committee which oversaw its development and
-               the TEI editors alike conscientiously attempted to ensure that the Guidelines should
-               reflect a view of text which was generally shared and generic, rather than specific
-               to any discipline or to any particular usage model. </p>
+               does from a period when computational linguists and traditional philologists alike
+               were beginning to wake up to the implications of the advent of massive amounts of
+               digital text for their disciplines. The steering committee which oversaw its
+               development and the TEI editors alike conscientiously attempted to ensure that the
+               Guidelines should reflect a view of text which was generally shared and generic,
+               rather than specific to any discipline or to any particular usage model. </p>
             <p>The TEI's radical proposition that there was such a thing as a single abstract model
                of textual components, which might usefully be considered independently of its
                expression in a particular source or output, or its use in any particular discipline,
@@ -253,7 +253,7 @@
                while supporting specialization did not require any particular specialisation to
                prevail. </p>
             <p>Old orthodoxies do not die easily, and it is interesting to hear how some of the same
-               arguments are still being played out  in the somewhat different context of today's DH
+               arguments are still being played out in the somewhat different context of today's DH
                theorizers. But in our present paper, we simply want to explore the extent to which
                the TEI's model of text can be adapted to conform to the model of text characterising
                such fields as stylometry, stylistics, textual analytics, or (to use the current
@@ -266,16 +266,17 @@
                as languages.</p>
          </div>
          <div>
-            <head>COST Action 16204</head>
-            <p>The context for this work is the COST Action CA16204 “Distant Reading for European
-               Literary History” a principal deliverable of which will be the European Literary Text
-               Collection (ELTeC). This is a set of comparable corpora for each of at least a dozen
-               European languages, each corpus being a balanced selection of 100 novels from the
-               19th century, together with metadata situating them in their contexts of production
-               and of reception. It is hoped that the ELTeC will become a reliable basis for
-               comparative work in cross-linguistic data-driven textual analytics, eventually
-               providing an accessible benchmark for a particular written genre of considerable
-               cultural importance across Europe during the period between 1840 and 1920. </p>
+            <head>The COST Action “Distant Reading for European Literary History” </head>
+            <p>The context for this work is the EU-funded COST Action “Distant Reading for European
+               Literary History” (CA 16204) a principal deliverable of which will be the European
+               Literary Text Collection (ELTeC). This is a set of comparable corpora for each of at
+               least a dozen European languages, each corpus being a balanced selection of 100
+               novels from the 19th century, together with metadata situating them in their contexts
+               of production and of reception. It is hoped that the ELTeC will become a reliable
+               basis for comparative work in cross-linguistic data-driven textual analytics,
+               eventually providing an accessible benchmark for a particular written genre of
+               considerable cultural importance across Europe during the period between 1840 and
+               1920. </p>
             <p>Two significant decisions made early on in the planning of the COST Action underlie
                the work reported here. Firstly, it was agreed that the ELTeC should be delivered in
                a TEI-encoded format, using a schema developed specifically for the project.
@@ -293,7 +294,7 @@
                   available from its website at <ref target="https://www.distant-reading.net"
                      >https://www.distant-reading.net</ref></note> is carried out in four Working
                Groups (WGs), whose activities are subject to endorsement and acceptance by a
-               Management Committee, composed of two national representatives from each of the 22
+               Management Committee, composed of two national representatives from each of the 29
                countries currently participating in the Action. The Working Group heads are also
                members of a smaller <soCalled>core</soCalled> group responsible for day to day
                management of the Action. WG1 "Scholarly Resources" is responsible for the work
@@ -341,12 +342,14 @@
                project A will necessarily be marked up in the same way as the allegedly
                TEI-conformant deliverables from project B <note place="foot">A large-scale project
                   called MONK (Metadata Offer New Knowledge) demonstrated some of the technical
-                  consequences of this for integrated searching of TEI resources: see further
-                  <ref target="http://monk.library.illinois.edu">http://monk.library.illinois.edu</ref></note>. On the contrary, all that <soCalled>TEI
-                  conformance</soCalled> really guarantees is that the intended semantics of the
-               markup used by the two projects should be recoverable by reference to a published
-               standard, and are not entirely ad hoc or sui generis. (This may not seem much of an
-               advance, though it is: see further [<ref target="#B04">Burnard 2019</ref>]). </p>
+                  consequences of this for integrated searching of TEI resources: see further <ref
+                     target="http://monk.library.illinois.edu"
+                     >http://monk.library.illinois.edu</ref></note>. On the contrary, all that
+                  <soCalled>TEI conformance</soCalled> really guarantees is that the intended
+               semantics of the markup used by the two projects should be recoverable by reference
+               to a published standard, and are not entirely ad hoc or sui generis. (This may not
+               seem much of an advance, though it is: see further [<ref target="#B04">Burnard
+                  2019</ref>]). </p>
             <p>Following this No Surprises principle, the simplest ELTeC schema (the <soCalled>level
                   zero </soCalled> schema) provides the bare minimum of tags needed to mark up the
                typical structure and content of a nineteenth century novel. All preliminary matter
@@ -396,7 +399,7 @@
                   <item>the <gi>quote</gi> element may be used to distinguish passages such as
                      quotations, epigraphs, stretches of verse, letters etc. which seem to
                         <q>float</q> within the running text; </item>
-                  <item>the <gi>corr</gi> element may  be used to indicate a passage (typically a
+                  <item>the <gi>corr</gi> element may be used to indicate a passage (typically a
                      word or phrase) which is clearly erroneous in the original and which has been
                      editorially corrected; </item>
                   <item>the elements <gi>foreign</gi>, <gi>emph</gi>, or <gi>title</gi> are
@@ -446,7 +449,7 @@
                in the sequence of tokens making up the document. Information about a token which in
                an XML model would be properties of some higher level construct such as its status as
                dialogue, quoted matter, emphasis, etc. is occasionally considered as well, but is
-               typically modelled  as an additional property of the token.</p>
+               typically modelled as an additional property of the token.</p>
             <p> If a community is defined by its tools, it would appear therefore that the distant
                reading community has not fully embraced the notion of XML as anything other than a
                rather verbose archival format. However, communities are not defined solely by their
@@ -511,24 +514,36 @@
                texts derived directly from a print source from those derived from a digital source,
                itself derived from a known print source, and to provide information about each
                source. In the following example, the source of the ELTeC version is a pre-existing
-               digital edition provided by the Bibliothèque nationale de France at the address
-               specified (ARK -- Archival Resource Key -- is the acronym used by the BNF for the
-               permanent identifiers it provides for its digital collections). The source
-               description also provides information about the first print edition of the work
-               concerned.
+               digital edition provided by Project Gutenberg
+               <!--the Bibliothèque nationale de France at the address
+               specified (ARK -\- Archival Resource Key -\- is the acronym used by the BNF for the
+               permanent identifiers it provides for its digital collections)-->,
+               but the source description also provides information about the first print edition of
+               the work concerned.
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <bibl type="digitalSource">
+                     <title>Project Gutenberg EBook A engomadeira de Almada Negreiros</title>
+                     <ref target="http://www.gutenberg.org/ebooks/23879"/>
+                  </bibl>
+                  <bibl type="firstEdition">
+                     <title>A engomadeira</title>
+                     <author>José de Almada Negreiros</author>
+                     <publisher>Typographia Monteiro &amp; Cardoso</publisher>
+                     <date>1917</date>
+                  </bibl>
+               </egXML>
+               <!--
                   <sourceDesc><bibl type="digitalSource">
                         <title>Tatiana Leïlof: roman parisien (édition numerisée)</title>
                         <publisher> gallica.bnf.fr / Bibliothèque nationale de France </publisher>
                         <idno type="ARK">12148/bpt6k931128v</idno>
                      </bibl><bibl type="firstEdition">
-                        <title>Tatiana Leïlof , roman parisien, par Édouard Rod</title>
+                        <title>Tatiana Leïlof, roman parisien, par Édouard Rod</title>
                         <publisher>E. Plon, Nourrit et Cie</publisher>
                         <pubPlace>Paris</pubPlace>
                         <date>1886</date>
-                     </bibl></sourceDesc>
-               </egXML>
-                In most cases, the ELTeC text will correspond with the first edition of a work in
+                     </bibl></sourceDesc>-->
+               In most cases, the ELTeC text will correspond with the first edition of a work in
                book form; but even where this is not the case, or where information about the
                precise source used is not available, minimal information about that first edition
                should also be provided in order to place the work in its original temporal context. </p>
@@ -538,7 +553,7 @@
                specifying the level of encoding used; and a revision description containing
                versioning information. The TEI Header is also used to provide metadata describing
                the associated text in a standardized form; this is held in the <gi>profileDesc</gi>
-               element which must specify the languages used by the text,  may optionally include a
+               element which must specify the languages used by the text, may optionally include a
                   <gi>textClass</gi> element containing any culture-specific keywords considered
                useful to describe the text, and must contain a <gi>textDesc</gi> element which
                documents the text's status with respect to selection criteria discussed below. </p>
@@ -547,7 +562,7 @@
                   hoc</foreign> accidentally constructed corpus but a designed one. Its composition
                is determined not by the happenstance of whatever we can get our hands on, but is
                instead defensible, at least in theory, as a principled and representative
-               sample.</p>
+               selection.</p>
             <p>The big question is, of course, representative of <hi>what</hi>.</p>
             <p>It would be nice to say that it represents the production of novels in a specific
                language in 19th century Europe. WG1 has working definitions for both "novels" and
@@ -606,15 +621,15 @@
                are characterised as "short", there should be roughly equal numbers for each decade
                of first appearance, roughly equal numbers by male and female authors, and so on.
                This may however be a council of perfection. It is already apparent that for some
-               languages, it is very difficult to find any texts at all within some time periods,
-               or by female authors. Similarly, our definition of "short" (10-50 thousand words),
+               languages, it is very difficult to find any texts at all within some time periods, or
+               by female authors. Similarly, our definition of "short" (10-50 thousand words),
                "medium" (50-100 thousand words) and "long" (over 100 thousand words) though
                objective and easy to validate, assumes that there will be enough novels of a given
                length in the underlying population for us to extract a balanced sample; but in some
                languages it may be that the distribution of lengths across the population is
                entirely different. We cannot tell whether (for example) the absence of any "long"
-               novels at all in Czech, Serbian, or Norwegian is characteristic of those languages, or
-               an artefact of the selection process so far. Another difficulty is that our corpus
+               novels at all in Czech, Serbian, or Norwegian is characteristic of those languages,
+               or an artefact of the selection process so far. Another difficulty is that our corpus
                design deliberately seeks to include some forgotten or marginal works along with
                well-known canonical texts: this is relatively easy for traditions such as English,
                French, or German where copyright laws have led to the maintenance and documentation
@@ -636,8 +651,8 @@
                   <gi>eltec:canonicity</gi>, and <gi>eltec:timeSlot</gi>) are required by the ELTeC
                schemas and have an attribute <att>key</att> which supplies a coded value for the
                criterion concerned taken from a predefined closed list. So, for example, a long
-               (over 100,000 words) novel by a female author first published between 1881 and 1900 but
-               only infrequently reprinted thereafter might have a text description like the
+               (over 100,000 words) novel by a female author first published between 1881 and 1900
+               but only infrequently reprinted thereafter might have a text description like the
                following:
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <textDesc xmlns:eltec="http://distant-reading.net/ns">
@@ -681,15 +696,15 @@
                the encoder from taking full advantage of the ability of an XML schema to check that
                particular documents conform to predefined rules, unless they are willing greatly to
                increase the complexity of their work flow. A better approach, pioneered by the
-               Deutsch Textarchiv <ref target="#B08"> [Haaf and Thomas 2016]</ref>, has been the
-               use of a technique known as ODD chaining <ref target="#B04">[Burnard 2016]</ref>
-               Here, a project first defines a base ODD which selects all the TEI components
-               considered to be useful anywhere and then uses this as the basis for smaller, more
-               constraining, ODDs which select from the base only the components (or other rules)
-               specific to a subset of the project's documentary universe. For example, an archive
-               may have identified a common set of metadata it wishes to document across all of its
-               holdings but also have particular metadata requirements for print and manuscript
-               sources respectively. Simply defining two different ODDs, one for print and one for
+               Deutsch Textarchiv <ref target="#B08"> [Haaf and Thomas 2016]</ref>, has been the use
+               of a technique known as ODD chaining <ref target="#B04">[Burnard 2016]</ref> Here, a
+               project first defines a base ODD which selects all the TEI components considered to
+               be useful anywhere and then uses this as the basis for smaller, more constraining,
+               ODDs which select from the base only the components (or other rules) specific to a
+               subset of the project's documentary universe. For example, an archive may have
+               identified a common set of metadata it wishes to document across all of its holdings
+               but also have particular metadata requirements for print and manuscript sources
+               respectively. Simply defining two different ODDs, one for print and one for
                manuscript when many other components apply to either kind of source opens the door
                to redundant duplication and the risk of inconsistency. The ODD chaining approach
                requires definition of a base ODD which contains the union of the components needed
@@ -710,10 +725,12 @@
                respecting three different views of the resulting encoding standard. As with other
                ODDs, we are then able to produce documentation and formal schemas which reflect
                exactly the scope of each encoding level. </p>
-            <p> The ODD sources and their outputs are maintained on GitHub and will also be
+            <p> The ODD sources and their outputs are maintained on GitHub and are also being
                published on Zenodo along with the ELTeC texts. <note place="foot">The GitHub
                   repository for the ELTeC collection is found at https://github.com/COST-ELTeC/ :
-                  formal releases of the collection will appear on Zenodo at ? </note>
+                  the Zenodo community within which it is being published lives at: <ref
+                     target="https://zenodo.org/communities/eltec/"
+                     >https://zenodo.org/communities/eltec</ref>, </note>
             </p>
          </div>
          <div>
@@ -753,8 +770,8 @@
             <bibl xml:id="B04">Burnard, Lou (2016) ODD Chaining for Beginners. Available from <ref
                   target="http://teic.github.io/PDF/howtoChain.pdf"
                   >http://teic.github.io/PDF/howtoChain.pdf</ref></bibl>
-            <bibl xml:id="B04">Burnard, Lou (2019) “What is TEI Conformance, and why should you care?”. In:
-               Journal of the Text Encoding Initiative, Issue 12. <ref
+            <bibl xml:id="B04">Burnard, Lou (2019) “What is TEI Conformance, and why should you
+               care?”. In: Journal of the Text Encoding Initiative, Issue 12. <ref
                   target="https://journals.openedition.org/jtei/1777"
                   >https://journals.openedition.org/jtei/1777</ref></bibl>
             <bibl xml:id="B05">Caton, Paul (2013). “On the term text in digital humanities”. In:
@@ -783,7 +800,6 @@
                numérique? A new rationale for the digital representation of text”. In: Digital
                Scholarship in the Humanities 32, pp. 78–88. </bibl>
             <bibl xml:id="B11">Widdowson, Henry (1990) Aspects of Language Teaching. OUP. </bibl>
-            
          </listBibl>
       </back>
    </text>
