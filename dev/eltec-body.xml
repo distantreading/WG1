@@ -454,8 +454,8 @@
          transcriber (or a textual editor) has corrected it, the correction should be signalled by
          using the <gi>corr</gi> element available at level one. </p>
    </div><div><head>Transcription Guidelines (level 2)</head>
-      <p>At ELTeC level2, all existing elements are retained, but two new elements <gi>s</gi>
-         and <gi>w</gi> are introduced, to support segmentation of running text into sentence-like
+      <p>At ELTeC level2, all existing elements are retained and two new elements <gi>s</gi>
+         and <gi>w</gi> are introduced to support segmentation of running text into sentence-like
          and word-like sequences respectively. Individual
          tokens are marked using the <gi>w</gi> element, and decorated with one or more of the
          TEI-defined linguistic attributes <att>pos</att>, <att>lemma</att>, and

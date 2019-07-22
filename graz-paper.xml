@@ -12,137 +12,8 @@
             <p>Unpublished draft for presentation at TEI 2019 Conference</p>
          </publicationStmt>
          <sourceDesc>
-            <p>Original source</p>
-            <!-- <p> I very much like the way the paper explains all the various aspects of the things
-               that WG1 has been doing and how ELTeC is being built. And I see some "anchors" in
-               there, that is some strong or particular ideas, like the idea of "comity", the idea
-               of the "ODD chaining" or the idea of ELTeC supporting distant reading methods. </p>
-            <p> What I think would make the paper stronger is if these strong ideas would be
-               connected to each other in a more explicit way. Like saying: what is the contribution
-               of ODD chaining to comity? Or how does ODD chaining help us best support distant
-               reading methods? Is ODD chaining in any way related to the idea of "what is text,
-               really?"? The most original part of the paper is probably that of comity, but then
-               the paper could make an even stronger case of how ELTeC in a way recovers a comity in
-               TEI that had been there from the start but was somehow forgotten on the way for a
-               while? </p>
-            <p> Also (and possibly related to the last point), I think the paper would benefit from
-               a more obvious (or more explicit) way of structuring the information provided about
-               ELTeC: either narrative (the story of how we arrived at this strategy; I don't
-               recommend) or in some idealized description of the process (also tricky), or
-               following some principle of increased complexity / innovation (from plain text to
-               ODD-chaining?). Or: how does it all support comity? </p>
-            <p> A detail: I don't think level-2 is adequately described as the layer in which the
-               results of the Distant Reading methods are stored. Rather, some annotation levels
-               based on linguistic annotation methods (Tokenization, Lemmatization, POS-Tagging,
-               Named Entity Recognition) are available there, and these annotations are relevant to
-               or useful for Distant Reading methods, such as stylometry, topic modeling, etc. </p>
-            <p> The cross-European approach of ELTeC could be added as a argument for comity: not
-               just across disciplines and approaches, but also across languages / countries. After
-               all, this is one of the few true originalities of ELTeC so should be
-               foregrounded.</p>-->
+            <p>This is the original source</p>
          </sourceDesc>
-         <!-- comments from reviewers
-      
-> Review 1
-> ========
-> This submission describes work done to create a corpus of TEI data
-> specifically aimed at supporting text analysis and possibly enhancing its
-> results.
->
->
-> Quality of Content     (20%): 8
-> Thematic Relevance     (20%): 10
-> Overall Recommendation (60%): 8
-> Total points (out of 100)   : 84
->
->
-> 
-> This project is important and valuable, and the proposal offers a clear and
-> detailed view that will be useful for conference participants. The use of
-> ODD-chaining is of particular interest. If space had permitted, I would have
-> liked to see some comparison with previous efforts in this direction (I am
-> thinking in particular of the TEI-Analytics schema developed for the MONK
-> project some years ago), and I would also have liked to see some additional
-> information about the specific kinds of markup that most effectively support a
-> richer and better-informed distant reading. I hope that if accepted this paper
-> will cover those details more fully.
->
-> The question of "what text really is" is provocative here, particularly the
-> idea that fields like authorship attribution, topic modeling, etc. have a
-> theory of  text different from the one espoused by the those who work on text
-> markup. Again, I understand that the brevity of the proposal format doesn't
-> make it easy to explore this idea in detail here, but I think this is a really
-> interesting and important question that has consequences for corpus
-> design/construction, so I hope it will be discussed at greater length in the
-> finished paper.
-> -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
->
->
-> Review 2
-> ========
->
- The paper reports on developments in the context of the COST Action CA16204
-> "Distant Reading", in particular TEI-conformant schemas developed for the
-> European Literary Text Collection (ELTeC).
->
->> Quality of Content     (20%): 8
-> Thematic Relevance     (20%): 8
-> Overall Recommendation (60%): 10
-> Total points (out of 100)   : 92
->
->
-> 
-> The submission discusses the "Distant Reading" COST action and the European
-> Literary Text Collection (ELTeC).
->
-> Both are focussing on issues which are highly significant and relevant to the
-> TEI community (multilingualism, metadata semantization, textual analytics).
-> The paper proposes to elaborate on the question posed in the conference topic
-> from the perspective of statistically-derived authorship attribution, topic
-> modelling and stylistic analysis.
->
-> Furthermore, the paper will demonstrate an ODD (or chain of ODDs) aimed at
-> distant reading rather than representation of the original texts, which is
-> perfectly aligned with the topic of the conference and touches on a topic
-> (broadly speaking "TEI and Distant Reading) that is - if the contributions to
-> the current conference are considered - gaining prominence and recognition.
->
-> The abstract is concise and clear, and a number of arguments for decisions
-> taken are already previewed in it. It will be very interesting to hear more
-> about the actual implementation and the specific challenges encountered,
-> particularly regarding multilingualism.
->
-> -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
->
->
-> Review 3
-> ========
->
->> The paper introduces the ELTeC specific TEI customisation preparing a large
-> corpus of novels for distant reading purposes.
->
->
-> Evaluation of the Contribution
->> Quality of Content     (20%): 10
-> Thematic Relevance     (20%): 6
-> Overall Recommendation (60%): 9
-> Total points (out of 100)   : 86
->
->
-> The ELTeC is certainly an important corpus in creation and the use of the TEI
-> for its encoding is an important step for the dissemination of the
-> capabilities of the TEI in the stylometric community. The proposal creates
-> only a thin line to the main theme of the conference and could make more clear
-> how the encoding guidelines for the corpus help to understand better "what
-> text really is", or - my suggestion - just avoid unnecessary buzzwording. A
-> discussion how the encoding decisions are related to the task the corpus
-> should serve, is interesting in itself.
->
->
-
-
->
-> -->
       </fileDesc>
       <profileDesc>
          <textClass>
@@ -157,6 +28,7 @@
          </textClass>
       </profileDesc>
       <revisionDesc>
+         <change when="2019-07-22" who="#LB42">submitted</change>
          <change when="2019-07-15" who="#LB42">working through CO and CS comments</change>
          <change when="2019-07-08" who="#LB42">circulated first draft to CO and CS</change>
          <change when="2019-07-01" who="#LB42">started first draft</change>
@@ -201,10 +73,8 @@
                of the TEI. </p>
             <p>Christof Schöch is Professor of Digital Humanities at the University of Trier,
                Germany, and Co-Director of the Trier Centre for Digital Humanities (TCDH). He chairs
-               the COST Action "Distant Reading for European Literary History" (CA16204).
-               <!--Find out
-               more at http://www.christof-schoech.de/en . --></p>
-            <p>Carolin Odebrecht (Humboldt-Universität zu Berlin)) is a corpus linguist. Her
+               the COST Action "Distant Reading for European Literary History" (CA16204). </p>
+            <p>Carolin Odebrecht is a corpus linguist at Humboldt-Universität zu Berlin. Her
                research fields are modelling, creating, archiving of historical corpora and corpus
                metadata. </p>
          </div>
@@ -257,7 +127,7 @@
                theorizers. But in our present paper, we simply want to explore the extent to which
                the TEI's model of text can be adapted to conform to the model of text characterising
                such fields as stylometry, stylistics, textual analytics, or (to use the current
-               term) "distant reading". We hope also to explore the claim that by so doing we may
+               term) <soCalled>distant reading</soCalled>. We hope also to explore the claim that by so doing we may
                facilitate the enrichment of that model, and thus facilitate more sophisticated
                research into textual phenomena across different corpora. And we hope to demonstrate
                that this is best done by cultivating mutual respect for the widely differing
@@ -297,11 +167,11 @@
                Management Committee, composed of two national representatives from each of the 29
                countries currently participating in the Action. The Working Group heads are also
                members of a smaller <soCalled>core</soCalled> group responsible for day to day
-               management of the Action. WG1 "Scholarly Resources" is responsible for the work
-               described in this paper; WG2 "Methods and Tools" is concerned with text analytic
-               techniques and tools; WG3 "Literary Theory and History" is concerned with
+               management of the Action. WG1 Scholarly Resources is responsible for the work
+               described in this paper; WG2 Methods and Tools is concerned with text analytic
+               techniques and tools; WG3 Literary Theory and History is concerned with
                applications and implications of those methods and for literary theory ; WG4
-               "Dissemination" is responsible for outreach and communication. </p>
+               Dissemination is responsible for outreach and communication. </p>
             <p>The design and construction of the ELTeC is the responsibility of WG1, as noted
                above. Initially, this work was split into three distinct tasks: First, defining
                selection criteria (corpus design); second, developing basic encoding methods (both
@@ -431,16 +301,17 @@
             <p>ELTeC level 1 is intended to facilitate a richer and better-informed distant reading
                of a text than a transcription of its verbal content alone would permit. ELTeC level
                2 is partly intended to provide a consistent and TEI-conformant way of representing
-               the results of such readings, but its primary goal is to represent in a standard way
-               additional layers of annotation of particular importance to distant reading
-               applications such as stylometry or topic modelling. Enrichment of each lexical token
-               to indicate its morpho-syntactic category (POS) or its lemma, and identification of
-               tokens which refer to named entities are both well within the scope of existing text
-               processing techniques, and are also routinely used in distant reading applications.
-               The challenge is that the input and the output formats typically used by such tools
-               are rarely XML-based, and seem superficially to have a model of text quite different
-               from that of the <soCalled>ordered hierarchy of content objects</soCalled> in terms
-               of which the TEI community traditionally operates. For many in the distant reading
+               the results of such readings, in partiocular those concerned with linguistic
+               annotation. Its primary goal is to represent in a standard way additional layers of
+               annotation of particular importance to distant reading applications such as
+               stylometry or topic modelling. Enrichment of each lexical token to indicate its
+               morpho-syntactic category (POS) or its lemma, and identification of tokens which
+               refer to named entities are both well within the scope of existing text processing
+               techniques, and are also routinely used in distant reading applications. The
+               challenge is that the input and the output formats typically used by such tools are
+               rarely XML-based, and seem superficially to have a model of text quite different from
+               that of the <soCalled>ordered hierarchy of content objects</soCalled> in terms of
+               which the TEI community traditionally operates. For many in the distant reading
                community (it seems) a text is little more than a sequence of tokens, mostly
                corresponding with orthographically-defined words, though there is some variability
                in the principles underlying the process of tokenisation, for example in the
@@ -456,26 +327,27 @@
                tools : by seeking a way of reconciling these differing views of what text really is
                in a spirit of comity we hope to demonstrate that there are advantages both for the
                distant reader or stylometrician and for the literary analyst or textual editor. </p>
-            <p>At ELTeC level2, all existing elements are retained, but two new elements <gi>s</gi>
-               and <gi>w</gi> are introduced, to support two levels of segmentation. Individual
-               tokens are marked using the <gi>w</gi> element, and decorated with one or more of the
-               TEI-defined linguistic attributes <att>pos</att>, <att>lemma</att>, and
-                  <att>join</att>. Both words and punctuation marks are considered to be
-                  <soCalled>tokens</soCalled> in this sense, although the TEI suggests
-               distinguishing the two cases using <gi>w</gi> and <gi>pc</gi> respectively. The
-                  <gi>s</gi> (segment) element is used to provide an end-to-end tessellating
-               segmentation of the whole sequence of <gi>w</gi> elements, based on orthographic
-               form. This provides a convenient extension of the existing text-body-div hierarchy
-               within which tokens are located. The elements <gi>p</gi>, <gi>head</gi>, and
-                  <gi>l</gi> (which contain just text at levels 0 and 1) at level 2 can contain a
-               sequence of <gi>s</gi> elements. Empty elements <gi>gap</gi>, <gi>milestone</gi>,
-                  <gi>pb</gi> or <gi>ref</gi> are also permitted within text content at any point,
-               but these are disregarded when segmentation is carried out. Each <gi>s</gi> element
-               can contain a sequence of <gi>w</gi> elements, either directly, or wrapped in one of
-               the sub-paragraph elements <gi>corr</gi>, <gi>emph</gi>, <gi>foreign</gi>,
-                  <gi>hi</gi>, <gi>label</gi>, <gi>title</gi>. To this list we might add the element
-                  <gi>rs</gi> (referring string), provided by the TEI for the encoding of any form
-               of entity name, such as a Named Entity Recognition procedure might produce. </p>
+            <p>At ELTeC level2, all existing elements are retained and two new elements <gi>s</gi>
+               and <gi>w</gi> are introduced to support segmentation of running text into
+               sentence-like and word-like sequences respectively. Individual tokens are marked
+               using the <gi>w</gi> element, and decorated with one or more of the TEI-defined
+               linguistic attributes <att>pos</att>, <att>lemma</att>, and <att>join</att>. Both
+               words and punctuation marks are considered to be <soCalled>tokens</soCalled> in this
+               sense, although the TEI suggests distinguishing the two cases using <gi>w</gi> and
+                  <gi>pc</gi> respectively. The <gi>s</gi> (segment) element is used to provide an
+               end-to-end tessellating segmentation of the whole sequence of <gi>w</gi> elements,
+               based on orthographic form. This provides a convenient extension of the existing
+               text-body-div hierarchy within which tokens are located. </p>
+            <p>The elements <gi>p</gi>, <gi>head</gi>, and <gi>l</gi> (which contain just text at
+               levels 0 and 1) at level 2 can contain a sequence of <gi>s</gi> elements. Empty
+               elements <gi>gap</gi>, <gi>milestone</gi>, <gi>pb</gi> or <gi>ref</gi> are also
+               permitted within text content at any point, but these are disregarded when
+               segmentation is carried out. Each <gi>s</gi> element can contain a sequence of
+                  <gi>w</gi> elements, either directly, or wrapped in one of the sub-paragraph
+               elements <gi>corr</gi>, <gi>emph</gi>, <gi>foreign</gi>, <gi>hi</gi>, <gi>label</gi>,
+                  <gi>title</gi>. To this list we might add the element <gi>rs</gi> (referring
+               string), provided by the TEI for the encoding of any form of entity name, such as a
+               Named Entity Recognition procedure might produce. </p>
             <p> This approach implies that <gi>w</gi> elements may appear at two levels in the
                hierarchy which may upset some software; it also implies that <gi>w</gi> elements
                must be properly contained within one of these elements, without overlap. If either
@@ -641,8 +513,8 @@
                manner as possible, we have chosen to re-purpose the little-used <gi>textDesc</gi>
                element, originally provided by the TEI as a wrapper for a set of so-called
                situational parameters proposed by corpus linguists as a way of objectively
-               characterizing linguistic production <note>The <gi>textDesc</gi> element is discussed
-                  in section 15.2.1 of the TEI <title>Guidelines</title> (<ref
+               characterizing linguistic production <note place="foot">The <gi>textDesc</gi> element
+                  is discussed in section 15.2.1 of the TEI <title>Guidelines</title> (<ref
                      target="https://tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD"
                      >https://tei-c.org/release/doc/tei-p5-doc/en/html/CC.html#CCAHTD</ref>).
                </note> In our case, we replace the TEI's suggested vocabulary for these parameters
