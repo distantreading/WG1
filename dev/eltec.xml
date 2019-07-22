@@ -259,7 +259,7 @@
                     </elementSpec>
                     <elementSpec ident="bibl" mode="change">
                         <attList>
-                            <attDef ident="type" mode="change" usage="req">
+                            <attDef ident="type" mode="change" usage="rec">
                                 <datatype>
                                     <dataRef key="teidata.enumerated"/>
                                 </datatype>
@@ -635,12 +635,12 @@
                                         <desc>text has been republished very frequently during the
                                             period concerned</desc>
                                     </valItem>
-                                    <!--   <valItem ident="medium">
-                                        <desc>text has been republished occasionally since its
-                                            original appearance</desc>
-                                    </valItem>-->
+                                    <valItem ident="medium">
+                                        <desc>text has been republished occasionally during the
+                                            period concerned</desc>
+                                    </valItem>
                                     <valItem ident="low">
-                                        <desc>text has been reprinted only occasionally during the
+                                        <desc>text has been reprinted only occasionally or not at all during the
                                             period concerned</desc>
                                     </valItem>
                                 </valList>
