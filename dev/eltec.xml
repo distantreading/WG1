@@ -259,7 +259,7 @@
                     </elementSpec>
                     <elementSpec ident="bibl" mode="change">
                         <attList>
-                            <attDef ident="type" mode="change" usage="rec">
+                            <attDef ident="type" mode="change" usage="req">
                                 <datatype>
                                     <dataRef key="teidata.enumerated"/>
                                 </datatype>
@@ -276,6 +276,9 @@
                                         <desc>describes a digital edition used as the source of the
                                             encoding, which may be derived from the first or another
                                             print edition </desc>
+                                    </valItem>
+                                    <valItem ident="unspecified">
+                                        <desc>the status of this reference has to be determined</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
