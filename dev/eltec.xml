@@ -149,7 +149,7 @@
                     </classSpec>
                    
                     <!-- similarly remove model.nameLike.agent from all classes so that
-                        it can only be used where explicitly referenced (in respStmt) -->
+                        it can only be used where explicitly referenced (in respStmt and in change) -->
                                        
                     <classSpec type="model" ident="model.nameLike.agent" mode="change">
                         <classes/>
@@ -276,6 +276,9 @@
                                         <desc>describes a digital edition used as the source of the
                                             encoding, which may be derived from the first or another
                                             print edition </desc>
+                                    </valItem>
+                                <valItem ident="unspecified">
+                                        <desc>details of the type of source are to be supplied  </desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -936,12 +939,20 @@
                                 the <gi>measure</gi> element.</p>
                         </remarks>
                     </elementSpec>
-                    <!-- require a date on change -->
+                    <!-- require a date on change ; permit name within it but nothing much else -->
                     <elementSpec ident="change" mode="change">
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode/>
+                                <classRef key="model.nameLike.agent"/>
+                            </alternate>
+                        </content>
+                        
                         <attList>
                             <attDef ident="when" mode="change" usage="req"/>
                             <attDef ident="target" mode="delete"/>
                         </attList>
+                        
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <change when="2018-11-01">Conversion with CLIGStoELTeC stylesheet
