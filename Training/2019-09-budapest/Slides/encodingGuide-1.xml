@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../TEIslides/teislides.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Encoding for ELTeC : a summary guide </title>
+            <title type="sub">Part 1 : the Header</title>
+           <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Prepared for Budapest TS ex nihilo</p>
+         </sourceDesc>
+
+      </fileDesc>
+      <revisionDesc>
+         <change when="2019-08-10">LB first draft</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+
+         <div type="slide">
+            <head>The checklist</head>
+            <p>Here's a list of the information you must supply in your header: <list>
+                  <item>Identification of title and language (<att>xml:id</att> and
+                        <att>xml:lang</att> on <gi>TEI</gi>)</item>
+                  <item>Title of the work, followed by the phrase <val>: ELTeC edition</val>
+                        (<gi>title</gi>)</item>
+                  <item>Author, in format <val>Surname, Forename/s (birthYear-deathYear)</val>
+                        (<gi>author</gi>) </item>
+                  <item>Statements of responsibility in format <val>encoded by Name</val>
+                        (<gi>respStmt</gi>) </item>
+                  <item>Date of publication in ELTeC (<gi>publicationStmt</gi>) </item>
+                  <item>Source description containing one or more <gi>bibl</gi> elements</item>
+                  <item>Encoding level : use the <att>n</att> attribute of
+                     <gi>encodingDesc</gi></item>
+                  <item>Profile description specifying languages used and sampling criteria values
+                        (<gi>langUsage</gi>, <gi>textDesc</gi>)</item>
+                  <item>Revision description containing at least one <gi>change</gi></item>
+               </list></p>
+            <p>Most but not all requirements are enforced by the schema</p>
+         </div>
+         <div type="slide">
+            <head>Identification</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <![CDATA[<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de" xml:id="deu025">]]>
+            </egXML>
+            <list>
+               <item><att>xml:id</att> values must be unique across the corpus, preferably short,
+                  and valid XML names</item>
+               <item> recommended format: <val>xxxyyyyd</val> where <val>xxx</val> is ISO 639-3
+                  language code, <val>yyyy</val> the year of publication, and <val>d</val> an extra
+                  digit for disambiguation</item>
+               <item>the <att>xmlns</att> attribute is needed for TEI conformance</item>
+               <item>the value of <att>xml:lang</att> is the ISO 639-2 language code</item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>The title</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <title> Ghiță Cătănuță, căpitan de haiduci : ELTeC edition</title>
+               <title ref="viaf:180462896">L'Éducation sentimentale : édition ELTeC </title>
+               <title>Господа сељаци: приповетка : ELTeC издање</title>
+            </egXML>
+            <list>
+               <item>Use standard form of title, simplified if necessary, followed by the phrase
+                     <val>ELTeC edition</val> in appropriate language</item>
+               <item>Optionally supply VIAF or other identifying code for title </item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>The author</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><author ref="viaf:26018946">Skene,
+                  Felicia (1821-1899)</author>
+               <author ref="viaf:52610012">Gozsdu Elek (1849-1919) </author>
+               <author ref="viaf:37053113">Dombre, Roger (Marguerite Sisson) (1859-1914)</author>
+            </egXML>
+            <list>
+               <item>VIAF codes available from <ref>https://viaf.org</ref></item>
+               <item>Standard forms for names should (or for E Europe may not) include comma </item>
+               <item>Alternative name may be provided between names and dates</item>
+               <item>Dates must be separated by hyphen </item>
+            </list>
+            <p rend="box">Check details on Wikipedia, Worldcat, National library etc.</p>
+         </div>
+         <div>
+            <head>The encoder(s)</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <respStmt><resp>ELTeC conversion</resp><name>Your Name Here</name></respStmt>
+               <respStmt><resp>Original data capture</resp><name>Their Name
+               Here</name></respStmt></egXML>
+            <list>
+               <item>provide a <gi>resp</gi> containing <val>ELTeC conversion</val> to indicate
+                  responsibility for converting from non-ELTeC digital source </item>
+               <item>optionally also indicate responsibility for original data capture (e.g. in
+                  HTML) where this is not indicated in source description</item>
+               <item><gi>resp</gi> containing <val>principal</val> may be used to indicate a
+                  principal researcher if required</item>
+               <item>supply the <gi>name</gi> in a consistent form</item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>Extent statement</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <extent>
+                  <measure unit="words">99479</measure>
+                  <measure unit="pages">631</measure>
+                  <measure unit="vols">2</measure>
+               </extent></egXML>
+            <list>
+               <item>oXygen will calculate a word count for you</item>
+               <item>page and volume counts are optional</item>
+               <item>figures must be supplied without punctuation or spaces</item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>Publication statement</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><publicationStmt>
+                  <p>First ElTeC edition <date>2019-02-3</date></p>
+               </publicationStmt>
+            </egXML>
+            <list>
+               <item>The date of publication in ELTeC must be supplied in form "YYYY-MM-DD"</item>
+               <item>When the text is published on Zenodo, this is automatically converted to a
+                  fuller standard form:</item>
+            </list>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><publicationStmt>
+                  <distributor>COST Action ELTeC</distributor>
+                  <date when="2019-10-03"/>
+                  <availability>
+                     <licence target="https://creativecommons.org/licenses/by/4.0/"> Licenced under
+                        CC-BY 4.0 </licence>
+                  </availability>
+                  <ref type="doi" target="10.5281/zenodo.8468"/>
+               </publicationStmt></egXML>
+         </div>
+         <div type="slide">
+            <head>Source description (1) </head>
+            <p>The ELTeC edition comes directly from a known print edition</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><sourceDesc>
+                  <bibl type="printEdition">
+                     <author>Panait Macri</author>
+                     <title>Ghiță Cătănuță, căpitan de haiduci</title>
+                     <pubPlace>Bucharest</pubPlace>
+                     <publisher>Editura Librăriei și Tipografiei H. STEINBERG</publisher>
+                     <date>1923</date>
+                  </bibl>
+               </sourceDesc></egXML>
+            <list>
+               <item>Add an extra <tag>bibl type="firstEdition"</tag> if this is not the first
+                  edition</item>
+               <item>Add an extra <tag>bibl type="digitalSource"</tag> if another digital version of
+                  the text is also available e.g. as page images </item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>Source description (2) </head>
+            <p>The ELTeC edition is derived from a pre-existing digital version</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <sourceDesc>
+                  <bibl type="digitalSource">
+                     <title>Wuthering Heights (1st edition) : wikisource edition</title>
+                     <ref target="https://en.wikisource.org/wiki/Wuthering_Heights_(1st_edition)"/>
+                  </bibl>
+                  <bibl type="firstEdition">
+                     <title>Wuthering Heights. A novel by</title>
+                     <author>Ellis Bell</author>
+                     <publisher>London: T. C. Newby</publisher>
+                     <date>1847</date>
+                  </bibl>
+               </sourceDesc></egXML>
+            <list>
+               <item>Add an extra <tag>bibl type="printEdition"</tag> if the digital version does
+                  not derive from the first edition</item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>Encoding description</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <encodingDesc n="eltec-1"><p/></encodingDesc>
+            </egXML>
+            <list>
+               <item>The value for <att>n</att> must be one of <val>eltec-0</val>,
+                     <val>eltec-1</val>, or <val>eltec-2</val></item>
+               <item>An empty <gi>p</gi> is required as content :-(</item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>Profile description</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"
+               xmlns:eltec="http://distantreading.net/eltec/ns">
+               <profileDesc>
+                  <langUsage>
+                     <language ident="eng"/>
+                  </langUsage>
+                  <textDesc>
+                     <eltec:authorGender key="F"/>
+                     <eltec:size key="long"/>
+                     <eltec:canonicity key="high"/>
+                     <eltec:timeSlot key="T1"/>
+                  </textDesc>
+               </profileDesc>
+            </egXML>
+            <list>
+               <item>Supply a <gi>language</gi> for each language present in significant amounts in
+                  the text </item>
+               <item>Use ISO 646 three-letter codes to identify the language, optionally extended
+                  with script or dialect</item>
+               <item>The namespace prefix <code>eltec</code> is arbitrary and can be defined
+                  wherever you please</item>
+               <item>Values for the four balance criteria must be supplied</item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>Balance criteria</head>
+            <table>
+               <row>
+                  <cell role="label">authorGender</cell>
+                  <cell><hi rend="bold">F</hi> (female)</cell>
+                  <cell><hi rend="bold">M </hi>(male)</cell>
+                  <cell><hi rend="bold">U</hi> (unknown or multiple)</cell>
+                  <cell/>
+               </row>
+               <row>
+                  <cell/>
+                  <cell cols="4"><hi>author's biological sex, not claimed gender</hi></cell>
+               </row>
+           
+               <row>
+                  <cell role="label">size</cell>
+                  <cell><hi rend="bold">short</hi> (10-50k)</cell>
+                  <cell><hi rend="bold">medium</hi> (50-100k)</cell>
+                  <cell><hi rend="bold">long</hi> (&gt;100k)</cell>
+                  <cell/>
+               </row>
+               <row>
+                  <cell/>
+                  <cell cols="4"><hi>word count excluding header and all markup</hi></cell>
+               </row>
+               <row>
+                  <cell role="label">timeSlot</cell>
+                  <cell><hi rend="bold">T1</hi> (1840-1859)</cell>
+                  <cell><hi rend="bold">T2</hi> (1860-1879)</cell>
+                  <cell><hi rend="bold">T3</hi> (1880-1899)</cell>
+                  <cell><hi rend="bold">T4</hi> (1900-1920)</cell>
+                </row>
+               <row>
+                  <cell/>
+                  <cell cols="4"><hi>date first published as a book </hi></cell>
+               </row>
+               <row>
+                  <cell role="label">canonicity</cell>
+                  <cell><hi rend="bold">low</hi> (&lt;10) </cell>
+                  <cell><hi rend="bold">medium</hi> </cell>
+                  <cell><hi rend="bold">high</hi> (&gt;50)</cell>
+                  <cell/>
+               </row>
+               <row>
+                  <cell/>
+                  <cell cols="4"><hi>number of times reprinted between 1970 and 2009</hi>
+                  </cell>
+               </row>
+            </table>
+         </div>
+         <div type="slide">
+            <head>Revision description</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <revisionDesc>
+                  <change when="2018-11-01">Initial conversion to ELTeC1 using CLIGStoELTeC
+                     stylesheet</change>
+               </revisionDesc></egXML>
+            <list>
+               <item><att>when</att> attribute is required and must have value in form
+                  YYYY-MM-DD</item>
+               <item>Give <gi>change</gi>s in reverse chronological order (most recent first)</item>
+               <item>Include only major changes</item>
+            </list>
+         </div>
+      </body>
+   </text>
+</TEI>
