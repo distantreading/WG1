@@ -6,10 +6,7 @@
          <titleStmt>
             <title>Encoding for ELTeC : a summary guide </title>
             <title type="sub">Part 1 : the Header</title>
-            <author>Lou Burnard</author>
-         </titleStmt>
-         <publicationStmt>
-            <p>Publication Information</p>
+           <p>Publication Information</p>
          </publicationStmt>
          <sourceDesc>
             <p>Prepared for Budapest TS ex nihilo</p>
