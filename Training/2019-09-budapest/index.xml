@@ -81,26 +81,25 @@
                <label>Monday</label>
                <item>
                   <list>
-                     <item> * Early afternoon: Joint opening session (30 minutes) </item>
-                     <item> * Afternoon session 1: Introduction to Oxygen and XML (Martina) </item>
-                     <item> * Afternoon session 2: Metadata (Carolin)</item>
+                     <item>Early afternoon: Joint opening session (30 minutes) </item>
+                     <item>Afternoon session 1: Introduction to Oxygen and XML (Martina) </item>
+                     <item>Afternoon session 2: Metadata (Carolin)</item>
                   </list>
                </item>
                <label>Tuesday</label>
                <item><list>
-                     <item> </item>
-                     <item> * Morning session 1: Creating OCR with OCR4all (Christian) </item>
-                     <item>* Morning session 2: OCR transformation to level0 (Christian and Lou) </item>
-                     <item> * Afternoon session 1: Transformation Gutenberg to level0 (Lou) </item>
-                     <item> * Afternoon session 2: Level1, publishing at GitHub, additional
+                      <item>Morning session 1: Creating OCR with OCR4all (Christian) </item>
+                     <item>Morning session 2: OCR transformation to level0 (Christian and Lou) </item>
+                     <item>Afternoon session 1: Transformation Gutenberg to level0 (Lou) </item>
+                     <item>Afternoon session 2: Level1, publishing at GitHub, additional
                         enrichment (talk from WG2?) [who?]</item>
                   </list>
                </item>
                <label>Wednesday</label>
                <item>
                   <list>
-                     <item> * Morning session 1: Concluding session (1h) </item>
-                     <item>* Morning session 2: Joint final session (2 hours)</item>
+                     <item>Morning session 1: Concluding session (1h) </item>
+                     <item>Morning session 2: Joint final session (2 hours)</item>
                   </list>
                   <!--     09h30 :<ref target="oxyTut-1.pdf"> Practical session 1</ref>: Using an XML
                   Editor (oXygen) -\- what can we do with it? (45 mins)</item>

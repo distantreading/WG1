@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../../TEIslides/teislides.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Encoding for ELTeC : a summary guide </title>
+            <title type="sub">Part 2 : the Text</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Prepared for Budapest TS ex nihilo</p>
+         </sourceDesc>
+
+      </fileDesc>
+      <revisionDesc>
+         <change when="2019-08-10">LB first draft</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+
+         <div type="slide">
+            <head>The checklist</head>
+            <p>Here's a list of the distinctions your encoding should make explicit: </p>
+            <list>
+               <item>page breaks (<gi>pb</gi>) [optional] </item>
+               <item>section and chapter divisions (<gi>div</gi>)</item>
+               <item>headings, titles, footers (<gi>head</gi>,<gi>trailer</gi>)</item>
+               <item>paragraphs (<gi>p</gi>)</item>
+               <item>verse (<gi>l</gi>)</item>
+               <item>typographic salience (<gi>hi</gi>) [optional] </item>
+             </list>
+            <p>A level 1 encoding permits the following additional distinctions, all optional but recommended: </p>
+            <list>
+               <item>omitted material(<gi>gap</gi>)</item>
+               <item>editorial correction (<gi>corr</gi>)</item>
+               <item>chapter subdivision (<gi>milestone</gi>)</item>
+               <item>linguistic emphasis (<gi>emph</gi>)</item>
+               <item>code-shifting (<gi>foreign</gi>)</item>
+               <item>floating headings and titles (<gi>label</gi>,<gi>title</gi>)</item>
+               <item>quotation (<gi>quote</gi>)</item>
+                <item>authorial notes (<gi>note</gi>, <gi>ref</gi>)</item>
+            </list>
+         </div>
+         <!--<div type="slide">
+            <head>Identification</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <![CDATA[<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de" xml:id="deu025">]]>
+            </egXML>
+            <list>
+               <item><att>xml:id</att> values must be unique across the corpus, preferably short,
+                  and valid XML names</item>
+               <item> recommended format: <val>xxxyyyyd</val> where <val>xxx</val> is ISO 639-3
+                  language code, <val>yyyy</val> the year of publication, and <val>d</val> an extra
+                  digit for disambiguation</item>
+               <item>the <att>xmlns</att> attribute is needed for TEI conformance</item>
+               <item>the value of <att>xml:lang</att> is the ISO 639-2 language code</item>
+            </list>
+         </div>
+      -->
+         <div type="slide">
+            <head>A note on page breaks</head>
+            <list>
+               <item> ELTeC transcription need not capture any aspect of a book's original
+                  appearance, including its pagination. </item>
+               <item> However, <list><item>identifying a page number is useful when checking the
+                        encoding against an original</item><item>identifying all page breaks can
+                        also facilitate some kinds of analysis.</item></list></item>
+               <item>Use <tag>pb/</tag> to mark the start of each new page or <tag>pb n="x"/</tag>
+                  for the page numbered <val>x</val> in the source.</item>
+            </list>
+         </div>
+
+         <div type="slide">
+            <head>The text itself</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <text>
+                  <front>
+                     <div type="titlepage">...</div>
+                     <div type="liminal">...</div>
+                  </front>
+                  <body>
+                     <div type="chapter">....</div>
+                  </body>
+                  <back>
+                     <div type="notes">...</div>
+                  </back>
+               </text>
+            </egXML>
+            <list>
+               <item>Find the first and last chapters of the novel: everything before this is the
+                     <gi>front</gi>, everything after is the <gi>back</gi>, everything in between is
+                  the <gi>body</gi>.</item>
+               <item>Discard (do not transcribe) any non-authorial sections from front or
+                  back</item>
+               <item>Use <gi>div</gi>, with an appropriate <att>type</att> to mark remaining
+                  sections <list>
+                     <item>Use <tag>div type='titlepage'</tag> for the titlepage</item>
+                     <item>Use <tag>div type='liminal'</tag> for any other subdivision of front or
+                        back</item>
+                     <item>Use <tag>div type='chapter'</tag> for chapters</item>
+                     <item>Use <tag>div type='group'</tag> for groupings of chapters </item>
+                     <item>Use <tag>div type='letter'</tag> for epistolary novels</item>
+                     <item>Use <tag>div type='notes'</tag> within the back for notes</item>
+                  </list></item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>Headings and footers</head>
+            <list>
+               <item>Use <gi>head</gi> for each heading or title provided at the beginning of a
+                  section, and <gi>trailer</gi> for each provided at the end</item>
+               <item>Discard running titles or page headers</item>
+            </list>
+         </div>
+         <div type="slide">
+            <head>Prose and verse</head>
+         </div>
+         <div type="slide">
+            <head>Typographic salience</head>
+         </div>
+         <div type="slide">
+            <head>Omissions and corrections</head>
+         </div>
+         <div type="slide">
+            <head>Sub-divisions of chapters</head>
+         </div>
+         <div type="slide">
+            <head>Emphasis and code switching</head>
+         </div>
+         <div type="slide">
+            <head>Floating headings and titles</head>
+         </div>
+         <div type="slide">
+            <head>Quotation</head>
+         </div><div type="slide">
+            <head>Authorial notes</head>
+         </div>
+      </body>
+   </text>
+</TEI>
