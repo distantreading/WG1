@@ -32,17 +32,18 @@
                <item>paragraphs (<gi>p</gi>)</item>
                <item>verse (<gi>l</gi>)</item>
                <item>typographic salience (<gi>hi</gi>) [optional] </item>
-             </list>
-            <p>A level 1 encoding permits the following additional distinctions, all optional but recommended: </p>
+            </list>
+            <p>A level 1 encoding permits the following additional distinctions, all optional but
+               recommended: </p>
             <list>
                <item>omitted material(<gi>gap</gi>)</item>
                <item>editorial correction (<gi>corr</gi>)</item>
                <item>chapter subdivision (<gi>milestone</gi>)</item>
                <item>linguistic emphasis (<gi>emph</gi>)</item>
                <item>code-shifting (<gi>foreign</gi>)</item>
-               <item>floating headings and titles (<gi>label</gi>,<gi>title</gi>)</item>
+               <item>floating headings and titles (<gi>label</gi>, <gi>title</gi>)</item>
                <item>quotation (<gi>quote</gi>)</item>
-                <item>authorial notes (<gi>note</gi>, <gi>ref</gi>)</item>
+               <item>authorial notes (<gi>note</gi>, <gi>ref</gi>)</item>
             </list>
          </div>
          <!--<div type="slide">
@@ -66,9 +67,12 @@
             <list>
                <item> ELTeC transcription need not capture any aspect of a book's original
                   appearance, including its pagination. </item>
-               <item> However, <list><item>identifying a page number is useful when checking the
-                        encoding against an original</item><item>identifying all page breaks can
-                        also facilitate some kinds of analysis.</item></list></item>
+               <item> However, <list>
+                     <item>identifying a page number is useful when checking the encoding against an
+                        original</item>
+                     <item>identifying all page breaks can also facilitate some kinds of
+                        analysis.</item>
+                  </list></item>
                <item>Use <tag>pb/</tag> to mark the start of each new page or <tag>pb n="x"/</tag>
                   for the page numbered <val>x</val> in the source.</item>
             </list>
@@ -118,26 +122,113 @@
          </div>
          <div type="slide">
             <head>Prose and verse</head>
+            <p>At level 0, the element <gi>p</gi> is used for any stretch of prose text followed by
+               a significant line break. It is usually, but not necessarily, a complete syntactic
+               unit. </p>
+            <p>The element <gi>l</gi> should be used for each distinct line of verse, where this is
+               clearly not prose, as in for example a song or an epigraph. </p>
+            <p>At level 1, quoted paragraphs or quoted verse may be wrapped in a <gi>quote</gi>
+               element. </p>
          </div>
          <div type="slide">
             <head>Typographic salience</head>
+            <list>
+               <item>An ELTeC transcription need not capture any aspect of a book's original
+                  appearance, including its typography. </item>
+               <item>However, it is often useful to distinguish (e.g.) italicized words or phrases
+                  because this usage may have a semantic implication.</item>
+               <item>At level 0, we record simply that such words are <hi>typographically
+                     salient</hi>, using the <gi>hi</gi> element with no attributes</item>
+               <item>At level 1, we may instead capture the semantic implication, using e.g.
+                     <gi>emph</gi> or <gi>foreign</gi>. </item>
+            </list>
          </div>
          <div type="slide">
             <head>Omissions and corrections</head>
+            <p>At level 0, material which has been omitted from a transcription is simply omitted,
+               and any editorial corrections to the text are silently applied.</p>
+            <p>At level 1, we record the fact that something has been omitted using the <gi>gap</gi>
+               element, and the fact that some text has been corrected using the <gi>corr</gi>
+               element.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><!-- a picture in the original has been omitted-->
+               <gap desc="graphic"/></egXML>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><!-- the word "indubitably" has been provided by an editor or transcriber -->
+               <p>... and so <corr>indubitably</corr> preferable .. </p></egXML>
          </div>
          <div type="slide">
             <head>Sub-divisions of chapters</head>
+            <p>Do not use <gi>div</gi> for subdivisions of chapters: instead mark the point at which
+               the subdivision is indicated with a <gi>milestone</gi> element, using its
+                  <att>unit</att> attribute to indicate the kind of subdivision concerned, and
+               (optionally) its <att>rend</att> attribute to indicate the appearance of the
+               milestone.</p>
+            <p>At level 0, a milestone indication such as a row of stars may be retained as a
+                  <gi>p</gi>, but this should be changed at level 1. </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <!-- level 0 -->
+               <p>.... forever.</p>
+               <p>*****</p>
+               <p>Next morning .... </p>
+               <!-- level 1 -->
+               <p>.... forever.</p>
+               <milestone unit="subchapter" rend="stars"/>
+               <p>Next morning .... </p>
+            </egXML>
          </div>
          <div type="slide">
             <head>Emphasis and code switching</head>
+            <p>At level 1, emphasized words in speech or narrative may be marked using
+               <gi>emph</gi>. </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">You said <emph>what</emph>?</egXML>
+            <p>At level 1, code switching (use of a language other than that of the main narrative)
+               may be marked using <gi>foreign</gi>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples"/></p>
+            <p>The <att>xml:lang</att> attribute may optionally be used to specify the language
+               switched to, but is not obligatory</p>
          </div>
          <div type="slide">
             <head>Floating headings and titles</head>
+            <p>At level 1, headings or labels not attached to a division should be marked using
+                  <gi>label</gi>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples"/></p>
+            <p>At level 1, titles of songs, literary works, etc. may optionally be marked using
+                  <gi>title</gi>. <egXML xmlns="http://www.tei-c.org/ns/Examples"/></p>
          </div>
          <div type="slide">
             <head>Quotation</head>
-         </div><div type="slide">
+            <p>At level 1, passages such as epigraphs or quoted songs, may be marked using
+                  <gi>quote</gi>
+            </p>
+         </div>
+         <div type="slide">
             <head>Authorial notes</head>
+            <p>At level 0, all notes are omitted. At level 1 : </p>
+            <list>
+               <item>Only authorial notes should be retained. Editorial or textual notes should be
+                  silently omitted</item>
+               <item>The content of the authorial note should be marked using <gi>note</gi></item>
+               <item>The siglum indicating the point of attachment for the note within the text
+                  should be marked using <gi>ref</gi></item>
+               <item>All <gi>note</gi> elements should be given a unique identifier (e.g. use the text
+                  identifier followed by "N" and a number) as value for their <att>xml:id</att>
+               </item>
+               <item>All <gi>ref</gi> elements should indicate the note they refer to by means of
+                  their <att>target</att> attribute</item>
+               <item>All <gi>note</gi> elements should be collected together in the <gi>back</gi>
+                  element, inside a <tag>div type="notes"</tag>, no matter where they appear in the
+                  source</item>
+            </list>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><body>
+                  <div type="chapter">
+                     <p> .... <ref target="#EN042N01">[1]</ref></p>
+                  </div>
+               </body>
+               <back>
+                  <div type="notes">
+                     <note xml:id="EN042N01">Or so they say.</note>
+                  </div>
+               </back>
+            </egXML>
          </div>
       </body>
    </text>
