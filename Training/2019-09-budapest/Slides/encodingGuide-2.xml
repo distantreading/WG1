@@ -75,6 +75,9 @@
                   </list></item>
                <item>Use <tag>pb/</tag> to mark the start of each new page or <tag>pb n="x"/</tag>
                   for the page numbered <val>x</val> in the source.</item>
+               <item>If a word is hyphenated across a page break, re-assemble it on the page where
+                  it begins</item>
+               <item>Discard any catchword, running page header or footer, etc.</item>
             </list>
          </div>
 
@@ -98,8 +101,7 @@
                <item>Find the first and last chapters of the novel: everything before this is the
                      <gi>front</gi>, everything after is the <gi>back</gi>, everything in between is
                   the <gi>body</gi>.</item>
-               <item>Discard (do not transcribe) any non-authorial sections from front or
-                  back</item>
+               <item>Discard any non-authorial sections from front or back</item>
                <item>Use <gi>div</gi>, with an appropriate <att>type</att> to mark remaining
                   sections <list>
                      <item>Use <tag>div type='titlepage'</tag> for the titlepage</item>
@@ -114,11 +116,22 @@
          </div>
          <div type="slide">
             <head>Headings and footers</head>
+            <figure>
+               <graphic url="https://distantreading.github.io/media/chapheading.png"/>
+            </figure>
             <list>
                <item>Use <gi>head</gi> for each heading or title provided at the beginning of a
                   section, and <gi>trailer</gi> for each provided at the end</item>
                <item>Discard running titles or page headers</item>
             </list>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><div>...<p>Le président fit un signe et
+                     la musique de la garde républicaine joua la Marseillaise.</p>
+               </div><div type="chapter">
+                  <head>II</head>
+                  <head>LE MARQUIS DE LA LANDE</head>
+                  <p>Dans la coquette garçonnière des Champs-Elysées...</p>
+               </div>
+            </egXML>
          </div>
          <div type="slide">
             <head>Prose and verse</head>
@@ -127,9 +140,24 @@
                unit. </p>
             <p>The element <gi>l</gi> should be used for each distinct line of verse, where this is
                clearly not prose, as in for example a song or an epigraph. </p>
+        <figure><graphic url="../media/quotedSong.png"/></figure>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>Eraû ceasurile 10. Un beţiv trecênd
+                  pe stradă cânta a lene: </p>
+               <l>Vin drăguţă lângă mine: </l>
+               <l>Drăguţă, drăguţă ...</l>
+               <l>Căcĭc mi-e dor, mi-e dor de tine ...</l>
+            <!-- ... -->
+               <p>Si românul, beţiv, ca si fanaraiotul păgân...</p></egXML>
             <p>At level 1, quoted paragraphs or quoted verse may be wrapped in a <gi>quote</gi>
-               element. </p>
-         </div>
+               element. </p>  
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>Eraû ceasurile 10. Un beţiv trecênd
+               pe stradă cânta a lene: </p>
+              <quote> <l>Vin drăguţă lângă mine: </l>
+               <l>Drăguţă, drăguţă ...</l>
+               <l>Căcĭc mi-e dor, mi-e dor de tine ...</l>
+         </quote>   <!-- ... -->
+            <p>Si românul, beţiv, ca si fanaraiotul păgân...</p>
+            </egXML></div>
          <div type="slide">
             <head>Typographic salience</head>
             <list>
@@ -154,9 +182,20 @@
                <gap desc="graphic"/></egXML>
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><!-- the word "indubitably" has been provided by an editor or transcriber -->
                <p>... and so <corr>indubitably</corr> preferable .. </p></egXML>
-         </div>
+         <p>The same element may be used to mark where 
+            something missing in the source (eg opening quotation mark) has been 
+            supplied by the encoder:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"> <div>
+               <head>I. Dika Lombardije.</head>
+               <p n="SL-WIKI001351">
+                  <corr>„</corr>Italija, kako lepa si, prostrana naša domovina! Kamorkoli se ozre oko,
+                  odpiraš mu nova čuda....dika Lombardije.“ —
+                  Tako je sanjaril sam s seboj pesnik Antonio Loschi...</p></div></egXML></p></div>
          <div type="slide">
             <head>Sub-divisions of chapters</head>
+            <figure>
+               <graphic url="../media/p160.png"/>
+            </figure>
             <p>Do not use <gi>div</gi> for subdivisions of chapters: instead mark the point at which
                the subdivision is indicated with a <gi>milestone</gi> element, using its
                   <att>unit</att> attribute to indicate the kind of subdivision concerned, and
@@ -164,25 +203,28 @@
                milestone.</p>
             <p>At level 0, a milestone indication such as a row of stars may be retained as a
                   <gi>p</gi>, but this should be changed at level 1. </p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <!-- level 0 -->
-               <p>.... forever.</p>
-               <p>*****</p>
-               <p>Next morning .... </p>
-               <!-- level 1 -->
-               <p>.... forever.</p>
-               <milestone unit="subchapter" rend="stars"/>
-               <p>Next morning .... </p>
-            </egXML>
+            <p>At level 0: <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <p>... stern-looking woman.</p>
+                  <p>* * * *</p>
+                  <p>Months had passed by .... </p>
+               </egXML></p>
+            <p>At level 1: <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <p>...stern-looking woman.</p>
+                  <milestone unit="subchapter" rend="stars"/>
+                  <p>Months had passed by... </p>
+               </egXML></p>
          </div>
          <div type="slide">
             <head>Emphasis and code switching</head>
             <p>At level 1, emphasized words in speech or narrative may be marked using
                <gi>emph</gi>. </p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">You said <emph>what</emph>?</egXML>
+            
             <p>At level 1, code switching (use of a language other than that of the main narrative)
                may be marked using <gi>foreign</gi>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples"/></p>
+            <figure><graphic url="../media/codeSwitch.png"/></figure>   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <p> -- Ite! Un <foreign>miş-maş</foreign>, zise Kiva, care intrand auzise spusele Zamfirei.</p>
+               </egXML></p>
             <p>The <att>xml:lang</att> attribute may optionally be used to specify the language
                switched to, but is not obligatory</p>
          </div>
@@ -196,9 +238,14 @@
          </div>
          <div type="slide">
             <head>Quotation</head>
-            <p>At level 1, passages such as epigraphs or quoted songs, may be marked using
-                  <gi>quote</gi>
-            </p>
+            <list>
+               <item>At level 1, passages such as epigraphs or quoted songs, may be marked using
+                     <gi>quote</gi>. </item>
+               <item>Do not however use <gi>quote</gi> for quoted phrases within a paragraph: simply
+                  retain the quotation marks (similarly, for direct speech)</item>
+               <item>A citation e.g. giving the author of a quotation can be marked using
+                     <gi>label</gi> or as a free-standing <gi>p</gi></item>
+            </list>
          </div>
          <div type="slide">
             <head>Authorial notes</head>
@@ -209,8 +256,8 @@
                <item>The content of the authorial note should be marked using <gi>note</gi></item>
                <item>The siglum indicating the point of attachment for the note within the text
                   should be marked using <gi>ref</gi></item>
-               <item>All <gi>note</gi> elements should be given a unique identifier (e.g. use the text
-                  identifier followed by "N" and a number) as value for their <att>xml:id</att>
+               <item>All <gi>note</gi> elements should be given a unique identifier (e.g. use the
+                  text identifier followed by "N" and a number) as value for their <att>xml:id</att>
                </item>
                <item>All <gi>ref</gi> elements should indicate the note they refer to by means of
                   their <att>target</att> attribute</item>
