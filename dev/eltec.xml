@@ -634,7 +634,9 @@
                                     <dataRef key="teidata.enumerated"/>
                                 </datatype>
                                 <valList type="closed">
-                                    <valItem ident="high">
+                                    <valItem ident="unmarked">
+                                        <desc>information not yet available</desc>
+                                    </valItem><valItem ident="high">
                                         <desc>text has been republished very frequently during the
                                             period concerned</desc>
                                     </valItem>
