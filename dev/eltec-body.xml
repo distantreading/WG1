@@ -69,7 +69,7 @@
             editions should be freely available (free licences for reusing them. The first edition
             is more interesting from a philological point of view. It represents the authentic texts
             of the authors. Dealing with historical texts might require some cleaning up or
-            normalizations. We will merge all word forms which are seperated by line breaks. At the
+            normalizations. We will merge all word forms which are separated by line breaks. At the
             moment, we must assume that there are no (sufficiently good) normalization tools for
             every language. Later editions of a novel may be already normalized in some way. This
             might lead to different text representations in ELTeC which should be indicated in the
@@ -142,9 +142,9 @@
             <item>at least 10%-50% have been written by female authors for the language
                subcollection.</item>
             <item>9 to 11 authors are represented with exact three novels.</item>
-            <item>at least 30% are highly canonized novels, at least 30% should be non-canonized
-               novels, based on the following reprint groups: reprinted not at all, reprinted once,
-               reprinted more than once within the period 1980-2000</item>
+            <item>at least 30% are highly canonical novels and at least 30% should be novels of low canonicity;
+ canonicity is assessed by investigating the number of times a title was reprinted during the period 1970-2009.
+               </item>
             <item>at least 20% are short novels (10-50k word tokens), at least 20% are long novels
                (>200k word tokens).</item>
          </list>
@@ -173,12 +173,10 @@
             </item>
             <label>Reprint count</label>
             <item><p>We propose to use the number of times a work is reprinted as an objective
-                  measure of its reception from 1980-2000, using categories like the following: </p><list>
-                  <item>low: no reprints at all,</item>
-                  <!-- TODO XXX: differences in the ODD -->
-                  <item>medium: reprinted once,</item>
-                  <item>high: reprinted more than once,</item>
-                  <item>We will not include digitizations of texts in the reprint count.</item>
+                  measure of its reception during the period 1970-2009, using categories like the following: </p><list>
+                  <item>low: few or no reprints found during this period,</item>
+                  <item>high: many reprints found during this period</item>
+                  <item>Note that the reprint count does not include digitizations of texts.</item>
                </list></item>
             <label>Author gender</label>
             <item>
@@ -507,7 +505,7 @@
             </row>
             <row>
                <cell>Title page</cell>
-               <cell><tag>div type="liminal"</tag> within <gi>front</gi></cell>
+               <cell><tag>div type="titlepage"</tag> within <gi>front</gi></cell>
                <cell>Optional at level 0</cell>
             </row>
             <row>
@@ -540,7 +538,7 @@
             </row>
             <row>
                <cell>Verse line</cell>
-               <cell><gi>l</gi>?</cell>
+               <cell><gi>l</gi></cell>
                <cell>Use only for verse lines in display blocks</cell>
             </row>
 
@@ -573,7 +571,7 @@
                <cell>Mid-chapter structural marker</cell>
                <cell>omitted</cell>
                <cell><tag>milestone/</tag></cell>
-               <cell>use <att>unit</att>  and <att>type</att> to specify further detail</cell>
+               <cell>use <att>unit</att>  and <att>type</att> to supply further detail</cell>
             </row>
             
             <row>
@@ -590,7 +588,7 @@
                <cell>Replace with <gi>foreign</gi>, <gi>title</gi>, <gi>label</gi>, <gi>emph</gi> as
                   appropriate</cell>
 
-               <cell>Level 1 may use <att>rend</att> attribute with values ul ro sc it ? </cell>
+               <cell><!--Level 1 may use <att>rend</att> attribute with values ul ro sc it ?--> </cell>
             </row>
 
             <row>
@@ -844,8 +842,8 @@
                   </textDesc>
                </profileDesc></egXML> This text is mostly in Italian, but approximately a tenth of
             it is taken up with quotations in English, and another tenth with quotations in German.
-            Its description indicates that it has a male author, is of low canonicity (i.e. has not
-            been republished after its original publication time slot), contains more than 100,000
+            Its description indicates that it has a male author, is of low canonicity (i.e. few reprints have 
+    been found during the period 1970-2009), contains more than 100,000
             words, and was first published between 1880 and 1899. </p>
       </div>
       <div>

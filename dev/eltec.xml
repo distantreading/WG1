@@ -249,12 +249,13 @@
                             </egXML>
                         </exemplum>
                         <remarks>
-                            <p>In an ELTeC text, the publication statement always has components as
+                            <p>In a published ELTeC text, the publication statement always has components as
                                 shown above: a <gi>distributor</gi> naming the project itself, a
                                 <gi>date</gi> showing the text was added to the Collection, and an <gi>availability</gi>
                                 element containing a standardised statement concerning its licence.
                                 One or more <gi>ref</gi> elements may also follow specifying a URL from
-                                which the text may be downloaded.</p>
+                                which the text may be downloaded. These details are added during the publication
+process, if not already present.</p>
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="bibl" mode="change">
@@ -640,13 +641,16 @@
                                         <desc>text has been republished very frequently during the
                                             period concerned</desc>
                                     </valItem>
-                                    <valItem ident="medium">
+                                 <!--   <valItem ident="medium">
                                         <desc>text has been republished occasionally during the
                                             period concerned</desc>
-                                    </valItem>
+                                    </valItem>-->
                                     <valItem ident="low">
                                         <desc>text has been reprinted only occasionally or not at all during the
                                             period concerned</desc>
+                                    </valItem>
+                                    <valItem ident="unspecified">
+                                        <desc>information about the number of reprints not yet determined</desc>
                                     </valItem>
                                 </valList>
                                 <remarks>
@@ -1088,7 +1092,7 @@
                                             <textDesc>
                                                 <e:authorGender key="M"/>
                                                 <e:size key="long"/>
-                                                <e:canonicity key="medium"/>
+                                                <e:canonicity key="unspecified"/>
                                                 <e:timeSlot key="T1"/>
                                             </textDesc>
                                         </profileDesc>
