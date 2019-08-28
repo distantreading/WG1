@@ -251,10 +251,9 @@
                </row>
                <row>
                   <cell role="label">canonicity</cell>
-                  <cell><hi rend="bold">low</hi> (&lt;10) </cell>
-                  <cell><hi rend="bold">medium</hi> </cell>
-                  <cell><hi rend="bold">high</hi> (&gt;50)</cell>
-                  <cell/>
+                  <cell><hi rend="bold">low</hi> (reprinted infrequently or never) </cell>
+                  <cell><hi rend="bold">high</hi> (reprinted very frequently)</cell>
+                  <cell><hi rend="bold">unmarked</hi> (reprint information not available)</cell>
                </row>
                <row>
                   <cell/>
