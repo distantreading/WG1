@@ -1,125 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_simplePrint.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_simplePrint.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="file:/home/lou/Public/TEIslides/teislides.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>ELTeC Tutorial</title>
-         </titleStmt>
-         <publicationStmt>
-            <p>Publication information</p>        
-         </publicationStmt>
-         <sourceDesc>
-            <p>Information about the source</p>
-         </sourceDesc>
-      </fileDesc>
-  </teiHeader>
-  <text>
-      <body>
-           <div n="1">
-            <head>Quick ELTeC Corpus Building</head>
-            <p>We've found a great resource on the internet: 100 transcribed Polish novels, all ready to be
-            used. Just a few problems:
-            <list>
-               <item>No metadata (other than filenames), so we need to build a proper ElTeC header for each one</item>
-               <item>No markup of any sort, so we need to identify chapters, headings, and paragraphs automatically if possible</item>
-            </list></p>
-            <p>This tutorial steps you through the process of going from a plain text file to a level-0 encoded ElTeC conformant version
-            You should be able to carry this out without any knowledge of Polish, but we do have a 
-            Polish participant who has kindly agreed to provide advice if you get stuck. 
-            </p>
-         </div>
-         <div n="2">
-            <head>The recipe</head>
-            <p>This is a four stage process</p>
-            <list>
-               <item>First create a new empty ELTeC-0 document</item><item>Next complete the TEI Header for your chosen title</item>
-               <item>Next insert the text of the corresponding file into the <gi>body</gi> element</item>
-               <item>Use regexp matching to find paragraphs (each line of text in the file 
-                  corresponds with a single paragraph)</item><item>Use regexp matching to identify chapter divisions and 
-                     chapter titles</item>
-            </list>
-    </div>
-       <div>
-          <head>Stage 1 : creating a document</head>
-          <list>
-             <item>Open oXygen and click on the New icon (first left on the toolbar); or select
-                File->New from the menu; or type CTRL-N</item>
-             <item>The New File dialogue appears. Select XML Document from the New Document
-                menu, and enter an output filename in the window labelled Save As at the bottom: this should be the same as your chosen
-                input text file, but with the extension <code>.xml</code>. </item>
-             <item>oXygen needs to be told where to
-                find the definition for the XML customization we want to use. This is provided
-                by a file called a <term>schema</term>, and this dialogue would like you to
-                specify where to find it in the box labelled <ident>Schema URL</ident>. The
-                file you need is called <ident>eltec-0.rng</ident> and you can get a local copy
-                from your Work directory (it's in the folder Schema); alternatively you can
-                find the same file online at
-                http://distantreading.github.com/Schema/eltec-0.rng. Use the arrow to the right
-                of the window to navigate to the schema file and open it. Then press the <ident>Create</ident>
-                button.</item>
-             <item>The main oXygen editing window opens, with the beginnings of an ELTeC XML
-                file in it. Note the following: <list>
-                   <item>At the top of the file there are two purple lines beginning
-                      <code>&lt;?xml</code>.</item>
-                   <item>The file contains tags (in blue) and attribute names (in orange) but
-                      no text as yet.</item>
-                   <item>To the right of the main window there is a status bar with an angry
-                      red square at the top and some red error flags. These correspond with
-                      parts of the text display underlined in red.</item>
-                   <item>Underneath the editing window there is an error message corresponding
-                      with the first error flag: <code>value of attribute "xml:id" is invalid</code></item>
-                </list></item>
-             <item>The red flags tell us that although oXygen has done its best some additional
-                information is needed to create a document which is valid according to the
-                rules specified in the schema we have named. Let's fix up some of these errors! <list>
-                  <!-- <item>We need to add something inside the element sourceDesc. Put the cursor
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ELTeC Tutorial</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about the source</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="slide">
+                <head>Quick ELTeC Corpus Building</head>
+                <p>We've found a great resource on the internet: 100 transcribed Polish novels, all
+                    ready to be used. Just a few problems: <list>
+                        <item>No metadata (other than filenames), so we need to build a proper ElTeC
+                            header for each one</item>
+                        <item>No markup of any sort, so we need to identify chapters, headings, and
+                            paragraphs automatically if possible</item>
+                    </list></p>
+                <p>This tutorial steps you through the process of going from a plain text file to a
+                    level-0 encoded ElTeC conformant version You should be able to carry this out
+                    without any knowledge of Polish, though we do have a Polish participant who has
+                    kindly agreed to provide advice if you get stuck. </p>
+            </div>
+            <div type="slide">
+                <head>The recipe</head>
+                <p>This is a five stage process</p>
+                <list>
+                    <item>select and identify the text; create a new empty ELTeC-0 document</item>
+                    <item>complete the TEI Header for your chosen title</item>
+                    <item>insert the text of the corresponding file into the <gi>body</gi>
+                        element</item>
+                    <item>Use regexp matching to identify chapter divisions and chapter
+                        titles</item>
+                    <item>Use regexp matching to identify paragraphs</item>
+                </list>
+            </div>
+            <div type="slide">
+                <head>Stage 1 : creating a document</head>
+                <list>
+                    <item>Open oXygen and click on the New icon (first left on the toolbar); or
+                        select File->New from the menu; or type CTRL-N</item>
+                    <item>The New File dialogue appears. Select XML Document from the New Document
+                        menu, and enter an output filename in the window labelled Save As at the
+                        bottom: this should be the same as your chosen input text file, but with the
+                        extension <code>.xml</code>. </item>
+                    <item>oXygen needs to be told where to find the definition for the XML
+                        customization we want to use. This is provided by a file called a
+                            <term>schema</term>, and this dialogue would like you to specify where
+                        to find it in the box labelled <ident>Schema URL</ident>. The file you need
+                        is called <ident>eltec-0.rng</ident> and you can get a local copy from your
+                        Work directory (it's in the folder Schema); alternatively you can find the
+                        same file online at http://distantreading.github.com/Schema/eltec-0.rng. Use
+                        the arrow to the right of the window to navigate to the schema file and open
+                        it. Then press the <ident>Create</ident> button.</item>
+                    <item>The main oXygen editing window opens, with the beginnings of an ELTeC XML
+                        file in it. Note the following: <list>
+                            <item>At the top of the file there are two purple lines beginning
+                                    <code>&lt;?xml</code>.</item>
+                            <item>The file contains tags (in blue) and attribute names (in orange)
+                                but no text as yet.</item>
+                            <item>To the right of the main window there is a status bar with an
+                                angry red square at the top and some red error flags. These
+                                correspond with parts of the text display underlined in red.</item>
+                            <item>Underneath the editing window there is an error message
+                                corresponding with the first error flag: <code>value of attribute
+                                    "xml:id" is invalid</code></item>
+                        </list></item>
+                    <item>The red flags tell us that although oXygen has done its best some
+                        additional information is needed to create a document which is valid
+                        according to the rules specified in the schema we have named. Let's fix up
+                        some of these errors! <list>
+                            <!-- <item>We need to add something inside the element sourceDesc. Put the cursor
                       between the start and end tags for this element, i.e. after
                       <tag>sourceDesc</tag> and before <tag>/sourceDesc</tag>. Now type a
                       &lt; </item>
                    <item>Scan the menu of possibilities which opens: you can insert an element
                       called bibl or p, a comment, or a few other oddities. Choose p and press
                       RETURN.</item>-->
-                   <item>The schema requires a value for @xml:id but we have not yet supplied one. 
-                      Put the cursor between the
-                      quote marks and type in the identifier for your novel: this is the first part of the
-                      filename, e.g.  <code>POL042</code>. The  error message disappears!
-                      To celebrate, add a value (<code>po</code>) for the attribute
-                      <att>xml:lang</att>: this specifies the language code for the
-                      document. </item>
-                   <item>The third error is like the first: <code>element "body"
-                      incomplete...</code> so fix it in the same way. Put the cursor inside
-                      the <gi>body</gi> element and type a &lt; to see what's legal here. We
-                      suggest you add a <tag>div type="chapter"</tag>. Phew! no red marks
-                      anywhere! Your document is valid: click the disk icon (or type CTRL-S, or
-                      choose File-Save from the menu) to save it for further work.</item>
-                </list></item>
-          </list></div><div><head>Stage 2 : add some text</head>
-          <p>Now we are ready to add some text to our document. </p>
-          <list><item>Put the cursor inside the <gi>body</gi> element and delete the <gi>div</gi> element you created
-          before. </item><item>Select Document-> File -> Insert File from the menu, and navigate to the text file
-          you are planning to convert</item>
-             <item>In this file, each chapter is prefixed by 
-          - a line containing an uppercase Roman number, followed by
-          - a line containing the chapter title, all in uppercase. We can use this regular
-          expression to find these: <code>([IXV]+)\n([\p{Lu}]+)\n</code>. Open the Find/Replacwe dialogue, and type it
-                carefully into trhe Find: box. Press the Find button to check that it is finding wht you expect..
-             </item>
-          <item>This expression will match any line containing just a sequence of one or more I X V characters
-             followed by a line containing any sequence of uppercase letters. The parentheses in the refexp
-             allow us to pick out the character strings that have been matched, and we can then use them un the
-             replacement value. Type the following into the Replace With dialogue
-             <egXML><![CDATA[ </div><div type="chapter"><head>\1</head>\n<head>\2</head>]]></egXML>
-             Press the Replace button and check that it has introduced the right tags.
-             </item><item>When you are sure that your regexp is working correctly, press the Replace to End button
-             </item>
-              Open the 
-             <ident>Find/Replace</ident> dialogue and 
-          make sure that the check box <ident>Regular expression</ident> is selected</item><item>type <code>(.+)\n</code> into the Find: box, 
-           and <code>&lt;p>\1&lt;/p>\n</code> into the <ident>Replace with:</ident> box.</item></list></div>
+                            <item>The schema requires a value for @xml:id but we have not yet
+                                supplied one. Put the cursor between the quote marks and type in the
+                                identifier for your novel: this is the first part of the filename,
+                                e.g. <code>POL042</code>. The error message disappears! To
+                                celebrate, add a value (<code>po</code>) for the attribute
+                                    <att>xml:lang</att>: this specifies the language code for the
+                                document. </item>
+                            <item>The third error is like the first: <code>element "body"
+                                    incomplete...</code> so fix it in the same way. Put the cursor
+                                inside the <gi>body</gi> element and type a &lt; to see what's legal
+                                here. We suggest you add a <tag>div type="chapter"</tag>. Phew! no
+                                red marks anywhere! Your document is valid: click the disk icon (or
+                                type CTRL-S, or choose File-Save from the menu) to save it for
+                                further work.</item>
+                        </list></item>
+                </list>
+            </div>
+            <div type="slide">m
 
-      </body>
-  </text>
+
+                <head>Stage 2 : add some text</head>
+                <p>Now we are ready to add some text to our document. </p>
+                <list>
+                    <item>Put the cursor inside the <gi>body</gi> element and delete the
+                            <gi>div</gi> element you created before. </item>
+                    <item>Select Document-> File -> Insert File from the menu, and navigate to the
+                        text file you are planning to convert</item>
+                    <item> Open the <ident>Find/Replace</ident> dialogue and make sure that the
+                        check box <ident>Regular expression</ident> is selected</item>
+                </list>
+            </div>
+            <div type="slide">
+                <head>Stage 3 : identify the chapters and headings</head>
+                <list>
+                    <item>In this file, each chapter is prefixed by - a line containing an uppercase
+                        Roman number, followed by - a line containing the chapter title, all in
+                        uppercase. We can use this regular expression to find these:
+                            <code>([IXV]+)\n([\p{Lu}]+)\n</code>. Open the Find/Replacwe dialogue,
+                        and type it carefully into trhe Find: box. Press the Find button to check
+                        that it is finding wht you expect.. </item>
+                    <item>This expression will match any line containing just a sequence of one or
+                        more I X V characters followed by a line containing any sequence of
+                        uppercase letters. The parentheses in the refexp allow us to pick out the
+                        character strings that have been matched, and we can then use them un the
+                        replacement value. Type the following into the Replace With dialogue
+                            <code><![CDATA[ </div><div type="chapter"><head>\1</head>\n<head>\2</head>]]></code>
+                        Press the Replace button and check that it has introduced the right tags. </item>
+                    <item>When you are sure that your regexp is working correctly, press the Replace
+                        to End button </item>
+                </list>
+            </div>
+            <div type="slide">
+                <head>Stage 4: identify the paragraphs</head>
+                <list>
+                    <item>type <code>(.+)\n</code> into the Find: box, and
+                            <code>&lt;p>\1&lt;/p>\n</code> into the <ident>Replace with:</ident>
+                        box.</item>
+                </list>
+            </div>
+        </body>
+    </text>
 </TEI>
