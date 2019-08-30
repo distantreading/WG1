@@ -38,33 +38,35 @@
                     <item>complete the TEI Header for your chosen title</item>
                     <item>insert the text of the corresponding file into the <gi>body</gi>
                         element</item>
-                    <item>Use regexp matching to identify chapter divisions and chapter
-                        titles</item>
-                    <item>Use regexp matching to identify paragraphs</item>
+                    <item>identify chapter divisions and chapter titles</item>
+                    <item>identify paragraphs</item>
                 </list>
             </div>
             <div type="slide">
-                <head>Stage 1 : creating a document</head>
+                <head>Stage 1 : selecting and creating a document</head>
+                <p>Take a look at the <ident>POL</ident> folder. It contains 18 files we've
+                    pre-selected for you, along with a tiny bit of metadata in a file called
+                        <ident>titles.txt</ident> which supplies you with an identifier, a filename,
+                    a wordcount, and a magic incantation (see below) for each title. Choose a title
+                    to work on (or we'll give you one)! </p>
+                <p>Each filename contains the surname of the author, a word from the title, and the
+                    date of first publication. You'll need to enter the name and the title in some
+                    suitable search engine (Wikipedia, Worldcat ...) to get the metadata necessary
+                    to complete your TEI Header, notably the author's full name, dates, and sex, as
+                    well as the full title. Armed with that additional information for your chosen
+                    text, proceed as follows: </p>
                 <list>
                     <item>Open oXygen and click on the New icon (first left on the toolbar); or
                         select File->New from the menu; or type CTRL-N</item>
-                    <item>The New File dialogue appears. Select XML Document from the New Document
-                        menu, and enter an output filename in the window labelled Save As at the
-                        bottom: this should be the same as your chosen input text file, but with the
-                        extension <code>.xml</code>. </item>
-                    <item>oXygen needs to be told where to find the definition for the XML
-                        customization we want to use. This is provided by a file called a
-                            <term>schema</term>, and this dialogue would like you to specify where
-                        to find it in the box labelled <ident>Schema URL</ident>. The file you need
-                        is called <ident>eltec-0.rng</ident> and you can get a local copy from your
-                        Work directory (it's in the folder Schema); alternatively you can find the
-                        same file online at http://distantreading.github.com/Schema/eltec-0.rng. Use
-                        the arrow to the right of the window to navigate to the schema file and open
-                        it. Then press the <ident>Create</ident> button.</item>
-                    <item>The main oXygen editing window opens, with the beginnings of an ELTeC XML
-                        file in it. Note the following: <list>
+                    <item>The New File dialogue appears. Under the heading <ident>Global
+                            templates</ident>, you should see the template for ELTeC-0. Select it.
+                        (If it's not there, you need to tweak your installation of oXygen; or you
+                        can simply open the template file <ident>ELTeC-0.xml</ident> from your Work
+                        directory). Either way...</item>
+                    <item>... the main oXygen editing window opens, with the beginnings of an ELTeC
+                        XML file in it. Note the following: <list>
                             <item>At the top of the file there are two purple lines beginning
-                                    <code>&lt;?xml</code>.</item>
+                                    <code>&lt;?xml-model</code>.</item>
                             <item>The file contains tags (in blue) and attribute names (in orange)
                                 but no text as yet.</item>
                             <item>To the right of the main window there is a status bar with an
@@ -72,59 +74,149 @@
                                 correspond with parts of the text display underlined in red.</item>
                             <item>Underneath the editing window there is an error message
                                 corresponding with the first error flag: <code>value of attribute
-                                    "xml:id" is invalid</code></item>
+                                    "xml:id" is invalid; must be an XML name without colons
+                                </code></item>
                         </list></item>
                     <item>The red flags tell us that although oXygen has done its best some
-                        additional information is needed to create a document which is valid
-                        according to the rules specified in the schema we have named. Let's fix up
-                        some of these errors! <list>
-                            <!-- <item>We need to add something inside the element sourceDesc. Put the cursor
-                      between the start and end tags for this element, i.e. after
-                      <tag>sourceDesc</tag> and before <tag>/sourceDesc</tag>. Now type a
-                      &lt; </item>
-                   <item>Scan the menu of possibilities which opens: you can insert an element
-                      called bibl or p, a comment, or a few other oddities. Choose p and press
-                      RETURN.</item>-->
-                            <item>The schema requires a value for @xml:id but we have not yet
-                                supplied one. Put the cursor between the quote marks and type in the
-                                identifier for your novel: this is the first part of the filename,
-                                e.g. <code>POL042</code>. The error message disappears! To
-                                celebrate, add a value (<code>po</code>) for the attribute
-                                    <att>xml:lang</att>: this specifies the language code for the
-                                document. </item>
-                            <item>The third error is like the first: <code>element "body"
-                                    incomplete...</code> so fix it in the same way. Put the cursor
-                                inside the <gi>body</gi> element and type a &lt; to see what's legal
-                                here. We suggest you add a <tag>div type="chapter"</tag>. Phew! no
-                                red marks anywhere! Your document is valid: click the disk icon (or
-                                type CTRL-S, or choose File-Save from the menu) to save it for
-                                further work.</item>
-                        </list></item>
-                </list>
-            </div>
-            <div type="slide">m
-
-
-                <head>Stage 2 : add some text</head>
-                <p>Now we are ready to add some text to our document. </p>
-                <list>
-                    <item>Put the cursor inside the <gi>body</gi> element and delete the
-                            <gi>div</gi> element you created before. </item>
-                    <item>Select Document-> File -> Insert File from the menu, and navigate to the
-                        text file you are planning to convert</item>
-                    <item> Open the <ident>Find/Replace</ident> dialogue and make sure that the
-                        check box <ident>Regular expression</ident> is selected</item>
+                        additional information is needed to create a document which is valid. Let's
+                        fix up some of these errors and complete the header!</item>
                 </list>
             </div>
             <div type="slide">
-                <head>Stage 3 : identify the chapters and headings</head>
+                <head>Stage 2 : completing the header</head>
                 <list>
-                    <item>In this file, each chapter is prefixed by - a line containing an uppercase
-                        Roman number, followed by - a line containing the chapter title, all in
-                        uppercase. We can use this regular expression to find these:
-                            <code>([IXV]+)\n([\p{Lu}]+)\n</code>. Open the Find/Replacwe dialogue,
-                        and type it carefully into trhe Find: box. Press the Find button to check
-                        that it is finding wht you expect.. </item>
+                    <item>The schema requires a proper value for @xml:id but we have not yet
+                        supplied one. Put the cursor between the quote marks and type in the
+                        identifier for your novel, e.g. <code>POL002</code> if you've chosen to work
+                        on <ident>beczkowska_bedzie_1897.txt</ident>. A new error message appears!
+                            <code>element "TEI" missing required attribute "xml:lang"</code>. </item>
+                    <item>Put the cursor before the &gt; at the end of the <gi>TEI</gi> start-tag
+                        and type a space to see the available attributes. <att>xml:lang</att>
+                        appears in the list in bold because it's required here. Select it, and then
+                        add its value (<code>po</code>) to specify the language code for your
+                        document. </item>
+                    <item>The next red line is complaining about the content of the <gi>measure</gi>
+                        element at line 17, which should contain a number. Choose the appropriate
+                        word count from the <ident>titles.txt</ident> file (37401 for text POL002)
+                        and type it in (note that this is content of an element, not an attribute
+                        value)! </item>
+                    <item>The next three red lines are all to do with the text classification codes.
+                        You need to decide what value to enter for the "authorGender" category (M,
+                        F, or U); what size code corresponds with the word count ('short', 'medium',
+                        or 'long'); and what time slot code (T1,T2,T3 or T4) is applicable. You have
+                        the data: refer to the header documentation (for example <ref
+                            target="https://github.com/distantreading/WG1/wiki/teiHeaders">on the
+                            wiki</ref>) for a reminder on what the codes mean.</item>
+                    <item>To remove tthe only remaining red line in the header, enter today's date,
+                        in the right (YYYY-MM-DD) format as value for the <att>when</att> attribute.
+                        Phew! no red marks anywhere in the Header -- which is now therefore valid:
+                        click the disk icon (or type CTRL-S, or choose File-Save from the menu) to
+                        save it for further work. </item>
+                    <item>This is a good start, but validity is not necessarily the same thing as
+                        truth, and we would prefer our document to be true -- the title of this work
+                        is definitely not <code>Title</code>, and your name is not <code>Your Name
+                            Here</code>! More seriously, we have not yet provided any information at
+                        all about the source from which this ELTeC text derives nor about its
+                        author. Over to you... Referring to the <ref target="checkList-1.pdf"
+                            >checklist of information needed</ref> and the metadata you accumulated
+                        in the first part of this exercise, you should now add the following: <list>
+                            <item>the actual title of the novel</item>
+                            <item>the author's name and dates in the recommended format</item>
+                            <item>an additional <gi>respStmt</gi> to show who was responsible for
+                                the original data capture of this title (if you know)</item>
+                            <item>the date of publication of this digital version (today!)</item>
+                            <item>information about the source as described below</item>
+                        </list></item>
+                    <item>The source description should contain two <gi>bibl</gi> elements, one
+                        (with <att>type</att>
+                        <code>digitalSource</code>) for the digital source from which your version
+                        derives, and one (with <att>type</att>
+                        <code>firstEdition</code>) for the first print edition of this work. Without
+                        a lot of detective work, it's hard to tell whether this text was transcribed
+                        from the first edition, or via some intermediate modern edition, but if you
+                        are reasonably sure that a modern edition is the actual source, you could
+                        supply a third <gi>bibl</gi> with information about it.</item>
+                    <item> We do know that the text is derived from the digital collection of
+                            <title>100 Polish Novels</title> prepared by
+                        <!--Jan Rybicki and Maciej Eder
+                        of -->the
+                        Computational Stylistics Group in Krakow, and that it is freely available
+                        from their GitHub repository at
+                        https://github.com/computationalstylistics/100_polish_novels. So your first
+                            <gi>bibl</gi> might look like this:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples"><bibl type="digitalSource">
+                                <title>100 Polish Novels</title>
+                                <respStmt>
+                                    <resp>Transcription</resp>
+                                    <name>Computational Stylistics Group (Krakow)</name>
+                                </respStmt>
+                                <ref
+                                    target="https://github.com/computationalstylistics/100_polish_novels"
+                                /></bibl></egXML>
+                    </item>
+                    <item>Your research should have provided you with enough information to provide
+                        a basic bibliographic description of the first edition of the novel,
+                        including for example publisher name, place of publication, as well as the
+                        original published title and form of the author's name, which might differ
+                        from the versions in use today. At the very least, your <tag>bibl
+                            type="firstEdition"</tag> should contain a <gi>date</gi> giving the year
+                        of first publication. </item>
+                </list>
+            </div>
+            <div type="slide">
+                <head>Stage 3 : add some text</head>
+                <p>Now we are ready to add some text to our document. </p>
+                <list>
+                    <item>put the cursor inside the solitary <gi>p</gi> contained by the
+                            <gi>body</gi> element. </item>
+                    <item>select Document-> File -> Insert File from the menu, and navigate to the
+                        text file you are planning to convert</item>
+                    <item>Press Open, and the content of the file is inserted into your document.
+                    </item>
+                </list>
+                <p>Note that the error message <code>The body of a text must contain at least one
+                        chapter</code> is still present. We will need to introduce more markup. We
+                    could do this slowly and painfully, one step at a time, but computers are
+                    supposed to make it easier to automate tasks which are slow and painful. In the
+                    next section, we'll see how you can take advantage of any systematic patterns in
+                    the format of a non-marked-up text to introduce explicit XML markup. To do this
+                    we'll use the sophisticated Find/Replace tools built into oXygen. </p>
+            </div>
+            <div type="slide">
+                <head>Stage 4 : identify the chapters and headings</head>
+                <p>To begin, open the <ident>Find/Replace</ident> dialogue and make sure that the
+                    check box <ident>Regular expression</ident> is selected. A <term>regular
+                        expression</term> is a kind of pattern: the find and replace command usually
+                    searches for specific character strings; when regular expressions are enabled,
+                    it can also search for complex patterns of characters.</p>
+                <p>For example, in some of our Polish texts, every new chapter begins with a roman
+                    number on a line of its own. In other texts the chapter number is preceded by
+                    the word <code>Rozdział</code>; in yet others the chapter has a title given in
+                    uppercase letters only. We can write regular expressions to cater for all of
+                    these possibilities. Without regular expression matching, we could seek lines
+                    containing the explicit strings I, II, III, IV etc. But it is much simpler to
+                    seek all such lines by means of a regular expression matching any sequence of
+                    one or more of the letters I V or X followed by a new line. </p>
+                <list>
+                    <item>In file POL001 for example, each chapter is prefixed by a line containing
+                        an uppercase Roman number, followed by a line containing the chapter title,
+                        all in uppercase. We can use this regular expression to find these:
+                            <code>([IXV]+)\n([\p{Lu}]+)\n</code>.</item>
+                    <item>In file POL007, however, each chapter is prefixed by the word ROZDZIAŁ,
+                        followed by one or more spaces, followed by a roman number and a full stop,
+                        and a new line. Here's a regular expression which will find these :
+                            <code>ROZDZIAŁ\s+[IVX]+\.</code></item>
+                    <item>In file POL014, chapters always begin with a lines containing a sequence
+                        of uppercase letters and spaces. Here's a regular expression which will find
+                        them: <code>[\p{Lu}\s]+\n</code>
+                    </item>
+                    <item>Of course, in some cases, for example POL004 or POL006, we can't easily
+                        identify where new chapters begin, or they may not be marked at all. Where
+                        we can however, we've included a suggested regular expression in the
+                        titles.txt file (that's what the mysterious incantantion after the word
+                        count is)</item>
+                    <item>Open the Find/Replace dialogue, and type it carefully into trhe Find: box.
+                        Press the Find button to check that it is finding what you expect.. </item>
                     <item>This expression will match any line containing just a sequence of one or
                         more I X V characters followed by a line containing any sequence of
                         uppercase letters. The parentheses in the refexp allow us to pick out the
