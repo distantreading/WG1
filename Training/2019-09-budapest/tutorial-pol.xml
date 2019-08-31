@@ -29,15 +29,13 @@
                     level-0 encoded ElTeC conformant version You should be able to carry this out
                     without any knowledge of Polish, though we do have a Polish participant who has
                     kindly agreed to provide advice if you get stuck. </p>
-            </div>
-            <div type="slide">
-                <head>The recipe</head>
-                <p>This is a five stage process</p>
+            
+                <p>It is a five stage process: </p>
                 <list>
-                    <item>select and identify the text; create a new empty ELTeC-0 document</item>
-                    <item>complete the TEI Header for your chosen title</item>
-                    <item>insert the text of the corresponding file into the <gi>body</gi>
-                        element</item>
+                    <item>select the text and assemble metadata for it; create a new empty ELTeC-0 document</item>
+                    <item>complete the TEI Header</item>
+                    <item>insert the text of the corresponding file into the <gi>body</gi> of the document
+                    </item>
                     <item>identify chapter divisions and chapter titles</item>
                     <item>identify paragraphs</item>
                 </list>
@@ -62,7 +60,7 @@
                             templates</ident>, you should see the template for ELTeC-0. Select it.
                         (If it's not there, you need to tweak your installation of oXygen; or you
                         can simply open the template file <ident>ELTeC-0.xml</ident> from your Work
-                        directory). Change the filename in the bottom of the window from
+                        directory). </item><item>Change the filename in the bottom of the window from
                             <ident>Untitled.xml</ident> or <ident>ELTeC-0</ident> to something more
                         appropriate: we suggest using the identifier for the file you're planning to
                         work on, e.g. POL001. Either way...</item>
@@ -71,7 +69,7 @@
                             <item>At the top of the file there are two purple lines beginning
                                     <code>&lt;?xml-model</code>.</item>
                             <item>The file contains tags (in blue) and attribute names (in orange)
-                                but no text as yet.</item>
+                                and helpful comments (in green) ... but no text other than some bits of the header.</item>
                             <item>To the right of the main window there is a status bar with an
                                 angry red square at the top and some red error flags. These
                                 correspond with parts of the text display underlined in red.</item>
@@ -81,8 +79,8 @@
                                 </code></item>
                         </list></item>
                     <item>The red flags tell us that although oXygen has done its best some
-                        additional information is needed to create a document which is valid. Let's
-                        fix up some of these errors and complete the header!</item>
+                        additional information is needed to create a valid header. Let's
+                        fix up some of these errors!</item>
                 </list>
             </div>
             <div type="slide">
@@ -226,8 +224,8 @@
                     also show that it begins a new chapter by inserting a <tag>div
                         type="chapter"</tag> tag, and (to ensure our document remains well-formed
                     XML) preceding it with a <tag>/div</tag> tag to close the preceding chapter. The
-                    syntax for doing this is simple enough: within the replacement part of the
-                    find/replace dialogue can contain numbered references (like this :
+                    syntax for doing this is simple enough: the replacement part of the
+                    find/replace dialogue can include numbered references (like this :
                         <code>\1</code>) which are to be expanded by a part of the matched string,
                     specifically the part enclosed in parentheses. </p>
                 <p>This is easier to understand with an example. Let's suppose you are working on
@@ -272,7 +270,7 @@
                     contains a single paragraph. We can use a simple regexp to mark them all up as
                         <gi>p</gi> elements : </p>
                 <list>
-                    <item>type <code>\n([^&lt;].+)</code> into the <ident>Find</ident> box, and
+                    <item>Type <code>\n([^&lt;].+)</code> into the <ident>Find</ident> box, and
                             <code>\n&lt;p>\1&lt;/p></code> into the <ident>Replace with:</ident>
                         box.</item>
                     <item>Move the cursor to the start of the file and check that this regexp does
