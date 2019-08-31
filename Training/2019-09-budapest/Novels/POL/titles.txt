@@ -1,10 +1,10 @@
-POL001 balucki_przebudzeni_1864.txt 52735	([IVX]+)\n(\p{Lu}+)\n 
+POL001 balucki_przebudzeni_1864.txt 52735	\n([IVX]+)\n([\s\p{Lu}]+)\S\n
 POL002 beczkowska_bedzie_1897.txt   37401	(ROZDZIAŁ [IVX]+\.)
 POL003 berent_prochno_1903.txt	    78687	(Rozdział)\n
 POL004 deotyma_zagadka_1879.txt	    46169	?
 POL005 dmochowska_odlamana_1914.txt 52180	?
 POL006 domanska_historia_1913.txt   55673	?
-POL007 dygasinski_as_1896.txt	    41712	(ROZDZIAŁ[\sIVX]+\.)
+POL007 dygasinski_as_1896.txt	    41712	(ROZDZIAŁ\s+[IVX]+\.)
 POL008 godlewska_ninka_1897.txt	    15519	([IVX]+\.?)\n(\p{Lu}+)\n
 POL009 korzeniowski_emeryt_1851.txt 89473	([IVX]+\.?)\n
 POL010 krzemieniecka_odejdzie_1910.txt 55899	(ROZDZIAŁ[\sIVX]+\.)

@@ -62,7 +62,10 @@
                             templates</ident>, you should see the template for ELTeC-0. Select it.
                         (If it's not there, you need to tweak your installation of oXygen; or you
                         can simply open the template file <ident>ELTeC-0.xml</ident> from your Work
-                        directory). Either way...</item>
+                        directory). Change the filename in the bottom of the window from
+                            <ident>Untitled.xml</ident> or <ident>ELTeC-0</ident> to something more
+                        appropriate: we suggest using the identifier for the file you're planning to
+                        work on, e.g. POL001. Either way...</item>
                     <item>... the main oXygen editing window opens, with the beginnings of an ELTeC
                         XML file in it. Note the following: <list>
                             <item>At the top of the file there are two purple lines beginning
@@ -201,7 +204,7 @@
                     <item>In file POL001 for example, each chapter is prefixed by a line containing
                         an uppercase Roman number, followed by a line containing the chapter title,
                         all in uppercase. We can use this regular expression to find these:
-                            <code>([IXV]+)\n([\p{Lu}]+)\n</code>.</item>
+                            <code>\n[IXV]+\n[\s\p{Lu}]+\S\n</code>.</item>
                     <item>In file POL007, however, each chapter is prefixed by the word ROZDZIAŁ,
                         followed by one or more spaces, followed by a roman number and a full stop,
                         and a new line. Here's a regular expression which will find these :
@@ -212,29 +215,79 @@
                     </item>
                     <item>Of course, in some cases, for example POL004 or POL006, we can't easily
                         identify where new chapters begin, or they may not be marked at all. Where
-                        we can however, we've included a suggested regular expression in the
-                        titles.txt file (that's what the mysterious incantantion after the word
-                        count is)</item>
-                    <item>Open the Find/Replace dialogue, and type it carefully into trhe Find: box.
-                        Press the Find button to check that it is finding what you expect.. </item>
-                    <item>This expression will match any line containing just a sequence of one or
-                        more I X V characters followed by a line containing any sequence of
-                        uppercase letters. The parentheses in the refexp allow us to pick out the
-                        character strings that have been matched, and we can then use them un the
-                        replacement value. Type the following into the Replace With dialogue
-                            <code><![CDATA[ </div><div type="chapter"><head>\1</head>\n<head>\2</head>]]></code>
-                        Press the Replace button and check that it has introduced the right tags. </item>
-                    <item>When you are sure that your regexp is working correctly, press the Replace
-                        to End button </item>
+                        we can however we've included a suggested regular expression in the
+                            <ident>titles.txt</ident> file (that's what the mysterious incantantion
+                        after the word count is)</item>
+                </list>
+                <p>The real power of regular expression matching is not just that it enables us to
+                    find quickly particular strings in the text. It also allows us to specify
+                    replacements for those strings. In our case, wherever we identify something
+                    which is the heading of a chapter, we need to tag it as a <gi>head</gi>, and
+                    also show that it begins a new chapter by inserting a <tag>div
+                        type="chapter"</tag> tag, and (to ensure our document remains well-formed
+                    XML) preceding it with a <tag>/div</tag> tag to close the preceding chapter. The
+                    syntax for doing this is simple enough: within the replacement part of the
+                    find/replace dialogue can contain numbered references (like this :
+                        <code>\1</code>) which are to be expanded by a part of the matched string,
+                    specifically the part enclosed in parentheses. </p>
+                <p>This is easier to understand with an example. Let's suppose you are working on
+                    POL001.</p>
+                <list>
+                    <item>Open the <ident>Find/Replace</ident> dialogue by typing CTRL-F or
+                        selecting Find->Find/Replace from the main menu, and type the incantation
+                            <code>\n([IVX]+)\n([\s\p{Lu}]+)\S\n</code> carefully into the Find box.
+                        Press the <ident>Find</ident> button to check that it is finding what you
+                        expect: you should see that the lines <code>I</code> and
+                            <code>ALKHADAR</code> have been selected. </item>
+                    <item>Each time you press Find, oXygen will step through the file selecting any
+                        line containing just a sequence of one or more I X V characters followed by
+                        a line containing any sequence of uppercase letters. Try it, just to check.
+                        When you're satisfied the regexp is working correctly, move the cursor back
+                        to the start of the file and find the first chapter again. </item>
+                    <item>The parentheses in your regexp allow us to pick out the two character
+                        strings that have been matched, for use in the replacement value. Type the
+                        following into the <ident>Replace With</ident> dialogue
+                            <code><![CDATA[ \n</div><div type="chapter"><head>\1</head>\n<head>\2</head>\n]]></code>
+                        Press the Replace button. You should now see something like this at the
+                        start of your file:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples"><![CDATA[<body>
+        <p>Michał Bałucki 
+            PRZEBUDZENI
+            </div><div type="chapter"><head>I</head>
+                <head>ALKHADAR</head>
+                Warszawo! niewolnico! kiedyś ....]]></egXML>
+                    </item>
+                    <item>(The <tag>/div</tag> is underlined in red since there's no chapter to
+                        close here. Never mind, we'll fix that later)</item>
+                    <item>When you are sure that your regexp is working correctly, press the
+                            <ident>Replace to End</ident> button to repeat this manoeuvre for the
+                        whole of the rest of the file. You should find 23 matches, and the Outline
+                        view (Select Window -> Show view -> Outline if this is not open) should show
+                        that you now have 23 chapters. </item>
                 </list>
             </div>
             <div type="slide">
-                <head>Stage 4: identify the paragraphs</head>
+                <head>Stage 5: identify the paragraphs</head>
+                <p>In this file, every line other than those beginning with a &lt; character now
+                    contains a single paragraph. We can use a simple regexp to mark them all up as
+                        <gi>p</gi> elements : </p>
                 <list>
-                    <item>type <code>(.+)\n</code> into the Find: box, and
-                            <code>&lt;p>\1&lt;/p>\n</code> into the <ident>Replace with:</ident>
+                    <item>type <code>\n([^&lt;].+)</code> into the <ident>Find</ident> box, and
+                            <code>\n&lt;p>\1&lt;/p></code> into the <ident>Replace with:</ident>
                         box.</item>
+                    <item>Move the cursor to the start of the file and check that this regexp does
+                        what you expect</item>
+                    <item>Click the <ident>Replace to End</ident> button as before. There should be
+                        about 1994 matches and your task is almost complete!</item>
+                    <item>Finally, go back to the start of the document and delete the lines before
+                            <tag>div type="chapter"</tag>, including the redundant <tag>/div</tag>.
+                        Your file is valid! </item>
                 </list>
+                <p>Of course, there's still work to be done... we have not tried to deal with the
+                    occasional piece of verse, nor have we tried to markup the trailing headings at
+                    the end of some divisions, so these are all appearing as spurious <gi>p</gi>
+                    elements. Feel free to continue perfecting this text -- or maybe you'd rather
+                    try a different one? Congratulations on getting this far! </p>
             </div>
         </body>
     </text>
