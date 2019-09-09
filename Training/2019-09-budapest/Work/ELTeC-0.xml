@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/COST-ELTeC/Schemas/master/eltec-0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/COST-ELTeC/Schemas/master/eltec-0.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="" >
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Title : ELTeC edition</title>
+                <author><!-- Surname, Forenames (born-died)--></author>
+                <respStmt>
+                    <resp>encoded by</resp>
+                    <name>Your Name Here</name>
+                </respStmt>
+            </titleStmt>
+            <extent>
+                <measure unit="words"></measure>
+            </extent>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about the source</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc n="eltec-0">
+            <p/>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident=""/>
+            </langUsage>
+            <textDesc>
+                <authorGender xmlns="http://distantreading.net/eltec/ns" key=""/>
+                <size xmlns="http://distantreading.net/eltec/ns" key=""/>
+                <canonicity xmlns="http://distantreading.net/eltec/ns" key="unspecified"/>
+                <timeSlot xmlns="http://distantreading.net/eltec/ns" key=""/>
+            </textDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="">File created</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+           <p></p>
+        </body>
+    </text>
+</TEI>
