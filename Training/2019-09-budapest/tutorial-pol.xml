@@ -4,7 +4,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>ELTeC Tutorial</title>
+                <title>ELTeC Tutorial 3: handling plain text files</title>
             </titleStmt>
             <publicationStmt>
                 <p>Publication information</p>
@@ -26,7 +26,7 @@
                             paragraphs automatically if possible</item>
                     </list></p>
                 <p>This tutorial steps you through the process of going from a plain text file to a
-                    level-0 encoded ElTeC conformant version You should be able to carry this out
+                    level-0 encoded ElTeC conformant version.  You should be able to carry this out
                     without any knowledge of Polish, though we do have a Polish participant who has
                     kindly agreed to provide advice if you get stuck. </p>
             
