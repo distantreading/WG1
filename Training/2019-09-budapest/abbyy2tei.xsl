@@ -25,4 +25,9 @@
 <xsl:apply-templates/>
 </xsl:template>
 
+<xsl:template match="a:formatting[@italic]">
+    <hi><xsl:apply-templates/></hi>
+</xsl:template>
+
+
 </xsl:stylesheet>

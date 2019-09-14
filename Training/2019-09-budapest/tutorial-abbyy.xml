@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/lou/Public/TEIslides/teislides.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ELTeC Tutorial 2 : reprocessing Abbyy outputs</title>
+                <author>Lou Burnard Consulting</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>unpublished draft</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>born digital</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2019-09-15">Created file</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>Choosing your text</head>
+                <p>Please begin by selecting a text you would like to work on, in a language which
+                    you are comfortable with handling. The following items are available in your
+                    Work/Novels folder: <table>
+                        <row>
+                            <cell>Language</cell>
+                            <cell>Identifier</cell>
+                            <cell>Author</cell>
+                            <cell>Title</cell>
+                            <cell>Wordcount</cell>
+                        </row>
+                    </table>
+                </p>
+                <p>Each file with extension .pdf contains a digitized representation of an original
+                    printed source, which has been processed by Abbyy OCR. Take a look at this to
+                    determine what metadata you can extract for use in the header of your file, and
+                    also to familiarize yourself with the basic structure of the text -- whether it
+                    has prefaces etc. </p>
+                <p>Use online resources (WorldCat, Wikipedia, etc.) to collect other required
+                    metadata, such as the fullname of the author, their dates, sex, etc. When you
+                    have this information, proceed to create a new document and a TEI Header,
+                    following the instructions in <ref target="#tutorial-hdr"/>.</p>
+            </div>
+            <div>
+                <head>Adding the text</head>
+                <p>Each file with extension .abbyy.xml contains an XML representation of the results
+                    of the OCR procedure carried out by Abbyy. This representation is quite verbose
+                    and contains much information we don't need, but it is easy to translate it to a
+                    basic TEI form using an XSLT stylesheet. We won't be teaching you XSLT (a
+                    standard language for converting one XML document to another) but we have
+                    provided a suitable stylesheet for this task. In oXygen, the easiest way to use
+                    it is to set up a <q>transformation scenario</q>, as follows: </p>
+                <p><list>
+                        <item>In the <ident>Document</ident> menu, choose
+                                <ident>Transformation</ident> -> <ident>Configure Transformation
+                                Scenario(s)</ident>, or type CTRL-SHIFT-C, or click the spanner icon
+                            (this one : <graphic url="../Graphics/spanner.png" height="7mm"/>) on
+                            the toolbar. </item>
+                        <item>A list of available transformation scenarios is displayed. You
+                            probably don't have the abbyy2tei scenario yet, so click
+                                <ident>new</ident> at the bottom and select <ident>Transformtion
+                                with XSLT</ident> to create it.</item>
+                        <item>In the New scenario dialogue, first change the name of the scenario to
+                                <ident>abbyy2tei</ident>
+                        </item>
+                        <item>leave the content of the XML URL box unchanged </item>
+                        <item>The XSL URL box should be filled. Click the triangle to the right of
+                            the folder icon and select <ident>Browse for local file</ident></item>
+                        <item>Navigate to the file <ident>abbyy2tei.xsl</ident> (it is in th top
+                            level of your Work directory), select it, and click Open </item>
+                        <item>Click the <ident>Output</ident> tab and make sure that the <ident>open
+                                in editor</ident> box is checked </item>
+                    </list>
+                </p>
+                <p>Once you have created this scenario, you can use it as often as you like, with
+                    other XML files. You can also set it as the default scenario for a file. </p>
+
+                <list>
+                    <item>Open the abby.xml file of your choice in oXygen</item>
+                    <item>With this file open in the editor, click the red triangle icon, type
+                        CTRL-SHIFT-T, or select Document -> Transformation -> Apply Transformation
+                        Scenario from the menu</item>
+                    <item>If you have set a default transformation, it will be applied; if not the
+                        Transform with dialog box appears. Select the <ident>abby2tei</ident>
+                        transformation you created earlier to associate it and then click the
+                            <ident>Apply Associated</ident> button </item>
+                </list>
+                <p>You may find it useful to tidy up the text a little at this stage. It's up to
+                    you, but some things that would be easy to fix are: <list>
+                        <item>end-of-line hyphenation (where a word is broken across a line) is
+                            indicated by gthe special character <code>¬</code>. This makes it easy
+                            to join words up again: use a regexp to remove all occurrences of
+                                <code>¬\n</code>
+                        </item>
+                        <item>The tag <gi>pb</gi> indicates the start of a new page in the original,
+                            and is followed by any running heder or page number in the original
+                            source, tagged as a separate <gi>p</gi> element. You may think it worth
+                            writing another regexp to remove paragraphs containing only digits and
+                            spaces or uppercase letters to catch these, though be careful you don't
+                            remove real parts of the text. </item>
+                        <item>Wrap the titlepage in a <tag>div type="titlepage"</tag>
+                        </item>
+                        <item>Decide whether any prefatory matter is authorial: if it is, wrap it in
+                            a <tag>div type="liminal"</tag>. If it isn't, remove it.</item>
+                        <item>You may be able to detect chapter divisions using a regexp to search
+                            for specific words, as in the Polish texts, but this is not guaranteed.
+                            A text may not have any chapter divisions at all, in which case our
+                            schema requires you to wrap the whole thing in one <tag>div
+                                type="chapter"</tag>. </item>
+                        <item>You may catch some recurrent OCR errors using the spell checker built
+                            into oXygen (remember to set the correct language : you will need to
+                            copy the appropriate spelling files from your Work/Spell directory to
+                            ~/.com.oxygenxml/spell)</item>
+                    </list></p>
+                <p>When you're reasonably happy with the transcription, type CTRL-A to select all of
+                    it and CTRL-C to copy it. Then return to the file in which you prepared your
+                    header, move the cursor to the appropriate point inside the <gi>text</gi>
+                    element, and type CTRL-V to paste it. Is the completed document valid? If not,
+                    fix it!</p>
+            </div>
+        </body>
+    </text>
+</TEI>

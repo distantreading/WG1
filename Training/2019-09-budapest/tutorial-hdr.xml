@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/lou/Public/TEIslides/teislides.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    <fileDesc>
+        <titleStmt>
+            <title>ELTeC Tutorial 1: getting started</title>
+            <author>Lou Burnard Consulting</author>
+        </titleStmt>
+        <publicationStmt><p>unpublished draft</p></publicationStmt>
+        <sourceDesc><p>born digital</p></sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+        <change when="2019-09-14">Created file</change>
+    </revisionDesc>
+</teiHeader>
+    <text xml:id="tutorial-hdr"><body  >
+        <p>This tutorial shows you how to create an ELTeC level zero file, and how to complete the
+        metadata required by the TEI Header. </p>
+      <div> <head>Getting started</head> <list>
+            <item>Open oXygen and click on the New icon (first left on the toolbar); or
+                select File->New from the menu; or type CTRL-N</item>
+            <item>The New File dialogue appears. Under the heading <ident>Global
+                templates</ident>, you should see the template for ELTeC-0. Select it.
+                (If it's not there, you need to tweak your installation of oXygen; or you
+                can simply open the template file <ident>ELTeC-0.xml</ident> from your Work
+                directory). </item><item>Change the filename in the bottom of the window from
+                    <ident>Untitled.xml</ident> or <ident>ELTeC-0</ident> to something more
+                    appropriate: we suggest using the identifier for the file you're planning to
+                    work on. Either way...</item>
+            <item>... the main oXygen editing window opens, with the beginnings of an ELTeC
+                XML file in it. Note the following: <list>
+                    <item>At the top of the file there are two purple lines beginning
+                        <code>&lt;?xml-model</code>.</item>
+                    <item>The file contains tags (in blue) and attribute names (in orange)
+                        and helpful comments (in green) ... but no text other than some bits of the header.</item>
+                    <item>To the right of the main window there is a status bar with an
+                        angry red square at the top and some red error flags. These
+                        correspond with parts of the text display underlined in red.</item>
+                    <item>Underneath the editing window there is an error message
+                        corresponding with the first error flag: <code>value of attribute
+                            "xml:id" is invalid; must be an XML name without colons
+                        </code></item>
+                </list></item>
+            <item>The red flags tell us that although oXygen has done its best some
+                additional information is needed to create a valid header. Let's
+                fix up some of these errors!</item>
+        </list>
+    </div>   
+        <div type="slide">
+            <head>Making the header valid</head>
+            <list>
+                <item>The schema requires a proper value for @xml:id but we have not yet
+                    supplied one. Put the cursor between the quote marks and type in the
+                    identifier for your novel<!--, e.g. <code>POL002</code> if you've chosen to work
+                    on <ident>beczkowska_bedzie_1897.txt</ident>-->. A new error message appears!
+                    <code>element "TEI" missing required attribute "xml:lang"</code>. </item>
+                <item>Put the cursor before the &gt; at the end of the <gi>TEI</gi> start-tag
+                    and type a space to see the available attributes. <att>xml:lang</att>
+                    appears in the list in bold because it's required here. Select it, and then
+                    add the language code for your
+                    document. </item>
+                <item>The next red line is complaining about the content of the <gi>measure</gi>
+                    element at line 17, which should contain a number indicating how many words the
+                    text contains. If you don't know the wordcount for your text, you can enter 
+                    any number you like for the moment, but don't forget to count the words in your text and
+                    correct this when you've finished! Note that the count is supplied as content of an element, not an attribute
+                    value. </item>
+                <item>The next three red lines are all to do with the text classification codes.
+                    You need to decide what value to enter for the "authorGender" category (M,
+                    F, or U); what size code corresponds with the word count ('short', 'medium',
+                    or 'long'); and what time slot code (T1,T2,T3 or T4) is applicable. You have
+                    the data: refer to the header documentation (for example <ref
+                        target="https://github.com/distantreading/WG1/wiki/teiHeaders">on the
+                        wiki</ref>) for a reminder on what the codes mean.</item>
+                <item>To remove tthe only remaining red line in the header, enter today's date,
+                    in the right (YYYY-MM-DD) format as value for the <att>when</att> attribute.
+                    Phew! no red marks anywhere in the Header -- which is now therefore valid:
+                    click the disk icon (or type CTRL-S, or choose File-Save from the menu) to
+                    save it for further work. </item>
+                <item>This is a good start, but validity is not necessarily the same thing as
+                    truth, and we would prefer our document to be true -- the title of this work
+                    is definitely not <code>Title</code>, and your name is not <code>Your Name
+                        Here</code>! More seriously, we have not yet provided any information at
+                    all about the source from which this ELTeC text derives nor about its
+                    author. Over to you... Referring to the metadata you accumulated
+                    in the first part of this exercise, you should now add the following: <list>
+                        <item>the actual title of the novel</item>
+                        <item>the author's name and dates in the recommended format</item>
+                        <item>an additional <gi>respStmt</gi> to show who was responsible for
+                            the original data capture of this title (if you know)</item>
+                        <item>the date of publication of this digital version (today!)</item>
+                        <item>information about the source as described below</item>
+                    </list></item>
+                <item>The source description should contain two <gi>bibl</gi> elements, one
+                    (with <att>type</att>
+                    <code>digitalSource</code>) for the digital source from which your version
+                    derives, and one (with <att>type</att>
+                    <code>firstEdition</code>) for the first print edition of this work. Without
+                    a lot of detective work, it's hard to tell whether this text was transcribed
+                    from the first edition, or via some intermediate modern edition, but if you
+                    are reasonably sure that a modern edition is the actual source, you could
+                    supply a third <gi>bibl</gi> with information about it.</item>
+              
+                <item>Your research should have provided you with enough information to provide
+                    a basic bibliographic description of the first edition of the novel,
+                    including for example publisher name, place of publication, as well as the
+                    original published title and form of the author's name, which might differ
+                    from the versions in use today. At the very least, your <tag>bibl
+                        type="firstEdition"</tag> should contain a <gi>date</gi> giving the year
+                    of first publication. </item>
+            </list>
+            <p>When you're happy with your header, and it has no redlines, remember to save the file
+                before proceeding to add something to the <gi>body</gi> element!
+            </p>
+        </div>
+    </body></text>
+</TEI>
