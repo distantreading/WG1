@@ -41,8 +41,10 @@
                     has prefaces etc. </p>
                 <p>Use online resources (WorldCat, Wikipedia, etc.) to collect other required
                     metadata, such as the fullname of the author, their dates, sex, etc. When you
-                    have this information, proceed to create a new document and a TEI Header,
-                    following the instructions in <ref target="#tutorial-hdr"/>.</p>
+                    have this information, proceed to create a new document and a TEI Header<!--,
+                    following the instructions in <ref target="#tutorial-hdr"/>.</p>-->
+                The procedure to follow is described in detail in the <ref target="tutorial-hdr.html">Header Tutorial</ref>. </p>
+                
             </div>
             <div>
                 <head>Adding the text</head>
@@ -52,7 +54,8 @@
                     basic TEI form using an XSLT stylesheet. We won't be teaching you XSLT (a
                     standard language for converting one XML document to another) but we have
                     provided a suitable stylesheet for this task. In oXygen, the easiest way to use
-                    it is to set up a <q>transformation scenario</q>, as follows: </p>
+                    it is to set up a named <q>transformation scenario</q>;  you only need to do this once.
+                    Follow this procedure: </p>
                 <p><list>
                         <item>In the <ident>Document</ident> menu, choose
                                 <ident>Transformation</ident> -> <ident>Configure Transformation
@@ -66,11 +69,11 @@
                         <item>In the New scenario dialogue, first change the name of the scenario to
                                 <ident>abbyy2tei</ident>
                         </item>
-                        <item>leave the content of the XML URL box unchanged </item>
+                        <item>Leave the content of the XML URL box unchanged </item>
                         <item>The XSL URL box should be filled. Click the triangle to the right of
                             the folder icon and select <ident>Browse for local file</ident></item>
                         <item>Navigate to the file <ident>abbyy2tei.xsl</ident> (it is in th top
-                            level of your Work directory), select it, and click Open </item>
+                            level of your Work directory, select it, and click Open </item>
                         <item>Click the <ident>Output</ident> tab and make sure that the <ident>open
                                 in editor</ident> box is checked </item>
                     </list>
@@ -79,33 +82,54 @@
                     other XML files. You can also set it as the default scenario for a file. </p>
 
                 <list>
-                    <item>Open the abby.xml file of your choice in oXygen</item>
-                    <item>With this file open in the editor, click the red triangle icon, type
+                    <item>Now open the abby.xml file of your choice in oXygen</item>
+                    <item>With this file open in the editor, click the big red triangle icon on the toolbar, type
                         CTRL-SHIFT-T, or select Document -> Transformation -> Apply Transformation
                         Scenario from the menu</item>
                     <item>If you have set a default transformation, it will be applied; if not the
-                        Transform with dialog box appears. Select the <ident>abby2tei</ident>
+                        <ident>Transform with</ident> dialog box appears. Select the <ident>abby2tei</ident>
                         transformation you created earlier to associate it and then click the
-                            <ident>Apply Associated</ident> button </item>
+                            <ident>Apply Associated</ident> button. </item><item>After a brief delay, you should
+                            see a much less richly tagged version of the text.</item>
                 </list>
-                <p>You may find it useful to tidy up the text a little at this stage. It's up to
+                <p>Comparing this version with the PDF file you opened earlier, you can see that
+                    the tag <tag>pb/</tag> indicates the start of a new page in the original. Each line of the
+                    output corresponds with a typographic line in the source. Blocks of text are tagged with a
+                    <gi>p</gi> element, though not all of them are paragraphs. Where there was a non-textual image
+                    in the original, the <gi>gap</gi> element appears. And of course there are
+                    probably quite a few character recognition errors, especially if the original 
+                    printed text was unclear or damaged.
+                </p><p>There is no automatically generated tagging beyond this; we will therefore have
+                to add it by hand. Refresh your memory about the basic structure of an ELTeC-0 text:
+                any front matter, such as  the titlepage or a preface, should be wrapped in a 
+                    <gi>front</gi>, while the text itself should be contained by a <gi>body</gi> element, grouping
+         containing <gi>div</gi> elements. 
+                </p>
+                 <p>It's up to you how you do this. Here's a suggestion:</p>
+                <list>
+                <item>Type CTRL-A to select the whole text</item><item>Type CTRL-E and surround
+                the whole text with a <gi>text</gi> element.</item>
+                    <item>If you have front matter, insert a <gi>front</gi> element at the start of your
+                        <gi>text</gi></item>    
+                <item>Select the paragraphs making up the titlepage, correct them, and wrap them in a <tag>div type="titlepage"</tag>
+                inside the <gi>front</gi></item>
+                <item>Decide whether any other prefatory matter is authorial: if it is, wrap it in
+                    a <tag>div type="liminal"</tag>, also inside the <gi>front</gi>. If it isn't, remove it.</item><item>Now add a <gi>body</gi> element
+                    to contain the rest of the text, and within it at least one <gi>div</gi></item>
+                </list>
+                <p>At some point you will want to tidy up the text a little: 
                     you, but some things that would be easy to fix are: <list>
                         <item>end-of-line hyphenation (where a word is broken across a line) is
-                            indicated by gthe special character <code>¬</code>. This makes it easy
+                            indicated by the special character <code>¬</code>. This makes it easy
                             to join words up again: use a regexp to remove all occurrences of
                                 <code>¬\n</code>
                         </item>
-                        <item>The tag <gi>pb</gi> indicates the start of a new page in the original,
-                            and is followed by any running heder or page number in the original
+                        <item>The <tag>pb/</tag> tag is followed by any running header or page number in the original
                             source, tagged as a separate <gi>p</gi> element. You may think it worth
                             writing another regexp to remove paragraphs containing only digits and
                             spaces or uppercase letters to catch these, though be careful you don't
                             remove real parts of the text. </item>
-                        <item>Wrap the titlepage in a <tag>div type="titlepage"</tag>
-                        </item>
-                        <item>Decide whether any prefatory matter is authorial: if it is, wrap it in
-                            a <tag>div type="liminal"</tag>. If it isn't, remove it.</item>
-                        <item>You may be able to detect chapter divisions using a regexp to search
+                              <item>You may be able to detect chapter divisions using a regexp to search
                             for specific words, as in the Polish texts, but this is not guaranteed.
                             A text may not have any chapter divisions at all, in which case our
                             schema requires you to wrap the whole thing in one <tag>div

@@ -30,10 +30,11 @@
                     without any knowledge of Polish, though we do have a Polish participant who has
                     kindly agreed to provide advice if you get stuck. </p>
             
-                <p>It is a five stage process: </p>
+                <p>The complete process looks like this : </p>
                 <list>
-                    <item>select the text and assemble metadata for it; create a new empty ELTeC-0 document</item>
-                    <item>complete the TEI Header</item>
+                    <item>choose the text and assemble metadata about it</item>
+                    <item>create a new empty ELTeC-0 document</item>
+                    <item>complete its TEI Header</item>
                     <item>insert the text of the corresponding file into the <gi>body</gi> of the document
                     </item>
                     <item>identify chapter divisions and chapter titles</item>
@@ -41,7 +42,7 @@
                 </list>
             </div>
             <div type="slide">
-                <head>Stages 1 and 2 : selecting and creating a document</head>
+                <head>choose the text and create a document</head>
                 <p>Take a look at the <ident>POL</ident> folder. It contains 18 files we've
                     pre-selected for you, along with a tiny bit of metadata in a file called
                         <ident>titles.txt</ident> which supplies you with an identifier, a filename,
@@ -60,13 +61,14 @@
                     from their GitHub repository at
                     https://github.com/computationalstylistics/100_polish_novels. We do not however
                     know much about the print sources for these texts: hopefully your researches should
-                    throw up some information at least about their first edition in book form. Armed with 
+                    throw up some information at least about their first edition in book form. 
+                    Armed with 
                     that additional information for your chosen
-                    text, proceed to create a new file and a valid TEI header for the file, as described
-                in <ref target="#tutorial-hdr"/>. </p>
-               
+                    text, proceed to create a new file and a valid TEI header for the file.</p>
+                <p>This process is described in detail in the <ref target="tutorial-hdr.html">Header Tutorial</ref>. </p>
+            </div>   
             <div type="slide">
-                <head>Stage 3 : add some text</head>
+                <head>add some text</head>
                 <p>Now we are ready to add some text to our document. </p>
                 <list>
                     <item>put the cursor inside the solitary <gi>p</gi> contained by the
@@ -85,7 +87,7 @@
                     we'll use the sophisticated Find/Replace tools built into oXygen. </p>
             </div>
             <div type="slide">
-                <head>Stage 4 : identify the chapters and headings</head>
+                <head>identify the chapters and headings</head>
                 <p>To begin, open the <ident>Find/Replace</ident> dialogue and make sure that the
                     check box <ident>Regular expression</ident> is selected. A <term>regular
                         expression</term> is a kind of pattern: the find and replace command usually
@@ -166,7 +168,7 @@
                 </list>
             </div>
             <div type="slide">
-                <head>Stage 5: identify the paragraphs</head>
+                <head>identify the paragraphs</head>
                 <p>In this file, every line other than those beginning with a &lt; character now
                     contains a single paragraph. We can use a simple regexp to mark them all up as
                         <gi>p</gi> elements : </p>
