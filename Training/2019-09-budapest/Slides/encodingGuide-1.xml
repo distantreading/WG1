@@ -6,12 +6,13 @@
          <titleStmt>
             <title>Encoding for ELTeC : a summary guide </title>
             <title type="sub">Part 1 : the Header</title>
+         </titleStmt>
+        <publicationStmt>
            <p>Publication Information</p>
          </publicationStmt>
          <sourceDesc>
             <p>Prepared for Budapest TS ex nihilo</p>
          </sourceDesc>
-
       </fileDesc>
       <revisionDesc>
          <change when="2019-08-10">LB first draft</change>

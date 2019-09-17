@@ -4,7 +4,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>ELTeC Tutorial 2 : reprocessing Abbyy outputs</title>
+                <title>ELTeC Tutorial 3 : reprocessing Abbyy outputs</title>
                 <author>Lou Burnard Consulting</author>
             </titleStmt>
             <publicationStmt>
@@ -20,7 +20,7 @@
     </teiHeader>
     <text>
         <body>
-            <div>
+            <div type="slide">
                 <head>Choosing your text</head>
                 <p>Please begin by selecting a text you would like to work on, in a language which
                     you are comfortable with handling. The following items are available in your
@@ -46,7 +46,7 @@
                 The procedure to follow is described in detail in the <ref target="tutorial-hdr.html">Header Tutorial</ref>. </p>
                 
             </div>
-            <div>
+            <div type="slide">
                 <head>Adding the text</head>
                 <p>Each file with extension .abbyy.xml contains an XML representation of the results
                     of the OCR procedure carried out by Abbyy. This representation is quite verbose

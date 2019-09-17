@@ -14,9 +14,10 @@
     </revisionDesc>
 </teiHeader>
     <text xml:id="tutorial-hdr"><body  >
-        <p>This tutorial shows you how to create an ELTeC level zero file, and how to complete the
-        metadata required by the TEI Header. </p>
-      <div> <head>Getting started</head> <list>
+     <div type="slide">
+         <p>This tutorial shows you how to create an ELTeC level zero file, and how to complete the
+        metadata required by the TEI Header. </p></div>
+      <div type="slide"> <head>Getting started</head> <list>
             <item>Open oXygen and click on the New icon (first left on the toolbar); or
                 select File->New from the menu; or type CTRL-N</item>
             <item>The New File dialogue appears. Under the heading <ident>Global
