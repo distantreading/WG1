@@ -3,7 +3,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Building the ELTeC</title>
+            <title>Creating ELTeC</title>
          </titleStmt>
          <publicationStmt>
             <p>Unpublished source: prepared for Budapest Training school September 2019</p>
@@ -38,6 +38,128 @@
             <p> The Training School is intended for any researcher interested in contributing texts
                to the ELTeC. Some previous experience of computer use is needed, but no knowledge of
                TEI XML is assumed. </p>
+
+            <table>
+
+               <row>
+                  <cell>Monday</cell>
+                  <cell>time</cell>
+                  <cell>Topics</cell>
+                  <cell>Learned</cell>
+                  <cell>Trainer</cell>
+               </row>
+               <row>
+                  <cell>13:30-14:00 </cell>
+                  <cell>30 min</cell>
+                  <cell>Joint Opening Session</cell>
+                  <cell>what our Action is about and the tasks of the WGs</cell>
+                  <cell>Carolin</cell>
+               </row>
+
+               <row>
+                  <cell>14:00-15:45</cell>
+                  <cell> 105 min</cell>
+                  <cell> Introduction to Oxygen and TEI XML </cell>
+                  <cell> basic XML structure (elements, attributes, hierarchy) and how to use oxygen </cell>
+                  <cell> Martina </cell>
+               </row>
+               <row>
+                  <cell> 16:15-16:45</cell>
+                  <cell> 30 min</cell>
+                  <cell> Introduction to ELTeC</cell>
+                  <cell> what ELTeC is about, Design/Goals, first introduction about components
+                     (metadata, encoding) </cell>
+                  <cell>Carolin </cell>
+               </row>
+               <row>
+                  <cell>16:45-17:45</cell>
+                  <cell> 60 min </cell>
+                  <cell>First practical session </cell>
+                  <cell> everyone chooses a text (not necessarily one of ours) and creates a header
+                     for it: <ref
+                        target="http://distantreading.github.io/Training/Budapest/tutorial-hdr.html"
+                        >slides</ref></cell>
+                  <cell> Lou </cell>
+               </row>
+               <row>
+                  <cell>17:45-18:00</cell>
+                  <cell> 15 min </cell>
+                  <cell>Github practice. </cell>
+                  <cell> Everyone adds their chosen header to their own github repo. </cell>
+                  <cell> </cell>
+               </row>
+               <row>
+                  <cell>9:00-10:45 </cell>
+                  <cell> 105 min </cell>
+                  <cell>Introduction to OCR with OCR4all</cell>
+                  <cell> practical and the theoretical background reduced to the minimum, introduce
+                     the workflow, then only very briefly explain the individual modules, and the
+                     rest of the time we will play around, short discussion advantages and
+                     disadvantages of ABBYY and OCR4all (not a presentation of ABBY) generate plain
+                     text files from the material</cell>
+                  <cell>Christian </cell>
+               </row>
+               <row>
+                  <cell>11:15-13:00</cell>
+                  <cell> 105 min </cell>
+                  <cell>Working with OCR </cell>
+                  <cell> Second practical: everyone chooses a different Polish text <ref
+                        target="http://distantreading.github.io/Training/Budapest/tutorial-pol.html"
+                        >slides</ref></cell>
+                  <cell>Lou</cell>
+               </row>
+               <row>
+                  <cell>13:00-14:00</cell>
+                  <cell> 60 min </cell>
+                  <cell>LUNCH</cell>
+                  <cell> </cell>
+               </row>
+               <row>
+                  <cell>14:00-14:45</cell>
+                  <cell> 45 min </cell>
+                  <cell>Varieties of markup and conversion tools (talk/discussion)</cell>
+                  <cell>[slides to come]</cell>
+                  <cell>Lou </cell>
+               </row>
+               <row>
+                  <cell>14:45-16:30</cell>
+                  <cell> 105 min Working with other OCR outputs (Abbyy xml ─ docx -- HTML ) </cell>
+                  <cell> Third practical: everyone chooses a different text <ref
+                        target="http://distantreading.github.io/Training/Budapest/tutorial-abbyy.html"
+                        > slides</ref></cell>
+                  <cell>Lou </cell>
+
+               </row>
+               <row>
+                  <cell>16:30-17:00</cell>
+                  <cell> 30 min</cell>
+                  <cell>Summary - what have we learned? </cell>
+                  <cell> Carolin </cell>
+                  <cell> </cell>
+               </row>
+               <row>
+                  <cell>17:15-18:45</cell>
+                  <cell>Katherine Bode Lecture </cell>
+                  <cell> </cell>
+                  <cell> </cell>
+                  <cell> </cell>
+                  <cell> </cell>
+               </row>
+
+               <row>
+                  <cell>9:00-10:45 </cell>
+                  <cell> 105 min </cell>
+                  <cell>Concluding session </cell>
+                  <cell> create presentation of the outputs of the workshop, upload data </cell>
+                  <cell>Lou, Martina, Christian, Carolin</cell>
+                  <cell/>
+               </row>
+               <row>
+                  <cell>11:15-12-45</cell>
+                  <cell>90 min Joint final session</cell>
+                  <cell>Lou, Martina, Christian, Carolin</cell>
+               </row>
+            </table>
             <list type="gloss">
                <label>Local Organizers:</label>
                <item/>
@@ -49,61 +171,7 @@
                <item/>
             </list>
          </div>
-         <div type="slide">
-            <head>Creating texts for ELTeC</head>
-            <p>In this workshop you'll learn: <list>
-                  <item>what TEI XML markup is and why we use it for the ELTeC</item>
-                  <item>how ELTeC texts should be marked up, at levels 0 and 1</item>
-                  <item>some practical ways of creating ELTeC texts starting from other formats,for
-                     example : <list>
-                        <item>plain text output by an OCR system</item>
-                        <item>digital documents created with Word or Open Office</item>
-                        <item>ePub or HTML documents found on the internet</item>
-                     </list></item>
-               </list></p>
-            <p>You should have some previous experience of working with digital documents, for
-               example creating web pages, or editing documents with Word, but you are not expected
-               to know anything about TEI or XML! </p>
-            <p>Almost all the practical work will be done using <ref
-                  target="https://www.oxygenxml.com/xml_editor/download_oxygenxml_editor.html"
-                  >oXygen XML Editor</ref>. If you don't already have it installed, you may like to
-               download an evaluation copy of this software before the workshop. </p>
-            <p>You will also need your own copy of the sample files we will be working with.
-               Download them by clicking <ref target="work.zip">this
-               link</ref><!--, 
-                  or by checking out <ref target="">this github repository</ref>-->.
-            </p>
-         </div>
-        
-         <div type="slide">
-            <head>Provisional Programme (subject to revision) </head>
-            <list>
-               <label>Monday</label>
-               <item>
-                  <list>
-                     <item>Early afternoon: Joint opening session (30 minutes) </item>
-                     <item>Afternoon session 1: Introduction to Oxygen and XML (Martina) </item>
-                     <item>Afternoon session 2: Metadata (Carolin)</item>
-                  </list>
-               </item>
-               <label>Tuesday</label>
-               <item><list>
-                      <item>Morning session 1: Creating OCR with OCR4all (Christian) </item>
-                     <item>Morning session 2: Transforming plain text to level0 (Christian and Lou) </item>
-                     <item>Afternoon session 1: Transforming Abbyy Outputs to level0 (Lou) </item>
-                     <item>Afternoon session 2: Level1, publishing at GitHub, additional
-                        enrichment (talk from WG2?) [who?]</item>
-                  </list>
-               </item>
-               <label>Wednesday</label>
-               <item>
-                  <list>
-                     <item>Morning session 1: Concluding session (1h) </item>
-                     <item>Morning session 2: Joint final session (2 hours)</item>
-                  </list>
-                 </item>
-            </list>
-         </div>
+
       </body>
    </text>
 </TEI>
