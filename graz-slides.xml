@@ -41,7 +41,7 @@ Will you add references? (cf our abstract)
 -->
     <text>
         <body>
-          <!--  <div type="slide">
+            <!--  <div type="slide">
                 
                 <figure>
                     <graphic url="media/comity-ss.png"/>
@@ -59,14 +59,14 @@ Will you add references? (cf our abstract)
                     also a negotiation of social relations.</q>
                 <p><ref target="#B11">(Widdowson, 1990, p. 110)</ref>
                 </p>
-<p>Our project is to establish a comity which can bridge the gap 
-    (identified by Jan Rybicki in his plenary) between the two most interesting
-and longest-established subfields of the Digital Humanities ... </p>
-               
+                <p>Our project is to establish a comity which can bridge the gap (identified by Jan
+                    Rybicki in his plenary) between the two most interesting and longest-established
+                    subfields of the Digital Humanities ... </p>
+
             </div>
             <div type="slide">
                 <head>The TEI was born interdisciplinary</head>
-                
+
                 <p>This is not such a new idea...</p>
                 <p>Participants at the Poughkeepsie conference came from many disciplines, including
                     computer science and computer services, NLP, theoretical linguistics but also
@@ -100,15 +100,13 @@ and longest-established subfields of the Digital Humanities ... </p>
                 <head>COST Action 16204 “Distant Reading for European Literary History” </head>
                 <list>
                     <item>see <ptr target="https://www.distant-reading.net"/></item>
-                    
-                        <item>European network with 35 members from 23 countries bringing together researchers from different disciplines and
-                            scientific backgrounds </item>
-                         <item>Like TEI, COST is a community initiative
-                            fostering collaboration, interoperability, and mutual
-                            understanding</item>
-                         <item>Four working groups, reporting to a management committee comprising two
-                        national representatives from each  participating country
-                      </item>
+
+                    <item>European network with 35 members from 23 countries bringing together
+                        researchers from different disciplines and scientific backgrounds </item>
+                    <item>Like TEI, COST is a community initiative fostering collaboration,
+                        interoperability, and mutual understanding</item>
+                    <item>Four working groups, reporting to a management committee comprising two
+                        national representatives from each participating country </item>
                     <item>We report here on WG1 ("Scholarly resources") which is charged with design
                         and construction of the the European Literary Text Collection (ELTeC). <list>
                             <item>a set of comparable corpora for each of at least a dozen European
@@ -157,54 +155,59 @@ and longest-established subfields of the Digital Humanities ... </p>
                     <item>discard paratext, illustrations, notes, corrections</item>
                     <item>(optionally) mark pagebreaks and highlighting</item>
                     <item>text may or may not be normalized: no indication either way</item>
-         
+
                 </list>
+            </div>
+            <div type="slide">
+                <head>for example</head>
+                <figure>
+                    <graphic url="media/p302-level0.png"/>
+                </figure>
             </div>
             <div type="slide">
                 <head>level 1 : some enrichment</head>
                 <list>
-                    <item>mark chapter substructure with <gi>milestone</gi> and <gi>label</gi> elements</item>
+                    <item>mark chapter substructure with <gi>milestone</gi> and <gi>label</gi>
+                        elements</item>
                     <item>interpret highlighting, where possible, using <gi>emph</gi>
                         <gi>foreign</gi> or <gi>title</gi></item>
                     <item>record authorial notes (gathered together into back)</item>
                     <item>record graphics as <gi>gap</gi></item>
                     <item>normalized forms are explicit but original forms are lost</item>
-                    
+
                 </list>
             </div>
             <div type="slide">
                 <head>level 2 : basic linguistic annotation</head>
                 <list>
                     <item>end to end segmentation using <gi>s</gi></item>
-                    <item>tokenisation using <gi>w</gi>, with att.linguistic attributes 
-                        <att>pos</att>, <att>lemma</att>,
-                        and <att>join</att></item>
+                    <item>tokenisation using <gi>w</gi>, with att.linguistic attributes
+                            <att>pos</att>, <att>lemma</att>, and <att>join</att></item>
                     <item>(probably) mark named entities with <gi>rs</gi></item>
-                    <item>inline annotation is possible because tagging is minimal
-                        </item>
+                    <item>inline annotation is possible because tagging is minimal </item>
                 </list>
                 <p rend="box">... a work in progress</p>
             </div>
             <div type="slide">
                 <head>Header checklist</head>
                 <p>All headers provide, in consistent format: <list>
-                    <item>Identification of title and language (<att>xml:id</att> and
-                        <att>xml:lang</att> on <gi>TEI</gi>)</item>
-                    <item>Title of the work, followed by the phrase <val>: ELTeC edition</val>
-                        (<gi>title</gi>)</item>
-                    <item>Author, in format <val>Surname, Forename/s (birthYear-deathYear)</val>
-                        (<gi>author</gi>) </item>
-                    <item>Statements of responsibility in format <val>encoded by Name</val>
-                        (<gi>respStmt</gi>) </item>
-                    <item>Date of publication in ELTeC (<gi>publicationStmt</gi>) </item>
-                    <item>Source description containing one or more <gi>bibl</gi>
-                        elements</item>
-                    <item>Encoding level : use the <att>n</att> attribute of
-                        <gi>encodingDesc</gi></item>
-                    <item>Profile description specifying languages used and sampling criteria
-                        values (<gi>langUsage</gi>, <gi>textDesc</gi>)</item>
-                    <item>Revision description containing at least one <gi>change</gi></item>
-                </list></p>
+                        <item>Identification of title and language (<att>xml:id</att> and
+                                <att>xml:lang</att> on <gi>TEI</gi>)</item>
+                        <item>Title of the work, followed by the phrase <val>: ELTeC edition</val>
+                                (<gi>title</gi>)</item>
+                        <item>Author, in format <val>Surname, Forename/s (birthYear-deathYear)</val>
+                                (<gi>author</gi>) </item>
+                        <item>Statements of responsibility in format <val>encoded by Name</val>
+                                (<gi>respStmt</gi>) </item>
+                        <item>Date of publication in ELTeC (<gi>publicationStmt</gi>) </item>
+                        <item>Source description containing one or more <gi>bibl</gi>
+                            elements</item>
+                        <item>Encoding level : use the <att>n</att> attribute of
+                                <gi>encodingDesc</gi></item>
+                        <item>Profile description specifying languages used and sampling criteria
+                            values (<gi>langUsage</gi>, <gi>textDesc</gi>)</item>
+                        <item>Revision description containing at least one <gi>change</gi></item>
+                    </list></p>
                 <p>Most requirements are enforced by the schema: others by schematron rules </p>
                 <p rend="box">a compromise between desire for minimal tagging and desire for
                     precision</p>
@@ -228,14 +231,14 @@ and longest-established subfields of the Digital Humanities ... </p>
                     <item>These features are encoded in the header using a customized
                             <gi>textDesc</gi> element</item>
                 </list>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <textDesc xmlns:e="http://distantreading.net/eltec/ns">
-                    <e:authorGender key="M"/>
-                    <e:size  key="short"/>
-                    <e:canonicity  key="low"/>
-                    <e:timeSlot  key="T1"/>
-                </textDesc>
-            </egXML>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <textDesc xmlns:e="http://distantreading.net/eltec/ns">
+                        <e:authorGender key="M"/>
+                        <e:size key="short"/>
+                        <e:canonicity key="low"/>
+                        <e:timeSlot key="T1"/>
+                    </textDesc>
+                </egXML>
             </div>
             <div type="slide">
                 <head>Metadata - 2</head>
@@ -254,19 +257,19 @@ and longest-established subfields of the Digital Humanities ... </p>
                         editions</item>
                 </list>
             </div>
-                       <div type="slide">
+            <div type="slide">
                 <head>Publication issues</head>
                 <p>Only out of copyright works are included, and all texts are published under CC-BY
                     licence. </p>
                 <list>
-                    <item>maintenance and development in publically accessible github
-                        repositories at <ptr target="https://github.com/COST-ELTeC"/></item>
+                    <item>maintenance and development in publically accessible github repositories
+                        at <ptr target="https://github.com/COST-ELTeC"/></item>
                     <item>Releases archived under Zenodo (first one due next month)</item>
                 </list>
-                 <p rend="box">
-                     FAIR Guiding Principles: <hi>F</hi>indable on Zenodo; <hi>A</hi>ccessible on Github; 
-                     using TEI makes it <hi>I</hi>nteroperable  and <hi>R</hi>e-usable </p>
-                
+                <p rend="box"> FAIR Guiding Principles: <hi>F</hi>indable on Zenodo;
+                    <hi>A</hi>ccessible on Github; using TEI makes it <hi>I</hi>nteroperable and
+                        <hi>R</hi>e-usable </p>
+
             </div>
             <div type="slide">
                 <head>ODD chaining</head>
@@ -278,20 +281,21 @@ and longest-established subfields of the Digital Humanities ... </p>
                 </figure>
                 <cb/>
                 <list>
-                    <item>The main TEI ODD selects all and only elements required for each of the
+                    <item>base ELTeC ODD selects all and only elements required for each of the
                         three schemas, and supplies generic constraints</item>
-                    <item>The base ODD is processed to create a TEI library, analogous to the TEI
-                        P5subset supplied with TEI P5</item>
-                    <item>Each schema is defined by a separate ODD which selects a subset from that
+                    <item>it is processed to create a TEI library, analogous to the 
+                        "p5subset" supplied with TEI P5</item>
+                    <item>each ELTeC level is defined by a separate ODD,
+                        which selects a subset from that
                         library</item>
                 </list>
                 <p>Promotes consistency of documentation and application</p>
             </div>
             <div type="slide">
                 <head>State of play and future work</head>
-                <p>Current state is visible at
-                    <ptr target="https://distantreading.github.io/ELTeC"/></p>
-                
+                <p>Current state is visible at <ptr target="https://distantreading.github.io/ELTeC"
+                    /></p>
+
                 <list>
                     <item>Building the next (and subsequent!) releases</item>
                     <item>Improving metadata, e.g. operationalizing canonicity counts</item>
