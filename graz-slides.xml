@@ -20,35 +20,60 @@
             <change when="2019-09-13">Created file</change>
         </revisionDesc>
     </teiHeader>
+    <!--suggestions
+   markup should ensure comparability to texts from different languages 
+   and publication histories
+    more on what a text is; e.g. we create a benchmark corpus for NLP / distant reading   
+        this is a new perspective on using the TEI
+        orientation on surface phenomena
+        integrate already existing texts (refer to textgrid etc.) - re-using resources
+    unique for ELTeC:
+        inform about language collections: ELTeC is special in this sense that we collect also texts from languages others than English, French, German
+        European picture of what a novel might be should include Romanian, Russian, Italien, Slovenian etc. languages
+        stress that we do not only rely on canons - we aim to detect and encode texts that are not already in focus of DH / distant reading
+   
+       some information about the metadata plots as a tool for monitoring corpus building
+
+YOu could add our cooperation with Christian Reul and OCR4 all
+
+
+Will you add references? (cf our abstract)
+-->
     <text>
         <body>
-            <div type="slide">
-                <!--       <head>Aiming for comity</head>
-   -->
+          <!--  <div type="slide">
+                
                 <figure>
                     <graphic url="media/comity-ss.png"/>
                 </figure>
 
+            </div>-->
+            <div type="slide">
+                <head>Searching for comity</head>
                 <p><ref target="https://www.lexico.com/en/definition/comity"
                         >https://www.lexico.com/en/definition/comity</ref></p>
-            </div>
-            <div type="slide">
-                <head>Meaning as a social construct</head>
+
                 <q>Those participating in conversational encounters have to have a care for the
                     preservation of good relations by promoting the other's positive self-image, by
                     avoiding offence, encouraging comity, and so on. The negotiation of meaning is
                     also a negotiation of social relations.</q>
                 <p><ref target="#B11">(Widdowson, 1990, p. 110)</ref>
                 </p>
+<p>Our project is to establish a comity which can bridge the gap 
+    (identified by Jan Rybicki in his plenary) between the two most interesting
+and longest-established subfields of the Digital Humanities ... </p>
+               
             </div>
             <div type="slide">
                 <head>The TEI was born interdisciplinary</head>
+                
+                <p>This is not such a new idea...</p>
                 <p>Participants at the Poughkeepsie conference came from many disciplines, including
                     computer science and computer services, NLP, theoretical linguistics but also
                     literary studies, classics, historical, and medieval studies. </p>
                 <p>Its advisory board and formative working groups sought varied representation,
                     both geographically and by discipline. </p>
-                <p>Ample anecdotal evidence of cross disciplinary fertilisation</p>
+                <p>There is ample anecdotal evidence of cross disciplinary fertilisation</p>
             </div>
             <div type="slide">
                 <head>What text really is... </head>
@@ -62,22 +87,28 @@
                             <item>their use in a particular discipline</item>
                         </list></item>
                 </list>
-                <p>TEI had/has to mediate two orthodoxies <list>
+                <p>TEI has always had to mediate two orthodoxies <list>
                         <item>text is no less and no more than the documents which instantiate
                             it</item>
                         <item>text is no less and no more than a linguistic phenomenon, a bag of
                             words whose statistical properties suffice to describe it</item>
                     </list></p>
                 <p rend="box">Is this model of text compatible with the model underlying the fields
-                    of stylometry, stylistics, textual analytics, aksa distant reading?</p>
+                    of stylometry, stylistics, textual analytics, aka distant reading?</p>
             </div>
             <div type="slide">
-                <head>COST Action 16204 " “Distant Reading for European Literary History” </head>
+                <head>COST Action 16204 “Distant Reading for European Literary History” </head>
                 <list>
                     <item>see <ptr target="https://www.distant-reading.net"/></item>
-                    <item>Four working groups, reporting to a management committee comprising two
-                        national representatives from each of 29 participating countries across
-                        Europe </item>
+                    
+                        <item>European network with 35 members from 23 countries bringing together researchers from different disciplines and
+                            scientific backgrounds </item>
+                         <item>Like TEI, COST is a community initiative
+                            fostering collaboration, interoperability, and mutual
+                            understanding</item>
+                         <item>Four working groups, reporting to a management committee comprising two
+                        national representatives from each  participating country
+                      </item>
                     <item>We report here on WG1 ("Scholarly resources") which is charged with design
                         and construction of the the European Literary Text Collection (ELTeC). <list>
                             <item>a set of comparable corpora for each of at least a dozen European
@@ -120,34 +151,63 @@
                 <list>
                     <item>discard non authorial front or back matter</item>
                     <item>distinguish titlepage from other front matter</item>
-                    <item>mark chapter divisions and headings</item>
+                    <item>mark chapter divisions and headings, but no substructure</item>
                     <item>mark paragraphs (MLE blocks of text)</item>
                     <item>reassemble words broken across lines</item>
                     <item>discard paratext, illustrations, notes, corrections</item>
-                    <item>optionally mark pagebreaks and highlighting</item>
+                    <item>(optionally) mark pagebreaks and highlighting</item>
+                    <item>text may or may not be normalized: no indication either way</item>
+         
                 </list>
             </div>
             <div type="slide">
                 <head>level 1 : some enrichment</head>
                 <list>
-                    <item>mark chapter substructure with <gi>milestone</gi>s</item>
+                    <item>mark chapter substructure with <gi>milestone</gi> and <gi>label</gi> elements</item>
                     <item>interpret highlighting, where possible, using <gi>emph</gi>
                         <gi>foreign</gi> or <gi>title</gi></item>
                     <item>record authorial notes (gathered together into back)</item>
                     <item>record graphics as <gi>gap</gi></item>
-                    <item/>
+                    <item>normalized forms are explicit but original forms are lost</item>
+                    
                 </list>
             </div>
             <div type="slide">
                 <head>level 2 : basic linguistic annotation</head>
                 <list>
                     <item>end to end segmentation using <gi>s</gi></item>
-                    <item>tokenisation using <gi>w</gi>, with att.linguistic attributes pos,lemma,
-                        and join</item>
-                    <item>(probably) mark named entities with <gi>rs</gi> minimal structural tagging
-                        retained </item>
+                    <item>tokenisation using <gi>w</gi>, with att.linguistic attributes 
+                        <att>pos</att>, <att>lemma</att>,
+                        and <att>join</att></item>
+                    <item>(probably) mark named entities with <gi>rs</gi></item>
+                    <item>inline annotation is possible because tagging is minimal
+                        </item>
                 </list>
-                <p rend="box">Work in progress</p>
+                <p rend="box">... a work in progress</p>
+            </div>
+            <div type="slide">
+                <head>Header checklist</head>
+                <p>All headers provide, in consistent format: <list>
+                    <item>Identification of title and language (<att>xml:id</att> and
+                        <att>xml:lang</att> on <gi>TEI</gi>)</item>
+                    <item>Title of the work, followed by the phrase <val>: ELTeC edition</val>
+                        (<gi>title</gi>)</item>
+                    <item>Author, in format <val>Surname, Forename/s (birthYear-deathYear)</val>
+                        (<gi>author</gi>) </item>
+                    <item>Statements of responsibility in format <val>encoded by Name</val>
+                        (<gi>respStmt</gi>) </item>
+                    <item>Date of publication in ELTeC (<gi>publicationStmt</gi>) </item>
+                    <item>Source description containing one or more <gi>bibl</gi>
+                        elements</item>
+                    <item>Encoding level : use the <att>n</att> attribute of
+                        <gi>encodingDesc</gi></item>
+                    <item>Profile description specifying languages used and sampling criteria
+                        values (<gi>langUsage</gi>, <gi>textDesc</gi>)</item>
+                    <item>Revision description containing at least one <gi>change</gi></item>
+                </list></p>
+                <p>Most requirements are enforced by the schema: others by schematron rules </p>
+                <p rend="box">a compromise between desire for minimal tagging and desire for
+                    precision</p>
             </div>
             <div type="slide">
                 <head>Metadata -1 </head>
@@ -168,6 +228,14 @@
                     <item>These features are encoded in the header using a customized
                             <gi>textDesc</gi> element</item>
                 </list>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <textDesc xmlns:e="http://distantreading.net/eltec/ns">
+                    <e:authorGender key="M"/>
+                    <e:size  key="short"/>
+                    <e:canonicity  key="low"/>
+                    <e:timeSlot  key="T1"/>
+                </textDesc>
+            </egXML>
             </div>
             <div type="slide">
                 <head>Metadata - 2</head>
@@ -186,38 +254,27 @@
                         editions</item>
                 </list>
             </div>
-            <div type="slide"> 
-                <head>Header checklist</head>
-                <p>All headers provide, in consistent format: <list>
-                    <item>Identification of title and language (<att>xml:id</att> and
-                        <att>xml:lang</att> on <gi>TEI</gi>)</item>
-                    <item>Title of the work, followed by the phrase <val>: ELTeC edition</val>
-                        (<gi>title</gi>)</item>
-                    <item>Author, in format <val>Surname, Forename/s (birthYear-deathYear)</val>
-                        (<gi>author</gi>) </item>
-                    <item>Statements of responsibility in format <val>encoded by Name</val>
-                        (<gi>respStmt</gi>) </item>
-                    <item>Date of publication in ELTeC (<gi>publicationStmt</gi>) </item>
-                    <item>Source description containing one or more <gi>bibl</gi> elements</item>
-                    <item>Encoding level : use the <att>n</att> attribute of
-                        <gi>encodingDesc</gi></item>
-                    <item>Profile description specifying languages used and sampling criteria values
-                        (<gi>langUsage</gi>, <gi>textDesc</gi>)</item>
-                    <item>Revision description containing at least one <gi>change</gi></item>
-                </list></p>
-                <p>Most requirements are enforced by the schema: others by schematron rules </p>
-            <p rend="box">a compromise between desire for minimal tagging and desire for precision</p>
-           </div><div type="slide"><head>Publication issues</head>
-               <p>Only out of copyright works are included, and all texts are published under CC-BY licence. </p>
-           <list><item>maintenance and development in publically accessible github repositories</item>
-               <item>Releases archived under Zenodo (first one due next month)</item></list></div>
+                       <div type="slide">
+                <head>Publication issues</head>
+                <p>Only out of copyright works are included, and all texts are published under CC-BY
+                    licence. </p>
+                <list>
+                    <item>maintenance and development in publically accessible github
+                        repositories at <ptr target="https://github.com/COST-ELTeC"/></item>
+                    <item>Releases archived under Zenodo (first one due next month)</item>
+                </list>
+                 <p rend="box">
+                     FAIR Guiding Principles: <hi>F</hi>indable on Zenodo; <hi>A</hi>ccessible on Github; 
+                     using TEI makes it <hi>I</hi>nteroperable  and <hi>R</hi>e-usable </p>
+                
+            </div>
             <div type="slide">
                 <head>ODD chaining</head>
                 <!--<p>Rather than maintain three independent but overlapping 
                     schemas we use the facility known as ODD chaining...
                   </p>-->
                 <figure>
-                    <graphic height="70%" url="eltec-chains.png"/>
+                    <graphic height="70%" url="media/eltec-chains.png"/>
                 </figure>
                 <cb/>
                 <list>
@@ -232,11 +289,15 @@
             </div>
             <div type="slide">
                 <head>State of play and future work</head>
+                <p>Current state is visible at
+                    <ptr target="https://distantreading.github.io/ELTeC"/></p>
+                
                 <list>
                     <item>Building the next (and subsequent!) releases</item>
                     <item>Improving metadata, e.g. operationalizing canonicity counts</item>
                     <item>Testing level2 proposals</item>
                 </list>
+                <p rend="box">News at <ptr target="https://www.distant-reading.net/news/"/></p>
             </div>
         </body>
     </text>
