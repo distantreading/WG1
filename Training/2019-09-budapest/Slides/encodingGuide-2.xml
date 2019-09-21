@@ -45,6 +45,13 @@
                <item>quotation (<gi>quote</gi>)</item>
                <item>authorial notes (<gi>note</gi>, <gi>ref</gi>)</item>
             </list>
+            <p>A level 2 encoding may additionally contain: <list>
+                  <item><gi>s</gi> elements for segmentation within paragraphs</item>
+                  <item><gi>rs</gi> for named entities (<att>type</att> values to be determined)</item>
+                  <item> word level tokenization using <gi>w</gi> elements which bear attributes
+                        <att>pos</att>, <att>lem</att>, <att>join</att>, <att>msd</att> (values
+                  all to be determined)</item>
+               </list></p>
          </div>
          <!--<div type="slide">
             <head>Identification</head>
@@ -140,24 +147,29 @@
                unit. </p>
             <p>The element <gi>l</gi> should be used for each distinct line of verse, where this is
                clearly not prose, as in for example a song or an epigraph. </p>
-        <figure><graphic url="../media/quotedSong.png"/></figure>
+            <figure>
+               <graphic url="../media/quotedSong.png"/>
+            </figure>
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>Eraû ceasurile 10. Un beţiv trecênd
                   pe stradă cânta a lene: </p>
                <l>Vin drăguţă lângă mine: </l>
                <l>Drăguţă, drăguţă ...</l>
                <l>Căcĭc mi-e dor, mi-e dor de tine ...</l>
-            <!-- ... -->
+               <!-- ... -->
                <p>Si românul, beţiv, ca si fanaraiotul păgân...</p></egXML>
             <p>At level 1, quoted paragraphs or quoted verse may be wrapped in a <gi>quote</gi>
-               element. </p>  
+               element. </p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>Eraû ceasurile 10. Un beţiv trecênd
-               pe stradă cânta a lene: </p>
-              <quote> <l>Vin drăguţă lângă mine: </l>
-               <l>Drăguţă, drăguţă ...</l>
-               <l>Căcĭc mi-e dor, mi-e dor de tine ...</l>
-         </quote>   <!-- ... -->
-            <p>Si românul, beţiv, ca si fanaraiotul păgân...</p>
-            </egXML></div>
+                  pe stradă cânta a lene: </p>
+               <quote>
+                  <l>Vin drăguţă lângă mine: </l>
+                  <l>Drăguţă, drăguţă ...</l>
+                  <l>Căcĭc mi-e dor, mi-e dor de tine ...</l>
+               </quote>
+               <!-- ... -->
+               <p>Si românul, beţiv, ca si fanaraiotul păgân...</p>
+            </egXML>
+         </div>
          <div type="slide">
             <head>Typographic salience</head>
             <list>
@@ -182,15 +194,17 @@
                <gap desc="graphic"/></egXML>
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><!-- the word "indubitably" has been provided by an editor or transcriber -->
                <p>... and so <corr>indubitably</corr> preferable .. </p></egXML>
-         <p>The same element may be used to mark where 
-            something missing in the source (eg opening quotation mark) has been 
-            supplied by the encoder:
-            <egXML xmlns="http://www.tei-c.org/ns/Examples"> <div>
-               <head>I. Dika Lombardije.</head>
-               <p n="SL-WIKI001351">
-                  <corr>„</corr>Italija, kako lepa si, prostrana naša domovina! Kamorkoli se ozre oko,
-                  odpiraš mu nova čuda....dika Lombardije.“ —
-                  Tako je sanjaril sam s seboj pesnik Antonio Loschi...</p></div></egXML></p></div>
+            <p>The same element may be used to mark where something missing in the source (eg
+               opening quotation mark) has been supplied by the encoder: <egXML
+                  xmlns="http://www.tei-c.org/ns/Examples">
+                  <div>
+                     <head>I. Dika Lombardije.</head>
+                     <p n="SL-WIKI001351">
+                        <corr>„</corr>Italija, kako lepa si, prostrana naša domovina! Kamorkoli se
+                        ozre oko, odpiraš mu nova čuda....dika Lombardije.“ — Tako je sanjaril sam s
+                        seboj pesnik Antonio Loschi...</p>
+                  </div></egXML></p>
+         </div>
          <div type="slide">
             <head>Sub-divisions of chapters</head>
             <figure>
@@ -219,11 +233,15 @@
             <p>At level 1, emphasized words in speech or narrative may be marked using
                <gi>emph</gi>. </p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">You said <emph>what</emph>?</egXML>
-            
+
             <p>At level 1, code switching (use of a language other than that of the main narrative)
                may be marked using <gi>foreign</gi>
-            <figure><graphic url="../media/codeSwitch.png"/></figure>   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <p> -- Ite! Un <foreign>miş-maş</foreign>, zise Kiva, care intrand auzise spusele Zamfirei.</p>
+               <figure>
+                  <graphic url="../media/codeSwitch.png"/>
+               </figure>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <p> -- Ite! Un <foreign>miş-maş</foreign>, zise Kiva, care intrand auzise spusele
+                     Zamfirei.</p>
                </egXML></p>
             <p>The <att>xml:lang</att> attribute may optionally be used to specify the language
                switched to, but is not obligatory</p>

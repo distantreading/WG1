@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../../TEIslides/teislides.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Encoding for ELTeC : an update </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Prepared for Budapest TS ex nihilo</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2019-09-21">LB first draft</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="slide">
+                <head>ELTeC Encoding Requirements (a reminder!)</head>
+                <list>
+                    <item>support computational approaches to literary text analysis (authorship
+                        attribution, topic modelling, stylistic analysis ...)</item>
+                    <item>enrich corpora with metadata and impose only a minimal structure</item>
+                    <item>editorial issues of lesser interest</item>
+                    <item>markup should offer the encoder <hi>very little choice</hi>, and the
+                        software developer <hi>very few surprises</hi></item>
+                    <item>aim to facilitate uniform and consistent access across multiple
+                        corpora</item>
+                </list>
+                <p rend="box">Traditional TEI, by contrast, rejoices in variety, which makes
+                    comparative work harder</p>
+            </div>
+            <div type="slide">
+                <head>ELTeC encoding scheme/s</head>
+                <list>
+                    <item>level 0: minimal encoding scheme for texts produced manually or by OCR
+                        from print originals</item>
+                    <item>level 1 : somewhat richer format derivable automatically from texts
+                        encoded in other formats (Word, HTML TEI ...)</item>
+                    <item>level 2 : lingistically annotated and segmented</item>
+                </list>
+                <p rend="box">and a tightly constrained Header common to each level</p>
+            </div>
+            <div type="slide">
+                <head>Where are we now?</head>
+                <list>
+                    <item>In June 2019, with several hundred texts already done, we reviewed some
+                        proposed changes to the schema, almost all of them in the header</item>
+                    <item>Typical examples: constrain <att>type</att> values on <gi>bibl</gi> and on
+                            <gi>div</gi>; add constraints on presence of <gi>note</gi>s </item>
+                    <item>A new XSLT stylesheet converts existing valid files to files which are
+                        valid with the new schema </item>
+                    <item>We have tested this on all currently available files</item>
+                    <item>It is planned to convert all files to use the new schema before the first
+                        Zenodo release</item>
+                </list>
+            </div>
+            <div type="slide">
+                <head>ELTeC Encoding level 2</head>
+
+                <list>
+                    <item>We have developed but not much tested a proposal for embedding linguistic
+                        annotation within existing level0 or level1 files </item>
+                    <item>This could be used to define training sets, or to express the results of
+                        automatic word level annotation (NER, pos, etc.)</item>
+                </list>
+                <p rend="box">We circulated details to WG2 in June 2019, but there has been little
+                    or no feedback, and none of the experimental work going on currently in WG2
+                    seems to produce texts in a TEI format. </p>
+            </div>
+            
+        </body>
+    </text>
+</TEI>
