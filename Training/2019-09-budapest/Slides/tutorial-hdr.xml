@@ -3,7 +3,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
     <fileDesc>
         <titleStmt>
-            <title>ELTeC Tutorial 1: getting started</title>
+            <title>Getting started</title>
             <author>Lou Burnard Consulting</author>
         </titleStmt>
         <publicationStmt><p>unpublished draft</p></publicationStmt>
@@ -73,7 +73,7 @@
                     the data: refer to the header documentation (for example <ref
                         target="https://github.com/distantreading/WG1/wiki/teiHeaders">on the
                         wiki</ref>) for a reminder on what the codes mean.</item>
-                <item>To remove tthe only remaining red line in the header, enter today's date,
+                <item>To remove the only remaining red line in the header, enter today's date,
                     in the right (YYYY-MM-DD) format as value for the <att>when</att> attribute.
                     Phew! no red marks anywhere in the Header -- which is now therefore valid:
                     click the disk icon (or type CTRL-S, or choose File-Save from the menu) to

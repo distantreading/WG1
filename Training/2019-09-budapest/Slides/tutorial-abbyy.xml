@@ -4,7 +4,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>ELTeC Tutorial 3 : reprocessing Abbyy outputs</title>
+                <title>Re-processing Abbyy outputs</title>
                 <author>Lou Burnard Consulting</author>
             </titleStmt>
             <publicationStmt>
@@ -25,12 +25,78 @@
                 <p>Please begin by selecting a text you would like to work on, in a language which
                     you are comfortable with handling. The following items are available in your
                     Work/Novels folder: <table>
-                        <row>
-                            <cell>Language</cell>
+                        <row role="label">
                             <cell>Identifier</cell>
-                            <cell>Author</cell>
                             <cell>Title</cell>
+                            <cell>PDF filename</cell>
+                            <cell>Other formats</cell>
                             <cell>Wordcount</cell>
+                        </row>
+                        <row>
+                            <cell>ENG18410</cell>
+                            <cell>Cecil, or, The adventures of a coxcomb</cell>
+                            <cell>ENG18410_Gore.pdf</cell>
+                            <cell>ENG18410_Gore.abbyy.xml</cell>
+                        </row>
+                        <row>
+                            <cell>ENG18470</cell>
+                            <cell>The Castle of Ehrenstein</cell>
+                            <cell>ENG18470_James.pdf</cell>
+                            <cell>ENG18470_James.abbyy.xml</cell>
+                        </row>
+                        <row>
+                            <cell>ENG19150</cell>
+                            <cell>Pointed Roofs</cell>
+                            <cell>ENG19150_Richardson.pdf</cell>
+                            <cell>ENG19150_Richardson.abbyy.xml, ENG19150_Richardson.docx</cell>
+                        </row>
+                        <row>
+                            <cell>FRA19120</cell>
+                            <cell>Vers le pole en aeroplane</cell>
+                            <cell>FRA19120_Gilbert.pdf</cell>
+                            <cell>FRA19120_Gilbert.abbyy.xml, FRA19120_Gilbert.docx</cell>
+                        </row>
+                        <row>
+                            <cell>HUN18460</cell>
+                            <cell>Meghasonlott Kedely</cell>
+                            <cell>HUN18460_Kelmenfy.pdf</cell>
+                            <cell>HUN18460_Kelmenfy.abbyy.xml, HUN18460_Kelmenfy.docx</cell>
+                        </row>
+                        <row>
+                            <cell>HUN19090</cell>
+                            <cell>Végzetes Tévedésh</cell>
+                            <cell>-</cell>
+                            <cell>HUN19090_Beniczkyne.docx</cell>
+                        </row>
+                        <row>
+                            <cell>HUN19180</cell>
+                            <cell>A három galamb</cell>
+                            <cell>-</cell>
+                            <cell>HUN19180_Kehel.html</cell>
+                        </row>
+                        <row>
+                            <cell>ROM18860</cell>
+                            <cell>Teodorei: copila domnului din bucuresti</cell>
+                            <cell>ROM18860_Macri.pdf</cell>
+                            <cell>ROM18860_Macri.abbyy.xml, ROM18860_Macri.docx</cell>
+                        </row>
+                        <row>
+                            <cell>ROM19060</cell>
+                            <cell>Mara</cell>
+                            <cell>ROM19060_Slavici.pdf</cell>
+                            <cell>ROM19060_Slavici.abbyy.xml, ROM19060_Slavici.docx</cell>
+                        </row>
+                        <row>
+                            <cell>ROM19170</cell>
+                            <cell>Domnul Badina</cell>
+                            <cell>ROM19170_Smara.pdf</cell>
+                            <cell>ROM19170_Smara.abbyy.xml</cell>
+                        </row>
+                        <row>
+                            <cell>SRP18860</cell>
+                            <cell>Omer Čelebija</cell>
+                            <cell>SRP18860_Milicevic.pdf</cell>
+                            <cell>SRP18860_Milicevic.abbyy.xml</cell>
                         </row>
                     </table>
                 </p>
@@ -40,23 +106,26 @@
                     also to familiarize yourself with the basic structure of the text -- whether it
                     has prefaces etc. </p>
                 <p>Use online resources (WorldCat, Wikipedia, etc.) to collect other required
-                    metadata, such as the fullname of the author, their dates, sex, etc. When you
-                    have this information, proceed to create a new document and a TEI Header<!--,
+                    metadata, such as the full name of the author, their dates, sex, etc. When you
+                    have this information, proceed to create a new document and a TEI
+                    Header<!--,
                     following the instructions in <ref target="#tutorial-hdr"/>.</p>-->
-                The procedure to follow is described in detail in the <ref target="tutorial-hdr.html">Header Tutorial</ref>. </p>
-                
+                    The procedure to follow is described in detail in the <ref
+                        target="tutorial-hdr.html">Header Tutorial</ref>. </p>
+
             </div>
             <div type="slide">
-                <head>Adding the text</head>
-                <p>Each file with extension .abbyy.xml contains an XML representation of the results
-                    of the OCR procedure carried out by Abbyy. This representation is quite verbose
-                    and contains much information we don't need, but it is easy to translate it to a
-                    basic TEI form using an XSLT stylesheet. We won't be teaching you XSLT (a
-                    standard language for converting one XML document to another) but we have
+                <head>Reprocessing abbyy XML format</head>
+                <p> Each file with extension .abbyy.xml contains an XML representation of the
+                    results of the OCR procedure carried out by Abbyy. This representation is quite
+                    verbose and contains much information we don't need, but it is easy to translate
+                    it to a basic TEI form using an XSLT stylesheet. We won't be teaching you XSLT
+                    (a standard language for converting one XML document to another) but we have
                     provided a suitable stylesheet for this task. In oXygen, the easiest way to use
-                    it is to set up a named <q>transformation scenario</q>;  you only need to do this once.
-                    Follow this procedure: </p>
-                <p><list>
+                    it is to use a named <q>transformation scenario</q>. We have created such a
+                    scenario for you: to use it, </p>
+
+                <!-- <p><list>
                         <item>In the <ident>Document</ident> menu, choose
                                 <ident>Transformation</ident> -> <ident>Configure Transformation
                                 Scenario(s)</ident>, or type CTRL-SHIFT-C, or click the spanner icon
@@ -80,63 +149,72 @@
                 </p>
                 <p>Once you have created this scenario, you can use it as often as you like, with
                     other XML files. You can also set it as the default scenario for a file. </p>
-
+-->
                 <list>
-                    <item>Now open the abby.xml file of your choice in oXygen</item>
-                    <item>With this file open in the editor, click the big red triangle icon on the toolbar, type
-                        CTRL-SHIFT-T, or select Document -> Transformation -> Apply Transformation
-                        Scenario from the menu</item>
+                    <item>Open the abby.xml file of your choice in oXygen</item>
+                    <item>With this file open in the editor, click the big red triangle icon on the
+                        toolbar, type CTRL-SHIFT-T, or select Document -> Transformation -> Apply
+                        Transformation Scenario from the menu</item>
                     <item>If you have set a default transformation, it will be applied; if not the
-                        <ident>Transform with</ident> dialog box appears. Select the <ident>abby2tei</ident>
-                        transformation you created earlier to associate it and then click the
-                            <ident>Apply Associated</ident> button. </item><item>After a brief delay, you should
-                            see a much less richly tagged version of the text.</item>
+                            <ident>Transform with</ident> dialog box appears. Select the
+                            <ident>abby2tei</ident> transformation<!-- you created earlier--> to
+                        associate it and then click the <ident>Apply Associated</ident> button. </item>
+                    <item>After a brief delay, you should see a much less richly tagged version of
+                        the text.</item>
                 </list>
-                <p>Comparing this version with the PDF file you opened earlier, you can see that
-                    the tag <tag>pb/</tag> indicates the start of a new page in the original. Each line of the
-                    output corresponds with a typographic line in the source. Blocks of text are tagged with a
-                    <gi>p</gi> element, though not all of them are paragraphs. Where there was a non-textual image
-                    in the original, the <gi>gap</gi> element appears. And of course there are
-                    probably quite a few character recognition errors, especially if the original 
-                    printed text was unclear or damaged.
-                </p><p>There is no automatically generated tagging beyond this; we will therefore have
-                to add it by hand. Refresh your memory about the basic structure of an ELTeC-0 text:
-                any front matter, such as  the titlepage or a preface, should be wrapped in a 
-                    <gi>front</gi>, while the text itself should be contained by a <gi>body</gi> element, grouping
-         containing <gi>div</gi> elements. 
-                </p>
-                 <p>It's up to you how you do this. Here's a suggestion:</p>
+                <p>Comparing this version with the PDF file you opened earlier, you can see that the
+                    tag <tag>pb/</tag> indicates the start of a new page in the original. Each line
+                    of the output corresponds with a typographic line in the source. Blocks of text
+                    are tagged with a <gi>p</gi> element, though not all of them are paragraphs.
+                    Where there was a non-textual image in the original, the <gi>gap</gi> element
+                    appears. And of course there are probably quite a few character recognition
+                    errors, especially if the original printed text was unclear or damaged. </p>
+                <p>There is no automatically generated tagging beyond this; we will therefore have
+                    to add it by hand. Refresh your memory about the basic structure of an ELTeC-0
+                    text: any front matter, such as the titlepage or a preface, should be wrapped in
+                    a <gi>front</gi>, while the text itself should be contained by a <gi>body</gi>
+                    element, grouping containing <gi>div</gi> elements. </p>
+                <p>It's up to you how you do this. Here's a suggestion:</p>
                 <list>
-                <item>Type CTRL-A to select the whole text</item><item>Type CTRL-E and surround
-                the whole text with a <gi>text</gi> element.</item>
-                    <item>If you have front matter, insert a <gi>front</gi> element at the start of your
-                        <gi>text</gi></item>    
-                <item>Select the paragraphs making up the titlepage, correct them, and wrap them in a <tag>div type="titlepage"</tag>
-                inside the <gi>front</gi></item>
-                <item>Decide whether any other prefatory matter is authorial: if it is, wrap it in
-                    a <tag>div type="liminal"</tag>, also inside the <gi>front</gi>. If it isn't, remove it.</item><item>Now add a <gi>body</gi> element
-                    to contain the rest of the text, and within it at least one <gi>div</gi></item>
+                    <item>Type CTRL-A to select the whole text</item>
+                    <item>Type CTRL-E and surround the whole text with a <gi>text</gi>
+                        element.</item>
+                    <item>If you have front matter: <list>
+                            <item>insert a <gi>front</gi> element at the start of your
+                                <gi>text</gi></item>
+                            <item>Select the paragraphs making up the titlepage, correct them, and
+                                wrap them in a <tag>div type="titlepage"</tag> inside the
+                                    <gi>front</gi></item>
+                            <item>Decide whether any other prefatory matter is authorial: if it is,
+                                wrap it in a <tag>div type="liminal"</tag>, also inside the
+                                    <gi>front</gi>. If it isn't, remove it.</item>
+                        </list></item>
+                    <item>Add a <gi>body</gi> element to contain the body of the text, and within it
+                        at least one <tag>div type="chapter"</tag></item>
                 </list>
-                <p>At some point you will want to tidy up the text a little: 
-                    you, but some things that would be easy to fix are: <list>
+                <p>Your next challenge is to identify the chapter divisions. You may be able to
+                    detect them using a regexp to search for specific words, as in the Polish texts,
+                    but this is not guaranteed. A text may not have any chapter divisions at all, in
+                    which case our schema requires you to wrap the whole thing in one <tag>div
+                        type="chapter"</tag>. Or they may not have been correctly identified by the
+                    OCR, in which case you may have to split the current <gi>div</gi> element at the
+                    right place, using ALT-SHIFT-D for example. Use the Outline view (Document->Show
+                    View->Outline) to see the emerging structure of your document. </p>
+                <p>At some point you will want to tidy up the text a little: some things that would
+                    be easy to fix are: <list>
                         <item>end-of-line hyphenation (where a word is broken across a line) is
-                            indicated by the special character <code>¬</code>. This makes it easy
-                            to join words up again: use a regexp to remove all occurrences of
+                            indicated by the special character <code>¬</code>. This makes it easy to
+                            join words up again: use a regexp to remove all occurrences of
                                 <code>¬\n</code>
                         </item>
-                        <item>The <tag>pb/</tag> tag is followed by any running header or page number in the original
-                            source, tagged as a separate <gi>p</gi> element. You may think it worth
-                            writing another regexp to remove paragraphs containing only digits and
-                            spaces or uppercase letters to catch these, though be careful you don't
-                            remove real parts of the text. </item>
-                              <item>You may be able to detect chapter divisions using a regexp to search
-                            for specific words, as in the Polish texts, but this is not guaranteed.
-                            A text may not have any chapter divisions at all, in which case our
-                            schema requires you to wrap the whole thing in one <tag>div
-                                type="chapter"</tag>. </item>
+                        <item>The <tag>pb/</tag> tag is followed by any running header or page
+                            number in the original source, tagged as a separate <gi>p</gi> element.
+                            You may think it worth writing another regexp to remove paragraphs
+                            containing only digits and spaces or uppercase letters to catch these,
+                            though be careful you don't remove real parts of the text. </item>
                         <item>You may catch some recurrent OCR errors using the spell checker built
-                            into oXygen (remember to set the correct language : you will need to
-                            copy the appropriate spelling files from your Work/Spell directory to
+                            into oXygen (remember to set the correct language : you may need to copy
+                            the appropriate spelling files from your Work/Spell directory to
                             ~/.com.oxygenxml/spell)</item>
                     </list></p>
                 <p>When you're reasonably happy with the transcription, type CTRL-A to select all of
@@ -144,6 +222,99 @@
                     header, move the cursor to the appropriate point inside the <gi>text</gi>
                     element, and type CTRL-V to paste it. Is the completed document valid? If not,
                     fix it!</p>
+            </div>
+            <div type="slide">
+                <head>Reprocessing docx files</head>
+                <p>Abbyy also has the useful capability to export its results in Word DOCX format.
+                    Here's a quick guide to converting this to TEI: <list>
+                        <item>In oXygen, use the usual Open dialog to select the docx file</item>
+                        <item>A window labelled <ident>Archive Browser</ident> opens to the left of
+                            the main screen. It shows the file structure of the docx archive.</item>
+                        <item>Click the blue key next to the folder called <ident>word </ident> to
+                            see the contents of this folder</item>
+                        <item>Select the file called <ident> document.xml</ident> and double click
+                            to open it (may take a few moments if the file is large)</item>
+                    </list>
+                    <!--<graphic url="media/document-word.png" height="4cm"/> -->As you see, this is
+                    an XML document, with lots of XML tags, using many different namespaces, most of
+                    them defined by Microsoft. <list>
+                        <item>With the <ident>document.xml</ident> file open in your main editing
+                            window, select <ident>Transformation -> Configure Transformation
+                                Scenario(s)</ident> from the <ident>Document</ident> menu. Or type
+                                <code>CTRL-SHIFT-C</code>. Or click the little spanner icon</item>
+                        <item>For the default DOCX to TEI conversion, check the little box next to
+                            DOCX TEI P5 and press the <ident>Apply Associated</ident> button </item>
+                        <!--  </list>
+                        <p><graphic url="media/configurer-1.png" height="4cm"/></p>
+                       <list xml:lang="en">-->
+                        <item>A new window opens at the bottom of the screen in which oXygen
+                            displays messages relating to the conversion process ; you may safely
+                            ignore these. </item>
+                        <item>In the main editing window, you should now see a TEI-conformant
+                            document. (Choose Source > Indenter le document from the Document menu,
+                            or type CTRL-MAJ-P or click the Indent button (this one: <graphic
+                                url="media/indent.png" height="7mm"/>) if it is displayed as a
+                            single line on the screen) Scroll down to see how the Word styles have
+                            been converted. </item>
+                        <!--  <item><graphic url="media/converted-1.png" height="6cm"/></item>
+                         -->
+                        <item>Note that many of the paragraphs have a <att>rend</att> attribute. The
+                            values of this attribute correspond with the Word style used in the
+                            original docx file. We could use these values to make a more intelligent
+                            conversion.</item>
+                    </list>
+                </p>
+                <p>We will begin by using oXygen's built in xPath browser to investigate the tagging
+                    more closely. <list>
+                        <item>Type <code>//p</code> into the <ident>XPath 2.0</ident> box at top
+                            left and press return </item>
+                        <item>Scroll down the list of results which opens below the document editing
+                            window </item>
+                        <item>You can see that most of the <gi>p</gi> elements have similar
+                            attributes, usually specifying that they contain <code>body text</code>,
+                            though there are some other formatting values</item>
+                        <item>Type //p[anchor] into the XPath box and press return again. Abbyy
+                            helpfully adds an anchor element at the start of each section of the
+                            document </item>
+                        <item>Up to you to see how other elements are used... for example, try
+                                <code>//hi</code> to see the<gi>hi</gi> elements </item>
+                    </list>
+                </p>
+                <p>oXygen also provides a useful way of automating changes to the markup without the
+                    trouble of writing a stylesheet. We will use it to transform all <gi>p</gi>
+                    elements containing an <gi>anchor</gi> into <gi>head</gi> elements. <list>
+                        <item>Open the refactoring tool (select Refactoring from the Tools menu) </item>
+                        <item>Scroll down to the <ident>Elements</ident> section; select
+                                <ident>rename</ident> element</item>
+                        <item>In the dialogue box which opens, enter <code>//p[anchor]</code> next
+                            to <ident>Target elements (XPATH)</ident> and <code>&lt;head></code>
+                            next to <ident>New local name</ident>
+                        </item>
+                        <item>Press the <ident>Finish</ident> button: by default the changes are
+                            applied throughout the whole file</item>
+
+                        <item>Inside your new <gi>head</gi> elements you probably now have some
+                            redundant tags such as <gi>anchor</gi> or <gi>hi.</gi>. You can use the
+                            Refactoring Tool to get rid of these too: just select <ident>Delete
+                                elements</ident> rather than <ident>rename elements</ident> and
+                            repeat.</item>
+                    </list></p>
+                <p>We now have <gi>head</gi> elements identifying the titles of chapters, but no
+                        <gi>div</gi> tags. We suggest using the find and replace command as a simple
+                    way of adding these. The search string should be <code>&lt;head</code>, and the
+                    replacement string should be <code>&lt;/div>&lt;div>&lt;div></code>. Test that
+                    this works as you expect before applying it to the whole file. When you have
+                    applied it, don't forget to scroll up to the beginning of the text and remove
+                    the redundant <code>&lt;/div></code>
+                </p>
+                <p>You can also use find and replace to get rid of redundant <att>rend</att> values:
+                    simply use (for example) <code> rend="Body Text (2)"</code> as search string and
+                    nothing as replacement for it. </p>
+                <p>You should now be able to work through the file chapter by chapter, comparing it
+                    with the original PDF as suggested above. Check that each chapter break has been
+                    correctly detected and recorded and remember to save your work! </p>
+
+
             </div>
         </body>
     </text>
