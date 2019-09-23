@@ -118,12 +118,17 @@
                   <cell>14:00-14:45</cell>
                   <cell> 45 min </cell>
                   <cell>Varieties of markup and conversion tools (talk/discussion)</cell>
-                  <cell>[slides to come]</cell>
+                  <cell>
+                     <ref
+                        target="https://distantreading.github.io/Training/Budapest/formatsTalk.html"
+                        >slides</ref></cell>
+
                   <cell>Lou </cell>
                </row>
                <row>
                   <cell>14:45-16:30</cell>
-                  <cell> 105 min Working with other OCR outputs (Abbyy xml ─ docx -- HTML ) </cell>
+                  <cell> 105 min </cell>
+                  <cell>Working with other OCR outputs (Abbyy xml ─ docx -- HTML ) </cell>
                   <cell> Third practical: everyone chooses a different text <ref
                         target="http://distantreading.github.io/Training/Budapest/tutorial-abbyy.html"
                         > slides</ref></cell>
