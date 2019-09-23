@@ -14,6 +14,7 @@
 \usepackage{subfigure}
 \usepackage{verbatim}
 \usepackage{listings}
+\usepackage{hyperref}
 \lstset{
   basicstyle=\ttfamily,
   columns=fullflexible,
@@ -67,9 +68,10 @@
 \frametitle{TS -- Organisation, schedule and data}
 
 \begin{itemize}
-	\item Schedule on \url{https://github.com/distantreading/WG1/wiki/TS-Budapest}
-	\item Slides on \url{https://github.com/distantreading/WG1/tree/master/Training/2019-09-budapest}
-	\item Data on \url{https://github.com/COST-ELTeC}
+\item \textcolor[rgb]{0,0,1}{\href{https://github.com/distantreading/WG1/wiki/TS-Budapest}{Schedule}}
+	\item \textcolor[rgb]{0,0,1}{\href{https://github.com/distantreading/WG1/tree/master/Training/2019-09-budapest}{Slides}}
+	\item \textcolor[rgb]{0,0,1}{\href{https://github.com/distantreading/WG1/tree/master/Training/2019-09-budapest}{Training data}}
+	\item \textcolor[rgb]{0,0,1}{\href{https://github.com/COST-ELTeC}{Corpus data}}
 \end{itemize}
 
 }
@@ -78,12 +80,12 @@
 \frametitle{TS -- Track 1}
 
 \begin{itemize}
-\item Introduction to ELTeC
-\item Metadata in the teiHeader
+\item Introduction to \textsc{ELTeC}
+\item Metadata in the \textsc{teiHeader}
 \item Optical character recognition
-	\item Hands-on experience in creating ELTeC TEI-XML versions of source texts 
+	\item Hands-on experience in creating \textsc{ELTeC} \textsc{TEI}-XML versions of source texts 
 	\item Start from scanned page images or from a pre-existing HTML version
-	\item Our goal: contribute new TEI encoded texts to the ELTeC GitHub repository
+	\item TS output: contribute new \textsc{TEI} encoded texts to the \textsc{ELTeC} GitHub repository
 \end{itemize} 
 }
 
@@ -120,7 +122,7 @@
 \frametitle{Working Group 1: \textsc{Scholarly Resources}}
 \begin{itemize}
 	\item Creating an open source multi-lingual benchmark corpus for European literature of the 19th century (novels):
-	European Literary Text Collection (ELTeC)\footnote{\url{https://www.distant-reading.net/wg-1/}}
+	European Literary Text Collection (\textsc{ELTeC})\footnote{\url{https://www.distant-reading.net/wg-1/}}
 	\item 34 Members from 22 countries
 	\item Main tasks are
 	\begin{itemize}
@@ -143,7 +145,7 @@ Context of the WG:
 \end{itemize}
 }
 
-\section{ELTeC Corpus Design}
+\section{\textsc{ELTeC} Corpus Design}
 \begin{frame}
 	\frametitle{Outline}
 	\tableofcontents[currentsection]
@@ -208,7 +210,7 @@ Corpus design defines two things \parencites[cf.][]{LudelingRitzStedeEtAl2016,Hu
 		\item \textbf{gender}: min. 10\% and max. 50\% written by female authors
 		\item \textbf{authorship}: 9 - 11 authors with exactly three novels (otherwise, only one text for each author)
 		\item \textbf{length}: min. 20\% are short novels (10-50k word tokens), min. 20\% are long novels (>100k word tokens).
-		\item \textbf{reprint}: min. 30\% are highly canonized novels, min. 30\% should be non-canonized novels (rarely or never reprinted), based reprint counts within the period 1970-2009 ("unmarked", information not yet available, "unspecified" information about the number of reprints not yet determined)
+		\item \textbf{reprint}: min. 30\% are highly canonized novels, min. 30\% should be non-canonized novels (rarely or never reprinted), based reprint counts within the period 1970-2009 ("unmarked", information not yet available)
 	\end{itemize}
 }
 
@@ -236,7 +238,7 @@ ELTeC summary \url{https://distantreading.github.io/ELTeC/}
 	\begin{itemize}
 		\item organization and documentation
 	\end{itemize}
-	\item ELTeC on GitHub\footnote{\url{https://github.com/COST-ELTeC}}
+	\item \textsc{ELTeC} on GitHub\footnote{\url{https://github.com/COST-ELTeC}}
 	\begin{itemize}
 		\item data and scripts
 	\end{itemize}
