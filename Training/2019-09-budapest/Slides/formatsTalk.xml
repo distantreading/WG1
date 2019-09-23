@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/lou/Public/TEIslides/teislides.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Text formats and how to handle them</title>
+                <author>Lou Burnard Consulting</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>unpublished draft</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>born digital</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2019-09-21">Created file</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="slide">
+                <head>Silk purses and sow's ears</head>
+                <list>
+                    <item>Can you make a silk purse out of a sow's ear? <list>
+                            <item>(or, in French, faire d'une buse un epervier)?</item>
+                            <item>(or, in Italian, la botte dà il vino che ha non si cava sangue da
+                                una rapa)</item>
+                            <item>or, maybe, in Russian, из говна конфетку не сделаешь
+                                <!--Не родит верба
+                        груши.--></item>
+                        </list></item>
+                    <item>Documents come in many different formats, but these formats are usually
+                        intended to represent a common set of features.</item>
+                    <item>Given the right tools and a common set of features, we should be able to
+                        convert (transduce) from one format representing a given set of features to
+                        another representation using a different format.</item>
+                </list>
+                <p rend="box">Up to a point...</p>
+            </div>
+            <div type="slide">
+                <head>Semantic vs presentational features</head>
+                <list>
+                    <item>Some formats aim to capture semantic features of a document ("heading",
+                        "paragraph", "title") </item>
+                    <item>Others aim to specify the way a document should be formatted ("font size",
+                        "justification", "italic"...)</item>
+                    <item>and in many/most the distinction is not clear : for example, what does
+                            <gi>p</gi> mean in HTML? or <gi>br</gi> ? </item>
+                </list>
+            </div>
+            <div type="slide">
+                <head>We are where we are</head>
+                <p>Documents might come in... </p>
+                <list>
+                    <item>so-called PVA -- plain text with no encoding</item>
+                    <item>plain text with esoteric codes</item>
+                    <item>Word or ODT : word processor formats</item>
+                    <item>(X)HTML or eBook : web formats</item>
+                    <item>Typesetting formats (inDesign, TeX...)</item>
+                    <item>XML or TEI-XML </item>
+                    <item>PDF </item>
+                </list>
+
+            </div>
+            <div type="slide">
+                <head>Low hanging fruit...</head>
+                <list>
+                    <item>A PDF file preserves only the appearances of an original: you can
+                        (painfully sometimes) extract letters from it by clever programming, but
+                        it's usually quicker to just print it out, and put it through an OCR
+                        process</item>
+                    <item>A TEI-XML document should come with an ODD defining its use of the TEI
+                        vocabulary: use that to help you write an XSLT stylesheet to extract just
+                        the elements and attributes you want </item>
+                    <item>Plain text : as you've seen, it may be quite easy to add minimal TEI
+                        tagging, provided that the text is consistent in e.g. its use of linebreaks,
+                        whitespace, capitals, and other things that your regular expressions will be
+                        relying on</item>
+                </list>
+            </div>
+            <div type="slide">
+                <head>Word or Libre Office vel sim</head>
+                <list>
+                    <item>These are in fact XML formats respecting (more or less) the OOXML standard
+                        ... up to a point</item>
+                    <item>A Word file is really a compressed archive, like a zip, containing
+                        numerous document fragments </item>
+                    <item>oXygen can unpack and transform the useful part into TEI for you</item>
+                    <item>Word <term>styles</term> are preserved : so if they were used semantically
+                        in the original, converting them to semantic tagging is easy</item>
+                    <item>But there are always surprises...</item>
+                </list>
+            </div>
+            <div type="slide">
+                <head>XHTML and friends</head>
+                <list>
+                    <item>HTML looks superficially like XML, but is not necessarily well-formed and
+                        rarely validated</item>
+                    <item>XHTML is an XML-conformant expression of HTML: use the invaluable
+                            <ident>tidy</ident> utility to generate it</item>
+                    <item>eBooks, like docx, are really compressed archives containing many
+                        different XHTML or other files </item>
+                    <item>The organization of an ebook is more or less well-standardized but because
+                        the focus of the encoding is snazzy presentation, there is much variation,
+                        for example in style names and behaviours</item>
+                </list>
+            </div>
+            <div type="slide">
+                <head>Typesetting and other esoteric formats</head>
+                <list>
+                    <item> You may encounter legacy type-setting formats such as TeX or
+                        inDesign</item>
+                    <item>These formats represent the desired formatting of the text, but not
+                        (usually) its semantics </item>
+                    <item>Conversion from XML to these formats is useful and fairly straightforward
+                        (there is also a standard called DSSSL of relevance here); the reverse is
+                        not the case </item>
+                </list>
+                <p rend="box">Good luck!</p>
+            </div>
+            <div type="slide">
+                <head>Two essential technologies: regexp and xpath</head>
+                <p>Regexp (regular expressions) allow you to specify <term>patterns</term> which
+                    match strings of characters and manipulate the resulting matches <list>
+                        <item><code>xyz</code> : the string xyz</item>
+                        <item><code>[xyz]</code> any one of the characters x y z</item>
+                        <item><code>[\d+]</code> one or more digits</item>
+                        <item><code>[\p{Lu}+]</code> one or more uppercase unicode characters</item>
+                    </list></p>
+                <p>Xpath is a standard syntax for matching parts of an XML tree in terms of its
+                    elements and attributes <list>
+                        <item><code>//p</code> : any <gi>p</gi> anywhere</item>
+                        <item><code/><code>//p[anchor] </code>: any <gi>p</gi> containing an
+                                <gi>anchor</gi></item>
+                        <item><code>//p[@rend] </code> : any p with a <att>rend</att>
+                            attribute</item>
+                        <item><code>//p[starts-with(@rend,'Head')]</code> any p whose
+                                <att>rend</att> attribute has a value starting with
+                            <val>Head</val></item>
+                    </list></p>
+                <p>Regexp and xpath are both built-in to oXygen</p>
+            </div>
+            <div type="slide">
+                <head>Programming options</head>
+                <p>If you have lots of texts in a specific arcane format, it is worth investing time
+                    and effort to translate them, using whatever tools are at your disposal. </p>
+                <p>A multi-stage path is usually easiest, e.g. <list><item>use tidy, or perl or python or whatever
+                    language you like to convert to well-formed xml</item><item>use XSLT to convert
+                    arbitrary XML to TEI ELTeC</item></list></p>
+                <p rend="box"> Remember: the computer should be doing the boring repetitive work, not you!</p>
+            </div>
+        </body>
+    </text>
+
+</TEI>
