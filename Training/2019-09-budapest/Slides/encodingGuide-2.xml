@@ -124,7 +124,7 @@
          <div type="slide">
             <head>Headings and footers</head>
             <figure>
-               <graphic url="https://distantreading.github.io/media/chapheading.png"/>
+               <graphic url="../media/chapHeading.png" height="5cm"/>
             </figure>
             <list>
                <item>Use <gi>head</gi> for each heading or title provided at the beginning of a
@@ -148,7 +148,7 @@
             <p>The element <gi>l</gi> should be used for each distinct line of verse, where this is
                clearly not prose, as in for example a song or an epigraph. </p>
             <figure>
-               <graphic url="../media/quotedSong.png"/>
+               <graphic url="../media/quotedSong.png" height="6cm"/>
             </figure>
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>Eraû ceasurile 10. Un beţiv trecênd
                   pe stradă cânta a lene: </p>
@@ -208,7 +208,7 @@
          <div type="slide">
             <head>Sub-divisions of chapters</head>
             <figure>
-               <graphic url="../media/p160.png"/>
+               <graphic url="../media/p160.png" height="5cm"/>
             </figure>
             <p>Do not use <gi>div</gi> for subdivisions of chapters: instead mark the point at which
                the subdivision is indicated with a <gi>milestone</gi> element, using its
