@@ -45,7 +45,7 @@
          <div type="slide">
             <head>Identification</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <![CDATA[<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de" xml:id="deu025">]]>
+               <![CDATA[<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de" xml:id="DEU18450">]]>
             </egXML>
             <list>
                <item><att>xml:id</att> values must be unique across the corpus, preferably short,
@@ -118,7 +118,7 @@
          <div type="slide">
             <head>Publication statement</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><publicationStmt>
-                  <p>First ElTeC edition <date>2019-02-3</date></p>
+                  <p>First ElTeC edition <date>2019-02-03</date></p>
                </publicationStmt>
             </egXML>
             <list>

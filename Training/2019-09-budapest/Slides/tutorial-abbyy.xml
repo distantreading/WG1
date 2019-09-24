@@ -35,32 +35,32 @@
                         <row>
                             <cell>ENG18410</cell>
                             <cell>Cecil, or, The adventures of a coxcomb</cell>
-                            <cell>ENG18410_Gore.pdf</cell>
-                            <cell>ENG18410_Gore.abbyy.xml</cell>
+                            <cell>ENG18410_Gore</cell>
+                            <cell>abbyy.xml</cell>
                         </row>
                         <row>
                             <cell>ENG18470</cell>
                             <cell>The Castle of Ehrenstein</cell>
-                            <cell>ENG18470_James.pdf</cell>
-                            <cell>ENG18470_James.abbyy.xml</cell>
+                            <cell>ENG18470_James</cell>
+                            <cell>abbyy.xml</cell>
                         </row>
                         <row>
                             <cell>ENG19150</cell>
                             <cell>Pointed Roofs</cell>
-                            <cell>ENG19150_Richardson.pdf</cell>
-                            <cell>ENG19150_Richardson.abbyy.xml, ENG19150_Richardson.docx</cell>
+                            <cell>ENG19150_Richardson</cell>
+                            <cell>abbyy.xml, docx</cell>
                         </row>
                         <row>
                             <cell>FRA19120</cell>
                             <cell>Vers le pole en aeroplane</cell>
-                            <cell>FRA19120_Gilbert.pdf</cell>
-                            <cell>FRA19120_Gilbert.abbyy.xml, FRA19120_Gilbert.docx</cell>
+                            <cell>FRA19120_Gilbert</cell>
+                            <cell>abbyy.xml, docx</cell>
                         </row>
                         <row>
                             <cell>HUN18460</cell>
                             <cell>Meghasonlott Kedely</cell>
-                            <cell>HUN18460_Kelmenfy.pdf</cell>
-                            <cell>HUN18460_Kelmenfy.abbyy.xml, HUN18460_Kelmenfy.docx</cell>
+                            <cell>HUN18460_Kelmenfy</cell>
+                            <cell>abbyy.xml, docx</cell>
                         </row>
                         <row>
                             <cell>HUN19090</cell>
@@ -77,26 +77,26 @@
                         <row>
                             <cell>ROM18860</cell>
                             <cell>Teodorei: copila domnului din bucuresti</cell>
-                            <cell>ROM18860_Macri.pdf</cell>
-                            <cell>ROM18860_Macri.abbyy.xml, ROM18860_Macri.docx</cell>
+                            <cell>ROM18860_Macri</cell>
+                            <cell>abbyy.xml, docx</cell>
                         </row>
                         <row>
                             <cell>ROM19060</cell>
                             <cell>Mara</cell>
-                            <cell>ROM19060_Slavici.pdf</cell>
-                            <cell>ROM19060_Slavici.abbyy.xml, ROM19060_Slavici.docx</cell>
+                            <cell>ROM19060_Slavici</cell>
+                            <cell>abbyy.xml, docx</cell>
                         </row>
                         <row>
                             <cell>ROM19170</cell>
                             <cell>Domnul Badina</cell>
-                            <cell>ROM19170_Smara.pdf</cell>
-                            <cell>ROM19170_Smara.abbyy.xml</cell>
+                            <cell>ROM19170_Smara</cell>
+                            <cell>abbyy.xml</cell>
                         </row>
                         <row>
                             <cell>SRP18860</cell>
                             <cell>Omer Čelebija</cell>
-                            <cell>SRP18860_Milicevic.pdf</cell>
-                            <cell>SRP18860_Milicevic.abbyy.xml</cell>
+                            <cell>SRP18860_Milicevic</cell>
+                            <cell>abbyy.xml</cell>
                         </row>
                     </table>
                 </p>
@@ -251,9 +251,9 @@
                             displays messages relating to the conversion process ; you may safely
                             ignore these. </item>
                         <item>In the main editing window, you should now see a TEI-conformant
-                            document. (Choose Source > Indenter le document from the Document menu,
-                            or type CTRL-MAJ-P or click the Indent button (this one: <graphic
-                                url="media/indent.png" height="7mm"/>) if it is displayed as a
+                            document. (Choose <ident>Document -> Source -> Format and Indent</ident> from the menu,
+                            or type CTRL-MAJ-P or click the Indent button <!--(this one: <graphic
+                                url="media/indent.png" height="7mm"/>)--> if it is displayed as a
                             single line on the screen) Scroll down to see how the Word styles have
                             been converted. </item>
                         <!--  <item><graphic url="media/converted-1.png" height="6cm"/></item>
@@ -287,7 +287,7 @@
                         <item>Scroll down to the <ident>Elements</ident> section; select
                                 <ident>rename</ident> element</item>
                         <item>In the dialogue box which opens, enter <code>//p[anchor]</code> next
-                            to <ident>Target elements (XPATH)</ident> and <code>&lt;head></code>
+                            to <ident>Target elements (XPATH)</ident> and <code>head</code>
                             next to <ident>New local name</ident>
                         </item>
                         <item>Press the <ident>Finish</ident> button: by default the changes are
@@ -302,7 +302,7 @@
                 <p>We now have <gi>head</gi> elements identifying the titles of chapters, but no
                         <gi>div</gi> tags. We suggest using the find and replace command as a simple
                     way of adding these. The search string should be <code>&lt;head</code>, and the
-                    replacement string should be <code>&lt;/div>&lt;div>&lt;div></code>. Test that
+                    replacement string should be <code>&lt;/div>&lt;div>&lt;div>&lt;head</code>. Test that
                     this works as you expect before applying it to the whole file. When you have
                     applied it, don't forget to scroll up to the beginning of the text and remove
                     the redundant <code>&lt;/div></code>
