@@ -3,7 +3,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Creating ELTeC</title>
+            <title>Corpus design and text contribution for ELTeC</title>
          </titleStmt>
          <publicationStmt>
             <p>Unpublished source: prepared for Budapest Training school September 2019</p>
@@ -13,7 +13,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
-         <change when="2019-05-12">LB merge TS Wiki page with index page from Wburg</change>
+         <change when="2019-09-24">LB post-facto revision</change><change when="2019-05-12">LB merge TS Wiki page with index page from Wburg</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -32,8 +32,10 @@
             <p> On Monday, participants learned how to use Oxygen for encoding texts in TEI XML, and
                were introduced to the sampling and balance criteria as well as other metadata
                requirements for ELTeC. On Tuesday, after an introduction to the principles of OCR,
-               they worked with two different transformation scenarios for creating TEI XML texts,
-               firstly starting from page images, and secondly starting with HTML.
+               they worked with various transformation scenarios for creating TEI XML texts,
+               firstly starting from plain text files, and secondly from two formats produced by Abbyy OCR: one
+               in XML, and the other in DOCX. We introduced them informally to the key technologies of
+               regular expressions and Xpath, and some of the many features of the oXygen XML editing environment.  
                <!--We will also discuss the different encoding levels provided for
                ELTeC texts, including proposals for encoding linguistic analysis. -->In
                the closing session on Wednesday, participants presented what they had achieved, and
@@ -43,126 +45,117 @@
                TEI XML was assumed. </p>
 
             <table>
-
-               <row>
-                  <cell>Monday</cell>
-                  <cell>time</cell>
-                  <cell>Topics</cell>
-                  <cell>Learned</cell>
-                  <cell>Trainer</cell>
-               </row>
-               <row>
-                  <cell>13:30-14:00 </cell>
-                  <cell>30 min</cell>
-                  <cell>Joint Opening Session</cell>
-                  <cell>what our Action is about and the tasks of the WGs</cell>
-                  <cell>Carolin</cell>
-               </row>
-
-               <row>
-                  <cell>14:00-15:45</cell>
-                  <cell> 105 min</cell>
-                  <cell> Introduction to Oxygen and TEI XML </cell>
-                  <cell> basic TEI XML structure (elements, attributes, hierarchy) and how to use
-                     oxygen </cell>
+<row><cell cols="5">Training School Schedule</cell></row>
+               <row role="label"><cell cols="5" >Monday 23 September 2019 </cell>
+                      </row>
+                           <row>
+                  <cell>14:00<!---15:45</cell>
+                  <cell> 105 min--></cell>
+                  <cell>Introduction to Oxygen and TEI XML </cell>
+                  <cell>Basic TEI XML structure and how to use
+                     oxygen <ref target="introduction_XMLTEI.html">HTML Slides</ref></cell>
                   <cell> Martina </cell>
                </row>
                <row>
-                  <cell> 16:15-16:45</cell>
-                  <cell> 30 min</cell>
+                  <cell> 16:15<!---16:45</cell>
+                  <cell> 30 min--></cell>
                   <cell> Introduction to ELTeC</cell>
-                  <cell> what ELTeC is about: its design and goals (<ref
+                  <cell> What ELTeC is about: its design and goals (<ref
                         target="COSTDistantReading-TS.pdf">PDF slides</ref>)</cell>
                   <cell>Carolin </cell>
                </row>
                <row>
-                  <cell>16:45-17:45</cell>
-                  <cell> 60 min </cell>
-                  <cell>First practical session </cell>
-                  <cell> everyone chooses a text (not necessarily one of ours) and creates a header
-                     for it: <ref
+                  <cell>16:45<!---18:00</cell>
+                  <cell> 75 min --></cell>
+                  <cell>Getting started </cell>
+                  <cell>First practical: creating an ELTeC conformant TEI Header with oXygen<ref
                         target="http://distantreading.github.io/Training/Budapest/tutorial-hdr.html"
                         >HTML slides</ref>; <ref
                         target="http://distantreading.github.io/Training/Budapest/tutorial-hdr.pdf"
                         >PDF version</ref></cell>
                   <cell> Lou </cell>
                </row>
-               <row>
+             <!--  <row>
                   <cell>17:45-18:00</cell>
                   <cell> 15 min </cell>
                   <cell>Github practice. </cell>
                   <cell> Everyone adds their chosen header to their own github repo. </cell>
                   <cell> </cell>
-               </row>
+               </row>-->
+               <row role="label"><cell cols="5">Tuesday 24 September 2019</cell></row>
                <row>
-                  <cell>9:00-10:45 </cell>
-                  <cell> 105 min </cell>
+                  <cell>09:00<!---10:45 </cell>
+                  <cell> 105 min --></cell>
                   <cell>Introduction to OCR with OCR4all</cell>
-                  <cell> practical and the theoretical background; comparison between ABBYY and
+                  <cell>Practical and theoretical discussion of OCR;  comparison between ABBYY and
                      OCR4all; practical exercise in training a model. <ref
                         target="http://distantreading.github.io/Training/Budapest/ocr4allSlides.pdf"
                         >PDF slides</ref></cell>
                   <cell>Christian </cell>
                </row>
                <row>
-                  <cell>11:15-13:00</cell>
-                  <cell>105 min </cell>
-                  <cell>Working with plain text </cell>
-                  <cell> Second practical: everyone chooses a different Polish text <ref
+                  <cell>11:15<!---13:00</cell>
+                  <cell>105 min --></cell>
+                  <cell>Handling plain text files</cell>
+                  <cell>Second practical: everyone chooses a different Polish text <ref
                         target="http://distantreading.github.io/Training/Budapest/tutorial-pol.html"
                         >HTML slides</ref>; <ref
                         target="http://distantreading.github.io/Training/Budapest/tutorial-pol.pdf"
-                        >PDF version</ref></cell>
+                           >PDF version</ref>. See also 
+                     <ref target="http://distantreading.github.io/Training/Budapest/encodingGuide-1.pdf">The ELTeC Header check list</ref></cell>
                   <cell>Lou</cell>
                </row>
-               <row>
-                  <cell>13:00-14:00</cell>
-                  <cell> 60 min </cell>
-                  <cell>LUNCH</cell>
-                  <cell> </cell>
+               <row >
+                  <cell>13:00<!---14:00</cell>
+                  <cell>60 min--></cell>
+                  <cell cols="3">Lunch break</cell>
                </row>
                <row>
-                  <cell>14:00-14:45</cell>
-                  <cell> 45 min </cell>
-                  <cell>Varieties of markup and conversion tools (talk/discussion)</cell>
-                  <cell>
-                     <ref
+                  <cell>14:00<!---14:45</cell>
+                  <cell> 45 min --></cell>
+                  <cell>Text formats and how to handle them</cell>
+                   <cell>
+                Talk about formats and tools     <ref
                         target="https://distantreading.github.io/Training/Budapest/formatsTalk.html"
                         >HTML slides</ref></cell>
 
                   <cell>Lou </cell>
                </row>
                <row>
-                  <cell>14:45-16:30</cell>
-                  <cell> 105 min </cell>
-                  <cell>Working with other OCR outputs (Abbyy xml and docx) </cell>
-                  <cell> Third practical: everyone chooses a different text <ref
+                  <cell>14:45<!---16:30</cell>
+                  <cell> 105 min --></cell>
+                  <cell>Working with Abbyy outputs </cell>
+                  <cell> Third practical: everyone chooses a text from the list to convert either from 
+                     Abbyy XML format, or from DOCX format <ref
                         target="http://distantreading.github.io/Training/Budapest/tutorial-abbyy.html"
                         > slides</ref>; <ref
                         target="http://distantreading.github.io/Training/Budapest/tutorial-abbyy.pdf"
-                        >PDF version</ref></cell>
+                           >PDF version</ref>; See also 
+                     <ref target="http://distantreading.github.io/Training/Budapest/encodingGuide-2.pdf">The ELTeC 
+                        encoding check list</ref></cell>
+                
                   <cell>Lou </cell>
 
                </row>
-               <row>
+<!--               <row>
                   <cell>16:30-17:00</cell>
                   <cell> 30 min</cell>
                   <cell>Summary - what have we learned? </cell>
                   <cell> Carolin </cell>
                   <cell> </cell>
-               </row>
-               <row>
+               </row>-->
+              <!-- <row>
                   <cell>17:15-18:45</cell>
-                  <cell>Katherine Bode Lecture </cell>
-                  <cell> </cell>
-                  <cell> </cell>
-                  <cell> </cell>
-                  <cell> </cell>
+                  <cell>90 min</cell>
+                  <cell cols="3">Katherine Bode Lecture </cell>
+                        </row>-->
+               <row role="label">
+                  <cell cols="5" >Wednesday 25 September 2019 </cell>
                </row>
-
+               
                <row>
-                  <cell>9:00-10:45 </cell>
-                  <cell> 105 min </cell>
+                  <cell>9:00<!---10:45 </cell>
+                  <cell> 105 min --></cell>
                   <cell>Concluding session </cell>
                   <cell>Participants worked on completing their encodings, and created a short
                      presentation of the outputs of the workshop; completed texts were uploaded to
@@ -177,9 +170,34 @@
                <label>Trainers:</label>
                <item>Christian Reul, Carolin Odebrecht, Martina Scholger, and Lou Burnard </item>
                <label>Participants: </label>
-               <item/>
+               <item>Rezearta Murati (University of Shkodër "Luigj Gurakuqi", 
+                  <!--	rezearta.murati@unishk.edu.al 	-->Albania); <!-- 	rezeartamurati-->  	
+                  Pia Geißel (University of Trier, <!--	s2pigeis@uni-trier.de 	-->Germany); <!--	liversausagechimp 	English, French!, German-->
+                  Mau Zsófia Ábrahám  (Budapest University, <!-- 	abraham.zsofia.mau@gmail.com -->	Hungary) 
+                  <!--	MauPalantir 	Hungarian, English (German, French)-->
+                  Tamas Biro (Eötvös Loránd University, <!-- 	biro.tamas@btk.elte.hu 	-->Hungary); 
+                  <!-- 	tamasbiro 	Hungarian, Englisch (German, French)-->
+                  Katinka Rózsa (<!-- 	rozsa.katinka@yahoo.com 	-->Hungary);	
+                <!--  rkatinka 	Hungarian, English (German, French)
+               -->Sudipt Subhankar (<!-- 	sudipt786@gmail.com -->	Hungary); <!-- 	sudipt03 	Hindi, English, Italian-->
+                  Vincas Grigas  (Vilnius University, <!-- 	vincas.grigas@leidykla.vu.lt -->	Lithuania); <!--	vincasgrigas 	Lithuanian, English-->
+                  Arūnas Gudinavičius (Vilnius University,<!-- 	arunas.gudinavicius@gmail.com  	-->Lithuania);
+                  <!--	arunasgud 	Lithuanian, English-->
+                  Nikolche Mickoski (Macedonian Academy of Sciences and Arts, <!--	nmickoski@manu.edu.mk  -->	
+                  Macedonia); 	
+              <!--
+                  Joanna  	Byszuk 	joanna.byszuk@ijp.pan.pl 	Poland 	JoannaBy 	Polish, English, Spanish, German
+            -->      
+                  Camelia Gradinaru (UAIC,<!--	camelia.gradinaru@uaic.ro -->	Romania);
+                  <!--	Camelia2019 	Romanian, English, French-->
+                  Luiza Marinescu (<!--	luizamarinescu700@gmail.com -->, Romania);<!--	Luiza17 	English-->
+                  Emanuel Modoc (<!--	ermodoc@gmail.com 	-->, Romania);
+                  <!--	emanuelmodoc 	English, French, German-->
+                  Ágnes Kocsis (<!--	kocsis0agnes@gmail.com -->, Hungary) 
+                  <!-- 	agnesks 	Hungarian, English-->    
+               </item>
                <label>Location:</label>
-               <item/>
+               <item>Eötvös Loránd University, Budapest</item>
             </list>
          </div>
 
