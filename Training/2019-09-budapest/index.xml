@@ -20,24 +20,27 @@
       <body>
          <div type="slide">
             <head>Budapest Training School, 23-25 September 2019</head>
-            <p>The aim of the Training School is to give participants hands-on experience in
-               creating ELTeC TEI-XML versions of source texts starting from scanned page images or
-               from a pre-existing HTML version. We will supply a set of raw materials for
-               candidates to work on, along with detailed instructions. At the end of the Training
-               School, each participant should be able to contribute new TEI encoded texts to the
-               ELTeC GitHub repository. Participants will work in pairs with guidance from Martina,
-               Carolin, Christian and Lou. </p>
-            <p> On Monday, participants will learn how to use Oxygen for encoding texts in TEI XML,
-               and will be introduced to the sampling and balance criteria as well as other metadata
-               requirements for ELTeC. On Tuesday, they will work with two different transformation
-               scenarios for creating TEI XML texts, firstly starting from page images, and secondly
-               starting with HTML. We will also discuss the different encoding levels provided for
-               ELTeC texts, including proposals for encoding linguistic analysis. In the closing
-               sessions on Wednesday, participants will be asked to present what they have achieved,
-               and discuss the outcomes of this and other parallel workshops. </p>
-            <p> The Training School is intended for any researcher interested in contributing texts
+            <p>The Training School was intended to give participants hands-on experience in creating
+               ELTeC TEI-XML versions of source texts starting from scanned page images or from a
+               pre-existing HTML version. We supplied <ref
+                  target="https://github.com/distantreading/WG1/tree/master/Training/2019-09-budapest/Work"
+                  >a set of raw materials for candidates to work on</ref>, along with detailed
+               instructions (see links below). At the end of the Training School, each participant
+               was able to contribute new TEI encoded texts to the ELTeC GitHub
+               repository.<!-- Participants will work in pairs with guidance from Martina,
+               Carolin, Christian and Lou. --></p>
+            <p> On Monday, participants learned how to use Oxygen for encoding texts in TEI XML, and
+               were introduced to the sampling and balance criteria as well as other metadata
+               requirements for ELTeC. On Tuesday, after an introduction to the principles of OCR,
+               they worked with two different transformation scenarios for creating TEI XML texts,
+               firstly starting from page images, and secondly starting with HTML.
+               <!--We will also discuss the different encoding levels provided for
+               ELTeC texts, including proposals for encoding linguistic analysis. -->In
+               the closing session on Wednesday, participants presented what they had achieved, and
+               discuss the outcomes of this and other parallel workshops. </p>
+            <p> The Training School was intended for any researcher interested in contributing texts
                to the ELTeC. Some previous experience of computer use is needed, but no knowledge of
-               TEI XML is assumed. </p>
+               TEI XML was assumed. </p>
 
             <table>
 
@@ -60,15 +63,16 @@
                   <cell>14:00-15:45</cell>
                   <cell> 105 min</cell>
                   <cell> Introduction to Oxygen and TEI XML </cell>
-                  <cell> basic XML structure (elements, attributes, hierarchy) and how to use oxygen </cell>
+                  <cell> basic TEI XML structure (elements, attributes, hierarchy) and how to use
+                     oxygen </cell>
                   <cell> Martina </cell>
                </row>
                <row>
                   <cell> 16:15-16:45</cell>
                   <cell> 30 min</cell>
                   <cell> Introduction to ELTeC</cell>
-                  <cell> what ELTeC is about, Design/Goals, first introduction about components
-                     (metadata, encoding) </cell>
+                  <cell> what ELTeC is about: its design and goals (<ref
+                        target="COSTDistantReading-TS.pdf">PDF slides</ref>)</cell>
                   <cell>Carolin </cell>
                </row>
                <row>
@@ -78,7 +82,9 @@
                   <cell> everyone chooses a text (not necessarily one of ours) and creates a header
                      for it: <ref
                         target="http://distantreading.github.io/Training/Budapest/tutorial-hdr.html"
-                        >slides</ref></cell>
+                        >HTML slides</ref>; <ref
+                        target="http://distantreading.github.io/Training/Budapest/tutorial-hdr.pdf"
+                        >PDF version</ref></cell>
                   <cell> Lou </cell>
                </row>
                <row>
@@ -92,20 +98,21 @@
                   <cell>9:00-10:45 </cell>
                   <cell> 105 min </cell>
                   <cell>Introduction to OCR with OCR4all</cell>
-                  <cell> practical and the theoretical background reduced to the minimum, introduce
-                     the workflow, then only very briefly explain the individual modules, and the
-                     rest of the time we will play around, short discussion advantages and
-                     disadvantages of ABBYY and OCR4all (not a presentation of ABBY) generate plain
-                     text files from the material</cell>
+                  <cell> practical and the theoretical background; comparison between ABBYY and
+                     OCR4all; practical exercise in training a model. <ref
+                        target="http://distantreading.github.io/Training/Budapest/ocr4allSlides.pdf"
+                        >PDF slides</ref></cell>
                   <cell>Christian </cell>
                </row>
                <row>
                   <cell>11:15-13:00</cell>
-                  <cell> 105 min </cell>
-                  <cell>Working with OCR </cell>
+                  <cell>105 min </cell>
+                  <cell>Working with plain text </cell>
                   <cell> Second practical: everyone chooses a different Polish text <ref
                         target="http://distantreading.github.io/Training/Budapest/tutorial-pol.html"
-                        >slides</ref></cell>
+                        >HTML slides</ref>; <ref
+                        target="http://distantreading.github.io/Training/Budapest/tutorial-pol.pdf"
+                        >PDF version</ref></cell>
                   <cell>Lou</cell>
                </row>
                <row>
@@ -121,17 +128,19 @@
                   <cell>
                      <ref
                         target="https://distantreading.github.io/Training/Budapest/formatsTalk.html"
-                        >slides</ref></cell>
+                        >HTML slides</ref></cell>
 
                   <cell>Lou </cell>
                </row>
                <row>
                   <cell>14:45-16:30</cell>
                   <cell> 105 min </cell>
-                  <cell>Working with other OCR outputs (Abbyy xml ─ docx -- HTML ) </cell>
+                  <cell>Working with other OCR outputs (Abbyy xml and docx) </cell>
                   <cell> Third practical: everyone chooses a different text <ref
                         target="http://distantreading.github.io/Training/Budapest/tutorial-abbyy.html"
-                        > slides</ref></cell>
+                        > slides</ref>; <ref
+                        target="http://distantreading.github.io/Training/Budapest/tutorial-abbyy.pdf"
+                        >PDF version</ref></cell>
                   <cell>Lou </cell>
 
                </row>
@@ -155,19 +164,16 @@
                   <cell>9:00-10:45 </cell>
                   <cell> 105 min </cell>
                   <cell>Concluding session </cell>
-                  <cell> create presentation of the outputs of the workshop, upload data </cell>
-                  <cell>Lou, Martina, Christian, Carolin</cell>
+                  <cell>Participants worked on completing their encodings, and created a short
+                     presentation of the outputs of the workshop; completed texts were uploaded to
+                     the github repo.</cell>
+                  <cell>Everyone</cell>
                   <cell/>
                </row>
-               <row>
-                  <cell>11:15-12-45</cell>
-                  <cell>90 min Joint final session</cell>
-                  <cell>Lou, Martina, Christian, Carolin</cell>
-               </row>
+
             </table>
             <list type="gloss">
-               <label>Local Organizers:</label>
-               <item/>
+
                <label>Trainers:</label>
                <item>Christian Reul, Carolin Odebrecht, Martina Scholger, and Lou Burnard </item>
                <label>Participants: </label>
