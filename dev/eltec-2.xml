@@ -33,7 +33,8 @@
                <moduleRef key="header"
                   include="change encodingDesc extent fileDesc idno  keywords langUsage language  
             profileDesc publicationStmt revisionDesc sourceDesc taxonomy teiHeader  titleStmt"/>
-               <elementRef key="TEI"/>
+            <!-- <moduleRef key="analysis" source="/home/lou/Public/TEI/P5/p5subset.xml"/>
+           -->    <elementRef key="TEI"/>
                <elementRef key="back"/>
                <elementRef key="body"/>
                <elementRef key="corr"/>
@@ -66,7 +67,10 @@
                <elementRef key="text"/>
                <elementRef key="trailer"/>
                <elementRef key="w"/>
-               <classRef key="att.linguistic"/>
+           
+               <classRef  key="att.linguistic" include="lemma pos join"/>
+               <classSpec type="atts" ident="att.datcat" mode="delete"/>
+               
                <!-- the following are needed in header-->
                <elementRef key="author"/>
                <elementRef key="bibl"/>
@@ -105,15 +109,24 @@
                         <!--      <elementRef key="seg"/>
          -->
                         <elementRef key="w"/>
-                        <elementRef key="m"/>
+                    <!--    <elementRef key="m"/>
                         <elementRef key="c"/>
                         <elementRef key="pc"/>
-                        <!--    <classRef key="model.global"/>
-            <classRef key="model.lPart"/>
-                <classRef key="model.hiLike"/>
-                <classRef key="model.pPart.edit"/>-->
-                     </alternate>
+              -->                  </alternate>
                   </content>
+              
+                  <exemplum><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <s><w pos="DET">Here</w>
+                        <w pos="VBA" join="left" lemma="be">'s</w>
+                        <w pos="ART">a</w>
+                        <emph>
+                           <w pos="ADV">really</w>
+                           <w pos="ADJ">silly</w>
+                        </emph>
+                        <w pos="NN1">example</w>
+                        <w pos="PUN" join="left">.</w>
+                     </s>                  
+                  </egXML></exemplum>
                </elementSpec>
                <elementSpec ident="s" mode="change">
                   <content>
@@ -137,9 +150,7 @@
                         </s>                  
                   </egXML></exemplum>
                </elementSpec>
-               <classRef  key="att.linguistic" include="lemma pos join"/>
-               <classSpec type="atts" ident="att.datcat" mode="delete"/>
-            </schemaSpec>
+                  </schemaSpec>
          </div>
       </back>
    </text>
