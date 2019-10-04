@@ -1256,6 +1256,9 @@ process, if not already present.</p>
                                 <gap unit="toc"/>
                             </egXML>
                         </exemplum>
+			                        <remarks><p>In an ELTeC level 1 transcription, the <att>unit</att> attribute of this element may be used 
+                            to indicate what has been omitted from a transcription.  </p></remarks>
+
                     </elementSpec>
                     <elementSpec ident="trailer" mode="change">
                         <exemplum>
