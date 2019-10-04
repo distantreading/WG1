@@ -635,9 +635,10 @@ process, if not already present.</p>
                                     <dataRef key="teidata.enumerated"/>
                                 </datatype>
                                 <valList type="closed">
-                                    <valItem ident="unmarked">
+                                  <!--  <valItem ident="unmarked">
                                         <desc>information not yet available</desc>
-                                    </valItem><valItem ident="high">
+                                    </valItem>-->
+                                <valItem ident="high">
                                         <desc>text has been republished very frequently during the
                                             period concerned</desc>
                                     </valItem>
@@ -649,7 +650,7 @@ process, if not already present.</p>
                                         <desc>text has been reprinted only occasionally or not at all during the
                                             period concerned</desc>
                                     </valItem>
-                                    <valItem ident="unspecified">
+                                   <valItem ident="unspecified">
                                         <desc>information about the number of reprints not yet determined</desc>
                                     </valItem>
                                 </valList>

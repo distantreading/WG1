@@ -75,12 +75,12 @@
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><author ref="viaf:26018946">Skene,
                   Felicia (1821-1899)</author>
                <author ref="viaf:52610012">Gozsdu Elek (1849-1919) </author>
-               <author ref="viaf:37053113">Dombre, Roger (Marguerite Sisson) (1859-1914)</author>
+               <author ref="viaf:37053113">Dombre, Roger [Marguerite Sisson] (1859-1914)</author>
             </egXML>
             <list>
                <item>VIAF codes available from <ref>https://viaf.org</ref></item>
                <item>Standard forms for names should (or for E Europe may not) include comma </item>
-               <item>Alternative name may be provided between names and dates</item>
+               <item>Alternative name may be provided between names and dates, enclosed in square brackets</item>
                <item>Dates must be separated by hyphen </item>
             </list>
             <p rend="box">Check details on Wikipedia, Worldcat, National library etc.</p>
@@ -256,7 +256,7 @@
                   <cell role="label">canonicity</cell>
                   <cell><hi rend="bold">low</hi> (reprinted infrequently or never) </cell>
                   <cell><hi rend="bold">high</hi> (reprinted very frequently)</cell>
-                  <cell><hi rend="bold">unmarked</hi> (reprint information not available)</cell>
+                  <cell><hi rend="bold">unspecified</hi> (reprint information not available)</cell>
                </row>
                <row>
                   <cell/>
