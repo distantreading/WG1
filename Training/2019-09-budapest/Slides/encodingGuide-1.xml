@@ -140,7 +140,7 @@
             <head>Source description (1) </head>
             <p>The ELTeC edition is derived from a known print edition</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><sourceDesc>
-                  <bibl type="printEdition">
+                  <bibl type="printSource">
                      <author>Panait Macri</author>
                      <title>Ghiță Cătănuță, căpitan de haiduci</title>
                      <pubPlace>Bucharest</pubPlace>
@@ -173,7 +173,7 @@
                   </bibl>
                </sourceDesc></egXML>
             <list>
-               <item>Add an extra <tag>bibl type="printEdition"</tag> if the digital version does
+               <item>Add an extra <tag>bibl type="printSource"</tag> if the digital version does
                   not derive from the first edition</item>
             </list>
          </div>
