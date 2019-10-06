@@ -118,13 +118,16 @@
          <div type="slide">
             <head>Publication statement</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><publicationStmt>
-                  <p>First ElTeC edition <date>2019-02-03</date></p>
+               <p/>
+            </publicationStmt>
+            </egXML><egXML xmlns="http://www.tei-c.org/ns/Examples"><publicationStmt>
+                  <p>Added to ELTeC <date>2019-02-03</date></p>
                </publicationStmt>
             </egXML>
             <list>
-               <item>The date of publication in ELTeC must be supplied in form "YYYY-MM-DD"</item>
-               <item>When the text is published on Zenodo, this is automatically converted to a
-                  fuller standard form:</item>
+               <item>Nothing is required here: when the text is published on Zenodo, 
+                  a fuller standard format will be generated </item><item>Any information you supply
+                  here will be transfered to a <gi>change</gi> element in the <gi>revisionDesc</gi></item>
             </list>
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><publicationStmt>
                   <distributor>COST Action ELTeC</distributor>
@@ -269,11 +272,13 @@
             <head>Revision description</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <revisionDesc>
-                  <change when="2018-11-01">Initial conversion to ELTeC1 using CLIGStoELTeC
-                     stylesheet</change>
+                  <change when="2018-11-20">Finished XML validation</change>
+                  <change when="2018-11-01">Initially created as an ELTeC file</change>
                </revisionDesc></egXML>
             <list>
-               <item><att>when</att> attribute is required and must have value in form
+               <item>At least one <gi>change</gi> element, typically indicating the date of creation of the ELTeC 
+               file, is required</item>
+               <item>The <att>when</att> attribute is required and must have value in form
                   YYYY-MM-DD</item>
                <item>Give <gi>change</gi>s in reverse chronological order (most recent first)</item>
                <item>Include only major changes</item>
