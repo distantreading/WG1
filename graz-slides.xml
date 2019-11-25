@@ -98,6 +98,7 @@ Will you add references? (cf our abstract)
             </div>
             <div type="slide">
                 <head>COST Action 16204 “Distant Reading for European Literary History” </head>
+                <figure><graphic url="media/distantreading.png" height="20%"/></figure>
                 <list>
                     <item>see <ptr target="https://www.distant-reading.net"/></item>
 
@@ -106,7 +107,9 @@ Will you add references? (cf our abstract)
                     <item>Like TEI, COST is a community initiative fostering collaboration,
                         interoperability, and mutual understanding</item>
                     <item>Four working groups, reporting to a management committee comprising two
-                        national representatives from each participating country </item>
+                        national representatives from each participating country </item></list></div>
+            <div type="slide"><head>COST contd.</head>
+                <list>
                     <item>We report here on WG1 ("Scholarly resources") which is charged with design
                         and construction of the the European Literary Text Collection (ELTeC). <list>
                             <item>a set of comparable corpora for each of at least a dozen European
@@ -231,7 +234,7 @@ Will you add references? (cf our abstract)
                     <item>These features are encoded in the header using a customized
                             <gi>textDesc</gi> element</item>
                 </list>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="tiny">
                     <textDesc xmlns:e="http://distantreading.net/eltec/ns">
                         <e:authorGender key="M"/>
                         <e:size key="short"/>
