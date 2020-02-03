@@ -24,7 +24,7 @@ Adding columns for
 
 Analysis planned
 - TXM analysis of the titles (Ioana)
-- 
+- distribution of places, names, status across time, genre indicators (maybe also cluster) and languages
 - 
  
 Things to consider/ discuss
