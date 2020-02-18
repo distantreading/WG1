@@ -136,42 +136,43 @@ Topic1
 Topic2
 
 * Question: how do we manage space between words and punctuation?
-* Answer: space are represented with @join on \<w> and \<pc>
+* Answer: space are represented with @join on \&lt;w&gt; and \&lt;pc&gt;
 
 Topic3
 
-* Question: What about ID for \<w>
-* Answer:  corpus wide unique id for \<w> and for \<s>, both will be seperately counted (guidelines will be published prior to corpus release to advice on how to generate id unique across the corpus), the ID will consist of file-ID and a number 
+* Question: What about ID for \&lt;w&gt;
+* Answer:  corpus wide unique id for &lt;w&gt; and for &lt;s&gt;, both will be seperately counted (guidelines will be published prior to corpus release to advice on how to generate id unique across the corpus), the ID will consist of file-ID and a number 
 
 Topic4
 
-* Question: for punctuation as well as \<w> and @
-* Answer: \<pc> could get @pos
+* Question: for punctuation as well as \&lt;w&gt; and @
+* Answer: \&lt;pc&gt; could get @pos
 
 Topic5        
 
-* Question: normalisation necessary? using a <choice> element -maybe 
-* Answer: <w> covers just the word form in the texts
-example: if we got French "du" in nove we do not split this word form into "de" and "le". we use <w> for "du" and indicate in lemma="de+le" (or similiar)
+* Question: normalisation necessary? using a &lt;choice&gt; element -maybe 
+* Answer: &lt;w&gt; covers just the word form in the texts
+example: if we got French "du" in nove we do not split this word form into "de" and "le". we use &lt;w&gt; for "du" and indicate in lemma="de+le" (or similiar)
 
 
 HOMEWORK: 
-WG leads will summarzie a proposal and send to WG1 and WG2 + Survey for two weeks in WG1 and WG2: pro/against different postags
+WG leads will summarize a proposal and send to WG1 and WG2 + Survey for two weeks in WG1 and WG2: pro/against different postags
 
 
 ## Session 3A WG1 and WG4: Dissemination
 
-Task: what other plattform, we can use for accessing/selecting/downloading ELTeC
-Criteria for plattforms (CS):
+Task: what other platform, we can use for accessing/selecting/downloading ELTeC
+Criteria for platforms (CS):
 
 * provide overview collection
-* search and browse with project-specific factes
-* define subcorpora
+* search and browse with project-specific facets
+* define sub-corpora
 * bulk-download
 * friendly user interface
 * PID for novels
 
 Christof Schöch shortly presents 
+cf. also his slides https://distantreading.github.io/malaga-mc/#/14
 
 Textgrid https://textgridrep.org/
 
