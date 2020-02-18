@@ -1,25 +1,18 @@
-WG1 schedule
+# WG1 schedule
 
 Tuesday 18/02/2020
 
-    9:00-10:30 Session 1A: WG1 ELTeC
-
-    10:30-11:00 Coffee break
-
-    11:00-12:30 Session 2A: WG1 and WG2: Annotation Schema Level 2
-
-    12:30-14:00 Lunch break
-
-    14:00-15:00 Session 3A: WG1 and WG4: Dissemination. Organisation and workload
-
-    15:00-15:30 Coffee break
-
-    15:30-16:30 Session 4A: WG 1 and WG3: Literary Research with ELTeC
-
-    16:30-18:00 Joint final session: Publishing ELTeC Corpora using TextGrid and/or DraCor, Susan Schreibman on dariahTeach
+* 9:00-10:30 Session 1A: WG1 ELTeC
+* 10:30-11:00 Coffee break
+* 11:00-12:30 Session 2A: WG1 and WG2: Annotation Schema Level 2
+* 12:30-14:00 Lunch break
+* 14:00-15:00 Session 3A: WG1 and WG4: Dissemination. Organisation and workload
+* 15:00-15:30 Coffee break
+* 15:30-16:30 Session 4A: WG 1 and WG3: Literary Research with ELTeC
+* 16:30-18:00 Joint final session: Publishing ELTeC Corpora using TextGrid and/or DraCor, Susan Schreibman on dariahTeach
 
 
-Session 1A WG1 and ELTeC
+# Session 1A WG1 and ELTeC
 
 Please ask us (Lou, Borja and Carolin), if you do not have access to our gitHub repositories and mailing list!
 Discussion on ELTeC criteria made emerge challenges for national collections; however, as benchmark corpus ELTeC had to adopt a pragmatic approach (50% max for female authors was questioned as the whole corpus will be by default unbalanced towards male authors but apparently this cannot be changed at this stage). It should also be noted that a less binary approach to gender might need to be adopted in future iterations of the project (see e.g. note at https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-teidata.sex.html).
@@ -126,130 +119,107 @@ Notes and hints
     https://distantreading.github.io/Training/Budapest/encodingGuide-2.html
 
 
-open issue: 
-    what about missing collections: 
+## open issues: 
+* what about missing collections: 
+* we miss Dutch, Modern Greek, Polish (contact Jan Rybicki? he is around), Swedish
 
-    we miss Dutch, Modern Greek, Polish (contact Jan Rybicki? he is around), Swedish
 
-
-Session 2A WG1 and WG2: Annotation schema
+## Session 2A WG1 and WG2: Annotation schema
 
 Proposal of WG2 for encoding level 2: 
-    
-    Question: use different tag sets for pos+msd?
-    Answer: We need to decide whether we need to have more than one pos-tag represented in TEIencoding level 2 
+Topic1    
 
+* Question: use different tag sets for pos+msd?
+* Answer: We need to decide whether we need to have more than one pos-tag represented in TEIencoding level 2 
         we will make a survey in WG1 and WG2, if we need this, we need TEI experts in developing a feasible solution in TEI XML
 
-Question: how do we manage space between words and punctuation?
-Answer: space are represented with @join on <w> and <pc>
+Topic2
 
-Question: What about ID for <w>
-Answer:  corpus wide unique id for <w> and for <s>, both will be seperately counted (guidelines will be published prior to corpus release to advice on how to generate id unique across the corpus), the ID will consist of file-ID and a number 
+* Question: how do we manage space between words and punctuation?
+* Answer: space are represented with @join on \<w> and \<pc>
 
-    Question: for punctuation as well as <w> and @
-    Answer: <pc> could get @pos
-        
-    Question: normalisation necessary? using a <choice> element -maybe 
-Answer: <w> covers just the word form in the texts
+Topic3
 
-    example: if we got French "du" in nove we do not split this word form into "de" and "le". we use <w> for "du" and indicate in lemma="de+le" (or similiar)
+* Question: What about ID for \<w>
+* Answer:  corpus wide unique id for \<w> and for \<s>, both will be seperately counted (guidelines will be published prior to corpus release to advice on how to generate id unique across the corpus), the ID will consist of file-ID and a number 
+
+Topic4
+
+* Question: for punctuation as well as \<w> and @
+* Answer: \<pc> could get @pos
+
+Topic5        
+
+* Question: normalisation necessary? using a <choice> element -maybe 
+* Answer: <w> covers just the word form in the texts
+example: if we got French "du" in nove we do not split this word form into "de" and "le". we use <w> for "du" and indicate in lemma="de+le" (or similiar)
 
 
-HOMEWORK
+HOMEWORK: 
 WG leads will summarzie a proposal and send to WG1 and WG2 + Survey for two weeks in WG1 and WG2: pro/against different postags
 
 
-Session 3A WG1 and WG4: Dissemination
+## Session 3A WG1 and WG4: Dissemination
 
 Task: what other plattform, we can use for accessing/selecting/downloading ELTeC
 Criteria for plattforms (CS):
 
-    provide overview collection
-
-    search and browse with project-specific factes
-
-    define subcorpora
-
-    bulk-download
-
-    friendly user interface
-
-    PID for novels
-
+* provide overview collection
+* search and browse with project-specific factes
+* define subcorpora
+* bulk-download
+* friendly user interface
+* PID for novels
 
 Christof Schöch shortly presents 
 
-    Textgrid https://textgridrep.org/
+Textgrid https://textgridrep.org/
 
-    extensive tests done by CS and colleagues, overhead in creating metadata
+* extensive tests done by CS and colleagues, overhead in creating metadata
+* no ELTeC-specific adaptions possible 
+* meant for collaborative work, many members can work on uploading texts
+* account via shibbloleth or DARIAH account
+* TODO for CS: Ask textgrid about what they can do for adapting Textgrid for ELTeC 
+  answer by March (for planning our meeting in June in Berlin)
 
-    no ELTeC-specific adaptions possible 
+ Dracor https://dracor.org/
 
-    meant for collaborative work, many members can work on uploading texts
-
-    account via shibbloleth or DARIAH account
-
-    TODO for CS: Ask textgrid about what they can do for adapting Textgrid for ELTeC 
-
-    answer by March (for planning our meeting in June in Berlin)
-
-    Dracor https://dracor.org/
-
-    needs adjustments which cannot be made easily (so out for GP4)
+* needs adjustments which cannot be made easily (so out for GP4)
 
 
-Martina Scholger shortly presents
+Martina Scholger shortly presents GAMS gams.uni-graz.at
 
-    GAMS gams.uni-graz.at
+* GAMS-Team would like to support us, MS will clarify, how we  
+* propose to upload metadata in VLO
 
-    GAMS-Team would like to support us, MS will clarify, how we  
+Gabor proposes to send metadata to europeana
 
-    propose to upload metadata in VLO
-
-
-Gabor
-
-    proposes to send metadata to europeana
-
-    workflow: Gabor will write a xslt for us, edmXML  (support)
-
-    shows digiohil http://digiphil.hu/o:kd-as.manu.tei.1/sdef:TEI/get?context=ch1
+* workflow: Gabor will write a xslt for us, edmXML  (support)
+* shows digiohil http://digiphil.hu/o:kd-as.manu.tei.1/sdef:TEI/get?context=ch1
 
 
-Decisions made in our meeting:
-
-        textgrid and GAMS as candidate for ELTeC
-
-    both will be tested in June WG1+WG4 Meeting (Berlin)
-
-    need for test accounts
-
-    HOMEWORK for everybody: look at these two plattforms, make yourself familiar with it and collect questions/comment/remarks
-
-    provide metadata to europeana
-
-    will be done by Gabor and colleagues :-)
-
-    HOMEWORK  for everybody: look at these two plattforms, make yourself familiar with it and collect 
+### Decisions made in our meeting:
+* textgrid and GAMS as candidate for ELTeC
+* both will be tested in June WG1+WG4 Meeting (Berlin)
+* need for test accounts
+* HOMEWORK for everybody: look at these two plattforms, make yourself familiar with it and collect questions/comment/remarks
+* provide metadata to europeana
+* will be done by Gabor and colleagues :-)
+* HOMEWORK  for everybody: look at these two plattforms, make yourself familiar with it and collect 
 
 
-Session 4 A WG1 and WG3: Literary Research with ELTeC
+## Session 4 A WG1 and WG3: Literary Research with ELTeC
 
-Suggestion: STSM perspective of in ELTEC?
-WG3 suggestion: change the name of critera "canonicty" - into popularity? or something else? re-printindex? 
-CS: Ideas/Requiremtens on platforms of WG3
+* Suggestion: STSM perspective of in ELTEC?
+* WG3 suggestion: change the name of critera "canonicty" - into popularity? or something else? re-printindex? 
+* CS: Ideas/Requiremtens on platforms of WG3
+  * Susan's idea: approach the voyant people
+  * create sub collections via filtering
+  * list of formats: TEI levels, html, epub
+  *  publishing epub seperately
 
-    Susan's idea: approach the voyant people
-
-    create sub collections via filtering
-
-    list of formats: TEI levels, html, epub
-
-    publishing epub seperately
-
-Suggestion: create a list of criteria that needs to be fulfilled (could use MOSCOW prioritisation technique to prioritise requirements: https://www.agilebusiness.org/page/ProjectFramework_10_MoSCoWPrioritisation)
-Suggestion: creating a tutorial for accessing  Voyant
+* Suggestion: create a list of criteria that needs to be fulfilled (could use MOSCOW prioritisation technique to prioritise requirements: https://www.agilebusiness.org/page/ProjectFramework_10_MoSCoWPrioritisation)
+* Suggestion: creating a tutorial for accessing  Voyant
 
 Reference to europeana: https://www.europeana.eu/
 
