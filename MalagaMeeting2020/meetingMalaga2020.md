@@ -132,6 +132,7 @@ Topic1
 * Question: use different tag sets for pos+msd?
 * Answer: We need to decide whether we need to have more than one pos-tag represented in TEIencoding level 2 
         we will make a survey in WG1 and WG2, if we need this, we need TEI experts in developing a feasible solution in TEI XML
+        UPDATE during the meeting: We will only use one tagset! ->cf. WG2
 
 Topic2
 
