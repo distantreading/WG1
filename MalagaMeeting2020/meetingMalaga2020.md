@@ -108,9 +108,15 @@ ELTeC-pof
 
     tba.
 
+ELTeC-fra
+    
+    - add 20 more level 1 texts to achieve 100 novels and improve corpus composition
+    - apply necessary fixes to encoding and transcription of 2 problematic texts
+    - improve metadata for all texts
+
 
 Notes and hints
-- according to the selection criteria: we will select just one novel per author (except for 9.11 authors with exact three novels)
+- according to the selection criteria: we will select just one novel per author (except for 9-11 authors with exactly three novels)
 - we got a Naming Convention distribute again in WG1 see https://github.com/distantreading/WG1/wiki/Filenames-and-identifiers
 - we got a little sheets from Lou pointing to the most important things for metadata and encoding levels
 
