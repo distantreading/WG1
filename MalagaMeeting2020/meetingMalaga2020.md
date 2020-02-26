@@ -213,7 +213,7 @@ Gabor proposes to send metadata to europeana
 ## Session 4 A WG1 and WG3: Literary Research with ELTeC
 
 * Suggestion: STSM perspective of in ELTEC?
-* WG3 suggestion: change the name of critera "canonicty" - into popularity? or something else? re-printindex? 
+* WG3 suggestion: if reprint is not a canonicity criterion, change this - into popularity? or something else? E.g. reprint index? Or change it?
 * CS: Ideas/Requiremtens on platforms of WG3
   * Susan's idea: approach the voyant people
   * create sub collections via filtering
