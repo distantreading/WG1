@@ -5,7 +5,7 @@
          <titleStmt>
             <title>In search of comity: TEI for distant reading</title>
             <author xml:id="LB42">Lou Burnard</author>
-            <author>Christof Schöch</author>
+            <author xml:id="CS">Christof Schöch</author>
             <author xml:id="CO">Carolin Odebrecht</author>
          </titleStmt>
          <publicationStmt>
@@ -28,6 +28,7 @@
          </textClass>
       </profileDesc>
       <revisionDesc>
+         <change when="2020-02-26" who="#CS">Some minor corrections.</change>
          <change when="2019-07-22" who="#CO">some corrections including references, some revision.</change>
          <change when="2019-07-22" who="#LB42">submitted</change>
          <change when="2019-07-15" who="#LB42">working through CO and CS comments</change>
