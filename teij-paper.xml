@@ -29,7 +29,8 @@
       </profileDesc>
       <revisionDesc>
          <change when="2020-02-26" who="#CS">Some minor corrections.</change>
-         <change when="2019-07-22" who="#CO">some corrections including references, some revision.</change>
+         <change when="2019-07-22" who="#CO">some corrections including references, some
+            revision.</change>
          <change when="2019-07-22" who="#LB42">submitted</change>
          <change when="2019-07-15" who="#LB42">working through CO and CS comments</change>
          <change when="2019-07-08" who="#LB42">circulated first draft to CO and CS</change>
@@ -46,9 +47,9 @@
                   target="#B06">de Rose et al 2002</ref>; <ref target="#B05">Caton 2013</ref>; <ref
                   target="#B10">van Zundert and Andrews, 2017</ref>], and hence a rethinking of some
                aspects of TEI praxis. We report on work carried out in the context of the COST
-               Action "Distant Reading for European Literary History" (CA16204), in particular on the TEI-conformant schemas
-               developed for one of the Action's principal deliverables: the European Literary Text
-               Collection (ELTeC). </p>
+               Action "Distant Reading for European Literary History" (CA16204), in particular on
+               the TEI-conformant schemas developed for one of the Action's principal deliverables:
+               the European Literary Text Collection (ELTeC). </p>
             <p>The ELTeC will contain comparable corpora for each of a dozen European languages,
                each being a balanced sample of 100 novels from the 19th century, together with
                metadata situating them in their contexts of production and of reception. We hope
@@ -73,9 +74,9 @@
             <p>Lou Burnard is an independent consultant in TEI XML. He was for many years Associate
                Director of Oxford University Computing Services, and was one of the original editors
                of the TEI. </p>
-            <p>Christof Schöch is Professor of Digital Humanities at Trier University,
-               Germany, and Co-Director of the Trier Centre for Digital Humanities (TCDH). He chairs
-               the COST Action "Distant Reading for European Literary History" (CA16204). </p>
+            <p>Christof Schöch is Professor of Digital Humanities at Trier University, Germany, and
+               Co-Director of the Trier Centre for Digital Humanities (TCDH). He chairs the COST
+               Action "Distant Reading for European Literary History" (CA16204). </p>
             <p>Carolin Odebrecht is a corpus linguist at Humboldt-Universität zu Berlin. Her
                research fields are modelling, creating, archiving of historical corpora and corpus
                metadata. She is the lead of Working Group 1 Scholarly resources in CA16204.</p>
@@ -147,10 +148,10 @@
                Literary Text Collection (ELTeC).<note place="foot"><p><ref
                         target="https://www.distant-reading.net"
                         >https://www.distant-reading.net</ref></p></note> This is a set of
-               comparable corpora for each of at least a dozen European languages, each corpus
-               being a balanced selection of 100 novels from the 19th century, together with
-               metadata situating them in their contexts of production and of reception. It is hoped
-               that the ELTeC will become a reliable basis for comparative work in cross-linguistic
+               comparable corpora for each of at least a dozen European languages, each corpus being
+               a balanced selection of 100 novels from the 19th century, together with metadata
+               situating them in their contexts of production and of reception. It is hoped that the
+               ELTeC will become a reliable basis for comparative work in cross-linguistic
                data-driven textual analytics, eventually providing an accessible benchmark for a
                particular written genre of considerable cultural importance across Europe during the
                period between 1840 and 1920. </p>
@@ -162,14 +163,14 @@
                of the distant reading research community, rather than any pre-existing notion of
                textual ontology, to the extent that the needs of that community could be determined.
                The target audience envisaged includes experts in computational stylistics, in corpus
-               linguistics, in computational literary studies and in traditional literary studies as well as more general digital
-               humanists, but is probably best characterized as having major enthusiasm and
-               expertise in the application of statistical methods to literary and linguistic
-               analysis, and only minor interest in the kinds of textual features most TEI projects
-               have tended to focus on. </p>
+               linguistics, in computational literary studies and in traditional literary studies as
+               well as more general digital humanists, but is probably best characterized as having
+               major enthusiasm and expertise in the application of statistical methods to literary
+               and linguistic analysis, and only minor interest in the kinds of textual features
+               most TEI projects have tended to focus on. </p>
             <p>The work of the Action <note place="foot">Further information about the Action is
                   available from its website at <ref target="https://www.distant-reading.net"
-                     >https://www.distant-reading.net</ref>. For a information about the
+                     >https://www.distant-reading.net</ref>. For information about the
                   organisation and decision processes see also the vademecum of COST <ref
                      target="https://www.cost.eu/wp-content/uploads/2020/02/Vademecum-20062019-V7-.pdf"
                      >https://www.cost.eu/wp-content/uploads/2020/02/Vademecum-20062019-V7-.pdf</ref></note>
@@ -210,11 +211,11 @@
                perspective of ELTeC poses further requirements for the encoding. The encoding should
                be applicable to different languages as well as language- or context-specific
                publication traditions and realisations during the entire period and across Europe.
-               We need to expect different realisations of text and chapter structure as well as
-               paratextual organisations. Here, an encoding schema should ensure that we achieve
-               uniformity in concentrating on uniform characteristics without considering specifica
-               of certain printing houses. </p>
-            <p>An important principle following from this latter goal is that ELTeC markup should
+               We need to expect different realisations of text and chapter structure and differing
+               paratextual organisations. Hence, our encoding schema concentrates  on commonalities
+               rather than the specifics
+               of certain printing houses or traditions. </p>
+            <p>A further important principle is that ELTeC markup should
                offer the encoder very little choice, and the software developer very few surprises:
                the number of tags available is greatly reduced, and their application is tightly
                constrained. It facilitates processing greatly if access to each part of the XML tree
@@ -261,7 +262,7 @@
                Action's Management Committee agreed that it would be practical to require only this
                tiny subset of the TEI for all ELTeC texts. </p>
             <p> It should be noted that the texts included in an ELTeC corpus may come from
-               different kinds of sources. For some language collections, no digital texts of any
+               different kinds of source. For some language collections, no digital texts of any
                kind exist: the encoder must start from page images, manually transcribe or put them
                through OCR, and introduce ELTeC markup from scratch. For others, existing digital
                texts may already be available: the encoder must research the format used and find a
@@ -444,9 +445,9 @@
                useful to describe the text, and must contain a <gi>textDesc</gi> element which
                documents the text's status with respect to selection criteria discussed below. </p>
             <p>One of the knottier problems or (to be positive) more distinctive features of an
-               ELTeC corpus is that it is not intended to be an <foreign>ad
-                  hoc</foreign> accidentally constructed collection but a designed corpus. Its composition
-               is determined not by the happenstance of whatever we can get our hands on, but is
+               ELTeC corpus is that it is not intended to be an <foreign>ad hoc</foreign>
+               accidentally constructed collection but a designed corpus. Its composition is
+               determined not by the happenstance of whatever we can get our hands on, but is
                instead defensible, at least in theory, as a principled and representative
                selection.</p>
             <p>The big question is, of course, representative of <hi>what</hi>.</p>
@@ -501,7 +502,7 @@
                considered <soCalled>canonical</soCalled> in some sense of that vexed term. The goal
                of our corpus balancing exercise is to ensure more or less equal time for each
                possible value for each of these four categories -- size, decade, author sex, and
-               canonicity. </p>
+               reprint count. </p>
             <p>Ideally, each corpus should have equivalent numbers not just for each value, but for
                each combination of values: so, for example, looking at the third of all titles which
                are characterised as "short", there should be roughly equal numbers for each decade
@@ -534,9 +535,9 @@
                </note> In our case, we replace the TEI's suggested vocabulary for these parameters
                with a vocabulary representing our four criteria, expressed as new non-TEI elements
                in the ELTeC namespace. These elements (<gi>eltec:sex</gi>, <gi>eltec:size</gi>,
-                  <gi>eltec:reprintCount</gi>, and <gi>eltec:timeSlot</gi>) are required by the ELTeC
-               schemas and have an attribute <att>key</att> which supplies a coded value for the
-               criterion concerned taken from a predefined closed list. So, for example, a long
+                  <gi>eltec:reprintCount</gi>, and <gi>eltec:timeSlot</gi>) are required by the
+               ELTeC schemas and have an attribute <att>key</att> which supplies a coded value for
+               the criterion concerned taken from a predefined closed list. So, for example, a long
                (over 100,000 words) novel by a female author first published between 1881 and 1900
                but only infrequently reprinted thereafter might have a text description like the
                following: <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -548,8 +549,8 @@
                   </textDesc>
                </egXML>
             </p>
-            <p>When complete, this information can be used to select subcorpora from the corpus
-               as a whole, thus permitting more delicate cross-linguistic comparisons: for example
+            <p>When complete, this information can be used to select subcorpora from the collection as a
+               whole, thus permitting more delicate cross-linguistic comparisons: for example
                between the lexis of male and female writers, or between the stylistic features
                typically associated with long or short texts. During the construction phase, these
                coded values also make it easy to monitor the emerging composition of the corpus, for
@@ -581,15 +582,15 @@
                the encoder from taking full advantage of the ability of an XML schema to check that
                particular documents conform to predefined rules, unless they are willing greatly to
                increase the complexity of their work flow. A better approach, pioneered by the
-               Deutsches Textarchiv <ref target="#B08"> [Haaf and Thomas 2016]</ref>, has been the use
-               of a technique known as ODD chaining <ref target="#B04">[Burnard 2016]</ref> Here, a
-               project first defines a base ODD which selects all the TEI components considered to
-               be useful anywhere and then uses this as the basis for smaller, more constraining,
-               ODDs which select from the base only the components (or other rules) specific to a
-               subset of the project's documentary universe. For example, an archive may have
-               identified a common set of metadata it wishes to document across all of its holdings
-               but also have particular metadata requirements for print and manuscript sources
-               respectively. Simply defining two different ODDs, one for print and one for
+               Deutsches Textarchiv <ref target="#B08"> [Haaf and Thomas 2016]</ref>, has been the
+               use of a technique known as ODD chaining <ref target="#B04">[Burnard 2016]</ref>
+               Here, a project first defines a base ODD which selects all the TEI components
+               considered to be useful anywhere and then uses this as the basis for smaller, more
+               constraining, ODDs which select from the base only the components (or other rules)
+               specific to a subset of the project's documentary universe. For example, an archive
+               may have identified a common set of metadata it wishes to document across all of its
+               holdings but also have particular metadata requirements for print and manuscript
+               sources respectively. Simply defining two different ODDs, one for print and one for
                manuscript when many other components apply to either kind of source opens the door
                to redundant duplication and the risk of inconsistency. The ODD chaining approach
                requires definition of a base ODD which contains the union of the components needed
@@ -621,10 +622,10 @@
          <div>
             <head>State of play and future work</head>
             <p>The ELTeC is still very much a work in progress and hence we cannot report that our
-               design goals have been achieved with any plausibility. An initial release (v0.5.0) of the
-               collection has been published on Zenodo in November 2019, and we expect several future releases
-               before the target of 100 texts per language is reached. The corpora are also
-               maintained as a collection of publicly visible GitHub repositories, as noted
+               design goals have been achieved with any plausibility. An initial release (v0.5.0) of
+               the collection was published on Zenodo in November 2019, and we expect several
+               future releases before the target of 100 texts per language is reached. The corpora
+               are also maintained as a collection of publicly visible GitHub repositories, as noted
                above.</p>
             <p>As well as continuing to expand the collection, and continuing to fine-tune its
                composition, we hope to improve the consistency and reliability of the metadata
