@@ -101,7 +101,7 @@
             <p>Recent histories of the TEI (e.g. <ref target="#B07">Gavin, 2019</ref>) have a
                tendency to under-emphasize the multiplicity of disciplines gathered at its birth,
                preferring to focus on those disciplines which can be plausibly framed as prefiguring
-               our current configuration of the <soCalled>digital humanities</soCalled> in some way.
+               our current configuration of the <soCalled>Digital Humanities</soCalled> in some way.
                Yet the Poughkeepsie conference and the process of designing the Guidelines which
                followed alike were kickstarted by input from corpus linguists and computer
                scientists as well as traditional philologically-minded editors and source-driven
@@ -130,7 +130,7 @@
                theorizers. But in our present paper, we simply want to explore the extent to which
                the TEI's model of text can be adapted to conform to the model of text characterising
                such fields as stylometry, stylistics, textual analytics, or (to use the current
-               term) <soCalled>distant reading</soCalled>. We hope also to explore the claim that by
+               term) <soCalled>Distant Reading</soCalled>. We hope also to explore the claim that by
                so doing we may facilitate the enrichment of that model, and thus facilitate more
                sophisticated research into textual phenomena across different corpora. And we hope
                to demonstrate that this is best done by cultivating mutual respect for the widely
@@ -170,8 +170,8 @@
                most TEI projects have tended to focus on. </p>
             <p>The work of the Action <note place="foot">Further information about the Action is
                   available from its website at <ref target="https://www.distant-reading.net"
-                     >https://www.distant-reading.net</ref>. For information about the
-                  organisation and decision processes see also the vademecum of COST <ref
+                     >https://www.distant-reading.net</ref>. For information about the organisation
+                  and decision processes see also the vademecum of COST <ref
                      target="https://www.cost.eu/wp-content/uploads/2020/02/Vademecum-20062019-V7-.pdf"
                      >https://www.cost.eu/wp-content/uploads/2020/02/Vademecum-20062019-V7-.pdf</ref></note>
                is carried out in four Working Groups: WG1 Scholarly Resources is responsible for the
@@ -212,14 +212,13 @@
                be applicable to different languages as well as language- or context-specific
                publication traditions and realisations during the entire period and across Europe.
                We need to expect different realisations of text and chapter structure and differing
-               paratextual organisations. Hence, our encoding schema concentrates  on commonalities
-               rather than the specifics
-               of certain printing houses or traditions. </p>
-            <p>A further important principle is that ELTeC markup should
-               offer the encoder very little choice, and the software developer very few surprises:
-               the number of tags available is greatly reduced, and their application is tightly
-               constrained. It facilitates processing greatly if access to each part of the XML tree
-               can be provided in a uniform and consistent way across multiple ELTeC corpora.</p>
+               paratextual organisations. Hence, our encoding schema concentrates on commonalities
+               rather than the specifics of certain printing houses or traditions. </p>
+            <p>A further important principle is that ELTeC markup should offer the encoder very
+               little choice, and the software developer very few surprises: the number of tags
+               available is greatly reduced, and their application is tightly constrained. It
+               facilitates processing greatly if access to each part of the XML tree can be provided
+               in a uniform and consistent way across multiple ELTeC corpora.</p>
             <p>By default, the TEI provides a very rich vocabulary, and many subtly different ways
                of doing more or less the same thing. TEI encoders have frequently taken full
                advantage of that to produce texts which vary enormously, both in the subset of XML
@@ -237,7 +236,7 @@
                seem much of an advance, though it is: see further [<ref target="#B04a">Burnard
                   2019</ref>]). </p>
             <p>Following this No Surprises principle, the simplest ELTeC schema (the <soCalled>level
-                  zero </soCalled> schema) provides the bare minimum of tags needed to mark up the
+                  zero</soCalled> schema) provides the bare minimum of tags needed to mark up the
                typical structure and content of a nineteenth century novel. All preliminary matter
                other than the title-page and any authorial preface or introduction is discarded; the
                remainder is marked as a <gi>div</gi> of <att>type</att>
@@ -436,14 +435,16 @@
                should also be provided in order to place the work in its original temporal context. </p>
             <p>As with other TEI conformant documents, beside the mandatory file description, the
                TEI Header of every ELTeC text contains a publication statement which specifies its
-               licensing conditions (all ELTeC documents are licensed CC-BY); an encoding statement
-               specifying the level of encoding used; and a revision description containing
-               versioning information. The TEI Header is also used to provide metadata describing
-               the associated text in a standardized form; this is held in the <gi>profileDesc</gi>
-               element which must specify the languages used by the text, may optionally include a
-                  <gi>textClass</gi> element containing any culture-specific keywords considered
-               useful to describe the text, and must contain a <gi>textDesc</gi> element which
-               documents the text's status with respect to selection criteria discussed below. </p>
+               licensing conditions (All texts included in the ELTeC corpora are in the public
+               domain. The textual markup is provided with a Creative Commons Attribution (CC BY)
+               licence.); an encoding statement specifying the level of encoding used; and a
+               revision description containing versioning information. The TEI Header is also used
+               to provide metadata describing the associated text in a standardized form; this is
+               held in the <gi>profileDesc</gi> element which must specify the languages used by the
+               text, may optionally include a <gi>textClass</gi> element containing any
+               culture-specific keywords considered useful to describe the text, and must contain a
+                  <gi>textDesc</gi> element which documents the text's status with respect to
+               selection criteria discussed below. </p>
             <p>One of the knottier problems or (to be positive) more distinctive features of an
                ELTeC corpus is that it is not intended to be an <foreign>ad hoc</foreign>
                accidentally constructed collection but a designed corpus. Its composition is
@@ -480,18 +481,19 @@
                   2018</ref></note></p>
             <p>Our approach is to sidestep the impossibility of representing an unknown (and
                sometimes unknowable) population by attempting instead to represent the range of
-               possible variation in the values of a predefined set of variables, each corresponding
-               with a more or less objective category of information available for all members of
-               the population. To take a trivial example, every novel can be characterised as short,
-               medium, or long; there is no possible fourth value for this category unless we revise
-               our definition of length (elastic? unknown? instantaneous?). So, as a working
-               hypothesis, we might say that a corpus in which roughly a third of the titles are
-               short, a third are long, and a third are medium will represent the variation possible
-               for this category. If we apply this principle uniformly across all our corpora, we
-               can reliably investigate (for example) cross language variation in some other
-               observable phenomenon (say a fondness for syntactically complex sentences) with
-               respect to length. But note that we have made absolutely no claim about whether novel
-               length in the underlying population is also divided in this way. </p>
+               possible variation in the values of a predefined set of variables (metadata), each
+               corresponding with a more or less objective category of information available for all
+               members of the population. To take a trivial example, every novel can be
+               characterised as short, medium, or long; there is no possible fourth value for this
+               category unless we revise our definition of length (elastic? unknown?
+               instantaneous?). So, as a working hypothesis, we might say that a corpus in which
+               roughly a third of the titles are short, a third are long, and a third are medium
+               will represent the variation possible for this category. So our text selection and
+               text proportion is metadata-based. If we apply this principle uniformly across all
+               our corpora, we can reliably investigate (for example) cross language variation in
+               some other observable phenomenon (say a fondness for syntactically complex sentences)
+               with respect to length. But note that we have made absolutely no claim about whether
+               novel length in the underlying population is also divided in this way. </p>
             <p>The decade in which a novel first appears in book form is a similarly objectively
                characteristic, which in principle we can determine for every member of the
                population. We can also classify every title according to the actual sex of their
@@ -504,7 +506,7 @@
                possible value for each of these four categories -- size, decade, author sex, and
                reprint count. </p>
             <p>Ideally, each corpus should have equivalent numbers not just for each value, but for
-               each combination of values: so, for example, looking at the third of all titles which
+               each combination of values (text proportion within each corpus): so, for example, looking at the third of all titles which
                are characterised as "short", there should be roughly equal numbers for each decade
                of first appearance, roughly equal numbers by male and female authors, and so on.
                This may however be a council of perfection. It is already apparent that for some
@@ -549,8 +551,8 @@
                   </textDesc>
                </egXML>
             </p>
-            <p>When complete, this information can be used to select subcorpora from the collection as a
-               whole, thus permitting more delicate cross-linguistic comparisons: for example
+            <p>When complete, this information can be used to select subcorpora from the collection
+               as a whole, thus permitting more delicate cross-linguistic comparisons: for example
                between the lexis of male and female writers, or between the stylistic features
                typically associated with long or short texts. During the construction phase, these
                coded values also make it easy to monitor the emerging composition of the corpus, for
@@ -623,9 +625,9 @@
             <head>State of play and future work</head>
             <p>The ELTeC is still very much a work in progress and hence we cannot report that our
                design goals have been achieved with any plausibility. An initial release (v0.5.0) of
-               the collection was published on Zenodo in November 2019, and we expect several
-               future releases before the target of 100 texts per language is reached. The corpora
-               are also maintained as a collection of publicly visible GitHub repositories, as noted
+               the collection was published on Zenodo in November 2019, and we expect several future
+               releases before the target of 100 texts per language is reached. The corpora are also
+               maintained as a collection of publicly visible GitHub repositories, as noted
                above.</p>
             <p>As well as continuing to expand the collection, and continuing to fine-tune its
                composition, we hope to improve the consistency and reliability of the metadata
