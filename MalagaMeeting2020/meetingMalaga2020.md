@@ -47,7 +47,7 @@ ELTeC-ukr
     achieve 25 text Nov2020
 
 
-ELTeC-cro
+ELTeC-hrv
 
     just started
 
