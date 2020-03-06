@@ -104,9 +104,9 @@ ELTeC-rom
     achieve 80 in Nov 2020
 
 
-ELTeC-pof
+ELTeC-por
 
-    tba.
+    tba. (member in a parallel meeting)
 
 ELTeC-fra
     
