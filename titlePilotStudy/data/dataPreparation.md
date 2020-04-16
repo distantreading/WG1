@@ -2,31 +2,43 @@
 
 Metadata tables taken from https://distantreading.github.io/ELTeC/index.html
 
-Adding columns for  
-- place: yes/no	(e.g. geographical identifable entitites such as cities, countries, houses, if a place is a person's attribute add it here)
-- placeEntity: copy place 
-- placeAttribution: yes/no (not only adjectives, genitive attributes and prepositional attributes)
-- placeDeterminer: no/def/indef
-- person: yes/no
-- personStatus: copy status (e.g. mother, prince, priest etc.)
-- personEntity: copy person, if more than one, list them, comma separated
-- personAttribution: yes/no
-- personDeterminer: no/def/indef
-- gender: no/d/f/m
-- other: yes/no
-- otherEntity: copy entitiy (it could be also a date)
-- otherEntitityDeterminer: no/def/indef	
-- otherEntitityAttribution: yes/no
-- twoContentElement: yes/no
-- contentElementConnection: non/interpunc/mixed/word
-- genreIndicator: yes/no
-- indicatorEntity: copy indicator (just the noun, novel, life, story)
+| Column                   | AvailableTags                                                                    | Description                                                                                                          | Example               |
+|--------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|-----------------------|
+| place                    | yes, no                                                                         | geographical identifable entitites such as cities, countries, houses, if a place is a person's attribute add it here |                       |
+| placeEntity              | yes, no                                                                         | if yes in placeEntity copy place                                                                                     |                       |
+| placeAttribution         | yes, no                                                                         | adjectives, genitive attributes and prepositional attributes                                                         |                       |
+| placeDeterminer          | def, indef, no                                                                 | specify determiner if available                                                                                      |                       |
+| person                   | yes, no                                                                         | person                                                                                                               |               The Story of **Bessie Costrell**        |
+| personStatus             | no , "noun"                                                                      | if yes in person copy person                                                                                         | Bessie Costrell                      |
+| personEntity             | no, "noun"                                                                      | if yes in person copy person                                                                                         |      major, lady, captain                 |
+| personAttribution        | yes, no                                                                         | adjectives, genitive attributes and prepositional attributes                                                         |                       |
+| personDeterminer         | def, indef, no                                                                 | specify determiner if available                                                                                      |                       |
+| gender                   | m, f, d, no                                                                  | specify the person's gender, d means diverse and indicates several genders or unknown gender                         |                       |
+| other                    | one, more, no                                                                  | other entities than persons or places in the title                                                                   |                       |
+| otherEntity              | no, "noun"                                                                      | if yes copy the entity                                                                                               |                       |
+| otherEntitityDeterminer  | def, indef, no                                                                 | specify determiner if available                                                                                      |                       |
+| otherEntitityAttribution | yes, no                                                                         | adjectives, genitive attributes and prepositional attributes                                                         |                       |
+| twoContentElement        | yes, no                        The Story of Bessie Costrell                                                 | title of two elements, title and subtitle                                                                            |                       |
+| contentElementConnection | interpunc, word, mixed, none                                                  | if yes in twoContentElement, indicate how the elements are spearated                                                 |                       |
+| genreIndicator           | yes, no                                                                         | reference of a genre indicator in the title                                                                          |                       |
+| indicatorEntity          | no, "noun"                                                                      | if yes in genreIndicator copy indicator                                                                              | romance, novel, story |
+| placeRole                | existence, possessor, possessum, patience, location, agens, attribute, no | specify the basic semantic role                                                                                      |                       |
+| placeSyntax              | head, apposition, preagen, postgen, prepmod, adjective, no                  | specify the basic syntactic category                                                                                 |                       |
+| personRole               | existence, possessor, possessum, patience, location, agens, attribute, no | specify the basic semantic role                                                                                      |                       |
+| personSyntax             | head, apposition,  preagen, postgen, prepmod, adjective, no                  | specify the basic syntactic category                                                                                 |                       |
+| personIIRole             | existence, possessor, possessum, patience, location, agens, attribute, no | specify the basic semantic role                                                                                      |                       |
+| personIISyntax           | head, apposition,  preagen, postgen, prepmod, adjective, no                  | specify the basic syntactic category                                                                                 |                       |
+| otherEntityRole          | existence, possessor, possessum, patience, location, agens, attribute, no | specify the basic semantic role                                                                                      |                       |
+| otherEntitySyntax        | head, apposition, preagen, postgen, prepmod, adjective, no                  | specify the basic syntactic category                                                                                 |                       |
+| otherEntityIIRole        | existence, possessor, possessum, patience, location, agens, attribute, no | specify the basic semantic role                                                                                      |                       |
+| otherEntityIISyntax      | head, apposition, preagen, postgen, prepmod, adjective, no                  | specify the basic syntactic category                                                                                 |                       |
+|                          |                                                                                  |                                                                                                                      |                       |
+|                          |                                                                                  |                                                                                                                      |                       |
+|                          |                                                                                  |                                                                                                                      |                       |
+|                          |                                                                                  |                                                                                                                      |                       |
 
-Analysis planned
-- TXM analysis of the titles (Ioana)
-- distribution of places, names, status across time, genre indicators (maybe also cluster) and languages
-- 
- 
+
+
 Things to consider/ discuss
 - title of the first edition - correction in the TEI XML document
 - categories such as genre indicator applicable to literary concepts
