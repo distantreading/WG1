@@ -49,7 +49,7 @@ Schedule:
 **Deadlines**: 
 
 * Annotation finished 31/05/2020
-* Data analysis (and correction) 01/06-30/20/2020
+* Data analysis (and correction) 01/06-30/06/2020
 * Writing 01/07-31/07/2020
 
 **Authorship**: Patras/Odebrecht are first authors, team alphabetically
