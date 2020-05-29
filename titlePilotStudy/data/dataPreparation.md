@@ -22,7 +22,9 @@ Annotation guidelines for title study:
 | contentElementConnection | interpunc, word, mixed, no                                                  | if yes in twoContentElement, indicate how the elements are separated                                                 |                       |
 | genreIndicator           | yes, no                                                                         | reference of a genre indicator in the title                                                                          |                       |
 | indicatorEntity          | no, "noun"                                                                      | if yes in genreIndicator copy indicator                                                                              | romance, novel, story |
-| placeRole                | existence, possessor, possessum, patient, location, agens, attribute, no | specify the basic semantic role: existince=no specification, possessum=thing that an entity possesses, possessor=entity that possesses, location=specifies a location, patient= entity that undergoes an operation, agens=entity that acts, attribute=modifies an entity                                                                                      |                       |
+genreIndicator Role | existence, possessor, possessum, patient, location, agens, attribute, no | specify the basic semantic role: existince=no specification, possessum=thing that an entity possesses, possessor=entity that possesses, location=specifies a location, patient= entity that undergoes an operation, agens=entity that acts, attribute=modifies an entity|
+genreIndicator syntax | head, apposition, pregen, postgen, prepmod, adjective, no | specify the basic syntactic category, abbreviations: prepmod=prepositional modifier, pregen=prenominal genitive, postgen=postnominal genitive |
+| placeRole                | existence, possessor, possessum, patient, location, agens, attribute, no | specify the basic semantic role: existince=no specification, possessum=thing that an entity possesses, possessor=entity that possesses, location=specifies a location, patient= entity that undergoes an operation, agens=entity that acts, attribute=modifies an entity |                                                                                      |                       |
 | placeSyntax              | head, apposition, pregen, postgen, prepmod, adjective, no                  | specify the basic syntactic category, abbreviations: prepmod=prepositional modifier, pregen=prenominal genitive, postgen=postnominal genitive                                                                                |                       |
 | personRole               | existence, possessor, possessum, patient, location, agens, attribute, no | specify the basic semantic role: existince=no specification, possessum=thing that an entity possesses, possessor=entity that possesses, location=specifies a location, patient= entity that undergoes an operation, agens=entity that acts, attribute=modifies an entity                                                                                      |                       |
 | personSyntax             | head, apposition,  pregen, postgen, prepmod, adjective, no                  | specify the basic syntactic category, abbreviations: prepmod=prepositional modifier, pregen=prenominal genitive, postgen=postnominal genitive                                                                                 |                       |
@@ -41,3 +43,13 @@ Things to consider
 - categories such as genre indicator applicable to literary concepts
 - if something is not clear, we need to coordinate! Annotations need to be first of all consistent!
 - column 35 "titleFocus": this is a subjective decision, and we expect them to be divergent when the same titles annotated by two different persons
+
+Specifications after the discussions on 26-29th of May 2020:
+- please use only ASCII characters for latin alphabet languages;
+- small case for all words, including proper names, when copied in the columns;
+- for cyrillic titles, they can stay as they are, but a colum with a transliteration and a rough translation would be highly appreciated; it does not has to be a certified translation, just something to help the non-slavic speaker grasp the main idea. It will be usefull when writing the paper.
+- if there are several persons, places or other entities in a title, please duplicate the appropriate columns accordingly (ex. person2, person2Status, person2Attribution, person2Determiner, person2Role, person2Syntax). 
+- if the same person has two statuses, mark them in the same column, separated with a coma. Same for the attribution, if there are two of them.
+- we do not need to lemmatize when "splitting" the title in the columns - it can stay inflected.
+
+
