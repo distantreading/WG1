@@ -1,5 +1,16 @@
 # Data preparation
 
+## Current state of the title data
+
+The title data reflect the working version of ELTeC dated from 10/06.2020. We extracted
+the titles and other information from ELTeC summary page which is created an updated by Lou (https://distantreading.github.io/ELTeC/index.html). 
+For the Polish language collection, we extracted the necessary data from the XML files uploaded 
+in the GitHub repository. 
+
+Changes in the language collection that are included after 10/06/2020 are not considered for 
+our title study. The following annotation guidelines were applied to the title data in this folder.
+
+## Annotation Guidelines
 Annotation guidelines for title study: 
 
 | Column                   | AvailableTags                                                                    | Description                                                                                                          | Example               |
