@@ -1,7 +1,7 @@
 # Pilot case study
 
 Investigating title features in ELTeC as a pilot case study for the Málaga WG meeting by Roxana and Carolin. Carolin Odebrecht, Roxana Patras and Ioana Galleron developed an annotation schema (dataPreparation.md), 
-which we would like to apply to ELTeC. Our research group has grown. See below the list of contributions to this title study: 
+which we would like to apply to 11 collections of ELTeC. Our research group has grown. See below the list of contributions to this title study: 
 
 * Roxana Patras ROM + ITA
 * Ioana Galleron FRA + POR
@@ -49,7 +49,7 @@ Schedule:
 **Deadlines**: 
 
 * Annotation finished 31/05/2020
-* Data analysis (and correction) 01/06-30/06/2020
+* Data analysis (and correction) 01/06-30/06/2020; data analysis applies to the current state of ELTeC in 10/06/2020
 * Writing 01/07-31/07/2020
 
 **Authorship**: Patras/Odebrecht are first authors, team alphabetically
