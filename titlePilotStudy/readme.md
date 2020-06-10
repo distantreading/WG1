@@ -8,8 +8,8 @@ which we would like to apply to 11 collections of ELTeC. Our research group has 
 * Carolin Odebrecht ENG
 * Berenike Herrmann DEU
 * Rosario Arias SPA
-* Katja Mihurko SLO
-* Dmitry Yesypenko UKR + POL
+* Katja Mihurko-Poniz SLO
+* Dmytro Yesypenko UKR + POL
 * Cvetana Krstev SER
 
 # **Meeting 08/05/2020, at 10 am (Berlin time)**
