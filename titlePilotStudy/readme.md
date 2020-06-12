@@ -70,42 +70,64 @@ Participants: Carolin, Ioana, Roxana, Berenike, Rosario, Katja, Cvetana (Dmytro 
 
 
 *The Agenda: 
-#1. Defining roles in the drafting & editing & language revision of the paper; defining micro-groups that work on a specific topic
-#2. Discussion of the paper structure proposed by Ioana, Carolin and Roxana; things to be discarded or added
-#3. Revision of annotation
-#4. Deadlines
-#5. Bibliography
+#1. Defining roles in the drafting & editing & language revision of the paper; defining micro-groups that work on a specific topic.
+
+#2. Discussion of the paper structure proposed by Ioana, Carolin and Roxana; things to be discarded or added.
+
+#3. Revision of annotation.
+
+#4. Deadlines.
+
+#5. Bibliography.
+
 #6. Proposals for follow-up papers, approaches & ways of communicating within the group.
 
 
-#1 & #2: 
+
+#1 & #2: Defining roles & Discussion of paper structure.
+
 *Ioana proposes to split work in 3 microgroups and the all collaborators bid for on a specific topic they want to contribute to:
--Cvetana reads the entire paper starting with June, the 29th; 
--Rosario is in charge of the language revision;
--Roxana, Rosario, Katja & Berenike contribute to "What's in a title" part;
--Ioana & Berenike (if necessary, Roxana) contribute to "Title as charade" part;
--Carolin, Dmytro & Cvetana check the code & will do the extraction of data;
+
+-Cvetana reads the entire paper starting with June, the 29th.
+
+-Rosario is in charge of the language revision.
+
+-Roxana, Rosario, Katja & Berenike contribute to "What's in a title" part.
+
+-Ioana & Berenike (if necessary, Roxana) contribute to "Title as charade" part.
+
+-Carolin, Dmytro & Cvetana check the code & will do the extraction of data.
+
 -Ioana & Carolin will write the introductory part.
 
 
-#3: Revision of annotation and checking by June, the 15th
+#3: Revision of annotation and checking by June, the 15th.
 
 
-#4: Deadlines
--June, the 29th = the first draft of the paper (3rd of June, Berenike)
--July, the 6th = language revision
--mid-July = paper edit according to editing quidelines & submission
+#4: Deadlines.
+
+-June, the 29th = the first draft of the paper (3rd of June, Berenike).
+
+-July, the 6th = language revision.
+
+-mid-July = paper edit according to editing quidelines & submission.
 
 
-#5: Bibliography
--a DR-approach to titles
--beyond Genette's "thresholds": title as charade/ riddle
+
+#5: Bibliography.
+
+-a DR-approach to titles.
+
+-beyond Genette's "thresholds": title as charade/ riddle.
+
 -titles & literary geography: maps of titling practices.
 
 
 #6. Proposals for follow-up papers, approaches & ways of communicating within the group.
--using Slack for future papers; 
--enriching annotation
+
+-using Slack for future papers. 
+
+-enriching annotation.
 
 
 
