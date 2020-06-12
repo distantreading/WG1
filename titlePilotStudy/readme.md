@@ -85,6 +85,7 @@ Participants: Carolin, Ioana, Roxana, Berenike, Rosario, Katja, Cvetana (Dmytro 
 
 
 
+
 #1 & #2: Defining roles & Discussion of paper structure.
 
 *Ioana proposes to split work in 3 microgroups and the all collaborators bid for on a specific topic they want to contribute to:
@@ -102,7 +103,10 @@ Participants: Carolin, Ioana, Roxana, Berenike, Rosario, Katja, Cvetana (Dmytro 
 -Ioana & Carolin will write the introductory part.
 
 
+
+
 #3: Revision of annotation and checking by June, the 15th.
+
 
 
 #4: Deadlines.
@@ -115,6 +119,7 @@ Participants: Carolin, Ioana, Roxana, Berenike, Rosario, Katja, Cvetana (Dmytro 
 
 
 
+
 #5: Bibliography.
 
 -a DR-approach to titles.
@@ -122,6 +127,8 @@ Participants: Carolin, Ioana, Roxana, Berenike, Rosario, Katja, Cvetana (Dmytro 
 -beyond Genette's "thresholds": title as charade/ riddle.
 
 -titles & literary geography: maps of titling practices.
+
+
 
 
 #6. Proposals for follow-up papers, approaches & ways of communicating within the group.
