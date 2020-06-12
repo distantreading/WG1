@@ -69,7 +69,8 @@ Participants: Carolin, Ioana, Roxana, Berenike, Rosario, Katja, Cvetana (Dmytro 
 
 
 
-*The Agenda: 
+*The Agenda.
+
 #1. Defining roles in the drafting & editing & language revision of the paper; defining micro-groups that work on a specific topic.
 
 #2. Discussion of the paper structure proposed by Ioana, Carolin and Roxana; things to be discarded or added.
