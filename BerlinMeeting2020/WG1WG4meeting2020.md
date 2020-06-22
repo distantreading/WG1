@@ -16,6 +16,7 @@ and Textgrid (https://textgridrep.org/) for ELTeC.
 |     B          |     July 2    |     11:00-12:00    |     Exploration Textgrid (Christof Schöch)                                                                                    |
 |                |     July 2    |     12:00-13:00    |     Lunch break (on voluntary basis in a virtual   meeting)                                                                   |
 |     C          |     July 2    |     13:00-14:00    |     Exploration GAMS (Martina Scholger)                                                                                       |
+|                |     July 2    |     14:00-14:15    |     Coffee break                                                                                                              |
 |     D          |     July 2    |     14:15-15:30    |     Break out session: sub group discussion and reports   on the services                                                     |
 |     E          |     July 3    |     10:00-11:30    |     Reporting of the sub groups / Organisation of tasks:communication, responsibilities and tasks related with the services   |
 
