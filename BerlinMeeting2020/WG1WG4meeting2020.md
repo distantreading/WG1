@@ -13,7 +13,7 @@ and Textgrid (https://textgridrep.org/) for ELTeC.
 |     Session    |     Day       |     Time           |     Topic                                                                                                                     |
 |----------------|---------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------|
 |     A          |     July 2    |     10:00-11:00    |     Welcome, introduction, goals, state of the play (CO)                                                                      |
-|     B          |     July 2    |     11:00-12:00    |     Exploration Textgrid (Christof Schöch)                                                                                    |
+|     B          |     July 2    |     11:00-12:00    |     Exploration Textgrid ( Slides [Slides](https://distantreading.github.io/eltec2tgrep/#/), Christof Schöch)                                                                                    |
 |                |     July 2    |     12:00-13:00    |     Lunch break (on voluntary basis in a virtual   meeting)                                                                   |
 |     C          |     July 2    |     13:00-14:00    |     Exploration GAMS (Martina Scholger)                                                                                       |
 |                |     July 2    |     14:00-14:15    |     Coffee break                                                                                                              |
