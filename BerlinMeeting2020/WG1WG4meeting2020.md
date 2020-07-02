@@ -12,7 +12,7 @@ and Textgrid (https://textgridrep.org/) for ELTeC.
 ## Schedule
 |     Session    |     Day       |     Time           |     Topic                                                                                                                     |
 |----------------|---------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------|
-|     A          |     July 2    |     10:00-11:00    |     Welcome, introduction, goals, state of the play (CO)                                                                      |
+|     A          |     July 2    |     10:00-11:00    |     Welcome, introduction, goals, state of the play (Carolin (Slides [Slides](https://github.com/distantreading/WG1/blob/master/BerlinMeeting2020/COSTDistantReading-WG1WG4Berlin2020.pdf))                                                                      |
 |     B          |     July 2    |     11:00-12:00    |     Exploration Textgrid ( Slides [Slides](https://distantreading.github.io/eltec2tgrep/#/), Christof Schöch)                                                                                    |
 |                |     July 2    |     12:00-13:00    |     Lunch break (on voluntary basis in a virtual   meeting)                                                                   |
 |     C          |     July 2    |     13:00-14:00    |     Exploration GAMS (Slides [Slides](https://tinyurl.com/gams-cost-berlin), Martina Scholger)                                                                                       |
