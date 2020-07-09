@@ -182,48 +182,46 @@
 
      <label> Date : 1840 to 1920 (first iteration)</label>
      <item>
-      <p>We will divide into four groups</p>
+      <p>We will divide into four groups:
       <list type="unordered">
        <item>group A (1840-1859): code T1</item>
        <item>group B (1860-1879): code T2</item>
        <item>group C (1880-1899): code T3</item>
        <item>group D (1900-1920): code T4</item>
-      </list>
+      </list></p>
       <p>At least 20% of the titles should be associated with each defined time slot.</p>
      </item>
      <label>Reprint count</label>
      <item>
       <p>We propose to use the number of times a work has been reprinted during a specific period
        as an objective measure of its
-       reception. We count the number of reprints attested during the period 1970-2010 according to Worldcat or a relevant national library catalogue and classify texts as either: </p><list>
+       reception. We count the number of reprints attested during the period 1970-2010 according to Worldcat or a relevant national library catalogue and classify texts as either: <list>
        <item>low: less than 2 reprints</item>
         <item>high: more than 2 reprints</item>
        </list>
-       <p>Note that we do not include digitizations of texts in the reprint count.</p>
+       </p><p>Note that we do not include digitizations of texts in the reprint count.</p>
    <p>At least 30% of titles should be classified as "high"; at least 30% should be classified as "low".
     </p>
   </item>
      <label>Author gender</label>
      <item>
-      <p>We use the following three categories for actual (not claimed) author gender </p><list>
-       <item>male</item>
+      <p>We use the following three categories for actual (not claimed) author gender <list><item>male</item>
        <item>female</item>
        <item>mixed (undefined or more than one author)</item>
-      </list>
+      </list></p>
       <p>At least 10% and at most 50% of the titles have a female author.</p>
      </item>
      <label>Author title count</label>
      <item><p>The number of titles per author should be controlled. Ideally, no author should be represented by more than three titles. We count
      <list><item>the number of authors represented by a single title</item><item>the number of authors represented by exactly three novels</item></list></p>
-      <p>9 to 11 authors are represented by exactly three novels; all other authors are represented by a single title only</p></item>
+      <p>No less than 9 and no more than 11 authors should be represented by exactly three novels; all other authors should be represented by a single title only</p></item>
      <label>Length</label>
      <item>
-      <p>We classify titles by their length as follows:</p>
-      <list>
+      <p>We classify titles by their length as follows:     <list>
        <item>short (10k-50k word tokens) </item>
        <item>medium (50k-100k word tokens)</item>
        <item>long (>100k word tokens)</item>
-      </list>
+      </list></p>
       <p>At least 20% of titles should be short; at least 20% should be long. </p>
      </item>
 
