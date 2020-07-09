@@ -17,7 +17,7 @@
    </sourceDesc>
   </fileDesc>
   <revisionDesc>
-   <change><date>2019-01-28</date> CO revised the criteria; removed outdated use cases.</change>
+   <change><date>2020-07-09</date> LB tinkered a bit following discussion of the EC5</change><change><date>2019-01-28</date> CO revised the criteria; removed outdated use cases.</change>
    <change><date>2018-01-30</date> LB revised table; added some discussion to criteria; tarted up
     bibliog </change>
    <change><date>2018-01-27</date> LB converted to XML</change>
@@ -30,7 +30,7 @@
  </teiHeader>
  <text>
   <body>
-   <head>Sampling criteria for the ELTeC</head>
+  <!-- <head>Sampling criteria for the ELTeC</head>
    <div>
     <head>Outline</head>
     <list type="ordered">
@@ -41,7 +41,7 @@
      <item>Metadata for texts in ELTeC</item>
      <item>Literature</item>
     </list>
-   </div>
+   </div>-->
    <div>
     <head>Task</head>
     <p>The task for WG1 is to develop guidelines for data and metadata for the creation of the
@@ -262,9 +262,9 @@
 
    <div>
     <head> Metadata for texts in ELTeC </head>
-    <p>We list here the metadata items to be collected for each text. These will be provided by
-     specific components of the TEI Header structure, as definding in WG paper on Encoding.</p>
-    <p>See Encoding Proposal for more details.</p>
+    <p>We list here some examples of the metadata items to be collected for each text. These will be provided by
+     specific components of the TEI Header structure. </p>
+    <p>See <ref target="https://distantreading.github.io/Schema/eltec-1.html">Encoding Guidelines</ref> for more details.</p>
     <list type="unordered">
      <item>title</item>
      <item>subtitle</item>
@@ -278,7 +278,7 @@
        <item>sex</item>
        <item>first language</item>
        <item>place of birth</item>
-       <item>entry of a person database such as GND if available</item>
+       <item>entry of a person database such as GND or VIAF if available</item>
       </list></item>
      <item>size<list type="unordered">
        <item>in words / in tokens</item>
