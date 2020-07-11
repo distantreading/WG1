@@ -189,7 +189,7 @@
        <item>group C (1880-1899): code T3</item>
        <item>group D (1900-1920): code T4</item>
       </list></p>
-      <p>At least 20% of the titles should be associated with each defined time slot.</p>
+      <p rend="bold">Each time slot should be represented and should contain at least 20%  of the total number of titles.</p>
      </item>
      <label>Reprint count</label>
      <item>
@@ -197,10 +197,10 @@
        as an objective measure of its
        reception. We count the number of reprints attested during the period 1970-2010 according to Worldcat or a relevant national library catalogue and classify texts as either: <list>
        <item>low: less than 2 reprints</item>
-        <item>high: more than 2 reprints</item>
+        <item>high: 2 or more reprints</item>
        </list>
        </p><p>Note that we do not include digitizations of texts in the reprint count.</p>
-   <p>At least 30% of titles should be classified as "high"; at least 30% should be classified as "low".
+   <p rend="bold">At least 30% of titles should be classified as "high"; at least 30% should be classified as "low".
     </p>
   </item>
      <label>Author gender</label>
@@ -209,12 +209,12 @@
        <item>female</item>
        <item>mixed (undefined or more than one author)</item>
       </list></p>
-      <p>At least 10% and at most 50% of the titles have a female author.</p>
+      <p rend="bold">At least 10% and at most 50% of the titles should have a female author.</p>
      </item>
      <label>Author title count</label>
      <item><p>The number of titles per author should be controlled. Ideally, no author should be represented by more than three titles. We count
      <list><item>the number of authors represented by a single title</item><item>the number of authors represented by exactly three novels</item></list></p>
-      <p>No less than 9 and no more than 11 authors should be represented by exactly three novels; all other authors should be represented by a single title only</p></item>
+      <p rend="bold">No less than 9 and no more than 11 authors should be represented by exactly three novels; all other authors should be represented by a single title only.</p></item>
      <label>Length</label>
      <item>
       <p>We classify titles by their length as follows:     <list>
@@ -222,15 +222,15 @@
        <item>medium (50k-100k word tokens)</item>
        <item>long (>100k word tokens)</item>
       </list></p>
-      <p>At least 20% of titles should be short; at least 20% should be long. </p>
-     </item>
-
-     <label>Kind of novel</label>
-     <item>
-      <p>It is an open issue how to classify novels by topic. We are not sure how to use this as a
-       sampling criterion. Instead we will add metadata about the subgenre.</p>
-     </item>
-     <label>Example</label>
+      <p rend="bold">Each length category should be represented and should contain at least 20%  of the total number of titles.</p>
+  <!--    <p rend="bold">At least 20% of titles should be short; at least 20% should be long. </p>
+ -->    </item>
+    </list>
+     
+        <p>Since it is an open issue how to classify novels by topic and in particular since different languages do not share the same
+         terminology for the concept, we do not use the topic or type of novel as a
+       sampling criterion. Texts should however provide metadata about their genre, using appropriate keywords in the descriptive metadata.</p>
+    <!-- <label>Example</label>
      <item>
       <p>The following table suggests minimum and maximum numbers of titles to be selected for each
        criterion. For each language collection we collect 100 different novels. In each date group,
@@ -241,10 +241,17 @@
       <table rend="rules">
        <row role="label">
         <cell>Language</cell>
-        <cell>Date Group</cell>
-        <cell>Reprint Category</cell>
-        <cell>Author Category</cell>
-        <cell>Length Category</cell>
+        <cell cols="4">Date Group</cell>
+        <cell cols="2">Reprint Category</cell>
+        <cell cols="3">Author Category</cell>
+        <cell cols="3">Length Category</cell>
+       </row>
+       <row role="label">
+        <cell/>
+        <cell>T1</cell>
+        <cell>T2</cell>
+        <cell>T3</cell>
+        <cell>T4</cell>
        </row>
        <row>
         <cell>100</cell>
@@ -254,8 +261,8 @@
         <cell>20</cell>
        </row>
       </table>
-     </item>
-    </list></div>
+   
+    --></div>
    </div>
 
    <div>
