@@ -26,15 +26,15 @@ We plan to record the proceedings, and use them as the basis for a future public
 |     Time           |     Topic                                                                                                                     |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------|
 |     10:00-10:30    |     Introductions                                                                      |
-|     10:30-12:00    |     Reporitory Reports (fra, gre, hun, lit, nor, pol, por)                                                                                    |
+|     10:30-12:00    |     Repository Reports (fra, gre, hun, lit, nor, pol, por)                                                                                    |
 |     12:00-13:30    |     Lunch break                                                                   |
-|     13:30-15:00    |     Repository Reports (eng, cze, ger, rom, slv, spa, srp, ukr)                                                                                       |
+|     13:30-15:00    |     Repository Reports (eng, cze, deu, rom, slv, spa, srp, ukr)                                                                                       |
 |     15:00-15:30    |     Coffee break                                                                                                              |
 |     15:30-17:00    |     Discussion                                                     |
 
 ## Documentation
 
-We use framepad 
-[https://bimestriel.framapad.org/p/wg1virtualmeeting2020](https://bimestriel.framapad.org/p/wg1virtualmeeting2020 "Framapad") 
-to collect our meeting minutes. 
-Presentations and final minutes will be published here. 
+We will take notes during the meeting using Framapad 
+[https://bimestriel.framapad.org/p/wg1virtualmeeting2020](https://bimestriel.framapad.org/p/wg1virtualmeeting2020, "Framapad") and will also record the audio.
+
+Presentations and final minutes will be published here in due course.
