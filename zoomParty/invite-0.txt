@@ -1,0 +1,45 @@
+ This is to confirm that we have registered your email address  as a participant in the forthcoming ELTeC Zoom Party to be held on DEC 7, starting at 10h CET.
+
+You will receive an invitation with a link to join the party (actually, it will be a Jitsi party) the evening before.
+
+Here’s a provisional suggestion for the timetable. The idea is to have a brief 10 minute report from each repository before the general discussion in the afternoon. So far, we have at least one participant from each repository (except deu, ita and lav) so this should be possible!
+
+1000 – 1030 Introductions
+
+1030 – 1200 Repository Reports (fra, gre, hun, lit, nor, pol, por )
+
+1200 – 1330 Lunch break
+
+1330 – 1500 Repository Reports continued  (eng, cze, rom, slv, spa, srp, ukr)
+
+1500 – 1530 Coffee break
+
+1530 – 1700 Discussion
+
+Note that  each Repository Report should take 10-12 minutes maximum! For those repositories with more than one participant it's up to you how many (and which) of you  speak, but please respect that time limit. Of course everyone can (and should) contribute to the discussion.
+
+Each report should cover, if possible:
+
+- how was the project organized ? (personnel, management…)
+
+- what is the current state of the collection ? (E5C, encoding, open issues, etc.)
+
+- how were texts selected? (source/s used; balancing methods etc, )
+
+- how did you learn how to use TEI ? (self-study, training, previous knowledge? )
+
+- how were texts processed? (software used etc.)
+
+- what problems did you encounter?
+
+You could also pre-circulate a longer written report if you wish.
+
+During the wrap up discussion, we will ask
+- if you were starting again, what would you do differently in the light of your experience so far?
+- what do you plan to do for the remainder of the Action?
+- how should the ELTeC be further developed?
+
+We plan to record the proceedings, and use them as the basis for a future publication.
+
+Thanks in advance for your contribution to what should be a very interesting and unusual day!
+	

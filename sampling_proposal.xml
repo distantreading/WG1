@@ -1,385 +1,355 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Sampling criteria for the ELTeC</title>
-                <author>COST Action CA16204 – WG1 </author>
-            </titleStmt>
-            <editionStmt>
-                <edition><date>2018-01</date></edition>
-            </editionStmt>
-            <publicationStmt>
-                <p>Unpublished discussion document prepared for COST Action 16204</p>
-            </publicationStmt>
-            <sourceDesc>
-                <p>Converted from a Word document</p>
-            </sourceDesc>
-        </fileDesc>
-        <revisionDesc>
-            <change><date>2019-01-28</date> CO revised the criteria; removed outdated use
-                cases.</change>
-            <change><date>2018-01-30</date> LB revised table; added some discussion to criteria;
-                tarted up bibliog </change>
-            <change><date>2018-01-27</date> LB converted to XML</change>
-            <change><date>2018-01-27</date> CO Final draft</change>
-            <change><date>2018-03-8</date> CO Add first use cases, add findings of the WG1 meeting
-                in Prague: refine selection criteria and balancing criteria</change>
-            <change><date>2018-09-05</date>CO divided the document into two documents: one for
-                sampling criteria, one for discussion about canonicity and corpus design.</change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <head>Sampling criteria for the ELTeC</head>
-            <div>
-                <head>Outline</head>
-                <list type="ordered">
-                    <item>Task</item>
-                    <item>Method</item>
-                    <item>Requirements of sampling criteria</item>
-                    <item>Sampling criteria</item>
-                    <item>Metadata for texts in ELTeC</item>
-                    <item>Literature</item>
-                </list>
-            </div>
-            <div>
-                <head>Task</head>
-                <p>The task for WG1 is to develop guidelines for data and metadata for the creation
-                    of the ELTeC. This task can be split up into several distinct tasks: Guidelines
-                    for corpus design, basic annotation and metadata schemes and workflow. This
-                    discussion paper focuses on corpus design and metadata because both tasks
-                    interplay with each other.</p>
-                <p>The goal of CA16204 is to create a big benchmark corpus of literature from
-                    1840-1920 (first period) for different computational distant reading methods for
-                    corpus annotation and analysis. The task of creating annotation guidelines of
-                    WG1 needs to be closely communicated and coordinated with WG2 in order to know
-                    which methods and tools needs which kind(s) of annotation model and format. The
-                    same holds for the development of the metadata scheme. </p>
-                <p>For creating such a benchmark corpus, we need a corpus design which allows for a
-                    comparability of texts and individual sub-collections according to different
-                    metadata set(s). It should be possible for every COST Action member to sample
-                    sub-collections from the ELTeC for specific tasks and research questions. In a
-                    first step, we focus on the development of clear, operationalized, transparent
-                    and motivated selection criteria for the corpus.</p>
-                <p>It is important to stress that we do not intend to define what a novel is by
-                    defining what kind of selection criteria we will use for ELTeC. The category
-                    novel may be divided into three groups where at least one of the following core
-                    criteria is met: a) textual: length (>10.000 words), prose, fiction, narrative
-                    structure b) peritextual (the term ‘novel’ (or its equivalent) in the title or
-                    subtitle of the text ) and c) contextual: the text is bibliographically listed
-                    with the UDC: 82-31 Novels. Full-length stories.</p>
-            </div>
-            <div>
-                <head>Method</head>
-                <p>We follow a non-normative but metadata-based approach of sampling criteria which
-                    will follow a corpus design approach. Corpus sampling criteria are mostly
-                    oriented/developed by the research question or/and contexts of the corpus
-                    creators group. In CA16204, we have neither only a single research question nor
-                    a fixed and previously known corpus creator group. The research context of the
-                    Action is more interested in knowledge production in a methodological sense and
-                    does not prefer a single method, model or theory. Furthermore, the member group
-                    of the Action will fluctuate and consist of researches from different
-                    disciplines with different theoretical and cultural contexts. Thus, we need to
-                    build the corpus design on a methodical basis. With this method, we will also be
-                    able to select canonical texts as well but not exclusively. </p>
-                <p> Representativeness is a kind of ideal which we would like to pursue but which
-                    cannot be achieved as whole. We will therefore aim to represent the variety of a
-                    population. In line with the MoU, the ELTeC will be designed as a monitor corpus
-                    where texts (from different languages and periods) can be added over time. We
-                    then need to decide which criterion is balanced in which way and interplays with
-                    other criteria.</p>
-            </div>
-            <div>
-                <head>Requirements of sampling criteria</head>
-                <p>According to the MoU, the corpus design should be balanced with respect to
-                    language and publication date of the texts. This means that the corpus should
-                    not be based solely on chronological criteria, meaning that we need a text from
-                    each year of the period in question. The main sampling criterion ‘language’ will
-                    require not to include translations at all. We will prefer to take the first
-                    edition of a novel or editions of these novels. By a novel, we prefer to take
-                    the edition of the book, hence we don't prefer novels only printed in journals,
-                    unless a particular literary tradition only features novels printed in serial
-                    format. If we consider editions of a novel, these editions should be freely
-                    available (free licences for reusing them. The first edition is more interesting
-                    from a philological point of view. It represents the authentic texts of the
-                    authors. Dealing with historical texts might require some cleaning up or
-                    normalizations. We will merge all word forms which are seperated by line breaks.
-                    At the moment, we must assume that there are no (sufficiently good)
-                    normalization tools for every language. Later editions of a novel may be already
-                    normalized in some way. This might lead to different text representations in
-                    ELTeC which should be indicated in the metadata. </p>
-                <p>Considering also later freely available editions of a novel has two advantages:
-                    First, members of the Action already can provide machine-readable text documents
-                    (html, TEI etc.) of later editions and second, in some languages it might be
-                    easier to find later editions which already exist in a machine-readable format
-                    (in this way we do not have to put effort in digitizing them).</p>
-                <p> Electronically availability should not be a leading sampling criterion althoug
-                    availability is a limiting factor. A text should not be excluded from ELTeC
-                    because it is not digitized, but it should be excluded if the text cannot be
-                    made freely available in ELTeC. If we only use availability as a selecting
-                    criterion, we are at risk of copying projects such as ‘Gutenberg’ for example.
-                    The issue remains of finding additional funds to digitise non-canonical books.
-                    Un til that moment, the solution would be to create pilot corpora (that can
-                    later be supplemented or substituted by an alterna tive) for literatures that do
-                    not have a significant number of digitized texts. </p>
-                <p> We then need additional criteria which can be applied without having to know
-                    (read) the texts in question. The criteria should be checked without a deep
-                    knowledge about the texts. Otherwise, this will oppose the goal of the whole
-                    Action and the methodical approach of distant reading. The criteria should be
-                    operationalizable, meaning decidable from text metadata. Here, we define text
-                    metadata in a wider scope than only the classical bibliographical metadata. In
-                    this way corpus design interacts with metadata. Some of the text’s metadata can
-                    be used as sampling criteria. These criteria are text-external and -internal
-                    criteria (cf. Hunston 2008) on which we then need to rely. The selection
-                    criteria may be assisted by bibliographical overviews (wherever available) for
-                    each language in order to avoid possible canon-derived bias. </p>
-                <p>We suggest using an online table as a means of collecting nominations for
-                    inclusion in the ELTeC but other methods are feasible. </p>
-            </div>
-            <div>
-                <head> Sampling criteria </head>
-                <p>For creating a language collection two steps have to be done: First step is
-                    selection: identifying text candidates. Second step is balancing: proportion
-                    within the corpus. Both steps are defined in this document.</p>
-                <p>Principles:</p>
-                <list type="unordered">
-                    <item>We will represent the variety of production and aim to maximize the
-                        variety within each time period.</item>
-                    <item>We will prefer to collect novels published as a book in first as well as
-                        later editions over novels published in serial publications
-                        (journals).</item>
-                    <item>We will not include translations.</item>
-                    <item>We will consider only freely available texts and trying to reuse already
-                        digitized texts.</item>
-                    <item>We will use non-normative sampling criteria which allow for selecting
-                        canonical novels and non-canonical novels.</item>
-                    <item>Metadata should indicate the type of text representation (normalized or
-                        non-normalized, first or later editions etc.). </item>
-                    <item>We will strictly follow the selection and balancing criteria and we prefer
-                        80 novels meeting these criteria over 100 novels which do not meet the
-                        criteria.</item>
-                </list>
-                <p>Organization</p>
-                <list>
-                    <item>Please note: Contact the sampling support Team: Carolin, Lou, Pieter and
-                        Diana! Task: To control the corpus sampling according to the selection
-                        criteria. </item>
-                </list>
-                <p>Criteria: Eligibility. </p>
-                <p> In order to be included (selection), a text must... </p>
-                <list>
-                    <item>have been first published as a book (or or in case of need as series
-                        publication) between 1840 and 1920, sub-grouped and equally split by
-                        decades, </item>
-                    <item>have first been published in a European country. [maybe not "first":
-                        within that decade],</item>
-                    <item>be a novel, i.e. a fictional prose narrative,</item>
-                    <item>have originally been written in the language of the given
-                        subcollection.</item>
-                </list>
-                <p>Criteria: Composition. </p>
-                <p>Among the novels in each language the subcollection must contain... </p>
-                <list>
-                    <item>at least 10%-50% have been written by female authors for the language
-                        subcollection.</item>
-                    <item>9 to 11 authors are represented with exact three novels.</item>
-                    <item>at least 30% are highly canonized novels, at least 30% should be
-                        non-canonized novels, based on the following reprint groups: reprinted not
-                        at all, reprinted once, reprinted more than once within the period
-                        1980-2000</item>
-                    <item>at least 20% are short novels (10-50k word tokens), at least 20% are long
-                        novels (>100k word tokens).</item>
-                </list>
-                <list type="gloss">
+ <teiHeader>
+  <fileDesc>
+   <titleStmt>
+    <title>Sampling criteria for the ELTeC</title>
+    <author>COST Action CA16204 – WG1 </author>
+   </titleStmt>
+   <editionStmt>
+    <edition><date>2018-01</date></edition>
+   </editionStmt>
+   <publicationStmt>
+    <p>Unpublished discussion document prepared for COST Action 16204</p>
+   </publicationStmt>
+   <sourceDesc>
+    <p>Converted from a Word document</p>
+   </sourceDesc>
+  </fileDesc>
+  <revisionDesc>
+   <change><date>2020-07-09</date> LB tinkered a bit following discussion of the EC5</change><change><date>2019-01-28</date> CO revised the criteria; removed outdated use cases.</change>
+   <change><date>2018-01-30</date> LB revised table; added some discussion to criteria; tarted up
+    bibliog </change>
+   <change><date>2018-01-27</date> LB converted to XML</change>
+   <change><date>2018-01-27</date> CO Final draft</change>
+   <change><date>2018-03-8</date> CO Add first use cases, add findings of the WG1 meeting in Prague:
+    refine selection criteria and balancing criteria</change>
+   <change><date>2018-09-05</date>CO divided the document into two documents: one for sampling
+    criteria, one for discussion about canonicity and corpus design.</change>
+  </revisionDesc>
+ </teiHeader>
+ <text>
+  <body>
+  <!-- <head>Sampling criteria for the ELTeC</head>
+   <div>
+    <head>Outline</head>
+    <list type="ordered">
+     <item>Task</item>
+     <item>Method</item>
+     <item>Objectives of sampling criteria</item>
+     <item>Sampling criteria</item>
+     <item>Metadata for texts in ELTeC</item>
+     <item>Literature</item>
+    </list>
+   </div>-->
+   <div>
+    <head>Task</head>
+    <p>The task for WG1 is to develop guidelines for data and metadata for the creation of the
+     ELTeC. This task can be split up into several distinct tasks: Guidelines for corpus design,
+     basic annotation and metadata schemes and workflow. This discussion paper focuses on corpus
+     design and metadata because both tasks interplay with each other.</p>
+    <p>The goal of CA16204 is to create a big benchmark corpus of literature from 1840-1920 (first
+     period) for different computational distant reading methods for corpus annotation and analysis.
+     The task of creating annotation guidelines of WG1 needs to be closely communicated and
+     coordinated with WG2 in order to know which methods and tools needs which kind(s) of annotation
+     model and format. The same holds for the development of the metadata scheme. </p>
+    <p>For creating such a benchmark corpus, we need a corpus design which allows for a
+     comparability of texts and individual sub-collections according to different metadata set(s).
+     It should be possible for every COST Action member to sample sub-collections from the ELTeC for
+     specific tasks and research questions. In a first step, we focus on the development of clear,
+     operationalized, transparent and motivated selection criteria for the corpus.</p>
+    <p>It is important to stress that we do not intend to define what a novel is by defining what
+     kind of selection criteria we will use for ELTeC. The category novel may be divided into three
+     groups where at least one of the following core criteria is met: a) textual: length (>10.000
+     words), prose, fiction, narrative structure b) peritextual (the term ‘novel’ (or its
+     equivalent) in the title or subtitle of the text ) and c) contextual: the text is
+     bibliographically listed with the UDC: 82-31 Novels. Full-length stories.</p>
+   </div>
+   <div>
+    <head>Method</head>
+    <p>We follow a non-normative but metadata-based approach of sampling criteria which will follow
+     a corpus design approach. Corpus sampling criteria are mostly oriented/developed by the
+     research question or/and contexts of the corpus creators group. In CA16204, we have neither
+     only a single research question nor a fixed and previously known corpus creator group. The
+     research context of the Action is more interested in knowledge production in a methodological
+     sense and does not prefer a single method, model or theory. Furthermore, the member group of
+     the Action will fluctuate and consist of researches from different disciplines with different
+     theoretical and cultural contexts. Thus, we need to build the corpus design on a methodical
+     basis. With this method, we will also be able to select canonical texts as well but not
+     exclusively. </p>
+    <p> Representativeness is a kind of ideal which we would like to pursue but which cannot be
+     achieved as whole. We will therefore aim to represent the variety of a population. In line with
+     the MoU, the ELTeC will be designed as a monitor corpus where texts (from different languages
+     and periods) can be added over time. We then need to decide which criterion is balanced in
+     which way and interplays with other criteria.</p>
+   </div>
+   <div>
+    <head>Objectives of sampling criteria </head>
+    <p>According to the MoU, the corpus design should be balanced with respect to language and
+     publication date of the texts. This means that the corpus should not be based solely on
+     chronological criteria, meaning that we need a text from each year of the period in question.
+     The main sampling criterion ‘language’ will require not to include translations at all. We will
+     prefer to take the first edition of a novel or editions of these novels. By a novel, we prefer
+     to take the edition of the book, hence we don't prefer novels only printed in journals, unless
+     a particular literary tradition only features novels printed in serial format. If we consider
+     editions of a novel, these editions should be freely available (free licences for reusing them.
+     The first edition is more interesting from a philological point of view. It represents the
+     authentic texts of the authors. Dealing with historical texts might require some cleaning up or
+     normalizations. We will merge all word forms which are seperated by line breaks. At the moment,
+     we must assume that there are no (sufficiently good) normalization tools for every language.
+     Later editions of a novel may be already normalized in some way. This might lead to different
+     text representations in ELTeC which should be indicated in the metadata. </p>
+    <p>Considering also later freely available editions of a novel has two advantages: First,
+     members of the Action already can provide machine-readable text documents (html, TEI etc.) of
+     later editions and second, in some languages it might be easier to find later editions which
+     already exist in a machine-readable format (in this way we do not have to put effort in
+     digitizing them).</p>
+    <p> Electronically availability should not be a leading sampling criterion althoug availability
+     is a limiting factor. A text should not be excluded from ELTeC because it is not digitized, but
+     it should be excluded if the text cannot be made freely available in ELTeC. If we only use
+     availability as a selecting criterion, we are at risk of copying projects such as ‘Gutenberg’
+     for example. The issue remains of finding additional funds to digitise non-canonical books. Un
+     til that moment, the solution would be to create pilot corpora (that can later be supplemented
+     or substituted by an alterna tive) for literatures that do not have a significant number of
+     digitized texts. </p>
+    <p> We then need additional criteria which can be applied without having to know (read) the
+     texts in question. The criteria should be checked without a deep knowledge about the texts.
+     Otherwise, this will oppose the goal of the whole Action and the methodical approach of distant
+     reading. The criteria should be operationalizable, meaning decidable from text metadata. Here,
+     we define text metadata in a wider scope than only the classical bibliographical metadata. In
+     this way corpus design interacts with metadata. Some of the text’s metadata can be used as
+     sampling criteria. These criteria are text-external and -internal criteria (cf. Hunston 2008)
+     on which we then need to rely. The selection criteria may be assisted by bibliographical
+     overviews (wherever available) for each language in order to avoid possible canon-derived bias. </p>
+    <p>We suggest using an online table as a means of collecting nominations for inclusion in the
+     ELTeC but other methods are feasible. </p>
+   </div>
+   <div>
+    <head> Sampling criteria </head>
+    <p>For creating a language collection two steps have to be done: First step is selection:
+     identifying text candidates. Second step is balancing: proportion within the corpus. Both steps
+     are defined in this document.</p>
+    <p>The following principles apply: </p>
+    <list type="unordered">
+     <item>We will represent the variety of production and aim to maximize the variety within each
+      time period.</item>
+     <item>We will prefer to collect novels published as a book in first as well as later editions
+      over novels published in serial publications (journals).</item>
+     <item>We will not include translations.</item>
+     <item>We will consider only freely available texts and trying to reuse already digitized
+      texts.</item>
+     <item>We will use non-normative sampling criteria which allow for selecting canonical novels
+      and non-canonical novels.</item>
+     <item>Metadata should indicate the type of text representation (normalized or non-normalized,
+      first or later editions etc.). </item>
+     <item>We will strictly follow the selection and balancing criteria and we prefer 80 novels
+      meeting these criteria over 100 novels which do not meet the criteria.</item>
+    </list>
+   <!-- <p>Organization</p>
+    <list>
+     <item>Please note: Contact the sampling support Team: Carolin, Lou, Pieter and Diana! Task: To
+      control the corpus sampling according to the selection criteria. </item>
+    </list>-->
+   <div> <head>Eligibility criteria </head>
+    <p> In order to be considered for inclusion, a text must... </p>
+    <list>
+     <item>have been first published as a book (or exceptionally as a serial publication) between
+      1840 and 1920s, </item>
+     <item>have first been published in a European country. [maybe not "first": within that
+      decade],</item>
+     <item>be a novel, i.e. a fictional prose narrative of at least 10000 words</item>
+     <item>have originally been written in the language of the given subcollection.</item>
+    </list>
+   
+     <p>The MoU defines the languages to be sampled. It does not propose distinguishing regional
+      variation (e.g. in German), nor geographical variation (e.g. the French spoken in Belgium,
+      France, or Switzerland). It assumes only European varieties, so English excludes US English;
+      French excludes Quebecois. </p>
+     <p> We follow a language-based approach (not country-based). This means for example that we
+      include Swiss German texts in the German language collection. We prefer standard varieties
+      over dialect varieties if sampling criteria for text candidates are met. </p>
+     <list>
+      <item>Open Question: Maybe some Exceptions: - Publication place is a sometimes a problem:
+       e.g. for Portuguese novels published in as Brazilian publications or Croatian authors
+       published in Germany. </item>
+      <item>Possible Languages for the first iteration: Dutch, English, French, German, Greek,
+       Italian, Polish, Portuguese, Russian, Spanish, Hungarian.</item>
+     </list></div>
+    <div><head>Composition criteria </head>
+    <p>This section briefly summarizes the classification criteria applied, and also the
+    ideal target proportions of titles to be included for each category within the balanced collection. </p>
+    <list type="gloss">
 
-                    <label> Date : 1840 to 1920 (first iteration)</label>
-                    <item>
-                        <p>We will divide into four groups</p>
-                        <list type="unordered">
-                            <item>group A (1840-1859): code T1</item>
-                            <item>group B (1860-1879): code T2</item>
-                            <item>group C (1880-1899): code T3</item>
-                            <item>group D (1900-1920): code T4</item>
-                        </list>
-                    </item>
+     <label> Date : 1840 to 1920 (first iteration)</label>
+     <item>
+      <p>We will divide into four groups:
+      <list type="unordered">
+       <item>group A (1840-1859): code T1</item>
+       <item>group B (1860-1879): code T2</item>
+       <item>group C (1880-1899): code T3</item>
+       <item>group D (1900-1920): code T4</item>
+      </list></p>
+      <p rend="bold">Each time slot should be represented and should contain at least 20%  of the total number of titles.</p>
+     </item>
+     <label>Reprint count</label>
+     <item>
+      <p>We propose to use the number of times a work has been reprinted during a specific period
+       as an objective measure of its
+       reception. We count the number of reprints attested during the period 1970-2010 according to Worldcat or a relevant national library catalogue and classify texts as either: <list>
+       <item>low: less than 2 reprints</item>
+        <item>high: 2 or more reprints</item>
+       </list>
+       </p><p>Note that we do not include digitizations of texts in the reprint count.</p>
+   <p rend="bold">At least 30% of titles should be classified as "high"; at least 30% should be classified as "low".
+    </p>
+  </item>
+     <label>Author gender</label>
+     <item>
+      <p>We use the following three categories for actual (not claimed) author gender <list><item>male</item>
+       <item>female</item>
+       <item>mixed (undefined or more than one author)</item>
+      </list></p>
+      <p rend="bold">At least 10% and at most 50% of the titles should have a female author.</p>
+     </item>
+     <label>Author title count</label>
+     <item><p>The number of titles per author should be controlled. Ideally, no author should be represented by more than three titles. We count
+     <list><item>the number of authors represented by a single title</item><item>the number of authors represented by exactly three novels</item></list></p>
+      <p rend="bold">No less than 9 and no more than 11 authors should be represented by exactly three novels; all other authors should be represented by a single title only.</p></item>
+     <label>Length</label>
+     <item>
+      <p>We classify titles by their length as follows:     <list>
+       <item>short (10k-50k word tokens) </item>
+       <item>medium (50k-100k word tokens)</item>
+       <item>long (>100k word tokens)</item>
+      </list></p>
+      <p rend="bold">Each length category should be represented and should contain at least 20%  of the total number of titles.</p>
+  <!--    <p rend="bold">At least 20% of titles should be short; at least 20% should be long. </p>
+ -->    </item>
+    </list>
+     
+        <p>Since it is an open issue how to classify novels by topic and in particular since different languages do not share the same
+         terminology for the concept, we do not use the topic or type of novel as a
+       sampling criterion. Texts should however provide metadata about their genre, using appropriate keywords in the descriptive metadata.</p>
+    <!-- <label>Example</label>
+     <item>
+      <p>The following table suggests minimum and maximum numbers of titles to be selected for each
+       criterion. For each language collection we collect 100 different novels. In each date group,
+       we will have 25 novels. In a language collection, we will have at least 30 novels for the
+       category high reprints and 30 for the category low reprints. In a language collection, we
+       will have at least 10 novels from female authors and 20 novels per length category (long,
+       medium short). </p>
+      <table rend="rules">
+       <row role="label">
+        <cell>Language</cell>
+        <cell cols="4">Date Group</cell>
+        <cell cols="2">Reprint Category</cell>
+        <cell cols="3">Author Category</cell>
+        <cell cols="3">Length Category</cell>
+       </row>
+       <row role="label">
+        <cell/>
+        <cell>T1</cell>
+        <cell>T2</cell>
+        <cell>T3</cell>
+        <cell>T4</cell>
+       </row>
+       <row>
+        <cell>100</cell>
+        <cell>25</cell>
+        <cell>30</cell>
+        <cell>10</cell>
+        <cell>20</cell>
+       </row>
+      </table>
+   
+    --></div>
+   </div>
 
-                    <label>Language of the text</label>
-                    <item><p>The MoU defines the languages to be sampled. It does not propose
-                            distinguishing regional variation (e.g. in German), nor geographical
-                            variation (e.g. the French spoken in Belgium, France, or Switzerland).
-                            It assumes only European varieties, so English excludes US English;
-                            French excludes Quebecois. </p>
-                        <p> We follow a language-based approach (not country-based). This means for
-                            example that we include Swiss German texts in the German language
-                            collection. We prefer standard varieties over dialect varieties if
-                            sampling criteria for text candidates are met. </p>
-                        <list>
-                            <item>Open Question: Maybe some Exceptions: - Publication place is a
-                                sometimes a problem: e.g. for Portuguese novels published in as
-                                Brazilian publications or Croatian authors published in Germany. </item>
-                            <item>Possible Languages for the first iteration: Dutch, English,
-                                French, German, Greek, Italian, Polish, Portuguese, Russian,
-                                Spanish, Hungarian.</item>
-                        </list></item>
-                    <label>Reprint count</label>
-                    <item><p>We propose to use the number of times a work is reprinted as an
-                            objective measure of its reception from 1980-2000, using categories like
-                            the following: </p><list>
-                            <item>low: no reprints at all,</item>
-                            <item>medium: reprinted once,</item>
-                            <item>high: reprinted more than once,</item>
-                            <item>We will not include digitizations of texts in the reprint
-                                count.</item>
-                        </list></item>
-                    <label>Author gender</label>
-                    <item>
-                        <p>We use the following three categories for actual (not claimed) author
-                            gender </p><list>
-                            <item>male</item>
-                            <item>female</item>
-                            <item>mixed (undefined or more than one author)</item>
-                        </list>
-                    </item>
-                    <label>Length</label>
-                    <item>
-                        <p>We should try to include a variety of lengths</p>
-                        <list>
-                            <item>short (10k-50k word tokens) </item>
-                            <item>medium (50k-100k word tokens)</item>
-                            <item>long (>100k word tokens)</item>
-                        </list></item>
-
-                    <label>Kind of novel</label>
-                    <item>
-                        <p>It is an open issue how to classify novels by topic. We are not sure how
-                            to use this as a sampling criterion. Instead we add metadata about their
-                            subgenre.</p>
-                    </item>
-                    <label>Example</label>
-                    <item>
-                        <p>The following table suggests minimum and maximum numbers of titles to be
-                            selected for each criterion. For each language collection we collect 100
-                            different novels. In each date group, we will have 25 novels. In a
-                            language collection, we will have at least 30 novels for the category
-                            high reprints and 30 for the category low reprints. In a language
-                            collection, we will have at least 10 novels from female authors and 20
-                            novels per length category (long, medium short). </p>
-                        <table rend="rules">
-                            <row role="label">
-                                <cell>Language</cell>
-                                <cell>Date Group</cell>
-                                <cell>Reprint Category</cell>
-                                <cell>Author Category</cell>
-                                <cell>Length Category</cell>
-                            </row>
-                            <row>
-                                <cell>100</cell>
-                                <cell>25</cell>
-                                <cell>30</cell>
-                                <cell>10</cell>
-                                <cell>20</cell>
-                            </row>
-                        </table>
-                    </item>
-                </list>
-            </div>
-
-            <div>
-                <head> Metadata for texts in ELTeC </head>
-                <p>We list here the metadata items to be collected for each text. These will be
-                    provided by specific components of the TEI Header structure, as definding in WG
-                    paper on Encoding.</p>
-                <p>See Encoding Proposal for more details.</p>
-                <list type="unordered">
-                    <item>title</item>
-                    <item>subtitle</item>
-                    <item>publication date</item>
-                    <item>publication place</item>
-                    <item>publisher</item>
-                    <item>series</item>
-                    <item>editor</item>
-                    <item>author<list type="unordered">
-                            <item>name</item>
-                            <item>sex</item>
-                            <item>first language</item>
-                            <item>place of birth</item>
-                            <item>entry of a person database such as GND if available</item>
-                        </list></item>
-                    <item>size<list type="unordered">
-                            <item>in words / in tokens</item>
-                        </list></item>
-                    <item>pages</item>
-                    <item>topics (cf. Falkentheorie)<list type="unordered">
-                            <item>politics, crime, espionage, provincial, school, adventure, war,
-                                faith, domestic, nature, factory, love, family, history, mystery,
-                                urban life, art, rural life</item>
-                        </list></item>
-                    <item>subgenre<list type="unordered">
-                            <item>work-in-progress novel</item>
-                        </list></item>
-                    <item>Narrator(s)<list type="unordered">
-                            <item>first person</item>
-                            <item>third person</item>
-                            <item>authorial/omniscient narrator</item>
-                        </list></item>
-                    <item>canonicity/reception<list type="unordered">
-                            <item>rated by a canon: y/n</item>
-                            <item>canon</item>
-                        </list></item>
-                    <item>keywords<list type="unordered">
-                            <item>from OPACs? others? Own?</item>
-                        </list></item>
-                    <item>language<list type="unordered">
-                            <item>possible: language area, language type (e.g. German,
-                                Bavarian)</item>
-                        </list></item>
-                    <item>Source reference (if available)<list type="unordered">
-                            <item>e.g. DTA, textgrid etc.</item>
-                        </list></item>
-                </list>
-            </div>
-            <div>
-                <head>Literature</head>
-                <listBibl>
-                    <bibl>Algee-Hewitt, Mark; McGurl, Mark (2015): <title>Between Canon and Corpus.
-                            Six Perspectives on the 20th-Century Novels.</title> Stanford Literary
-                        Lab Pamphlet no 8. </bibl>
-                    <bibl>Biber, Douglas (1993): <title level="a">Representativeness in Corpus
-                            Design.</title> In: <title level="j">Literary and Linguistic Computing
-                        </title>(8), 243–257.</bibl>
-                    <bibl>Herrmann, Leonhard (2011): <title level="a">System? Kanon? Epoche?</title>
-                        In: Matthias Beilein, Claudia Stockinger und Simone Winko (Hg.):
-                            <title>Kanon, Wertung und Vermittlung. Literatur in der
-                            Wissensgesellschaft.</title> Berlin: De Gruyter (Studien und Texte zur
-                        Sozialgeschichte der Literatur, Bd. 129), S. 59–75.</bibl>
-                    <bibl>Hunston, Susan (2008): <title level="a">Collection strategies and design
-                            decisions.</title> In: Anke Lüdeling und Merja Kytö (Hg.): <title>Corpus
-                            Linguistics. An International Handbook</title>. 2 Bände. Berlin: De
-                        Gruyter (1), S. 154–168.</bibl>
-                    <bibl>IFLA (2009): <title>Functional Requirements for Bibliographic
-                            Records</title> (Technical Report). Online verfügbar unter
-                        http://www.ifla.org/publications/functional-requirements-for-bibliographic-records,
-                        zuletzt geprüft am 23.12.2016.</bibl>
-                    <bibl>Lüdeling, Anke (2011): <title level="a">Corpora in Linguistics. Sampling
-                            and Annotation</title>. In: Karl Grandin (Hg.): <title level="m">Going
-                            Digital. Evolutionary and Revolutionary Aspects of Digitization</title>.
-                        New York: Science History Publications (Nobel Symposium, 147),
-                        220–243.</bibl>
-                    <bibl>Moisl, Hermann (2009): <title level="a">Exploratory Multivariate
-                            Analysis</title>. In: Anke Lüdeling und Merja Kytö (Hg.): <title>Corpus
-                            Linguistics. An International Handbook</title>. 2 Bände. Berlin: De
-                        Gruyter (2), S. 874–899.</bibl>
-                    <bibl>Winko, Simone (1996): <title level="a">Literarische Wertung und
-                            Kanonbildung</title>. In: <title level="m">Grundzüge der
-                            Literaturwissenschaft.</title> Hrsg. v. H. L. Arnold und H. Detering.
-                        München, 585–600.</bibl>
-                    <bibl>van Zundert, Joris; Andrews, Tara L. (2017): <title level="a">Qu'est-ce
-                            qu'un texte numérique? A new rationale for the digital representation of
-                            text.</title> In: <title level="j">Digital Scholarship in the Humanities
-                        </title>(32), S. 78–88. DOI: 10.1093/llc/fqx039.</bibl>
-                </listBibl>
-            </div>
-        </body>
-    </text>
+   <div>
+    <head> Metadata for texts in ELTeC </head>
+    <p>We list here some examples of the metadata items to be collected for each text. These will be provided by
+     specific components of the TEI Header structure. </p>
+    <p>See <ref target="https://distantreading.github.io/Schema/eltec-1.html">Encoding Guidelines</ref> for more details.</p>
+    <list type="unordered">
+     <item>title</item>
+     <item>subtitle</item>
+     <item>publication date</item>
+     <item>publication place</item>
+     <item>publisher</item>
+     <item>series</item>
+     <item>editor</item>
+     <item>author<list type="unordered">
+       <item>name</item>
+       <item>sex</item>
+       <item>first language</item>
+       <item>place of birth</item>
+       <item>entry of a person database such as GND or VIAF if available</item>
+      </list></item>
+     <item>size<list type="unordered">
+       <item>in words / in tokens</item>
+      </list></item>
+     <item>pages</item>
+     <item>topics (cf. Falkentheorie)<list type="unordered">
+       <item>politics, crime, espionage, provincial, school, adventure, war, faith, domestic,
+        nature, factory, love, family, history, mystery, urban life, art, rural life</item>
+      </list></item>
+     <item>subgenre<list type="unordered">
+       <item>work-in-progress novel</item>
+      </list></item>
+     <item>Narrator(s)<list type="unordered">
+       <item>first person</item>
+       <item>third person</item>
+       <item>authorial/omniscient narrator</item>
+      </list></item>
+     <item>canonicity/reception<list type="unordered">
+       <item>rated by a canon: y/n</item>
+       <item>canon</item>
+      </list></item>
+     <item>keywords<list type="unordered">
+       <item>from OPACs? others? Own?</item>
+      </list></item>
+     <item>language<list type="unordered">
+       <item>possible: language area, language type (e.g. German, Bavarian)</item>
+      </list></item>
+     <item>Source reference (if available)<list type="unordered">
+       <item>e.g. DTA, textgrid etc.</item>
+      </list></item>
+    </list>
+   </div>
+   <div>
+    <head>Literature</head>
+    <listBibl>
+     <bibl>Algee-Hewitt, Mark; McGurl, Mark (2015): <title>Between Canon and Corpus. Six
+       Perspectives on the 20th-Century Novels.</title> Stanford Literary Lab Pamphlet no 8. </bibl>
+     <bibl>Biber, Douglas (1993): <title level="a">Representativeness in Corpus Design.</title> In:
+       <title level="j">Literary and Linguistic Computing </title>(8), 243–257.</bibl>
+     <bibl>Herrmann, Leonhard (2011): <title level="a">System? Kanon? Epoche?</title> In: Matthias
+      Beilein, Claudia Stockinger und Simone Winko (Hg.): <title>Kanon, Wertung und Vermittlung.
+       Literatur in der Wissensgesellschaft.</title> Berlin: De Gruyter (Studien und Texte zur
+      Sozialgeschichte der Literatur, Bd. 129), S. 59–75.</bibl>
+     <bibl>Hunston, Susan (2008): <title level="a">Collection strategies and design
+       decisions.</title> In: Anke Lüdeling und Merja Kytö (Hg.): <title>Corpus Linguistics. An
+       International Handbook</title>. 2 Bände. Berlin: De Gruyter (1), S. 154–168.</bibl>
+     <bibl>IFLA (2009): <title>Functional Requirements for Bibliographic Records</title> (Technical
+      Report). Online verfügbar unter
+      http://www.ifla.org/publications/functional-requirements-for-bibliographic-records, zuletzt
+      geprüft am 23.12.2016.</bibl>
+     <bibl>Lüdeling, Anke (2011): <title level="a">Corpora in Linguistics. Sampling and
+       Annotation</title>. In: Karl Grandin (Hg.): <title level="m">Going Digital. Evolutionary and
+       Revolutionary Aspects of Digitization</title>. New York: Science History Publications (Nobel
+      Symposium, 147), 220–243.</bibl>
+     <bibl>Moisl, Hermann (2009): <title level="a">Exploratory Multivariate Analysis</title>. In:
+      Anke Lüdeling und Merja Kytö (Hg.): <title>Corpus Linguistics. An International
+       Handbook</title>. 2 Bände. Berlin: De Gruyter (2), S. 874–899.</bibl>
+     <bibl>Winko, Simone (1996): <title level="a">Literarische Wertung und Kanonbildung</title>. In:
+       <title level="m">Grundzüge der Literaturwissenschaft.</title> Hrsg. v. H. L. Arnold und H.
+      Detering. München, 585–600.</bibl>
+     <bibl>van Zundert, Joris; Andrews, Tara L. (2017): <title level="a">Qu'est-ce qu'un texte
+       numérique? A new rationale for the digital representation of text.</title> In: <title
+       level="j">Digital Scholarship in the Humanities </title>(32), S. 78–88. DOI:
+      10.1093/llc/fqx039.</bibl>
+    </listBibl>
+   </div>
+  </body>
+ </text>
 </TEI>

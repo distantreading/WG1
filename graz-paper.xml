@@ -218,7 +218,7 @@
                   <soCalled>TEI conformance</soCalled> really guarantees is that the intended
                semantics of the markup used by the two projects should be recoverable by reference
                to a published standard, and are not entirely ad hoc or sui generis. (This may not
-               seem much of an advance, though it is: see further [<ref target="#B04">Burnard
+               seem much of an advance, though it is: see further [<ref target="#B04a">Burnard
                   2019</ref>]). </p>
             <p>Following this No Surprises principle, the simplest ELTeC schema (the <soCalled>level
                   zero </soCalled> schema) provides the bare minimum of tags needed to mark up the
@@ -569,7 +569,7 @@
                particular documents conform to predefined rules, unless they are willing greatly to
                increase the complexity of their work flow. A better approach, pioneered by the
                Deutsch Textarchiv <ref target="#B08"> [Haaf and Thomas 2016]</ref>, has been the use
-               of a technique known as ODD chaining <ref target="#B04">[Burnard 2016]</ref> Here, a
+               of a technique known as ODD chaining <ref target="#B04b">[Burnard 2016]</ref> Here, a
                project first defines a base ODD which selects all the TEI components considered to
                be useful anywhere and then uses this as the basis for smaller, more constraining,
                ODDs which select from the base only the components (or other rules) specific to a
@@ -639,10 +639,10 @@
                Literary and Linguistic Computing (8), pp. 243–257.</bibl>
             <bibl xml:id="B03">Bode, Katherine (2018). A World of Fiction - Digital Collections and
                the Future of Literary History. eng. University of Michigan Press. </bibl>
-            <bibl xml:id="B04">Burnard, Lou (2016) ODD Chaining for Beginners. Available from <ref
+            <bibl xml:id="B04a">Burnard, Lou (2016) ODD Chaining for Beginners. Available from <ref
                   target="http://teic.github.io/PDF/howtoChain.pdf"
                   >http://teic.github.io/PDF/howtoChain.pdf</ref></bibl>
-            <bibl xml:id="B04">Burnard, Lou (2019) “What is TEI Conformance, and why should you
+            <bibl xml:id="B04b">Burnard, Lou (2019) “What is TEI Conformance, and why should you
                care?”. In: Journal of the Text Encoding Initiative, Issue 12. <ref
                   target="https://journals.openedition.org/jtei/1777"
                   >https://journals.openedition.org/jtei/1777</ref></bibl>
