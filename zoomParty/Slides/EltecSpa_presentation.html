@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Borja Navarro Colorado" />
+  <title>ELTeC-SPA</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">ELTeC-SPA</h1>
+  <p class="author">
+Borja Navarro Colorado
+  </p>
+</div>
+<div class="slide section level1">
+
+<p>Virtual WG1 Meeting, Dec 7 2020</p>
+<p><a href="https://github.com/distantreading/WG1/blob/master/zoomParty/README.md" class="uri">https://github.com/distantreading/WG1/blob/master/zoomParty/README.md</a></p>
+</div>
+<div id="current-situation" class="slide section level1">
+<h1>Current situation</h1>
+<ul>
+<li><p>81 novels (up to 6 874 582 tokens).</p></li>
+<li><p>Balancing criteria satisfied:</p>
+<ul>
+<li>Time slots: 16 novels from the first period (1840-1859), 15 from the second one (1860-1879) and 25 for each of the two last periods.</li>
+<li>Author gender, 16 authors are women and 65 men.</li>
+<li>Size balanced: 30 short novels (37%), 27 medium (33%) and 24 long novels (26%).</li>
+<li>«Reprints» also balanced: 42 novels frequently reprinted (51%) and 39 rare novels (48%).</li>
+</ul></li>
+</ul>
+<p>These days working on 7 novels for the first and second time slot. We hope to get up to 90 novels before the end of the project.</p>
+</div>
+<div id="text-sources" class="slide section level1">
+<h1>Text sources</h1>
+<ul>
+<li>Miguel de Cervantes Virtual Library (at the University of Alicante);</li>
+<li>CLIGS corpus (at the University of Würzburg), mainly for the two last periods;</li>
+<li>Hispanic Digital Library (<em>Biblioteca digital hispánica</em>) from the Spanish National Library (<em>Biblioteca Nacional</em>).</li>
+</ul>
+</div>
+<div id="project-organization" class="slide section level1">
+<h1>Project organization</h1>
+<p>I have had help from:</p>
+<ul>
+<li>Pilar Escobar, Gustavo Candela and other colleagues from the BVMC;</li>
+<li>José Calvo from CLIGS.</li>
+<li>Lou provided me several scripts to transform between TEI formats: from BVMC or CLIGS format to ELTeC format.</li>
+<li>During the annotation process, I have had help from my students of the <em>Master of Literary Studies</em> at the University of Alicante.</li>
+</ul>
+<p>Many thanks to all of them!</p>
+</div>
+<div id="problems" class="slide section level1">
+<h1>Problems</h1>
+<ol style="list-style-type: decimal">
+<li>management problems,</li>
+<li>problems during compilation, and</li>
+<li>problems during annotation.</li>
+</ol>
+</div>
+<div id="management-problem" class="slide section level1">
+<h1>Management problem</h1>
+<p>I was not able to find funds for the development of ELTeC-SPA corpus. Not funds, not collaborators.</p>
+<p>People from Computer Science: “-Novels? ARGG!!”</p>
+<p>People from Literary Studies: “-XML-TEI? ARGGG!!”</p>
+<blockquote>
+<p>I feel that I haven’t found the right people for this corpus.</p>
+</blockquote>
+</div>
+<div id="compilation-problems" class="slide section level1">
+<h1>Compilation problems</h1>
+<p>Few problems.</p>
+<ul>
+<li>Most novels are digitalized and normalized (modernized) at the BVMC. They deliver to us «for free».</li>
+<li>It has been hard to find novels from the first period 1840-1859. There are few novels digitalized from this period.</li>
+</ul>
+</div>
+<div id="annotation-problems" class="slide section level1">
+<h1>Annotation problems</h1>
+<p>Perhaps the annotation of code switching:</p>
+<ul>
+<li>sometimes it was difficult to find CS in the texts;</li>
+<li>time consuming task.</li>
+</ul>
+<p>Other aspects were annotated with regular expressions and some patience.</p>
+<p>Software: Sublime Text editor + JING XML validator.</p>
+</div>
+<div id="open-issues." class="slide section level1">
+<h1>Open issues.</h1>
+<ul>
+<li>Language issue</li>
+<li>Level 2 annotation.</li>
+</ul>
+</div>
+<div id="language-issue" class="slide section level1">
+<h1>Language issue</h1>
+<p>Spain: a country with four official languages.</p>
+<p>Two options:</p>
+<ul>
+<li><p>Option 1, a sub-corpus for each language: ELTeC-SPA, ELTeC-CAT (Catalan), ELTeC-EUS (Basque) and ELTeC-GLG (Galician).</p></li>
+<li><p>Option 2: to include in ELTeC-SPA novels writing in Catalan, Basque and Galician (at least one for each).</p></li>
+</ul>
+</div>
+<div id="language-issue-1" class="slide section level1">
+<h1>Language issue</h1>
+<p>At this moment option 1 is not possible for several reasons:</p>
+<ol style="list-style-type: decimal">
+<li><p>These languages were recovered as “literay language” at the end of 19th Cent. It is not possible to fulfill balance criteria.</p></li>
+<li><p>Too much work for only one person.</p></li>
+</ol>
+<p>I see this option as promising for further developments of ELTeC.</p>
+</div>
+<div id="language-issue-2" class="slide section level1">
+<h1>Language issue</h1>
+<p>Option 2 is more realistic.</p>
+<p>Problems:</p>
+<ul>
+<li>ELTeC-SPA will include several languages</li>
+<li>The amount of novels in each period will not be balanced: there will be more novels in the last period.</li>
+</ul>
+<p>Is it a problem for the global ELTeC corpus?</p>
+</div>
+<div id="level-2-annotation" class="slide section level1">
+<h1>Level 2 annotation</h1>
+<p>Fully automatic annotation process (SpaCy?) during 2021.</p>
+<p>We will try to review the annotation of some fragments.</p>
+</div>
+<div id="conclusions" class="slide section level1">
+<h1>Conclusions</h1>
+<p>In 2021:</p>
+<ul>
+<li>Up to 90 novels for ELTeC-SPA at level 1.</li>
+<li>Automatic annotation of level 2.</li>
+<li>Novels in CAT, EUS, GLG at level 1.</li>
+</ul>
+<p>For further developments of the ELTeC (Future work):</p>
+<ul>
+<li>the development of ELTeC-CAT, ELTeC-EUS and ELTeC-GLG as far as possible.</li>
+<li>validate (manually) the annotation at level 2, including the annotation of characters or perhaps time expressions.</li>
+</ul>
+</div>
+</body>
+</html>
