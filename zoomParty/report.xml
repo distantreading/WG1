@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+ <teiHeader>
+  <fileDesc>
+   <titleStmt>
+    <title>Building the ELTeC : a progress report</title>
+    <author>Lou Burnard for WG1</author>
+   </titleStmt>
+
+   <publicationStmt>
+    <p>Discussion draft</p>
+   </publicationStmt>
+   <sourceDesc>
+    <p>Born digital</p>
+   </sourceDesc>
+  </fileDesc>
+  
+  <revisionDesc>
+   <listChange>
+    <change><date>2021-01-08T12:25:21Z</date> <name>LB</name>Tidy up header</change>
+   </listChange>
+  </revisionDesc>
+ </teiHeader>
+ <text>
+
+  <body>
+   <div xml:id="SECTION_1001">
+    <head>Introduction</head>
+    <p>Four years into a five-year COST Action seems a good point to attempt a little retrospective evaluation. By this stage in the Action’s history, contributors had made good progress towards the stated goal of creating a unique European Literary Text Collection, following specific design and selection criteria agreed upon by a broad community of European researchers. By this time also, a reasonably stable method of evaluating the balance of a given collection with respect to those design criteria had been developed and agreed upon (see further <ref target="https://github.com/distantreading/WG1/wiki/E5C-discussion-paper">https://github.com/distantreading/WG1/wiki/E5C-discussion-paper</ref>). The first major Zenodo release (1.0) for the whole ELTeC was also in active preparation, and took place in January 2021.</p>
+    <p>As of December 2020, 15 of the ELTeC’s 18 individual language collections had already exceeded the goal of 50 texts and achieved a conformance scores of over 70, while 12 of them had 75 or more texts and a score in excess of 75. A certain amount of self-congratulation might reasonably be in order. However, the leaders of Work Group 1 wished to go beyond that by facilitating a broader discussion around the accumulated experience of all the collection builders, not simply the “successful” ones. Such a discussion might seek to explain why in some cases the stated design criteria could not be achieved, possibly leading to a reappraisal of the assumptions about a common European literary culture underlying the whole project. Discussion of the practical lessons learned in this first phase would also, obviously, facilitate further development of the ELTeC and similarly constructed corpora.</p>
+    <p>Late 2020 was not a very propitious time in which to organise an international discussion meeting. However, although the ability to meet and discuss research priorities and methodologies informally over shared meals and at social gatherings was no longer available to us, we could take advantage of distanced conference facilities to review progress collectively, using a semi formal virtual meeting format in which each participant presented their experience according to a predefined template, addressing the following questions:</p>
+    <list>
+     <item>How was the project organized?</item>
+     <item>What is the current state of the collection ?</item>
+     <item>How were texts selected? </item>
+     <item>How did you learn TEI ?</item>
+     <item>How were the texts processed?</item>
+     <item>What problems did you encounter?</item>
+     <item>What future plans do you have for the collection</item>
+    </list>
+    <p>The present document attempts to summarize responses to these questions provided by participants in the online event on December 8<hi rend="superscript">th</hi> 2020. Many thanks are due to all the participants. We list here those who reported at the online discussion: </p>
+    <p>Michal Kren (CZE), Fotis Jannidis (DEU), Lou Burnard (ENG), Christof Schoech (FRA), Anna-Maria Sichani (GRE), Gabor Palko (HUN), Vincas Grigas (LIT), Michael Preminger (NOR), Joanna Byszuk(POL), Diana Santos (POR), Iona Lionte (ROM), Tomaz Erjavec (SLV), Borja Navarro Colorado (SPA), Cvetana Krstev (SRP), Dmytro Yesypenko (UKR). </p>
+    <p>The author is responsible – and apologizes in advance – for any inadvertently introduced misrepresentation of their reports. The original slides are also available in the WG1 repository at <ref target="https://github.com/distantreading/WG1/tree/master/zoomParty/slides">https://github.com/distantreading/WG1/tree/master/zoomParty/slides</ref> </p>
+   </div>
+   <div xml:id="SECTION_1002">
+    <head>Organizational issues</head>
+    <p>As with other COST actions, funding for the creation of new resources such as the ELTeC is not provided by the Action itself. Consequently each ELTeC corpus is the result of unpaid or subsidised work carried out by many different people, usually on a purely voluntary basis. In some cases (CZE, GRE, SLV, SWE, ROM) the work was carried out in close collaboration with nationally funded agencies, such as libraries or Institutes of Linguistics whose staff managed the project or supplied "volunteer" labour in the form of student helpers or technical advice. In others (DEU, FRA, LIT, NOR, POL, POR, UKR), management of the project was undertaken by senior researchers, usually though not always (ENG) with university affiliations. In some cases (HUN, ROM, SPA, SRP for example) the work was framed within the context of a masters degree in digital humanities, but in most cases the project was managed "for love" by a small group of enthusiasts, in many cases a single person, co-ordinating
+     and organizing work carried out by a larger group of collaborators, in the context of the Action’s Work Group 1. For further details of the many agencies and individuals involved in realising each project, please refer to the individual presentations cited above, and to the list of collaborators on the project website (https://www.distant-reading.net/wg-1/). </p>
+   </div>
+   <div xml:id="SECTION_1003">
+    <head>Current state</head>
+    <p>At the time of the conference, ten repositories (DEU, ENG, FRA, HUN, POL, POR, ROM, SLV, SPA and SRP) were already able to report conformance scores of 70 or above. The web page http://distantreading.github.io/ELTeC/ shows the current state of affairs in more detail for all current language collections. Of those with lower scores, NOR and UKR were actively engaged in building up their holdings after a late start but were optimistic that this would be achieved by the time of the next release. CZE, GRE, and LIT all reported difficulties in finding enough titles with the right characteristics to achieve a balance. In the case of LIT, it is known that no suitable titles exist because use of the Lithuanian language was forbidden for most of the period covered by ELTeC. In the case of GRE, no suitable texts were available in digital form, necessitating a lengthy OCR development process. In other cases (for example SLV , SRP or POR) it seems that particular categories of novel (usually
+     those with female authors, or of a specific length) are disproportionately absent from available catalogues or collections. In most cases, it remains a subject for future research to determine whether this disparity is a reflection of the actual available population or a consequence of collection bias. </p>
+    <p>All repositories are encoded to level 1, except for DEU (level 0 only) and ENG (which has 12 texts at level 0). So far only SLV has texts encoded to level 2. </p>
+   </div>
+   <div xml:id="SECTION_1004">
+    <head>Text selection</head>
+    <p>In most -- though not quite all -- cases, ELTeC texts were made by repurposing and reprocessing existing digital texts provided by national libraries, national language corpora, private or commercial ebook collections and similar. For some European languages, the number of available pre-existing digital versions is immense, and the problem for our corpus constructors was essentially one of selecting appropriate titles from a very large list of candidates. Even so, this could be a challenging task, since information about author gender, or even whether or not a title was considered a novel, is not readily available from traditional library catalogue resources. In some cases, for example Romanian and Serbian, this preliminary bibliographic effort constituted ground-breaking research in itself; other traditions (for example French, English, German) were able to benefit from well established bibliographic databases. </p>
+    <p>As regards the source from which texts, once identified, were taken, many collections followed the two stage approach adopted by the French and English collections, first producing a base collection of "low hanging fruit" from well-established public domain collections such as Project Gutenberg (for English) or Ebooks Libres et Gratuits (for French), and then using trial and error to build up a better balanced selection with titles taken from other smaller or more focussed collections, with rejected titles being transferred to an "extension" collection. By contrast, for German and Hungarian, sufficent titles were identified within a single large pre-existing language collection (TextGrid for German; MEK for Hungarian), but this approach was ineffective in cases such as Lithuanian where even the national repository (www.epaveldas.lt) could not provide enough titles as previously noted, or in cases where the selected source was less complete than expected (such as the Norwegian
+     Bokselskapet portal). </p>
+    <p>In most cases, building a balanced collection implied searching across multiple sources to locate and process previously identified candidate texts. A typical example is the Portugese collection, which took texts from four main sources (www.luso-livros.net 12; www.gutenberg.org 32; purl.pt 16; archive.org 31) as well as a further 11 titles from 9 other sources, or the Slovenian collection, in which the 65 texts taken from the IMP corpus were complemented by a further 29 titles from the Wikisource project "Slovene Literary Classics" and by 5 further titles created specifically for ELTeC. Similarly, the Spanish collection combines resources from the University of Alicante's Miguel de Cervantes Virtual Library (52 titles); the Spanish National Library's Hispanic Digital Library (8 titles); the University of Wuerzburg's Corpus of Novels of the Spanish Silver Age (CoNSSA) project (31 titles) and a few others, including the ubiquitous Project Gutenberg. The absence of any single
+     reliable source is particularly remarkable for UKR, the most recently launched collection which already takes titles from 8 different sources, including private initiatives such as Chtyvo (https://chtyvo.org.ua/help/biblioteka/pro-nas) or Izbornyk (http://litopys.org.ua/)</p>
+   </div>
+   <div xml:id="SECTION_1005">
+    <head>Taming the TEI tiger</head>
+    <p>The ELTeC is a TEI application, if a very simple one, and as such requires a degree of technical knowledge, concerning for example usage of a schema as well as the basic syntax of XML. Most of the participants had prior knowledge of TEI, in some cases dating back a long time (ENG, DEU, FRA, SRP). Others had gained awareness from a specific ELTeC training session or a general DH introductory course. Those who had had to start from scratch (e.g. LIT, GRE) did not report any major problems in finding introductory materials on the web. Some specific sources of information cited include : </p>
+    <list type="unordered">
+     <item><ref target="https://distantreading.github.io/Training/Budapest/">ELTeC Training Schools</ref> in Budapest and Wuerzburg (FRA, POL, ROM, UKR)</item>
+     <item><ref target="https://teach.dariah.eu/course/view.php?id=40">DARIAH training materials</ref> (HUN, SLV)</item>
+     <item><ref target="https://teibyexample.org">TEI By Example</ref> (UKR) </item>
+    </list>
+    <p>The need for language-specific training materials for students was noted. Some participants (HUN, ROM, SLV) had made their own translations or cheat sheets for this purpose. </p>
+   </div>
+   <div>
+    <head xml:id="SECTION_1006">Text processing</head>
+    <p>Participants used a variety of approaches to the processing of source texts into ELTeC-XML, and quite a few different tools. There was broad agreement on the steps needed, with some variation around the extent to which conversions were automated, depending partly on whether the texts processed started life as plain text output from OCR or as marked up texts of some kind. Some projects (e.g. DEU, ENG, FRA, SLV) produced workflows in which specially written scripts in languages such as XSLT, Python, or perl did most of the heavy lifting of converting or inserting markup. This worked best where the source material was consistently encoded in a rich format that could be mapped readily to the requirements of ELTeC-XML, and where large numbers of texts were available in that format. In almost all cases, however, some degree of manual intervention was necessary to add (for example) minimal structural tagging, as well as to complete the TEI Header. </p>
+    <p>Conversion and scripting tools specifically mentioned by at least one participant : ABBYY Fine Reader (5), atom (3), Beautiful Soup, Calibre, docxtotei, jedit, jing, Notepad++ (2), oxGarage, oXygen (7), Pandoc, Perl (2), Python (3), Sublime Text Editor, TXM, Unitex, XSLT (3), xmllint. </p>
+   </div>
+   <div xml:id="SECTION_1007">
+    <head>Challenges</head>
+    <list type="unordered">
+     <item>The lack of available texts of the right kind was a major issue for many collections. Where digitized collections existed, they frequently lacked non-canonical works, or works by women, or from specific time periods. In some cases, the quality of digitization was so poor it was found easier to start from scratch, by applying OCR to digital facsimiles, where these could be found, or even digitizing the original source texts again. </item>
+     <item>Where digital texts were plentiful, it was sometimes difficult to make a principled choice (ENG), to handle variation in encoding practice (FRA), or to normalize them consistently (DEU). </item>
+     <item>Changes in the ELTeC schema during the lifetime of the project caused problems for some collections (HUN, POL) </item>
+     <item>The need to work in close collaboration with other researchers, in particular with metadata specialists, was not fully appreciated at first (NOR, ROM)</item>
+     <item>The "learning curve" associated with mastering TEI XML was steeper than anticipated for some participants</item>
+    </list>
+   </div>
+   <div xml:id="SECTION_1008">
+    <head>Future perspectives</head>
+    <p>Naturally enough, some collections with low E5C scores (CZE, GRE, NOR) reported that they would be prioritizing production of more texts during the last year of the Action. In most places, a functioning workflow was now well established, with clear procedures and sources of assistance such as student helpers. It was also clear that several collections which had already reached the required size would soon be further complemented by extension corpora going beyond the original specification in size or scope (FRA, HUN, SLV, SRP). Somewhat surprisingly only four (HUN, POR, SPA, SRP) specifically indicated an intention to add level 2 tagging in the near future. </p>
+    <p>Some (SPA, POR, UKR) wished to re-visit some ELTeC design decisions concerning language and authorial nationality. Certainly it would be desirable to see Galician, Basque, or Catalan collections complementing the existing Spanish collection, just as it would be good to see Swiss-German and Swiss-French collections. The decision to exclude American writers from the English corpus, French Canadian writers from the French corpus, or Brazilian Portuguese writers from the Portugese corpus, while consistent, problematizes any attempt to assess for example colonial or diaspora experiences as reflected in the 19th century novel. During this period also the cultural tradition with which an author is associated is not always identical to that of the language in which they wrote: Kafka's uniquely Czech experience is written in German; Taras Shevchenko's Ukranian roots are expressed in Russian. </p>
+    <p>A wide ranging final discussion touched on these and several further points. Desiderata for future work ranged from simple tasks like improved documentation, in particular an overview of available training material, to information about available OCR and metadata handling tools. It was noted that individual collection editors were best placed to select and evaluate available linguistic annotation tools before creating level2 texts. The CLARIN Impact Knowledge Centre at <ref target="https://www.clarin.eu/news/impact-clarin-k-centre-digitisation-impact-ckc">https://www.clarin.eu/news/impact-clarin-k-centre-digitisation-impact-ckc</ref> was cited as a source of useful information and possibly also of funding. A need for better co-ordination and co-operation between the separate workgroups of the COST action was identified. </p>
+    <p>In conclusion, it also seems appropriate to ask why building the ELTeC has been such an appealing task for so many contributors across Europe. The role of ELTeC as an exemplary project for courses exploring the Digital Humanities, as a useful primary source, or as an enabler of traditional historical, literary, and linguistic studies were all mentioned. But perhaps the most persuasive and simplest answer was from the Serbian team: "Why all this work? Because I love novels... and also, this will be a unique corpus..." </p>
+   </div>
+  </body>
+ </text>
+</TEI>
