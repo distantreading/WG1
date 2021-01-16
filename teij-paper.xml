@@ -41,30 +41,30 @@
       <front>
          <div type="abstract">
             <head>Abstract</head>
-            <p>Any expansion of the TEI beyond its traditional user-base involves a recognition of
+            <p>Any expansion of the TEI beyond its traditional user-base involves a recognition that there are many
                differing answers to the traditional question <q>What is text, really?</q> [<ref
                   target="#B06">de Rose et al 2002</ref>; <ref target="#B05">Caton 2013</ref>; <ref
-                  target="#B10">van Zundert and Andrews, 2017</ref>], and hence a rethinking of some
-               aspects of TEI praxis. We report on work carried out in the context of the COST
+                  target="#B10">van Zundert and Andrews, 2017</ref>]<!--, and hence a rethinking of some
+               aspects of TEI praxis-->. We report on  some work carried out in the context of the COST
                Action "Distant Reading for European Literary History" (CA16204), in particular on the TEI-conformant schemas
-               developed for one of the Action's principal deliverables: the European Literary Text
+               developed for one of <!--the Action's--> its principal deliverables: the European Literary Text
                Collection (ELTeC). </p>
             <p>The ELTeC will contain comparable corpora for each of a dozen European languages,
-               each being a balanced sample of 100 novels from the 19th century, together with
-               metadata situating them in their contexts of production and of reception. We hope
+               each being a balanced sample of 100 novels from the period 1840 to 1920, together with
+               metadata <!--situating them in their contexts of--> concerning their production and reception. We hope
                that it will become a reliable basis for comparative work in data-driven textual
-               analytics, enabling researchers to go beyond a simple <soCalled>bag of
+               analytics. <!--, enabling researchers to go beyond a simple <soCalled>bag of
                   words</soCalled> approach, while respecting views of "what text really is"
                currently dominant in such fields as statistically-derived authorship attribution,
-               topic modelling, character network analysis, and stylistic analysis in general. </p>
+               topic modelling, character network analysis, and stylistic analysis in general-->. </p>
             <p>The focus of the ELTeC encoding scheme is not to represent texts in all their
                original complexity, nor to duplicate the work of scholarly editors. Instead, we aim
                to facilitate a richer and better-informed distant reading than a transcription of
-               lexical content alone would permit. Where the TEI permits diversity, we enforce
-               consistency, by defining encodings which permit only a specific and quite small set
-               of textual features, both structural and lexical. We also define a single
+               lexical content alone would permit. At the same time, where the TEI encourages diversity, we enforce
+               consistency, by <!--defining encodings which--> permitting representation of only a specific and quite small set
+               of textual features, both structural and  analytical. <!--lexical. We also define a single
                TEI-conformant way of representing the results of textual analyses such as named
-               entity recognition or morphological parsing, and a specific set of metadata features.
+               entity recognition or morphological parsing, and a specific set of metadata features.-->
                These constraints are expressed by a master TEI ODD, from which we derive three
                different schemas by ODD-chaining, each associated with appropriate documentation.
             </p>
@@ -149,7 +149,7 @@
                         >https://www.distant-reading.net</ref></p></note> This is a set of
 
                comparable corpora for each of at least a dozen European languages, each corpus
-               being a balanced selection of 100 novels from the 19th century, together with
+               being a balanced selection of 100 novels from the period 1840 to 1920, together with
                metadata situating them in their contexts of production and of reception. It is hoped
                that the ELTeC will become a reliable basis for comparative work in cross-linguistic
                data-driven textual analytics, eventually providing an accessible benchmark for a
@@ -160,14 +160,14 @@
                a TEI-encoded format, using a schema developed specifically for the project.
                Secondly, the design of that encoding scheme, in particular the textual features it
                makes explicit by means of markup, should be defined as far as possible by the needs
-               of the distant reading research community, rather than any pre-existing notion of
-               textual ontology, to the extent that the needs of that community could be determined.
+               of the distant reading research community, rather than by any pre-existing notions about the nature of literary texts
+              <!-- textual ontology, --> to the extent that the needs of that community could be determined.
                The target audience envisaged includes experts in computational stylistics, in corpus
                linguistics, in computational literary studies and in traditional literary studies as well as more general digital
                humanists, but is probably best characterized as having major enthusiasm and
                expertise in the application of statistical methods to literary and linguistic
-               analysis, and only minor interest in the kinds of textual features most TEI projects
-               have tended to focus on. </p>
+               analysis, and only minor interest in the kinds of textual features on which most TEI projects
+               have tended to focus. </p>
             <p>The work of the Action <note place="foot">Further information about the Action is
                   available from its website at <ref target="https://www.distant-reading.net"
                      >https://www.distant-reading.net</ref>. For information about the organisation
@@ -223,8 +223,8 @@
                of doing more or less the same thing. TEI encoders have frequently taken full
                advantage of that to produce texts which vary enormously, both in the subset of XML
                tags used and in the range of attribute values associated with them. It is tempting,
-               but entirely mistaken, to assume that the allegedly TEI-conformant deliverables from
-               project A will necessarily be marked up in the same way as the allegedly
+               but entirely mistaken, to assume that the <!--allegedly--> TEI-conformant deliverables from
+               project A will necessarily be marked up in the same way as the <!--allegedly-->
                TEI-conformant deliverables from project B <note place="foot">A large-scale project
                   called MONK (Metadata Offer New Knowledge) demonstrated some of the technical
                   consequences of this for integrated searching of TEI resources: see further <ref
@@ -354,13 +354,14 @@
                based on orthographic form. This provides a convenient extension of the existing
                text-body-div hierarchy within which tokens are located. </p>
             <p>The elements <gi>p</gi>, <gi>head</gi>, and <gi>l</gi> (which contain just text at
-               levels 0 and 1) at level 2 can contain a sequence of <gi>s</gi> elements. Empty
-               elements <gi>gap</gi>, <gi>milestone</gi>, <gi>pb</gi> or <gi>ref</gi> are also
+               levels 0 and 1) at level 2 can contain a sequence of <gi>s</gi> elements. Elements 
+             <gi>gap</gi>, <gi>milestone</gi>, <gi>pb</gi>, and <gi>ref</gi> are also
                permitted within text content at any point, but these are disregarded when
-               segmentation is carried out. Each <gi>s</gi> element can contain a sequence of
+               segmentation is carried out. To facilitate this, any content within a <gi>ref</gi> element is discarded at level 2. 
+             Each <gi>s</gi> element can contain a sequence of
                   <gi>w</gi> elements, either directly, or wrapped in one of the sub-paragraph
                elements <gi>corr</gi>, <gi>emph</gi>, <gi>foreign</gi>, <gi>hi</gi>, <gi>label</gi>,
-                  <gi>title</gi>. To this list we might add the element <gi>rs</gi> (referring
+                  <gi>title</gi>. To this list we add the element <gi>rs</gi> (referring
                string), provided by the TEI for the encoding of any form of entity name, such as a
                Named Entity Recognition procedure might produce. </p>
             <p> This approach implies that <gi>w</gi> elements may appear at two levels in the
@@ -545,14 +546,14 @@
                coded values also make it easy to monitor the emerging composition of the corpus, for
                example to detect whether or not the ratio of male to female writers is consistent
                across different time periods, by means of a simple visualisation like the following <figure>
-                  <graphic url="https://distantreading.github.io/ELTeC/eng/mosaic.jpg"/>
+                  <graphic url="https://distantreading.github.io/ELTeC/eng/mosaic.svg"/>
                </figure></p>
             <p>This <soCalled>mosaic plot</soCalled> for the current state of the English corpus (91
                texts) shows that there are roughly as many female (blue) as male (pink) writers
                across the board, but that there is a preponderance of long texts and of titles
                published in time slot 3. </p>
             <p><figure>
-                  <graphic url="https://distantreading.github.io/ELTeC/hun/mosaic.jpg"/>
+                  <graphic url="https://distantreading.github.io/ELTeC/hun/mosaic.svg"/>
                </figure></p>
             <p>For comparison, the same plot for the current state of the Hungarian corpus (100
                texts) shows significantly fewer female writers, and a higher proportion of short
