@@ -473,11 +473,10 @@
      construction phase, these coded values also make it easy to monitor the emerging composition of the
      corpus, for example to detect whether or not the ratio of male to female writers is consistent across
      different time periods, by means of a simple visualisation like the following :</p>
-    <figure>
-
+  <p>  <figure>
      <graphic url="https://distantreading.github.io/ELTeC/eng/mosaic.svg" width="400px" height="450px"/>
      <head type="legend">ELTeC-eng Balance</head>
-    </figure>
+    </figure></p>
     <p>This <soCalled>mosaic plot</soCalled> for the current state of the English corpus (100 texts) shows
      that there are roughly as many female (blue) as male (pink) writers across the board, but that there is a
      preponderance of long texts and of titles published in time slot 3. </p>
