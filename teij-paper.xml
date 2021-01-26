@@ -133,7 +133,7 @@
      mutual respect for the widely differing scientific, cultural, and linguistic traditions characterising
      this cross-European and cross-disciplinary project, that is, by acknowledging a comity of methods as well
      as languages.</p>
-    <p>Our approach focuses on using the TEI predominantly as an format for exchange and as a starting point
+    <p>Our approach focuses on using the TEI predominantly as a format for exchange and as a starting point
      for further transformation, conversion and enrichment processes that might result in different formats.
     </p>
    </div>
@@ -142,7 +142,7 @@
     <p>The context for this work is the EU-funded COST Action <title>Distant Reading for European Literary
      History</title> (CA 16204), a principal deliverable of which will be the European Literary Text
      Collection (ELTeC).<note>
-     <p><ref target="https://www.distant-reading.net">https://www.distant-reading.net</ref></p></note> This is
+     <p>This project is a COST Action funded by the Horizon 2020 Framework Programme of the EU. See:<ref target="https://www.distant-reading.net">https://www.distant-reading.net</ref>.</p></note> This is
      a set of comparable corpora for each of at least a dozen European languages, each corpus being a balanced
      selection of 100 novels from the period 1840 to 1920, together with metadata situating them in their
      contexts of production and of reception. It is hoped that the ELTeC will become a reliable basis for
@@ -159,7 +159,9 @@
      linguistics, in computational literary studies and in traditional literary studies as well as more
      general digital humanists, but is probably best characterized as having major enthusiasm and expertise in
      the application of statistical methods to literary and linguistic analysis, and only minor interest in
-     the kinds of textual features on which most TEI projects have tended to focus. <note>
+     the kinds of textual features on which most TEI projects have tended to focus. In various scenarios, however, 
+     these scholars do benefit from explicit markup of textual phenomena such as chapter boundaries, quotations, 
+     notes, front and back matter, or foreign words and phrases. <note>
      <p>There is no authoritative single list of TEI projects, though the TEI Consortium website has for many
      years offered a platform for one at <ref target="https://tei-c.org/activities/projects/"/>. More
      recently, the TEIhub project at <ref target="https://teihub.netlify.app"/> lists more than 12,500
