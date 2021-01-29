@@ -34,7 +34,8 @@
    </textClass>
   </profileDesc>
   <revisionDesc>
-   <change when="2021-01-17" who="#LB">Changes from reviewers; conform to teiJ schema</change>
+   <change when="2021-01-29" who="#LB">Changes from CO and CS included for resubmission</change>
+   <change when="2021-01-17" who="#LB">Changes for reviewers; conform to teiJ schema</change>
    <change when="2020-02-26" who="#CS">Some minor corrections.</change>
    <change when="2019-07-22" who="#CO">some corrections including references, some revision.</change>
    <change when="2019-07-22" who="#LB42">submitted</change>
@@ -49,10 +50,10 @@
    <div type="abstract">
     <head>Abstract</head>
     <p>Any expansion of the TEI beyond its traditional user-base involves a recognition that there are many
-     differing answers to the traditional question <q>What is text, really?</q>, first posed by de Rose and
+     differing answers to the traditional question <q>What is text, really?</q><!--, first posed by de Rose and
      others in 2002 [<ref type="bibl" target="#B06">de Rose et al 2002</ref>; <ref type="bibl" target="#B05"
      >Caton 2013</ref>; <ref type="bibl" target="#B10">van Zundert and Andrews,
-     2017</ref>]<!--, and hence a rethinking of some
+     2017</ref>]--><!--, and hence a rethinking of some
                aspects of TEI praxis-->. We report on
      some work carried out in the context of the COST Action <title>Distant Reading for European Literary
      History</title> (CA16204), in particular on the TEI-conformant schemas developed for one of
@@ -83,8 +84,8 @@
     <p>Christof Schöch is Professor of Digital Humanities at Trier University, Germany, and Co-Director of the
      Trier Centre for Digital Humanities (TCDH). He chairs the COST Action <q>Distant Reading for European
      Literary History</q> (CA16204). </p>
-    <p>Carolin Odebrecht is a corpus linguist at Humboldt-Universität zu Berlin. Her research fields are
-     modelling, creating, archiving of historical corpora and corpus metadata. She is the lead of Working
+    <p>Carolin Odebrecht is a corpus linguist at Humboldt-Universität zu Berlin. Her research fields include
+     modelling, creating, and archiving of historical corpora and corpus metadata as well as repository software development. She is the lead for Working
      Group 1 Scholarly resources in CA16204.</p>
    </div>
   </front>
@@ -94,7 +95,7 @@
     <p>Comity is a term from theology or political studies, where it is used to describe the formal
      recognition by different religions, nation states, or cultures that other such entities have as much
      right to existence as themselves. In applied linguistics, the term has also been used by such writers as
-     Widdowson or Aston [<ref type="bibl" target="#B01">Aston 1988</ref>] seeking to demonstrate how the
+     Widdowson[<ref type="bibl" target="#B11">Widdowson 1990</ref>] or Aston [<ref type="bibl" target="#B01">Aston 1988</ref>] seeking to demonstrate how the
      establishment of comity can facilitate successful inter-cultural communication, even in the absence of
      linguistic competence. <note><q>Those participating in conversational encounters have to have a care for
      the preservation of good relations by promoting the other&#x2019;s positive self-image, by avoiding
@@ -113,9 +114,13 @@
      editors alike conscientiously attempted to ensure that the Guidelines should reflect a view of text which
      was generally shared and generic, rather than specific to any discipline or to any particular usage
      model. </p>
-    <p>The TEI&#x2019;s radical proposition that there was such a thing as a single abstract model of textual
+    <p>The TEI necessarily attempted to address the question <q>What is text, really?</q>, first posed by de Rose and
+     others in 2002 [<ref type="bibl" target="#B06">de Rose et al 2002</ref>; see also <ref type="bibl" target="#B05"
+     >Caton 2013</ref>; <ref type="bibl" target="#B10">van Zundert and Andrews,
+     2017</ref>]. But in so doing it advanced the radical proposition that there may be
+     such a thing as a single abstract model of textual
      components, which might usefully be considered independently of its expression in a particular source or
-     output, or its use in any particular discipline, was necessarily at odds with at least two prevailing
+     output, or its use in any particular discipline. This suggestion was necessarily at odds with at least two prevailing
      orthodoxies: on the one hand, the view that a text is no less and no more than the physical documents
      which instantiate it, and can be adequately described and represented by its salient visual properties
      alone; on the other hand, the view that a text is solely a linguistic phenomenon, comprising a bag of
@@ -197,7 +202,7 @@
      Distant Reading methods cover a wide range of computational approaches to literary text analysis, such as
      authorship attribution, topic modelling, character network analysis, or stylistic analysis but they are
      rarely concerned with editorial matters such as textual variation, the establishment of an authoritative
-     text, or production of print or online versions of a text. Consequently, the ELTeC encoding scheme was
+     text, or production of print or online versions of a text. Consequently, <ref target="https://github.com/COST-ELTeC/Schemas">the ELTeC encoding scheme</ref> was
      deliberately not intended to represent source documents in all their original complexity of structure or
      appearance, but rather to make it as simple as possible to access the words of which texts are composed
      in an informed and predictable way. The goal was neither to duplicate the work of scholarly editors nor
@@ -318,7 +323,8 @@
      respectively. Individual tokens are marked using the <gi>w</gi> element, and decorated with one or more
      of the TEI-defined linguistic attributes <att>pos</att>, <att>lemma</att>, and <att>join</att>. Both
      words and punctuation marks are considered to be <soCalled>tokens</soCalled> in this sense, although the
-     TEI recommends distinguishing the two cases using <gi>w</gi> and <gi>pc</gi> respectively. The <gi>s</gi>
+     TEI recommends distinguishing the two cases using <gi>w</gi> and <gi>pc</gi> respectively.  On this occasion, 
+     we have preferred a reduction in the number of choices for the encoder to a strict adherence to TEI semantics. The <gi>s</gi>
      (segment) element is used to provide an end-to-end tessellating segmentation of the whole sequence of
      <gi>w</gi> elements, based on orthographic form. This provides a convenient extension of the existing
      text-body-div hierarchy within which tokens are located. </p>
@@ -342,12 +348,6 @@
      generate) the XML markup discussed here from such tabular formats without loss of information are
      envisaged. At the time of writing, however, Working Group 2 has yet to put this proposed architecture to
      the test. </p>
-    <!-- examples -->
-    <!--
-            <s><w>Here</w><w join="left">&#x2019;s</w><w>a</w><emph><w>really</w><w>silly</w></emph><w>example</w><w join="left">.</w></s>
-           might become without loss of information
-              <s><w>Here</w><w join="left">&#x2019;s</w><w>a</w><w context="emph">really</w><w context="emph">silly</w><w>example</w><w join="left">.</w></s>
-       -->
    </div>
    <div>
     <head>ELTeC metadata and corpus design</head>
@@ -389,8 +389,9 @@
      corpus. Its composition is determined not by the happenstance of whatever we can get our hands on, but is
      instead defensible, at least in theory, as a principled and representative selection.</p>
     <p>The big question is, of course, representative of <hi>what</hi>.</p>
-    <p>It would be nice to say that it represents the production of novels in a specific language in 19th
-     century Europe. WG1 has working definitions for both <term>novels</term> and <term>Europe</term> which we
+    <p>It would be nice to say that it represents the production of novels in a specific language during a specified 
+     historical period (1840 - 1920) throughout Europe. 
+     WG1 has working definitions for both <term>novels</term> and <term>Europe</term> which we
      do not discuss further here, though both are clearly problematic terms. It is hoped that the ELTeC will
      provide data for an empirical discussion of such terms, feeding into the work of WG3 on literary theory
      and terminology. </p>
@@ -479,8 +480,7 @@
      <graphic url="https://distantreading.github.io/ELTeC/eng/mosaic.svg" width="400px" height="450px"/>
      <head type="legend">ELTeC-eng Balance</head>
     </figure></p>
-    <p>This <soCalled>mosaic plot</soCalled> for the current state of the English corpus (100 texts) shows
-     that there are roughly as many female (blue) as male (pink) writers across the board, but that there is a
+    <p>The columns of this <soCalled>mosaic plot</soCalled> the proportion of long, medium, and short novels, while the rows show the proportion of novels from each time slot, and the colour shows the proportion of male/female authors. In this representation of the current state of the English corpus (100 texts)  there are roughly as many female (blue) as male (pink) writers across the board, but that there is a
      preponderance of long texts and of titles published in time slot 3. </p>
     <p><figure>
      <graphic url="https://distantreading.github.io/ELTeC/hun/mosaic.svg" width="400px" height="450px"/>
@@ -526,24 +526,23 @@
      while at the same time respecting three different views of the resulting encoding standard. As with other
      ODDs, we are then able to produce documentation and formal schemas which reflect exactly the scope of
      each encoding level. </p>
-    <p> The ODD sources and their outputs are maintained on GitHub and are also being published on Zenodo
-     along with the ELTeC texts. <note>The GitHub repository for the ELTeC collection is found at
+    <p> The ODD sources and their outputs are maintained on GitHub and are also <ref target="http://doi.org/10.5281/zenodo.3546326">published on Zenodo</ref>
+     along with the ELTeC corpora <note>The GitHub repository for the ELTeC collection is found at
      https://github.com/COST-ELTeC/ : the Zenodo community within which it is being published lives at: <ref
-     target="https://zenodo.org/communities/eltec/">https://zenodo.org/communities/eltec</ref>, </note> </p>
+     target="https://zenodo.org/communities/eltec/">https://zenodo.org/communities/eltec</ref>. </note> </p>
    </div>
    <div>
     <head>State of play and future work</head>
     <p>The ELTeC is still very much a work in progress and hence we cannot report with any plausibility that
-     our design goals have been achieved. An initial release (v0.5.0) of the collection was published on
-     Zenodo in November 2019, and a first major release at the end of 2020. We expect several future releases
+     our design goals have been achieved. An initial release  of the collection was published on
+     Zenodo in November 2019 <ref type="bibl" target="#eltec2019">[Odebrecht et al, 2019]</ref>, with a first major 1.0 release at the end of 2020. We expect several future releases
      over the next year, as more language collections reach the target of 100 titles. As of this writing,
      seven collections (English, French, German, Hungarian, Polish, Portuguese, and Slovenian) have already
      achieved this goal, and a further five (Norwegian, Romanian, Serbian, Spanish, and Swedish) are over half
      way there. A further four collections (Czech, Greek, Lithuanian, and Ukrainian) are currently under
-     active development and are expected to become available during the coming year. Up to date information
+     active development and are expected to become available during the coming year. As noted above, up to date information
      about the current state of all corpora is publicly visible at <ref
-     target="http://distantreading.github.io/ELTeC/">https://distantreading.github.io/ELTeC/</ref> as noted
-     above, which includes links to the individual github repositories for each corpus. </p>
+     target="http://distantreading.github.io/ELTeC/">https://distantreading.github.io/ELTeC/</ref>, which includes links to the individual github repositories for each corpus. </p>
     <p>As well as continuing to expand the collection, and continuing to fine-tune its composition, we hope to
      improve the consistency and reliability of the metadata associated with each text, as far as possible
      automatically. For example, we have developed two complementary methods of automatically counting the
@@ -576,6 +575,9 @@
       Linguistic Computing 28.2, pp. 209–220. </bibl>
      <bibl xml:id="B06"> De Rose, Steven J., David G. Durand, Elli Mylonas, and Allen H. Renear (2002).
       <title>What is Text, Really?</title> In: Journal of Computing in Higher Education I(2), pp. 3–26. </bibl>
+     <bibl xml:id="eltec2019">
+       Odebrecht, Carolin et al. (2019). The European Literary Text Collection ELTeC. Zenodo. 
+       <ref target="http://doi.org/10.5281/zenodo.3546326">http://doi.org/10.5281/zenodo.3546326</ref></bibl>
      <bibl xml:id="B07">Gavin, Michael (2019) <title>How to think about EEBO</title>. In: Textual Cultures Vol
       11, no 1&#x2013;2 (2017). <ref target="https://doi.org/10.14434/textual.v11i1-2.23570"
       >https://doi.org/10.14434/textual.v11i1&#x2013;2.23570</ref> </bibl>
@@ -586,7 +588,7 @@
      <bibl xml:id="B12">Lüdeling, Anke (2011). <title>Corpora in Linguistics. Sampling and Annotation</title>.
       In: Going Digital. Evolutionary and Revolutionary Aspects of Digitization. Ed. by Karl Grandin. Vol.
       147. Nobel Symposium 147. New York:</bibl>
-     <bibl xml:id="B09">Rahtz, Sebastian, and Lou Burnard (2013) <title>Reviewing the TEI ODD System.</title>
+      <bibl xml:id="B09">Rahtz, Sebastian, and Lou Burnard (2013) <title>Reviewing the TEI ODD System.</title>
       In Proceedings of the 2013 ACM Symposium on Document Engineering. DocEng 13. ACM, 2013. <ref
       target="https://doi.acm.org/10.1145/2494266.2494321"
       >http://doi.acm.org/10.1145/2494266.2494321</ref><!--;  <ptr target="https://ora.ox.ac.uk/objects/pubs:434097"/>-->.</bibl>
