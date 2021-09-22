@@ -8,10 +8,18 @@
 <xsl:template match="/">
     <xsl:message>Found <xsl:value-of select="count(m:modsCollection/m:mods)"/> top level records</xsl:message>
     <listRecords>
-    <xsl:for-each select="m:modsCollection/m:mods">
-       <xsl:sort select="m:originInfo[@eventType='publisher']/m:dateIssued[1]"/>
-       <xsl:apply-templates select="."/>
-    </xsl:for-each>
+    <xsl:for-each select="m:modsCollection/m:mods[contains(m:typeOfResource,'text')]">
+        <xsl:for-each select="m:physicalDescription/m:form">
+        <xsl:if test="contains(.,'print')">
+            <xsl:value-of select="ancestor::m:mods/m:originInfo[@eventType='publisher']/m:dateIssued[1]"/>
+            <xsl:text>| </xsl:text>
+            <xsl:value-of select="normalize-space(ancestor::m:mods/m:originInfo[@eventType='publisher'])"/><xsl:text>        
+</xsl:text>
+            
+        </xsl:if>
+        </xsl:for-each>
+  <!--     <xsl:sort select="m:originInfo[@eventType='publisher']/m:dateIssued[1]"/>
+  -->  </xsl:for-each>
     </listRecords>
 </xsl:template>    
     
