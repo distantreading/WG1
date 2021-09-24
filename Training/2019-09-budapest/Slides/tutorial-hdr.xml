@@ -17,8 +17,8 @@
      <div type="slide">
          <p>This tutorial shows you how to create an ELTeC level zero file, and how to complete the
         metadata required by the TEI Header. </p>
-     <p>If you haven't done so already, download the working files for this tutorial,
-         unpack them into a folder somewhere on your machine, and then open the ELTeC.xpr project
+     <p>If you haven't done so already, download <ref target="work.zip">the working files for this tutorial</ref>,
+         unpack them into a folder somewhere on your machine, and then open the <ident>ELTeC.xpr</ident> project
          file in oXygen (choose Project->Open project from the menu, or hit CTRL-F2).
      </p>
      
