@@ -1,0 +1,3454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized version="20.0" xml:space="preserve">
+	<serializableOrderedMap>
+		<entry>
+			<String>scenarios</String>
+			<scenario-array>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>EN7968</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/EN/Scripts/fixDivs.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>ENG18490_Skene</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/ELTeC-eng/Scripts/proTextHdrGen.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>ENG1915</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/WG1/YAZ/selectImprints.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>HTMLusage</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/htmlTagsUsed.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>abbyy2tei</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/WG1/Training/2019-09-budapest/abbyy2tei.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>addHeader</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/EN/Scripts/headerGen.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>addszcodes</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/bookLists/Bassett/addszCodes.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<File>gutenTexts.xml</File>
+					</field>
+					<field name="outputResource">
+						<String>gutenTexts.xml</String>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>cligstoeltec</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/ELTeC-ita/Scripts/cligstoeltec.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>counters</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/Scripts/counter2.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="outputFile">
+						<File>tagcounts.html</File>
+					</field>
+					<field name="outputResource">
+						<String>tagcounts.html</String>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>dewikify</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/EN/Scripts/dewikify.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>expose</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/WG1/distantreading.github.io/Scripts/expose.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>foo</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Desktop/mods.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>guten</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/EN/Scripts/guten.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>gutenDivs</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/EN/Scripts/gutenDivs.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>gutenFix</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/ELTeC-eng/Scripts/gutenFix.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>headChecker</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/Scripts/headChecker.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>itatoeltec</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/ELTeC-ita/Scripts/itatoeltec.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>machen</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/EN/Scripts/machen.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>metaGen</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/Scripts/metadatagen.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="outputFile">
+						<File>metadata.csv</File>
+					</field>
+					<field name="outputResource">
+						<String>metadata.csv</String>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>odd2exodd</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/TEI/P5/Utilities/odd2exodd.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>odd2odd</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>${frameworkDir(TEI P5)}/xml/tei/stylesheet/odds/odd2odd.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<File>eltec-library.xml</File>
+					</field>
+					<field name="outputResource">
+						<String>eltec-library.xml</String>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list>
+							<transformationParameter>
+								<field name="paramDescription">
+									<paramDescriptor>
+										<field name="localName">
+											<String>defaultSource</String>
+										</field>
+										<field name="prefix">
+											<null/>
+										</field>
+										<field name="namespace">
+											<null/>
+										</field>
+									</paramDescriptor>
+								</field>
+								<field name="value">
+									<String>${frameworkDir(TEI P5)}/xml/tei/odd/p5subset.xml</String>
+								</field>
+								<field name="hasXPathValue">
+									<Boolean>false</Boolean>
+								</field>
+							</transformationParameter>
+						</list>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>odd2odd -2</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/Stylesheets/odds/odd2odd.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<File>eltec-library-2.xml</File>
+					</field>
+					<field name="outputResource">
+						<String>eltec-library-2.xml</String>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list>
+							<transformationParameter>
+								<field name="paramDescription">
+									<paramDescriptor>
+										<field name="localName">
+											<String>defaultSource</String>
+										</field>
+										<field name="prefix">
+											<null/>
+										</field>
+										<field name="namespace">
+											<null/>
+										</field>
+									</paramDescriptor>
+								</field>
+								<field name="value">
+									<String>/home/lou/Public/TEI/P5/p5subset.xml</String>
+								</field>
+								<field name="hasXPathValue">
+									<Boolean>false</Boolean>
+								</field>
+							</transformationParameter>
+							<transformationParameter>
+								<field name="paramDescription">
+									<paramDescriptor>
+										<field name="localName">
+											<String>suppressTEIexamples</String>
+										</field>
+										<field name="prefix">
+											<null/>
+										</field>
+										<field name="namespace">
+											<null/>
+										</field>
+									</paramDescriptor>
+								</field>
+								<field name="value">
+									<String>true</String>
+								</field>
+								<field name="hasXPathValue">
+									<Boolean>false</Boolean>
+								</field>
+							</transformationParameter>
+							<transformationParameter>
+								<field name="paramDescription">
+									<paramDescriptor>
+										<field name="localName">
+											<String>verbose</String>
+										</field>
+										<field name="prefix">
+											<null/>
+										</field>
+										<field name="namespace">
+											<null/>
+										</field>
+									</paramDescriptor>
+								</field>
+								<field name="value">
+									<String>true</String>
+								</field>
+								<field name="hasXPathValue">
+									<Boolean>false</Boolean>
+								</field>
+							</transformationParameter>
+						</list>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>odd2odd-2</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/Stylesheets/odds/odd2odd.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<File>eltec-library-2.xml</File>
+					</field>
+					<field name="outputResource">
+						<String>eltec-library-2.xml</String>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>poorJack</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/EN/Scripts/marryat.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>queryGen</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/WG1/YAZ/queryGenerator.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>reporter</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/Scripts/reporter.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>retag</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/DE/textgrid2eltec.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>sample</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/WG2/selector.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>sizeUp</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/bookLists/Bassett/addSizes.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>teiSlidy</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/TEIslides/Slidy/teislidy.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="outputFile">
+						<File>/home/lou/Public/WG1/distantreading.github.io/Training/Budapest/${cfn}.html</File>
+					</field>
+					<field name="outputResource">
+						<String>/home/lou/Public/WG1/distantreading.github.io/Training/Budapest/${cfn}.html</String>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-EE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>test</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/bookLists/Bassett/addSizes.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>textify</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/WG1/eltec2txt.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>thirtyNine</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/EN/Scripts/buchan2.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>thursday</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/EN/Scripts/thursday.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>verdant</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/EN/Scripts/verdant.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<null/>
+					</field>
+					<field name="outputResource">
+						<null/>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>vienna-programme</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/2018-09-vienna/vienna-programme.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<File>/home/lou/Public/2018-09-vienna/vienna-programme.xhtml</File>
+					</field>
+					<field name="outputResource">
+						<String>/home/lou/Public/2018-09-vienna/vienna-programme.xhtml</String>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>vwwpConv</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/CA16204/Samples/EN/Done/VWWP/vwwp2eltec.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<File>temp.xml</File>
+					</field>
+					<field name="outputResource">
+						<String>temp.xml</String>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>william</String>
+					</field>
+					<field name="baseURL">
+						<String></String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<String>pdf</String>
+					</field>
+					<field name="fOProcessorName">
+						<String>Apache FOP</String>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<String>file:/home/lou/Public/ELTeC-eng/Scripts/myGutenfix.xsl</String>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="outputFile">
+						<File>william.xml</File>
+					</field>
+					<field name="outputResource">
+						<String>william.xml</String>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<null/>
+					</field>
+					<field name="openInEditor">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+				<scenario>
+					<field name="advancedOptionsMap">
+						<null/>
+					</field>
+					<field name="name">
+						<String>xml-stylesheet processing instruction</String>
+					</field>
+					<field name="baseURL">
+						<String>file:/home/lou/Public/WG1/Training/2019-09-budapest/Work/Novels/ROM/Mara_1906.abbyy.xml</String>
+					</field>
+					<field name="footerURL">
+						<String></String>
+					</field>
+					<field name="fOPMethod">
+						<null/>
+					</field>
+					<field name="fOProcessorName">
+						<null/>
+					</field>
+					<field name="headerURL">
+						<String></String>
+					</field>
+					<field name="inputXSLURL">
+						<null/>
+					</field>
+					<field name="inputXMLURL">
+						<String>${currentFileURL}</String>
+					</field>
+					<field name="defaultScenario">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="isFOPPerforming">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="type">
+						<String>XSL</String>
+					</field>
+					<field name="saveAs">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="openInBrowser">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="outputFile">
+						<File>${cfd}/${cfn}.html</File>
+					</field>
+					<field name="outputResource">
+						<String>${cfd}/${cfn}.html</String>
+					</field>
+					<field name="openOtherLocationInBrowser">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="locationToOpenInBrowserURL">
+						<String></String>
+					</field>
+					<field name="openInEditor">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInHTMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInXMLPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInSVGPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="showInResultSetPane">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="useXSLTInput">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="xsltParams">
+						<list/>
+					</field>
+					<field name="cascadingStylesheets">
+						<String-array/>
+					</field>
+					<field name="xslTransformer">
+						<String>Saxon-PE</String>
+					</field>
+					<field name="extensionURLs">
+						<String-array/>
+					</field>
+				</scenario>
+			</scenario-array>
+		</entry>
+		<entry>
+			<String>scenarios.load.from.project</String>
+			<Boolean>false</Boolean>
+		</entry>
+	</serializableOrderedMap>
+</serialized>
