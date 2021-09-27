@@ -24,14 +24,14 @@
                 <head>Silk purses and sow's ears</head>
                 <list>
                     <item>Can you make a silk purse out of a sow's ear? <list>
-                            <item>(or, in French, faire d'une buse un epervier)?</item>
-                            <item>(or, in Italian, la botte dà il vino che ha non si cava sangue da
-                                una rapa)</item><item>(or, in German: Du kannst aus einem Ackergaul kein Rennpferd machen)</item>
+                            <item>(or, in French, faire d'une buse un epervier)</item>
+                            <item>(or, in Italian, la botte dà il vino che ha -- non si cava sangue da
+                                una rapa)</item>
+                     <item>(or, in German: Du kannst aus einem Ackergaul kein Rennpferd machen)</item>
                             <item>or, maybe, in Russian, из говна конфетку не сделаешь
-                                <!--Не родит верба
-                        груши.--></item>
+                                <!--Не родит верба    груши.--></item>
                         </list></item>
-                    <item>Documents come in many different formats, but these formats are usually
+                    <item>Documents come in many different formats, though these formats are usually
                         intended to represent a common set of features.</item>
                     <item>Given the right tools and a common set of features, we should be able to
                         convert (transduce) from one format representing a given set of features to

@@ -10,6 +10,7 @@
         <sourceDesc><p>born digital</p></sourceDesc>
     </fileDesc>
     <revisionDesc>
+     <change when="2021-09-22">Removed template since this doesnt work</change>    
         <change when="2019-09-14">Created file</change>
     </revisionDesc>
 </teiHeader>
@@ -26,14 +27,15 @@
       <div type="slide"> <head>Getting started</head> <list>
                      <item>Open oXygen and click on the New icon (first left on the toolbar); or
                 select File->New from the menu; or type CTRL-N</item>
-            <item>The New File dialogue appears. Under the heading <ident>Global
+            <item>The New File dialogue appears. Under the heading <ident>Mew Document</ident>, choose <ident>XML Document</ident> and press <ident>Customize</ident>. Select which schema (eltec-0 or eltec-1) file you want to use: we suggest <ident>eltec-0</ident>. 
+             <!--Under the heading <ident>Global
                 templates</ident>, you should see the template for ELTeC-0. Select it.
                 (If it's not there, you need to tweak your installation of oXygen; or you
-                can simply open the template file <ident>ELTeC-0.xml</ident> from your Work
-                directory). </item><item>Change the filename in the bottom of the window from
+                can simply  Open the  file <ident>ELTeC-0.xml</ident> in your Work
+                directory.--> </item><!--<item>Change the filename in the bottom of the window from
                     <ident>Untitled.xml</ident> or <ident>ELTeC-0</ident> to something more
                     appropriate: we suggest using the identifier for the file you're planning to
-                    work on. Either way...</item>
+                    work on. Either way...</item>-->
             <item>... the main oXygen editing window opens, with the beginnings of an ELTeC
                 XML file in it. Note the following: <list>
                     <item>At the top of the file there are two purple lines beginning

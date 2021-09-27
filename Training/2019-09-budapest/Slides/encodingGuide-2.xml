@@ -169,6 +169,12 @@
                <!-- ... -->
                <p>Si românul, beţiv, ca si fanaraiotul păgân...</p>
             </egXML>
+          <list>
+          <item>Do not however use <gi>quote</gi> for quoted phrases within a paragraph: simply
+           retain the quotation marks (similarly, for direct speech)</item>
+          <item>A citation e.g. giving the author of a quotation can be marked using
+           <gi>label</gi> or as a free-standing <gi>p</gi></item>
+           </list>
          </div>
          <div type="slide">
             <head>Typographic salience</head>
@@ -182,6 +188,10 @@
                <item>At level 1, we may instead capture the semantic implication, using e.g.
                      <gi>emph</gi> or <gi>foreign</gi>. </item>
             </list>
+          <p>For example...
+           <figure >  <graphic url="../media/p392-level0.png" width="80%"/>
+        </figure>  
+          </p>
          </div>
          <div type="slide">
             <head>Omissions and corrections</head>
@@ -190,9 +200,11 @@
             <p>At level 1, we record the fact that something has been omitted using the <gi>gap</gi>
                element, and the fact that some text has been corrected using the <gi>corr</gi>
                element.</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples"><!-- a picture in the original has been omitted-->
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+             <!-- a picture in the original has been omitted-->
                <gap desc="graphic"/></egXML>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples"><!-- the word "indubitably" has been provided by an editor or transcriber -->
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+             <!-- the word "indubitably" has been provided by an editor or transcriber -->
                <p>... and so <corr>indubitably</corr> preferable .. </p></egXML>
             <p>The same element may be used to mark where something missing in the source (eg
                opening quotation mark) has been supplied by the encoder: <egXML
@@ -227,6 +239,40 @@
                   <milestone unit="subchapter" rend="stars"/>
                   <p>Months had passed by... </p>
                </egXML></p>
+         </div><div type="slide"><head>Groups of chapters</head>
+         <p>Use <tag>div type="group"</tag> for any collection of chapters which has its own heading, whatever it's called.
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+           <body>
+            <div type="group">
+             <head>Erstes Buch</head>
+             <div type="chapter">
+              <head>1</head>
+              <p>Ostrau ist eine kleine Kreisstadt unweit der Oder, bis nach Polen hinein berühmt...
+              </p>
+             </div>
+            <div type="chapter">
+             <head>2</head>
+             <p>Schon welkte das frischgemähete Wiesengras in der Mittagssonne...
+             </p>
+            </div>
+            </div>
+           </body>
+          </egXML></p>
+          <p>Groups may nest as required. But take care that the structure is properly tesselated: the following, though valid, is wrong:
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <body>
+           <div type="group">
+            <head>Erstes Buch</head>
+            <div type="chapter">
+             <head>1</head>
+             <p>Ostrau ist eine kleine Kreisstadt unweit der Oder, bis nach Polen hinein berühmt...
+             </p></div>
+           </div>
+           <div type="chapter">
+            <head>2</head>
+            <p>Schon welkte das frischgemähete Wiesengras in der Mittagssonne...
+            </p></div></body>
+         </egXML></p>
          </div>
          <div type="slide">
             <head>Emphasis and code switching</head>
@@ -250,21 +296,23 @@
             <head>Floating headings and titles</head>
             <p>At level 1, headings or labels not attached to a division should be marked using
                   <gi>label</gi>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples"/></p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+             <div type="chapter">
+              ...
+            <p>Yo más le tengo por un aventurero impetuoso, y no me explico cómo no 
+              triunfó en España».</p>
+              <milestone unit="section"/>
+              <label>11 de marzo...</label>
+               <p>«...Apenas se sabe ya de él. Mi sobrino no pudo tenerlo en su casa. </p>
+              .... </div>
+               </egXML></p>
             <p>At level 1, titles of songs, literary works, etc. may optionally be marked using
-                  <gi>title</gi>. <egXML xmlns="http://www.tei-c.org/ns/Examples"/></p>
+                  <gi>title</gi>. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                   <p>—Yo en tu lugar hubiera publicado en el <title>Diario de avisos</title> e
+                    sa carta para escarmiento de coquetas; pero aún estamos á tiempo.</p>
+                  </egXML></p>
          </div>
-         <div type="slide">
-            <head>Quotation</head>
-            <list>
-               <item>At level 1, passages such as epigraphs or quoted songs, may be marked using
-                     <gi>quote</gi>. </item>
-               <item>Do not however use <gi>quote</gi> for quoted phrases within a paragraph: simply
-                  retain the quotation marks (similarly, for direct speech)</item>
-               <item>A citation e.g. giving the author of a quotation can be marked using
-                     <gi>label</gi> or as a free-standing <gi>p</gi></item>
-            </list>
-         </div>
+         
          <div type="slide">
             <head>Authorial notes</head>
             <p>At level 0, all notes are omitted. At level 1 : </p>
@@ -283,16 +331,20 @@
                   element, inside a <tag>div type="notes"</tag>, no matter where they appear in the
                   source</item>
             </list>
+          <figure>
+           <graphic url="../media/sensationNote.png" width="60%"/>
+          </figure>
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><body>
-                  <div type="chapter">
-                     <p> .... <ref target="#EN042N01">[1]</ref></p>
+                  <div type="liminal">
+                      <p>... a little easy cant about Sensation <ref target="#ENG18630_N1"/>
+                    Novelists; but in reality ...</p>
                   </div>
                </body>
-               <back>
-                  <div type="notes">
-                     <note xml:id="EN042N01">Or so they say.</note>
-                  </div>
-               </back>
+             <back>
+              <div type="notes">
+               <note xml:id="ENG18630_N1">This slang term is not quite accurate as applied to me... </note>
+              </div>
+             </back>
             </egXML>
          </div>
       </body>
