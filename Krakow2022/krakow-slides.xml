@@ -8,11 +8,11 @@
     <title>Challenges and best practices for corpus design</title>
     <author>Lou Burnard</author>
     <author><lb/>
-     Borja Navarro-Colorado</author>
+      Borja Navarro-Colorado</author>
     <author><lb/>
-     Carolin Odebrecht</author>
+      Carolin Odebrecht</author>
     <author><lb/>
-     Martina Scholger </author>
+      Martina Scholger </author>
    </titleStmt>
    <publicationStmt>
     <p>unpublished draft</p>
@@ -70,27 +70,29 @@
       <item>intended readership</item>
       <item>... and many others</item>
       </list></item>
-     <item>Partly on practical grounds but also to avoid the risk of circularity: we wanted to make it possible to classify texts automatically. </item>
+     <item>Partly on practical grounds but also to avoid the risk of circularity: we wanted to make
+      it possible to classify texts automatically. </item>
      <item>The goal was to provide good coverage for each criterion, such that the sample would not
-      be dominated by any specific author gender or canonicity-value. <list><item>This same concern to avoid
-      bias led us to impose an additional constraint that no more than three works should be
-      selected for any given author</item></list></item>
+      be dominated by any specific author gender or canonicity-value. <list>
+      <item>This same concern to avoid bias led us to impose an additional constraint that no more
+       than three works should be selected for any given author</item>
+      </list></item>
     </list>
    </div>
    <div type="slide">
-    <head>What is a novel?></head>
+    <head>What is a novel?</head>
     <list>
      <item>Our definition is fairly broad: <list>
-      <item>continuous prose fiction </item>
+      <item>fictional narrative prose </item>
       <item>first published between 1840 and 1920</item>
       <item>first published in the target language</item>
-      <item>of size between 50 and 200 thousand words (so no collected short stories)</item>
+      <item>of size between 10 and 200 thousand words (so no collected short stories)</item>
       <item>intended for an adult audience</item>
       </list></item>
      <item>But ... <list>
       <item>these criteria effectively ruled out some significant language traditions (e.g. nothing
        or very little of any kind was published in Irish, Latvian, or Lithuanian before 1900)</item>
-       <item>the concepts of “language” and “country” are problematic in the historical European
+      <item>the concepts of “language” and “country” are problematic in the historical European
        context</item>
       <item>the ease with which balance criteria could be satisfied varied greatly across language </item>
       <item>for some criteria, notably author gender, identifying a balanced sample proved
@@ -127,30 +129,29 @@
    <div type="slide">
     <head>Sex is a problem</head>
     <list>
-     <item>For some language populations, it is known that the proportion of female to male authors
-      varies considerably over time</item>
-     <item>For example, ATCL database lists 22,255 titles published between 1837 and 1901, produced
-      by a total of 2067 women, 2497 men, and 623 unknown. </item>
-     </list>
+     <item>For some language populations, we have extensive data about male and female authorship. </item>
+     <item>For example, the ATCL database lists 22,255 English novels published between 1837 and
+      1901, produced by a total of 2067 women, 2497 men, and 623 unknown. </item>
+     <item>But this ratio is not consistent over time: </item>
+    </list>
     <p><figure>
      <graphic url="media/atclGenders.png"/>
      <head><ref target="http://www.victorianresearch.org/atcl/visualizations.php#gender">Bassett,
-      Troy J. At the Circulating Library: A Database of Victorian
-      Fiction, 1837–1901. Downloaded from http://www.victorianresearch.org/atcl/visualizations.php.
-    </ref> </head>
+      Troy J. At the Circulating Library: A Database of Victorian Fiction, 1837–1901. Downloaded
+      from http://www.victorianresearch.org/atcl/visualizations.php. </ref> </head>
      </figure></p>
     <list>
      <item>In the ELTeC samples, we know that for some languages, the proportion of female/male
       authors never rises above 10% </item>
     </list>
-    <p><figure>
+    <p>TABLE TO BE ADDED HERE <figure>
      <graphic url="sexByRepo.svg"/>
      </figure></p>
    </div>
    <div type="slide">
     <head>Visualising cultural difference</head>
     <figure>
-  <!--   <graphic url="media/eng_mosaic.svg" width="80%"/>
+     <!--   <graphic url="media/eng_mosaic.svg" width="80%"/>
      <head>ELTeC-eng</head>
     </figure>
     <cb/>
@@ -172,23 +173,10 @@
     <p>Do these variations indicate real cultural differences, or are they a consequence of sampling
      bias?</p>
    </div>
-   <div type="slide">
-    <head>Our workflow</head>
-    <list>
-     <item>The overall balance of each corpus was assessed during its development</item>
-     <item>The E5C tool was used to assess objectively the degree of compliance for each corpus<list>
-      <item>https://github.com/distantreading/WG1/wiki/E5C-discussion-paper</item>
-      </list></item>
-     <item>In some cases, an <term>extension corpus</term> was used to hold texts which disturbed
-      overall corpus balance</item>
-    </list>
-   </div>
-
    <div>
     <head>ELTeC Levels</head>
     <p>At the start of the project, the concept of <term>level</term> was introduced to characterize
-     the richness of the TEI encoding or annotation applied to an ELTeC text.
-     <list>
+     the richness of the TEI encoding or annotation applied to an ELTeC text. <list>
      <item>level 0 : only a bare minimum of features are distinguished by the markup </item>
      <item>level 1 : some additional semantic features are marked up</item>
      <item>level 2 : additional annotation of linguistic features (pos code, NER etc.)</item>
@@ -200,11 +188,53 @@
    </div>
 
    <div type="slide">
+    <head>The ELTeC Corpus Composition Criteria Compliance Calculator</head>
+    <list>
+     <item>The E5C is an online tool developed in order to assess objectively the degree of
+      compliance for each corpus. </item>
+     <item>The overall goals of our corpus composition criteria are: <list>
+      <item> to achieve some level of comparability between corpora; </item>
+      <item> to help maximize the variety of novels we make available, particularly novels outside
+       the traditional canon</item>
+      <item> to support a certain number of key methods of text analysis. </item>
+      </list></item>
+     <item>The E5C defines minimal acceptable and optimal values for each of the following: <list>
+      <item>Encoding level (either 0 or 1; if both are used, a given title can only appear
+       once)</item>
+      <item>Number of texts: 100 </item>
+      <item>Author gender: at least 10% female, optimally 30% to 50%</item>
+      <item>Reprint count: at least 30% "low", optimally 40% to 60%</item>
+      <item>Time slot : divided as evenly as possible, i.e. each of the four time slots should
+       contain 20% to 25% of the available titles</item>
+      <item>Size : at least 20% of titles should be short (10-50k) and at least 20% should be long
+       (over 100k). </item>
+      <item>Novels per author: to maximize variation, no author should be represented by more than 3
+       novels; up to 11 authors may be represented by exactly 3 novels.</item>
+      </list> <!--<list>
+      <item>https://github.com/distantreading/WG1/wiki/E5C-discussion-paper</item>
+      </list>--></item>
+     <item>The E5C gives an overall score for a corpus: values below 50 indicate issues that need to
+      be addressed before the corpus can be included in an ELTeC Release. </item>
+     <item>An <term>extension corpus</term> may be used to hold otherwise eligible novels which
+      cannot be included without distorting the overall corpus balance, or to build up comparable
+      collections outside the temporal scope of ELTeC proper.</item>
+    </list>
+   </div>
+
+
+   <div type="slide">
     <head>State of play</head>
     <list>
-     <item>There are 17 distinct ElTeC corpora (Czech, German, English, French, Swiss German, Croatian, Hungarian, Italian, Norwegian, Polish, Portuguese, Romanian, Slovenian, Spanish, Serbian, Swedish, and Ukrainian); in total about 107 million words. </item>
-     <item>Only five of thes have an E5C score below 75%</item>
+     <item>There are 17 distinct ELTeC corpora (Czech, German, English, French, Swiss German,
+      Croatian, Hungarian, Italian, Norwegian, Polish, Portuguese, Romanian, Slovenian, Spanish,
+      Serbian, Swedish, and Ukrainian); in total about 107 million words. </item>
+     <item>Only five of these have an E5C score below 75%</item>
      <item>5 of them are also marked up to level 2</item>
+     <item>All corpora are available online from gitHub, 12 of them as validated releases from Xenodo </item>
+     <item>Summary and other information at <ref target="https://distantreading.github.io/ELTeC"
+      >https://distantreading.github.io/ELTeC</ref> </item>
+     <item>Coming soon: access via <ident>txm</ident>, <ident>gams</ident>, <ident>TEI
+      Publisher</ident> ... </item>
     </list>
    </div>
    <div type="slide">
@@ -215,10 +245,17 @@
       different date-range </item>
      <item>And maybe also extending to other literary forms, such as 19th c. drama</item>
     </list>
-   </div><div type="slide"><head>Conclusions</head>
-   <list>
-    <item>We learned a great deal about collaboration, about the complexities of cross-cultural comparisons, about finding an appropriate technologies for literary studies ... and about the European novel!</item><item>We suggest that any effective computational infrastructure for literary studies will need to follow our example, if only in the creation of shared textual resources </item>
-   </list></div>
+   </div>
+   <div type="slide">
+    <head>Conclusions</head>
+    <list>
+     <item>We learned a great deal about collaboration, about the complexities of cross-cultural
+      comparisons, about finding an appropriate technologies for literary studies ... and about the
+      European novel!</item>
+     <item>We suggest that any effective computational infrastructure for literary studies will need
+      to follow our example, if only in the creation of shared textual resources </item>
+    </list>
+   </div>
   </body>
  </text>
 </TEI>
