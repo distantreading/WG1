@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/lou/Public/TEIslides/teislides.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+ <teiHeader>
+  <fileDesc>
+   <titleStmt>
+    <title>Collaborative creation of a multi-lingual literary corpus. </title>
+    <title>Challenges and best practices for corpus design</title>
+    <author>Lou Burnard</author>
+    <author><lb/>
+     Borja Navarro-Colorado</author>
+    <author><lb/>
+     Carolin Odebrecht</author>
+    <author><lb/>
+     Martina Scholger </author>
+   </titleStmt>
+   <publicationStmt>
+    <p>unpublished draft</p>
+   </publicationStmt>
+   <sourceDesc>
+    <p>born digital</p>
+   </sourceDesc>
+  </fileDesc>
+  <revisionDesc>
+   <change when="2022-04-10">Created file</change>
+  </revisionDesc>
+ </teiHeader>
+ <text>
+  <body>
+   <div type="slide">
+    <head>ELTeC is a collection; ELTeC-xxx is a corpus</head>
+    <list>
+     <item>We follow Sinclair (1991) in regarding a <term>corpus</term> as a special kind of
+      <term>collection</term> of texts: <eg>“A collection of naturally occurring language text,
+      chosen to characterize a state or variety of a language.” <lb/>
+       (John Sinclair, <hi>Corpus, Concordance, Collocation</hi>, 1991)</eg></item>
+     <item>ELTeC corpora are <emph>designed</emph>, in the sense that their components were chosen
+      using explicit selection criteria</item>
+     <item>ELTeC corpora <emph>representative</emph> with respect to those criteria, following Biber
+      (1993): <eg>“Representativeness refers to the extent to which a sample includes the full range
+      of variability in a population.” <lb/>
+       (Douglas Biber, <hi>Representativeness in Corpus Design</hi>, 1993)</eg></item>
+     <item>Hence, the project plan specifies <q>comparable corpora</q>, each providing a <q>balanced
+      selection of one hundred novels from the period 1840 to 1920</q></item>
+    </list>
+    <p rend="box">Easier said than done!</p>
+   </div>
+   <div type="slide">
+    <head>Cross-cultural challenges</head>
+
+    <list>
+     <item>Defining the population we wish to sample : what is a "novel" ?</item>
+     <item>Defining the sample : what are the selection criteria ? </item>
+    </list>
+    <p rend="box">The answers to these questions turn out to be subtly different in different
+     cultural contexts... </p>
+   </div>
+   <div type="slide">
+    <head>Our selection criteria</head>
+    <list>
+     <item>We specified four <q>balance criteria</q> : <list>
+      <item>date of first publication in book form</item>
+      <item>size in pages</item>
+      <item>author gender</item>
+      <item>"canonicity"</item>
+      </list></item>
+     <item>Criteria we did <emph>not</emph> consider include: <list>
+      <item>genre</item>
+      <item>topic</item>
+      <item>intended readership</item>
+      <item>... and many others</item>
+      </list></item>
+     <item>Partly on practical grounds but also to avoid the risk of circularity</item>
+     <item>The goal was to provide good coverage for each criterion, such that the sample would not
+      be dominated by any specific author gender or canonicity-valu. (This same concern to avoid
+      bias led us to impose an additional constraint that no more than three works should be
+      selected for any given author.)</item>
+    </list>
+   </div>
+   <div type="slide">
+    <head>What is a novel?></head>
+    <list>
+     <item>Our definition is fairly broad: <list>
+      <item> a continuous prose fiction </item>
+      <item>first published between 1840 and 1920</item>
+      <item>first published in the target language</item>
+      <item>of size between 50 and 200 thousand words</item>
+      <item>intended for an adult audience</item>
+      </list></item>
+     <item>But ... <list>
+      <item>these criteria effectively rule out some significant language traditions (e.g. nothing
+       or very little published in Irish, Latvian, Lithuanian before 1900)</item>
+      <item>the ease with which balance criteria could be satisfied varied greatly across language </item>
+      <item>the concepts of “language” and “country” are problematic in the historical European
+       context</item>
+      <item>For some criteria, notably author gender, identifying a a balanced sample proved
+       impossible</item>
+      </list></item>
+    </list>
+   </div>
+   <div type="slide">
+    <head>Language is a problem</head>
+    <p>The association between languages, countries, and literary traditions is far from being
+     unequivocal or simple. </p>
+    <list>
+     <item>Many European countries (Spain, Switzerland, Belgium, for example) have two or more
+      official languages, each with its own publishing tradition. </item>
+     <item>In many countries, particularly during the 19th century, the language of culture and
+      consequently of publication was not the national language but rather German, French, or
+      English. </item>
+     <item>The same language or a dialectal variant of it may be found in several different
+      countries (Swiss German, or Belgian French, for example). </item>
+     <item>Different languages may be considered the cultural norm in different regions of a single
+      country (Euskera or Catalan in Spain, for example), and will thus have a claim to be
+      represented by their own language corpus.</item>
+    </list>
+    <p>A pragmatic approach lead us to exclude <list>
+     <item>works by non-European authors (e.g. Henry James) </item>
+     <item>Works published in a language other than that of their original place of publication
+      (e.g. Kafka) </item>
+     </list> but to include <list>
+     <item>European authors publishing in some language other than their own (e.g. Conrad)</item>
+     <item>additional language corpora such as ELTeC-gsw, ELTeC-eus</item>
+     </list></p>
+   </div>
+
+   <div type="slide">
+    <head>Sex is a problem</head>
+    <list>
+     <item>For some language populations, it is known that the proportion of female to male authors
+      varies considerably over time</item>
+     <item>For example, ATCL database lists 22,255 titles published between 1837 and 1901, produced
+      by a total of 2067 women, 2497 men, and 623 unknown. </item>
+     <!--  <item>In our samples, we know that for some languages, it never rises above 10%  </item>-->
+    </list>
+    <p><figure>
+     <graphic url="media/atclGenders.png"/>
+     <head><ref target="http://www.victorianresearch.org/atcl/visualizations.php#gender">Bassett,
+      Troy J. “Analysis: Data Visualizations.” At the Circulating Library: A Database of Victorian
+      Fiction, 1837–1901, 15 March 2022, http://www.victorianresearch.org/atcl/visualizations.php.
+      Accessed 10 April 2022.</ref> </head>
+     </figure></p>
+    <list>
+     <item>In the ELTeC samples, we know that for some languages, the proportion of female/male
+      authors never rises above 10% </item>
+    </list>
+    <p><figure>
+     <graphic url="sexByRepo.svg"/>
+     </figure></p>
+   </div>
+   <div type="slide">
+    <head>Visualising cultural difference</head>
+    <figure>
+     <graphic url="media/eng_mosaic.svg" width="80%"/>
+     <head>ELTeC-eng</head>
+    </figure>
+    <cb/>
+    <figure>
+     <graphic url="media/hun_mosaic.svg" width="40%"/>
+     <head>ELTeC-hun</head>
+    </figure>
+
+    <p>Do these variations indicate real cultural differences, or are they a consequence of sampling
+     bias?</p>
+   </div>
+   <div type="slide">
+    <head>Visualising cultural difference</head>
+    <figure>
+     <graphic url="media/fra_mosaic.svg" width="80%"/>
+     <head>ELTeC-fra</head>
+    </figure>
+    <cb/>
+    <figure>
+     <graphic url="media/srp_mosaic.svg" width="40%"/>
+     <head>ELTeC-srp</head>
+    </figure>
+
+    <p>Do these variations indicate real cultural differences, or are they a consequence of sampling
+     bias?</p>
+   </div>
+   <div type="slide">
+    <head>Our workflow</head>
+    <list>
+     <item>The overall balance of each corpus was assessed during its development</item>
+     <item>The E5C tool was used to assess objectively each corpus' degree of compliance <list>
+      <item>https://github.com/distantreading/WG1/wiki/E5C-discussion-paper</item>
+      </list></item>
+     <item>In some cases, an <term>extension corpus</term> was used to hold texts which disturbed
+      overall corpus balanc e</item>
+    </list>
+   </div>
+
+   <div>
+    <head>ELTeC Levels</head>
+    <p>At the start of the project, the concept of <term>level</term> was introduced to characterize
+     the richness of encloding or annotation applied to a TEI text <list>
+     <item>level 0 : only a bare minimum of features are distinguished by the markup </item>
+     <item>level 1 : some additional semantic features are marked up</item>
+     <item>level 2 : additional annotation of linguistic features (pos code, NER etc.)</item>
+     </list></p>
+    <p>In practice almost all ELTeC texts are marked up to level 1, with a high degree of
+     consistency as to which TEI elements are used and in what context. </p>
+    <p>The definition of a schema for level 2 texts proved more problematic, for a variety of
+     reasons, both personal and technical.</p>
+   </div>
+
+   <div type="slide">
+    <head>State of play</head>
+    <list>
+     <item>There are 17 distinct ElTeC corpora (langs)</item>
+     <item>Only 5 of them have an E5C below 75%</item>
+     <item>5 of them are also marked up to level 2</item>
+    </list>
+   </div>
+   <div type="slide">
+    <head>The future</head>
+    <list>
+     <item>ELTeC as a handy benchmark for the development of literary corpora</item>
+     <item>The "extension" concept reapplied to corpora, such as eltec-fra-ext, which use a
+      different date-range </item>
+     <item>And maybe also extending to other literary forms, such as 19th c. drama</item>
+    </list>
+   </div><div type="slide"><head>Conclusions</head>
+   <list>
+    <item>We learned a great deal about....</item><item>A computational infrastructure for literrary statiudies needs a shafred understanding about creation of textual resources </item>
+   </list></div>
+  </body>
+ </text>
+</TEI>
