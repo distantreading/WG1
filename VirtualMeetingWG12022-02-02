@@ -1,0 +1,86 @@
+WG1 Meeting 2 February 2022
+
+Lou Burnard (LB), Tomaž Erjavec (TE), Arūnas Gudinavičius (AG), Michal Křen (MK), Cvetana Krstev (CK), Nikolche Mickoski (NM), Carolin Odebrecht (CO), Gábor Palkó (GP), Michael Preminger (MP), Diana Santos (DS), Christof Schöch (CS), Martina Scholger (MS)
+
+Agenda:
+
+1. Welcome
+2. Updates on ELteC
+3. ELTeC Dissemination
+4. ELTeC Release - timetable
+5. Final conference in April
+6. Any other business (What happens when the COST Action ends?)
+
+1. Updates on ELTeC
+Summary table: https://distantreading.github.io/ELTeC/index.html
+
+Short report on the current status of the individual language corpora.
+
+hun (GP)
+not much happened since the last release. ~ 400 novels are in the own gitHub repository / thereof ~ 100 comply with the ELTeC criteria. Will include NER, reuse code that has to be adjusted. CS proposes to add a hun-ext to ELTeC repo. https://regenykorpusz.elte-dh.hu/
+
+por (DS)
+Level 2 is complete, waiting for decisions on level 2:  e.g. concerning NER
+
+lit (AG)
+All existing novels were recorded, there do not exist more. 
+
+nor (MP)
+55 level 2 (POS, but no NEs)
+There are novels that do not meet criteria. CO proposes to add nor-ext; if you add more than three titles per author it decreases the score. 
+
+srp (CK)
+Already 100 novels. Will replace some of the novels with novels that better meet the criteria. The replaced ones will be included in the extension. 
+
+eng (LB)
+Working on level 2
+
+fra (CS)
+Level 2 present; 388 novels in the extension (= level 1), see: https://github.com/COST-ELTeC/ELTeC-fra-ext. Another extension is coming, ca. 120 French novels published between 1750 and 1800.  
+
+cze -- (MK)
+Finished 100 novels in level 1
+
+deu -- (CO)
+Finished collection in level 1, no further main changes are planned
+
+
+Encoding level 2
+Notes from WG2 + WG1 meeting in September 2021 
+https://github.com/distantreading/WG2/blob/master/other_notes/level2-status-2021.md 
+
+Current status:
+@pos exists in every level 2 encoding; 
+some do sentence markers, some not
+
+TE: we need a common XML schema for level 2. 
+LB: for example, what if we say that every <pc> and <w> has to be in an <s>? 
+Decision to create schema that imposes <s>. 
+Action on LB: Add to readme what the difference between eltec-2.rng and eltec-2_strict.rng is (see https://github.com/COST-ELTeC/Schemas)
+
+2. ELTeC Dissemination
+What can we offer? We aim to have different dissemination strategies: CLS Infra, Zenodo, GAMS, TXM, etc.
+
+GAMS: https://gams.uni-graz.at/
+Sustainable service for managing, publishing and long-term preservation of data; repository for hosting data such as ELTeC
+Sandbox ELTeC in GAMS: http://glossa.uni-graz.at/context:eltec
+There will be a short meeting on the GAMS representation with MS on February 23.
+
+Zenodo releases and doi should be made visible
+
+Another service proposed by TE: https://www.clarin.si/noske/run.cgi/corp_info?corpname=eltec_slv&struct_attr_stats=1
+
+Serge Heiden is willing to provide ELTeC in txm
+
+3. Time table
+
+ELTeC in GAMS virtual meeting 23th Feb 11-12 (Berlin time)
+Feedback on GAMS representation from WG1 until 18 February
+Final Release: 15th of March
+
+4. Conference
+
+Decision is still open: online or meeting in person
+cf. mails from Christof
+
+5. AOB
