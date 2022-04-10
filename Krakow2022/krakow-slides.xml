@@ -135,7 +135,7 @@
      <item>But this ratio is not consistent over time: </item>
     </list>
     <p><figure>
-     <graphic url="media/atclGenders.png"/>
+     <graphic url="media/atclGenders.png" width="120%"/>
      <head><ref target="http://www.victorianresearch.org/atcl/visualizations.php#gender">Bassett,
       Troy J. At the Circulating Library: A Database of Victorian Fiction, 1837–1901. Downloaded
       from http://www.victorianresearch.org/atcl/visualizations.php. </ref> </head>
@@ -255,7 +255,7 @@
      <item>We suggest that any effective computational infrastructure for literary studies will need
       to follow our example, if only in the creation of shared textual resources </item>
     </list>
-   </div>
+   <p><graphic url="media/finis.png" width="50%"/></p></div>
   </body>
  </text>
 </TEI>
