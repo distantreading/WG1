@@ -62,7 +62,7 @@
       <item>date of first publication in book form</item>
       <item>size in pages</item>
       <item>author gender</item>
-      <item>"canonicity"</item>
+      <item>"canonicity" -- operationalised as the number of times a work was republished </item>
       </list></item>
      <item>Criteria we did <emph>not</emph> consider include: <list>
       <item>genre</item>
@@ -70,31 +70,31 @@
       <item>intended readership</item>
       <item>... and many others</item>
       </list></item>
-     <item>Partly on practical grounds but also to avoid the risk of circularity</item>
+     <item>Partly on practical grounds but also to avoid the risk of circularity: we wanted to make it possible to classify texts automatically. </item>
      <item>The goal was to provide good coverage for each criterion, such that the sample would not
-      be dominated by any specific author gender or canonicity-valu. (This same concern to avoid
+      be dominated by any specific author gender or canonicity-value. <list><item>This same concern to avoid
       bias led us to impose an additional constraint that no more than three works should be
-      selected for any given author.)</item>
+      selected for any given author</item></list></item>
     </list>
    </div>
    <div type="slide">
     <head>What is a novel?></head>
     <list>
      <item>Our definition is fairly broad: <list>
-      <item> a continuous prose fiction </item>
+      <item>continuous prose fiction </item>
       <item>first published between 1840 and 1920</item>
       <item>first published in the target language</item>
-      <item>of size between 50 and 200 thousand words</item>
+      <item>of size between 50 and 200 thousand words (so no collected short stories)</item>
       <item>intended for an adult audience</item>
       </list></item>
      <item>But ... <list>
-      <item>these criteria effectively rule out some significant language traditions (e.g. nothing
-       or very little published in Irish, Latvian, Lithuanian before 1900)</item>
-      <item>the ease with which balance criteria could be satisfied varied greatly across language </item>
-      <item>the concepts of “language” and “country” are problematic in the historical European
+      <item>these criteria effectively ruled out some significant language traditions (e.g. nothing
+       or very little of any kind was published in Irish, Latvian, or Lithuanian before 1900)</item>
+       <item>the concepts of “language” and “country” are problematic in the historical European
        context</item>
-      <item>For some criteria, notably author gender, identifying a a balanced sample proved
-       impossible</item>
+      <item>the ease with which balance criteria could be satisfied varied greatly across language </item>
+      <item>for some criteria, notably author gender, identifying a balanced sample proved
+       impossible.</item>
       </list></item>
     </list>
    </div>
@@ -131,14 +131,13 @@
       varies considerably over time</item>
      <item>For example, ATCL database lists 22,255 titles published between 1837 and 1901, produced
       by a total of 2067 women, 2497 men, and 623 unknown. </item>
-     <!--  <item>In our samples, we know that for some languages, it never rises above 10%  </item>-->
-    </list>
+     </list>
     <p><figure>
      <graphic url="media/atclGenders.png"/>
      <head><ref target="http://www.victorianresearch.org/atcl/visualizations.php#gender">Bassett,
-      Troy J. “Analysis: Data Visualizations.” At the Circulating Library: A Database of Victorian
-      Fiction, 1837–1901, 15 March 2022, http://www.victorianresearch.org/atcl/visualizations.php.
-      Accessed 10 April 2022.</ref> </head>
+      Troy J. At the Circulating Library: A Database of Victorian
+      Fiction, 1837–1901. Downloaded from http://www.victorianresearch.org/atcl/visualizations.php.
+    </ref> </head>
      </figure></p>
     <list>
      <item>In the ELTeC samples, we know that for some languages, the proportion of female/male
@@ -151,13 +150,14 @@
    <div type="slide">
     <head>Visualising cultural difference</head>
     <figure>
-     <graphic url="media/eng_mosaic.svg" width="80%"/>
+  <!--   <graphic url="media/eng_mosaic.svg" width="80%"/>
      <head>ELTeC-eng</head>
     </figure>
     <cb/>
     <figure>
      <graphic url="media/hun_mosaic.svg" width="40%"/>
-     <head>ELTeC-hun</head>
+     <head>ELTeC-hun</head>-->
+     <graphic url="media/engHun.png"/>
     </figure>
 
     <p>Do these variations indicate real cultural differences, or are they a consequence of sampling
@@ -166,15 +166,9 @@
    <div type="slide">
     <head>Visualising cultural difference</head>
     <figure>
-     <graphic url="media/fra_mosaic.svg" width="80%"/>
-     <head>ELTeC-fra</head>
+     <graphic url="media/deuRom.png"/>
+     <graphic url="media/fraPor.png"/>
     </figure>
-    <cb/>
-    <figure>
-     <graphic url="media/srp_mosaic.svg" width="40%"/>
-     <head>ELTeC-srp</head>
-    </figure>
-
     <p>Do these variations indicate real cultural differences, or are they a consequence of sampling
      bias?</p>
    </div>
@@ -182,23 +176,24 @@
     <head>Our workflow</head>
     <list>
      <item>The overall balance of each corpus was assessed during its development</item>
-     <item>The E5C tool was used to assess objectively each corpus' degree of compliance <list>
+     <item>The E5C tool was used to assess objectively the degree of compliance for each corpus<list>
       <item>https://github.com/distantreading/WG1/wiki/E5C-discussion-paper</item>
       </list></item>
      <item>In some cases, an <term>extension corpus</term> was used to hold texts which disturbed
-      overall corpus balanc e</item>
+      overall corpus balance</item>
     </list>
    </div>
 
    <div>
     <head>ELTeC Levels</head>
     <p>At the start of the project, the concept of <term>level</term> was introduced to characterize
-     the richness of encloding or annotation applied to a TEI text <list>
+     the richness of the TEI encoding or annotation applied to an ELTeC text.
+     <list>
      <item>level 0 : only a bare minimum of features are distinguished by the markup </item>
      <item>level 1 : some additional semantic features are marked up</item>
      <item>level 2 : additional annotation of linguistic features (pos code, NER etc.)</item>
      </list></p>
-    <p>In practice almost all ELTeC texts are marked up to level 1, with a high degree of
+    <p>In practice almost all ELTeC texts are marked up at level 1, with a high degree of
      consistency as to which TEI elements are used and in what context. </p>
     <p>The definition of a schema for level 2 texts proved more problematic, for a variety of
      reasons, both personal and technical.</p>
@@ -207,22 +202,22 @@
    <div type="slide">
     <head>State of play</head>
     <list>
-     <item>There are 17 distinct ElTeC corpora (langs)</item>
-     <item>Only 5 of them have an E5C below 75%</item>
+     <item>There are 17 distinct ElTeC corpora (Czech, German, English, French, Swiss German, Croatian, Hungarian, Italian, Norwegian, Polish, Portuguese, Romanian, Slovenian, Spanish, Serbian, Swedish, and Ukrainian); in total about 107 million words. </item>
+     <item>Only five of thes have an E5C score below 75%</item>
      <item>5 of them are also marked up to level 2</item>
     </list>
    </div>
    <div type="slide">
     <head>The future</head>
     <list>
-     <item>ELTeC as a handy benchmark for the development of literary corpora</item>
+     <item>ELTeC as a well-tested benchmark for the development of literary corpora</item>
      <item>The "extension" concept reapplied to corpora, such as eltec-fra-ext, which use a
       different date-range </item>
      <item>And maybe also extending to other literary forms, such as 19th c. drama</item>
     </list>
    </div><div type="slide"><head>Conclusions</head>
    <list>
-    <item>We learned a great deal about....</item><item>A computational infrastructure for literrary statiudies needs a shafred understanding about creation of textual resources </item>
+    <item>We learned a great deal about collaboration, about the complexities of cross-cultural comparisons, about finding an appropriate technologies for literary studies ... and about the European novel!</item><item>We suggest that any effective computational infrastructure for literary studies will need to follow our example, if only in the creation of shared textual resources </item>
    </list></div>
   </body>
  </text>
