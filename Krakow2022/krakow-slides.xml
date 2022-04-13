@@ -33,11 +33,11 @@
         Concordance, Collocation</hi>, 1991)</eg></item>
      <item>ELTeC corpora are <emph>designed</emph>, in the sense that their components were chosen
       using explicit selection criteria</item>
-     <item>ELTeC corpora <emph>representative</emph> with respect to those criteria, following Biber
+     <item>ELTeC corpora are <emph>representative</emph> with respect to those criteria, following Biber
       (1993): <eg>“Representativeness refers to the extent to which a sample includes the full range
        of variability in a population.” <lb/> (Douglas Biber, <hi>Representativeness in Corpus
         Design</hi>, 1993)</eg></item>
-     <item>We aim represent the variety of production and aim to maximize the variety within each
+     <item>We aim to represent the variety of production and to maximize the variety within each
       time period.</item>
      <item>Hence, the project plan specifies <q>comparable corpora</q>, each providing a <q>balanced
        selection of one hundred novels from the period 1840 to 1920</q></item>
@@ -136,7 +136,7 @@
     </list>
     <p>
      <figure>
-      <graphic url="media/atclGenders.png" width="120%"/>
+      <graphic url="media/atclGenders.png" width="90%"/>
       <!-- CO: the figure is  not displayed well. change to 100% or less? -->
       <head>
        <ref target="http://www.victorianresearch.org/atcl/visualizations.php#gender">Bassett, Troy
@@ -149,8 +149,8 @@
      <item>In the ELTeC samples, we know that for some languages, the proportion of female/male
       authors never rises above 10% </item>
     </list>
-    <p>TABLE TO BE ADDED HERE <figure>
-      <graphic url="sexByRepo.svg"/>
+    <p> <figure>
+      <graphic url="media/gender.png" width="80%"/>
      </figure></p>
    </div>
    <div type="slide">
@@ -223,7 +223,7 @@
       be addressed before the corpus can be included in an ELTeC Release. </item>
      <item>An <term>extension corpus</term> may be used to hold otherwise eligible novels which
       cannot be included without distorting the overall corpus balance, or to build up comparable
-      collections outside the temporal scope of ELTeC proper.</item>
+      collections outside the scope of ELTeC proper.</item>
     </list>
    </div>
 
@@ -235,7 +235,7 @@
       Croatian, Hungarian, Italian, Norwegian, Polish, Portuguese, Romanian, Slovenian, Spanish,
       Serbian, Swedish, and Ukrainian); in total about 107 million words. </item>
      <item>Only five of these have an E5C score below 75%</item>
-     <item>5 of them are also marked up to level 2</item>
+     <item>Ten of them are also marked up to level 2 (German, English, French, Hungarian, Norwegian, Portuguese, Romanian, Slovenian, Spanish, Serbian)</item>
      <item>All corpora are available online from gitHub, 12 of them as validated releases from
       Zenodo <ref target="https://zenodo.org/communities/eltec">ELTeC Community</ref></item>
      <item>Summary and other information at <ref target="https://distantreading.github.io/ELTeC"
@@ -251,8 +251,8 @@
      <item>ELTeC as a well-tested benchmark for the development of literary corpora</item>
      <item>The "extension" concept reapplied to corpora, such as eltec-fra-ext, which use a
       different date-range </item>
-     <item>And maybe also extending to other literary forms, such as 19th c. drama</item>
-     <item>And add further languages to the extension part of ELTeC</item>
+      <item>Further languages may be added to ELTeC or as ELTeC extensions</item>
+     <item>And maybe also corpora of to other literary forms, such as 19th c. drama</item>
     </list>
    </div>
    <div type="slide">
