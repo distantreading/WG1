@@ -48,8 +48,8 @@
     <head>Cross-cultural challenges</head>
 
     <list>
-     <item>Defining candidates of the population we wish to sample : what is a "novel" ?</item>
-     <item>Defining the sample : what are the selection criteria ? </item>
+     <item>Defining candidates of the population we wish to sample: what is a "novel" ?</item>
+     <item>Defining the sample: what are the selection criteria ? </item>
     </list>
     <p rend="box">The answers to these questions turn out to be subtly different in different
      cultural contexts... </p>
@@ -57,7 +57,7 @@
    <div type="slide">
     <head>Our selection criteria</head>
     <list>
-     <item>We specified four <q>balance criteria</q> : <list>
+     <item>We specified four <q>balance criteria</q>: <list>
        <item>date of first publication in book form</item>
        <item>size in pages</item>
        <item>author gender</item>
@@ -117,7 +117,7 @@
       represented by their own language corpus.</item>
     </list>
     <p>A pragmatic approach lead us to exclude <list>
-      <item>works by non-European authors (e.g. Henry James) </item>
+      <item>Works by non-European authors (e.g. Henry James) </item>
       <item>Works published in a language other than that of their original place of publication
        (e.g. Kafka) </item>
      </list> but to include <list>
@@ -136,7 +136,7 @@
     </list>
     <p>
      <figure>
-      <graphic url="media/atclGenders.png" width="90%"/>
+      <graphic url="media/atclGenders.png" width="50%"/>
       <!-- CO: the figure is  not displayed well. change to 100% or less? -->
       <head>
        <ref target="http://www.victorianresearch.org/atcl/visualizations.php#gender">Bassett, Troy
@@ -202,9 +202,9 @@
        <item>Number of texts: 100 </item>
        <item>Author gender: at least 10% female, optimally 30% to 50%</item>
        <item>Reprint count: at least 30% "low", optimally 40% to 60%</item>
-       <item>Time slot : divided as evenly as possible, i.e. each of the four time slots should
+       <item>Time slot: divided as evenly as possible, i.e. each of the four time slots should
         contain 20% to 25% of the available titles</item>
-       <item>Size : at least 20% of titles should be short (10-50k) and at least 20% should be long
+       <item>Size: at least 20% of titles should be short (10-50k) and at least 20% should be long
         (over 100k). </item>
        <item>Novels per author: to maximize variation, no author should be represented by more than
         3 novels; up to 11 authors may be represented by exactly 3 novels.</item>
@@ -234,7 +234,7 @@
      <item>Summary and other information at <ref target="https://distantreading.github.io/ELTeC"
        >https://distantreading.github.io/ELTeC</ref>
      </item>
-     <item>Coming soon: access via <ident>txm</ident>, <ident>gams</ident>, <ident>TEI
+     <item>Coming soon: access via <ident>txm</ident>, <ident>GAMS</ident>, <ident>TEI
        Publisher</ident> ... </item>
     </list>
    </div>
@@ -252,10 +252,10 @@
     <head>Conclusions</head>
     <list>
      <item>We learned a great deal about collaboration, about the complexities of cross-cultural
-      comparisons, about finding an appropriate technologies for literary studies ... and about the
+      comparisons, about finding appropriate technologies for literary studies ... and about the
       European novel!</item>
      <item>We suggest that any effective computational infrastructure for literary studies will need
-      to follow our example, if only in the creation of shared textual resources </item>
+      to follow our example, if only in the creation of shared textual resources. </item>
     </list>
     <p>
      <graphic url="media/finis.png" width="50%"/>
