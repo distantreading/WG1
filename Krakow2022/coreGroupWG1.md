@@ -22,6 +22,11 @@ WG1 leads Martina, Lou, Borja, Carolin
 * Burnard, Lou; Schoech, Christof; Odebrecht, Carolin (2019) In search of comity: TEI for distant reading. TEI Conference 2019. doi:10.5281/zenodo.3552489
 * Patras, Roxana; Odebrecht, Carolin; Galleron, Ioana; Arias, Rosario, Herrmann, J. Berenike., Krstev, Cvetana, Mihurko Poni, Katja, Yesypenko, Dmytro (2021), Thresholds to the "Great Unread": Titling Practices in Eleven ELTeC Collections, Interférences litteraires/literaire interferenties, Special issue: "Literature and/as the Digital,"guest ed. Chris Tanasescu (Margento). Vol 25. 163-187.http://interferenceslitteraires.be/index.php/illi/article/view/1102
 * Herrmann. Berenike; Odebrecht, Carolin; Santos, Diana; Francois, Pieter (2020) Towards modeling the European novel Introducing ELTeC for Multilingual and Pluricultural Distant Reading. Digital Humanities 2020 Conference Proceedings, 22.-24.07.2020 (virtual), Ottawa.
+* Ch. Schöch, B. Navarro Colorado, R. Arias _Distant Reading webinar_  11/06/2021
+  - Web: http://ixa2.si.ehu.eus/intele/webinars
+  - Slides: https://ixa2.si.ehu.eus/intele/sites/default/files/INTELE_webinarseries05.pdf
+  - Video: https://www.youtube.com/watch?v=cQRmb2VvBoE
+  - Code: https://github.com/bncolorado/Processing-ELTeC-corpus   
 * add more
 
 
