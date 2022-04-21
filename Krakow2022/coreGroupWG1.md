@@ -11,7 +11,7 @@ WG1 leads Martina, Lou, Borja, Carolin
 * Data Repositories: https://github.com/COST-ELTeC
 * Final Corpus Release Mai 2022
 * Testworkflow importing ELTeC in GAMS: https://gams.uni-graz.at/
-* WG1 Meeting in January 2022
+* WG1 Meeting in February 2022
 
 ## WG1 Achievements
 
